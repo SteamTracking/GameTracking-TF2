@@ -1,4 +1,4 @@
-                
+                 
   bugbait.valvesoftware.com/bugsub /mnt/bugsub smbfs rw,user,username=guest,password=,noauto 0 0\n
  ( def. "%s" )
  ReadToken overflow
@@ -144,7 +144,6 @@ $X360
 -gamepadui
 -nogamepadui
 /mnt/bugsub/config.txt
-0123456789ABCDEF
 0123456789abcdef
 0x%016llX
 10ConCommand
@@ -166,6 +165,7 @@ $X360
 6ConVar
 7IConVar
 8CFmtStrNILi256ELb0EE
+;0123456789ABCDEF
 </script>
 << NULL >>\n
 <<Invalid>>
@@ -265,7 +265,6 @@ UCS-4LE
 USER
 UTF-32LE
 UTF-8
-UUD#v
 Unmatched %s\n
 VEngineCvar004
 VProcessUtils001

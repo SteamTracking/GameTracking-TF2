@@ -232,7 +232,6 @@ FILE
 FILE: 
 Fast Path Model Rendering
 Fatal assert failed: %s, line %d.  Application exiting.\n
-Feb 28 202600:26:27
 File: %s\nLine: %i\nExpr: %s\n
 FileSystem
 GCC: (SteamRT 10.3.0-3+steamrt3.1+bsrt3.1) 10.3.0
@@ -277,6 +276,7 @@ LogV
 Lowered '%s' -> '%s'\n
 MainThrd
 Matched '%s' -> '%s'\n
+May 14 202600:29:12
 MbP?true
 MemAllocOOMError
 MemAllocScratch

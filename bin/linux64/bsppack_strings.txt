@@ -315,6 +315,7 @@ FileSystem_LoadSearchPaths: Invalid parameters specified.
 Finished BSP Swap\n
 FmtStrVSNPrintf truncated to %d without QUIET_TRUNCATION specified!\n
 Fullness
+F{9G
 GAME
 GAMEBIN
 GCC: (SteamRT 10.3.0-3+steamrt3.1+bsrt3.1) 10.3.0

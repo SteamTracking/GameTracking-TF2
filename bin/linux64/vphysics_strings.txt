@@ -762,6 +762,7 @@ IVP Failed at %s %d\n
 Inertia: %.2f, %.2f, %.2f (inv %.3f, %.3f, %.3f)\n
 IntVal
 KI,DC+
+L-\fLV
 L?23hk_Rigid_Body_Binary_EF
 L?pulley
 LIST # %s | %s\n

@@ -1114,7 +1114,6 @@ $vertexcolor
 0.15
 0.25
 0.55
-00:27:20
 0123456789ABCDEF
 0123456789abcdef
 0: no radiosity\n1: radiosity with ambient cube (6 samples)\n2: radiosity with 162 samples\n3: 162 samples for static props, 6 samples for everything else
@@ -2645,6 +2644,7 @@ $vertexcolor
 22ISocketCreatorListener
 22ISpatialLeafEnumerator
 22IToolFrameworkInternal
+23:43:52
 23CAudioMixerWave16Stereo
 23CBoundedCvar_UpdateRate
 23CColorCorrectionUIPanel
@@ -3048,6 +3048,7 @@ Banning %s for rcon hacking attempts\n
 BaseInputDialog
 BaseUI
 Base_CmdKeyValues::ReadFromBuffer
+Base_CmdKeyValues::ReadFromBuffer: Not using local storage!\n
 Bias
 Bind a key.
 Bind this key but only on Mac, not win32
@@ -4607,7 +4608,6 @@ Fast Bwd
 Fast Fwd
 Fatal Error:  Unable to create game window!
 Fatal Error: Unable to get window info from SDL.
-Feb 28 2026
 Fieldname is not unique: %s\nRename it and try again.
 File %d: %s Size:%d\n
 File '%s' requested from %s.\n
@@ -5522,6 +5522,7 @@ Maximum queries per second to respond to from anywhere.
 Maximum replay time in seconds
 Maximum supported image dimension is %u pixels
 Maximum updates per second that the server will allow
+May 19 2026
 MbP?
 MemAllocScratch
 MemFreeScratch

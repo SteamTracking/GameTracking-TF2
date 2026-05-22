@@ -1440,7 +1440,6 @@ _ZSt9terminatev@GLIBCXX_3.4
 _ZTVN10__cxxabiv117__class_type_infoE@CXXABI_1.3
 _ZTVN10__cxxabiv120__si_class_type_infoE@CXXABI_1.3
 _ZTVN10__cxxabiv121__vmi_class_type_infoE@CXXABI_1.3
-__bss_start
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
 __ctype_tolower_loc
@@ -1515,8 +1514,6 @@ __xmknod
 __xmknod@GLIBC_2.2.5
 __xstat64@GLIBC_2.2.5
 __xstat@GLIBC_2.2.5
-_edata
-_end
 _normal
 _rt_FullScreen
 _setjmp
