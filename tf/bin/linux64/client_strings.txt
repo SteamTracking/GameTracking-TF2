@@ -6433,9 +6433,9 @@ $world_mins
 2023
 2024
 2025
-2025-07-16
-2025-09-16
 2026
+2026-06-16
+2026-09-16
 2027
 2028
 2029
@@ -13897,6 +13897,7 @@ CameraFree
 CameraFringe
 CameraThird
 Camo_IMaterialProxy003
+Camp Saxton
 Can players call votes to kick players from the server?
 Can't 
 Can't BackUp() after failed Next().
@@ -15257,6 +15258,7 @@ DrawWorld
 DrawWorldAndEntities
 DropContext
 DroppedIntelContainer
+Dryfield
 Duck Badge
 Duck.Quack
 DuckLeaderboard
@@ -15560,7 +15562,7 @@ ExpandButton.Color
 ExpandableList
 Expected "
 Expected %s found %s ( raw '%s' )! (prev: %s)\n
-Expected integerInteger out of rExpect a decimalExpected double.Expected identifExpected string.h
+Expected integerInteger out of rExpect a decimalExpected double.Expected identifExpected string.
 Expecting %s, got %s
 Expecting '%s'
 Expecting ',', didn't find it!
@@ -16044,7 +16046,6 @@ GPUDriverVersion
 GPUDrv
 GPUVendor
 GS marked assigned match as ended\n
-G[CEconItem: ID=%llu, DefIdx=%d]
 G\n$instance_def_type_paintkit_operation
 G\n$instance_def_type_paintkit_variables
 Ga=o
@@ -17739,6 +17740,7 @@ ModelInspectionPanel
 ModifyAdditionalMovementInfo
 Modulus
 ModulusSize
+Mojave
 Moldergrove
 Monster Bash
 MontgomeryRepresentation: Montgomery representation requires an odd modulus
@@ -19738,6 +19740,7 @@ Premature end of JPEG file
 Premature end of input file
 PremiumButton
 PremiumCheckImage
+Premuda
 Presence ID not found for %s\n
 PresetsExplanation
 PressButton
@@ -20108,6 +20111,7 @@ RedVictoryContainer
 RedeemingPanel
 RedirectionBehavior
 RedirectionTargetPointer
+Redwood
 Region
 RegionBackout
 RegionIcon
@@ -20926,6 +20930,7 @@ Sharkbay
 ShieldFalloff_IMaterialProxy003
 ShieldedState
 Shift
+Shorelight
 ShortDescriptionLabel
 ShotgunPunchAngle
 ShotgunShellEject
@@ -23790,6 +23795,7 @@ ZoomPanel
 [/list]
 [0.25 0.75 0.0 0.0]
 [A:%u:%u:%u]
+[CEconItem: ID=%llu, DefIdx=%d]
 [CLTrackers]: %s
 [GS %s - %7.2f] %s
 [M:%u:%u:%u]
@@ -25847,6 +25853,7 @@ codec
 codes incomplete
 codes oversubscribed
 cohesion strength
+coin_spin
 collapsed_height
 collection_item_id
 collection_list_xpos
@@ -26048,10 +26055,12 @@ cp_hardwood_final
 cp_lavapit_final
 cp_manor_event
 cp_mercenarypark
+cp_mojave
 cp_mossrock
 cp_mountainlab
 cp_overgrown
 cp_powerhouse
+cp_premuda
 cp_process_final
 cp_reckoner
 cp_snakewater_final1
@@ -30397,8 +30406,10 @@ koth_blowout
 koth_boardwalk
 koth_brazil
 koth_cachoeira
+koth_camp_saxton
 koth_cascade
 koth_demolition
+koth_dryfield
 koth_dusker
 koth_highpass
 koth_king
@@ -30416,6 +30427,7 @@ koth_probed
 koth_rotunda
 koth_sawmill_event
 koth_sharkbay
+koth_shorelight
 koth_slasher
 koth_slaughter_event
 koth_slime
@@ -34410,6 +34422,7 @@ pl_patagonia
 pl_phoenix
 pl_pier
 pl_precipice_event_final
+pl_redwood
 pl_rumble_event
 pl_rumford_event
 pl_sludgepit_event
@@ -38348,6 +38361,7 @@ use local system
 use only bounding box
 use parent particles for emission scaling
 use particle velocity for first input
+use_coin_particle_effect
 use_convar_minmax
 use_head
 use_item_rendertarget

@@ -2629,6 +2629,7 @@ $vertexcolor
 21IVPhysicsDebugOverlay
 21SVC_CreateStringTable
 21SVC_UpdateStringTable
+22:47:48
 22CAudioMixerWave8Stereo
 22CAudioSourceCachedInfo
 22CAudioSourceStreamWave
@@ -2644,7 +2645,6 @@ $vertexcolor
 22ISocketCreatorListener
 22ISpatialLeafEnumerator
 22IToolFrameworkInternal
-23:43:52
 23CAudioMixerWave16Stereo
 23CBoundedCvar_UpdateRate
 23CColorCorrectionUIPanel
@@ -5121,6 +5121,7 @@ Join request approved\n
 Join request denied
 Joining team: %s\n
 Joint Stereo
+Jul  1 2026
 Jump To
 Jumping to %s\n
 KEY_0
@@ -5522,7 +5523,6 @@ Maximum queries per second to respond to from anywhere.
 Maximum replay time in seconds
 Maximum supported image dimension is %u pixels
 Maximum updates per second that the server will allow
-May 19 2026
 MbP?
 MemAllocScratch
 MemFreeScratch

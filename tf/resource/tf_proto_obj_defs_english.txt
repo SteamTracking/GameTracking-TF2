@@ -1028,7 +1028,17 @@
 	"9_430_field { field_number: 2 }"		"Necropolish"
 	"9_431_field { field_number: 2 }"		"Blackout"
 	"9_432_field { field_number: 2 }"		"Broken Record"
+	"9_433_field { field_number: 2 }"		"Sandwich Diner"
+	"9_434_field { field_number: 2 }"		"Beachy Boy"
+	"9_435_field { field_number: 2 }"		"Army Guns"
+	"9_436_field { field_number: 2 }"		"Taxi Cabbed"
+	"9_437_field { field_number: 2 }"		"Ocean Mapped"
+	"9_438_field { field_number: 2 }"		"Krak-coated"
+	"9_439_field { field_number: 2 }"		"Team Union"
 	"9_43_field { field_number: 2 }"		"Smalltown Bringdown"
+	"9_440_field { field_number: 2 }"		"Sideshow"
+	"9_441_field { field_number: 2 }"		"Storage War"
+	"9_442_field { field_number: 2 }"		"Die'n Dasher"
 	"9_44_field { field_number: 2 }"		"Civic Duty"
 	"9_45_field { field_number: 2 }"		"Liquid Asset"
 	"9_46_field { field_number: 2 }"		"Black Dahlia"
@@ -1086,4 +1096,3 @@
 	"9_9_field { field_number: 2 }"		"Forest Fire"
 }
 }
- 

@@ -3173,8 +3173,8 @@ sound/weapons/teleporter_spin2.wav CRC:00d4b79cf0 size:456258
 sound/weapons/teleporter_spin3.wav CRC:004316f3a2 size:451718
 sound/weapons/tf2_back_scatter.wav CRC:007c9ab9cb size:531708
 sound/weapons/tf2_back_scatter_crit.wav CRC:00b500acdb size:531708
-sound/weapons/tf2_backshot_shotty.wav CRC:00ce2ced25 size:429216
-sound/weapons/tf2_backshot_shotty_crit.wav CRC:0066f43468 size:429216
+sound/weapons/tf2_backshot_shotty.wav CRC:0036f713d3 size:427588
+sound/weapons/tf2_backshot_shotty_crit.wav CRC:00eb620048 size:427504
 sound/weapons/tf_medic_syringe_overdose.wav CRC:005a919602 size:57604
 sound/weapons/tf_medic_syringe_overdose_crit.wav CRC:00e6765a78 size:315300
 sound/weapons/tf_sniper_bazaar_bargain_01.wav CRC:006b8bb677 size:349732

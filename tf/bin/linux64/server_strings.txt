@@ -5379,9 +5379,9 @@ $var3
 2023
 2024
 2025
-2025-07-16
-2025-09-16
 2026
+2026-06-16
+2026-09-16
 2027
 2028
 2029
@@ -11691,6 +11691,7 @@ Called wrong StartTask()\n
 Camber
 Camera in use by other player.
 Camera.SnapShot
+Camp Saxton
 Can Opener
 Can players call votes in Mann-Vs-Machine to enable or disable per-class limits?
 Can players call votes to change levels in MvM?
@@ -12917,6 +12918,7 @@ DropItem() - Didn't create!\n
 DropItem() - No item name!\n
 DropRune
 Dropped flag trace started solid!\nWiggle around each axis to find a safer fit!\n
+Dryfield
 Dsprites/bubble.vmt
 Duck.Quack
 Dump all global entities/states
@@ -13350,7 +13352,7 @@ Existing commit record for SObject is more up to date: %s\n
 Exit animation %s failed to cache target points properly!\n
 Expected "
 Expected %s found %s ( raw '%s' )! (prev: %s)\n
-Expected integerInteger out of rExpect a decimalExpected double.Expected identifExpected string.8-
+Expected integerInteger out of rExpect a decimalExpected double.Expected identifExpected string.
 Expected result speed: %f
 Expecting ',', didn't find it!
 Expecting '[', didn't find it!
@@ -13877,7 +13879,6 @@ GR_STATE_STALEMATE
 GR_STATE_STARTGAME
 GR_STATE_TEAM_WIN
 GState: %s
-G[CEconItem: ID=%llu, DefIdx=%d]
 G\n$instance_def_type_paintkit_operation
 G\n$instance_def_type_paintkit_variables
 Ga=o
@@ -16491,6 +16492,7 @@ ModifyLinks
 ModifySpeed
 Modulus
 ModulusSize
+Mojave
 Moldergrove
 Monster Bash
 MontgomeryRepresentation: Montgomery representation requires an odd modulus
@@ -18352,6 +18354,7 @@ PrecacheScriptSound '%s' failed, no such sound script entry\n
 PrecacheSoundScript
 Precipice
 Prefab
+Premuda
 Prerequisite commands me to move to an entity
 Prerequisite commands me to wait
 Prerequisite has been disabled
@@ -18649,6 +18652,7 @@ RedWins
 RedirectionBehavior
 RedirectionTargetPointer
 ReducedCloakFromAmmo
+Redwood
 Referenced by '%s:%s' -- %s\n
 Refill all bot ammo counts
 RefillContext
@@ -19967,6 +19971,7 @@ Shifting mesh by %f,%f\n
 Shifts the selected areas by the specified amount
 Shoestring Budget
 ShootBow
+Shorelight
 Shot regulator in rest interval
 ShotgunPunchAngle
 ShotsFired
@@ -22582,6 +22587,7 @@ Zrange
 [/code]
 [/list]
 [A:%u:%u:%u]
+[CEconItem: ID=%llu, DefIdx=%d]
 [GS %s - %7.2f] %s
 [M:%u:%u:%u]
 [NPCState::%s]
@@ -24467,9 +24473,11 @@ cp_hardwood_final
 cp_lavapit_final
 cp_manor_event
 cp_mercenarypark
+cp_mojave
 cp_mossrock
 cp_mountainlab
 cp_overgrown
+cp_premuda
 cp_process_final
 cp_reckoner
 cp_snakewater_final1
@@ -28450,8 +28458,10 @@ koth_blowout
 koth_boardwalk
 koth_brazil
 koth_cachoeira
+koth_camp_saxton
 koth_cascade
 koth_demolition
+koth_dryfield
 koth_dusker
 koth_harvest_final
 koth_highpass
@@ -28470,6 +28480,7 @@ koth_probed
 koth_rotunda
 koth_sawmill_event
 koth_sharkbay
+koth_shorelight
 koth_slasher
 koth_slaughter_event
 koth_slime
@@ -34537,6 +34548,7 @@ pl_patagonia
 pl_phoenix
 pl_pier
 pl_precipice_event_final
+pl_redwood
 pl_rumble_event
 pl_rumford_event
 pl_sludgepit_event
@@ -37876,6 +37888,7 @@ useExactVelocity
 useTeamSpawnPoint
 useThresholdCheck
 use_angles
+use_coin_particle_effect
 use_head
 use_large_smoke_explosion
 use_parents_item_def

@@ -263,6 +263,7 @@ GetSpewOutputLevel
 GetSymbolNameFromAddress
 GetThreadedLoadLibraryFunc
 HushAsserts
+I^1u
 Ignore All Asserts
 Ignore This File
 Illegal termination of worker thread! Threads must negotiate an end to the thread before the CThread object is destroyed.\n
@@ -271,12 +272,12 @@ InstallProgressReportHandler
 Interpolation
 Is64BitOS
 IsSpewActive
+Jul  1 202622:45:42
 Light_Cache
 LogV
 Lowered '%s' -> '%s'\n
 MainThrd
 Matched '%s' -> '%s'\n
-May 14 202600:29:12
 MbP?true
 MemAllocOOMError
 MemAllocScratch
