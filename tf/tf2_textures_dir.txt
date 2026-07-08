@@ -6892,8 +6892,8 @@ materials/backpack/workshop/player/items/pyro/sum25_frogmanns/sum25_frogmanns.vt
 materials/backpack/workshop/player/items/pyro/sum25_frogmanns/sum25_frogmanns_large.vtf CRC:00fab2a77c size:349784
 materials/backpack/workshop/player/items/pyro/sum25_oxygen/sum25_oxygen.vtf CRC:003b5a7810 size:22104
 materials/backpack/workshop/player/items/pyro/sum25_oxygen/sum25_oxygen_large.vtf CRC:00f8599e81 size:349784
-materials/backpack/workshop/player/items/pyro/sum26_pyros_overalls/sum26_pyros_overalls.vtf CRC:00667558d0 size:22104
-materials/backpack/workshop/player/items/pyro/sum26_pyros_overalls/sum26_pyros_overalls_large.vtf CRC:00f01e3cd2 size:349784
+materials/backpack/workshop/player/items/pyro/sum26_pyros_overalls/sum26_pyros_overalls.vtf CRC:00f9da4dad size:22104
+materials/backpack/workshop/player/items/pyro/sum26_pyros_overalls/sum26_pyros_overalls_large.vtf CRC:009ed75f7e size:349784
 materials/backpack/workshop/player/items/pyro/sum26_tropical_torcher/sum26_tropical_torcher.vtf CRC:009edaef18 size:22104
 materials/backpack/workshop/player/items/pyro/sum26_tropical_torcher/sum26_tropical_torcher_large.vtf CRC:003e63aeb6 size:349784
 materials/backpack/workshop/player/items/pyro/sum26_unknown_warrior/sum26_unknown_warrior.vtf CRC:0015ae73d0 size:22104
@@ -17672,6 +17672,9 @@ materials/models/workshop/player/items/all_class/sum25_team_cap_style4/sum25_tea
 materials/models/workshop/player/items/all_class/sum26_beachcombers/sum26_beachcombers_color.vtf CRC:0053bf95f8 size:349784
 materials/models/workshop/player/items/all_class/sum26_beachcombers/sum26_beachcombers_normal.vtf CRC:0013acb347 size:349784
 materials/models/workshop/player/items/all_class/sum26_beachcombers/sum26_beachcombers_phongexponent.vtf CRC:0035ec09cc size:87640
+materials/models/workshop/player/items/all_class/sum26_beachcombers_style2/sum26_beachcombers_style2_color.vtf CRC:0053bf95f8 size:349784
+materials/models/workshop/player/items/all_class/sum26_beachcombers_style2/sum26_beachcombers_style2_normal.vtf CRC:0013acb347 size:349784
+materials/models/workshop/player/items/all_class/sum26_beachcombers_style2/sum26_beachcombers_style2_phongexponent.vtf CRC:0035ec09cc size:87640
 materials/models/workshop/player/items/all_class/sum26_deadwave/sum26_deadwave_1_color.vtf CRC:0083de62ee size:349784
 materials/models/workshop/player/items/all_class/sum26_deadwave/sum26_deadwave_1_illum.vtf CRC:003f68a126 size:87640
 materials/models/workshop/player/items/all_class/sum26_deadwave/sum26_deadwave_1_normal.vtf CRC:00ade4ae62 size:349784
@@ -25351,14 +25354,14 @@ materials/patterns/workshop/summer_2023/2969133454/2969133454_yellow.vtf CRC:003
 materials/patterns/workshop/summer_2023/2969133454/stickers/2969133454_logo.vtf CRC:003bec7a22 size:349784
 materials/patterns/workshop/summer_2023/2969133454/stickers/2969133454_stripe.vtf CRC:0056990930 size:1398360
 materials/patterns/workshop/summer_2023/2969133454/stickers/2969133454_stripe_noclamp.vtf CRC:000e614337 size:1398360
-materials/patterns/workshop/summer_2026/3405898400/3405898400_blu_stripe.vtf CRC:002ed35b2b size:699296
+materials/patterns/workshop/summer_2026/3405898400/3405898400_blu_stripe.vtf CRC:00f53593f0 size:1398360
 materials/patterns/workshop/summer_2026/3405898400/3405898400_brass.vtf CRC:0097f127aa size:1398360
 materials/patterns/workshop/summer_2026/3405898400/3405898400_brass_2.vtf CRC:0097f127aa size:1398360
 materials/patterns/workshop/summer_2026/3405898400/3405898400_down_spade.vtf CRC:0020b768a0 size:349784
 materials/patterns/workshop/summer_2026/3405898400/3405898400_grad_blu.vtf CRC:0042039338 size:11168
 materials/patterns/workshop/summer_2026/3405898400/3405898400_grad_red.vtf CRC:0042039338 size:11168
-materials/patterns/workshop/summer_2026/3405898400/3405898400_metallic.vtf CRC:00dff1599b size:699296
-materials/patterns/workshop/summer_2026/3405898400/3405898400_red_stripe.vtf CRC:001fcc1cb4 size:699296
+materials/patterns/workshop/summer_2026/3405898400/3405898400_metallic.vtf CRC:0095e2f2bd size:1398360
+materials/patterns/workshop/summer_2026/3405898400/3405898400_red_stripe.vtf CRC:00e2a83288 size:1398360
 materials/patterns/workshop/summer_2026/3405898400/3405898400_up_spade.vtf CRC:0069a644e6 size:349784
 materials/patterns/workshop/summer_2026/3467689408/3467689408_black_tertiary.vtf CRC:00dd113c23 size:1398360
 materials/patterns/workshop/summer_2026/3467689408/3467689408_black_tertiary_wear.vtf CRC:00b1649b52 size:1398360
@@ -25385,7 +25388,7 @@ materials/patterns/workshop/summer_2026/3473432802/3473432802_tertiary_blu.vtf C
 materials/patterns/workshop/summer_2026/3473432802/3473432802_tertiary_red.vtf CRC:006261ad51 size:5592664
 materials/patterns/workshop/summer_2026/3565229606/3565229606_albedo.vtf CRC:00a03b9541 size:1398360
 materials/patterns/workshop/summer_2026/3565229606/3565229606_dark_sheet.vtf CRC:0084bb9823 size:1398360
-materials/patterns/workshop/summer_2026/3565229606/3565229606_union.vtf CRC:00440a89a6 size:1398360
+materials/patterns/workshop/summer_2026/3565229606/3565229606_union.vtf CRC:00e64ab894 size:1398360
 materials/patterns/workshop/summer_2026/3565229606/3565229606_wood_base.vtf CRC:0021b77aaa size:1398360
 materials/patterns/workshop/summer_2026/3565229606/3565229606_wood_gradient.vtf CRC:00771f8b4f size:87640
 materials/patterns/workshop/summer_2026/3674640778/3674640778_p.vtf CRC:0007d983c9 size:5592664
@@ -25400,7 +25403,7 @@ materials/patterns/workshop/summer_2026/3674640778/stickers/3674640778_stripe.vt
 materials/patterns/workshop/summer_2026/3674640778/stickers/3674640778_stripe_noclamp.vtf CRC:003e9c697c size:5592664
 materials/patterns/workshop/summer_2026/3688608202/3688608202_blank_gradient.vtf CRC:004dcc0739 size:699296
 materials/patterns/workshop/summer_2026/3688608202/3688608202_blue_pattern.vtf CRC:008cd2210e size:5592664
-materials/patterns/workshop/summer_2026/3688608202/3688608202_main_white.vtf CRC:002c6c32d1 size:2796448
+materials/patterns/workshop/summer_2026/3688608202/3688608202_main_white.vtf CRC:00b6e44baa size:5592664
 materials/patterns/workshop/summer_2026/3688608202/3688608202_metal_wear.vtf CRC:00667b5099 size:5592664
 materials/patterns/workshop/summer_2026/3688608202/3688608202_red_pattern.vtf CRC:00e1835a2d size:5592664
 materials/patterns/workshop/summer_2026/3688608202/3688608202_sticker.vtf CRC:0036232245 size:1398360
