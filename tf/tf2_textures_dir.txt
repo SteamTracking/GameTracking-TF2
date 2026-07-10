@@ -7698,8 +7698,8 @@ materials/backpack/workshop/player/items/soldier/sum24_pathfinder_style1/sum24_p
 materials/backpack/workshop/player/items/soldier/sum24_pathfinder_style1/sum24_pathfinder_style1_large.vtf CRC:000745fcbd size:349784
 materials/backpack/workshop/player/items/soldier/sum25_jarhead/sum25_jarhead.vtf CRC:007a0793af size:22104
 materials/backpack/workshop/player/items/soldier/sum25_jarhead/sum25_jarhead_large.vtf CRC:00971d2d77 size:349784
-materials/backpack/workshop/player/items/soldier/sum26_inglorious_patriot/sum26_inglorious_patriot.vtf CRC:00e1a75a82 size:22104
-materials/backpack/workshop/player/items/soldier/sum26_inglorious_patriot/sum26_inglorious_patriot_large.vtf CRC:007e9ba29a size:349784
+materials/backpack/workshop/player/items/soldier/sum26_inglorious_patriot/sum26_inglorious_patriot.vtf CRC:008402f4de size:22104
+materials/backpack/workshop/player/items/soldier/sum26_inglorious_patriot/sum26_inglorious_patriot_large.vtf CRC:00a7fecc73 size:349784
 materials/backpack/workshop/player/items/soldier/sum26_lieutenants_cut/sum26_lieutenants_cut.vtf CRC:002565b609 size:22104
 materials/backpack/workshop/player/items/soldier/sum26_lieutenants_cut/sum26_lieutenants_cut_large.vtf CRC:00cbbf49d8 size:349784
 materials/backpack/workshop/player/items/soldier/taunt_buffoons_bivouac/taunt_buffoons_bivouac.vtf CRC:00c8ba74ae size:22104
@@ -17672,7 +17672,7 @@ materials/models/workshop/player/items/all_class/sum25_team_cap_style4/sum25_tea
 materials/models/workshop/player/items/all_class/sum26_beachcombers/sum26_beachcombers_color.vtf CRC:0053bf95f8 size:349784
 materials/models/workshop/player/items/all_class/sum26_beachcombers/sum26_beachcombers_normal.vtf CRC:0013acb347 size:349784
 materials/models/workshop/player/items/all_class/sum26_beachcombers/sum26_beachcombers_phongexponent.vtf CRC:0035ec09cc size:87640
-materials/models/workshop/player/items/all_class/sum26_beachcombers_style2/sum26_beachcombers_style2_color.vtf CRC:0053bf95f8 size:349784
+materials/models/workshop/player/items/all_class/sum26_beachcombers_style2/sum26_beachcombers_style2_color.vtf CRC:00bd307a49 size:349784
 materials/models/workshop/player/items/all_class/sum26_beachcombers_style2/sum26_beachcombers_style2_normal.vtf CRC:0013acb347 size:349784
 materials/models/workshop/player/items/all_class/sum26_beachcombers_style2/sum26_beachcombers_style2_phongexponent.vtf CRC:0035ec09cc size:87640
 materials/models/workshop/player/items/all_class/sum26_deadwave/sum26_deadwave_1_color.vtf CRC:0083de62ee size:349784
@@ -19909,6 +19909,7 @@ materials/models/workshop/player/items/heavy/taunt_ring_king/taunt_ring_king_nor
 materials/models/workshop/player/items/heavy/taunt_ring_king/taunt_ring_king_phongexponent.vtf CRC:00995fa93f size:87640
 materials/models/workshop/player/items/heavy/taunt_soviet_strongarm/taunt_soviet_strongarm_color.vtf CRC:00c80aac79 size:349784
 materials/models/workshop/player/items/heavy/taunt_soviet_strongarm/taunt_soviet_strongarm_normal.vtf CRC:0069d404a2 size:349784
+materials/models/workshop/player/items/heavy/taunt_the_circuit_breaker/taunt_the_circuit_breaker_1_blue_color.vtf CRC:00c1f77a46 size:349784
 materials/models/workshop/player/items/heavy/taunt_the_circuit_breaker/taunt_the_circuit_breaker_1_color.vtf CRC:00f0e801a3 size:349784
 materials/models/workshop/player/items/heavy/taunt_the_circuit_breaker/taunt_the_circuit_breaker_1_normal.vtf CRC:0065d03adb size:349784
 materials/models/workshop/player/items/heavy/taunt_the_circuit_breaker/taunt_the_circuit_breaker_1_phongexponent.vtf CRC:00a38a74fb size:87640
@@ -22826,12 +22827,12 @@ materials/models/workshop/player/items/soldier/sum25_jarhead_style3/sum25_jarhea
 materials/models/workshop/player/items/soldier/sum25_jarhead_style3/sum25_jarhead_style3_color.vtf CRC:0002200948 size:349784
 materials/models/workshop/player/items/soldier/sum25_jarhead_style3/sum25_jarhead_style3_normal.vtf CRC:0007dc30e8 size:349784
 materials/models/workshop/player/items/soldier/sum25_jarhead_style3/sum25_jarhead_style3_phongexponent.vtf CRC:007f77ddf8 size:87640
-materials/models/workshop/player/items/soldier/sum26_inglorious_patriot/sum26_inglorious_patriot_1_blue_color.vtf CRC:00f726d3c8 size:349784
-materials/models/workshop/player/items/soldier/sum26_inglorious_patriot/sum26_inglorious_patriot_1_color.vtf CRC:00fb0c41de size:349784
-materials/models/workshop/player/items/soldier/sum26_inglorious_patriot/sum26_inglorious_patriot_1_normal.vtf CRC:003ebe6fe8 size:349784
+materials/models/workshop/player/items/soldier/sum26_inglorious_patriot/sum26_inglorious_patriot_1_blue_color.vtf CRC:00d40440c5 size:349784
+materials/models/workshop/player/items/soldier/sum26_inglorious_patriot/sum26_inglorious_patriot_1_color.vtf CRC:00144392d2 size:349784
+materials/models/workshop/player/items/soldier/sum26_inglorious_patriot/sum26_inglorious_patriot_1_normal.vtf CRC:00c565f743 size:349784
 materials/models/workshop/player/items/soldier/sum26_inglorious_patriot/sum26_inglorious_patriot_1_phongexponent.vtf CRC:0088bfb296 size:43936
-materials/models/workshop/player/items/soldier/sum26_inglorious_patriot/sum26_inglorious_patriot_blue_color.vtf CRC:00fe7ea7b7 size:349784
-materials/models/workshop/player/items/soldier/sum26_inglorious_patriot/sum26_inglorious_patriot_color.vtf CRC:00eebb29a2 size:349784
+materials/models/workshop/player/items/soldier/sum26_inglorious_patriot/sum26_inglorious_patriot_blue_color.vtf CRC:0010cf7155 size:349784
+materials/models/workshop/player/items/soldier/sum26_inglorious_patriot/sum26_inglorious_patriot_color.vtf CRC:003a129109 size:349784
 materials/models/workshop/player/items/soldier/sum26_inglorious_patriot/sum26_inglorious_patriot_normal.vtf CRC:003a71e69c size:349784
 materials/models/workshop/player/items/soldier/sum26_inglorious_patriot/sum26_inglorious_patriot_phongexponent.vtf CRC:0088c3205a size:43936
 materials/models/workshop/player/items/soldier/sum26_lieutenants_cut/sum26_lieutenants_cut_1_color.vtf CRC:00d93f4145 size:349784
