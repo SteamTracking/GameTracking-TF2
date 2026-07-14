@@ -1613,6 +1613,10 @@
 "TF_TournamentMedal_RGB7_LAN_Silver"			"RGB 7 LAN 2nd Place"
 "TF_TournamentMedal_RGB7_LAN_Bronze"			"RGB 7 LAN 3rd Place"
 "TF_TournamentMedal_RGB7_LAN_Participant"		"RGB 7 LAN Participant"
+"TF_TournamentMedal_RGB8_LAN_Gold"				"RGB 8 LAN 1st Place"
+"TF_TournamentMedal_RGB8_LAN_Silver"			"RGB 8 LAN 2nd Place"
+"TF_TournamentMedal_RGB8_LAN_Bronze"			"RGB 8 LAN 3rd Place"
+"TF_TournamentMedal_RGB8_LAN_Participant"		"RGB 8 LAN Participant"
 
 "TF_TournamentMedal_Season1"	"Season 1"
 "TF_TournamentMedal_Season2"	"Season 2"
@@ -3627,6 +3631,16 @@
 
 "TF_TournamentMedal_Supreme_Strategist"					"Supreme Strategist's Sigil of Status"
 "TF_TournamentMedal_Supreme_Strategist_Desc"			"A special medal given by the CEO of Gray Gravel Co. for those loyal to his cause. Only those who are extremely skilled in the art of commanding his armies have ever laid their hands upon it. He doesn't recommend wearing it in public. Awarded to content creators of Moonlight MvM's events!"
+
+"TF_TournamentMedal_JF_Soldier_1st"						"Jump Fortress Playoffs Soldier 1st Place"
+"TF_TournamentMedal_JF_Soldier_2nd"						"Jump Fortress Playoffs Soldier 2nd Place"
+"TF_TournamentMedal_JF_Soldier_3rd"						"Jump Fortress Playoffs Soldier 3rd Place"
+"TF_TournamentMedal_JF_Soldier_Participant"				"Jump Fortress Playoffs Soldier Participant"
+"TF_TournamentMedal_JF_Demoman_1st"						"Jump Fortress Playoffs Demoman 1st Place"
+"TF_TournamentMedal_JF_Demoman_2nd"						"Jump Fortress Playoffs Demoman 2nd Place"
+"TF_TournamentMedal_JF_Demoman_3rd"						"Jump Fortress Playoffs Demoman 3rd Place"
+"TF_TournamentMedal_JF_Demoman_Participant"				"Jump Fortress Playoffs Demoman Participant"
+"TF_TournamentMedal_JF_Contributor"						"Jump Fortress Playoffs Contributor"
 
 "TF_heals4reals_gold"			"Heals for Reals Event 1st Place"
 "TF_heals4reals_silver"			"Heals for Reals Event 2nd Place"
@@ -13362,7 +13376,7 @@
 
 // Summer 2026 Unusual
 "Attrib_Particle407"			"Umbral Lights"
-"Attrib_Particle408"			"Northern Nights"
+"Attrib_Particle408"			"Polar Prism"
 "Attrib_Particle409"			"Solar Singed"
 "Attrib_Particle410"			"Floral Growth"
 "Attrib_Particle411"			"Floral Growth"
