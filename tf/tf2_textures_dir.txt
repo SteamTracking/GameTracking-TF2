@@ -25460,9 +25460,9 @@ materials/patterns/workshop/summer_2026/3696227552/3696227552_checkers.vtf CRC:0
 materials/patterns/workshop/summer_2026/3696227552/3696227552_main.vtf CRC:008e8200dc size:1398360
 materials/patterns/workshop/summer_2026/3696227552/3696227552_metal.vtf CRC:00ab536d4e size:1398360
 materials/patterns/workshop/summer_2026/3696227552/3696227552_metal_wear.vtf CRC:0059588d53 size:1398360
-materials/patterns/workshop/summer_2026/3696227552/3696227552_sticker.vtf CRC:003f0fe2b4 size:349784
-materials/patterns/workshop/summer_2026/3696227552/3696227552_stripe_sticker.vtf CRC:0070d2470b size:349784
-materials/patterns/workshop/summer_2026/3696227552/3696227552_stripe_sticker_noclamp.vtf CRC:00c1f4b332 size:349784
+materials/patterns/workshop/summer_2026/3696227552/3696227552_sticker.vtf CRC:00f43d9522 size:349784
+materials/patterns/workshop/summer_2026/3696227552/3696227552_stripe_sticker.vtf CRC:008051cabb size:349784
+materials/patterns/workshop/summer_2026/3696227552/3696227552_stripe_sticker_noclamp.vtf CRC:00ef9202dc size:349784
 materials/patterns/workshop/summer_2026/3696227552/3696227552_tires.vtf CRC:00bd4ea5c0 size:1398360
 materials/patterns/workshop/summer_2026/3696227552/3696227552_tires_wear.vtf CRC:00ef386ed1 size:1398360
 materials/patterns/yeti/bamboo_hut_roof01.vtf CRC:006cf6ebab size:1398360

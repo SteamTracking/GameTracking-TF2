@@ -2248,10 +2248,6 @@
 "TF_TournamentMedal_CappingTV_SummerBrawl_2nd"			"CappingTV Summer Brawl 2nd Place"
 "TF_TournamentMedal_CappingTV_SummerBrawl_3rd"			"CappingTV Summer Brawl 3rd Place"
 "TF_TournamentMedal_CappingTV_SummerBrawl_Participant"	"CappingTV Summer Brawl Participant"
-"TF_TournamentMedal_CappingTV_TF2_SummerBrawl_1st"			"CappingTV Summer Brawl 1st Place"
-"TF_TournamentMedal_CappingTV_TF2_SummerBrawl_2nd"			"CappingTV Summer Brawl 2nd Place"
-"TF_TournamentMedal_CappingTV_TF2_SummerBrawl_3rd"			"CappingTV Summer Brawl 3rd Place"
-"TF_TournamentMedal_CappingTV_TF2_SummerBrawl_Participant"	"CappingTV Summer Brawl Participant"
 "TF_TournamentMedal_CappingTV_PASS_Time_1st"			"CappingTV PASS Time Championship 1st Place"
 "TF_TournamentMedal_CappingTV_PASS_Time_2nd"			"CappingTV PASS Time Championship 2nd Place"
 "TF_TournamentMedal_CappingTV_PASS_Time_3rd"			"CappingTV PASS Time Championship 3rd Place"
@@ -2263,6 +2259,7 @@
 "TF_TournamentMedal_CappingTV_SummerBrawl_2023"		"Brisbane, Australia, 2023"
 "TF_TournamentMedal_CappingTV_SummerBrawl_2024"		"Brisbane, Australia, 2024"
 "TF_TournamentMedal_CappingTV_SummerBrawl_2025"		"Brisbane, Australia, 2025"
+"TF_TournamentMedal_CappingTV_SummerBrawl_2026"		"Brisbane, Australia, 2026"
 
 "TF_TournamentMedal_SnacksSummeryUltiduo_Gold"			"Snack's Summery Ultiduo Siesta Gold Medal"
 "TF_TournamentMedal_SnacksSummeryUltiduo_Silver"		"Snack's Summery Ultiduo Siesta Silver Medal"
@@ -2959,6 +2956,7 @@
 "TF_TournamentMedal_LAN_Downunder_Champion"				"LAN Downunder Champion"
 "TF_TournamentMedal_LAN_Downunder_2024"					"Melbourne, Australia, 2024"
 "TF_TournamentMedal_LAN_Downunder_2025"					"Melbourne, Australia, 2025"
+"TF_TournamentMedal_LAN_Downunder_2026"					"Melbourne, Australia, 2026"
 
 "TF_TournamentMedal_RussianHighlander_1st"				"Russian Highlander 1st Place"
 "TF_TournamentMedal_RussianHighlander_2nd"				"Russian Highlander 2nd Place"
