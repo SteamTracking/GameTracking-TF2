@@ -810,6 +810,7 @@ Zjz\v
 \nVerts %d (First %d, Offset %d) :\n
 \nVerts: (Vertex Format %llx)\n
 \t(%zu) comparing %s with %s\n
+^Wwi
 _ExitOnFatalAssert
 _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable

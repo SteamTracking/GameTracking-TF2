@@ -1172,6 +1172,7 @@ Writing block w/ recon index %i to session info buffer\n
 Writing temp file
 Wrong JPEG library version: library is %d, caller expects %d
 Y@\n    [%d: huff+mtf 
+YhTH
 ZLIB_1.2.0
 [/code]
 [/list]
@@ -1396,7 +1397,6 @@ encode only context
 encoding_quality
 end of file
 end of stream
-eo.Eb
 error loading %s\n
 exp@GLIBC_2.29
 expf
@@ -1624,7 +1624,6 @@ non-recoverable state
 numFrames
 numMipLevels
 numResources
-o@5s
 okOP
 opendir@GLIBC_2.2.5
 out of memory

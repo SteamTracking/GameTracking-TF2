@@ -1116,6 +1116,7 @@ $vertexcolor
 0.55
 0123456789ABCDEF
 0123456789abcdef
+03:37:16
 0: no radiosity\n1: radiosity with ambient cube (6 samples)\n2: radiosity with 162 samples\n3: 162 samples for static props, 6 samples for everything else
 0: off\n1: draw light cache entries\n2: draw rays\n
 0=Off, 1=Normal, 2=Wireframe
@@ -2629,7 +2630,6 @@ $vertexcolor
 21IVPhysicsDebugOverlay
 21SVC_CreateStringTable
 21SVC_UpdateStringTable
-22:47:48
 22CAudioMixerWave8Stereo
 22CAudioSourceCachedInfo
 22CAudioSourceStreamWave
@@ -5121,7 +5121,6 @@ Join request approved\n
 Join request denied
 Joining team: %s\n
 Joint Stereo
-Jul  1 2026
 Jump To
 Jumping to %s\n
 KEY_0
@@ -6706,6 +6705,7 @@ SentenceGroupPick with NULL name\n
 SentenceGroupPickSequential with NULL name\n
 SentenceIndexFromName with NULL pSentenceName\n
 SentenceModeMenu
+Sep 30 2026
 SerializeDMX: Unable to open file "%s"\n
 SerializeKeyValues:: not supported\n
 Serializing event '%s' (%i):\n

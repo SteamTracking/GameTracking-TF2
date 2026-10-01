@@ -46,7 +46,7 @@
  ( def. "%s" )
  (classmap missing)
  (inactive)
- 9CHUDAutoAim
+ 9m_flCheapWaterStartDistance
  = { <proto text format> }". To set fields within it, use syntax like "
  AOnGameRulesCreationStringChanged: game rules entity (%s) not created
  BackUp() can only be called after Next().
@@ -4351,7 +4351,6 @@ $world_mins
 11CDustEffect
 11CEmptyProxy
 11CExRichText
-11CHUDAutoAim
 11CHudElement
 11CHudHDRDemo
 11CHudMessage
@@ -7782,6 +7781,7 @@ $world_mins
 31CParticleRenderOperatorInstance
 31CReplayScreenshotSlideshowPanel
 31CTFQuestCustomDamageRestriction
+31CTFQuestPlayerExistsRestriction
 31CTFQuestPlayerObjectRestriction
 31CTraceFilterSimpleClassnameList
 31C_INIT_InitialRepulsionVelocity
@@ -8868,7 +8868,6 @@ $world_mins
 == Invite %d: Lobby %llu, MatchGroup %s (%d)\n
 ============================================\n
 ========================================\n
-=CHudFilmDemo
 =CRagdoll
 =DT_WeaponSyringeGun
 =TF2ReplayRenders
@@ -12438,6 +12437,7 @@ CHudDamageIndicator
 CHudDemomanChargeMeter
 CHudDemomanPipes
 CHudEurekaEffectTeleportMenu
+CHudFilmDemo
 CHudGeiger
 CHudHintDisplay
 CHudHintKeyDisplay
@@ -15562,7 +15562,7 @@ ExpandButton.Color
 ExpandableList
 Expected "
 Expected %s found %s ( raw '%s' )! (prev: %s)\n
-Expected integerInteger out of rExpect a decimalExpected double.Expected identifExpected string.
+Expected integerInteger out of rExpect a decimalExpected double.Expected identifExpected string.(
 Expecting %s, got %s
 Expecting '%s'
 Expecting ',', didn't find it!
@@ -16342,6 +16342,7 @@ HintMessageLower
 HintMessageRaise
 HintSize
 Hold
+HolyHell
 Home
 HomeCPIcon
 HorizScrollBar
@@ -17616,6 +17617,7 @@ Maximum visible distance
 MbP?body_yaw
 MedalButton
 MedalsHelp
+Medi-Evil
 Medic.AutoCallerAnnounce
 MedicHintIcon
 Medigun.DrainCharge
@@ -17702,6 +17704,7 @@ Missing "event_key" for flag_event_type
 Missing "loadout_key" in loadout_position
 Missing "m_pszTeamKey" in team_restriction
 Missing "player_key" in loadout_position
+Missing 'exists' for player_exists restriction
 Missing 'name' for war def %s
 Missing 'war_id' for war def %s
 Missing Huffman code table entry
@@ -20621,6 +20624,8 @@ Scale the viewport back up
 Scale value = %f
 Scales the damage a player does while being healed with the medigun.
 Scan script does not transmit all data
+Scaredy-Cat
+Scarypass
 SceneContainer
 SceneFileCache002
 Scenes
@@ -21542,7 +21547,6 @@ TF_COND_BULLET_IMMUNE
 TF_COND_BURNING
 TF_COND_BURNING_PYRO
 TF_COND_CANNOT_SWITCH_FROM_MELEE
-TF_COND_CLIP_OVERLOAD
 TF_COND_COMPETITIVE_LOSER
 TF_COND_COMPETITIVE_WINNER
 TF_COND_CRITBOOSTED
@@ -21565,6 +21569,7 @@ TF_COND_DISGUISED_AS_DISPENSER
 TF_COND_DISGUISE_WEARINGOFF
 TF_COND_DISGUISING
 TF_COND_DONOTUSE_0
+TF_COND_ENEMY_GLOWS
 TF_COND_ENERGY_BUFF
 TF_COND_FEIGN_DEATH
 TF_COND_FIRE_IMMUNE
@@ -21615,7 +21620,6 @@ TF_COND_MELEE_ONLY
 TF_COND_MINICRITBOOSTED_ON_KILL
 TF_COND_MVM_BOT_STUN_RADIOWAVE
 TF_COND_NOHEALINGDAMAGEBUFF
-TF_COND_NO_COMBAT_SPEED_BOOST
 TF_COND_OBSCURED_SMOKE
 TF_COND_OFFENSEBUFF
 TF_COND_PARACHUTE_ACTIVE
@@ -21632,7 +21636,6 @@ TF_COND_RADIUSHEAL_ON_DAMAGE
 TF_COND_REGENONDAMAGEBUFF
 TF_COND_REPROGRAMMED
 TF_COND_ROCKETPACK
-TF_COND_ROCKETPACK_PASSENGER
 TF_COND_RUNE_AGILITY
 TF_COND_RUNE_HASTE
 TF_COND_RUNE_IMBALANCE
@@ -21652,21 +21655,18 @@ TF_COND_SHIELD_CHARGE
 TF_COND_SNIPERCHARGE_RAGE_BUFF
 TF_COND_SODAPOPPER_HYPE
 TF_COND_SPEED_BOOST
-TF_COND_SPY_CLASS_STEAL
 TF_COND_STEALTHED
 TF_COND_STEALTHED_BLINK
-TF_COND_STEALTHED_PHASE
 TF_COND_STEALTHED_USER_BUFF
 TF_COND_STEALTHED_USER_BUFF_FADING
 TF_COND_STUNNED
+TF_COND_SUPERHEATED
 TF_COND_SWIMMING_CURSE
 TF_COND_SWIMMING_NO_EFFECTS
 TF_COND_TAUNTING
 TF_COND_TEAM_GLOWS
 TF_COND_TELEPORTED
 TF_COND_TMPDAMAGEBONUS
-TF_COND_TRANQ_MARKED
-TF_COND_TRANQ_SPY_BOOST
 TF_COND_URINE
 TF_COND_ZOOMED
 TF_CaseExclusiveBonusItems
@@ -23064,6 +23064,7 @@ TrainingPressSpacebarBlinkStop
 TrainingProgress
 TrainingSubTitle
 TrainingTitle
+Trainsawlaser
 Transaction Insert
 Transition time in and out of spy invisibility
 TranslationData
@@ -26052,6 +26053,7 @@ cp_gravelpit
 cp_gravelpit_snowy
 cp_hadal
 cp_hardwood_final
+cp_holyhell
 cp_lavapit_final
 cp_manor_event
 cp_mercenarypark
@@ -26071,6 +26073,7 @@ cp_sulfur
 cp_sunshine_event
 cp_vanguard
 cp_well
+cp_wildcat_event
 cpname
 cpncntn
 cppl_gavle
@@ -26148,6 +26151,7 @@ ctf_item_start
 ctf_item_stop
 ctf_landfall
 ctf_mannpower
+ctf_medi_evil
 ctf_pelican_peak
 ctf_penguin_peak
 ctf_pressure
@@ -26286,6 +26290,7 @@ d_sharp_dresser
 d_sharp_dresser_backstab
 d_skull_tf
 d_tracktrain
+d_trainsawlaser
 d_vehicle
 d_worldspawn
 da_DK
@@ -29305,8 +29310,6 @@ hud_achievement_count_engineer
 hud_achievement_description
 hud_achievement_glowtime
 hud_achievement_tracker
-hud_autoaim_method
-hud_autoaim_scale_icon
 hud_autoreloadscript
 hud_class_not_chosen
 hud_classautokill
@@ -29324,8 +29327,6 @@ hud_damagemeter_ooctimer
 hud_damagemeter_period
 hud_damagemeter_report
 hud_deathnotice_time
-hud_draw_active_reticle
-hud_draw_fixed_reticle
 hud_drawhistory_time
 hud_escort_interp
 hud_escort_test_progress
@@ -29334,15 +29335,10 @@ hud_fastswitch
 hud_freezecamhide
 hud_lowammowarning_maxposadjust
 hud_lowammowarning_threshold
-hud_magnetism
 hud_medicautocallers
 hud_medicautocallersthreshold
 hud_medichealtargetmarker
 hud_reloadscheme
-hud_reticle_alpha_speed
-hud_reticle_maxalpha
-hud_reticle_minalpha
-hud_reticle_scale
 hud_saytext_time
 hud_takesshots
 hungarian
@@ -30435,6 +30431,7 @@ koth_snowtower
 koth_suijin
 koth_synthetic_event
 koth_toxic
+koth_trainsawlaser
 koth_undergrove_event
 koth_viaduct
 koth_viaduct_event
@@ -30448,7 +30445,6 @@ lamphalo_IMaterialProxy003
 landmarkModelSpace
 language
 large car
-laser
 laser_origin
 laser_sight_beam
 lastBarWidth
@@ -31310,7 +31306,6 @@ m_flChargeMeter
 m_flChargeStartTime
 m_flChargedDamage
 m_flCheapWaterEndDistance
-m_flCheapWaterStartDistance
 m_flCloakMeter
 m_flCloseCaptionDuration
 m_flConnectTime
@@ -33446,6 +33441,7 @@ models/passtime/ball/passtime_ball.mdl
 models/passtime/ball/passtime_ball_halloween.mdl
 models/player.mdl
 models/player/
+models/player/gibs/demogib006.mdl
 models/player/gibs/gibs_balloon.mdl
 models/player/gibs/gibs_bolt.mdl
 models/player/gibs/gibs_boot.mdl
@@ -34397,6 +34393,7 @@ pkgitem
 pl(%i) cmd(%i) hash(%i) inst(%i) ack(%s)
 pl_PL
 pl_aquarius
+pl_aridpass_event
 pl_badwater
 pl_barnblitz
 pl_bloodwater
@@ -34491,6 +34488,7 @@ player_disconnect
 player_disguise
 player_distance
 player_entindex
+player_exists
 player_extinguished
 player_font
 player_healedbymedic
@@ -38506,11 +38504,9 @@ vgui/hud/8x800corner1
 vgui/hud/8x800corner2
 vgui/hud/8x800corner3
 vgui/hud/8x800corner4
-vgui/hud/autoaim
 vgui/hud/icon_commentary
 vgui/hud/vote_no
 vgui/hud/vote_yes
-vgui/hud/xbox_reticle
 vgui/inworldui
 vgui/inworldui_opaque
 vgui/maps/menu_thumb_%s

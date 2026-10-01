@@ -1,4 +1,4 @@
-                 
+                
   bugbait.valvesoftware.com/bugsub /mnt/bugsub smbfs rw,user,username=guest,password=,noauto 0 0\n
  ( def. "%s" )
  ReadToken overflow

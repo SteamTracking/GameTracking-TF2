@@ -406,6 +406,7 @@ $X360
 19CBlacklistedServers
 19CCheckBoxWithStatus
 19CUtlNoEscConversion
+1U\$ug
 2 - bottom-left
 2 - resize down
 20CDialogServerWarning
