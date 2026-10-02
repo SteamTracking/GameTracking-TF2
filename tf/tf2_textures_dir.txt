@@ -17097,6 +17097,14 @@ materials/models/workshop/player/items/all_class/hwn2026_skeleton_crew/hwn2026_s
 materials/models/workshop/player/items/all_class/hwn2026_skeleton_crew/hwn2026_skeleton_crew_color.vtf CRC:005bedb6cc size:349784
 materials/models/workshop/player/items/all_class/hwn2026_skeleton_crew/hwn2026_skeleton_crew_normal.vtf CRC:00e0901fca size:349784
 materials/models/workshop/player/items/all_class/hwn2026_skeleton_crew/hwn2026_skeleton_crew_phongexponent.vtf CRC:004bf6bec4 size:87640
+materials/models/workshop/player/items/all_class/hwn2026_skeleton_crew_style2/hwn2026_skeleton_crew_style2_1_blue_color.vtf CRC:005b0e68ce size:43936
+materials/models/workshop/player/items/all_class/hwn2026_skeleton_crew_style2/hwn2026_skeleton_crew_style2_1_color.vtf CRC:00f80e4c30 size:175008
+materials/models/workshop/player/items/all_class/hwn2026_skeleton_crew_style2/hwn2026_skeleton_crew_style2_1_normal.vtf CRC:00d930b3ae size:349784
+materials/models/workshop/player/items/all_class/hwn2026_skeleton_crew_style2/hwn2026_skeleton_crew_style2_1_phongexponent.vtf CRC:0066ed29fb size:43936
+materials/models/workshop/player/items/all_class/hwn2026_skeleton_crew_style2/hwn2026_skeleton_crew_style2_blue_color.vtf CRC:00b26409c3 size:349784
+materials/models/workshop/player/items/all_class/hwn2026_skeleton_crew_style2/hwn2026_skeleton_crew_style2_color.vtf CRC:005bedb6cc size:349784
+materials/models/workshop/player/items/all_class/hwn2026_skeleton_crew_style2/hwn2026_skeleton_crew_style2_normal.vtf CRC:00e0901fca size:349784
+materials/models/workshop/player/items/all_class/hwn2026_skeleton_crew_style2/hwn2026_skeleton_crew_style2_phongexponent.vtf CRC:004bf6bec4 size:87640
 materials/models/workshop/player/items/all_class/hwn_spy_priest/hwn_spy_priest_1_color.vtf CRC:00a29921db size:87640
 materials/models/workshop/player/items/all_class/hwn_spy_priest/hwn_spy_priest_1_normal.vtf CRC:002b80346f size:87640
 materials/models/workshop/player/items/all_class/hwn_spy_priest/hwn_spy_priest_color.vtf CRC:00d9a439b6 size:87640

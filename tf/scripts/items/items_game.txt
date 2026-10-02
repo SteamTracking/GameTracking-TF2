@@ -33103,6 +33103,7 @@
 			"name"	"The Crusader's Crossbow"
 			"first_sale_date"	"2010/12/08"
 			"prefab" "weapon_crusaders_crossbow paintkit_base"
+			"show_in_armory"	"1"
 			"particle_suffix"	"crusaders_crossbow"
 			"tags"
 			{
@@ -38784,6 +38785,7 @@
 		{
 			"name"	"The Winger"
 			"prefab"	"weapon_winger_pistol paintkit_base"
+			"show_in_armory"	"1"
 			"first_sale_date"	"2011/05/10"
 			"particle_suffix"	"winger"
 			"tags"
@@ -38831,6 +38833,7 @@
 			"item_type_name"	"#TF_Weapon_Bat"
 			"item_logname" "atomizer"
 			"item_iconname" "atomizer"
+			"show_in_armory"	"1"
 			"item_name"	"#TF_Atomizer"
 			"item_slot"	"melee"
 			"item_quality"	"unique"
@@ -41260,6 +41263,7 @@
 			"name"	"The Machina"
 			"first_sale_date"	"2011/08/11"
 			"prefab"	"weapon_machina"
+			"show_in_armory"	"1"
 			"item_name"	"#TF_DEX_Rifle"
 			"item_description"	"#TF_DEX_Rifle_Desc"
 			"tags"
@@ -48575,6 +48579,7 @@
 			}
 			"item_logname"	"pro_smg"
 			"item_iconname"	"pro_smg"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_SMG"
 			"item_name"	"#TF_Pro_SMG"
 			"item_description"	"#TF_Pro_SMG_Desc"
@@ -51512,6 +51517,7 @@
 			"propername"	"1"
 			"attach_to_hands"	"1"
 			"item_logname"	"awper_hand"
+			"show_in_armory"	"1"
 			"visuals"
 			{
 				"sound_single_shot"	"Weapon_AWP.Single"
@@ -63150,6 +63156,7 @@
 			"item_quality"	"unique"
 			"item_logname"	"hot_hand"
 			"item_iconname"	"hot_hand"
+			"show_in_armory"	"1"
 			"min_ilevel"	"1"
 			"max_ilevel"	"100"
 			"image_inventory"	"backpack/weapons/c_models/c_slapping_glove/w_slapping_glove"
@@ -86235,6 +86242,7 @@
 			"model_player"		"models/workshop/weapons/c_models/c_invasion_sniperrifle/c_invasion_sniperrifle.mdl"
 			"item_logname"		"shooting_star"
 			"item_iconname"		"shooting_star"
+			"show_in_armory"		"1"
 			"static_attrs"
 			{
 				"weapon_allow_inspect"		"1"
@@ -86317,6 +86325,7 @@
 			"item_description"		"#TF_invasion_bat_Desc"
 			"item_logname"		"batsaber"
 			"item_iconname"		"batsaber"
+			"show_in_armory"		"1"
 			"item_quality"		"unique"
 			"image_inventory"		"backpack/workshop/weapons/c_models/c_invasion_bat/c_invasion_bat"
 			"image_inventory_size_w"		"128"
@@ -118078,15 +118087,6 @@
 			"item_description"		"#TF_hwn2026_skeleton_crew_Desc"
 			"item_type_name"		"#TF_Wearable_Shirt"
 			"equip_region"		"shirt"
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"dogtags"		"1"
-					"grenades"		"1"
-					"bullets"		"1"
-				}
-			}
 			"image_inventory"		"backpack/workshop/player/items/all_class/hwn2026_skeleton_crew/hwn2026_skeleton_crew"
 			"capabilities"
 			{
@@ -118108,6 +118108,38 @@
 				"pyro"		"1"
 				"spy"		"1"
 				"engineer"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"additional_hidden_bodygroups"
+						{
+							"dogtags"		"1"
+							"grenades"		"1"
+							"bullets"		"1"
+						}
+						"model_player_per_class"
+						{
+							"basename"		"models/workshop/player/items/all_class/hwn2026_skeleton_crew/hwn2026_skeleton_crew_%s.mdl"
+						}
+						"skin_red"		"0"
+						"skin_blu"		"1"
+						"name"		"#TF_hwn2026_skeleton_crew_style1"
+					}
+					"1"
+					{
+						"model_player_per_class"
+						{
+							"basename"		"models/workshop/player/items/all_class/hwn2026_skeleton_crew_style2/hwn2026_skeleton_crew_style2_%s.mdl"
+						}
+						"skin_red"		"0"
+						"skin_blu"		"1"
+						"name"		"#TF_hwn2026_skeleton_crew_style2"
+					}
+				}
 			}
 			"mouse_pressed_sound"		"ui/item_hat_pickup.wav"
 			"drop_sound"		"ui/item_hat_drop.wav"
@@ -118495,8 +118527,8 @@
 			"item_type_name"		"#TF_Wearable_Hat"
 			"equip_regions"
 			{
-				"hat"	"1"
-				"glasses"	"1"
+				"hat"		"1"
+				"glasses"		"1"
 			}
 			"image_inventory"		"backpack/workshop/player/items/demo/hwn2026_gunpowder_grin/hwn2026_gunpowder_grin"
 			"capabilities"
@@ -118738,9 +118770,9 @@
 			{
 				"soldier"		"1"
 			}
+			"mouse_pressed_sound"		"ui/item_hat_pickup.wav"
+			"drop_sound"		"ui/item_hat_drop.wav"
 		}
-		"mouse_pressed_sound"		"ui/item_hat_pickup.wav"
-		"drop_sound"		"ui/item_hat_drop.wav"
 		"31652"
 		{
 			"name"		"General's Greatcoat"
@@ -118760,6 +118792,8 @@
 			{
 				"soldier"		"1"
 			}
+			"mouse_pressed_sound"		"ui/item_hat_pickup.wav"
+			"drop_sound"		"ui/item_hat_drop.wav"
 		}
 		"31653"
 		{
@@ -216472,6 +216506,10 @@
 			"item_name"			"#TF_TournamentMedal_Uberfest_spectator"
 			"item_description"	"#TF_TournamentMedal_2026"
 			"image_inventory"	"backpack/workshop/player/items/all_class/uberfest_spectator/uberfest_spectator"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
 			"model_player_per_class"
 			{
 				"basename"	"models/workshop/player/items/all_class/uberfest_spectator/uberfest_spectator_%s.mdl"
