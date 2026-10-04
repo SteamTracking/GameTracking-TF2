@@ -1,0 +1,13 @@
+Content Manifest for Depot 445 
+
+Manifest ID / date     : 5602233730528152354 / 12/15/2015 05:37:49 
+Total number of files  : 3 
+Total number of chunks : 89 
+Total bytes on disk    : 90075889 
+Total bytes compressed : 79353248 
+
+
+          Size Chunks File SHA                                 Flags Name
+        221214      1 8142f1145a8bd4efa9ed9996b3458fa65402fe82     0 tf/tf2_sound_vo_russian.vpk.sound.cache
+      89741170     87 152c19d4293fd646d0cfa810418cef498716437e     0 tf/tf2_sound_vo_russian_000.vpk
+        113505      1 169141bc48196b00e7d55c8882cb5a0297e1bc7e     0 tf/tf2_sound_vo_russian_dir.vpk

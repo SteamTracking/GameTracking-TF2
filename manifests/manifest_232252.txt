@@ -1,0 +1,62 @@
+Content Manifest for Depot 232252 
+
+Manifest ID / date     : 678390272316880472 / 02/08/2024 23:47:52 
+Total number of files  : 52 
+Total number of chunks : 132 
+Total bytes on disk    : 103246051 
+Total bytes compressed : 22586512 
+
+
+          Size Chunks File SHA                                 Flags Name
+             0      0 0000000000000000000000000000000000000000    40 bin
+        398644      1 630883c657ba0fa6e5f51822b8e01263233b10cf     0 bin/bsppack.dylib
+        101892      1 0e965718899fda1374a104c4c1e684c280d5b6dc     0 bin/bugreporter_filequeue.dylib
+         86092      1 66598c689d987b78809812d615ddc73800d34d3c     0 bin/bugreporter_public.dylib
+        364752      1 23c20b7bcbcb1fbe8e8375b2d64ebea5a7c76d8d     0 bin/datacache.dylib
+         44852      1 c9198a7f39e844115fccb710ffc1338b262dc9d0     0 bin/dxsupport_mac.cfg
+         14319      1 2eb1ffa05fbb2c268af0a9a9973ac8f842ca847f     0 bin/dxsupport_mac.csv
+       8448908      9 906cf00dfa098fac7100453e320400b7f2bcba3e     0 bin/engine.dylib
+       1091392      2 0e6a0b5a79fde393df8af6ccfb85af44cb949fe7     0 bin/filesystem_stdio.dylib
+       3559316      4 2fd2e82fe7eec9905c4b0c53f6841416af3b2b80     0 bin/GameUI.dylib
+        114568      1 cfb061444c6b3f1fdc124da70807d4700913dc4d     0 bin/inputsystem.dylib
+        212916      1 6ddeb64345f5823e2a5429d9f67283d05eff8a30     0 bin/launcher.dylib
+        490344      1 4cde7f02ff759965042755cdd5769b9a505a85f4     0 bin/libMilesX86.dylib
+        232204      1 79f990c6a8c3ab5aa866cdec401f12b661c0e646     0 bin/libopenvr_api.dylib
+       1754692      2 9306be195a715cf68aa23feb7ecb57135cee883a     0 bin/libSDL2-2.0.0.dylib
+       7275504      7 cf7c10ca72a9c127f18c521168accbfa88b449b5     0 bin/libsteamnetworkingsockets.dylib
+        610496      1 002ec18da423ffeacb4e1739572be9e0c6bb7476     0 bin/libsteam_api.dylib
+        196940      1 522372678087a62dfc9ed076496d82af70baf573     0 bin/libtier0.dylib
+        495928      1 b0a76b7569485c85834464b12581d6aeeed4b5da     0 bin/libtogl.dylib
+        220236      1 af5cf58f7ad87d4cb6fe6ff010fa2a02096254cf     0 bin/libvstdlib.dylib
+       1945944      2 43cc6f7b85c534f6eeaf8443904a7a3cfecf3016     0 bin/materialsystem.dylib
+         54272      1 acf7234162d9a9c10ec0642690bfd50a8e123fb2     0 bin/osx32/binkawin.asi
+          7680      1 3952643f6d82a1a4f4d5789aeb07a723f47292f5     0 bin/osx32/mssdolby.flt
+         49664      1 193b5b3253f2dc4f0bc29fbf5883d7f904a07a34     0 bin/osx32/mssdsp.flt
+         35840      1 2a2839d00b3cd5796ac261794eb447d345087926     0 bin/osx32/mssmixer.mix
+         71168      1 b03b97a3d3795498558ccfcf67007aa3acb1177d     0 bin/osx32/mssmp3.asi
+         12800      1 2550a8345a33c1648e4ac7e51738141e7c4921b2     0 bin/osx32/msssrs.flt
+        152064      1 c2c9d12cd58545c5019eef8afafb772dfdd8791c     0 bin/osx32/mssvoice.asi
+        825956      1 5664cf598c6fb486a650dd502ae5e79ad466b73b     0 bin/replay.dylib
+         58800      1 480b593175b969e9ae89f15d545ca3e76b94626f     0 bin/scenefilecache.dylib
+       2094292      2 2261733d52ef2a9224e916b897b161ccaccde562     0 bin/ServerBrowser.dylib
+        779212      1 8aa40ed76139c528beb76807f8d004940d188f21     0 bin/shaderapidx9.dylib
+        148232      1 964b7b8fd5fa6a411d0fd9e782065a9a51ee75ff     0 bin/shaderapiempty.dylib
+        151736      1 588cfc1af28bac0f6c124689e6c669e59e495d68     0 bin/soundemittersystem.dylib
+         74496      1 3dd74a6e66d8cd7b16346b7beb6c26d4f7c0272d     0 bin/sourcevr.dylib
+       1269952      2 b23eca8e8ca26393a1d21e849723c3e06b9c4850     0 bin/stdshader_dx9.dylib
+        906064      1 46dcff5635a4dd2bbfdd712f0b2e7929777774df     0 bin/studiorender.dylib
+        108920      1 4641fe5e91a8995707a4a01d0221884f08e14561     0 bin/vaudio_celt.dylib
+         36708      1 23be748bf67fb4646cfa16987e8a6566d73a7aa9     0 bin/vaudio_miles.dylib
+        112768      1 7b9c392980fe6daf5daf1a32047496bb2b0aa2e1     0 bin/vaudio_speex.dylib
+        324232      1 c0eea8d59b109de4197626c4de3e09ee6e26401c     0 bin/vgui2.dylib
+       1716844      2 b0e481b63f3ddc3d559c7a15f1dc76f43ad4f6a5     0 bin/vguimatsurface.dylib
+        102952      1 803cfc5bd952d73726726d093bb492d2d1d0edd8     0 bin/video_quicktime.dylib
+         66048      1 d2410d749d2886061381b3ecd578bea4cb252490     0 bin/video_services.dylib
+       1873732      2 6bcfccdf8f5450c7049e807eeceaccf5c2c53462     0 bin/vphysics.dylib
+       1225700      2 6f098b9caca26ea009e8a4567091888231282ad3     0 bin/vpk_osx32
+        593332      1 ddb622d3d344e344541ebbaf544387cf2e461cff     0 bin/vscript.dylib
+        336640      1 c46cd6e1eb0b20e145c81080ed3dacdbba41f7f1     0 bin/vtex_dll.dylib
+             0      0 0000000000000000000000000000000000000000    40 tf
+             0      0 0000000000000000000000000000000000000000    40 tf/bin
+      34330984     33 3e8317f595ac0a07ee5aa6463b67dd57c04dddf7     0 tf/bin/client.dylib
+      28065024     27 8dd327b65f5a940299ed0b7acb5144de324f2e95     0 tf/bin/server.dylib

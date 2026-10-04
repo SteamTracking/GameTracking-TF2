@@ -1,0 +1,12 @@
+Content Manifest for Depot 444 
+
+Manifest ID / date     : 646330807595077556 / 03/11/2015 23:08:52 
+Total number of files  : 2 
+Total number of chunks : 9 
+Total bytes on disk    : 7452052 
+Total bytes compressed : 2986208 
+
+
+          Size Chunks File SHA                                 Flags Name
+       7436183      8 6d789af714aae42184b0b1c80ef04273451fa19d     0 tf/tf2_lv_000.vpk
+         15869      1 2a491a4258f5fca7844986ca7babe71d82afa753     0 tf/tf2_lv_dir.vpk

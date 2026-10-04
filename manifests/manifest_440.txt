@@ -1,0 +1,17 @@
+Content Manifest for Depot 440 
+
+Manifest ID / date     : 1118032470228587934 / 04/17/2013 20:39:24 
+Total number of files  : 7 
+Total number of chunks : 7 
+Total bytes on disk    : 825745 
+Total bytes compressed : 43168 
+
+
+          Size Chunks File SHA                                 Flags Name
+        398709      1 daf3d66a7c86e1f3cac181ff9701b911017e6f88     0 bin/dxsupport.cfg
+        116397      1 b5032d334ca606dcb4eb85c0182ea69575ba9141     0 bin/dxsupport.csv
+           544      1 bac8e2657470b2eb70d6ddcd6c07004be8738697     0 bin/dxsupport_episodic.cfg
+        310041      1 5611a2a611491ee7985e784b54579c7a8cf191c0     0 bin/dxsupport_sp.cfg
+            20      1 8d9037c099b5c447c64e84493789539747222abb     0 bin/vidcfg.bin
+            17      1 0ae5cb56f5de76dc7243b48da47cc21d3696cea4     0 hl2/media/startupvids.txt
+            17      1 94020bde145a521edec9a9424e7a90fd042481e9     0 tf/media/startupvids.txt
