@@ -1,10 +1,10 @@
 Content Manifest for Depot 232253 
 
-Manifest ID / date     : 8702922584476842117 / 10/01/2026 18:41:11 
+Manifest ID / date     : 5983410509630928046 / 10/05/2026 22:25:29 
 Total number of files  : 104 
 Total number of chunks : 472 
-Total bytes on disk    : 455320343 
-Total bytes compressed : 333895984 
+Total bytes on disk    : 455303959 
+Total bytes compressed : 333884512 
 
 
           Size Chunks File SHA                                 Flags Name
@@ -18,11 +18,11 @@ Total bytes compressed : 333895984
         310041      1 5611a2a611491ee7985e784b54579c7a8cf191c0     0 bin/dxsupport_sp.cfg
              0      0 0000000000000000000000000000000000000000    40 bin/filters
           5128      1 1fd24709fe086ca04d8c22cdad898cf7b2fa62cf     0 bin/filters/dispfilters.txt
-        604240      1 5ff3d8fc952e3f2f0b1008bd3de04a4b34e60125     0 bin/linux64/bsppack.so
+        604240      1 7ae6546a3e491d1771cc491b8ca15c853d9b827b     0 bin/linux64/bsppack.so
         274584      1 32f67fd6228219bc3f661b3354e3b459a1f038a8     0 bin/linux64/bugreporter_filequeue.so
         197056      1 2d8a870c47caaaf4e59ceaa36c09837c1532a282     0 bin/linux64/bugreporter_public.so
         537728      1 b2d30e37cef2a9b5925e8886a04188a0c6a239ac     0 bin/linux64/datacache.so
-      10547632     11 11dd25b8f49c44f1cbfc222f6d802dbee4d7e772     0 bin/linux64/engine.so
+      10555824     11 48de80d225f5e4c2416c47e3b77891c60c123e2d     0 bin/linux64/engine.so
        2347008      3 d6babcb49d75350a35fd5501609c61a4c7de9c30     0 bin/linux64/filesystem_stdio.so
        7388040      8 746450380d197126e869d4295aa7f450e2e57b42     0 bin/linux64/GameUI.so
         231776      1 7e262d9fed4a0cfc25fe7c990ace497f5b891c3e     0 bin/linux64/inputsystem.so
@@ -82,8 +82,8 @@ Total bytes compressed : 333895984
        1323798      2 dcb306efc9faf450af6604a844b3d7460daf9ae5     0 hl2/media/valve.webm
              0      0 0000000000000000000000000000000000000000    40 tf
           3056      1 21e06ca61ba7babef6a4b6bc37826626043fe713    20 tf.sh
-      48167064     46 472b7d90df52fcc72acb8a4cc0877bcfe1a65212     0 tf/bin/linux64/client.so
-      28986144     28 18df90ee3d360553eb7910533b6bbacbd53156d5     0 tf/bin/linux64/server.so
+      48150680     46 2c19dd73a218bbca28355a2c9a7aae4a0ce8c843     0 tf/bin/linux64/client.so
+      28977952     28 fe444b162fa22a36f6763b91bc0406f5de99ba75     0 tf/bin/linux64/server.so
              0      0 0000000000000000000000000000000000000000    40 tf/media
        6085011      6 05fbc73e04bf74a4f426da4a16058ff3da406c9b     0 tf/media/arena_intro.webm
        5687549      6 ba3df06b936cc8d3eabea3a385c3c7990975c106     0 tf/media/cp_badlands.webm

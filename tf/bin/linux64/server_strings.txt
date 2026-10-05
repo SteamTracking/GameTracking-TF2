@@ -2061,7 +2061,6 @@ $var3
 ../shared/econ/attribute_manager.cpp
 ../shared/econ/econ_item.cpp
 ../shared/econ/econ_item_inventory.cpp
-../shared/econ/econ_item_schema.cpp
 ../shared/econ/econ_item_view.cpp
 ../shared/econ/econ_quests.cpp
 ../shared/gamemovement.cpp
@@ -10176,7 +10175,6 @@ CEconItem::SerializeToProtoBufItem()
 CEconItemPreviewDataBlock
 CEconItemSchema
 CEconItemSchema::DumpItems: couldn't open file "%s" in path "%s".\n
-CEconItemSchema::GetAttributeDefinitionByName
 CEconItemView
 CEconWearable
 CEmbers
@@ -23509,6 +23507,7 @@ additional halloween response criteria name
 additional_backpack_slots
 additional_drop
 additional_flags
+additional_forced_bodygroups
 additional_hidden_bodygroups
 additionalequipment
 additionaliterations
@@ -34344,7 +34343,6 @@ owner_entindex
 owner_id
 ownerid
 owninginstance
-p&1x9
 p09Y
 pEntity->PhysicsSimulate
 pGears
@@ -36307,6 +36305,7 @@ sv_vote_quorum_ratio
 sv_vote_timer_allow_early_finish
 sv_vote_timer_duration
 sv_vote_ui_hide_disabled_issues
+sv_wallbug
 sv_wateraccelerate
 sv_waterdist
 sv_waterfriction

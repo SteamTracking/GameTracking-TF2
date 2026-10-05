@@ -11172,41 +11172,17 @@
 	}
 	"244"
 	{
-		"name"		"Assist a plasma kill with no player attacker or inflictor"
+		"name"		"Get kill credit for an environmental death"
 		"condition_logic"
 		{
 			"type"		"event_listener"
-			"event_name"		"player_death"
+			"event_name"		"environmental_death"
 			"0"
 			{
-				"type"		"AND"
-				"0"
-				{
-					"type"		"player_exists"
-					"player_key"		"attacker"
-					"get_player"		"by_id"
-					"exists"		"0"
-				}
-				"1"
-				{
-					"type"		"player_exists"
-					"player_key"		"inflictor_entindex"
-					"get_player"		"by_entindex"
-					"exists"		"0"
-				}
-				"2"
-				{
-					"type"		"custom_damage"
-					"custom_damage_key"		"customkill"
-					"value"		"TF_DMG_CUSTOM_PLASMA"
-				}
-				"3"
-				{
-					"type"		"player_is_owner"
-					"player_key"		"assister"
-					"get_player"		"by_id"
-					"is_owner"		"1"
-				}
+				"type"		"player_is_owner"
+				"player_key"		"killer"
+				"get_player"		"by_entindex"
+				"is_owner"		"1"
 			}
 		}
 	}
@@ -11233,6 +11209,40 @@
 					"player_key"		"userid"
 					"get_player"		"by_id"
 					"is_owner"		"0"
+				}
+			}
+		}
+	}
+	"246"
+	{
+		"name"		"[Template] Deal var1 of damage"
+		"condition_logic"
+		{
+			"type"		"counter"
+			"end"		"$var1"
+			"0"
+			{
+				"type"		"event_listener"
+				"action"		"increment"
+				"event_name"		"player_hurt"
+				"score_key_name"		"damageamount"
+				"0"
+				{
+					"type"		"AND"
+					"0"
+					{
+						"type"		"player_is_owner"
+						"player_key"		"attacker"
+						"get_player"		"by_id"
+						"is_owner"		"1"
+					}
+					"1"
+					{
+						"type"		"player_is_owner"
+						"player_key"		"userid"
+						"get_player"		"by_id"
+						"is_owner"		"0"
+					}
 				}
 			}
 		}
@@ -30052,6 +30062,7 @@
 				"player_bodygroups"
 				{
 					"bullets"		"1"
+					"darts"		"1"
 				}
 				"sound_single_shot"	"Weapon_SydneySleeper.Single"
 				"sound_burst"	"Weapon_SydneySleeper.SingleCrit"
@@ -118121,6 +118132,10 @@
 							"grenades"		"1"
 							"bullets"		"1"
 						}
+						"additional_forced_bodygroups"
+						{
+							"darts"		"0"
+						}
 						"model_player_per_class"
 						{
 							"basename"		"models/workshop/player/items/all_class/hwn2026_skeleton_crew/hwn2026_skeleton_crew_%s.mdl"
@@ -118153,6 +118168,13 @@
 			"item_type_name"		"#TF_Wearable_Mask"
 			"equip_region"		"beard"
 			"image_inventory"		"backpack/workshop/player/items/all_class/hwn2026_bone_chiller/hwn2026_bone_chiller"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"head"		"1"
+				}
+			}
 			"capabilities"
 			{
 				"can_craft_count"		"1"
@@ -118335,7 +118357,7 @@
 			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_hwn2026_high_caliber"
 			"item_description"		"#TF_hwn2026_high_caliber_Desc"
-			"item_type_name"		"#TF_Wearable_Shirt"
+			"item_type_name"		"#TF_Wearable_Jacket"
 			"equip_region"		"shirt"
 			"image_inventory"		"backpack/workshop/player/items/heavy/hwn2026_high_caliber/hwn2026_high_caliber"
 			"capabilities"
@@ -213810,7 +213832,7 @@
 			"name"				"AsiaFortress Main 1st Place Winter 2026"
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_AF_Main_1st"
-			"item_description"	"#TF_TournamentMedal_AF_Main_1st_Spring2025"
+			"item_description"	"#TF_TournamentMedal_Winter2026"
 			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_liquid_gold"
 			"model_player"		"models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl"
 			"attributes"
@@ -216547,6 +216569,7 @@
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_Particle1_First"
 			"item_description"	"#TF_TournamentMedal_Particle1_First_Desc"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"image_inventory"	"backpack/workshop/player/items/all_class/particle_first/particle_first"
 			"model_player_per_class"
 			{
@@ -216559,6 +216582,7 @@
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_Particle1_Second"
 			"item_description"	"#TF_TournamentMedal_Particle1_Second_Desc"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"image_inventory"	"backpack/workshop/player/items/all_class/particle_second/particle_second"
 			"model_player_per_class"
 			{
@@ -216571,6 +216595,7 @@
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_Particle1_Third"
 			"item_description"	"#TF_TournamentMedal_Particle1_Third_Desc"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"image_inventory"	"backpack/workshop/player/items/all_class/particle_third/particle_third"
 			"model_player_per_class"
 			{
@@ -216583,6 +216608,7 @@
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_Particle1_Participant"
 			"item_description"	"#TF_TournamentMedal_Particle1_Participant_Desc"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"image_inventory"	"backpack/workshop/player/items/all_class/particle_participant/particle_participant"
 			"model_player_per_class"
 			{
@@ -216595,6 +216621,7 @@
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_Particle1_Staff"
 			"item_description"	"#TF_TournamentMedal_Particle1_Staff_Desc"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"image_inventory"	"backpack/workshop/player/items/all_class/particle_staff/particle_staff"
 			"model_player_per_class"
 			{
@@ -216607,6 +216634,7 @@
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_Particle2_First"
 			"item_description"	"#TF_TournamentMedal_Particle2_First_Desc"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"image_inventory"	"backpack/workshop/player/items/all_class/particle_first/particle_first"
 			"model_player_per_class"
 			{
@@ -216619,6 +216647,7 @@
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_Particle2_Second"
 			"item_description"	"#TF_TournamentMedal_Particle2_Second_Desc"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"image_inventory"	"backpack/workshop/player/items/all_class/particle_second/particle_second"
 			"model_player_per_class"
 			{
@@ -216631,6 +216660,7 @@
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_Particle2_Third"
 			"item_description"	"#TF_TournamentMedal_Particle2_Third_Desc"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"image_inventory"	"backpack/workshop/player/items/all_class/particle_third/particle_third"
 			"model_player_per_class"
 			{
@@ -216643,6 +216673,7 @@
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_Particle2_Participant"
 			"item_description"	"#TF_TournamentMedal_Particle2_Participant_Desc"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"image_inventory"	"backpack/workshop/player/items/all_class/particle_participant/particle_participant"
 			"model_player_per_class"
 			{
@@ -216655,6 +216686,7 @@
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_Particle2_Staff"
 			"item_description"	"#TF_TournamentMedal_Particle2_Staff_Desc"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"image_inventory"	"backpack/workshop/player/items/all_class/particle_staff/particle_staff"
 			"model_player_per_class"
 			{
@@ -217044,6 +217076,189 @@
 			"item_description"	"#TF_TournamentMedal_Season13"
 			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_highlander_participant/ozfortress_highlander_participant"
 			"model_player"		"models/workshop/player/items/all_class/ozfortress_highlander_participant/ozfortress_highlander_participant_demo.mdl"
+		}
+		"19236"
+		{		
+			"name"				"AsiaFortress Invite 1st Place Spring 2026"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AF_Invite_1st"
+			"item_description"	"#TF_TournamentMedal_AF_Invite_1st_Spring2026"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold_demo.mdl"
+		}
+		"19237"
+		{		
+			"name"				"AsiaFortress Invite 2nd Place Spring 2026"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AF_Invite_2nd"
+			"item_description"	"#TF_TournamentMedal_AF_Invite_2nd_Spring2026"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver_demo.mdl"
+		}
+		"19238"
+		{		
+			"name"				"AsiaFortress Invite 3rd Place Spring 2026"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AF_Invite_3rd"
+			"item_description"	"#TF_TournamentMedal_AF_Invite_3rd_Spring2026"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze_demo.mdl"
+		}
+		"19239"
+		{		
+			"name"				"AsiaFortress Open 1st Place Spring 2026"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AF_Open_1st"
+			"item_description"	"#TF_TournamentMedal_Spring2026"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_liquid_gold"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl"
+			"attributes"
+			{
+				"set item tint RGB"
+				{
+					"attribute_class"	"set_item_tint_rgb"
+					"value"				"16433443" 
+				}
+			}
+		}
+		"19240"
+		{		
+			"name"				"AsiaFortress Open 2nd Place Spring 2026"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AF_Open_2nd"
+			"item_description"	"#TF_TournamentMedal_Spring2026"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_liquid_silver"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl"
+			"attributes"
+			{
+				"set item tint RGB"
+				{
+					"attribute_class"	"set_item_tint_rgb"
+					"value"				"11645619" 
+				}
+			}
+		}
+		"19241"
+		{		
+			"name"				"AsiaFortress Open 3rd Place Spring 2026"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AF_Open_3rd"
+			"item_description"	"#TF_TournamentMedal_Spring2026"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_liquid_bronze"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl"
+			"attributes"
+			{
+				"set item tint RGB"
+				{
+					"attribute_class"	"set_item_tint_rgb"
+					"value"				"6366476" 
+				}
+			}
+		}
+		"19242"
+		{		
+			"name"				"AsiaFortress Invite Participant Spring 2026"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AF_Invite_Participant"
+			"item_description"	"#TF_TournamentMedal_Spring2026"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_white"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl"
+			"attributes"
+			{
+				"set item tint RGB"
+				{
+					"attribute_class"	"set_item_tint_rgb"
+					"value"				"16777215" 
+				}
+			}
+		}
+		"19243"
+		{		
+			"name"				"AsiaFortress Open Participant Spring 2026"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AF_Open_Participant"
+			"item_description"	"#TF_TournamentMedal_Spring2026"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl"
+		}
+		"19244"
+		{		
+			"name"				"AsiaFortress Highlander Invite 1st Place Summer 2026"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AF_Highlander_Invite_1st"
+			"item_description"	"#TF_TournamentMedal_AF_Highlander_Invite_1st_Summer2026"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_cup_division3_gold/asiafortress_cup_division3_gold"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/asiafortress_cup_division3_gold/asiafortress_cup_division3_gold_%s.mdl"
+			}
+		}
+		"19245"
+		{		
+			"name"				"AsiaFortress Highlander Invite 2nd Place Summer 2026"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AF_Highlander_Invite_2nd"
+			"item_description"	"#TF_TournamentMedal_AF_Highlander_Invite_2nd_Summer2026"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_cup_division3_silver/asiafortress_cup_division3_silver"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/asiafortress_cup_division3_silver/asiafortress_cup_division3_silver_%s.mdl"
+			}
+		}
+		"19246"
+		{		
+			"name"				"AsiaFortress Highlander Invite 3rd Place Summer 2026"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AF_Highlander_Invite_3rd"
+			"item_description"	"#TF_TournamentMedal_AF_Highlander_Invite_3rd_Summer2026"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_cup_division3_bronze/asiafortress_cup_division3_bronze"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/asiafortress_cup_division3_bronze/asiafortress_cup_division3_bronze_%s.mdl"
+			}
+		}
+		"19247"
+		{		
+			"name"				"AsiaFortress Highlander Invite Participant Summer 2026"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AF_Highlander_Invite_Participant"
+			"item_description"	"#TF_TournamentMedal_Summer2026"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_white"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl"
+			"attributes"
+			{
+				"set item tint RGB"
+				{
+					"attribute_class"	"set_item_tint_rgb"
+					"value"				"16777215" 
+				}
+			}
+		}
+		"19248"
+		{		
+			"name"				"AsiaFortress Highlander Open 1st Place Summer 2026"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AF_Highlander_Open_1st"
+			"item_description"	"#TF_TournamentMedal_Summer2026"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_liquid_gold"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl"
+			"attributes"
+			{
+				"set item tint RGB"
+				{
+					"attribute_class"	"set_item_tint_rgb"
+					"value"				"16433443" 
+				}
+			}
+		}
+		"19249"
+		{		
+			"name"				"AsiaFortress Highlander Open Participant Summer 2026"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AF_Highlander_Open_Participant"
+			"item_description"	"#TF_TournamentMedal_Summer2026"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl"
 		}
 
 

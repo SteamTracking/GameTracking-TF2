@@ -6453,8 +6453,8 @@ materials/backpack/workshop/player/items/medic/hw2013_medic_undertaker_vest/hw20
 materials/backpack/workshop/player/items/medic/hw2013_medic_undertaker_vest/hw2013_medic_undertaker_vest_large.vtf CRC:00974736ce size:349784
 materials/backpack/workshop/player/items/medic/hw2013_medicmedes/hw2013_medicmedes.vtf CRC:00533b3dd6 size:22104
 materials/backpack/workshop/player/items/medic/hw2013_medicmedes/hw2013_medicmedes_large.vtf CRC:00737bf7bf size:349784
-materials/backpack/workshop/player/items/medic/hw2013_moon_boots/hw2013_moon_boots.vtf CRC:00b24c809d size:22104
-materials/backpack/workshop/player/items/medic/hw2013_moon_boots/hw2013_moon_boots_large.vtf CRC:005bf9bebd size:349784
+materials/backpack/workshop/player/items/medic/hw2013_moon_boots/hw2013_moon_boots.vtf CRC:0000e9d86d size:22104
+materials/backpack/workshop/player/items/medic/hw2013_moon_boots/hw2013_moon_boots_large.vtf CRC:00bb9655e6 size:349784
 materials/backpack/workshop/player/items/medic/hw2013_quacks_cureall/hw2013_quacks_cureall.vtf CRC:00243eb5a1 size:22104
 materials/backpack/workshop/player/items/medic/hw2013_quacks_cureall/hw2013_quacks_cureall_large.vtf CRC:00fa8096e3 size:349784
 materials/backpack/workshop/player/items/medic/hw2013_ramses_regalia/hw2013_ramses_regalia.vtf CRC:0084f98d9e size:22104
@@ -6463,8 +6463,8 @@ materials/backpack/workshop/player/items/medic/hw2013_second_opinion/hw2013_seco
 materials/backpack/workshop/player/items/medic/hw2013_second_opinion/hw2013_second_opinion_large.vtf CRC:00572709fc size:349784
 materials/backpack/workshop/player/items/medic/hw2013_shamans_skull/hw2013_shamans_skull.vtf CRC:0014e988a3 size:22104
 materials/backpack/workshop/player/items/medic/hw2013_shamans_skull/hw2013_shamans_skull_large.vtf CRC:0025113052 size:349784
-materials/backpack/workshop/player/items/medic/hw2013_spacemans_suit/hw2013_spacemans_suit.vtf CRC:00de28acf4 size:22104
-materials/backpack/workshop/player/items/medic/hw2013_spacemans_suit/hw2013_spacemans_suit_large.vtf CRC:0097c9b295 size:349784
+materials/backpack/workshop/player/items/medic/hw2013_spacemans_suit/hw2013_spacemans_suit.vtf CRC:00757cd543 size:22104
+materials/backpack/workshop/player/items/medic/hw2013_spacemans_suit/hw2013_spacemans_suit_large.vtf CRC:00653ab04c size:349784
 materials/backpack/workshop/player/items/medic/hw2013_teutonkahmun/hw2013_teutonkahmun.vtf CRC:00ab934a7e size:22104
 materials/backpack/workshop/player/items/medic/hw2013_teutonkahmun/hw2013_teutonkahmun_large.vtf CRC:00b333c4a2 size:349784
 materials/backpack/workshop/player/items/medic/hw2013_witching_ward/hw2013_witching_ward.vtf CRC:006c7a3a5f size:22104
@@ -7125,12 +7125,12 @@ materials/backpack/workshop/player/items/scout/hw2013_bunny_mann/hw2013_bunny_ma
 materials/backpack/workshop/player/items/scout/hw2013_bunny_mann/hw2013_bunny_mann_large.vtf CRC:002cb712cb size:349784
 materials/backpack/workshop/player/items/scout/hw2013_halloweiner/hw2013_halloweiner.vtf CRC:000a53cc05 size:22104
 materials/backpack/workshop/player/items/scout/hw2013_halloweiner/hw2013_halloweiner_large.vtf CRC:008e1029b4 size:349784
-materials/backpack/workshop/player/items/scout/hw2013_horrifying_hound_hood/hw2013_horrifying_hound_hood.vtf CRC:0041463f6a size:22104
-materials/backpack/workshop/player/items/scout/hw2013_horrifying_hound_hood/hw2013_horrifying_hound_hood_large.vtf CRC:0063aa5ba6 size:349784
+materials/backpack/workshop/player/items/scout/hw2013_horrifying_hound_hood/hw2013_horrifying_hound_hood.vtf CRC:00b9a6d432 size:22104
+materials/backpack/workshop/player/items/scout/hw2013_horrifying_hound_hood/hw2013_horrifying_hound_hood_large.vtf CRC:00865b0c2c size:349784
 materials/backpack/workshop/player/items/scout/hw2013_running_octopus/hw2013_running_octopus.vtf CRC:00d8d3cf0a size:22104
 materials/backpack/workshop/player/items/scout/hw2013_running_octopus/hw2013_running_octopus_large.vtf CRC:007b6ebaae size:349784
-materials/backpack/workshop/player/items/scout/hw2013_terrifying_terrier_trousers/hw2013_terrifying_terrier_trousers.vtf CRC:009d4078c1 size:22104
-materials/backpack/workshop/player/items/scout/hw2013_terrifying_terrier_trousers/hw2013_terrifying_terrier_trousers_large.vtf CRC:00d62ddb91 size:349784
+materials/backpack/workshop/player/items/scout/hw2013_terrifying_terrier_trousers/hw2013_terrifying_terrier_trousers.vtf CRC:00ff1789f5 size:22104
+materials/backpack/workshop/player/items/scout/hw2013_terrifying_terrier_trousers/hw2013_terrifying_terrier_trousers_large.vtf CRC:009bad1874 size:349784
 materials/backpack/workshop/player/items/scout/hw2013_the_hell_runner/hw2013_the_hell_runner.vtf CRC:00b34307c8 size:22104
 materials/backpack/workshop/player/items/scout/hw2013_the_hell_runner/hw2013_the_hell_runner_large.vtf CRC:002d3b77d8 size:349784
 materials/backpack/workshop/player/items/scout/hwn2015_bargain_bicorne/hwn2015_bargain_bicorne.vtf CRC:0030f1eae6 size:22104
@@ -7945,8 +7945,8 @@ materials/backpack/workshop/player/items/spy/hwn2025_sleight_hand/hwn2025_sleigh
 materials/backpack/workshop/player/items/spy/hwn2025_sleight_hand/hwn2025_sleight_hand_large.vtf CRC:00a9a5396a size:349784
 materials/backpack/workshop/player/items/spy/hwn2025_vanishing_act/hwn2025_vanishing_act.vtf CRC:00d0c28fa6 size:22104
 materials/backpack/workshop/player/items/spy/hwn2025_vanishing_act/hwn2025_vanishing_act_large.vtf CRC:001b2ff26d size:349784
-materials/backpack/workshop/player/items/spy/hwn2026_bounty_hunters_brim/hwn2026_bounty_hunters_brim.vtf CRC:00daa5978b size:22104
-materials/backpack/workshop/player/items/spy/hwn2026_bounty_hunters_brim/hwn2026_bounty_hunters_brim_large.vtf CRC:00ea834ab5 size:349784
+materials/backpack/workshop/player/items/spy/hwn2026_bounty_hunters_brim/hwn2026_bounty_hunters_brim.vtf CRC:00634e7757 size:22104
+materials/backpack/workshop/player/items/spy/hwn2026_bounty_hunters_brim/hwn2026_bounty_hunters_brim_large.vtf CRC:00305e61d2 size:349784
 materials/backpack/workshop/player/items/spy/hwn2026_desperado_disguise/hwn2026_desperado_disguise.vtf CRC:00786b1672 size:22104
 materials/backpack/workshop/player/items/spy/hwn2026_desperado_disguise/hwn2026_desperado_disguise_large.vtf CRC:007ec02ed4 size:349784
 materials/backpack/workshop/player/items/spy/invasion_the_graylien/invasion_the_graylien.vtf CRC:00cf970e57 size:22104
@@ -9660,6 +9660,7 @@ materials/effects/workshop/morbed/morbed_tint.vtf CRC:00cac26557 size:174984
 materials/effects/workshop/morbed/morbed_wave.vtf CRC:0035ef2ee7 size:349760
 materials/effects/workshop/north_shine.vtf CRC:0045357b11 size:349760
 materials/effects/workshop/nothing2.vtf CRC:009092ee19 size:43928
+materials/effects/workshop/null.vtf CRC:00b678aa52 size:5696
 materials/effects/workshop/ocean_swirl/os_center_warp_normal.vtf CRC:00e319a228 size:65744
 materials/effects/workshop/ocean_swirl/os_splashes.vtf CRC:005885de07 size:701468
 materials/effects/workshop/ocean_swirl/os_waves_gradient_blue.vtf CRC:002e5b897f size:2798620

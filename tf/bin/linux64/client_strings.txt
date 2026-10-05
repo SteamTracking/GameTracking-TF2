@@ -3641,7 +3641,6 @@ $world_mins
 ../shared/econ/econ_item.cpp
 ../shared/econ/econ_item_description.cpp
 ../shared/econ/econ_item_inventory.cpp
-../shared/econ/econ_item_schema.cpp
 ../shared/econ/econ_item_view.cpp
 ../shared/econ/econ_quests.cpp
 ../shared/gamemovement.cpp
@@ -12146,7 +12145,6 @@ CEconItemPerClassPresetData
 CEconItemPreviewDataBlock
 CEconItemSchema
 CEconItemSchema::DumpItems: couldn't open file "%s" in path "%s".\n
-CEconItemSchema::GetAttributeDefinitionByName
 CEconItemView
 CEconNotification
 CEconRequirementDialog
@@ -15562,7 +15560,7 @@ ExpandButton.Color
 ExpandableList
 Expected "
 Expected %s found %s ( raw '%s' )! (prev: %s)\n
-Expected integerInteger out of rExpect a decimalExpected double.Expected identifExpected string.(
+Expected integerInteger out of rExpect a decimalExpected double.Expected identifExpected string.
 Expecting %s, got %s
 Expecting '%s'
 Expecting ',', didn't find it!
@@ -22817,7 +22815,6 @@ TextureData
 TextureFileRefs
 TextureScroll_IMaterialProxy003
 TextureTransform_IMaterialProxy003
-The B.A.S.E. Jumper
 The Hardy Laurel
 The TF2VRH
 The amount of time (in seconds) before the server resets post-match.
@@ -24648,6 +24645,7 @@ add_uber_time
 additional_backpack_slots
 additional_drop
 additional_flags
+additional_forced_bodygroups
 additional_hidden_bodygroups
 addphone
 addpremium
@@ -36955,6 +36953,7 @@ sv_turbophysics
 sv_viewmodel_lag_do_angles
 sv_vote_holder_may_vote_no
 sv_vote_issue_kick_allowed
+sv_wallbug
 sv_wateraccelerate
 sv_waterdist
 sv_waterfriction

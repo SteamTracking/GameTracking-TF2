@@ -800,7 +800,7 @@
 	"5_7196_field { field_number: 2 }"		"Collect souls on Circus: %s1"
 	"5_7197_field { field_number: 2 }"		"Collect Funny Bones on Circus: %s1"
 	"5_7198_field { field_number: 2 }"		"Deposit 5 Funny Bones in a single life: %s1"
-	"5_7199_field { field_number: 2 }"		"Deal 1000 damage as a Merc: %s1"
+	"5_7199_field { field_number: 2 }"		"Deal 300 damage as a Merc: %s1"
 	"5_7200_field { field_number: 2 }"		"Win a round as a Merc: %s1"
 	"5_7201_field { field_number: 2 }"		"Win a round as Hale: %s1"
 	"5_7202_field { field_number: 2 }"		"Kill a Zombie on Blazehattan: %s1"
