@@ -4243,8 +4243,8 @@ materials/backpack/workshop/player/items/all_class/florida_lan_participant_2018/
 materials/backpack/workshop/player/items/all_class/florida_lan_participant_2018/florida_lan_participant_2018_large.vtf CRC:00dfa13d3d size:349784
 materials/backpack/workshop/player/items/all_class/fortress_faceoffs_first/fortress_faceoffs_first.vtf CRC:008a50e162 size:22104
 materials/backpack/workshop/player/items/all_class/fortress_faceoffs_first/fortress_faceoffs_first_large.vtf CRC:00d73d8b5a size:349784
-materials/backpack/workshop/player/items/all_class/fortress_faceoffs_participant/fortress_faceoffs_participant.vtf CRC:0080841bd8 size:22104
-materials/backpack/workshop/player/items/all_class/fortress_faceoffs_participant/fortress_faceoffs_participant_large.vtf CRC:00240d2f39 size:349784
+materials/backpack/workshop/player/items/all_class/fortress_faceoffs_participant/fortress_faceoffs_participant.vtf CRC:001ae357bb size:22104
+materials/backpack/workshop/player/items/all_class/fortress_faceoffs_participant/fortress_faceoffs_participant_large.vtf CRC:00594b5222 size:349784
 materials/backpack/workshop/player/items/all_class/fortress_faceoffs_second/fortress_faceoffs_second.vtf CRC:00eb325901 size:22104
 materials/backpack/workshop/player/items/all_class/fortress_faceoffs_second/fortress_faceoffs_second_large.vtf CRC:007bad27cd size:349784
 materials/backpack/workshop/player/items/all_class/fortress_faceoffs_staff/fortress_faceoffs_staff.vtf CRC:00d0e80e66 size:22104
@@ -7579,8 +7579,8 @@ materials/backpack/workshop/player/items/sniper/xms2013_sniper_jacket/xms2013_sn
 materials/backpack/workshop/player/items/sniper/xms2013_sniper_jacket/xms2013_sniper_jacket_large.vtf CRC:00257c9258 size:349784
 materials/backpack/workshop/player/items/sniper/xms2013_sniper_layer_vest/xms2013_sniper_layer_vest.vtf CRC:001a566156 size:22104
 materials/backpack/workshop/player/items/sniper/xms2013_sniper_layer_vest/xms2013_sniper_layer_vest_large.vtf CRC:00022ab96d size:349784
-materials/backpack/workshop/player/items/sniper/xms_sniper_commandobackpack/xms_sniper_commandobackpack.vtf CRC:00b54f99b2 size:22104
-materials/backpack/workshop/player/items/sniper/xms_sniper_commandobackpack/xms_sniper_commandobackpack_large.vtf CRC:0069f11dd9 size:349784
+materials/backpack/workshop/player/items/sniper/xms_sniper_commandobackpack/xms_sniper_commandobackpack.vtf CRC:001700971e size:22104
+materials/backpack/workshop/player/items/sniper/xms_sniper_commandobackpack/xms_sniper_commandobackpack_large.vtf CRC:007f053be8 size:349784
 materials/backpack/workshop/player/items/soldier/bak_caped_crusader/bak_caped_crusader.vtf CRC:002f8b894b size:22104
 materials/backpack/workshop/player/items/soldier/bak_caped_crusader/bak_caped_crusader_large.vtf CRC:0020b766ab size:349784
 materials/backpack/workshop/player/items/soldier/beard/beard.vtf CRC:001925fad6 size:22104
@@ -7945,8 +7945,8 @@ materials/backpack/workshop/player/items/spy/hwn2025_sleight_hand/hwn2025_sleigh
 materials/backpack/workshop/player/items/spy/hwn2025_sleight_hand/hwn2025_sleight_hand_large.vtf CRC:00a9a5396a size:349784
 materials/backpack/workshop/player/items/spy/hwn2025_vanishing_act/hwn2025_vanishing_act.vtf CRC:00d0c28fa6 size:22104
 materials/backpack/workshop/player/items/spy/hwn2025_vanishing_act/hwn2025_vanishing_act_large.vtf CRC:001b2ff26d size:349784
-materials/backpack/workshop/player/items/spy/hwn2026_bounty_hunters_brim/hwn2026_bounty_hunters_brim.vtf CRC:00634e7757 size:22104
-materials/backpack/workshop/player/items/spy/hwn2026_bounty_hunters_brim/hwn2026_bounty_hunters_brim_large.vtf CRC:00305e61d2 size:349784
+materials/backpack/workshop/player/items/spy/hwn2026_bounty_hunters_brim/hwn2026_bounty_hunters_brim.vtf CRC:001a722136 size:22104
+materials/backpack/workshop/player/items/spy/hwn2026_bounty_hunters_brim/hwn2026_bounty_hunters_brim_large.vtf CRC:00d9d5a5a8 size:349784
 materials/backpack/workshop/player/items/spy/hwn2026_desperado_disguise/hwn2026_desperado_disguise.vtf CRC:00786b1672 size:22104
 materials/backpack/workshop/player/items/spy/hwn2026_desperado_disguise/hwn2026_desperado_disguise_large.vtf CRC:007ec02ed4 size:349784
 materials/backpack/workshop/player/items/spy/invasion_the_graylien/invasion_the_graylien.vtf CRC:00cf970e57 size:22104
@@ -11418,8 +11418,8 @@ materials/models/player/items/all_class/tomb_badge.vtf CRC:00136637d3 size:87616
 materials/models/player/items/all_class/tomb_pick.vtf CRC:002dd04c69 size:699256
 materials/models/player/items/all_class/treasure_hat.vtf CRC:00672131b1 size:349784
 materials/models/player/items/all_class/treasure_hat_normal.vtf CRC:005b0f5caf size:349784
-materials/models/player/items/all_class/treasure_hat_oct.vtf CRC:003870bbbc size:174968
-materials/models/player/items/all_class/treasure_hat_oct_normal.vtf CRC:00240c167a size:174968
+materials/models/player/items/all_class/treasure_hat_oct.vtf CRC:00a0fffbdc size:699256
+materials/models/player/items/all_class/treasure_hat_oct_normal.vtf CRC:003980a81a size:699256
 materials/models/player/items/all_class/trn_wiz_hat_blue.vtf CRC:0096b0c911 size:349784
 materials/models/player/items/all_class/trn_wiz_hat_red.vtf CRC:001f49a926 size:349784
 materials/models/player/items/all_class/ttg_badge.vtf CRC:001febeb34 size:349784
@@ -16622,8 +16622,10 @@ materials/models/workshop/player/items/all_class/florida_lan_participant_2018/fl
 materials/models/workshop/player/items/all_class/florida_lan_participant_2018/florida_lan_participant_2018_normal.vtf CRC:00dc7f8008 size:349784
 materials/models/workshop/player/items/all_class/fortress_faceoffs_first/fortress_faceoffs_first_color.vtf CRC:00460ed102 size:349784
 materials/models/workshop/player/items/all_class/fortress_faceoffs_first_style2/fortress_faceoffs_first_style2_color.vtf CRC:0009020661 size:349784
-materials/models/workshop/player/items/all_class/fortress_faceoffs_participant/fortress_faceoffs_participant_color.vtf CRC:004eab3106 size:349784
-materials/models/workshop/player/items/all_class/fortress_faceoffs_participant/fortress_faceoffs_participant_normal.vtf CRC:00c9282893 size:349784
+materials/models/workshop/player/items/all_class/fortress_faceoffs_participant/fortress_faceoffs_participant_color.vtf CRC:009883e465 size:349784
+materials/models/workshop/player/items/all_class/fortress_faceoffs_participant/fortress_faceoffs_participant_normal.vtf CRC:00ceafd927 size:349784
+materials/models/workshop/player/items/all_class/fortress_faceoffs_participant_style2/fortress_faceoffs_participant_style2_color.vtf CRC:004eab3106 size:349784
+materials/models/workshop/player/items/all_class/fortress_faceoffs_participant_style2/fortress_faceoffs_participant_style2_normal.vtf CRC:00c9282893 size:349784
 materials/models/workshop/player/items/all_class/fortress_faceoffs_second/fortress_faceoffs_second_color.vtf CRC:004b333888 size:349784
 materials/models/workshop/player/items/all_class/fortress_faceoffs_second_style2/fortress_faceoffs_second_style2_color.vtf CRC:00ef9d4c43 size:349784
 materials/models/workshop/player/items/all_class/fortress_faceoffs_staff/fortress_faceoffs_staff_color.vtf CRC:00de67c648 size:349784

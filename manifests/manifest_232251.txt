@@ -1,10 +1,10 @@
 Content Manifest for Depot 232251 
 
-Manifest ID / date     : 3238139619978080772 / 10/05/2026 22:25:12 
+Manifest ID / date     : 5032204359317675013 / 10/08/2026 21:54:58 
 Total number of files  : 301 
 Total number of chunks : 761 
-Total bytes on disk    : 612203189 
-Total bytes compressed : 418211856 
+Total bytes on disk    : 612204725 
+Total bytes compressed : 418212176 
 
 
           Size Chunks File SHA                                 Flags Name
@@ -72,7 +72,7 @@ Total bytes compressed : 418211856
          81920      1 405cd7839dd839679af5b97228e9b136397c114f     0 bin/libsasl.dll
        2447781      3 d0e6eec0522cd99b1241c51afe1b95436fe4adc3     0 bin/libxml2-2.dll
        1475736      2 9b79853fbe2aace21f40d9e7b8bb4d4845de080f     0 bin/MakeScenesImage.exe
-       1283224      2 f49c7f6ca5a2acf98279a6c07e5c8c95d9da88ae     0 bin/MaterialSystem.dll
+       1283224      2 8a2cf9a33f9478f86ba9157f28c208714dcd402c     0 bin/MaterialSystem.dll
         178840      1 ae1c270de6e3d6095c5269cd2760f675b90609e9     0 bin/mdllib.dll
         773784      1 9a7bbeb68b9908ee0f8ce3841889a656e1d8bbaa     0 bin/mksheet.exe
         306328      1 90f9092171bf0afc3938a307711f1fc1aaeb147a     0 bin/motionmapper.exe
@@ -215,7 +215,7 @@ Total bytes compressed : 418211856
        1283432      2 9867b4ab6b1a430242eae51aa2b1700a1ace4a2e     0 bin/x64/libswscale-5.dll
        2423793      3 4219e70c2cbe041f21a7adaead1f765bc289973b     0 bin/x64/libxml2-2.dll
        1451160      2 cbbf7c39b8f5da380b5932e2787b14aae5699463     0 bin/x64/MakeScenesImage.exe
-       1176728      2 f713cd260622deb4565c5cf611395a5d32660359     0 bin/x64/materialsystem.dll
+       1176728      2 1b693f03d88a14fce8434ded68f869fbf42d2efc     0 bin/x64/materialsystem.dll
         500376      1 28607548500d96940d45178109d5293e64cb368d     0 bin/x64/mksheet.exe
         541848      1 25d11d82b9edc652839b131c428f59412f97ad4c     0 bin/x64/motionmapper.exe
         226912      1 562c1e7e4d79f1b5fe572f792548fd3616d2c27f     0 bin/x64/networksystem.dll
@@ -276,11 +276,11 @@ Total bytes compressed : 418211856
              0      0 0000000000000000000000000000000000000000    40 tf
         164960      1 e086b0e1acedf4fea93cfbe9aabeee3fee38b914     0 tf.exe
              0      0 0000000000000000000000000000000000000000    40 tf/bin
-      14386840     14 be21f637d2aadac764351fb03686c72b66165b87     0 tf/bin/client.dll
-      11489432     11 98efd65f7ee5e1e9b1ad5a90d4417f9250f62653     0 tf/bin/server.dll
+      14387864     14 83fe94feca93ae359c796b466ca5496877fe884c     0 tf/bin/client.dll
+      11489432     11 164218721c4db54915e2be230afe83d66ed306f8     0 tf/bin/server.dll
              0      0 0000000000000000000000000000000000000000    40 tf/bin/x64
-      18793112     18 d09597ec489753ad5a8a33c629ac1ef0649feb9d     0 tf/bin/x64/client.dll
-      15373464     15 89530f21e54e01252918203096c2d389c62a8280     0 tf/bin/x64/server.dll
+      18793624     18 0d0afeccb6725da1d5ab2f7543c28c932ecfc62b     0 tf/bin/x64/client.dll
+      15373464     15 7830c9652e80a551c1f2440fc70f10164216800b     0 tf/bin/x64/server.dll
              0      0 0000000000000000000000000000000000000000    40 tf/media
        6085011      6 05fbc73e04bf74a4f426da4a16058ff3da406c9b     0 tf/media/arena_intro.webm
        5687549      6 ba3df06b936cc8d3eabea3a385c3c7990975c106     0 tf/media/cp_badlands.webm

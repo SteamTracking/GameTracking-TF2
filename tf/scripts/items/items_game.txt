@@ -34398,6 +34398,8 @@
 						}
 						"name"	"#TF_TreasureHat_3_Style"
 						"use_coin_particle_effect"		"0"
+						"skin_red" "0"
+						"skin_blu" "1"
 					}
 					"1"
 					{
@@ -94993,13 +94995,13 @@
 				{
 					"0"
 					{
-						"name"		"#TF_sum19_dynamite_abs_style1"
+						"name"		"#TF_style_grenades"
 						"skin_red"		"0"
 						"skin_blu"		"1"
 					}
 					"1"
 					{
-						"name"		"#TF_sum19_dynamite_abs_style2"
+						"name"		"#TF_style_nogrenades"
 						"skin_red"		"0"
 						"skin_blu"		"1"
 						"additional_hidden_bodygroups"
@@ -103893,14 +103895,14 @@
 						"model_player"		"models/workshop/player/items/demo/sum22_hawaiian_hangover/sum22_hawaiian_hangover.mdl"
 						"skin_red"		"0"
 						"skin_blu"		"1"
-						"name"		"#TF_sum22_hawaiian_hangover_style0"
+						"name"		"#TF_style_nogrenades"
 					}
 					"1"
 					{
 						"model_player"		"models/workshop/player/items/demo/sum22_hawaiian_hangover_style2/sum22_hawaiian_hangover_style2.mdl"
 						"skin_red"		"0"
 						"skin_blu"		"1"
-						"name"		"#TF_sum22_hawaiian_hangover_style1"
+						"name"		"#TF_style_grenades"
 					}
 				}
 			}
@@ -103973,14 +103975,14 @@
 						"model_player"		"models/workshop/player/items/soldier/sum22_chaser/sum22_chaser.mdl"
 						"skin_red"		"0"
 						"skin_blu"		"1"
-						"name"		"#TF_sum22_chaser_style0"
+						"name"		"#TF_style_nogrenades"
 					}
 					"1"
 					{
 						"model_player"		"models/workshop/player/items/soldier/sum22_chaser_style2/sum22_chaser_style2.mdl"
 						"skin_red"		"0"
 						"skin_blu"		"1"
-						"name"		"#TF_sum22_chaser_style1"
+						"name"		"#TF_style_grenades"
 					}
 				}
 			}
@@ -117333,7 +117335,7 @@
 						"model_player"		"models/workshop/player/items/pyro/sum26_tropical_torcher/sum26_tropical_torcher.mdl"
 						"skin_red"		"0"
 						"skin_blu"		"1"
-						"name"		"#TF_sum26_tropical_torcher_style1"
+						"name"		"#TF_style_nogrenades"
 						"additional_hidden_bodygroups"
 						{
 							"grenades"		"1"
@@ -117344,7 +117346,7 @@
 						"model_player"		"models/workshop/player/items/pyro/sum26_tropical_torcher_style2/sum26_tropical_torcher_style2.mdl"
 						"skin_red"		"0"
 						"skin_blu"		"1"
-						"name"		"#TF_sum26_tropical_torcher_style2"
+						"name"		"#TF_style_grenades"
 					}
 				}
 			}
@@ -118337,14 +118339,14 @@
 						"model_player"		"models/workshop/player/items/heavy/hwn2026_damage_dealer/hwn2026_damage_dealer.mdl"
 						"skin_red"		"0"
 						"skin_blu"		"1"
-						"name"		"#TF_style0"
+						"name"		"#TF_hwn2026_damage_dealer_style1"
 					}
 					"1"
 					{
 						"model_player"		"models/workshop/player/items/heavy/hwn2026_damage_dealer_style2/hwn2026_damage_dealer_style2.mdl"
 						"skin_red"		"0"
 						"skin_blu"		"1"
-						"name"		"#TF_style1"
+						"name"		"#TF_hwn2026_damage_dealer_style2"
 					}
 				}
 			}
@@ -118813,6 +118815,28 @@
 			"used_by_classes"
 			{
 				"soldier"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"name"		"#TF_style_grenades"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+					"1"
+					{
+						"name"		"#TF_style_nogrenades"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+						"additional_hidden_bodygroups"
+						{
+							"grenades"		"1"
+						}
+					}
+				}
 			}
 			"mouse_pressed_sound"		"ui/item_hat_pickup.wav"
 			"drop_sound"		"ui/item_hat_drop.wav"

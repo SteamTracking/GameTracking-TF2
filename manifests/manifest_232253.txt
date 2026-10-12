@@ -1,10 +1,10 @@
 Content Manifest for Depot 232253 
 
-Manifest ID / date     : 5983410509630928046 / 10/05/2026 22:25:29 
+Manifest ID / date     : 5923834004474347902 / 10/08/2026 21:55:13 
 Total number of files  : 104 
 Total number of chunks : 472 
 Total bytes on disk    : 455303959 
-Total bytes compressed : 333884512 
+Total bytes compressed : 333884560 
 
 
           Size Chunks File SHA                                 Flags Name
@@ -55,7 +55,7 @@ Total bytes compressed : 333884512
        3205672      4 0fbd661454aa8292f58edcd6adc113749da83d53     0 bin/linux64/libvpx.so
        3205768      4 7ee108b86e414426587fcf8d64e037c7f3f78544     0 bin/linux64/libvpx.so.6
         352904      1 9a8b5258053546060cad82b329fc5f861b200b00     0 bin/linux64/libvstdlib.so
-       1452168      2 502f1b951d4dfcde7a606930c866882d4edff521     0 bin/linux64/materialsystem.so
+       1452168      2 f0381c9d630bc55e66db1bab37b9b2551f27d403     0 bin/linux64/materialsystem.so
        1318480      2 528d25740b0c0a809ab4f5c51b3cfaef31316e6f     0 bin/linux64/replay.so
         187656      1 28a50951d4883f9b334356a29cd34b6c65abd7d1     0 bin/linux64/scenefilecache.so
        4008552      4 db6dd8034f19128f0f884b96f7c7a36343c407b1     0 bin/linux64/ServerBrowser.so
@@ -82,8 +82,8 @@ Total bytes compressed : 333884512
        1323798      2 dcb306efc9faf450af6604a844b3d7460daf9ae5     0 hl2/media/valve.webm
              0      0 0000000000000000000000000000000000000000    40 tf
           3056      1 21e06ca61ba7babef6a4b6bc37826626043fe713    20 tf.sh
-      48150680     46 2c19dd73a218bbca28355a2c9a7aae4a0ce8c843     0 tf/bin/linux64/client.so
-      28977952     28 fe444b162fa22a36f6763b91bc0406f5de99ba75     0 tf/bin/linux64/server.so
+      48150680     46 fead398376adc07d6bf4e6019f044c1ba98a26de     0 tf/bin/linux64/client.so
+      28977952     28 ccec5d5f06a991653c471df2023cad3aec26ec42     0 tf/bin/linux64/server.so
              0      0 0000000000000000000000000000000000000000    40 tf/media
        6085011      6 05fbc73e04bf74a4f426da4a16058ff3da406c9b     0 tf/media/arena_intro.webm
        5687549      6 ba3df06b936cc8d3eabea3a385c3c7990975c106     0 tf/media/cp_badlands.webm
