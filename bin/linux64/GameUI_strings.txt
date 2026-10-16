@@ -6,6 +6,8 @@
     with %d x %d thumbnail image
    %c=%d ~%d%%
   Ss=%d, Se=%d, Ah=%d, Al=%d
+ %.1f
+ %.2f
  ( def. "%s" )
  (native)
  ReadToken overflow
@@ -16,6 +18,8 @@
  clientcmd_can_execute
  failed to dlopen %s error=%s\n
  game
+ max. %f
+ min. %f
  notconnected
  notify
  replicated
@@ -469,7 +473,6 @@
 #vgui_TimeLeftSecond
 #vgui_TimeLeftSeconds
 #vgui_ok
-$3br
 $DECK
 $LINUX
 $OSX
@@ -478,20 +481,33 @@ $WIN32
 $WINDOWS
 $X360
 $frame
-%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+%%%s%%
+%%.%if%s
+%.0f%%
+%.2f%%
+%A %b %d
 %d %d %d %d
 %d %s %d seconds
 %d / %d ( %d%% )
+%d x %d
 %d.%d.%d.%d
+%d/%d
 %d:00
 %d_hidden
 %d_width
 %f %f %f %f
+%i x %i
+%i x %i%s
 %ld%c
 %lld
 %ls [wstring, len = %d]
+%s %d\n
+%s %f\n
+%s %s
 %s %s %s %s\n
+%s (%s)
 %s (header only: %d, nForceFlags: %d, skipMips: %d)
+%s - %s
 %s - %s finding %s
 %s - %s: Action signal
 %s - %s: Color overrides
@@ -499,6 +515,7 @@ $frame
 %s - %s: Pin Sibling
 %s string image, int src_corner_height, int src_corner_width, int draw_corner_height, int draw_corner_width
 %s%02i
+%s%d
 %s's Server
 %s*.bns
 %s, bool textHidden, bool editable, bool unicode, bool NumericInputOnly, int maxchars
@@ -515,12 +532,14 @@ $frame
 %s, string title
 %s.res
 %s.tga
+%s/%s
 %s/bin/linux64/%s
 %s/foldericon.tga
 %s/folderinfo.bns
+%s:/%s
+%s_%u
 %s_advanced
 %stemp%d.tga
-&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
 &AElig;
 &Aacute;
 &Acirc;
@@ -629,8 +648,10 @@ $frame
 &yacute;
 &yen;
 &yuml;
+(%s)%s
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
+(UGC) %s
 (null)
 ** NOTE: The real value is %.3f but the server has temporarily restricted it to %.3f **\n
 *** Encountered VTF file with an invalid full header!\n
@@ -675,6 +696,7 @@ $frame
 // Half-Life User Info Configuration Settings\r\n
 // NOTE:  THIS FILE IS AUTOMATICALLY REGENERATED, \r\n//DO NOT EDIT THIS HEADER, YOUR COMMENTS WILL BE LOST IF YOU DO\r\n// Multiplayer options script\r\n//\r\n// Format:\r\n//  Version [float]\r\n//  Options description followed by \r\n//  Options defaults\r\n//\r\n// Option description syntax:\r\n//\r\n//  "cvar" { "Prompt" { type [ type info ] } { default } }\r\n//\r\n//  type = \r\n//   BOOL   (a yes/no toggle)\r\n//   STRING\r\n//   NUMBER\r\n//   LIST\r\n//\r\n// type info:\r\n// BOOL                 no type info\r\n// NUMBER       min max range, use -1 -1 for no limits\r\n// STRING       no type info\r\n// LIST          delimited list of options value pairs\r\n//\r\n//\r\n// default depends on type\r\n// BOOL is "0" or "1"\r\n// NUMBER is "value"\r\n// STRING is "value"\r\n// LIST is "index", where index "0" is the first element of the list\r\n\r\n\r\n
 // NOTE:  THIS FILE IS AUTOMATICALLY REGENERATED, \r\n//DO NOT EDIT THIS HEADER, YOUR COMMENTS WILL BE LOST IF YOU DO\r\n// User options script\r\n//\r\n// Format:\r\n//  Version [float]\r\n//  Options description followed by \r\n//  Options defaults\r\n//\r\n// Option description syntax:\r\n//\r\n//  "cvar" { "Prompt" { type [ type info ] } { default } }\r\n//\r\n//  type = \r\n//   BOOL   (a yes/no toggle)\r\n//   STRING\r\n//   NUMBER\r\n//   LIST\r\n//\r\n// type info:\r\n// BOOL                 no type info\r\n// NUMBER       min max range, use -1 -1 for no limits\r\n// STRING       no type info\r\n// LIST          delimited list of options value pairs\r\n//\r\n//\r\n// default depends on type\r\n// BOOL is "0" or "1"\r\n// NUMBER is "value"\r\n// STRING is "value"\r\n// LIST is "index", where index "0" is the first element of the list\r\n\r\n\r\n
+//MOD/%s
 //\r\n//\r\n// Cvar\t-\tSetting\r\n\r\n
 /data/src/public/tier1/UtlSortVector.h
 /materials/
@@ -861,18 +883,14 @@ $frame
 <img src="
 <pre>
 <unknown>
->33s?
 >CCvarSlider
 >CSessionBrowserDialog
 >[unknown]
-?333333
 ?<a href=
-????????????????
 ?CursorExited
-?UUUUUU
 ?VMaterialSystem082
+@%c%s\n
 @CrosshairImagePanelBase
-A!;I2
 ABGR8888
 ALIGN_TYPE is wrong, please fix
 ARGB8888
@@ -932,7 +950,6 @@ BGRA5551
 BGRA8888
 BGRX5551
 BGRX8888
-BKbhTb~XBK!;
 BOOL
 BUTTON
 Backing store not supported
@@ -1481,7 +1498,6 @@ GLIBC_2.29
 GLIBC_2.3
 GLIBC_2.4
 GLIBC_2.7
-Ga=o
 Gain
 GameClientExports001
 GameConsole
@@ -1503,7 +1519,6 @@ GetCPUInformation
 GetCommand
 GetState
 GetText
-Gff&@
 GraphPanel
 GraphPanel.BgColor
 GraphPanel.FgColor
@@ -1973,7 +1988,6 @@ N4vgui9ScrollBarE
 N4vgui9TextEntryE
 N4vgui9TextImageE
 N4vgui9URLButtonE
-NAUU
 NUMBER
 NV_DST16
 NV_DST24
@@ -2671,7 +2685,6 @@ _ZGVbN2vv_pow
 _ZGVbN2vv_pow@GLIBC_2.22
 _ZGVbN4vv_powf
 _ZGVbN4vv_powf@GLIBC_2.22
-_ZSt9terminatev@GLIBCXX_3.4
 __bss_start
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
@@ -3298,6 +3311,7 @@ mainmenu.backdrop
 malloc
 malloc@GLIBC_2.2.5
 map %s
+map %s/%s\n
 map %s\n
 map test_hardware\n
 mapName
@@ -3550,7 +3564,6 @@ ru_RU
 runevent
 runeventchild
 russian
-sAmTb
 save %s\n
 save/%s
 save/*
@@ -3627,6 +3640,7 @@ stats_reset
 stay_armed_on_click
 stayselectedonclick
 std::terminate()
+std::terminate()@GLIBCXX_3.4
 stderr
 stderr@GLIBC_2.2.5
 steam/games/PlatformMenu.vdf

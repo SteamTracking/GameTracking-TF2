@@ -1,13 +1,13 @@
  (08@HP
- (08@HPX`p
- (08@LZ
  bytes
  failed to dlopen %s error=%s\n
-"*26L
+%%.%if%s
 %02x
+%A %b %d
+%i%s
 %s %s %s %s\n
+%s/%s
 %s/bin/linux64/%s
-&.8DTf
 &AElig;
 &Aacute;
 &Acirc;
@@ -114,7 +114,6 @@
 ,%03d
 0123456789ABCDEF
 0123456789abcdef
-0\nDE
 12IAudioStream
 14CVAudioMiniMP3
 16CDllDemandLoader
@@ -122,14 +121,12 @@
 19CMiniMP3AudioStream
 19CUtlNoEscConversion
 21CUtlCStringConversion
-38CB!=C0
 7IVAudio
 8CFmtStrNILi256ELb0EE
 </script>
 <img src="
 <pre>
 ><a href=
-?VCT][C
 CXXABI_1.3
 CreateInterface
 DLOPEN Error:%s\n
@@ -141,7 +138,6 @@ GLIBC_2.14
 GLIBC_2.2.5
 GLIBC_2.29
 GLIBC_2.3
-JBF'YB
 No such file
 Plat_IsInDebugSession
 Plat_localtime
@@ -162,8 +158,6 @@ Warning
 [url=
 _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
-_ZTVN10__cxxabiv117__class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv120__si_class_type_infoE@CXXABI_1.3
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
 __ctype_tolower_loc
@@ -190,8 +184,6 @@ abort@GLIBC_2.2.5
 bin/linux64
 chdir
 chdir@GLIBC_2.2.5
-cuC<
-df?u=
 dl_iterate_phdr
 dl_iterate_phdr@GLIBC_2.2.5
 dlclose
@@ -219,7 +211,6 @@ isspace
 isspace@GLIBC_2.2.5
 iswspace
 iswspace@GLIBC_2.2.5
-jCW pC
 ld-linux-x86-64.so.2
 libc.so.6
 libdl.so.2
@@ -243,7 +234,6 @@ pthread_mutex_lock@GLIBC_2.2.5
 pthread_mutex_unlock
 pthread_mutex_unlock@GLIBC_2.2.5
 pthread_once
-q.CUN3C
 script
 steam://openurl/
 steam://openurl_external/
@@ -288,7 +278,9 @@ vsnprintf@GLIBC_2.2.5
 vswprintf
 vswprintf@GLIBC_2.2.5
 vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__si_class_type_info@CXXABI_1.3
 wcslen
 wcslen@GLIBC_2.2.5
 wcsncat

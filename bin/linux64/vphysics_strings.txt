@@ -107,15 +107,22 @@
   standard deviation
  # p%d (v%d)\n
  # p%d is coplanar or isolated\n
+ %2.2g
+ %5.2g
+ %6.2g
  %6.2g max. cosine for post-merge angle\n
  %6.2g max. cosine for pre-merge angle\n
  %6.2g max. distance for merging two simplicial facets\n %6.2g max. roundoff error for arithmetic operations\n %6.2g min. denominator for divisions\n  zero diagonal for Gauss: 
  %6.2g max. distance for near-inside points\n
  %6.2g radius of post-merge centrum\n
  %6.2g radius of pre-merge centrum\n
+ %6.4g
+ %8.4g
+ %d->%d
  %i:%p:%X  
  %i:%p:%p:%X  
  ( def. "%s" )
+ (%.1fx)\n
  0 # infinity not used\n
  A../ivp_intern/ivp_ball.cxx
  AMatrix: %s\n
@@ -124,7 +131,7 @@
  MERGE
  MERGEridge\n
  NULLfacet\n
- XZB
+ QR%d\n\n
  and at-infinity
  and distance: 
  archive
@@ -137,13 +144,16 @@
  degenerate
  distance= %4.2g\n
  dupridge
+ f%d
  failed to dlopen %s error=%s\n
  flipped
  game
  keepcentrum
+ max. %f
  mergehorizon
  mergeridge1
  mergeridge2
+ min. %f
  new
  newmerge
  nonconvex
@@ -151,6 +161,7 @@
  notconnected
  notfurthest
  notify
+ p%d (v%d)
  replicated
  ridgedeleted
  seen
@@ -163,6 +174,7 @@
  visible
 !stiff_spring
 "%s" = "%s"
+# %d f%d\n
 # 1 color for all\n
 # 1 point per line\n1 
 # intersect f%d f%d\n
@@ -170,12 +182,23 @@
 # ridge between f%d f%d\n
 #@sys:friction
 $MATERIAL_INDEX_SHADOW
+% 1.3e 
+%%.%if%s
+%.4f 
+%.5f  
+%.6f 
 %02x
+%2.2g 
+%2.6g  
+%3.3f, 
 %6.16g 
 %6.16g %6.16g\n
+%6.2e 
+%6.3g 
 %7.2g
 %7.3g
 %7d calls to qh_setlarger\n%7.2g     average copy size\n
+%8.4g 
 %8.4g %8.4g %8.4g %8.4g # 
 %8.4g %8.4g %8.4g 0\n
 %8.4g %8.4g %8.4g 1.0 }\n
@@ -183,10 +206,17 @@ $MATERIAL_INDEX_SHADOW
 %8.4g %8.4g %8.4g 1\n
 %8.4g %8.4g %8.4g\n%8.4g %8.4g %8.4g\n
 %8.4g 0 0 0 # v%d\n 0 %8.4g 0 0\n0 0 %8.4g 0\n
+%A %b %d
+%d %d %d
+%d %d %d 
 %d %d %d %6.16g \n
+%d:%f 
 %d\n%d %d %d\n
 %d\n%d %d 1\n
+%d\n%d\n
 %f %f %f %f
+%i%s
+%s %f\n
 %s %s %s %s\n
 %s %s Intersection pnt %i - %i
 %s '%s'\tstart_%lX: %i\t
@@ -201,6 +231,7 @@ $MATERIAL_INDEX_SHADOW
 %s set=%p maxsize=%d size=%d elems=
 %s | %s\nbegin\n    %d %d real\n
 %s | %s\nbegin\n%d %d real\n
+%s/%s
 %s/bin/linux64/%s
 %s\tIntrusion Status\n
 %s\tIntrusion_Point
@@ -312,6 +343,7 @@ $MATERIAL_INDEX_SHADOW
 '7*this
 (%.2f, %.2f, %.2f), 
 (%.2f, %.2f, %.2f)\n
+(%s)%s
 * NULL pop
 ** NOTE: The real value is %.3f but the server has temporarily restricted it to %.3f **\n
 *** Done with convex pointsoup.\n\n
@@ -322,7 +354,6 @@ $MATERIAL_INDEX_SHADOW
 *** P_Pop_Eps went smaller than P_DOUBLE_EPS!!
 *** Qhull failed. Retrying with different parameters.\n
 **empty**
-*=UUU
 , line %d is the first comment
 , line %d is the first long line
 , line %d is the first short\nline
@@ -348,7 +379,7 @@ $MATERIAL_INDEX_SHADOW
 0 1 1 1  # color of points\n
 0123456789ABCDEF
 0123456789abcdef
-012354
+1 %d\n
 10CTraceAABB
 10CTraceCone
 10ConCommand
@@ -604,32 +635,27 @@ $MATERIAL_INDEX_SHADOW
 9IVP_U_SetI16IVP_Mindist_BaseE
 9IVP_U_SetI8IVP_CoreE
 9IVP_VHash
-9a&g
 ;DoubleVal
 <../ivp_collision/ivp_mindist_event.cxx
 </script>
-<RUSTJE=
 <img src="
 <pre>
 =../ivp_intern/ivp_object.cxx
 =Degenerate Triangle\n
 ><a href=
+? p%d
 ?../ivp_collision/ivp_mindist_recursive.cxx
 ?/data/src/ivp/ivp_physics/ivp_time_event.hxx
 ?20IVP_Ray_Hit_Listener
 ?26IVP_SurfaceManager_Polygon
-?333333
 ?@\nAt %02d:%02d:%02d & %2.5g CPU secs, qhull has created %d facets and merged %d.\n The current hull contains %d facets and %d vertices.  Last point was p%d\n
 ?Virtual mesh!\n
 ?es-8R
 ?static_object
 ?vphysics:player
 @20IVP_Collision_Filter
-@UUUUUU
 @sys
 @sys:buoyancy
-A333
-AZEl
 Ang Velocity: %.2f, %.2f, %.2f \n
 Angle-postmerge
 Angle-postmerge-with-random
@@ -741,7 +767,6 @@ GLIBC_2.27
 GLIBC_2.29
 GLIBC_2.3
 GLIBC_2.7
-Ga=o
 Ga>o
 Gall-points
 Gcentrums
@@ -761,8 +786,6 @@ HushAsserts
 IVP Failed at %s %d\n
 Inertia: %.2f, %.2f, %.2f (inv %.3f, %.3f, %.3f)\n
 IntVal
-KI,DC+
-L-\fLV
 L?23hk_Rigid_Body_Binary_EF
 L?pulley
 LIST # %s | %s\n
@@ -778,14 +801,11 @@ MATRIX_START
 MERGED
 MERGING
 MERGING CYCLE
-MGiI
 Mass: %.1f (inv %.3f)\n
 Material: %s : density(%.1f), thickness(%.2f), friction(%.2f), elasticity(%.2f)\n
 Matrix:
 MbP?
 Mbp?
-Mbp?\
-NAUU
 NULL edge in check_concavity.
 No 2d representation
 No such file
@@ -847,7 +867,6 @@ Qcoplanar-keep
 Qfurthest-outside
 Qgood-facets-only
 Qinterior-keep
-Qkkbal
 Qmax-outside-only
 Qrandom-outside
 Qsearch-initial-simplex
@@ -937,8 +956,6 @@ You are freeing a translation axis of a constraint which does not exist.
 You are limiting a rotation axis of a constraint which does not exist.
 You are limiting a translation axis of a constraint which does not exist.
 You are repositioning a constraint which does not exist.
-ZXW[
-Zjz\v
 [/code]
 [/list]
 [code]
@@ -1006,7 +1023,6 @@ Zjz\v
 \t\tMATRIX_START\n
 \t\t\tMATRIX_POS %g %g %g\n
 \t\t\tMATRIX_ROT %g %g %g %g %g %g %g %g %g\n
-]XIN[
 _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
 _ZGVbN2v_sin
@@ -1015,9 +1031,6 @@ _ZGVbN2vv_pow
 _ZGVbN2vv_pow@GLIBC_2.22
 _ZGVbN4vv_powf
 _ZGVbN4vv_powf@GLIBC_2.22
-_ZTVN10__cxxabiv117__class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv120__si_class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv121__vmi_class_type_infoE@CXXABI_1.3
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
 __ctype_tolower_loc
@@ -1063,7 +1076,6 @@ _wide-facet
 _zero-centrum
 `vphysics:drag
 a ridge with more than two neighbors
-aXE/[
 abort@GLIBC_2.2.5
 accel1 
 acos
@@ -1328,14 +1340,12 @@ hinge
 hingeAxis
 horizon facets merged into new facets
 horsepower
-i]Wb
 iconv
 iconv@GLIBC_2.2.5
 iconv_close
 iconv_close@GLIBC_2.2.5
 iconv_open
 iconv_open@GLIBC_2.2.5
-ijnokp^t
 image not found
 impactHardThreshold
 impacthard
@@ -1486,6 +1496,7 @@ non-simplicial Voronoi vertices for all ridges
 noname
 normals
 not concave, flipped, or duplicate ridged
+num %i: 
 number of facets in output
 number of vertices in output
 o@10hk_Console
@@ -1554,7 +1565,7 @@ putchar
 putchar@GLIBC_2.2.5
 pysic_test: tri->calc_areasize() < 1E-6f in triangle: %g
 q=../ivp_utility/ivu_vhash.cxx
-q\nGA
+qd2 = %f\n
 qh_addpoint: NULL facet.  Use qh_findbestfacet\n
 qh_addpoint: add p%d (v%d) to hull of %d facets (%2.2g above f%d) and %d outside at %4.4g CPU secs.  Previous was p%d.\n
 qh_addpoint: added p%d new facets %d new balance %2.2g point balance %2.2g\n
@@ -2018,7 +2029,7 @@ qhull warning: value %2.4g for Print option %c is > +1 or < -1.  Ignored\n
 qhull warning: writing Delaunay.  Use 'p' or 'o' for Voronoi centers\n
 qsort
 qsort@GLIBC_2.2.5
-rCz\v
+r%d 
 r_actives %d  ignored_nr %d\n
 radius
 ragdoll
@@ -2192,6 +2203,7 @@ two facets with the same vertices
 unknown
 useClockwiseRotations
 useLocalPositions
+v%d 
 v[%d]=%1.3e 
 variable %d is independent\n
 variable_is_found  
@@ -2245,8 +2257,11 @@ vsprintf@GLIBC_2.2.5
 vswprintf
 vswprintf@GLIBC_2.2.5
 vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__si_class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__vmi_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info@CXXABI_1.3
 vv\t%g %g %g\n
 warning: tried to add NULL ledge in IVP_SurfaceBuilder_Ledge_Soup::insert_ledge()\n
 water
@@ -2267,7 +2282,6 @@ wheelsNotInContact
 wheelsPerAxle
 wheelsperaxle
 with
-wn>Jj
 works_only_with_active
 worldAxisDirection
 worldPosition

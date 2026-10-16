@@ -7579,8 +7579,8 @@ materials/backpack/workshop/player/items/sniper/xms2013_sniper_jacket/xms2013_sn
 materials/backpack/workshop/player/items/sniper/xms2013_sniper_jacket/xms2013_sniper_jacket_large.vtf CRC:00257c9258 size:349784
 materials/backpack/workshop/player/items/sniper/xms2013_sniper_layer_vest/xms2013_sniper_layer_vest.vtf CRC:001a566156 size:22104
 materials/backpack/workshop/player/items/sniper/xms2013_sniper_layer_vest/xms2013_sniper_layer_vest_large.vtf CRC:00022ab96d size:349784
-materials/backpack/workshop/player/items/sniper/xms_sniper_commandobackpack/xms_sniper_commandobackpack.vtf CRC:001700971e size:22104
-materials/backpack/workshop/player/items/sniper/xms_sniper_commandobackpack/xms_sniper_commandobackpack_large.vtf CRC:007f053be8 size:349784
+materials/backpack/workshop/player/items/sniper/xms_sniper_commandobackpack/xms_sniper_commandobackpack.vtf CRC:0062221541 size:22104
+materials/backpack/workshop/player/items/sniper/xms_sniper_commandobackpack/xms_sniper_commandobackpack_large.vtf CRC:0067aebbf5 size:349784
 materials/backpack/workshop/player/items/soldier/bak_caped_crusader/bak_caped_crusader.vtf CRC:002f8b894b size:22104
 materials/backpack/workshop/player/items/soldier/bak_caped_crusader/bak_caped_crusader_large.vtf CRC:0020b766ab size:349784
 materials/backpack/workshop/player/items/soldier/beard/beard.vtf CRC:001925fad6 size:22104
@@ -28794,7 +28794,7 @@ materials/vgui/maps/menu_photos_cp_gravelpit_snowy.vtf CRC:001822a358 size:26235
 materials/vgui/maps/menu_photos_cp_gullywash_final1.vtf CRC:00c1fb2e5b size:349784
 materials/vgui/maps/menu_photos_cp_hadal.vtf CRC:0007adb738 size:349760
 materials/vgui/maps/menu_photos_cp_hardwood_final.vtf CRC:00c4524d4c size:349784
-materials/vgui/maps/menu_photos_cp_holyhell.vtf CRC:009727df10 size:349784
+materials/vgui/maps/menu_photos_cp_holyhell.vtf CRC:00127d2aad size:349776
 materials/vgui/maps/menu_photos_cp_junction_final.vtf CRC:005a54417b size:349784
 materials/vgui/maps/menu_photos_cp_lavapit_final.vtf CRC:0032202d48 size:349760
 materials/vgui/maps/menu_photos_cp_manor_event.vtf CRC:00308ec027 size:349784
@@ -29015,7 +29015,7 @@ materials/vgui/maps/menu_thumb_cp_gravelpit_snowy.vtf CRC:00d8d94257 size:16608
 materials/vgui/maps/menu_thumb_cp_gullywash_final1.vtf CRC:0034897219 size:11168
 materials/vgui/maps/menu_thumb_cp_hadal.vtf CRC:001f4255f8 size:11168
 materials/vgui/maps/menu_thumb_cp_hardwood_final.vtf CRC:0013133a62 size:11168
-materials/vgui/maps/menu_thumb_cp_holyhell.vtf CRC:00cf184a45 size:22104
+materials/vgui/maps/menu_thumb_cp_holyhell.vtf CRC:00c6af4c03 size:11160
 materials/vgui/maps/menu_thumb_cp_junction_final.vtf CRC:000046b84f size:11168
 materials/vgui/maps/menu_thumb_cp_lavapit_final.vtf CRC:000272128a size:11168
 materials/vgui/maps/menu_thumb_cp_manor_event.vtf CRC:00e1f1aed7 size:11168

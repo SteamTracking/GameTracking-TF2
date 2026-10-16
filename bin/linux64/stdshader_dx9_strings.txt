@@ -6,6 +6,8 @@
  clientcmd_can_execute
  failed to dlopen %s error=%s\n
  game
+ max. %f
+ min. %f
  notconnected
  notify
  replicated
@@ -497,8 +499,14 @@ $frame
 $normalmap texcoord transform
 $srgbtint
 $texture2 texcoord transform
+%%.%if%s
 %02x
+%A %b %d
+%i%s
+%s %d\n
+%s %f\n
 %s %s %s %s\n
+%s/%s
 %s/bin/linux64/%s
 &AElig;
 &Aacute;
@@ -607,6 +615,7 @@ $texture2 texcoord transform
 ( shaderFlags & SHADER_USE_CONSTANT_COLOR ) ? true : false
 ( shaderFlags & SHADER_USE_VERTEX_COLOR ) ? true : false
 (! bSRGBWrite ) && bHasVertexColor
+(%s)%s
 (bHasTexture2)?(1):(0)
 (fogType == MATERIAL_FOG_LINEAR_BELOW_FOG_Z) && (nBlendType != BT_BLENDADD) && (nBlendType != BT_BLEND) && !bIsAlphaTested
 (int) NORMAL_DECODE_NONE
@@ -682,7 +691,6 @@ $texture2 texcoord transform
 >0123456789ABCDEF
 ><a href=
 >bIsModel
-?333333
 ?Cloud_dx9
 ?Engine_Post_dx9
 ?Modulate_DX8
@@ -884,7 +892,6 @@ GLIBC_2.22
 GLIBC_2.27
 GLIBC_2.29
 GLIBC_2.3
-Ga=o
 GetCPUInformation
 Glass/glasswindowbreak070b
 Glossiness of eye (1 is default, 0 is not glossy at all)
@@ -1069,7 +1076,6 @@ N9Occlusion7CShaderE
 N9Sample4x47CShaderE
 N9Teeth_DX97CShaderE
 N9Wireframe7CShaderE
-NAUU
 NEED_ANOMYLIZE
 NEED_BLINDMK
 NEED_MONOCHROME
@@ -1332,9 +1338,6 @@ _ZGVbN2vv_pow
 _ZGVbN2vv_pow@GLIBC_2.22
 _ZGVbN4vv_powf
 _ZGVbN4vv_powf@GLIBC_2.22
-_ZTVN10__cxxabiv117__class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv120__si_class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv121__vmi_class_type_infoE@CXXABI_1.3
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
 __ctype_tolower_loc
@@ -2107,8 +2110,11 @@ vsnprintf@GLIBC_2.2.5
 vswprintf
 vswprintf@GLIBC_2.2.5
 vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__si_class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__vmi_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info@CXXABI_1.3
 warp specular term
 warp the specular term
 warpParam > 0.0f && warpParam < 1.0f
@@ -2145,6 +2151,5 @@ worldtwotextureblend_ps20b
 worldvertexalpha_ps20
 worldvertexalpha_ps20b
 writez_vs20
-yDUU
 zDaccumbuff4sample
 {255 255 255}

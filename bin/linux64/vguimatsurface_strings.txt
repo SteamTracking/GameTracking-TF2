@@ -1,4 +1,3 @@
-                
         %3d %3d %3d %3d %3d %3d %3d %3d
         %4u %4u %4u %4u %4u %4u %4u %4u
     Component %d: %dhx%dv q=%d
@@ -17,6 +16,8 @@
  clientcmd_can_execute
  failed to dlopen %s error=%s\n
  light
+ max. %f
+ min. %f
  notconnected
  notify
  regular
@@ -56,7 +57,6 @@
 #vgui_TimeLeftMinutesSeconds
 #vgui_TimeLeftSecond
 #vgui_TimeLeftSeconds
-$3br
 $DECK
 $LINUX
 $OSX
@@ -75,16 +75,22 @@ $nofog
 $translucent
 $vertexalpha
 $vertexcolor
-%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+%%%s%%
+%%.%if%s
+%A %b %d
 %d %d %d %d
 %d_hidden
 %d_width
 %f %f %f %f
+%i%s
 %ld%c
 %lld
 %ls [wstring, len = %d]
+%s %d\n
+%s %f\n
 %s %s %s %s\n
 %s (header only: %d, nForceFlags: %d, skipMips: %d)
+%s - %s
 %s - %s finding %s
 %s - %s: Action signal
 %s - %s: Color overrides
@@ -95,6 +101,8 @@ $vertexcolor
 %s - InternalThinkTraverse
 %s moved to front\n
 %s string image, int src_corner_height, int src_corner_width, int draw_corner_height, int draw_corner_width
+%s%d
+%s%s
 %s, bool textHidden, bool editable, bool unicode, bool NumericInputOnly, int maxchars
 %s, int SubTabPosition
 %s, string URLText
@@ -107,10 +115,10 @@ $vertexcolor
 %s, string progress, string variable
 %s, string text, bool scrollbar
 %s, string title
+%s/%s
 %s/bin/linux64/%s
 %s: Can't set font scale on a non-bitmap font!\n
 %stemp%d.tga
-&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
 &AElig;
 &Aacute;
 &Acirc;
@@ -219,6 +227,7 @@ $vertexcolor
 &yacute;
 &yen;
 &yuml;
+(%s)%s
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
 (no name)
@@ -334,7 +343,6 @@ $vertexcolor
 3 - bottom-right
 3 - down & right
 333333
-333?333?333?333?
 40CProportionalIntWithScreenspacePropertyX
 40CProportionalIntWithScreenspacePropertyY
 4fff>fff>fff>fff>
@@ -344,22 +352,17 @@ $vertexcolor
 7IConVar
 8CFmtStrNILi256ELb0EE
 8b  16-May-2010
-9a&g
 </script>
 << NULL >>\n
 <a href=
 <img src="
 <pre>
->33s?
 ><a href=
 >[unknown]
-?333333
 ?333?
-????????????????
 ?ComboBox
 ?vgui/cursors/arrow
 A magical prince
-A!;I2
 ABGR8888
 ALIGN_TYPE is wrong, please fix
 ARGB8888
@@ -395,7 +398,6 @@ BGRA5551
 BGRA8888
 BGRX5551
 BGRX8888
-BKbhTb~XBK!;
 Backing store not supported
 Backspace
 Bad format string in CLocalizeStringTable::ConstructString\n
@@ -717,7 +719,6 @@ GLIBC_2.29
 GLIBC_2.3
 GLIBC_2.4
 GLIBC_2.7
-Ga=o
 Gain
 GetCPUInformation
 GetCharABCWidths - Error in FL_Load_Glyph: ch:%x error:%x\n
@@ -961,7 +962,6 @@ Lucidia Console
 MATSURFACE
 MAX_ALLOC_CHUNK is wrong, please fix
 MDLCache004
-MGiI
 Marlett
 MarlettSmall
 MatSystemSurface requires the file system to run!\n
@@ -1070,7 +1070,6 @@ N4vgui9ListPanelE
 N4vgui9ScrollBarE
 N4vgui9TextEntryE
 N4vgui9TextImageE
-NAUU
 NV_DST16
 NV_DST24
 NV_INTZ
@@ -1156,7 +1155,6 @@ Prints my best friend
 Prints some sparkles
 Pulse
 QC,A
-Qkkbal
 Quantization table 0x%02x was not defined
 Quantizing to %d = %d*%d*%d colors
 Quantizing to %d colors
@@ -1411,7 +1409,6 @@ Write to EMS failed
 Write to XMS failed
 Wrong JPEG library version: library is %d, caller expects %d
 ZLIB_1.2.0
-Zjz\v
 [ no resource file associated with dialog ]
 [/code]
 [/list]
@@ -1436,10 +1433,6 @@ _ZGVbN2vv_pow
 _ZGVbN2vv_pow@GLIBC_2.22
 _ZGVbN4vv_powf
 _ZGVbN4vv_powf@GLIBC_2.22
-_ZSt9terminatev@GLIBCXX_3.4
-_ZTVN10__cxxabiv117__class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv120__si_class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv121__vmi_class_type_infoE@CXXABI_1.3
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
 __ctype_tolower_loc
@@ -1705,7 +1698,6 @@ headerSize
 http://
 https://
 i/o error
-i]Wb
 iconImage
 iconv
 iconv@GLIBC_2.2.5
@@ -1973,7 +1965,6 @@ rmdir@GLIBC_2.2.5
 rotation
 runevent
 runeventchild
-sAmTb
 scalable
 scaleAmount
 scaleImage
@@ -2017,6 +2008,7 @@ startFrame
 stay_armed_on_click
 stayselectedonclick
 std::terminate()
+std::terminate()@GLIBCXX_3.4
 stderr
 stderr@GLIBC_2.2.5
 steam://
@@ -2150,8 +2142,11 @@ vsnprintf@GLIBC_2.2.5
 vswprintf
 vswprintf@GLIBC_2.2.5
 vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__si_class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__vmi_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info@CXXABI_1.3
 vtex_dll
 vtf.cpp
 wcschr
@@ -2175,7 +2170,6 @@ wcstoll@GLIBC_2.2.5
 wcstombs
 wcstombs@GLIBC_2.2.5
 weight
-wn>Jj
 www.
 zlib error
 zlib init error

@@ -148,6 +148,8 @@
  !"#$%&'()*+,-./0123
  %02X
  %d (%d): %s : %5.3f (%.3f)\n
+ %d:%s
+ %s: %llu
  %s: error initializing line-item attribute from lootlist definition (possible attr template).\n
  ( def. "%s" )
  (Eluded)
@@ -190,7 +192,6 @@
  Entity %s encountered an error in RunScript()\n
  FileHandle_t:%p size:%u\n
  IsFileImmediatelyAvailable:%d cwd:%s\n
- KEH
  Lobby member %s is in state %s\n
  Lobby member %s no longer connected, lobby is incorrect\n
  Moving 
@@ -228,15 +229,15 @@
  for this key
  for this public key
  game
- google/protobuf/descriptor.proto"
- google/protobuf/descriptor.proto"o\n\vCMsgFieldID
  is an invalid deflate level
  is an invalid window size
  is less than the minimum of 
  is not a valid key length
  is not valid for field 
  leftedge %s %.3f
+ max. %f
  message of type "
+ min. %f
  more bytes of input needed
  notconnected
  notify
@@ -302,7 +303,6 @@
 !The global list of entities
 !Used to access entity output data
 !Used to get/set entity network fields
-!\n\npoint_type
 !\t@TranslationData
 !activator
 !caller
@@ -368,16 +368,7 @@
 " was not found or had errors.
 " which is not used.
 " which is.
-"!Names of items to give as loaners
-"!Which type of star this node uses
-""\n CMsgNotificationAcknowledgeReply"
-""\n CMsgPartyQueueForStandbyResponse"Q\n
-"#CPaintKitDefIdFieldProtoEditorField
-"#Numbers of stars it costs to unlock"=\n
 "$0" does not declare $1 as an extension number.
-"$\n"CMsgGC_DailyCompetitiveStatsRollup"
-"$\n"CMsgGameServerKickingLobbyResponse"6\n"CMsgLeaveGameAndPrepareToJoinParty
-"%\n#CMsgPartyClearPendingPlayerResponse"9\n
 "%s" %f %i\n
 "%s" (%d): 
 "%s" = "%s"
@@ -417,111 +408,26 @@
 "%s<%i><%s><%s>" underground (position "%3.2f %3.2f %3.2f")\n
 "%s<%i><%s><>" connected, address "%s"\n
 "%s<%i><%s><>" entered the game\n
-"&Operation this node is associated with
-"&\n$CWorkshop_AddSpecialPayment_Response"W\n$CWorkshop_GetSpecialPayments_Request
-"'Sort by this group, then alhpabetically"
-"'The name of an item to give as a reward
 ") is not compatible with this reflection object (which is for type "
 ") to start from the outermost scope.
 ").  Note that the exact same class is required; not just the same descriptor.
-")\n'CMsgPartyClearOtherPartyRequestResponse"C\n
-")\n'CMsgPartyRemoveFromStandbyQueueResponse"_\n
-"+Definitions to use in the logical operation"
-"+How many times this reward can be purchased
 ", another member of oneof "
 ", but only 
 ", field number 
 ", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., ".
 ", which is not imported by "
-",Random likelihood this one is to be selected
-",The name of the lootlist to roll as a reward
-",\n*CMsgGCQuestObjective_RequestLoanerResponse"-\n
-"-Which region in the map this node shows up in
 ".  To use it here, please add the necessary import.
 ". If this is intended, set 'option allow_alias = true;' to the enum definition.
 ". This appears to be a value from a sibling type.
 ". Value: "
-".Filename of the image to show on the node view
-"/Require that this item be equipped in any slot.
-"/\n CMsgProcessMatchVoteKickResponse
-"0What state of jumping the player needs to be in."
-"2Name of the base file for the sticker (the albedo)
-"2What stars (if any) the nodes within use to unlock
-"3Logic to unlock this node. Can be nested with logic
-"3\n!CMsgGCStorePurchaseCancelResponse
-"6Which link we go to when right-clicking in this region
-"6\n#CMsgGCToGCIncrementRecruitmentLevel
-"9Which node is required to have the above number of medals"
-";How much cash to give when completing the primary objective
-"<Performs a specified logical operation to all sub conditionsH
-"=What kind of logic to use when evaluating the player's items.
-"=\n!CMsgTFCoaching_RemoveCurrentCoach
 "????'????????????????????????????????????????????????????\????
-"?If set, the player must be on the specified team to get credit.
-"?Returns true if a specific node has a required number of medalsH
-"A\n'CMsgGCItemPreviewItemBoughtNotification
-"A\n/CMsgRequestItemPurgatory_RefundPurchaseResponse
-"BIf true, this is only a prefab and will not be made into an object
-"BWhat kind of logic to use when evaluating the player's conditions.
-"B\n"CMsgGC_Halloween_GrantItemResponse
-"CIf set, the player must be on one of the listed maps to get credit.
-"C\n1CMsgRequestItemPurgatory_FinalizePurchaseResponse
 "DCNPCSpawnDestination
-"DNumber of bonus objectives required, on top of the primary objective
-"D\n%CMsgGCRequestSubGCSessionInfoResponse
-"EInherit the values of these definitions, in order from top to bottom.
-"E\n$CMsgGCGetPartnerAccountLink_Response
-"F\n\fGCSQLVersion
-"G\n#CMsgGCStorePurchaseFinalizeResponse
-"HWhere the radio tuner goes on the CYOA PDA when this region is selection
-"IIf set, the player must be in one of the listed game modes to get credit.
-"I\n4CCommunity_TerminateGamePersonalDataEntries_Response
 "MutableRawRepeatedField"
-"YStrings used to describe this definition while searching.  ie. 'class', 'shotgun', 'easy'
-"\\n,CMsgGC_Client2GCEconPreviewDataBlockResponse
-"\nConditions
-"\nItem logic
-"\nJump logic
-"\nNode Image
-"\nSort group
-"\nZoom Scale
-"\n\nowner_soid
-"\rAutogenerated
-"\rMaps Modifier
-"\rTeam Modifier
-"\tMap X Pos
-"\tMap Y Pos
-"\tNode Icon
-"\tNode Name
-"\tStar Type
-"\tType Name"
-"\tVariables
-"\vCash Reward
-"\vPure Prefab
-"\vRadio Freq.
-"\vReturn Link
-"\vReward Item
-"\vTarget Node
-"bOverride value for the point value of the objective.  If not set, uses the objective's point value"
-"c\n$CMsgGCMatchGroupDataCenterPopulation
-"c\n\fConnectState
-"f\n$CMsgGC_VoteKickPlayerRequestResponse
-"f\n+CMsgGC_GameServer_UseServerModificationItem
 "fov" is "%d"\n
-"gHow zoomed in this panel should be.  Affects the scale of the map grid lines and node link dashed lines
 "healing_array"
-"j\n/CMsgGC_GameServer_ServerModificationItemExpired
-"o\n!CMsgFulfillDynamicRecipeComponent
-"pName of the specular file for the sticker, or if blank we will assume it is baseFilename + _spec + baseExtension"
 "player_array"
 "player_object_array"
-"r\n"CMsgGCHAccountTradeBanStatusChange
 "team_object_array"
-"u\n/CGCMsgGC_PlayerDuckLeaderboard_IndividualUpdate
-"yoperation template which all items in the list will use unless there's operation_template specified in an item_definition
-"z\n\rCMsgWebAPIKey
-"z\n\rMethodOptions
-"|\n(CMsgGCToGCSendAccountBannedNotifications
 #%s_chapter
 #<SprayCan.Paint
 #@DT_TEWorldDecal
@@ -947,8 +853,6 @@
 #Vote_ClassLimit_Enable
 #Vote_TeamAutoBalance_Disable
 #Vote_TeamAutoBalance_Enable
-#\n\rinterior_item
-#\n\vmatch_group
 #base
 #base is NULL 
 #clan_ready_rules
@@ -1010,15 +914,6 @@ $POSIX
 $WIN32
 $WINDOWS
 $X360
-$\n GCConnectionStatus_GC_GOING_DOWN
-$\n TF_COND_CANNOT_SWITCH_FROM_MELEE
-$\n TF_COND_INVULNERABLE_CARD_EFFECT
-$\n TF_COND_MEDIGUN_UBER_FIRE_RESIST
-$\n TF_GC_GAMESTATE_GAME_IN_PROGRESS
-$\n k_EGCMsgGetEmailTemplateResponse
-$\n k_EGCMsgWebAPIRegisterInterfaces
-$\n k_ESOMsg_CacheSubscribedUpToDate
-$\n\ngame_state
 $alphatest
 $basetexture
 $crackmaterial
@@ -1028,16 +923,20 @@ $no_fullbright
 $var1
 $var2
 $var3
+%%.%if%s
 %%20llu  %%%us  %%12s\n
 %%20s  %%%us  %%12s\n
 %-20s
 %-30s
 %-64.64s
 %-64.64s %03d:%02d
+%.*g
 %.10f %.10f %.10f
 %.3f %d %d %.3f %.3f vel %.2f\n
 %.3f %d %d\n
+%.3f, %.3f
 %.4f %.4f "%s"\n
+%.4f %.4f\n
 %04u%02u%02u
 %04u%02u%02u%02u%02u%02u
 %04u-%02u-%02u
@@ -1126,41 +1025,13 @@ $var3
 %5u %-46s %10u %5.1f%% %14llu %5.1f%% %10u %10.2f %10d %5.1f%% %14lld %5.1f%%\n
 %5u %-46s %10u %5.1f%% %14llu %5.1f%% %9.1f %10u %10.2f\n
 %8.3f[%d] %s:  %s
+%A %b %d
 %Y-%m-%dT%H:%M:%SZ
-%\n k_EGCMsgAccountPhoneNumberChange
-%\n k_EGCMsgGCAccountVacStatusChange
-%\n k_EMsgGCApplyClassTransmogrifier
-%\n k_EMsgGCDeliverGiftResponseGiver
-%\n k_EMsgGCDev_DebugRollLootRequest
-%\n k_EMsgGCFreeTrial_ThankedSomeone
-%\n k_EMsgGCParty_ClearPendingPlayer
-%\n k_EMsgGCParty_SetOptionsResponse
-%\n k_EMsgGCRemoveFestivizerResponse
-%\n k_EMsgGCRemoveKillStreakResponse
-%\n k_EMsgGCRemoveMakersMarkResponse
-%\n k_EMsgGCReplay_UploadedToYouTube
-%\n k_EMsgGCRequestPassportItemGrant
-%\n k_EMsgGCRespawnPostLoadoutChange
-%\n k_EMsgGCStoreGetUserDataResponse
-%\n k_EMsgGCToGCGetUserServerMembers
-%\n k_EMsgGCToGCGetUserSessionServer
-%\n k_EMsgGCToGCWebAPIAccountChanged
-%\n k_EMsgGC_GameServer_ListResponse
-%\n k_EMsgGC_NewMatchForLobbyRequest
-%\n k_EMsgGC_NotificationAcknowledge
-%\n k_EMsgGC_QP_ScoreServersResponse
-%\n k_EMsgGC_War_GlobalStatsResponse
-%\n!DEF_TYPE_PAINTKIT_ITEM_DEFINITION
-%\n!TF_COND_DEFENSEBUFF_NO_CRIT_BLOCK
-%\n!TF_COND_MEDIGUN_SMALL_FIRE_RESIST
-%\n!TF_COND_MEDIGUN_UBER_BLAST_RESIST
-%\n!k_EGCMsgGetAccountDetailsResponse
-%\n!k_ESOMsg_CacheSubscriptionRefresh
-%\n!k_eTFMatchGroup_Event_Placeholder
-%\n\fxp_breakdown
 %a, %e %b %Y %H:%M:%S
 %a, %e-%b-%y %H:%M:%S
+%c%.4d
 %d %d %d %d
+%d (%d/%d)
 %d Connections 
 %d areas added to selection\n
 %d areas simplified - %d remain\n
@@ -1169,31 +1040,45 @@ $var3
 %d of %d animations resident\n
 %d overlapping areas selected\n
 %d,%.2f %.2f %.2f
+%d-%s
+%d.%d.%d
 %d.%d.%d.%d:%d
+%d_%d
 %f %f %f %f
+%f%%
 %f: Player %s at [%0.2f %0.2f %0.2f] took %f damage from %s, type %s\n
 %hu:%u:%u%c
 %i %63s %63s
 %i %i %i %i
 %i (wc:%i; z:%i)
+%i (z:%i)
 %i : %s (ground %i %s)\n
+%i, %i
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
 %i/%s - %s:  UTIL_SetModel:  not precached: %s\n
 %i: %s at %f\n
 %keywords
 %lld
+%llu (%s)
 %llu\t%12s %12s\n
 %ls [wstring, len = %d]
 %s   time: %6.3f   sound name: %s   scene: %s\n
 %s "%s" (level %d)\n
+%s %.0f%%\n
+%s %f\n
 %s %llu
+%s %s 
+%s %s %d
+%s %s %s
 %s %s %s %s\n
 %s %s @ %s: 
 %s %s failed Urgent Movement, abandoning schedule\n
 %s %s failed Urgent Movement, retrying\n
+%s %s: 
 %s '%s' failed to find a valid spawnpoint in destination group: '%s'\n
 %s '%s' has a base specified as '%s', but there is no matching entry in propdata.txt.\n
+%s (%i)
 %s (%llu), Reason: %s
 %s (%p) spoke %s (%f)\n
 %s (%s) at (%.3f %.3f %.3f) using obsolete or unknown material type.\n
@@ -1311,6 +1196,8 @@ $var3
 %s%20s : %40s %5.3f\n
 %s%d out of %d waiting jobs printed.\n
 %s%d.vmt
+%s%i
+%s%s%s%s
 %s%s/%d_%s.txt
 %s%s: Lock owner: %s, Type: %d, %d Waiting\n
 %s%s: Lock owner: None, Type: %d, %d Waiting\n
@@ -1332,9 +1219,11 @@ $var3
 %s(%s): Added dynamic interaction: %s\n
 %s(%s): Computing valid interactions with %s(%s)\n
 %s(token %i) : %s
+%s,%s
 %s,%s,%s,%s,victimclass:%s
 %s,Kill,,0,-1
 %s,damageammo:%s
+%s.%s 
 %s.360%s
 %s.FootstepLeft
 %s.FootstepRight
@@ -1348,6 +1237,7 @@ $var3
 %s.failedsave
 %s/../hl2/%s
 %s/bin/linux64/%s
+%s: %s
 %s: %s (%s) = %d\n
 %s: %s could not find viewposition %s.\n
 %s: %s could not find viewtarget %s.\n
@@ -1375,20 +1265,25 @@ $var3
 %s: unexpected token %s\n
 %s: unknown modification type %u for server item.\n
 %s: unknown scripted sequence "%s"\n
+%s:%d
 %s:%s:%s has no sequence for act:%s\n
 %s:%s[%i:%i] async load\n
 %s:%s[%i:%i] was resident\n
+%s:%s\n
 %sCallChain <- CSimpleCallChainer("%s", self.GetScriptScope(), true)
 %sCallChain.PostScriptExecute()
 %sCurrent time: %6.3f\n
 %sLock acquired: %s:%d\n
 %sRecent NPC speech:\n
+%s\%s
 %s\Settings
 %s\maps\%s.nav
 %s\maps\%s_xyz.txt
 %s\n   origin %f %f %f\n   angles %f %f %f\n
 %s\tAt: %s:%d\n
 %s\tOther jobs waiting for this lock: %s (%llu)\n
+%s_%s
+%s_%s\n
 %s_STAT
 %s_blue
 %s_blue_crit
@@ -1402,6 +1297,7 @@ $var3
 %smale%s
 %ss%d
 %u tracked maps\n
+%u:%u:%u
 &0000
 &AElig;
 &Aacute;
@@ -1431,32 +1327,8 @@ $var3
 &Uacute;
 &Ucirc;
 &Ugrave;
-&UjC
 &Uuml;
 &Yacute;
-&\n!k_EGCMsgGetAppFriendsListResponse
-&\n!k_EGCMsgMasterSetClientMsgRouting
-&\n!k_EGCToGCMsgMasterStartupComplete
-&\n!k_EMsgGCApplyStrangeCountTransfer
-&\n!k_EMsgGCClientDisplayNotification
-&\n!k_EMsgGCCoaching_AskCoachResponse
-&\n!k_EMsgGCCoaching_LikeCurrentCoach
-&\n!k_EMsgGCItemPreviewStatusResponse
-&\n!k_EMsgGCLookupAccountNameResponse
-&\n!k_EMsgGCReplay_SubmitContestEntry
-&\n!k_EMsgGCRequestTF2FriendsResponse
-&\n!k_EMsgGCSetHatEffectUseHeadOrigin
-&\n!k_EMsgGCStorePurchaseInitResponse
-&\n!k_EMsgGCToGCDirtyMultipleSDOCache
-&\n!k_EMsgGC_GameServer_AuthChallenge
-&\n!k_EMsgGC_GameServer_ResetIdentity
-&\n!k_EMsgGC_NewMatchForLobbyResponse
-&\n"TF_COND_MEDIGUN_SMALL_BLAST_RESIST
-&\n"TF_COND_MEDIGUN_UBER_BULLET_RESIST
-&\n"TF_COND_STEALTHED_USER_BUFF_FADING
-&\n"k_UnlockStyle_Failed_CantAffordGem
-&\n"k_UnlockStyle_Failed_CantLockCache
-&\n\ngc_msg_src
 &aacute;
 &acirc;
 &acute;
@@ -1531,30 +1403,12 @@ $var3
 &yen;
 &yuml;
 '%20s' vs. '%20s' = 
+'%s %s'
 '%s' is corrupt.  Please verify your local game files.  (https://support.steampowered.com/kb_article.php?ref=2037-QEUH-3335)
 '%s' is too big; not loaded\n
 '%s' not found; not loaded\n
 ', stored '
 ', trying to retrieve '
-'\n"k_EGCMsgDPPartnerMicroTxnsResponse
-'\n"k_EGCMsgMasterSetDirectoryResponse
-'\n"k_EMsgGCCoaching_AlreadyRatedCoach
-'\n"k_EMsgGCCoaching_FindCoachResponse
-'\n"k_EMsgGCCoaching_RemoveFromCoaches
-'\n"k_EMsgGCDev_NewItemRequestResponse
-'\n"k_EMsgGCFreeTrial_ThankedBySomeone
-'\n"k_EMsgGCItemEaterRechargerResponse
-'\n"k_EMsgGCItemPreviewRequestResponse
-'\n"k_EMsgGCKickedFromMatchmakingQueue
-'\n"k_EMsgGCLookupMultipleAccountNames
-'\n"k_EMsgGCStartedTraining_DEPRECATED
-'\n"k_EMsgGC_GameServer_CreateIdentity
-'\n"k_EMsgGC_Halloween_ServerBossEvent
-'\n"k_EMsgGC_WorldItemPlacement_Update
-'\n#NOTIFICATION_REPORTED_PLAYER_BANNED
-'\n#ServerMatchmakingState_ACTIVE_MATCH
-'\n#TF_COND_MEDIGUN_SMALL_BULLET_RESIST
-'\n\rfinal_options
 'out_location' must not be NULL
 ( %s ) Condition %d - ( %.1f left )\n
 ( %s ) Condition %d - ( permanent cond )\n
@@ -1599,10 +1453,13 @@ $var3
 (%0.2f): %s
 (%d %d %d %d)
 (%d) Name: %s (%s)
+(%d/%d)%s
 (%f %f %f %f)
+(%f %f %f)
 (%f, %f, %f)
 (%s) Schedule (%s) Failed at %d!\n
 (%s) key: %-16s value: %s\n
+(%s)%s
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
 (@GAMEOVER_ALLY
@@ -1617,146 +1474,6 @@ $var3
 ([%d] %s: %s)
 ([%d] NextBotComponent)
 ([%u] Area)
-(\f"!\n\vCMsgGCError
-(\f"3\n CMsgAuthorizeServerItemRetrieval
-(\f"6\n CMsgGC_GameServer_CreateIdentity
-(\n estimated_wait_seconds_remaining
-(\n game_server_identity_token_reset
-(\n matching_near_you_active_players
-(\n non_prepared_statements_executed
-(\n total_near_you_empty_gameservers
-(\n total_near_you_searching_players
-(\n#k_EGCMsgAccountTradeBanStatusChange
-(\n#k_EGCMsgCheckClanMembershipResponse
-(\n#k_EMsgGCApplyHalloweenSpellbookPage
-(\n#k_EMsgGCCoaching_RemoveCurrentCoach
-(\n#k_EMsgGCDeliverGiftResponseReceiver
-(\n#k_EMsgGCGameServerMatchmakingStatus
-(\n#k_EMsgGCParty_QueueForMatchResponse
-(\n#k_EMsgGCQuestObjective_PointsChange
-(\n#k_EMsgGCRemoveCustomTextureResponse
-(\n#k_EMsgGCRemoveSocketItem_DEPRECATED
-(\n#k_EMsgGCSetItemEffectVerticalOffset
-(\n#k_EMsgGCStorePurchaseCancelResponse
-(\n#k_EMsgGCToGCBroadcastConsoleCommand
-(\n#k_EMsgGC_ClientSetItemSlotAttribute
-(\n#k_EMsgGC_IncrementKillCountResponse
-(\n#k_EMsgGC_TrackUniquePlayerPairEvent
-(\n$k_EGCMsgGetAccountDetails_DEPRECATED
-(\n$k_EGCMsgWebAPIJobRequestHttpResponse
-(\n\tSideScore
-(\n\tattribute
-(\n\tobjective
-(\n\vtexture_red
-(\n\vtranslate_u
-(\n\vtranslate_v
-(\r""\n\rCMsgSortItems
-(\r"*\n\rCMsgSDRTicket
-(\r"6\n"CMsgGCCheckClanMembership_Response
-(\r"7\n$CMsgReplaySubmitContestEntryResponse
-(\r"8\n%CGCSystemMsg_GetPurchaseTrust_Request
-(\r":\n"CWorkshop_GetContributors_Response
-(\r":\n'CMsgRequestItemPurgatory_RefundPurchase
-(\r";\n(CMsgGCRemoveCustomizationAttributeSimple
-(\r"=\n)CMsgRequestItemPurgatory_FinalizePurchase
-(\r"A\n&CMsgGCToGCGetUserSessionServerResponse
-(\r"C\n&CMsgGCToGCGetUserServerMembersResponse
-(\r"C\n&CMsgTFFreeTrialChooseMostHelpfulFriend
-(\r"W\n+CMsgGCRequestStoreSalesDataUpToDateResponse
-(\r"Z\n(CMsgIncrementKillCountAttribute_Multiple
-(\r"^\n CMsgTFCoaching_FindCoachResponse
-(\r"^\n\vGrantReason
-(\r"h\n*CMsgGC_PickupItemEligibility_QueryResponse
-(\r"h\n\nCSOWarData
-(\r"|\n CMsgGCIncrementKillCountResponse
-(\r:8\n\tallow_add
-(\t"(\n&CWorkshop_SetItemPaymentRules_Response"
-(\t":\n$CMsgGCMsgMasterSetDirectory_Response
-(\t":\n'CMsgGC_Client_UseServerModificationItem
-(\t"A\n0CCommunity_GetGamePersonalDataCategories_Request
-(\t"O\n CSOEconGameAccountForGameServers
-(\t"Q\n$CMsgGCToGCGrantSelfMadeItemToAccount
-(\t"U\n3CCommunity_TerminateGamePersonalDataEntries_Request
-(\t"j\n'CMsgGC_GameServer_AuthChallengeResponse
-(\t"l\n.CCommunity_GetGamePersonalDataEntries_Response
-(\t"p\n\rRoutingMethod
-(\t"u\n-CCommunity_GetGamePersonalDataEntries_Request
-(\t:2\n\tmax_count
-(\t:L\n#message_inherhitance_key_field_name
-(\v2 .CMsgGCHUpdateSession.ExtraField
-(\v2 .CMsgHttpResponse.ResponseHeader
-(\v2 .CMsgIncrementKillCountAttribute"w\n
-(\v2 .CMsgQuestMapNodeCondition_LogicBU
-(\v2 .google.protobuf.DescriptorProto
-(\v2!.CMsgAMSendEmail.ReplacementToken
-(\v2!.CMsgGCMsgSetOptions.MessageRange
-(\v2!.CMsgQuestMapRegionDef.RegionLink
-(\v2!.CMsgQuestTheme.WeightedStringSet
-(\v2!.google.protobuf.EnumValueOptions"
-(\v2".CMsgGCMsgMasterSetDirectory.SubGC
-(\v2".CMsgSetItemPositions.ItemPosition
-(\v2#.CMsgPaintKit_Operation_SelectStageH
-(\v2#.CMsgSOMultipleObjects.SingleObject
-(\v2$.CGCMsgMemCachedGetResponse.ValueTag
-(\v2$.CMsgPaintKit_Operation_CombineStageH
-(\v2$.CMsgPaintKit_Operation_StickerStageH
-(\v2$.CMsgPaintKit_Operation_TextureStageH
-(\v2$.CMsgQuestMapNodeCondition_NodeStateB[
-(\v2$.google.protobuf.EnumDescriptorProto
-(\v2$.google.protobuf.FileDescriptorProto"
-(\v2$.google.protobuf.UninterpretedOption"/\n
-(\v2$.google.protobuf.UninterpretedOption":\n\fOptimizeMode
-(\v2$.google.protobuf.UninterpretedOption*\t
-(\v2%.CMsgAMGetUserGameStatsResponse.Stats
-(\v2%.CMsgGCMatchGroupDataCenterPopulation"V\n
-(\v2%.CMsgSOCacheSubscribed.SubscribedType
-(\v2%.google.protobuf.FieldDescriptorProto
-(\v2%.google.protobuf.OneofDescriptorProto
-(\v2&.CMsgGCDataCenterPing_Update.PingEntry
-(\v2&.CMsgGCMsgMasterSetWebAPIRouting.Entry
-(\v2&.CMsgPaintKit_Definition.Item.ItemData
-(\v2&.google.protobuf.MethodDescriptorProto
-(\v2'.CGCToGCMsgMasterStartupComplete.GCInfo
-(\v2'.CMsgGameServerMatchmakingStatus.Player
-(\v2'.CMsgPaintKit_ItemDefinition.DefinitionB
-(\v2'.google.protobuf.ServiceDescriptorProto
-(\v2(.CCommunity_GamePersonalDataCategoryInfo
-(\v2(.CMsgGCUpdateSubGCSessionInfo.CMsgUpdate
-(\v2(.CMsgTFQuickplay_ScoreServers.ServerInfo
-(\v2(.google.protobuf.SourceCodeInfo.Location
-(\v2).CMsgGCMsgMasterSetClientMsgRouting.Entry
-(\v2).google.protobuf.EnumValueDescriptorProto
-(\v2*.CMsgGCRequestStoreSalesDataResponse.Price
-(\v2+.CGCMsgGC_War_GlobalStatsResponse.SideScore
-(\v2+.CMsgGCChangeMatchPlayerTeamsRequest.Member
-(\v2+.CMsgGCGetPersonaNames_Response.PersonaName
-(\v2,.CMsgAMSendEmail.PersonaNameReplacementToken
-(\v2,.CMsgGCToGCSOCacheSubscribe.CMsgHaveVersions
-(\v2,.CMsgUpdateHalloweenMerasmusLootLevel.Player
-(\v2-.google.protobuf.UninterpretedOption.NamePart
-(\v2/.CMsgLookupMultipleAccountNamesResponse.Account
-(\v2/.google.protobuf.DescriptorProto.ExtensionRange
-(\v20.CMsgTFQuickplay_ScoreServersResponse.ServerInfo
-(\v22.CMsgAMGetUserGameStatsResponse.Achievement_Blocks
-(\v22.CMsgGC_GameServer_ListResponse.GameServerIdentity
-(\v25.CWorkshop_GetSpecialPayments_Response.SpecialPayment
-(\v2;.CMsgNotificationOfSuspiciousActivity.MultipleGameInstances
-(\v2<.CMsgGC_DailyCompetitiveStatsRollup_Response.RankBucketEntry
-(\v2=.CMsgEconPlayerStrangeCountAdjustment.CStrangeCountAdjustment
-(\v2=.CWorkshop_SetItemPaymentRules_Request.PartnerItemPaymentRule
-(\v2>.CWorkshop_SetItemPaymentRules_Request.WorkshopItemPaymentRule
-(\v2@.CWorkshop_SetItemPaymentRules_Request.WorkshopDirectPaymentRule
-(\v2A.CWorkshop_PopulateItemDescriptions_Request.SingleItemDescription"F\n!CWorkshop_GetContributors_Request
-(\v2I.CWorkshop_PopulateItemDescriptions_Request.ItemDescriptionsLanguageBlock
-(\v2\f.CMsgFieldID"R\n
-(\v2\f.CSOEconItem
-(\v2\f.CSOEconItem"q\n+CMsgGC_Client2GCEconPreviewDataBlockRequest
-(\v2\r.CMsgQuestDefH
-(\v2\r.CMsgVarFieldB
-(\v2\r.CMsgVarFieldB4
-(\v2\r.CMsgVarFieldB:
-(\v2\r.CMsgVarFieldB\f
-(\v2\r.CMsgVarFieldBx
 (any)
 (cannot determine missing fields for lite messag
 (default)
@@ -1776,36 +1493,6 @@ $var3
 ) ("-L0123456789/:
 )", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
 ).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-)\n!matching_worldwide_active_players
-)\n!matchmaking_casual_ban_expiration
-)\n!matchmaking_ranked_ban_expiration
-)\n!total_worldwide_empty_gameservers
-)\n!total_worldwide_searching_players
-)\n$k_EGCMsgVSReportedSuspiciousActivity
-)\n$k_EMsgGCCustomizeItemTextureResponse
-)\n$k_EMsgGCFreeTrial_ConvertedToPremium
-)\n$k_EMsgGCItemPurgatory_RefundPurchase
-)\n$k_EMsgGCParty_ClearOtherPartyRequest
-)\n$k_EMsgGCParty_RemoveFromStandbyQueue
-)\n$k_EMsgGCPresets_SelectPresetForClass
-)\n$k_EMsgGCRequestAnnouncementsResponse
-)\n$k_EMsgGCServerBrowser_FavoriteServer
-)\n$k_EMsgGCStorePurchaseInit_DEPRECATED
-)\n$k_EMsgGCTrading_InitiateTradeRequest
-)\n$k_EMsgGC_ClientVerificationChallenge
-)\n$k_EMsgGC_DailyCompetitiveStatsRollup
-)\n$k_EMsgGC_Halloween_GrantItemResponse
-)\n$k_EMsgGC_IncrementKillCountAttribute
-)\n%kGameServerModificationItem_Halloween
-)\n%k_UnlockStyle_Failed_CantAffordAttrib
-)\n\fMessageRange
-)\n\fadjust_black
-)\n\fadjust_gamma
-)\n\fleave_reason
-)\n\fnotification
-)\n\ftexture_blue
-)\n\nExtraField
-)\n\nQueryParam
 * No rounds in this map *\n
 * Round "%s" not found in this map *\n
 ** Duplicate Hammer Node IDs: 
@@ -1878,48 +1565,7 @@ $var3
 *ZN24CTeamplayRoundBasedRules10CleanUpMapEvE24CTeamplayMapEntityFilter
 *ZN6CDecal11StaticDecalEvE25CTraceFilterValidForDecal
 *ZNK13CEconItemView17IterateAttributesEP26IEconItemAttributeIteratorE46CEconItemAttributeIterator_EconItemViewWrapper
-*\n"need_to_choose_most_helpful_friend
-*\n"notification_body_localization_key
-*\n%k_EGCMsgGetPartnerAccountLinkResponse
-*\n%k_EMsgGCCoaching_AddToCoachesResponse
-*\n%k_EMsgGCFulfillDynamicRecipeComponent
-*\n%k_EMsgGCItemPreviewExpireNotification
-*\n%k_EMsgGCParty_QueueForStandbyResponse
-*\n%k_EMsgGCParty_RemoveFromQueueResponse
-*\n%k_EMsgGCRequestStoreSalesDataResponse
-*\n%k_EMsgGCServerBrowser_BlacklistServer
-*\n%k_EMsgGCStorePurchaseFinalizeResponse
-*\n%k_EMsgGCStorePurchaseQueryTxnResponse
-*\n%k_EMsgGCTrading_InitiateTradeResponse
-*\n%k_EMsgGCVoteKickPlayerRequestResponse
-*\n%k_EMsgGC_GameServer_AckPolicyResponse
-*\n%k_EMsgGC_NotificationAcknowledgeReply
-*\n%k_EMsgGC_ProcessMatchVoteKickResponse
-*\n%k_EMsgGC_RevolvingLootList_DEPRECATED
-*\n%k_EMsgGC_SetDisablePartyQuestProgress
-*\n%k_EMsgGC_WorldItemPlacement_Attribute
-*\n&k_EGCMsgGetUserGameStatsSchemaResponse
-*\n&k_eTFSyncedMMMenuStep_Configuring_Mode
-*\n\radjust_offset
-*\n\rnotifications
-*\n\rquestion_type
 *this
-+\n#matching_near_you_empty_gameservers
-+\n#matching_near_you_searching_players
-+\n#notification_title_localization_key
-+\n&k_EGCMsgGetPurchaseTrustStatusResponse
-+\n&k_EGCMsgMasterSetWebAPIRoutingResponse
-+\n&k_EMsgGCGameServerKickingLobbyResponse
-+\n&k_EMsgGCItemPurgatory_FinalizePurchase
-+\n&k_EMsgGCLeaveGameAndPrepareToJoinParty
-+\n&k_EMsgGCRemoveUniqueCraftIndexResponse
-+\n&k_EMsgGCRequestChatChannelListResponse
-+\n&k_EMsgGCToGCGrantSelfMadeItemToAccount
-+\n&k_EMsgGC_ChangeMatchPlayerTeamsRequest
-+\n'NOTIFICATION_REPORTED_PLAYER_WAS_BANNED
-+\n'k_EGCMsgWebAPIJobRequestForwardResponse
-+\n\rjob_id_source
-+\n\rjob_id_target
 +helpme_server
 +inspect_server
 +use_action_slot_item_server
@@ -1929,29 +1575,11 @@ $var3
 , score %4.2f\n
 , trusted=true
 ,%03d
-,B43
-,\n$matching_worldwide_empty_gameservers
-,\n$matching_worldwide_searching_players
-,\n$matchmaking_casual_ban_last_duration
-,\n$matchmaking_ranked_ban_last_duration
-,\n'k_EMsgGCClientRequestMarketDataResponse
-,\n'k_EMsgGCRequestSubGCSessionInfoResponse
-,\n'k_EMsgGC_ChangeMatchPlayerTeamsResponse
-,\n'k_EMsgGC_Halloween_GrantItem_DEPRECATED
-,\n'k_eTFPartyChatType_Synthetic_MemberJoin
-,\n'k_eTFPartyChatType_Synthetic_SendFailed
-,\n(ServerMatchmakingState_NOT_PARTICIPATING
-,\n(TF_COND_INVULNERABLE_HIDE_UNLESS_DAMAGED
-,\n(TF_GC_GAMESTATE_WAIT_FOR_PLAYERS_TO_LOAD
-,\n(k_ItemPurgatoryResponse_Refund_Succeeded
-,\n(k_eTFSyncedMMMenuStep_MvM_Selecting_Mode
-,\n(k_eTFSyncedMMMenuStep_MvM_Selecting_Tour
-,\n\rRequestHeader
-,\n\vsource_type
 ,lobby:%016llx
 ,lobby:0
 ,mannup:%d
 - %d: %s x:%.4f y:%.4f z:%.4f\n
+-%s %.1f\n
 -- Error --:  empty soundname, .qc error on AE_CL_PLAYSOUND in model %s, sequence %s, animevent # %i\n
 -- Globals --\n
 --- %i links\n
@@ -1972,6 +1600,7 @@ $var3
 ----End Script Dump\n
 ----Script Dump for entity %s\n
 ---Vote commands---\n
+--> %-26s
 --\n%s current org: %f %f\n
 -1 Default (Holiday-based)\n0 - Force off\n1 - Force on
 -10 -10 -10
@@ -1979,12 +1608,6 @@ $var3
 -250.0
 -90 0 0
 -EncodingParameters
--\n(k_EMsgGCParty_ClearPendingPlayerResponse
--\n(k_EMsgGCToGCGetUserServerMembersResponse
--\n(k_EMsgGCToGCGetUserSessionServerResponse
--\n(k_eTFPartyChatType_Synthetic_MemberLeave
--\n\nconditions
--\n\vmm_criteria
 -all
 -bugbait
 -burn
@@ -2070,6 +1693,7 @@ $var3
 ../shared/ragdoll_shared.cpp
 ../shared/soundenvelope.cpp
 ../shared/tf/tf_flame.cpp
+../shared/tf/tf_item_schema.cpp
 ../shared/tf/tf_lobby_shared.cpp
 ../shared/tf/tf_party.cpp
 ../shared/tf/tf_playeranimstate.cpp
@@ -2084,155 +1708,9 @@ $var3
 .360
 .AIN File will *NOT* be updated. User Override.\n\n
 .AIN File will be updated\n\n
-.CEconItemPreviewDataBlock"
-.CGCMsgMemCachedSet.KeyPair
-.CGCStorePurchaseInit_LineItem"A\n
-.CIPLocationInfo"?\n
-.CMsgConVarValue"
-.CMsgFieldID.CMsgField
-.CMsgGCClientMarketDataEntry"D\n
-.CMsgGCDataCenterPopulation"
-.CMsgGCMsgSetOptions.Option
-.CMsgGCNotification"J\n
-.CMsgGCNotification*
-.CMsgGCQuestMapUnlockNode";\n
-.CMsgGCRoutingInfo"
-.CMsgGCRoutingInfo">\n(CMsgGCMsgMasterSetWebAPIRouting_Response
-.CMsgGC_Match_Result.Player
-.CMsgGC_Match_Result.Status
-.CMsgGC_ReportPlayer.EReason"
-.CMsgHeaderOnlyH
-.CMsgHttpRequest
-.CMsgHttpRequest.QueryParam
-.CMsgHttpRequest.RequestHeader
-.CMsgMvMVictory.Player
-.CMsgMvMVictoryInfo.GrantReason
-.CMsgMvMVictoryInfo.Item
-.CMsgMvMVictoryInfo.Player
-.CMsgPackageLicense
-.CMsgPaintKit_Definition.Item
-.CMsgPaintKit_DefinitionH
-.CMsgPaintKit_ItemDefinitionH
-.CMsgPaintKit_OperationH
-.CMsgPaintKit_OperationNode"
-.CMsgPaintKit_OperationNode"r\n"CMsgPaintKit_Operation_SelectStage
-.CMsgPaintKit_OperationStageH
-.CMsgPaintKit_Operation_Sticker
-.CMsgPaintKit_VariablesH
-.CMsgPartyMMError.Type"3\n
-.CMsgProcessMatchVoteKick.Vote
-.CMsgProtoDefHeader
-.CMsgProtoDefHeader"
-.CMsgProtoDefHeader*,\n
-.CMsgProtoDefID
-.CMsgProtoDefIDB
-.CMsgProtoDefIDB+
-.CMsgProtoDefIDB6
-.CMsgProtoDefIDB<
-.CMsgProtoDefIDB?
-.CMsgProtoDefIDBG
-.CMsgProtoDefIDBM
-.CMsgProtoDefIDBP
-.CMsgProtoDefIDBs
-.CMsgQuestDef.MMCriteria
-.CMsgQuestDef.ObjectiveInstance
-.CMsgQuestMapNodeConditionB;
-.CMsgQuestMapNodeConditionBE
-.CMsgQuestMapNodeDefH
-.CMsgQuestMapRegionDefH
-.CMsgQuestObjectiveDef.ETF2TeamBT
-.CMsgQuestObjectiveDefH
-.CMsgQuestTheme.WeightedString"
-.CMsgQuestThemeH
-.CMsgRecipeComponent"B\n
-.CMsgSOIDOwner
-.CMsgSOIDOwner"%\n
-.CMsgTFXPSource
-.CMsgTFXPSource"
-.CMsgTFXPSource"<\n
-.CMsgTFXPSource.XPSourceTypeB
-.CMsgVariableDefinitionB3
-.CMsgWebAPIKey
-.CSOEconItemAttribute
-.CSOEconItemEquipped
-.CSOItemCriteria
-.CSOItemCriteria"G\n
-.CSOItemCriteriaCondition
-.CSOTFGameServerLobby.State:
-.CSOTFGameServerLobby.WarMatch:
-.CSOTFParty.QueueEntry
-.CSOTFPartyInvite.PartyMember
-.CSOTFPartyInvite.Type
-.CSOTFPartyMember
-.CSOTFPartyMember.Activity
-.CTFCasualMatchCriteria"4\n
-.CTFGroupMatchCriteriaProto
-.CTFLobbyPlayerProto
-.CTFLobbyPlayerProto".\n
-.CTFLobbyPlayerProto.Type
-.CTFPartyOptions
-.CTFPartyOptions"
-.CTFPerPlayerMatchCriteriaProto
-.ENodeCashRewardBN
-.EServerModificationItemType
-.EServerModificationItemType"
-.EServerModificationItemType"s\n(CMsgGC_GameServer_ServerModificationItem
-.ETFMatchGroup
-.ETFMatchGroup"
-.ETFMatchGroup" \n
-.ETFMatchGroup""\n CMsgPartyRemoveFromQueueResponse"3\n
-.ETFMatchGroup:
-.ETFPartyChatType
-.ETFSyncedMMMenuStep:
-.EValueDefinitionSource
-.EVarFieldType:
-.GCConnectionStatus
-.GCGoodbyeReason"
-.GCGoodbyeReason"5\n
-.GCProtoBufMsgSrc
-.LogicalOperationB
-.LogicalOperationBO
-.LogicalOperationBY
 .PLACEHOLDER_VALUE
-.ProtoDefTypes
-.ProtoDefTypes"
-.ProtoDefTypes:7\n
-.ServerMatchmakingState:
-.SurveyQuestionType
-.TFMatchLeaveReason
-.TFPendingPartyMember
-.TFPendingPartyMember.EType:
-.TFSyncedMMUIState
-.TFSyncedMMUIState"J\n
-.TFVoteKickReason
-.TF_GC_GameState
-.\n)k_EGCMsgGetGamePersonalDataEntriesRequest
-.\n)k_EGCMsgMasterSetClientMsgRoutingResponse
-.\n)k_EMsgGCFreeTrial_ChooseMostHelpfulFriend
-.\n)k_EMsgGCItemPreviewItemBoughtNotification
-.\n)k_EMsgGCPresets_SelectPresetForClassReply
-.\n)k_EMsgGCQuestObjective_RequestLoanerItems
-.\n)k_EMsgGCReplay_SubmitContestEntryResponse
-.\n)k_EMsgGCToGCPlayerStrangeCountAdjustments
-.\n)k_EMsgGC_Client_UseServerModificationItem
-.\n)k_EMsgGC_DuckLeaderboard_IndividualUpdate
-.\n)k_EMsgGC_GameServer_AuthChallengeResponse
-.\n)k_EMsgGC_GameServer_ModificationItemState
-.\n)k_EMsgGC_GameServer_ResetIdentityResponse
-.\n)k_EMsgGC_Halloween_ItemClaimed_DEPRECATED
-.\n)k_eTFPartyChatType_Synthetic_MemberOnline
-.\n*k_ItemPurgatoryResponse_Finalize_Succeeded
-.\n\vunlock_node
 .dummy
 .foo = value".
-.google.protobuf.EnumOptions"l\n
-.google.protobuf.FieldOptions
-.google.protobuf.FieldOptions"
-.google.protobuf.FileOptions
-.google.protobuf.MessageOptions
-.google.protobuf.MethodOptions"
-.google.protobuf.ServiceOptions"
-.google.protobuf.SourceCodeInfo"
 .lua
 .manifest
 .mp3
@@ -2245,17 +1723,6 @@ $var3
 //========== Copyright 
 //=========================================================\n// An spawner on the server is getting ready to\n// prespawn an entity. It calls this function, sending us\n// the entity that it's preparing to spawn. \n//=========================================================\n\nfunction __ExecutePreSpawn( entity ) \n{\n\t__EntityMakerResult <- {}\n\tif ( "PreSpawnInstance" in this )\n\t{\n\t\tlocal overrides = PreSpawnInstance( entity.GetClassname(), entity.GetName() );\n\t\tlocal type = typeof( overrides );\n\t\tif ( type == "table" )\n\t\t{\n\t\t\tforeach( key, value in overrides )\n\t\t\t{\n\t\t\t\tswitch ( typeof( value ) )\n\t\t\t\t{\n\t\t\t\tcase "string":\n\t\t\t\t\t{\n\t\t\t\t\t\tentity.__KeyValueFromString( key, value );\n\t\t\t\t\t\tbreak;\n\t\t\t\t\t}\n\t\t\t\tcase "integer":\n\t\t\t\t\t{\n\t\t\t\t\t\tentity.__KeyValueFromInt( key, value );\n\t\t\t\t\t\tbreak;\n\t\t\t\t\t}\n\t\t\t\tcase "float":\n\t\t\t\tcase "bool":\n\t\t\t\t\t{\n\t\t\t\t\t\tentity.__KeyValueFromFloat( key, value.tofloat() );\n\t\t\t\t\t\tbreak;\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\tcase "Vector":\n\t\t\t\t\t{\n\t\t\t\t\t\tentity.__KeyValueFromVector( key, value );\n\t\t\t\t\t\tbreak\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\tdefault:\n\t\t\t\t\t{\n\t\t\t\t\t\tprintl( "Cannot use " + typeof( value ) + " as a key" );\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\t\n\t\tif ( type == "bool" )\n\t\t{\n\t\t\treturn overrides;\n\t\t}\n\t}\n};\n\nfunction __FinishSpawn()\n{\n\t__EntityMakerResult <- null;\n}\n
 /EMSA1(
-/\n*k_EGCMsgGetGamePersonalDataEntriesResponse
-/\n*k_EMsgGCCoaching_RemoveFromCoachesResponse
-/\n*k_EMsgGCLookupMultipleAccountNamesResponse
-/\n*k_EMsgGCMVMARG_HighFiveOnClient_DEPRECATED
-/\n*k_EMsgGC_ClientVerificationVerboseResponse
-/\n*k_EMsgGC_GameServer_CreateIdentityResponse
-/\n*k_EMsgGC_Halloween_ReservedItem_DEPRECATED
-/\n*k_EMsgGC_Halloween_UpdateMerasmusLootLevel
-/\n*k_eTFPartyChatType_Synthetic_MemberOffline
-/\n\nEGCItemMsg
-/\n\nget_params
 /cfg/%s
 /data/src/game/server/../server/NextBot/Path/NextBotPath.h
 /data/src/game/server/NextBot/NextBotBehavior.h
@@ -2266,6 +1733,7 @@ $var3
 /data/src/game/server/tf/bot/tf_bot.h
 /data/src/game/shared/SharedFunctorUtils.h
 /data/src/game/shared/econ/attribute_manager.h
+/data/src/game/shared/econ/econ_item_interface.h
 /data/src/game/shared/tf/tf_proto_script_obj_def.h
 /data/src/gcsdk/steamextra/tier1/tsmempool.h
 /data/src/public/gcsdk/msgprotobuf.h
@@ -2339,7 +1807,6 @@ $var3
 0100000000000000000001F4C8F927AED3CA752257
 0100000000000000D9CCEC8A39E56F
 010000000000000108789B2496AF93
-010\r
 0123456789ABCDEF
 0123456789abcdef
 0163F35A5137C2CE3EA6ED8667190B0BC43ECD69977702709B
@@ -2413,27 +1880,7 @@ $var3
 07B6882CAAEFA84F9554FF8428BD88E246D2782AE2
 08-23
 08-25
-0@UU
-0A0\r
-0Q0\r
 0YEhS|
-0\n+k_EMsgGCRemoveSocketItemResponse_DEPRECATED
-0\n+k_EMsgGCToGC_SendAccountBannedNotifications
-0\n+k_EMsgGC_Halloween_ItemClaimed_DEPRECATED_2
-0\n,GCConnectionStatus_NO_SESSION_IN_LOGON_QUEUE
-0\n,NOTIFICATION_MM_BAN_DUE_TO_EXCESSIVE_REPORTS
-0\n,kServerModificationItemResponse_AlreadyInUse
-0\n,kServerModificationItemResponse_ServerReject
-0\n,k_eTFSyncedMMMenuStep_MvM_Selecting_Missions
-0\n\tamputator
-0\n\tbattleaxe
-0\n\tdegreaser
-0\n\tdetonator
-0\n\tlochnload
-0\n\tpowerjack
-0\n\tshortstop
-0\n\ttrenchgun
-0\n\vpost_params
 0x%016llX
 0xDEADBEEF
 1 - Allow player to slide for a bit after taunting
@@ -4933,7 +4380,6 @@ $var3
 1842
 1843
 1844
-18446744073709551615
 1845
 1846
 1847
@@ -5312,37 +4758,10 @@ $var3
 19IVoiceGameMgrHelper
 1C97BEFC54BD7A8B65ACF89F81D4D4ADC565FA45
 1E589A8595423412134FAA2DBDEC95C8D8675E58
-1ZGU
-1\n,k_EGCMsgGetGamePersonalDataCategoriesRequest
-1\n,k_EMsgGCItemPurgatory_RefundPurchaseResponse
-1\n,k_EMsgGCParty_ClearOtherPartyRequestResponse
-1\n,k_EMsgGCParty_RemoveFromStandbyQueueResponse
-1\n,k_EMsgGCQuestObjective_RequestLoanerResponse
-1\n,k_EMsgGCStorePurchaseInitResponse_DEPRECATED
-1\n,k_EMsgGCTrading_InitiateTradeRequestResponse
-1\n,k_EMsgGC_ClientVerificationChallengeResponse
-1\n-kServerModificationItemResponse_InternalError
-1\n-k_ItemPurgatoryResponse_Finalize_BackpackFull
-1\n\fItemPosition
-1\n\nscattergun
 1d>N>
-2 .CMsgGCRoutingInfo.RoutingMethod:
-2!.CMsgGCMsgSetOptions.GCSQLVersion
-2!.CTFLobbyPlayerProto.ConnectState
-2"=\n(CMsgGCMsgWebAPIJobRequestForwardResponse
-2"A\n+CMsgGCMsgMasterSetClientMsgRouting_Response
-2#.CMsgGCDataCenterPing_Update.Status:
-2#.google.protobuf.FieldOptions.CType:
-2$.CMsgGCNotification.NotificationType:
-2$.CMsgQuestObjectiveDef.ETF2GameModesBc
-2%.CMsgQuestObjectiveDef.ETF2ConditionsB
-2&.CMsgGameServerMatchmakingStatus.Event:
 2) Blue : %i
 2) Green: %i
 2) Red  : %i
-2).google.protobuf.FileOptions.OptimizeMode:
-2*.google.protobuf.FieldDescriptorProto.Type
-2+.google.protobuf.FieldDescriptorProto.Label
 2.5f
 2000
 200000
@@ -5529,7 +4948,6 @@ $var3
 20TFPendingPartyMember
 20localplayerscoring_t
 20vehicle_crashsound_t
-21.CMsgGC_GameServer_CreateIdentityResponse.EStatus"v\n
 2160
 21CAI_AllySpeechManager
 21CAI_ProxyMovementSink
@@ -5685,7 +5103,6 @@ $var3
 22ITFFlameEntityAutoList
 22NextBotCombatCharacter
 22ReliableMsgMatchResult
-23.CMsgGameServerMatchmakingStatus.PlayerConnectState">\n
 2300.0
 23CAI_LeadBehaviorHandler
 23CAI_MoveAndShootOverlay
@@ -6149,29 +5566,6 @@ $var3
 29NextBotTraversableTraceFilter
 2Fort
 2Fort Invasion
-2Q.CMsgGC_Client_UseServerModificationItem_Response.EServerModificationItemResponse"
-2[.CMsgGC_GameServer_UseServerModificationItem_Response.EServerModificationItemServerResponse"
-2\n*matchmaking_casual_low_priority_expiration
-2\n*matchmaking_ranked_low_priority_expiration
-2\n-k_EGCMsgGetGamePersonalDataCategoriesResponse
-2\n-k_EMsgGCFulfillDynamicRecipeComponentResponse
-2\n-k_EMsgGCRequestStoreSalesDataUpToDateResponse
-2\n-k_EMsgGC_Client2GCEconPreviewDataBlockRequest
-2\n-k_EMsgGC_DailyCompetitiveStatsRollup_Response
-2\n-k_EMsgGC_GameServer_UseServerModificationItem
-2\n-k_EMsgGC_IncrementKillCountAttribute_Multiple
-2\n.kServerModificationItemServerResponse_Accepted
-2\n.k_ItemPurgatoryResponse_Refund_Failed_NoDetail
-2\n\nline_items
-2\n\vdemo_cannon
-2\n\vgatling_gun
-2\n\vriding_crop
-2\n\vscorch_shot
-2\n\vsniperrifle
-2\n\vsoda_popper
-2\r.EQuestPoints
-2\v.TF_GC_TEAM
-2\v.TF_GC_TEAM:
 2koth_abbey
 3%s set to unnamed schedule!\n
 30.0f
@@ -6260,7 +5654,6 @@ $var3
 31IProtoBufScriptObjectDefinition
 31ITFPerPlayerMatchCriteriaReader
 31ReliableMsgProcessMatchVoteKick
-32:B\n
 32CDirtySpatialPartitionEntityList
 32CEconTool_StrangePartRestriction
 32CEconTool_TFEventEnableHalloween
@@ -6294,7 +5687,6 @@ $var3
 3300
 333333
 33333?
-333?
 333?333?
 33750
 33CAttribute_DynamicRecipeComponent
@@ -6409,7 +5801,6 @@ $var3
 37CWorkshop_GetSpecialPayments_Response
 37CWorkshop_SetItemPaymentRules_Request
 37INextBotComponentScriptInstanceHelper
-384B
 38CEventPlaceholderMatchGroupDescription
 38CGCQuestObjective_PointsChangeResponse
 38CGCSystemMsg_GetPurchaseTrust_Response
@@ -6439,15 +5830,6 @@ $var3
 3DF91610A83441CAEA9863BC2DED5D5AA8253AA10A2EF1C98B9AC8B57F1117A72BF2C7B9E7C1AC4D77FC94CADC083E67984050B75EBAE5DD2809BD638016F723
 3EE30B568FBAB0F883CCEBD46D3F3BB8A2A73513F5EB79DA66190EB085FFA9F492F375A97D860EB4
 3FFFFFFF7FFFFFFFBE0024720613B5A3
-3\n.k_EMsgGCItemPurgatory_FinalizePurchaseResponse
-3\n.k_EMsgGC_Client2GCEconPreviewDataBlockResponse
-3\n.k_EMsgGC_IncrementKillCountResponse_DEPRECATED
-3\n/k_ItemPurgatoryResponse_Refund_Failed_NoSOCache
-3\n\fflamethrower
-3\n\fholymackerel
-3\n\frussian_riot
-3\n\ftele_shotgun
-3\n\nobjectives
 4.5f
 40 5 0
 40CMsgGCMsgMasterSetClientMsgRouting_Entry
@@ -6511,20 +5893,8 @@ $var3
 4CSun
 4D20CTFPlayerClassShared
 4Path
-4\n/k_EGCMsgTerminateGamePersonalDataEntriesRequest
-4\n/k_EMsgGC_Halloween_GrantItemResponse_DEPRECATED
-4\n/k_EMsgGC_IncrementKillCountAttribute_DEPRECATED
-4\n/k_EMsgGC_PickupItemEligibility_Query_DEPRECATED
-4\n0kServerModificationItemServerResponse_VoteFailed
-4\n\fSingleObject
-4\n\ratom_launcher
-4\n\rbazaar_sniper
-4\n\rpaintkit_tool
-4\n\rwinger_pistol
-4\n\vPersonaName
 4fff>fff>fff>fff>
 4player_destroyed_pipebomb
-4vC`c
 5000
 500000
 51CCommunity_TerminateGamePersonalDataEntries_Request
@@ -6549,13 +5919,6 @@ $var3
 5EEEFCA380D02919DC2C6558BB6D8A5D
 5IBody
 5ISave
-5\n-matchmaking_casual_low_priority_last_duration
-5\n-matchmaking_ranked_low_priority_last_duration
-5\n0k_EGCMsgTerminateGamePersonalDataEntriesResponse
-5\n1k_ItemPurgatoryResponse_Finalize_Failed_NoSOCache
-5\n1k_ItemPurgatoryResponse_Refund_Failed_NexonWebAPI
-5\n\fgrant_reason
-5\n\vnested_type
 5m_iCurrentTube
 6#TF_Gas
 60.0
@@ -6594,16 +5957,6 @@ $var3
 6CTesla
 6CWorld
 6ConVar
-6\n1k_EMsgGCMVMARG_HighFiveSuccessResponse_DEPRECATED
-6\n1k_EMsgGC_GameServer_ServerModificationItemExpired
-6\n1k_EMsgGC_Halloween_Cheat_QueryResponse_DEPRECATED
-6\n1k_EMsgGC_PickupItemEligibility_Query_DEPRECATED_2
-6\n2kServerModificationItemResponse_EventAlreadyActive
-6\n2kServerModificationItemServerResponse_NoVoteCalled
-6\n2k_ItemPurgatoryResponse_Finalize_Failed_Incomplete
-6\n\fextra_fields
-6\n\fmessage_type
-6\n\vgive_sounds
 6v6 Casual Match
 6v6 Ladder Match
 7.2f
@@ -6635,8 +5988,6 @@ $var3
 7INotify
 7IScorer
 7IVision
-7\n2k_EMsgGC_Client_UseServerModificationItem_Response
-7\n\tenum_type
 800.0f
 8000
 8000000000000000000000000000069D5BB915BCD46EFB1AD5F173ABDF
@@ -6689,11 +6040,6 @@ $var3
 8INextBot
 8IRestore
 8IVehicle
-8\n3k_EMsgGCMeetThePyroSilliness_BananaCraft_DEPRECATED
-8\n3k_EMsgGC_Halloween_Cheat_QueryResponse_DEPRECATED_2
-8\n\rconnect_state
-8\n\rgcsql_version
-8\n\textension
 90.0
 900.0f
 999999
@@ -6763,13 +6109,9 @@ $var3
 9IHasOwner
 9IPathCost
 9IRegistry
-9JLX
 9TAutoListI17CFuncPasstimeGoalE
 9TAutoListI23CPasstimeBallControllerE
 9Weapon_DragonsFury.PressureBuildStop
-9\n\noneof_decl
-9\n\tCMsgField
-9a&g
 9event %s "%s"\n
 9gPV
 9v9 Casual Match
@@ -6797,14 +6139,7 @@ $var3
 : this object doesn't support resynchronization
 : this object requires an IV
 : unexpected channel name "
-:9\n\tkey_field
-:\n6k_ItemPurgatoryResponse_Refund_Failed_CouldNotFindItem
-:\n\fis_war_match
-:\n\nCMsgUpdate
 :bot_npc_decoy
-;\n6k_EMsgGC_GameServer_UseServerModificationItem_Response
-;\n\fclasses_vars
-;\n\vcombine_add
 ;effects/stun
 ;models/brokenglass_piece.mdl
 <!-- DMXVersion
@@ -6818,12 +6153,6 @@ $var3
 <CPasstimeBallSpawn
 <NULL>
 <UNKNOWN STATE>
-<\n8ServerMatchmakingState_ACTIVE_MATCH_REQUESTING_LATE_JOIN
-<\n8kServerModificationItemResponse_NotOnAuthenticatedServer
-<\n8k_ItemPurgatoryResponse_Refund_Failed_ItemNotInPurgatory
-<\n\fcombine_lerp
-<\n\ncategories
-<\n\vmatch_group
 <bot id> <command string...>.  Sends specified command on behalf of specified bot
 <img src="
 <logical entity>
@@ -6839,27 +6168,20 @@ $var3
 =CTFPointManager
 =G@V\Jclears debug overlays
 =NextBot/NextBotInterface.cpp
-=\n5matchmaking_last_comp_excessive_reports_auto_ban_time
-=\n9k_ItemPurgatoryResponse_Finalize_Failed_CouldNotFindItems
-=\n\rapply_sticker
 =a\v6C
-=fff>
 =nb_player_stop
 =sequence number %d too high in sheet file!!!\n
 >%f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f
 >8SendProp
->@ffffff
 >CAI_SentenceBase
 >CBaseFire
 >CPhysicsHook
 >General.StopBurning
->\n\nsale_price
 >handle_test
 >pda_panel_spy_invis_pocket
 ?&UjC
 ?333333
 ?33s?
-?456789:;<=
 ?<unconnected>
 ???AI_Response bogus index
 ???\f???????\n???\r?\t?\v
@@ -6885,8 +6207,6 @@ $var3
 ?WeaponGrapplingHook.Shoot
 ?Weapon_Slap.OpenHand
 ?[%8.3f] hitch on %s:%s:%d:%d\n
-?\n7matchmaking_last_casual_excessive_reports_auto_ban_time
-?\n;k_ItemPurgatoryResponse_Finalize_Failed_ItemsNotInPurgatory
 ?body_pitch
 ?ff&?ff&?ff&?
 ?fffff
@@ -6901,14 +6221,10 @@ $var3
 @@mvm_wave_complete
 @CGameRules
 @Fear
-@NEFl
 @NavEntMoveTo
 @OCBaseEntityList::AddNonNetworkableEntity: no free slots!\n
 @Scorch
 @TacticalMonitor
-@\n instance_def_type_quest_map_node
-@\n\vping_status
-@\n\vside_scores
 @m_SoundName
 @models/buildables/dispenser_lvl2.mdl
 @models/buildables/sentry1_blueprint.mdl
@@ -8995,15 +8311,12 @@ AUTO_JUMP
 AVOID 
 AVelocity: %.2f %.2f %.2f
 AWARDED
-A\n\ndefinition
-A\n\rname_loctoken
 Abbey
 AbsTagType(unknown)
 Accel (time*time)
 Accel/Deaccel (cosine)
 Accepting quest %llu with defindex %d.\n
 Access of EHANDLE/CHandle for class %s:%p in destructor!\n
-Account
 Account class index must be greater than 'last_valid_class'
 AccountIDAssister
 AccountIDKiller
@@ -9020,7 +8333,6 @@ Achievement.Earned
 AchievementEarned
 AchievementEvent
 AchievementSaveThread
-Achievement_Blocks
 Achievements disabled, ignoring achievement component for %s\n
 Achievements disabled, ignoring achievement progress for %s\n
 Achievements disabled, ignoring achievement unlock for %s\n
@@ -9028,7 +8340,6 @@ Achievements disabled, ignoring achievement update for %s\n
 Achievements disabled: Steam not running.\n
 Achievements disabled: cheats turned on in this app session.\n
 Achievements disabled: in commentary mode.\n
-AcknowledgePlayers
 Acknowledging friendly human attention
 Act Accuracy: %.1f
 Act Busy
@@ -9039,7 +8350,6 @@ Activated Operation Tough Break Pass
 Activated Summer 2015 Operation Pass
 Activates / deactivates Lobby-based hosting mode.\n   0 = not active\n   1 = Put in matchmaking pool (Lobby will control current map)\n
 Active: %s
-Activity
 Activity %s
 Activity: %s  -  Ideal Activity: %s\n
 Actv: %s (%s) [%s]\n
@@ -9137,7 +8447,6 @@ AirChargeOnly
 AirCtrlSupressionTime
 Airblast Aim
 Airblast vertical push multiplier from attributes/vulnerabilities ( %f -> %f )
-Ais commodity
 AlgorithmParametersBase: parameter "
 All achievements reset.\n
 All incoming damage to a blue player is multiplied by this value
@@ -9450,7 +8759,6 @@ AssisterHealth
 AssisterLocationX
 AssisterLocationY
 AssisterLocationZ
-Associated Operation
 Asteroid
 Async write of downloaded file %s failed\n
 At destination
@@ -9496,6 +8804,7 @@ Attribute definition %s: Missing required field "name"
 Attribute definition %s: Unable to find attribute data type '%s'
 Attribute definition %s: set as set bonus attribute but does not support gameplay modification/networking!
 Attribute definition index %d must be greater than or equal to zero
+Attribute definition index %d must be less than %d
 Attribute index %i not found when specifying dynamic recipe
 AuditData
 AuthenticAMD
@@ -9557,8 +8866,6 @@ BPostDefinitionsLoaded
 BRouteWorkItemCompleted called for a job that could not be found!\n
 BSP Decal
 BYieldingRunGCJob
-B\n\nicon_image
-B\v\n\toperation"5\n
 BackUp() can only be called after a successful Next().
 BackgroundBModel
 Backing off
@@ -9651,6 +8958,7 @@ BeginScriptDebug
 Behavior duration elapsed
 BehaviorModifiers
 Behind
+Behv: %s, 
 Benchmark CRC       : %d\n
 Benchmark: %d%% complete.\n
 BestEnemy() {\n
@@ -9724,7 +9032,6 @@ Bogus route move type!
 Bogus teleport notification!!\n
 BoltWidth
 Bombinomicon.Explode
-Bonus Required
 BonusDuckBlinkThink
 BonusDucks
 Boo!
@@ -9933,10 +9240,6 @@ CAI_StandoffGoal
 CAI_SystemHook
 CAI_TacticalServices
 CAI_TrackPather
-CASH_REWARD_LARGE
-CASH_REWARD_MEDIUM
-CASH_REWARD_NONE
-CASH_REWARD_SMALL
 CAchievementMgr
 CAchievementMgr::FireGameEvent
 CAchievementMgr::SaveGlobalState
@@ -9955,9 +9258,6 @@ CAttributeManager::ApplyAttributeFloat
 CAttributeManager::ApplyAttributeFloatWrapper
 CAttributeManager::ApplyAttributeString
 CAttributeManager::AttribHookValue
-CAttribute_ItemSlotCriteria
-CAttribute_String
-CAttribute_WorldItemPlacement
 CBC/CTS
 CBC_Encryption: message is too short for ciphertext stealing
 CBaseAchievement
@@ -10172,7 +9472,6 @@ CEconGameAccountForGameServers
 CEconItem
 CEconItem::DeserializeFromProtoBufItem()
 CEconItem::SerializeToProtoBufItem()
-CEconItemPreviewDataBlock
 CEconItemSchema
 CEconItemSchema::DumpItems: couldn't open file "%s" in path "%s".\n
 CEconItemView
@@ -10305,26 +9604,7 @@ CGCCoaching_RemoveCurrentCoach
 CGCCompetitiveDailyStatsRollupJob
 CGCDev_NewItemRequestResponse
 CGCKickPlayerFromLobbyJob
-CGCMsgGC_War_IndividualUpdate
-CGCMsgGC_War_JoinWar
-CGCMsgGC_War_RequestGlobalStats
-CGCMsgGetIPLocation
-CGCMsgGetIPLocationResponse
-CGCMsgGetSystemStats"
-CGCMsgGetSystemStatsResponse
-CGCMsgMemCachedDelete
-CGCMsgMemCachedGet
-CGCMsgMemCachedGetResponse
-CGCMsgMemCachedSet
-CGCMsgMemCachedStats"
-CGCMsgMemCachedStatsResponse
-CGCMsgSQLStats
-CGCMsgSQLStatsResponse
-CGCMsgSystemStatsSchema
-CGCMsgTFHelloResponse
-CGCMsgTFSyncEx
 CGCQuestObjective_PointsChangeResponse
-CGCReplicateConVars
 CGCSOCacheSubscribedJob
 CGCSOCacheSubscriptionCheck
 CGCSOCacheUnsubscribedJob
@@ -10332,15 +9612,8 @@ CGCSOCreateJob
 CGCSODestroyJob
 CGCSOUpdateJob
 CGCSOUpdateMultipleJob
-CGCStorePurchaseInit_LineItem
-CGCSystemMsg_GetAccountDetails
 CGCTFItemAcknowledged
 CGCTFQuickplay_PlayerJoining
-CGCToGCMsgMasterAck
-CGCToGCMsgMasterAck_Response
-CGCToGCMsgMasterStartupComplete
-CGCToGCMsgRouted
-CGCToGCMsgRoutedReply
 CGCUpdateConVar
 CGCUpdateItemSchema
 CGCUpdateServerModificationItemStateJob
@@ -10445,7 +9718,6 @@ CHalloweenSoulPack
 CHandleTest
 CHeadlessHatman
 CHightower_TeleportVortex
-CIPLocationInfo
 CInfoCameraLink
 CInfoLadderDismount
 CInfoLightingRelative
@@ -10455,7 +9727,8 @@ CInstancedSceneEntity
 CIntroViewpoint
 CItem
 CItemSoda
-CJob::BYieldingWaitForMsg expected msg %u but received %u
+CJob::BYieldingWaitForMsg job %s expected protobuf msg %u but received invalid msg %u\n
+CJob::BYieldingWaitForMsg job %s expected struct msg %u but received invalid msg %u\n
 CJob::DoAbort
 CJobMgr -- Dispatch completed work items
 CJobMgr::BResumeSleepingJobs
@@ -10468,7 +9741,6 @@ CJobThreadFuncWorkItem::DispatchCompleted
 CJobThreadFuncWorkItem::ThreadProcess
 CKeepUpright
 CKothLogic
-CLIENT_STEAMID
 CLIFF 
 CLagCompensationManager
 CLaserDot
@@ -10513,249 +9785,6 @@ CMomentaryRotButton
 CMonsterResource
 CMotorController
 CMovementSpeedMod
-CMsgAMAddFreeLicense
-CMsgAMAddFreeLicenseResponse
-CMsgAMFindAccounts
-CMsgAMFindAccountsResponse
-CMsgAMGetLicenses
-CMsgAMGetLicensesResponse
-CMsgAMGetUserGameStats
-CMsgAMGetUserGameStatsResponse
-CMsgAMGrantGuestPasses2
-CMsgAMGrantGuestPasses2Response
-CMsgAMSendEmail
-CMsgAMSendEmailResponse
-CMsgAcceptLobbyInvite
-CMsgAcceptLobbyInviteReply"#\n!CMsgMatchmakingSearchCountRequest"H\n"CMsgMatchmakingSearchCountResponse
-CMsgAcknowledgeXP
-CMsgAdjustItemEquippedState
-CMsgApplyAutograph
-CMsgApplyStrangeCountTransfer
-CMsgApplyStrangePart
-CMsgApplyStrangeRestriction
-CMsgApplyToolToBaseItem
-CMsgApplyToolToItem
-CMsgApplyUpgradeCard
-CMsgClientGoodbye
-CMsgClientHello
-CMsgClientWelcome
-CMsgConVarValue
-CMsgConnectionStatus
-CMsgConsumableExhausted
-CMsgConsumePaintkit
-CMsgCraftCollectionUpgrade
-CMsgCraftCommonStatClock
-CMsgCraftHalloweenOffering
-CMsgCraftingResponse
-CMsgDeliverGiftResponseGiver
-CMsgDevDebugRollLootRequest
-CMsgDevNewItemRequest
-CMsgExitMatchmaking
-CMsgGCBannedWordListRequest
-CMsgGCCheckClanMembership
-CMsgGCCheckFriendship
-CMsgGCCheckFriendship_Response
-CMsgGCClientDisplayNotification
-CMsgGCClientMarketData
-CMsgGCClientMarketDataEntry
-CMsgGCClientMarketDataRequest
-CMsgGCClientPing*T\n
-CMsgGCCollectItem
-CMsgGCDataCenterPing_Update
-CMsgGCDataCenterPopulation
-CMsgGCGetCommandList
-CMsgGCGetCommandListResponse
-CMsgGCGetEmailTemplate
-CMsgGCGetEmailTemplateResponse
-CMsgGCGetPartnerAccountLink
-CMsgGCGetPersonaNames
-CMsgGCGetPersonaNames_Response
-CMsgGCGiftedItems
-CMsgGCHAccountLockStatusChange
-CMsgGCHAccountPhoneNumberChange
-CMsgGCHAccountTwoFactorChange
-CMsgGCHAccountVacStatusChange
-CMsgGCHUpdateSession
-CMsgGCHVacVerificationChange
-CMsgGCMatchHistoryLoad
-CMsgGCMatchMakerStatsResponse
-CMsgGCMsgMasterSetDirectory
-CMsgGCMsgMasterSetWebAPIRouting
-CMsgGCMsgSetOptions
-CMsgGCMultiplexMessage
-CMsgGCNameItemNotification
-CMsgGCNewMatchForLobbyRequest
-CMsgGCNewMatchForLobbyResponse
-CMsgGCNotification
-CMsgGCNotificationQueue
-CMsgGCQuestComplete_Debug
-CMsgGCQuestComplete_Request
-CMsgGCQuestCompleted";\n'CMsgGCQuestObjective_RequestLoanerItems
-CMsgGCQuestDevGive
-CMsgGCQuestDiscard_Request
-CMsgGCQuestIdentify
-CMsgGCQuestMapPurchaseReward
-CMsgGCQuestMapUnlockNode
-CMsgGCQuestMap_Debug
-CMsgGCQuestNodeTurnIn
-CMsgGCQuestObjective_Progress
-CMsgGCQuestResponse
-CMsgGCRemoveStrangePart
-CMsgGCRemoveUpgradeCard
-CMsgGCReportAbuse
-CMsgGCReportAbuseResponse
-CMsgGCRequestMatchMakerStats"@\n
-CMsgGCRequestStoreSalesData
-CMsgGCRequestSubGCSessionInfo
-CMsgGCResetStrangeScores
-CMsgGCRoutingInfo
-CMsgGCShowItemsPickedUp
-CMsgGCShuffleCrateContents
-CMsgGCStorePurchaseCancel
-CMsgGCStorePurchaseFinalize
-CMsgGCStorePurchaseInit
-CMsgGCStorePurchaseInitResponse
-CMsgGCSurveyRequest
-CMsgGCSurveyResponse
-CMsgGCTFSpecificItemBroadcast
-CMsgGCToGCGetUserServerMembers
-CMsgGCToGCGetUserSessionServer
-CMsgGCToGCPingRequest"
-CMsgGCToGCPingResponse"4\n
-CMsgGCToGCSOCacheSubscribe
-CMsgGCToGCSOCacheUnsubscribe
-CMsgGCToGCSendNotification
-CMsgGCToGCThankedByNewUser
-CMsgGCUpdateSubGCSessionInfo
-CMsgGC_GameServer_AckPolicy"F\n#CMsgGC_GameServer_AckPolicyResponse
-CMsgGC_GameServer_AuthChallenge
-CMsgGC_GameServer_AuthResult
-CMsgGC_GameServer_LevelInfo
-CMsgGC_GameServer_List
-CMsgGC_GameServer_ListResponse
-CMsgGC_GameServer_ResetIdentity
-CMsgGC_Halloween_GrantItem
-CMsgGC_Halloween_ItemClaimed"M\n"CMsgGC_PickupItemEligibility_Query
-CMsgGC_Halloween_ReservedItem
-CMsgGC_KickPlayerFromLobby
-CMsgGC_Match_Result
-CMsgGC_Match_ResultResponse";\n
-CMsgGC_ReportPlayer
-CMsgGC_TFVoteKickPlayerRequest
-CMsgGameServerKickingLobby
-CMsgGameServerMatchmakingStatus
-CMsgHalloween_Merasmus2012
-CMsgHalloween_ServerBossEvent
-CMsgHaveVersions
-CMsgHeaderOnly
-CMsgHttpRequest
-CMsgHttpResponse
-CMsgIncrementKillCountAttribute
-CMsgItemAcknowledged
-CMsgKickedFromMatchmakingQueue"
-CMsgLANServerAvailable
-CMsgLookupMultipleAccountNames
-CMsgMatchmakingProgress
-CMsgMvMMannUpVictoryReply"@\n
-CMsgMvMVictory
-CMsgMvMVictoryInfo
-CMsgNotificationAcknowledge
-CMsgNotifyWatchdog
-CMsgPackageLicense
-CMsgPainkitDevGrant
-CMsgPaintKit_Definition
-CMsgPaintKit_ItemDefinition
-CMsgPaintKit_Operation
-CMsgPaintKit_OperationNode
-CMsgPaintKit_OperationStage
-CMsgPaintKit_Operation_Sticker
-CMsgPaintKit_Variables
-CMsgPartyChatMsg
-CMsgPartyClearOtherPartyRequest
-CMsgPartyClearPendingPlayer
-CMsgPartyInvitePlayer
-CMsgPartyKickMember
-CMsgPartyMMError
-CMsgPartyPromoteToLeader
-CMsgPartyQueueForMatch
-CMsgPartyQueueForMatchResponse"D\n
-CMsgPartyQueueForStandby
-CMsgPartyRemoveFromQueue
-CMsgPartyRemoveFromStandbyQueue
-CMsgPartyRequestJoinPlayer
-CMsgPartySendChat
-CMsgPartySetOptions
-CMsgPartySetOptionsResponse"x\n
-CMsgPlayerLeftMatch
-CMsgPlayerLeftMatchResponse"
-CMsgProcessMatchVoteKick
-CMsgProtoBufHeader
-CMsgProtoDefHeader
-CMsgProtoDefID
-CMsgQuestMapNodeCondition
-CMsgQuestMapNodeCondition_Logic
-CMsgQuestMapNodeDef
-CMsgQuestMapRegionDef
-CMsgQuestMapStarType
-CMsgQuestMapStoreItem
-CMsgQuestObjectiveDef
-CMsgQuestProgressReport
-CMsgQuestTheme
-CMsgRecipeComponent
-CMsgReplaySubmitContestEntry
-CMsgReplayUploadedToYouTube
-CMsgReplicateConVars
-CMsgRequestInventoryRefresh".\n
-CMsgSOCacheHaveVersion
-CMsgSOCacheSubscribed
-CMsgSOCacheSubscribedUpToDate
-CMsgSOCacheSubscriptionCheck
-CMsgSOCacheSubscriptionRefresh
-CMsgSOCacheUnsubscribed
-CMsgSOCacheVersion
-CMsgSOMultipleObjects
-CMsgSOSingleObject
-CMsgSaxxyAwarded
-CMsgSelectPresetForClass
-CMsgServerAvailable"*\n
-CMsgServerGoodbye
-CMsgServerHello
-CMsgServerWelcome
-CMsgSetHatEffectUseHeadOrigin
-CMsgSetItemEffectVerticalOffset
-CMsgSetItemPositions
-CMsgSetItemSlotAttribute
-CMsgSetPresetItemPosition
-CMsgStoreGetUserData
-CMsgStoreGetUserDataResponse
-CMsgSystemBroadcast
-CMsgTFClientInit
-CMsgTFCoaching_AddToCoaches""\n CMsgTFCoaching_RemoveFromCoaches">\n
-CMsgTFCoaching_AskCoach
-CMsgTFCoaching_AskCoachResponse
-CMsgTFCoaching_CoachJoinGame
-CMsgTFCoaching_CoachJoined
-CMsgTFCoaching_CoachJoining
-CMsgTFCoaching_FindCoach
-CMsgTFCoaching_LikeCurrentCoach
-CMsgTFGoldenWrenchBroadcast
-CMsgTFQuickplay_PlayerJoining
-CMsgTFQuickplay_ScoreServers
-CMsgTFRequestTF2Friends
-CMsgTFRequestTF2FriendsResponse
-CMsgTFSaxxyBroadcast
-CMsgTFThankedBySomeone
-CMsgTFThankedSomeone"#\n!CMsgTFFreeTrialConvertedToPremium":\n
-CMsgTFWorldStatus
-CMsgTFXPSource
-CMsgTFXPSourceBreakdown
-CMsgTrackUniquePlayerPairEvent
-CMsgUniversalFieldID
-CMsgUpdateItemSchema
-CMsgUpdatePeriodicEvent
-CMsgValidTypes
-CMsgVariableDefinition
-CMsgWebAPIRequest
 CMultiDamage
 CMultiPlayerAnimState::Update
 CMultiSource
@@ -10944,7 +9973,6 @@ CONTENTS_UNUSED
 CONTENTS_UNUSED6
 CONTENTS_WATER
 CONTENTS_WINDOW
-CORD
 CObjectCartDispenser
 CObjectDispenser
 CObjectSapper
@@ -11054,7 +10082,6 @@ CPopulationManager
 CPoseController
 CPrecacheOtherList
 CPrecipitation
-CPrefabFieldEditingPanel
 CProjectedDecal
 CPropData
 CPropDoorRotating
@@ -11087,7 +10114,6 @@ CRallyPoint
 CRandSimTimer
 CRandStopwatch
 CRegenerateZone
-CReplayCachedContestData
 CResponseSystem:  %s (%i rules, %i criteria, and %i responses)\n
 CResponseSystem:  failed to load %s\n
 CResponseSystem::LoadFromBuffer:  Unknown entry type '%s', expecting 'response', 'criterion', 'enumeration' or 'rules' in file %s(offset:%i)\n
@@ -11101,27 +10127,7 @@ CRotorWashShooter
 CRuleEntity
 CRulePointEntity
 CS Port: Hostage Escape
-CSOClassPresetClientData
-CSOEconClaimCode
-CSOEconGameAccountClient
-CSOEconItemAttribute
-CSOEconItemEquipped
-CSOEconItemPresetInstance
-CSOItemCriteria
-CSOItemCriteriaCondition
-CSOQuest
-CSOQuestMapNode
-CSOQuestMapRewardPurchase
-CSOTFDuelSummary
-CSOTFGameServerLobby
 CSOTFLadderData
-CSOTFLadderPlayerStats
-CSOTFMapContribution
-CSOTFMatchResultPlayerStats
-CSOTFPartyInvite
-CSOTFPartyMember
-CSOTFPlayerInfo
-CSOTFRatingData
 CSOTrackerManager
 CSave::WriteHeader() size parameter exceeds 'short'!\n
 CSaveRestoreBuffer::TokenHash() is COMPLETELY FULL!
@@ -11189,7 +10195,6 @@ CSteamJet
 CSteamWorksGameStatsUploader
 CStopwatch
 CStopwatchBase
-CStrangeCountAdjustment
 CStripWeapons
 CSun
 CTEArmorRicochet
@@ -11302,11 +10307,11 @@ CTFBreakableMelee
 CTFBreakableSign
 CTFBuffItem
 CTFCannon
-CTFCasualMatchCriteria
 CTFChargedSMG
 CTFCleaver
 CTFClub
 CTFCompoundBow
+CTFCraftingRecipeDefinition::ItemListMatchesInputs()
 CTFCrossbow
 CTFDRGPomson
 CTFDroppedWeapon
@@ -11333,7 +10338,6 @@ CTFGlow
 CTFGrapplingHook
 CTFGrenadeLauncher
 CTFGrenadePipebombProjectile
-CTFGroupMatchCriteriaProto
 CTFHalloweenFortuneTeller
 CTFHalloweenMinigame
 CTFHalloweenMinigame_FallingPlatforms
@@ -11349,8 +10353,6 @@ CTFJarMilk
 CTFKatana
 CTFKnife
 CTFLaserPointer
-CTFLobbyInviteProto
-CTFLobbyPlayerProto
 CTFLobbyShared: ID:%016llx  %d member(s), %d pending\n
 CTFLunchBox
 CTFLunchBox_Drink
@@ -11373,11 +10375,9 @@ CTFParachute_Primary
 CTFParachute_Secondary
 CTFParticleCannon
 CTFParty
-CTFPartyOptions
 CTFPasstimeLogic
 CTFPathFollower: OnMoveToSuccess\n
 CTFPathFollower::Update
-CTFPerPlayerMatchCriteriaProto
 CTFPipebombLauncher
 CTFPistol
 CTFPistol_Scout
@@ -11599,7 +10599,6 @@ CTriggerTimerDoor
 CTriggerToggleSave
 CTriggerVPhysicsMotion
 CTriggerWind
-CType
 CUSTOM1
 CUSTOM2
 CUSTOM3
@@ -11667,9 +10666,6 @@ CXXABI_1.3
 CXXABI_1.3.8
 CZombie
 CZombieSpawner
-C\n!instance_def_type_quest_objective
-C\n\rhave_versions
-C\n\tmenu_step
 Cache the group spawn tables
 Cachoeira
 Cactus Canyon
@@ -11874,7 +10870,6 @@ Clamp head turns to a max of 20 degrees per think.
 Clamping ApplyAbsVelocityImpulse(%f,%f,%f) on %s\n
 Clamping ApplyLocalVelocityImpulse(%f,%f,%f) on %s\n
 Clamping SetLocalVelocity(%f,%f,%f) on %s\n
-Class Modifier
 Class to use in training.
 Class: %s (%d)\n
 ClassLimits
@@ -11983,7 +10978,6 @@ Concrete.StepLeft
 Concrete.StepRight
 ConcreteChunks
 Cond: %s\n
-Condition Logic
 Cone %.1f, Bias %.2f
 Conga Taunt
 Conifer
@@ -12143,13 +11137,11 @@ CustomMinTimeShots
 CustomOddsCover
 Cutter
 Cycle: %.5f (%.5f)
-D$hJ
 D35E472036BC4FB7E13C785ED201E065F98FCFA5B68F12A32D482EC7EE8658E98691555B44C59311
 D35E472036BC4FB7E13C785ED201E065F98FCFA6F6F40DEF4F92B9EC7893EC28FCD412B1F1B32E27
 D6031998D1B3BBFEBF59CC9BBFF9AEE1
 D7C134AA264366862A18302575D0FB98D116BC4B6DDEBCA3A5A7939F
 D7C134AA264366862A18302575D1D787B09F075797DA89F57EC8C0FF
-D7q/;M
 D@Weapon_Sapper.Timer
 DAMAGE FILTER:%s
 DAMAGING 
@@ -12173,7 +11165,6 @@ DEF_TYPE_QUEST_OBJECTIVE
 DEF_TYPE_QUEST_THEME
 DISABLED
 DISABLE_DODGE
-DISCARD
 DIST_EPSILON
 DLOPEN Error:%s\n
 DL_ElgamalLikeSignatureAlgorithm: this signature scheme does not support message recovery
@@ -12624,8 +11615,6 @@ DUMMY AMMO
 DUPE: %s %d blocked area %d\n
 DUPE: non-entity blocked area %d\n
 DYNINT: (%s) testing interaction "%s"\n
-D\n"instance_def_type_quest_map_region
-D\n\toperation
 D_FR
 D_HT
 D_LI
@@ -12689,7 +11678,6 @@ Default.StepRight
 DefendPoint
 DefendPoint%d
 Defending the point
-Defindex
 Defines a corner of a new Area or Ladder. To complete the Area or Ladder, drag the opposite corner to the desired location and issue a 'nav_end_area' command.
 Defines the second corner of a new Area or Ladder and creates it.
 Defines the skill of bots joining the game.  Values are: 0=easy, 1=normal, 2=hard, 3=expert.
@@ -12727,8 +11715,6 @@ Demoman.Incoming0%i
 Dep2
 Descend
 Description
-DescriptorProto
-DescriptorProtosH
 Desired Origin for %s: %f %f\n
 Desired commentary mode state.
 DesiredCount
@@ -12960,7 +11946,6 @@ Dynamic Light
 Dynamic Link Error: (%s) unable to form between nodes %d and %d\n
 Dynamic prop %s: no sequence named:%s\n
 Dynamite
-E,>sB
 E2NcUkG2
 E87579C11079F43DD824993C2CEE5ED3
 E95E4A5F737059DC60DF5991D45029409E60FC09
@@ -13044,15 +12029,10 @@ EF_NOINTERP
 EF_NORECEIVESHADOW
 EF_NOSHADOW
 EF_PARENT_ANIMATES
-EGCBaseClientMsg
-EGCBaseProtoObjectTypes
-EGCMsgResponse
 EHitGroup
 EHoliday
 EHudNotify
 EIEffects001
-EItemPurgatoryResponse_Finalize
-EItemPurgatoryResponse_Refund
 EMPTY - ok for slot zero only!
 EMSA-PKCS1-v1_5
 EMoveCollide
@@ -13068,7 +12048,6 @@ ENavCornerType
 ENavDirType
 ENavRelativeDirType
 ENavTraverseType
-ENodeCashReward
 EOTLDuckEvent
 ERAD
 ERROR
@@ -13149,35 +12128,23 @@ ERROR: Weapon (%s) using undefined secondary ammo type (%s)\n
 ERROR: file contains a schedule (%s) that has already been defined!\n
 ERROR: path_track (%s) refers to itself as a target!\n
 ERRORS
-EReason
 ERenderFx
 ERenderMode
 ERoundState
-ESOMsg
 EScriptRecipientFilter
-EServerModificationItemResponse
-EServerModificationItemType
 ESolidType
 ESpectatorMode
 ESpyLurk
-EStatus
 EStopwatchState
 ETABLE
-ETF2Conditions
-ETF2Team
 ETFBotDifficultyType
 ETFClass
 ETFCond
 ETFDmgCustom
-ETFGCMsg
-ETFPartyChatType
-ETFSyncedMMMenuStep
 ETFTeam
-EType
 EVENTS
 EVENT_CREDITS with negative elapsed time (rt %f starttime %f)\n
 EVENT_LEVELSHUTDOWN:  with negative elapsed time (rt %f starttime %f)\n
-EValueDefinitionSource
 EXPERT
 Early escape the lost footing condition if the player is moving slower than this across the ground
 Ease In
@@ -13275,12 +12242,8 @@ EntityGroup <- [];\r\nfunction __AppendToScriptGroup( name ) \r\n{\r\n\tif ( nam
 EntityParticleTrailInfo_t
 EntityTemplate
 EntityYaw: %.2f, AimYaw: %.2f, AimPitch: %.2f, MoveX: %.2f, MoveY: %.2f
-Entry
 Enum type "
-EnumDescriptorProto
 EnumEntity
-EnumValueDescriptorProto
-EnumValueOptions
 Enums must contain at least one value.
 EnvMicrophone %s specifies a non-existent speaker name: %s\n
 Epsilon
@@ -13320,7 +12283,6 @@ EscortSquadLeader
 EstimateLength
 Eternaween
 Etf/bot/behavior/medic/tf_bot_medic_heal.cpp
-Event
 Event %s was missing tag %s for wav %s\n
 EventChangeAttributes
 EventID
@@ -13351,7 +12313,6 @@ Existing commit record for SObject is more up to date: %s\n
 Exit animation %s failed to cache target points properly!\n
 Expected "
 Expected %s found %s ( raw '%s' )! (prev: %s)\n
-Expected integerInteger out of rExpect a decimalExpected double.Expected identifExpected string.(-
 Expected result speed: %f
 Expecting ',', didn't find it!
 Expecting '[', didn't find it!
@@ -13402,12 +12363,10 @@ Extension numbers must be positive integers.
 Extension range $0 to $1 includes field "$2" ($3).
 Extension range $0 to $1 overlaps with already-defined range $2 to $3.
 Extension range end number must be greater than start number.
-ExtensionRange
 Extensions of MessageSets must be optional messages.
 Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
 ExtinguishPlayerBurning
 Eyeaduct
-F6\vDH
 FAILED to compile and execute script file named %s\n
 FALSE
 FATAL
@@ -13500,9 +12459,6 @@ FUsing legacy SetAngles.\nDo not use me! Move to SetAbsAngles or SetLocalAngles 
 FX_FireBullets: LookupWeaponInfoSlot failed for weapon %s\n
 FX_FireBullets: weapon alias for ID %i not found\n
 FX_RicochetSound.Ricochet
-F\n\floaner_names
-F\n\foptimize_for
-F\n\nQueueEntry
 Face point for bomb deploy
 FaceTowards
 Facing impending jump/climb
@@ -13559,7 +12515,6 @@ Failed to update item schema: HTTP status %d fetching %s\n
 Failed to update item schema: couldn't fetch %s\n
 Failed to write file to cloud\n
 Failed!
-FallbackToDCPing
 Falling back to item schema from local file.\n
 Farmageddon
 FastHexToBuffer() wants non-negative integers, not 
@@ -13582,7 +12537,6 @@ Field type name may have changed or inheritance graph changed, save file is susp
 Field with message or enum type missing type_name.
 Field with primitive type has type_name.
 Field: 
-FieldDescriptorProto
 FieldDescriptorProto.extendee not set for extension field.
 FieldDescriptorProto.extendee set for non-extension field.
 FieldDescriptorProto.oneof_index $0 is out of range for type "$1".
@@ -13594,8 +12548,6 @@ File already exists in database:
 File appears to be in generated pool but wasn't registered: 
 File is already registered: 
 File recursively imports itself:uninterpreted_opgoogle.protobuf.EnumValueOptionssyntax = "proto2Option must haveOption must not use reserved name "uninterpretedPLACEHOLDER_VALU
-FileDescriptorProto
-FileDescriptorSet
 FileID
 FileToString() file name cannot contain '..'\n
 Files that do not use optimize_for = LITE_RUNTIME cannot import files which do use this option.  This file is not lite, but it imports "
@@ -13623,6 +12575,8 @@ Find entities by name. Pass 'null' to start an iteration, or reference to a prev
 Find entities by targetname. Pass 'null' to start an iteration, or reference to a previously found entity to continue a search
 Find entities within a radius. Pass 'null' to start an iteration, or reference to a previously found entity to continue a search
 Find sound names which reference the specified wave files.
+FindAttribute
+FindAttributeUnsafe
 FindBackAwayNode() - %s has no nearest node!\n
 FindBodygroupByName
 FindByClassname
@@ -13804,7 +12758,6 @@ FuncTrackChange.Blocking
 FuncTrackTrain '%s' has no target.\n
 FuncTrain '%s' has no target.\n
 Further than
-G1A1F
 G@T\tJ
 GAMEEVENTSMANAGER002
 GAMEROOT
@@ -13813,25 +12766,7 @@ GC refreshed lobby for match ID [ %llu ]\n
 GC sent malformed CGCUpdateItemSchema message: No schema data, no URL\n
 GC told us to expect %08X, we got %08X\n
 GCC: (SteamRT 10.3.0-3+steamrt3.1+bsrt3.1) 10.3.0
-GCConnectionStatus
-GCConnectionStatus_HAVE_SESSION
-GCConnectionStatus_NO_SESSION
-GCConnectionStatus_NO_STEAM
-GCConnectionStatus_SUSPENDED
-GCGoodbyeReason
-GCGoodbyeReason_GC_GOING_DOWN
-GCGoodbyeReason_NO_SESSION
 GCHost
-GCInfo
-GCProtoBufMsgSrc
-GCProtoBufMsgSrc_FromGC
-GCProtoBufMsgSrc_FromSteamID
-GCProtoBufMsgSrc_FromSystem
-GCProtoBufMsgSrc_ReplySystem
-GCProtoBufMsgSrc_Unspecified
-GCQuestStrangeEvent
-GCSQL_VERSION_BASELINE
-GCSQL_VERSION_BOOLTYPE
 GENTLE MANNE of LEISURE
 GLIBCXX_3.4
 GLIBCXX_3.4.14
@@ -13878,11 +12813,7 @@ GR_STATE_STALEMATE
 GR_STATE_STARTGAME
 GR_STATE_TEAM_WIN
 GState: %s
-G\n$instance_def_type_paintkit_operation
-G\n$instance_def_type_paintkit_variables
-Ga=o
 Galleria
-Game Mode Modifier
 Game paused time showing up negative (rt %f pausestart %f)\n
 Game server authentication: FAILURE!\n
 Game server authentication: SUCCESS! Standing: %s. Trend: %s\n
@@ -13895,7 +12826,6 @@ Game.YourTeamLost
 Game.YourTeamWon
 GameMovement001
 GameRound
-GameServerIdentity
 GameServerKickingLobby
 GameStartFrame
 GameState
@@ -14290,6 +13220,7 @@ Gunzip: header decoding error
 Gunzip: length check error
 Gunzip: tail too short
 GutsAndGlory!
+H:%x
 H@XX0RZ
 HALLOWEEN: "%s<%i><%s><%s>" %s with "%s" (attacker_position "%d %d %d")\n
 HALLOWEEN: "%s<%i><%s><%s>" %s\n
@@ -14689,7 +13620,8 @@ I've finished my leave panic sequence
 I've finished my spawn sequence
 I've fully materialized
 I've picked up the flag! Running it in...
-I333
+IEconItemInterface::FindAttribute
+IEconItemInterface::FindAttribute_UnsafeBitwiseCast
 IEngineSoundServer003
 IEngineerBuildTeleportEntrance
 IGNORED due to being marked "Don't save".\n
@@ -14704,11 +13636,7 @@ INCOVER
 INDEX: (%d)
 INFO
 INTERESTING
-INVADERS_ARE_HEAVY
-INVADERS_ARE_PYRO
-INVALID
 INVALID_CPPTYPE
-INVALID_PLAYER
 IN_ALT1
 IN_ALT2
 IN_ATTACK
@@ -14761,8 +13689,6 @@ IVision::UpdateKnownEntities
 IVision::UpdateKnownEntities( collect visible )
 IVision::UpdateKnownEntities( new recognizes )
 IVision::UpdateKnownEntities( update status )
-I\n%instance_def_type_paintkit_definition
-I\n\nMMCriteria
 Icicle.HitWorld
 Icicle.Melt
 Icicle.TurnToIce
@@ -15581,7 +14507,6 @@ Invade.FlagReturned
 Invade.TeamCaptured
 Invade.TeamDropped
 Invade.TeamStolen
-Invalid
 Invalid %s condition. Missing 'event_name'
 Invalid %s restriction '%s' for quest objective
 Invalid 'get_player'
@@ -15653,7 +14578,6 @@ Invalid wire type for CPPTYPE_UINT64:
 InvertibleRSAFunction: input is not a valid RSA private key
 InvertibleRSAFunction: invalid public exponent
 InvertibleRSAFunction: specified modulus size is too small
-Invited
 Irocketbackblast
 Is climbing up to a high ledge
 Is in the middle of a complex action (climbing a ladder, climbing a ledge, jumping, etc) that shouldn't be interrupted
@@ -15778,7 +14702,6 @@ IsVictimZoomed
 IsViewingCYOAPDA
 IsZombieCostume
 It's Filthy in There!
-Item
 Item %s fell out of level at %f,%f,%f\n
 Item %s: Armory remap definition "%s" was not found
 Item %s: Store remap definition "%s" was not found
@@ -15820,8 +14743,6 @@ Item%d
 Item.Materialize
 ItemAttribNeutral
 ItemAttributes
-ItemData
-ItemDescriptionsLanguageBlock
 ItemName
 ItemPickup
 ItemRarityAncient
@@ -15838,7 +14759,6 @@ ItemsGameFile
 IteratedHashBase: input data exceeds maximum allowed by hash function 
 IvanTheSpaceBiker
 JDduelinitiatorclass:%s,dueltargetclass:%s
-J\n\rconnect_state
 Jar.Explode
 JarCollisionThink
 Job %s attempted to pause even though pauses were disabled\n
@@ -15863,7 +14783,6 @@ Kaboom!
 Kaching! Give the player some cash for game modes with upgrades, ie. MvM
 Keep capturing point I happened to stumble upon
 KeyHintText
-KeyPair
 KeySize
 KeyValues Error: %s in file %s\n
 KeyValues.cpp
@@ -15910,11 +14829,7 @@ Kong King
 Krampus
 L<15CTFTankBossBody
 L=10CTFBotBody
-L>333?
 L?1001
-LABEL_OPTIONAL
-LABEL_REPEATED
-LABEL_REQUIRED
 LARGE_CENTERED_HULL
 LARGE_HULL
 LAST_SHARED_COLLISION_GROUP
@@ -15949,7 +14864,6 @@ LOCOMOTION
 LOGDIR
 LOOK_AT
 LOS LOS LOS
-Label
 Ladder #%d (Team %s)\n
 Ladder #%d\n
 Ladder dismount
@@ -16006,7 +14920,6 @@ Lists all place names used in the map.
 Lists all simulating/thinking entities
 Lists all touchlinks
 Lists the item definitions that can be whitelisted in the item_whitelist.txt file in tournament mode.
-Lj\rC
 Load the next mission
 LoadFromBuffer: missing {
 LoadFromFile
@@ -16015,7 +14928,6 @@ Loading
 Loading AI graph\n
 Loading stats from '%s'\n
 Loads the Navigation Mesh for the current map.
-Loaners
 Lobby %016llx
 Lobby %016llx instanced on this server in state %s\n
 Lobby in invalid state %d\n
@@ -16023,17 +14935,12 @@ Lobby-based matchmaking is active\n
 Lobby-based matchmaking mode not active\n
 LocalActiveTFWeaponData
 LocalFlameThrowerData
-Location
 Location %f %f %f\n
 Locomotion::HasPotentialGap
 Locomotion::IsGap
 Locomotion::IsPotentiallyTraversable
 Log2Base
 Log2WindowSize
-Logic
-Logical Condition
-Logical operation
-LogicalOperation
 LogoTimeMsg
 Looking for someone to heal
 Looking toward enemy invasion areas
@@ -16074,26 +14981,16 @@ Lower threshold velocity: %.2f
 LowerMainWeapon
 Lowered %d areas\n
 Lowered '%s' -> '%s'\n
-LwH'
 MANN VS MACHINE: %3.2f: <<<< Spawning Mission >>>>\n
 MANN VS MACHINE: %3.2f: <<<< Spawning Sentry Busting Mission >>>>\n
 MANN VS MACHINE: %3.2f: Waiting for slots to spawn mission.\n
 MANNCO
-MANN_UP
-MATCH_FAILED_ABANDON
-MATCH_FAILED_GC
-MATCH_FAILED_TIMEOUT
-MATCH_FAILED_TRUSTED
-MATCH_FAILED_UNKNOWN
-MATCH_FINISHED_ABANDON
-MATCH_SUCCEEDED
 MAX_EDICTS
 MAX_PLAYERS
 MDLCache004
 MEDIUM_HULL
 MEDIUM_TALL_HULL
 MGF1
-MGiI
 MINIBOSS
 MOD_WRITE
 MOVECOLLIDE_COUNT
@@ -16195,8 +15092,6 @@ MVM_Respec
 MVM_Revive_Response
 MVM_Upgrade
 MVM_Weapon_Default.HitFlesh
-M\n\nconditions
-M\n\nsort_group
 M_MVM_
 Maggot
 Magnitude: %3.2f
@@ -16388,7 +15283,6 @@ MeleeAttack
 MeleeOnlySuddenDeath
 MemAllocScratch
 MemFreeScratch
-Member
 Memory leak: mempool blocks left in memory: %d\n
 Mentlegen
 Merasmus Behavior
@@ -16409,7 +15303,6 @@ Message extensions cannot have required fields.
 Message missing required fields: 
 Message of type "
 Message type "
-MessageOptions
 MessageSets cannot have fields, only extensions.
 Messages can't have default values!
 Messages can't have default values.
@@ -16423,7 +15316,6 @@ Metal: %d
 MetalChunks
 MetalToDropInGibs
 MeteorShowerThink
-MethodDescriptorProto
 Microphone %s set dsp_speaker to %d.\n
 MinAnimTime
 MinHitPointsToCommit
@@ -16511,6 +15403,7 @@ Move player to an exact specified origin (must have sv_cheats).
 Move player to specified origin (must have sv_cheats).
 Move requested with no route!\n
 Move the bot to the precise given position immediately, updating internal state
+Move: %s, 
 MoveCheckingThink
 MovePingSound
 MoveToMark
@@ -16541,7 +15434,6 @@ MultiWaitOver
 Multiplayer Player
 Multiple definitions for criteria '%s'\n
 Multiple extension registrations for type "
-MultipleGameInstances
 MultiplicativeInverseOfPrime2ModPrime1
 Multiplier for how much air control players have when Parachute is deployed
 Multiplier for how much air control players have when in Kart Mode
@@ -17341,7 +16233,6 @@ N8CryptoPP9PublicKeyE
 N8CryptoPP9TimerBaseE
 N9CTFPlayer19NetworkVar_m_SharedE
 N9CTFPlayer29NetworkVar_m_AttributeManagerE
-NAUU
 NAV IGNORE
 NAV failed to save, saved backup copy to '%s'\n
 NAV_MESH_AVOID
@@ -17374,17 +16265,9 @@ NDebugOverlay::ScreenTextLine
 NDebugOverlay::Text
 NO HOSTAGES 
 NO PATH
-NOPE
 NORTH_EAST
 NORTH_WEST
 NOT Eligible for selection
-NOTIFICATION_CUSTOM_STRING
-NOTIFICATION_NUM_TYPES
-NOTIFICATION_SUPPORT_MESSAGE
-NOTIFY_ACHIEVEMENTS
-NOTIFY_SERVER_SESSIONS
-NOTIFY_USER_SESSIONS
-NOTIFY_VAC_ACTION
 NO_JUMP 
 NPC %s failed to stop properly, slamming activity\n
 NPC %s stuck in wall--level design error at (%.2f %.2f %.2f)\n
@@ -17425,13 +16308,10 @@ NUM_OBSERVER_MODES
 NUM_RELATIVE_DIRECTIONS
 NUM_SCORE_TYPES
 NUM_TRAVERSE_TYPES
-Name
 Name of the .res file used to cycle mvm misisons
 Name of the .txt file used to cycle the maps on multiplayer servers 
 Name of the particle system to dynamically spawn
-Name to show in the editor
 Name:
-NamePart
 NameValuePairs: type mismatch for '
 Nav Selected Set
 Nav complete\n
@@ -17615,7 +16495,6 @@ Node %d has too many links\n
 Node %llu has defindex %d, which doesn't exist!\n
 Node Graph out of Date. Rebuilding... (%d, %d, %d)\n
 Node Graph out of Date. Rebuilding...\n
-Node State Condition
 Node already locked
 Node is locked.
 Node is visible to player.
@@ -17636,12 +16515,9 @@ Non-primitive types can't be packed.
 Non-repeated field "
 NonLocalTFWeaponData
 NonLocalTFWeaponMedigunData
-None
 None,\tTeleportToCatcher,\tSwapWithCatcher,\tTeleportToCatcherMaintainPossession,
 Nonzero if we were able to login OK
-Normal
 Normal 
-Normal"H\n
 North
 NorthEast
 NorthWest
@@ -17665,7 +16541,6 @@ Note: NPC class %s lacks ACT_COVER_LOW, therefore cannot participate in standoff
 Note: Strange link found between nodes in AI node graph\n
 NoteSpeaking( %f, %f ) (stop at %f)\n
 Noticed better victim
-NotificationType
 Nucleus VSH
 NullRNG: NullRNG should only be passed to functions that don't need to generate random bytes
 Num ticks simulated : %d\n
@@ -17689,7 +16564,6 @@ OBJ_ATTACHMENT_SAPPER
 OBJ_DISPENSER
 OBJ_SENTRYGUN
 OBJ_TELEPORTER
-OBSERVING_PLAYER
 OBSTACLE 
 OBSTRUCTED 
 OBS_MODE_CHASE
@@ -17708,13 +16582,10 @@ Object descriptions
 Object has an owner that's not engineer.
 Object is NODRAW
 Object is NULL
-Objective Vars
-ObjectiveInstance
 Obsolete / Unused
 Obstruction %f\n
 Octopus.StepCommon
 Odyssey
-Offered Quests
 Offsets the bot yaw.
 Old nav file for %s\n
 OldClass
@@ -17860,11 +16731,9 @@ OnWinningTeam
 One-Man Cheeseburger Apocalypse
 OneSecStatsUpdateThink
 Oneof must have at least one field.
-OneofDescriptorProto
 Only show closed captions if recipient is within this many units of speaking actor (0==disabled).
 Opaque
 OpenPGP decode error
-Operands
 Operation %s does not specify a lootlist or that it uses credits.
 OperationDefinition %s does not have '%s'
 OperationDefinition couldn't find item def from gateway name '%s'
@@ -17930,14 +16799,10 @@ P8?2
 P?%d queries, %d misses (%d free) suc spec = %d wasted spec=%d\n
 P@CParticlePerformanceMonitor
 PACTFObjectiveResource
-PARENT_DEFINES
 PARTICLE SYSTEM: Unable to load manifest file '%s'\n
-PARTNER_PERFECT_WORLD
 PASSABLE
 PASSTIME_BALL
 PATH_FAILED
-PENDING_INVITE
-PENDING_JOIN_REQUEST
 PEvent
 PITCH_HIGH
 PITCH_LOW
@@ -17986,7 +16851,6 @@ PRIMARY2
 PRIORITIZE_DEFENSE
 PROJECTILE_SHIELD
 PROP_CLEARFLAGS
-PROTOBUF_FIELD_UINT64
 PSap.Attached
 PSap.AttachedPW
 PSap.Damage
@@ -18015,7 +16879,6 @@ PSap.IdleKnife02
 PSap.IdleKnife03
 PSap.Sneak
 PSap.null
-P\n!matchgroup_data_center_population
 Pack item "%s" included in more than one pack bundle - not allowed!
 PaddingByte
 PaintKit Item [%d] is missing paintkit def index attr
@@ -18042,8 +16905,6 @@ ParticleTrailMaterial
 ParticleTrailStartSize
 Particlelib: Missing precache for particle system type "%s"!\n
 Particles: Missing '%s'\n
-PartnerAccountType
-PartnerItemPaymentRule
 Pass table - Inputs: start, end, hullmin, hullmax, mask, ignore  -- outputs: pos, fraction, hit, enthit, allsolid, startpos, endpos, startsolid, plane_normal, plane_dist, surface_name, surface_flags, surface_props
 Pass table - Inputs: start, end, mask, ignore  -- outputs: pos, fraction, hit, enthit, allsolid, startpos, endpos, startsolid, plane_normal, plane_dist, surface_name, surface_flags, surface_props
 PassTravelDistMax
@@ -18117,7 +16978,6 @@ Perfect
 Performance Warning: large friction system (%d objects)!!!\n
 PeriodicSpawn
 Perks
-PersonaNameReplacementToken
 Phoenix
 PhysObjectHeader_t
 Physics object pointer unexpectedly non-null before restore. Should be creating physics object in CreatePhysics()?\n
@@ -18163,7 +17023,6 @@ Play the selected round\n\tArgument: {round name given by "tf_listrounds" comman
 Play the specified .vcd file.
 PlayDead
 PlayGrenTimer
-Player
 Player %d doesn't have gesture slot %d any more.\n
 Player %s connecting is in the match but is not accepted into the lobby\n
 Player %s re-added to match they previously dropped from, replacing existing entry\n
@@ -18224,7 +17083,6 @@ PlayerActorLook
 PlayerBattleline
 PlayerBonusPoints
 PlayerClassDatafile
-PlayerConnectState
 PlayerDeathThink
 PlayerEnteredVehicle
 PlayerExtinguished
@@ -18283,7 +17141,6 @@ Point is NULL
 Point is safe again
 Point value:
 PointerToPrimeSelector
-Points Override
 PointsScored
 Polar
 PolynomialMod2: division by zero
@@ -18356,7 +17213,6 @@ PrecacheGibsForModel
 PrecacheScriptSound '%s' failed, no such sound script entry\n
 PrecacheSoundScript
 Precipice
-Prefab
 Premuda
 Prerequisite commands me to move to an entity
 Prerequisite commands me to wait
@@ -18381,7 +17237,6 @@ Prevent players on game teams from joining team spectator if it would unbalance 
 Prevent switching teams on ready-up for subsequent rounds in tournament mode.
 Prevents a userid from being auto-kicked
 Prevents bots from moving
-Price
 PrimaryOnly
 Prime1
 Prime2
@@ -18423,7 +17278,6 @@ Psap.IdleHack02
 Psap.IdleHarmless02
 PublicElement
 PublicExponent
-Purchase Limit
 PushToCapturePoint
 PutClientInServer: no %s on level\n
 PutClientInServer: no info_player_start on level\n
@@ -18438,19 +17292,7 @@ Q&A: '%s' couldn't answer '%s'\n
 Q8>BaseCombatWeapon.WeaponDrop
 Q9waterripple
 QAngle: %.2f %.2f %.2f
-QUESTION_CASUAL_INQUIRY
-QUESTION_COMP_INQUIRY
-QUESTION_MAP_QUALITY
-QUESTION_MATCH_QUALITY
-QUESTION_RANDOM_CRIT
-QUEST_POINTS_ADVANCED
-QUEST_POINTS_EXPERT
-QUEST_POINTS_NOVICE
-QUEUE_KICK_AUTH
-QUEUE_KICK_NO_PING
 QUOTA_MANANGED
-QhZ\nd
-Qkkbal
 Quality definition %d: Duplicate quality name %s
 Quality definition %s: Missing required field "value"
 Quality definition %s: missing "color_name"
@@ -18490,7 +17332,6 @@ QuestObjectiveManager
 QueuedLoaderVersion004
 R:%3.1f   B:%3.1f
 R@DT_TFWeaponSword
-RANDOM
 RD.BotDeathExplosion
 RD.EnemyCaptured
 RD.EnemyDropped
@@ -18513,11 +17354,8 @@ RECIPIENT_FILTER_PAS_ATTENUATION
 RECIPIENT_FILTER_PVS
 RECIPIENT_FILTER_SINGLE_PLAYER
 RECIPIENT_FILTER_TEAM
-REFERENCE_DEFINES
 REMEMBER_UPGRADE
 REMOVE_ON_DEATH
-RESERVATION_PENDING
-RESERVED
 RESPONSE CRITERIA FOR: %s (%s)\n
 RESPONSERULES: %s spoke '%s'. Found no matching response.\n
 RESPONSERULES: %s spoke '%s'. Found response '%s'.\n
@@ -18532,7 +17370,6 @@ RGBA color to draw as the background color for nav areas while editing.
 ROBOTS
 RPS Taunt
 RUN 
-R\n*instance_def_type_paintkit_item_definition
 R_arm
 R_hand_grip
 Radial using: %s\n
@@ -18568,7 +17405,6 @@ RandomPlacement
 RandomSeed
 RandomSpawn
 Randomly Flip Yaw
-RankBucketEntry
 Rarity definition %s: Missing required field "loc_key"
 Rarity definition %s: Missing required field "value"
 Rate at which bots turn to face their targets.
@@ -18665,7 +17501,6 @@ Reflected player off ground ( into-ground momentum %f )
 Refused %d reservations -- not accepting match players or exceeds capacity\n
 Regenerate
 Regenerate.Touch
-Region
 Register as a listener for a game event from script.
 Register as a listener for a script hook from script.
 RegisterAvoidanceObstacle
@@ -18742,7 +17577,6 @@ Removing relationship for lost entity\n
 RenableJump
 RepairSelfThink
 Repeated fields can't have default values.
-ReplacementToken
 Replaces all instances of the first place with the second place.
 ReplaySystem001
 Reply msg type %s to job %s is too late; discarding\n
@@ -18750,9 +17584,6 @@ Report missing wave files for sounds and game_sounds files.
 Reports the surface properties at the cursor
 RequestState
 Requested late join for active match\n
-RequestedToJoin
-Required Conds
-Required equipped item
 Required key "attributes" missing.\n
 Required key "colors" missing.\n
 Required key "game_info" missing.\n
@@ -18778,7 +17609,6 @@ Responding to teammate partner taunt
 Response: %s\n
 ResponseContext_t
 ResponseGroup
-ResponseHeader
 Restart Tournament Mode on the current level.
 RestartGame
 Restore underflow!\n
@@ -18878,7 +17708,6 @@ Returns whether this is a melee weapon
 Reveal
 Revealed!
 RevertToDefaultRelationship
-Reward Lootlist
 Rewards the first player to get a kill each round.
 Ribs Grow Back
 Right distance between high five partners
@@ -19129,18 +17958,10 @@ SOLID_OBB
 SOLID_OBB_YAW
 SOLID_VPHYSICS
 SOUND\n
-SOURCE_AUTOBALANCE_BONUS
-SOURCE_COMPETITIVE_ABANDON
-SOURCE_COMPETITIVE_LOSS
-SOURCE_COMPETITIVE_WIN
-SOURCE_COMPLETED_MATCH
-SOURCE_OBJECTIVE_BONUS
-SOURCE_PRESTIGE_BONUS
 SOUTH_EAST
 SOUTH_WEST
 SOUpdated
 SPAWN_WITH_FULL_CHARGE
-SPEED
 SPELL: set item tint RGB
 SPHapWeapEvent
 SQUAD_SLOT_ATTACK1
@@ -19173,7 +17994,6 @@ SS_START_WATER
 SS_TURBO
 STAIRS 
 STAND 
-STANDBY_PLAYER
 START 
 STARTSCRIPTING
 STEAMAPPLIST_INTERFACE_VERSION001
@@ -19194,7 +18014,6 @@ STOP
 STOPWATCH_CAPTURE_TIME_NOT_SET
 STOPWATCH_OVERTIME
 STOPWATCH_RUNNING
-STRING
 SUB_CallUseToggle
 SUB_DoNothing
 SUB_FadeOut
@@ -19248,6 +18067,7 @@ Scene %s has %d actors, but scene entity only has %d actors\n
 Scene '%s' missing!\n
 Scene '%s' with two stop point events!\n
 SceneFileCache002
+Schd: %s, 
 Schedule %s, 
 Schedule change\n
 Schedule not found
@@ -19732,17 +18552,12 @@ ServerGameTags001
 ServerIP
 ServerMapCycle
 ServerMapCycleMvM
-ServerMatchmakingState
-ServerMatchmakingState_EMPTY
-ServerMatchmakingState_INVALID
 ServerName
 ServerPopFiles
 ServerReplay001
 ServerStartTime
 ServerUploadGameStats001
-ServiceDescriptorProto
 ServiceEventQueue()
-ServiceOptions
 SessionID
 Set %s from file '%s'.  ('%s' was not found.)\n
 Set %s from file '%s'\n
@@ -20035,7 +18850,6 @@ Simple Cubic
 SimpleKeyingInterface: this object doesn't support resynchronization
 Simplified path\n
 Simplified_Chinese
-SingleItemDescription
 Sinshine
 Sinthetic
 Size of bsp file '%s' is %u bytes.\n
@@ -20095,7 +18909,6 @@ SoundPointerForIndex() - Index < 0!\n
 SoundPointerForIndex() - Index too large!\n
 Soundlist: %d / %d  (%d)\n
 SourceAppID
-SourceCodeInfo
 SourceTV broadcast delay in seconds
 SourceTV camera is now controlled by %s.
 SourceTV camera switched to auto-director mode.
@@ -20137,7 +18950,6 @@ SpeakThink
 Speaking [from QUEUE]
 Special Attack
 SpecialEvent
-SpecialPayment
 Specifies the item whitelist file to use.
 Specifies the minimum number of players needed to launch a 12v12 match. Set to -1 to disable.
 Speed %.1f  T/S/B (%.0f/%.0f/%.1f)
@@ -20182,7 +18994,6 @@ Standoff
 Standoff behavior parms changed
 Standoff goal position changed
 Standoff goal position cleared
-Stars to Unlock
 Start Attack!
 Start TASK_STOP_MOVING\n
 Start Time: %f
@@ -20219,7 +19030,7 @@ Starting child Action
 Starting position relative to the flamethrower.
 StartingCurrency
 StartingPathTrackNode
-State
+Stat: %s, 
 State: %d
 State: %s, 
 State: Disabled
@@ -20227,9 +19038,7 @@ State: Enabled
 State: Off
 State: On
 StaticPropMgrServer002
-Stats
 StatueThink
-Status
 Status 'Gordon'
 Status:
 StatusName
@@ -20336,12 +19145,10 @@ StudioFrameAdvance
 StudioFrameAdvanceManual
 Stun Interupt!
 Stunned!
-SubGC
 Subdivides all selected areas.
 SubgroupGenerator
 SubgroupOrder
 SubgroupOrderSize
-SubscribedType
 Subscribing to SOCache for user %s\n
 Success!
 Successful teleport
@@ -20358,7 +19165,6 @@ Surface Shatter
 Surface normal of the ground we are in contact with
 Surplus %s removed\n
 Surrender
-SurveyQuestionType
 Suspicious navigation goal tolerance specified\n
 Swap
 Switch teams and restart the game
@@ -20596,7 +19402,6 @@ TAUNT_LONG
 TAUNT_MISC_ITEM
 TAUNT_SHOW_ITEM
 TAUNT_SPECIAL
-TDff
 TEAM_ANY
 TEAM_INVALID
 TEAM_IS_NOT_OWNERS
@@ -20636,16 +19441,7 @@ TFBotSpawner: need to specify ItemName in ItemAttributes.\n
 TFDeathCallingCard
 TFMapsWorkshop
 TFMark
-TFMatchLeaveReason
-TFMatchLeaveReason_ADMIN_KICK
-TFMatchLeaveReason_AWOL
-TFMatchLeaveReason_GC_REMOVED
-TFMatchLeaveReason_IDLE
-TFMatchLeaveReason_NO_SHOW
-TFMatchLeaveReason_UNSPECIFIED
-TFMatchLeaveReason_VOTE_KICK
 TFParty: ID:%016llx  %d member(s)  LeaderID: %s\n
-TFPendingPartyMember
 TFPlayer.AirBlastImpact
 TFPlayer.AttackerPain
 TFPlayer.CritBoostOff
@@ -20714,13 +19510,6 @@ TFSTAT_SHOTS_HIT
 TFSTAT_SUICIDES
 TFSTAT_TELEPORTS
 TFSTAT_UNDEFINED
-TFSyncedMMUIState
-TFVoteKickReason
-TFVoteKickReason_Cheating
-TFVoteKickReason_Idle
-TFVoteKickReason_Invalid
-TFVoteKickReason_Other
-TFVoteKickReason_Scamming
 TF_3rdPersonMuzzleFlash_SentryGun
 TF_AMMO_GRENADES1
 TF_AMMO_GRENADES2
@@ -20775,7 +19564,6 @@ TF_COND_DISGUISED_AS_DISPENSER
 TF_COND_DISGUISE_WEARINGOFF
 TF_COND_DISGUISING
 TF_COND_DONOTUSE_0
-TF_COND_ENEMY_GLOWS
 TF_COND_ENERGY_BUFF
 TF_COND_FEIGN_DEATH
 TF_COND_FIRE_IMMUNE
@@ -20867,7 +19655,6 @@ TF_COND_STEALTHED_BLINK
 TF_COND_STEALTHED_USER_BUFF
 TF_COND_STEALTHED_USER_BUFF_FADING
 TF_COND_STUNNED
-TF_COND_SUPERHEATED
 TF_COND_SWIMMING_CURSE
 TF_COND_SWIMMING_NO_EFFECTS
 TF_COND_TAUNTING
@@ -20996,19 +19783,6 @@ TF_GAMETYPE_PASSTIME
 TF_GAMETYPE_PD
 TF_GAMETYPE_RD
 TF_GAMETYPE_UNDEFINED
-TF_GC_GAMESTATE_DISCONNECT
-TF_GC_GAMESTATE_LAST
-TF_GC_GAMESTATE_POST_GAME
-TF_GC_GAMESTATE_STATE_INIT
-TF_GC_GAMESTATE_STRATEGY_TIME
-TF_GC_GameState
-TF_GC_TEAM_BROADCASTER
-TF_GC_TEAM_DEFENDERS
-TF_GC_TEAM_INVADERS
-TF_GC_TEAM_NOTEAM
-TF_GC_TEAM_NOTEAM"7\n$CMsgGCChangeMatchPlayerTeamsResponse
-TF_GC_TEAM_PLAYER_POOL
-TF_GC_TEAM_SPECTATOR
 TF_NAV_BLOCKED
 TF_NAV_BLOCKED_AFTER_POINT_CAPTURE
 TF_NAV_BLOCKED_UNTIL_POINT_CAPTURE
@@ -21443,13 +20217,11 @@ TRUE
 TURNHACK
 TURNING
 TV.Tune
-T\n\nnode_image
 Tactical: Cover Low
 Tactical: Cover Medium
 Tactical: Enemy Disadvantage
 Tactical: Pinch
 Tactical: Spawn
-Tags
 Tags : 
 Take away money from a player for reasons such as ie. spending.
 Takes a sound name
@@ -21618,7 +20390,6 @@ The maximum size of the short term chat msg bucket.
 The minimum percentage of wave money players must collect in order to qualify for min bonus - 0.1 to 1.0.  Half the bonus amount will be awarded when reaching min ratio, and half when reaching max.
 The minimum ratio of eligible players needed to pass a vote.  Min 0.1, Max 1.0.
 The multiple by which a player must exceed the median kills by in order to be considered dominant
-The name of this node
 The nav file for %s is built from an old version of the map\n
 The nav file for %s is up-to-date\n
 The nav mesh
@@ -21842,7 +20613,6 @@ Trying to place my dispenser
 Trying to place my teleport exit
 Trying to precache breakable prop, but has no model name\n
 Trying to start a new lag compensation session while one is already active!\n
-Ts\ne
 Turbine Event
 Turn an entity index integer to an HScript representing that entity's script instance.
 Turn off a particular trace output by file or function name
@@ -21857,15 +20627,12 @@ Turns off interactive fish behavior. Fish become immobile and unresponsive.
 Turns on some console spew for debugging high five issues.
 Turns on the absbox for all active physics objects
 Turns on turbo physics
-Type
 Type appears to be in generated pool but wasn't 
 Type is already registered: 
 UCS-2LE
 UCS-4LE
 UN-STUCK
 UNDERWATER 
-UNKNOWN
-UNUSED_job_name
 USE_BOSS_HEALTH_BAR
 UTF-32LE
 UTF-8
@@ -21931,7 +20698,6 @@ Unhandled animation event %d from %s --> %s\n
 Unhandled animation event %s for %s\n
 Unhides a hud element based on Constants.FHideHUD.
 Unimplemented type: 
-UninterpretedOption
 Unknown
 Unknown Attacker
 Unknown Inflictor
@@ -22076,21 +20842,10 @@ Using map cycle file '%s'.  ('%s' was not found.)\n
 Using map cycle file '%s'.\n
 Using nearby teleporter
 V@CPointAngularVelocitySensor
-VARIABLE_DEFINES
-VAR_TYPE_DOUBLE
-VAR_TYPE_FLOAT
-VAR_TYPE_INVALID
-VAR_TYPE_INVALID:A\n
-VAR_TYPE_SINT32
-VAR_TYPE_SINT64
-VAR_TYPE_STRING
-VAR_TYPE_UINT32
-VAR_TYPE_UINT64
 VBAllocTracker001
 VDataCache003
 VDebugOverlay003
 VDmeMakeFileUtils001
-VEjM
 VEngineCvar004
 VEngineRandom001
 VEngineServer023
@@ -22135,7 +20890,6 @@ VSoundEmitter002
 VStudioRender025
 VTEX_003
 VU5?
-V\n\njump_state
 V_AppendSlash: ran out of space on %s.
 V_MakeAbsolutePath: _getcwd failed.
 V_MakeAbsolutePath: tried to ".." past the root.
@@ -22163,11 +20917,9 @@ Value: DEAD
 Value: OFF
 Value: ON
 ValueNames
-ValueTag
 ValveBiped.Weapon_bone
 Vanguard
 Vantage point reached
-Variable value definitions"/\n
 Variation of spawn interval +/-
 Vector from automovement to desired: %f %f\n
 VectorXY
@@ -22212,7 +20964,6 @@ VoiceSubtitle
 Voicecommand script attempting to use unknown concept. Need to define new concepts in code. ( %s )\n
 VortexThink
 Vortigaunt
-Vote
 Vote Controller Not Found!\n
 Vote Issue Not Found!\n
 Vote failed "%s %s" with code %i\n
@@ -22251,7 +21002,6 @@ WARNING: Momentary door (%s) start position not between 0 and 1.  Clamping.\n
 WARNING: Scripted Target from (%s) to (%s) is occluded!\n
 WARNING: TestHull used and never returned!\n
 WC/Engine map versions different...
-WEBAPI_PARAM_UINT64
 WIDE_HUMAN_HULL
 WIDE_SHORT_HULL
 WITCH
@@ -22260,7 +21010,6 @@ WRITE_BYTE called with no active message\n
 WRITE_CHAR called with no active message\n
 WRITE_SHORT called with no active message\n
 WRITE_WORD called with no active message\n
-W\n\fdescriptions
 Wait duration elapsed
 Wait time elapsed
 WaitBeforeStarting
@@ -22274,7 +21023,6 @@ Waiting for script, but lost script!
 Waiting for squadmates to get back into formation
 WaitingForPlayers time length in seconds
 Walkable position marked.\n
-WarMatch
 WarTrackerManager
 Warning : Particle system (%s) using unassigned ControlPoint %d!\n
 Warning parsing text-format 
@@ -22434,8 +21182,6 @@ Weapon_p2rec.Timer
 Weapon_sd_sapper.Timer
 WearableEvaluateState
 WeightToActivate
-WeightedString
-WeightedStringSet
 Well
 Whack!
 What entity is the player grappling?
@@ -22475,8 +21221,6 @@ Whether or not random crits are enabled
 Whether or not teammates push each other away when occupying the same space
 Whether the server should be hidden from the master server
 Whether to force on MvM-styled upgrades on/off. 0 -> default, 1 -> force off, 2 -> force on
-Which icon to show on the map
-Which quests this node offers.
 Who is the medic healing?
 Who won!
 Will loop action sequence
@@ -22497,8 +21241,6 @@ Work Item for Work Pool %s completed but job no longer existed to notify\n
 Work on my Sentry
 Work on my Teleporter
 Work on my buildings
-WorkshopDirectPaymentRule
-WorkshopItemPaymentRule
 World Decal
 World friction.
 World gravity.
@@ -22548,11 +21290,9 @@ WriteVec3Coord called with no active message\n
 WriteVec3Normal called with no active message\n
 Writes the selected set to disk for merging into another mesh via nav_merge_mesh.
 Wutville
-X position on the quest map
 X917RNG: Continuous random number generator test failed.
 XAxis
 XBowBolt
-Y position on the quest map
 Y6WP5EH4I45F2LMKSDY2
 YAxis
 YYYY
@@ -22567,7 +21307,6 @@ Z tolerance for adding new nav areas.
 Z0000
 ZAWMBEEZ
 ZEPrepareStickybombTrap
-Z\n\tstar_type
 Zap!
 ZapContext
 ZapThink
@@ -22576,7 +21315,6 @@ Zapped!
 ZapperType
 Ze Ubermensch
 Zepheniah Mann
-Zjz\v
 Zombie %s
 ZombieBehavior
 ZoomContext
@@ -22586,13 +21324,22 @@ Zrange
 [%8.3f] stall blend %.2f on %s:%s:%d:%d\n
 [%8.3f] stall on %s:%s:%d:%d\n
 [%d] (%d) Link %d (%s) -> %d (%s)\n
+[%f %f %f]
+[%g %g %g]
+[%s%03i]
 [/code]
 [/list]
 [A:%u:%u:%u]
+[C:%u:%u]
 [CEconItem: ID=%llu, DefIdx=%d]
+[G:%u:%u]
 [GS %s - %7.2f] %s
+[I:%u:%u]
+[L:%u:%u]
 [M:%u:%u:%u]
 [NPCState::%s]
+[Nav] %s
+[P:%u:%u]
 [ReliableMsg] %s queued for %s\n
 [ReliableMsg] %s send FAILED for %s -- retrying\n
 [ReliableMsg] %s send STALLED for %s -- No GC session, retrying\n
@@ -22601,6 +21348,7 @@ Zrange
 [ReliableMsg] %s started for %s\n
 [ReliableMsg] %s successfully sent for %s\n
 [SVTrackers]: %s
+[T:%u:%u]
 [TF Vote GC] Allowing kick of player as they are TEAM_SPECTATOR.\n
 [TF Vote GC] Allowing player to be kicked as they are connected & TEAM_UNASSIGNED.\n
 [TF Vote GC] Disallowing player to kick target due to having differing team vote controllers.\n
@@ -22645,10 +21393,15 @@ Zrange
 [TF Workshop] Usage: tf_workshop_map_sync <map ugc id> - Add a map to the workshop auto-sync list\n
 [TF Workshop] Usage: tf_workshop_refresh - Trigger a recheck subscriptions and tracked maps\n
 [TF Workshop] Waiting for steam connection\n
+[U:%u:%u]
 [WHEEL OF DOOM]\t Activating: "%s" set to expire in %3.2fs\n
 [WHEEL OF DOOM]\t Deactivating: %s\n
 [WHEEL OF DOOM]\t Effect expired: %s\n
+[a:%u:%u]
+[c:%u:%u]
 [code]
+[g:%u:%u]
+[i:%u:%u]
 [img]
 [lazy = true] can only be specified for submessage fields.
 [libprotobuf %s %s:%d] %s\n
@@ -22658,9 +21411,6 @@ Zrange
 [url=
 \%03o
 \U%08x
-\\n\nRegionLink
-\\n\tlanguages
-\f*[\n\fEQuestPoints
 \f@start %f %f %f
 \fI@CPostFrameNavigationHook
 \n    Actual    : 
@@ -22670,268 +21420,21 @@ Zrange
 \n  Problem     : 
 \n  Problem     : Enum value did not match field type:\n    Expected  : 
 \n  Problem     : Field is not the right type for this message:\n    Expected  : 
-\n CGCMsgGC_War_GlobalStatsResponse
-\n CGCMsg_WorldItemPlacement_Update
-\n google/protobuf/descriptor.proto
-\n!CAttribute_DynamicRecipeComponent
-\n!CMsgGCQuestObjective_PointsChange
-\n"CMsgGCMsgMasterSetClientMsgRouting
-\n#CMsgGCChangeMatchPlayerTeamsRequest
-\n#CMsgGCRequestStoreSalesDataResponse
-\n#CMsgPaintKit_Operation_CombineStage
-\n#CMsgPaintKit_Operation_StickerStage
-\n#CMsgPaintKit_Operation_TextureStage
-\n#CMsgQuestMapNodeCondition_NodeState
-\n#CWorkshop_AddSpecialPayment_Request
-\n$CMsgEconPlayerStrangeCountAdjustment
-\n$CMsgNotificationOfSuspiciousActivity
-\n$CMsgTFQuickplay_ScoreServersResponse
-\n$CMsgUpdateHalloweenMerasmusLootLevel
-\n%CWorkshop_GetSpecialPayments_Response
-\n%CWorkshop_SetItemPaymentRules_Request
-\n%EServerModificationItemServerResponse
 \n%d total counted strings.
-\n&CGCSystemMsg_GetPurchaseTrust_Response
-\n&CMsgLookupMultipleAccountNamesResponse
-\n'CGCSystemMsg_GetAccountDetails_Response
-\n'CMsgGC_GameServer_ResetIdentityResponse
-\n(CMsgGC_GameServer_CreateIdentityResponse
 \n** Should run "Check For Problems" on the VMF then verify dynamic links\n
 \n*****Node Graph Rebuild OVERRIDDEN by user*****\n\n
 \n***WARNING*** Map change blocked. HLTV is broadcasting and has not caught up to the last major game event yet.\nYou can disable this check by setting the value of the server convar "tv_delaymapchange_protect" to 0.\n
 \n***\nFAILED to create private ScriptScope. ABORTING script\n***\n
-\n*CWorkshop_PopulateItemDescriptions_Request
 \n*\n* replayevents.res MISSING.\n*\n\n
-\n+CMsgGC_DailyCompetitiveStatsRollup_Response
 \n------- SERVER SOUNDSCAPES -------\n
-\n0CMsgGC_Client_UseServerModificationItem_Response
-\n1CCommunity_GetGamePersonalDataCategories_Response
-\n4CMsgGC_GameServer_UseServerModificationItem_Response
 \n====================================================================\n\n
 \n====================================================\nPerforming Safe Entity Update\n
 \n============================================\n
-\nACAttribute_DynamicRecipeComponent_COMPAT_NEVER_SERIALIZE_THIS_OUT
 \nAborting map_edit\nWC/Engine map versions different...\n\n
 \nAborting map_edit\nWorldcraft not running...\n\n
 \nDictionary: %s\n
 \nEnemy is %s
 \nVSCRIPT: Scripting is disabled.\n
-\n\fCGCMsgTFSync
-\n\fCMsgQuestDef
-\n\fCMsgVarField
-\n\fDISCONNECTED
-\n\fEGCSystemMsg
-\n\fEUnlockStyle
-\n\fFieldOptions
-\n\fLITE_RUNTIME
-\n\fMATCH_PLAYER
-\n\fPARTNER_NONE
-\n\fSOURCE_SCORE
-\n\fSTRING_PIECE
-\n\fTF_TEAM_BLUE
-\n\fTHIS_DEFINES
-\n\fTYPE_FIXED32
-\n\fTYPE_FIXED64
-\n\fTYPE_MESSAGE
-\n\fXPSourceType
-\n\faccount_name
-\n\fbadge_points
-\n\fcommand_line
-\n\fcommand_name
-\n\fconnect_time
-\n\fcontent_type
-\n\fcontributors
-\n\fdamage_medal
-\n\fdefault_pass
-\n\fdesc_outputs
-\n\fdmg_engineer
-\n\fdouble_value
-\n\felapsed_time
-\n\femail_format
-\n\ffield_number
-\n\ffriend_count
-\n\fhealing_gold
-\n\fhealth_ratio
-\n\fis_extension
-\n\fitem_item_id
-\n\fitem_quality
-\n\fitems_earned
-\n\fjava_package
-\n\fkReason_IDLE
-\n\fk_EMsgGCBase
-\n\fkills_bronze
-\n\fkills_silver
-\n\flate_join_ok
-\n\flevel_loaded
-\n\floot_claimed
-\n\fmachine_name
-\n\fmax_points_0
-\n\fmax_points_1
-\n\fmax_points_2
-\n\fmission_name
-\n\fnum_required
-\n\fpersona_name
-\n\fprocess_name
-\n\freveal_sound
-\n\freward_sound
-\n\fscore_bronze
-\n\fscore_silver
-\n\fservice_list
-\n\fsniper_count
-\n\fstdev_damage
-\n\fsteamid_left
-\n\fstring_value
-\n\fsubscribe_to
-\n\fsupport_gold
-\n\fsync_version
-\n\ftime_created
-\n\ftool_item_id
-\n\fwait_seconds
-\n\fwas_eligible
-\n\fwebapi_param
-\n\fwinner_names
-\n\fwinning_team
-\n\nCSOTFParty
-\n\nEGCBaseMsg
-\n\nEGCToGCMsg
-\n\nMvMVictory
-\n\nServerInfo
-\n\nTF_GC_TEAM
-\n\nTYPE_BYTES
-\n\nTYPE_FLOAT
-\n\nTYPE_GROUP
-\n\nTYPE_INT32
-\n\nTYPE_INT64
-\n\nabuse_type
-\n\naccount_id
-\n\naccountids
-\n\nadjustment
-\n\nalert_type
-\n\navg_damage
-\n\nblue_score
-\n\nbomb_kills
-\n\nboss_level
-\n\nbytes_read
-\n\ncoach_name
-\n\ncurr_items
-\n\ndemo_count
-\n\ndependency
-\n\ndeprecated
-\n\ndmg_sniper
-\n\nemail_lang
-\n\nerror_text
-\n\nevent_time
-\n\nevent_type
-\n\nexperience
-\n\ngameitemid
-\n\nget_misses
-\n\ngo_package
-\n\ngroup_name
-\n\ninput_type
-\n\nis_limited
-\n\nis_strange
-\n\nis_unusual
-\n\nitem_count
-\n\nitem_flags
-\n\nitem_level
-\n\nitems_game
-\n\nkills_gold
-\n\nleave_time
-\n\nlevel_name
-\n\nlevel_type
-\n\nlike_coach
-\n\nlogon_jobs
-\n\nmember_ids
-\n\nnode_state
-\n\npackage_id
-\n\npyro_count
-\n\nqueue_size
-\n\nscore_gold
-\n\nservice_id
-\n\nsession_id
-\n\nslot_index
-\n\nslots_free
-\n\nstat_value
-\n\nsubscriber
-\n\ntoken_name
-\n\nuser_score
-\n\nwin_reason
-\n\nzoom_scale
-\n\rBADGE_LEVELED
-\n\rCSOItemRecipe
-\n\rETF2GameModes
-\n\rETFMatchGroup
-\n\rEVarFieldType
-\n\rPARTNER_NEXON
-\n\rProtoDefTypes
-\n\rSQUAD_SURPLUS
-\n\rTF_COND_PHASE
-\n\rTF_COND_URINE
-\n\rTYPE_SFIXED32
-\n\rTYPE_SFIXED64
-\n\rVAR_TYPE_BOOL
-\n\rauthenticated
-\n\rbadge_granted
-\n\rbadge_leveled
-\n\rbytes_written
-\n\rcasual_banned
-\n\rcategory_name
-\n\rcrate_item_id
-\n\rdamage_bronze
-\n\rdamage_silver
-\n\rdefault_value
-\n\rdelete_misses
-\n\rdiscard_sound
-\n\requip_regions
-\n\rerror_message
-\n\revent_counter
-\n\rhealing_medal
-\n\ris_banned_now
-\n\ris_cyber_cafe
-\n\ris_subscribed
-\n\ris_vac_banned
-\n\ritem_defindex
-\n\rjoin_party_id
-\n\rkReason_COUNT
-\n\rk_EGCMsgMulti
-\n\rk_EMsgGCCraft
-\n\rk_EMsgGCError
-\n\rlobby_standby
-\n\rloc_desctoken
-\n\rname_loctoken
-\n\rnew_leader_id
-\n\rnode_defindex
-\n\rnum_fulfilled
-\n\roptions_score
-\n\rowner_steamid
-\n\rpoints_scored
-\n\rpopular_items
-\n\rpurchase_type
-\n\rranked_banned
-\n\rresponse_code
-\n\rrt_birth_date
-\n\rsearch_string
-\n\rserver_region
-\n\rsolider_count
-\n\rsource_app_id
-\n\rsquad_surplus
-\n\rstar_0_earned
-\n\rstar_1_earned
-\n\rstar_2_earned
-\n\rstdev_healing
-\n\rstdev_support
-\n\rsteamid_locks
-\n\rsteamid_right
-\n\rsupport_medal
-\n\rtemplate_file
-\n\rtime_acquired
-\n\rtrial_account
-\n\ruser_currency
-\n\ruser_sessions
-\n\rversion_check
-\n\rvoter_inhibit
-\n\rwrench_number
-\n\ryielding_jobs
 \n\tSchedule\n\t\tSCHED_ALERT_FACE\tTasks\t\tTASK_STOP_MOVING\t\t\t0\t\tTASK_FACE_IDEAL\t\t\t\t0\t\tTASK_SET_ACTIVITY\t\t\tACTIVITY:ACT_IDLE\tInterrupts\t\tCOND_NEW_ENEMY\t\tCOND_SEE_FEAR\t\tCOND_LIGHT_DAMAGE\t\tCOND_HEAVY_DAMAGE\t\tCOND_PROVOKED\n
 \n\tSchedule\n\t\tSCHED_ALERT_FACE_BESTSOUND\tTasks\t\tTASK_STORE_BESTSOUND_REACTORIGIN_IN_SAVEPOSITION\t\t0\t\tTASK_STOP_MOVING\t\t\t0\t\tTASK_FACE_SAVEPOSITION\t\t0\t\tTASK_SET_ACTIVITY\t\t\tACTIVITY:ACT_IDLE\t\tTASK_WAIT\t\t\t\t\t1.5\t\tTASK_FACE_REASONABLE\t\t0\tInterrupts\t\tCOND_NEW_ENEMY\t\tCOND_SEE_FEAR\t\tCOND_LIGHT_DAMAGE\t\tCOND_HEAVY_DAMAGE\t\tCOND_PROVOKED\n
 \n\tSchedule\n\t\tSCHED_ALERT_REACT_TO_COMBAT_SOUND\tTasks\t\tTASK_SET_SCHEDULE\t\t\tSCHEDULE:SCHED_ALERT_FACE_BESTSOUND\tInterrupts\n
@@ -23063,152 +21566,7 @@ Zrange
 \n\tSchedule\n\t\tSCHED_WAIT_FOR_SCRIPT\tTasks\t\tTASK_STOP_MOVING\t\t0\t\tTASK_WAIT_INDEFINITE\t0\tInterrupts\t\tCOND_LIGHT_DAMAGE\t\tCOND_HEAVY_DAMAGE\n
 \n\tSchedule\n\t\tSCHED_WAIT_FOR_SPEAK_FINISH\tTasks\t\tTASK_WAIT_FOR_SPEAK_FINISH\t\t0\tInterrupts\t\tCOND_NEW_ENEMY\t\tCOND_SEE_FEAR\t\tCOND_LIGHT_DAMAGE\t\tCOND_HEAVY_DAMAGE\t\tCOND_SMELL\t\tCOND_PROVOKED\t\tCOND_GIVE_WAY\t\tCOND_HEAR_DANGER\t\tCOND_HEAR_COMBAT\t\tCOND_HEAR_BULLET_IMPACT\n
 \n\tSchedule\n\t\tSCHED_WAKE_ANGRY\tTasks\t\tTASK_STOP_MOVING\t\t0\t\tTASK_SET_ACTIVITY\t\tACTIVITY:ACT_IDLE \t\tTASK_SOUND_WAKE\t\t\t0\t\tTASK_FACE_IDEAL\t\t\t0\t\tTASK_SET_ACTIVITY\t\tACTIVITY:ACT_IDLE \tInterrupts\n
-\n\taccountid
-\n\tavg_kills
-\n\tavg_score
-\n\tboss_type
-\n\tbot_count
-\n\tcmd_flush
-\n\tcode_type
-\n\tdef_index
-\n\tdir_index
-\n\tdmg_heavy
-\n\tdmg_medic
-\n\tdmg_scout
-\n\tduel_wins
-\n\tevictions
-\n\tgame_data
-\n\tgame_mode
-\n\tgame_type
-\n\tgc_app_id
-\n\tgc_binary
-\n\tgceresult
-\n\tinventory
-\n\tip_public
-\n\tis_banned
-\n\tis_locked
-\n\titem_data
-\n\titem_name
-\n\tjoin_game
-\n\tleader_id
-\n\tlife_time
-\n\tlongitude
-\n\tmap_count
-\n\tmap_cycle
-\n\tmap_index
-\n\tmax_users
-\n\tmember_id
-\n\tname_part
-\n\tnew_class
-\n\tnum_kills
-\n\tnum_likes
-\n\tnum_users
-\n\toperation
-\n\tpackageid
-\n\tplayer_id
-\n\tpreset_id
-\n\tpvp_kills
-\n\tred_score
-\n\tschema_kv
-\n\tseason_id
-\n\tsender_id
-\n\tserver_id
-\n\tsignature
-\n\tsort_type
-\n\tsource_gc
-\n\tsource_id
-\n\tspy_count
-\n\ttarget_id
-\n\ttimestamp
-\n\ttour_name
-\n\ttype_name
-\n\tuser_name
-\n\vCMsgUseItem
-\n\vCSOEconItem
-\n\vEnumOptions
-\n\vFileOptions
-\n\vHELP_A_NOOB
-\n\vNOT_DEFINED
-\n\vPartyMember
-\n\vSERVERSETUP
-\n\vTF_COND_GAS
-\n\vTF_TEAM_RED
-\n\vTYPE_DOUBLE
-\n\vTYPE_SINT32
-\n\vTYPE_SINT64
-\n\vTYPE_STRING
-\n\vTYPE_UINT32
-\n\vTYPE_UINT64
-\n\vUnreachable
-\n\vaccount_ids
-\n\vactive_jobs
-\n\vaffiliation
-\n\vallow_alias
-\n\vattrib_name
-\n\vavg_healing
-\n\vavg_support
-\n\vbadge_level
-\n\vclient_addr
-\n\vcustom_desc
-\n\vcustom_name
-\n\vdamage_gold
-\n\vdelete_hits
-\n\vdesc_inputs
-\n\vdescription
-\n\vdmg_soldier
-\n\vduel_losses
-\n\vfloat_value
-\n\vformed_time
-\n\vfound_coach
-\n\vgive_credit
-\n\vheavy_count
-\n\vis_verified
-\n\vitem_def_id
-\n\vkills_medal
-\n\vlogon_queue
-\n\vmatch_group
-\n\vmax_players
-\n\vmedic_count
-\n\vmethod_name
-\n\vnet_message
-\n\vnext_map_id
-\n\vobject_data
-\n\voneof_index
-\n\voriginal_id
-\n\voutput_type
-\n\vowns_ticket
-\n\vpoint_value
-\n\vpoints_type
-\n\vprice_sheet
-\n\vpurchase_id
-\n\vqueued_time
-\n\vrating_type
-\n\vrecent_only
-\n\vscore_check
-\n\vscore_medal
-\n\vscout_count
-\n\vsearch_type
-\n\vseconds_ago
-\n\vserver_addr
-\n\vserver_port
-\n\vstaff_kills
-\n\vstatus_code
-\n\vstdev_kills
-\n\vstdev_score
-\n\vsteam_level
-\n\vtoken_value
-\n\vtotal_score
-\n\vunlock_time
-\n\vurgency_pct
-\n\vvalue_bytes
-\n\vwas_abandon
-\n\vyoutube_url
 \rEm_bReadyToBackstab
-\r\n\tCODE_SIZE
-\r\n\tCONNECTED
-\r\n\tMvMDefeat
-\r\n\tTYPE_BOOL
-\r\n\tTYPE_ENUM
 \t(%zu) comparing %s with %s\n
 \tHolding lock %s:\n
 \tPassenger Role:\t%s (%d seats)\n
@@ -23226,12 +21584,14 @@ Zrange
 \t\t\tAnimation:\t%s\t(Priority %d)\n
 \t\t\tResponse %d: %s\n
 \x%02x
-]ElX
+_CGCReplicateConVars
 _DisableUpdateTarget
 _EnableUpdateTarget
 _ExitOnFatalAssert
 _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
+_LPT_%s_%d
+_ST_%s_%d
 _SpewInfo
 _SpewMessage
 _ZGVbN2v_sin
@@ -23242,69 +21602,6 @@ _ZGVbN4v_cosf
 _ZGVbN4v_cosf@GLIBC_2.22
 _ZGVbN4vv_powf
 _ZGVbN4vv_powf@GLIBC_2.22
-_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13find_first_ofEPKcmm@GLIBCXX_3.4.21
-_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE17find_first_not_ofEPKcmm@GLIBCXX_3.4.21
-_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm@GLIBCXX_3.4.21
-_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEcm@GLIBCXX_3.4.21
-_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5rfindEcm@GLIBCXX_3.4.21
-_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc@GLIBCXX_3.4.21
-_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEmmRKS4_@GLIBCXX_3.4.21
-_ZNKSt8__detail20_Prime_rehash_policy11_M_next_bktEm@GLIBCXX_3.4.18
-_ZNKSt8__detail20_Prime_rehash_policy14_M_need_rehashEmmm@GLIBCXX_3.4.18
-_ZNSi4readEPcl@GLIBCXX_3.4
-_ZNSi7putbackEc@GLIBCXX_3.4
-_ZNSo5writeEPKcl@GLIBCXX_3.4
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEmmPKcm@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructEmc@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcPKcS7_@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE14_M_replace_auxEmmmc@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4swapERS4_@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6appendEPKc@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6resizeEmc@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7reserveEm@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_appendEPKcm@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_assignERKS4_@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_createERmm@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9push_backEc@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1EOS4_@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1EPKcRKS3_@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev@GLIBCXX_3.4.21
-_ZNSt8ios_base4InitC1Ev@GLIBCXX_3.4
-_ZNSt8ios_base4InitD1Ev@GLIBCXX_3.4
-_ZNSt9bad_allocD1Ev@GLIBCXX_3.4
-_ZNSt9exceptionD2Ev@GLIBCXX_3.4
-_ZSt15set_new_handlerPFvvE@GLIBCXX_3.4
-_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l@GLIBCXX_3.4.9
-_ZSt17__throw_bad_allocv@GLIBCXX_3.4
-_ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base@GLIBCXX_3.4
-_ZSt18_Rb_tree_incrementPKSt18_Rb_tree_node_base@GLIBCXX_3.4
-_ZSt18_Rb_tree_incrementPSt18_Rb_tree_node_base@GLIBCXX_3.4
-_ZSt18uncaught_exceptionv@GLIBCXX_3.4
-_ZSt19__throw_logic_errorPKc@GLIBCXX_3.4
-_ZSt20__throw_length_errorPKc@GLIBCXX_3.4
-_ZSt24__throw_out_of_range_fmtPKcz@GLIBCXX_3.4.20
-_ZSt25__throw_bad_function_callv@GLIBCXX_3.4.14
-_ZSt28_Rb_tree_rebalance_for_erasePSt18_Rb_tree_node_baseRS_@GLIBCXX_3.4
-_ZSt29_Rb_tree_insert_and_rebalancebPSt18_Rb_tree_node_baseS0_RS_@GLIBCXX_3.4
-_ZSt2wsIcSt11char_traitsIcEERSt13basic_istreamIT_T0_ES6_@GLIBCXX_3.4
-_ZSt9terminatev@GLIBCXX_3.4
-_ZTIPKh@CXXABI_1.3
-_ZTIPKi@CXXABI_1.3
-_ZTIPh@CXXABI_1.3
-_ZTISt9bad_alloc@GLIBCXX_3.4
-_ZTISt9exception@GLIBCXX_3.4
-_ZTIb@CXXABI_1.3
-_ZTIf@CXXABI_1.3
-_ZTIh@CXXABI_1.3
-_ZTIi@CXXABI_1.3
-_ZTIj@CXXABI_1.3
-_ZTIy@CXXABI_1.3
-_ZTVN10__cxxabiv116__enum_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv119__pointer_type_infoE@CXXABI_1.3
-_ZTVSt9bad_alloc@GLIBCXX_3.4
-_\n\tvariables
 __AppendToScriptGroup
 __CollectGameEventCallbacks
 __DumpScope
@@ -23412,48 +21709,32 @@ _setjmp@GLIBC_2.2.5
 _title
 _to_curve_
 `>%s : %8.2f: MOVETO canceled but actor %s not at goal\n
-`\n\titem_name
 a trigger_changelevel doesn't have a map
 aaaaaaaazzzzzzzz
-abandoning_invite_lobby_ids
-abandoning_match_id
 abcdefghijklmnopqrrqponmlkjihgfedcba
 abcdefghijklmnopqrstuvwxyzyxwvutsrqponmlkjihgfedcba
 abcdefghijkmnpqrstuvwxyz23456789
 ability_master_sniper
 abort@GLIBC_2.2.5
-absolute_timeout
 absolutetags
 absolutetags %s\n
-accept_coaching_assignment
 accepted
 access
 access@GLIBC_2.2.5
 account_class_index
-account_created
-account_creation_time
 account_first_valid_item_slot
 account_first_valid_item_slot not set!
-account_id_coach
-account_id_friend
-account_id_friend_as_coach
-account_id_student
-account_id_target
 account_last_valid_item_slot
 account_last_valid_item_slot not set!
 account_upgrade_to_premium
-accounts
 accuracy_scales_damage
 achieved
 achievementID
-achievement_bit_id
-achievement_blocks
 achievement_counts
 achievement_debug
 achievement_earned
 achievement_earned_local
 achievement_event
-achievement_id
 achievement_name
 achievement_rewards
 achiever
@@ -23461,19 +21742,12 @@ acosf
 acosf@GLIBC_2.2.5
 act_as_weapon
 act_as_wearable
-action
 actionOnDeath
-active
 active "0"\n
 active 0\n
 active_behavior
-active_client_version
 active_item_health_regen
-active_preset_id
-active_version
-activity
 actor "%s"\n
-actor_id
 ad_res_file
 ad_text
 add 0x%p: %s-%s (%d-%d) [%d in play, %d max]\n
@@ -23504,7 +21778,6 @@ add_uber_time
 addangaccel
 addcond
 additional halloween response criteria name
-additional_backpack_slots
 additional_drop
 additional_flags
 additional_forced_bodygroups
@@ -23518,7 +21791,6 @@ adult male human
 advanced_map_complete
 afterburn_duration_mult
 afterburn_immunity
-aggregate_value
 ai_LOS_mode
 ai_ally_speech_manager
 ai_auto_contact_solver
@@ -23665,7 +21937,6 @@ aiscripted_schedule - not playing schedule again: not flagged to repeat\n
 ajarangles
 alarm
 alert_delay
-alert_destination
 alert_type
 alien_isolation_merc_bonus_pos
 alien_isolation_xeno_bonus_pos
@@ -23691,7 +21962,6 @@ allow_duplicate
 allow_overhead
 allowdiversion
 allowdiversionradius
-allowed
 allowed in medieval mode
 allownewgibs
 allowstatic
@@ -23716,13 +21986,9 @@ ammo_max
 ammo_pickup
 ammomod
 ammopack_large
-amount
 amount of time players can chat after the game is over
 amplitude
 angRelativeAngles
-ang_x
-ang_y
-ang_z
 angleOverride
 angles: %g %g %g
 angles_relative
@@ -23747,10 +22013,6 @@ anims_think
 aoe_blast_on_damage
 aoe_deflection
 aoe_heal_chance
-api_key
-app_assets_basename
-app_id
-app_instance_count
 appid
 applies_snare_effect
 applyAngularImpulse
@@ -23804,12 +22066,9 @@ assaulttolerance
 asset_class_bucket
 asset_class_export
 assister_fallback
-associated_lobby_id
-associated_lobby_match_group
-associated_operation
 associated_team_entity
-associated_workshop_files
 associatedmodel
+at %s\n
 at console
 atan2f
 atan2f@GLIBC_2.2.5
@@ -23837,11 +22096,9 @@ attack_projectiles
 attacker_player
 attribute_class
 attribute_controlled_attached_particles
-attribute_index
 attribute_name
 attribute_type
 attributes_matching_type
-attributes_string
 audioparams_t
 authors
 auto__cap_%s
@@ -23855,7 +22112,6 @@ auto_fires_when_full
 auto_in_combat
 autoaim_max_deflect
 autoaim_max_dist
-autograph_item_id
 autokick is disabled for %s\n
 automate
 autosave\n
@@ -23864,8 +22120,6 @@ autosavedangerousissafe\n
 autoswitchfrom
 autoswitchto
 avelocity
-avg_wait_time_join_late
-avg_wait_time_new
 axe_blade
 axtinguisher_properties
 bDangerMemory
@@ -23885,25 +22139,18 @@ bValidOnCurrentEnemy
 bWasRunningAnim
 back_headshot
 back_lower
-back_scratcher
 back_upper
 background
 backpack_expander
 backpack_slots
 badge_item_def
-badge_progress_bits
-badge_progress_updated
 bag of sugar
 ball_spawn_countdown
-ban_list_group_id
 banana
 banid %d "%s"\n
 bank
-banned_accountid
-base
 base_boss
 base_gcmessages.proto
-base_gcmessages.proto"X\n
 base_item_name
 base_player_teleported
 baseanimating.cpp
@@ -23912,7 +22159,6 @@ basecombatcharacter.cpp
 baseentity.cpp
 baseflex.cpp
 baseitem
-baseitem_def_index
 basename
 basevelocity
 basic_movement
@@ -23931,7 +22177,6 @@ beampredictable_id
 become_fireproof_on_hit_by_fire
 beinghealed
 beta
-beta_stress_test_event_active
 beveragetype
 bg_BG
 bidirectional_teleport
@@ -23948,7 +22193,6 @@ bip_spine_2
 birds
 birthday_player_circling
 bl_killtaunt
-blackbox
 blah
 blast_dmg_to_self
 bleeding_duration
@@ -23967,11 +22211,8 @@ blue_capture
 blue_score
 blue_score_prev
 blue_teleport
-body
 body_rightleft
 body_shell
-body_substring_keys
-body_substring_values
 body_yaw
 bodyshot_damage_modify
 bomb_carrier
@@ -23988,7 +22229,6 @@ bonePositionY
 bonePositionZ
 bone_followers
 bonus_lootlist
-bonus_objectives_required
 bonuseffect
 bool
 bool const& google::protobuf::internal::GeneratedMessageReflection::GetRaw<bool>(google::protobuf::Message const&, google::protobuf::FieldDescriptor const*) const
@@ -24067,7 +22307,6 @@ bot_turntable
 bot_view_scan
 bot_whack
 both
-bots
 bots_on_blue_team
 bottomtrack
 bounding_box_max
@@ -24113,7 +22352,6 @@ burningplayer_red
 busyactor
 by_cappers
 by_entindex
-bytes
 bytes. 
 c_breadmonster_sapper.mdl
 c_p2rec.mdl
@@ -24142,7 +22380,6 @@ cameraspace
 canSupportSet
 can_affect_market_name
 can_affect_recipe_component_name
-can_apply_paintkit
 can_be_restored
 can_breathe_under_water
 can_card_upgrade
@@ -24187,14 +22424,9 @@ capture_point
 carry_distance_offset
 cast_hull
 cast_ray
-casual_banned_time
-casual_criteria
-casual_low_priority
-casual_low_priority_time
 catapult_physics_drag_boost
 catcher
 category
-category_number
 catmullrom
 catmullrom_normalize
 catmullrom_normalize_x
@@ -24206,7 +22438,6 @@ cc_bot_selectweapon
 cc_combinedusesgender
 cc_combinedusesgender\n
 cc_disabled
-cc_generic_services
 cc_master
 cc_noattenuate
 cc_noattenuate\n
@@ -24230,7 +22461,6 @@ ch_createairboat
 ch_createjeep
 chainstodoor
 challenge_map_complete
-challenge_string
 chan_
 chance_restricted
 changelevel %s\n
@@ -24244,7 +22474,6 @@ charge_meter_on_hit
 charge_recharge_rate
 charge_turn_control
 chaseEnemyTolerance
-chat_suspension
 chdir
 chdir@GLIBC_2.2.5
 cheapwaterenddistance
@@ -24260,7 +22489,6 @@ christmas1
 christmas2
 christmas_gift_grab
 cig_smoke
-city
 civilian
 cl_autohelp
 cl_autoreload
@@ -24284,18 +22512,13 @@ cl_spec_mode %d
 cl_team
 cl_updaterate
 cl_upspeed
-claidheamohmor
 claim_type
 claimcode
-clanid
 class: %s
 classType
-class_id
 class_token_id
 class_transmogrifier
 class_usage
-class_usage_for_output
-classes_played
 classname %s used to create wrong class type\n
 classname missing from entity!\n
 clear_debug_overlays
@@ -24306,12 +22529,7 @@ cleats_dirt.StepLeft
 cleats_dirt.StepRight
 client_disconnect
 client_loot_lists
-client_msg_ranges
 client_quit
-client_session_id
-client_session_need
-client_steam_id
-client_version
 clip2_size
 clip_size
 clipsize_increase_on_kill
@@ -24328,21 +22546,17 @@ closedir
 closedir@GLIBC_2.2.5
 closedwelcomemenu
 closerange_backattack_minicrits
-cmd_get
-cmd_set
 coach/coach_attack_here.wav
 coach/coach_defend_here.wav
 coach/coach_go_here.wav
 coach/coach_look_here.wav
 coach_command
-code
 code length exceeds maximum
 code_controlled_bodygroup
 codes incomplete
 codes oversubscribed
 coldworld
 collecting_player
-collection_item_id
 collection_reference
 collection_reward
 collector
@@ -24360,14 +22574,10 @@ color_name
 color_random
 colormax
 colormin
-com.google.protobufB
-combine_multiply
 combo
 combo 
 comillow
-command_prefix
 commandline hook to run a nav_analyze and then quit.
-comment
 commentary_auto
 commentary_available
 commentary_cvarsnotchanging
@@ -24388,39 +22598,26 @@ competitive/comp_background_tier003a
 competitive/comp_background_tier004a
 competitive/comp_background_tier005a
 competitive_6v6
-competitive_access
 competitive_stage_logic_case
 competitive_state_changed
 competitive_stats_update
 competitive_victory
-complete_sounds
-completed_missions
-component_flags
 components
 concept.GetStringConcept()
 condition_key
 condition_logic
-condition_vars
-conditions_defindex
 condump_off
 condump_on
 conga_kill
-connect
 const_base_damage
 const_entity
 constant
-consumption_components
-contains_equipped_state
-contains_equipped_state_v2
 contents
-continue_token
-contract_completed
 contract_completed_bonus
 contract_completed_primary
 contract_score_bonus
 contract_score_primary
 contracts_end_date
-contribution_level
 contributions_%s
 control point to disable rendering if it is the camera
 control_point_1
@@ -24436,13 +22633,9 @@ controlpoint_endtouch
 controlpoint_light
 controlpoint_starttouch
 convar
-convars
 corner_depressor
 cosmetic_taunt_sound
 cosmetic_unusual_effects
-cost_in_local_currency
-count
-country
 counts_as_assister
 coverDist
 coverTolerance
@@ -24590,11 +22783,9 @@ crit_type
 crit_vs_wet_players
 crit_while_airborne
 critboost
-criteria
 criterion
 critgun_weaponmodel_blu
 critgun_weaponmodel_red
-critical
 critical_grenade_blue
 critical_grenade_red
 critical_rocket_blue
@@ -24637,19 +22828,14 @@ ctf_snowfall_final
 ctf_turbine
 ctf_turbine_winter
 ctf_well
-ctype
 cull_control_point
 cull_cost
 cull_radius
 cull_replacement_definition
 cur_val
-curr_connections
-currency
 currency_give
 current speed (goal): %g (%g)
 current value: %f
-current_match_id
-current_party_id
 curve_%s_to_curve_%s
 custom desc attr
 custom name attr
@@ -24663,7 +22849,6 @@ custom_particlesystem2
 custom_partner_taunt_initiator_per_class
 custom_partner_taunt_per_class
 custom_partner_taunt_receiver_per_class
-custom_ping_tolerance
 custom_position_x
 custom_position_y
 custom_sound
@@ -24730,9 +22915,7 @@ d3_citadel_
 d3_citadel_03
 d3_citadel_04
 d3_citadel_05
-d\n\rquest_options
 da_DK
-damage
 damage.txt
 damage_all_connected
 damage_blast_push
@@ -24762,26 +22945,20 @@ damagetoenablemotion
 damagetype
 dance_teleport_%s%d
 danish
-data
-data_center_population
 database_audit_table
 datamanager.cpp
-date
 daylightsavings
 dayofweek
 dayofyear
-days_to_expiration
 dbg_spew_connected_players_level
 dbghist_addline
 dbghist_dump
 de_DE
 deactive date
 deadflag
-deadlock_retries
 deadmodel
 deadringer_cheat_death
 death_flags
-deaths
 debug - disable trace query cache
 debug/debugempty
 debug_materialmodifycontrol
@@ -24796,7 +22973,6 @@ decoder_ring
 default_clip
 default_clip2
 default_drop_quantity
-default_item_sort
 default_skin
 defaultcurvetype
 defaultdelay
@@ -24804,8 +22980,6 @@ defaults
 defaultstyle
 defaultupgrade
 defaultwelcome
-defindex
-defining_obj_id
 deflect_arrow
 deflect_ball
 deflect_flare
@@ -24818,12 +22992,9 @@ deflect_sticky
 deflected_projectile
 deflection_size_multiplier
 delay %f
-deleted
 delivered_gift_item_def
-delta
 delta ang (dot)    : %.2f (%f)
 demo
-demo_sultan_sword
 demoman_det_stickies
 demorestart
 depletioncount
@@ -24858,9 +23029,6 @@ description_format
 description_string
 desired_distance
 despawn
-dest_bl
-dest_tl
-dest_tr
 destroy%i
 destroy_%s%i%s
 det_x
@@ -24874,18 +23042,13 @@ devshots_screenshot "%s"
 di_A
 di_B
 di_C
-di_a
-di_b
-di_c
 directionentityname
 directory
 disable weapon switch
 disableDodge
-disable_party_quest_progress
 disable_weapon_switch
 disableallshadows
 disabled 
-disabled_match_groups
 disablereceiveshadows
 disableshadows
 disallowed
@@ -24900,8 +23063,6 @@ dispenser_heal_blue
 dispenser_heal_red
 dispenser_touch_trigger
 display_name
-display_rating
-display_rating_change
 display_text
 display_to_team
 displayfirst
@@ -24930,22 +23091,14 @@ dlsym@GLIBC_2.2.5
 dmg.bullets
 dmg.club
 dmg.explosive
-dmg_demo
 dmg_from_melee
 dmg_from_ranged
 dmg_from_sentry_reduced
-dmg_pyro
-dmg_spy
 dmgspread
 do_A
 do_B
 do_C
-do_a
-do_b
-do_c
-do_not_inherit
 dodging
-domain
 domination:dominated
 domination:none
 domination:revenge
@@ -25025,8 +23178,6 @@ duck_token
 duck_upgradable
 ducks_streaked
 duckstreaks active
-duel__class_lock
-duel_ban_expiration
 duel_minigame
 duel_status
 duel_wins
@@ -25036,7 +23187,6 @@ dump_globals
 dumpentityfactories
 dumpeventqueue
 dumpgamestringtable
-duration
 dutch
 dxhr_arm_impact
 dxhr_arm_muzzleflash
@@ -25059,10 +23209,8 @@ easeout
 easy
 econ
 econ_gcmessages.proto
-econitem
 edict: %d
 edictindex
-editable
 effect_duration
 effect_hand_R
 effect_name
@@ -25100,7 +23248,6 @@ elementid_array
 elements
 elems
 elephant
-email_msg_type
 emitters
 emittime
 empty SpeakResponse input from %s to %s\n
@@ -25119,7 +23266,6 @@ endloop
 endnode
 endpos
 endsize
-endtime
 endwidth
 enempose
 enemyLOSTolerance
@@ -25132,7 +23278,6 @@ energy_weapon_no_drain
 energy_weapon_penetration
 engine2_start
 engine2_stop
-engineer_count
 enginesound
 english
 english_name
@@ -25200,7 +23345,6 @@ entityflame
 entityid
 entitylist.cpp
 entitytable_t
-entries
 entry_activity
 entry_sequence
 enum
@@ -25337,13 +23481,9 @@ equip_region
 equip_regions
 equip_regions_list
 equip_type
-equipped_state
-eresult
-eresult_deprecated
 erff
 erff@GLIBC_2.2.5
 error in transition graph: %s to %s\n
-errors
 es_419
 es_ES
 escape_hell
@@ -25353,15 +23493,12 @@ escort_scored
 eureka_teleport
 evaluator
 even_chance_templates
-event
 event_24_7
 event_data
 event_data_int
 event_delay
-event_expire_time
 event_key
 event_listener
-event_match_group
 event_mix
 event_name
 event_queue_saveload_proxy
@@ -25392,16 +23529,10 @@ expecting scalesettings data\n
 expecting valid tag type!!!
 expecting {
 expecting {\n
-expecting_invite
-expecting_request_to_join
-experiment_data
-experimental_map_key
 expf
 expf@GLIBC_2.27
 expiration date
 expiration_date
-expiration_time
-explicit_abandon
 explode_fire
 explode_on_ignite
 explode_particle
@@ -25417,9 +23548,7 @@ exponential_decay
 expradius
 expressions/%s.vfe
 extend .$0 {\n
-extendee
 extendfreeze
-extension_range
 extinguish_reduces_cooldown
 extinguish_restores_health
 extinguish_revenge
@@ -25474,28 +23603,15 @@ fadeoutsecs
 fadescale
 fadetime
 failed (+exclude rule)
-failed_lookup_steamids
-fake_ip
-fallback
 falling_impact_radius_pushback
 falling_impact_radius_stun
-false
 false 
-false"
-false"3\n"CMsgGCSetDisablePartyQuestProgress
-false:5\n\fdisplay_name
-false:>\n
-false:A\n
-false:Y\n
-falseB
-falseBY
 fanfriction
 fast_reload
 faulty context k:v pair in entity io %s\n
 fclose
 fclose@GLIBC_2.2.5
 featured
-featured_item_idx
 feign_death
 ffF@Sentry built
 fff?
@@ -25504,10 +23620,7 @@ ffffff
 fflush
 fflush@GLIBC_2.2.5
 fi_FI
-field
 fieldName
-field_id
-file
 filename
 filter_activator_class
 filter_activator_mass_greater
@@ -25575,7 +23688,6 @@ fish_damage_override
 fish_dormant
 fish_notice
 fish_notice__arm
-fixed_match_size
 fixed_shot_pattern
 fixedlength
 fixedlength\n
@@ -25601,8 +23713,6 @@ flag_reset_delay
 flag_returned
 flag_trail
 flagcaplimit
-flagged
-flags
 flagstatus_update
 flagtrail
 flame_drag
@@ -25640,10 +23750,7 @@ flexsettingindex
 flextimingtags
 flextimingtags\n
 flexweight_t
-flip_u
-flip_v
 flip_viewmodel
-float
 float const& google::protobuf::internal::GeneratedMessageReflection::GetRaw<float>(google::protobuf::Message const&, google::protobuf::FieldDescriptor const*) const
 float( %f )
 float64
@@ -25684,7 +23791,6 @@ force_distribute_currency_on_death
 force_friendly_fire
 force_map_reset
 force_output_description
-force_remove_all
 force_weapon_switch
 forceclosed
 forcecrouch
@@ -25700,8 +23806,6 @@ forcetime
 forcetoenablemotion
 foreign
 formation
-found
-found_friendship
 found_in_crate
 fov_desired
 fprintf
@@ -25718,7 +23822,6 @@ fread@GLIBC_2.2.5
 free
 free@GLIBC_2.2.5
 free_pass_peek_debug
-free_trial_expiration
 freepass_duration
 freepass_movetolerance
 freepass_peektime
@@ -25738,7 +23841,6 @@ ftell@GLIBC_2.2.5
 fuel
 full_reset
 full_round
-fully_complete_sounds
 funCBaseFlex
 func_
 func_achievement
@@ -25823,8 +23925,6 @@ func_water_analog
 func_weight_button
 fuse_mult
 fxtime
-g&3g
-g\n\rowning_region
 g_CCNameMap:  Event type at %i has wrong value (%i)!
 g_ClockSpeed
 g_ClockSpeedMillisecondsMultiplier
@@ -25867,7 +23967,6 @@ game_
 game_end
 game_forcerespawn
 game_gib_manager
-game_id
 game_info
 game_init
 game_intro_viewpoint
@@ -25881,11 +23980,6 @@ game_playerleave
 game_ragdoll_manager
 game_round_win
 game_score
-game_server_account_id
-game_server_identity_token
-game_server_sessions
-game_server_standing
-game_server_standing_trend
 game_team_master
 game_text
 game_text_tf
@@ -25895,7 +23989,6 @@ game_zone_player
 gameinterface.cpp
 gamematerial
 gamemonkey
-games
 gamestats.log
 gametitle
 gas_attack
@@ -25910,15 +24003,12 @@ gateway_item_name
 gc inter msg %s, SourceAppID %d, version %hd, job source %llu, job target %llu
 gc msg %s, SteamID %llu
 gc msg %s, SteamID %llu, version %hd, job source %llu, job target %llu
-gc_dir_index_source
-gc_info
 gcclient.cpp
 gcclient_sharedobjectcache.cpp
 gclogger.cpp
 gconly
 gcsdk_gcmessages.proto
 gcsystemmsgs.proto
-gcsystemmsgs.proto"j\n'CCommunity_GamePersonalDataCategoryInfo
 gear
 gearLimit
 gear_limit
@@ -25939,7 +24029,6 @@ gesture_melee_go
 gesture_rightleft
 gesture_updown
 gesture_width
-get_hits
 get_player
 getcwd
 getcwd@GLIBC_2.2.5
@@ -25958,10 +24047,8 @@ gibdir
 gibgravityscale
 gibmodel
 gibshooter
-gift__potential_targets
 gift_wrapped
 gifted
-gifter_steam_id
 giveaway_item
 givecurrentammo
 given 2 points & ent to ignore, return fraction along line that hits world or models
@@ -25979,7 +24066,6 @@ god_rays
 godmode OFF\n
 godmode ON\n
 golf ball
-google.protobuf"G\n
 google/protobuf/descriptor.cc
 google/protobuf/descriptor.pb.cc
 google/protobuf/descriptor.proto
@@ -27451,25 +25537,19 @@ grenade_launcher_mortar_mode
 grenade_no_bounce
 grenade_no_spin
 grenade_smoke_cycle
-grenadelauncher
 grenades1_resupply_denied
 grenades2_resupply_denied
 grenades3_resupply_denied
 groundlist
 group id
-group_criteria
-group_id
 group_number
 group_respawn_context
-groups
 gustdirchange
 gustduration
 h@33333Co@CAI_BasePhysicsFlyingBot
 hFollower
 hPathCorner
-hS33
 hUnreachableEnt
-h\n\rresponse_code
 halfhealth
 halloween fire rate bonus
 halloween increased jump height
@@ -27512,12 +25592,8 @@ handle_train_movement
 hap_HasDevice
 hardware
 hardware%d
-has_no_recent_password_resets
-has_prior_purchase_history
 has_slots
 has_spiral
-has_team_textures
-hashed_challenge_string
 hat only unusual effect
 head scale
 head-steady
@@ -27531,7 +25607,6 @@ head_tilt
 head_updown
 head_yaw
 header
-headers
 headless_hatman
 headshot_damage_modify
 headtaker
@@ -27540,12 +25615,9 @@ heal_on_kill
 healer
 healhuff_blu
 healhuff_red
-healing
 healing_array_element
-healing_bronze
 healing_mastery
 healing_rank
-healing_silver
 healshot_trail_blue
 healshot_trail_red
 healtarget:alive
@@ -27572,7 +25644,6 @@ hide_annotation
 hide_bodygroups_deployed_only
 hide_lootlist
 hide_server
-high
 highfive_blue
 highfive_red
 hightower_teleport_vortex
@@ -27636,8 +25707,6 @@ hype_resets_on_jump
 iActivity
 iCollide
 iCurTask
-iD,ah
-iE2D
 iFlags
 iLockedSentence
 iLoopBreakTriggerMethod
@@ -27647,8 +25716,6 @@ iTemplateIndex
 iTriggerMethod
 iUnlockedSentence
 iVal
-i\n\tPingEntry
-i]Wb
 ico_notify_partner_taunt
 icon display model
 iconv
@@ -27657,7 +25724,6 @@ iconv_close
 iconv_close@GLIBC_2.2.5
 iconv_open
 iconv_open@GLIBC_2.2.5
-identifier_value
 idle: %s, weight: %.2f\n
 ifm_basecamera_camerastate
 ignite_particle_name
@@ -27667,7 +25733,6 @@ ignore
 ignorePhonemes
 ignorePhonemes %s\n
 ignore_enabled
-ignore_enabled_flag
 ignoredEntity
 ignoredebris
 ignoremsg
@@ -27691,12 +25756,8 @@ impulse_x
 impulse_y
 impulse_z
 in-game
-in_coaches_list
-in_game_tracker_res
-in_use
 increased air control
 increment
-increment_value
 indexindex
 inertiafactor
 inertiascale
@@ -27741,18 +25802,11 @@ info_radial_link_controller
 info_target
 info_teleport_destination
 infodecal
-infos
-inherit
-inherit_reference_variables
-initial_average_mm_rating
 initial_command
-initial_inventory
 initial_particles
-initial_quantity
 initializers
 initiator
 initiator_score
-initiator_steam_id
 inmax
 inmin
 inner_radius
@@ -27760,21 +25814,14 @@ input
 input: (%s) -> (%s,%s), from (%s)\n
 input: (%s,%d) -> (%s,%s), from (%s)\n
 input: (%s,%s) -> (%s,%s), from (%s)\n
-input_item_dupe_counts
 input_items
-input_items_criteria
 inspect_panel_dist
-instance"
 instance_data
-instance_def_type_header_only
-instance_def_type_quest
-instance_def_type_quest_theme
 instanced_scripted_scene
 int const& google::protobuf::internal::GeneratedMessageReflection::GetRaw<int>(google::protobuf::Message const&, google::protobuf::FieldDescriptor const*) const
 int( %d = 0x%X )
 int_array
 intended_target
-interface_name
 interior
 intermediate
 interrupt
@@ -27787,57 +25834,39 @@ invalid builder
 inventoryPos
 inventory_updated
 invert_exclusion
-invited_lobby_id
-inviter
 invulnerable
 irlenous
 is australium item
+is commodity
 is marketable
 isCrit
 is_a_sword
-is_account_locked_down
 is_australium_item
-is_banned_future
 is_campaign
-is_community_banned
 is_console
 is_direct_gift
 is_even_chance_attr
 is_festivized
-is_free_trial_account
 is_giger_counter
 is_hidden_set
-is_identifying
-is_inventory_public
-is_low_violence
 is_new
 is_operation_pass
 is_pack_bundle
 is_partner_taunt
 is_passive_weapon
 is_pc
-is_phone_identifying
-is_phone_verified
-is_profile_public
 is_reference_collection
-is_school_account
 is_sendprop
 is_set_bonus
-is_steamguard_enabled
 is_throwable_chargeable
 is_throwable_primable
 is_tool
-is_trade_banned
-is_two_factor_auth_enabled
 is_user_generated
-is_valve_server
-is_wallet_cash_trusted
 isalnum
 isalnum@GLIBC_2.2.5
 isalpha
 isalpha@GLIBC_2.2.5
 isbuilder
-ismember
 isspace
 isspace@GLIBC_2.2.5
 isstrange
@@ -27855,7 +25884,6 @@ iszTheirWeapon
 iszVal
 it_IT
 italian
-item
 item name text override
 item style override
 item1
@@ -27884,13 +25912,8 @@ item_currencypack_custom
 item_currencypack_large
 item_currencypack_medium
 item_currencypack_small
-item_def
-item_def_index
-item_definition_index
-item_definition_template
 item_desc_tool_target
 item_description
-item_dest_item_id
 item_dynamic_resupply
 item_eater_recharger
 item_enable_content_streaming
@@ -27907,21 +25930,16 @@ item_healthkit_medium
 item_healthkit_small
 item_healthvial
 item_iconname
-item_id
-item_ids
 item_level_max
 item_level_min
-item_level_set
 item_levels
 item_logname
 item_meter_charge_type
 item_meter_damage_for_full_charge
 item_meter_resupply_denied
-item_name_custom
 item_pickup
 item_placement
 item_poseparam
-item_positions
 item_powerup_crit
 item_powerup_rune
 item_powerup_rune_temp
@@ -27929,13 +25947,10 @@ item_powerup_uber
 item_quality_chance_common
 item_quality_chance_rare
 item_quality_chance_unique
-item_quality_set
 item_rarity
 item_replace
 item_rpg_round
 item_schema_initialized
-item_schema_version
-item_sell_listings
 item_series
 item_series_types
 item_set
@@ -27943,7 +25958,6 @@ item_sets
 item_show_whitelistable_definitions
 item_slot_criteria
 item_sodacan
-item_src_item_id
 item_suit
 item_teamflag
 item_teamflag_return_icon
@@ -27954,12 +25968,7 @@ item_whitelist.txt
 itemdef
 itemdef_restrictions
 itemdefindex
-iteminfo
-itempack__ack_immediately
 itemrarity_restrictions
-items
-items_fulfilled
-items_game_url
 itemslot
 itemtrackers
 ja_JP
@@ -27967,43 +25976,17 @@ japanese
 jarate_attack
 jarate_backstabber
 jarate_duration
-java_generate_equals_and_hash
-java_generic_services
-java_multiple_files
-java_outer_classname
-java_string_check_utf8
 jaw_clencher
 jaw_drop
 jaw_talking
 jklmnopqrstuvwxyzyxwvutsrqponmlkj
 job.cpp
 jobmgr.cpp
-join_player_id
 joinclass
 jointeam
 jointeam_nomenus
 jumping_state
 k>DT_TFProjectile_EnergyRing
-kGameCategory_Arena
-kGameCategory_AttackDefense
-kGameCategory_CP
-kGameCategory_CTF
-kGameCategory_Community_Update
-kGameCategory_Competitive_6v6
-kGameCategory_Escort
-kGameCategory_EscortRace
-kGameCategory_Event247
-kGameCategory_EventMix
-kGameCategory_Featured
-kGameCategory_Halloween
-kGameCategory_Koth
-kGameCategory_Misc
-kGameCategory_Other
-kGameCategory_Passtime
-kGameCategory_Powerup
-kGameCategory_Quickplay
-kGameCategory_RobotDestruction
-kGameCategory_SD
 kHolidayCount
 kHoliday_AprilFools
 kHoliday_Christmas
@@ -28019,10 +26002,6 @@ kHoliday_Soldier
 kHoliday_Summer
 kHoliday_TFBirthday
 kHoliday_Valentines
-kReason_CHEATING
-kReason_GRIEFING
-kReason_HARASSMENT
-kReason_INVALID
 kRenderEnvironmental
 kRenderFxClampMinScale
 kRenderFxDistort
@@ -28061,63 +26040,6 @@ kRenderTransAlphaAdd
 kRenderTransColor
 kRenderTransTexture
 kRenderWorldGlow
-kStatus_Created
-kStatus_GenericFailure
-kStatus_NoPrivs
-kStatus_TooMany
-k\n\tstar_type
-k_EGCMsgAccountLockStatusChange
-k_EGCMsgAccountTwoFactorChange
-k_EGCMsgAchievementAwarded
-k_EGCMsgAddFreeLicense
-k_EGCMsgAddFreeLicenseResponse
-k_EGCMsgAppInfoUpdated
-k_EGCMsgCheckClanMembership
-k_EGCMsgCheckFriendship
-k_EGCMsgCheckFriendshipResponse
-k_EGCMsgConCommand
-k_EGCMsgDPPartnerMicroTxns
-k_EGCMsgFailedToCreate
-k_EGCMsgFindAccounts
-k_EGCMsgGenericReply
-k_EGCMsgGetAccountDetails
-k_EGCMsgGetAppFriendsList
-k_EGCMsgGetCommands
-k_EGCMsgGetCommandsResponse
-k_EGCMsgGetEmailTemplate
-k_EGCMsgGetIPASN
-k_EGCMsgGetIPASNResponse
-k_EGCMsgGetIPLocation
-k_EGCMsgGetIPLocationResponse
-k_EGCMsgGetLicenses
-k_EGCMsgGetPartnerAccountLink
-k_EGCMsgGetPersonaNames
-k_EGCMsgGetPersonaNamesResponse
-k_EGCMsgGetPurchaseTrustStatus
-k_EGCMsgGetSystemStats
-k_EGCMsgGetSystemStatsResponse
-k_EGCMsgGetUserGameStatsSchema
-k_EGCMsgGetUserStats
-k_EGCMsgGetUserStatsDEPRECATED
-k_EGCMsgGetUserStatsResponse
-k_EGCMsgGrantGuestPass
-k_EGCMsgGrantGuestPassResponse
-k_EGCMsgInvalid
-k_EGCMsgInviteUserToLobby
-k_EGCMsgLookupAccountFromInput
-k_EGCMsgMasterSetDirectory
-k_EGCMsgMasterSetWebAPIRouting
-k_EGCMsgMemCachedDelete
-k_EGCMsgMemCachedGet
-k_EGCMsgMemCachedGetResponse
-k_EGCMsgMemCachedSet
-k_EGCMsgMemCachedStats
-k_EGCMsgMemCachedStatsResponse
-k_EGCMsgMultiplexMsg
-k_EGCMsgPostAlert
-k_EGCMsgPreTestSetup
-k_EGCMsgReceiveInterAppMessage
-k_EGCMsgRecordSupportAction
 k_EGCMsgResponseDenied
 k_EGCMsgResponseInvalid
 k_EGCMsgResponseNoMatch
@@ -28126,269 +26048,7 @@ k_EGCMsgResponseOK
 k_EGCMsgResponseServerError
 k_EGCMsgResponseTimeout
 k_EGCMsgResponseUnknownError
-k_EGCMsgSQLStats
-k_EGCMsgSQLStatsResponse
-k_EGCMsgSendEmail
-k_EGCMsgSendEmailResponse
-k_EGCMsgSendHTTPRequest
-k_EGCMsgSendHTTPRequestResponse
-k_EGCMsgSetOptions
-k_EGCMsgSetOptionsResponse
-k_EGCMsgStartGameserver
-k_EGCMsgStartPlaying
-k_EGCMsgStopGameserver
-k_EGCMsgStopPlaying
-k_EGCMsgSystemBase
-k_EGCMsgSystemBase2
-k_EGCMsgSystemStatsSchema
-k_EGCMsgUpdateSession
-k_EGCMsgVacVerificationChange
-k_EGCMsgValidateSession
-k_EGCMsgValidateSessionResponse
-k_EGCMsgWGRequest
-k_EGCMsgWGResponse
-k_EGCMsgWebAPIJobRequest
-k_EGCToGCMsgMasterAck
-k_EGCToGCMsgMasterAckResponse
-k_EGCToGCMsgRouted
-k_EGCToGCMsgRoutedReply
-k_EMsgForceSOCacheResend
-k_EMsgGCAbandonCurrentGame
-k_EMsgGCAdjustItemEquippedState
-k_EMsgGCApplyAutograph
-k_EMsgGCApplyBaseItemXifier
-k_EMsgGCApplyDuckToken
-k_EMsgGCApplyStrangePart
-k_EMsgGCApplyStrangeRestriction
-k_EMsgGCApplyUpgradeCard
-k_EMsgGCApplyXifier
-k_EMsgGCApplyXifierResponse
-k_EMsgGCBackpackSortFinished
-k_EMsgGCClientConnectToServer
-k_EMsgGCClientGoodbye
-k_EMsgGCClientHello
-k_EMsgGCClientRequestMarketData
-k_EMsgGCClientVersionUpdated
-k_EMsgGCClientWelcome
-k_EMsgGCCoaching_AddToCoaches
-k_EMsgGCCoaching_AskCoach
-k_EMsgGCCoaching_CoachJoinGame
-k_EMsgGCCoaching_CoachJoined
-k_EMsgGCCoaching_CoachJoining
-k_EMsgGCCoaching_FindCoach
-k_EMsgGCCollectItem
-k_EMsgGCConVarUpdated
-k_EMsgGCConsumePaintKit
-k_EMsgGCCraftCollectionUpgrade
-k_EMsgGCCraftCommonStatClock
-k_EMsgGCCraftHalloweenOffering
-k_EMsgGCCraftResponse
-k_EMsgGCCustomizeItemTexture
-k_EMsgGCDataCenterPing_Update
-k_EMsgGCDelete
-k_EMsgGCDeliverGift
-k_EMsgGCDev_GrantWarKill
-k_EMsgGCDev_NewItemRequest
-k_EMsgGCExitMatchmaking
-k_EMsgGCGameServerInfo
-k_EMsgGCGameServerKickingLobby
-k_EMsgGCGiftWrapItem
-k_EMsgGCGiftWrapItemResponse
-k_EMsgGCGiftedItems
-k_EMsgGCGoldenWrenchBroadcast
-k_EMsgGCItemAcknowledged
-k_EMsgGCItemEaterRecharger
-k_EMsgGCItemPreviewCheckStatus
-k_EMsgGCItemPreviewExpire
-k_EMsgGCItemPreviewRequest
-k_EMsgGCKickPlayer_DEPRECATED
-k_EMsgGCLANServerAvailable
-k_EMsgGCLeaverDetected
-k_EMsgGCLeaverDetectedResponse
-k_EMsgGCLookupAccount
-k_EMsgGCLookupAccountName
-k_EMsgGCLookupAccountResponse
-k_EMsgGCMOTDRequest
-k_EMsgGCMOTDRequestResponse
-k_EMsgGCMatchHistoryLoad
-k_EMsgGCMatchMakerStatsResponse
-k_EMsgGCMatchmakingProgress
-k_EMsgGCMvMVictory
-k_EMsgGCMvMVictoryInfo
-k_EMsgGCMvMVictoryReply
-k_EMsgGCNameBaseItem
-k_EMsgGCNameBaseItemResponse
-k_EMsgGCNameItem
-k_EMsgGCNameItemNotification
-k_EMsgGCPaintItem
-k_EMsgGCPaintItemResponse
-k_EMsgGCParty_ChatMsg
-k_EMsgGCParty_InvitePlayer
-k_EMsgGCParty_KickMember
-k_EMsgGCParty_MMError
-k_EMsgGCParty_PromoteToLeader
-k_EMsgGCParty_QueueForMatch
-k_EMsgGCParty_QueueForStandby
-k_EMsgGCParty_RemoveFromQueue
-k_EMsgGCParty_RequestJoinPlayer
-k_EMsgGCParty_SendChat
-k_EMsgGCParty_SetOptions
-k_EMsgGCPingRequest
-k_EMsgGCPingResponse
-k_EMsgGCPlayerLeftMatch
-k_EMsgGCPlayerLeftMatchResponse
-k_EMsgGCPresets_SetItemPosition
-k_EMsgGCQuestComplete_Debug
-k_EMsgGCQuestCompleted
-k_EMsgGCQuestDiscard_Request
-k_EMsgGCQuestNodeTurnIn
-k_EMsgGCQuestObjective_Progress
-k_EMsgGCQuestProgressReport
-k_EMsgGCQuestStrangeEvent
-k_EMsgGCReadyUp
-k_EMsgGCRemoveCustomTexture
-k_EMsgGCRemoveFestivizer
-k_EMsgGCRemoveGiftedBy
-k_EMsgGCRemoveGiftedByResponse
-k_EMsgGCRemoveItemName
-k_EMsgGCRemoveItemPaint
-k_EMsgGCRemoveKillStreak
-k_EMsgGCRemoveMakersMark
-k_EMsgGCRemoveStrangePart
-k_EMsgGCRemoveUniqueCraftIndex
-k_EMsgGCRemoveUpgradeCard
-k_EMsgGCReplicateConVars
-k_EMsgGCReportWarKill
-k_EMsgGCRequestAnnouncements
-k_EMsgGCRequestChatChannelList
-k_EMsgGCRequestInventoryRefresh
-k_EMsgGCRequestMatchMakerStats
-k_EMsgGCRequestStoreSalesData
-k_EMsgGCRequestSubGCSessionInfo
-k_EMsgGCRequestTF2Friends
-k_EMsgGCResetStrangeScores
-k_EMsgGCSaxxyBroadcast
-k_EMsgGCSaxxy_Awarded
-k_EMsgGCServerAvailable
-k_EMsgGCServerGoodbye
-k_EMsgGCServerHello
-k_EMsgGCServerRentalsBase
-k_EMsgGCServerVersionUpdated
-k_EMsgGCServerWelcome
-k_EMsgGCSetItemPositions
-k_EMsgGCSetItemStyle
-k_EMsgGCSetSingleItemPosition
-k_EMsgGCShuffleCrateContents
-k_EMsgGCSortItems
-k_EMsgGCStoreGetUserData
-k_EMsgGCStorePurchaseCancel
-k_EMsgGCStorePurchaseFinalize
-k_EMsgGCStorePurchaseInit
-k_EMsgGCStorePurchaseQueryTxn
-k_EMsgGCSystemMessage
-k_EMsgGCTFSpecificItemBroadcast
-k_EMsgGCToGCDirtySDOCache
-k_EMsgGCToGCPingRequest
-k_EMsgGCToGCPingResponse
-k_EMsgGCToGCSOCacheSubscribe
-k_EMsgGCToGCSOCacheUnsubscribe
-k_EMsgGCToGCThankedByNewUser
-k_EMsgGCToGCUpdateSQLKeyValue
-k_EMsgGCToGC_SendNotification
-k_EMsgGCTradingBase
-k_EMsgGCTrading_CancelSession
-k_EMsgGCTrading_SessionClosed
-k_EMsgGCTrading_StartSession
-k_EMsgGCUnlockCrate
-k_EMsgGCUnlockCrateResponse
-k_EMsgGCUnwrapGiftRequest
-k_EMsgGCUnwrapGiftResponse
-k_EMsgGCUpdateItemSchema
-k_EMsgGCUpdateSubGCSessionInfo
-k_EMsgGCUseItemRequest
-k_EMsgGCUseItemResponse
-k_EMsgGCUsedClaimCodeItem
-k_EMsgGCVerifyCacheSubscription
-k_EMsgGCVoteKickPlayerRequest
-k_EMsgGC_AcceptLobbyInvite
-k_EMsgGC_AcceptLobbyInviteReply
-k_EMsgGC_AcknowledgeXP
-k_EMsgGC_Duel_Request
-k_EMsgGC_Duel_Response
-k_EMsgGC_Duel_Results
-k_EMsgGC_Duel_Status
-k_EMsgGC_GameServer_AckPolicy
-k_EMsgGC_GameServer_AuthResult
-k_EMsgGC_GameServer_LevelInfo
-k_EMsgGC_GameServer_List
-k_EMsgGC_Halloween_GrantItem
-k_EMsgGC_Halloween_Merasmus2012
-k_EMsgGC_Halloween_ReservedItem
-k_EMsgGC_KickPlayerFromLobby
-k_EMsgGC_Match_Result
-k_EMsgGC_Match_ResultResponse
-k_EMsgGC_Painkit_DevGrant
-k_EMsgGC_ProcessMatchVoteKick
-k_EMsgGC_QP_PlayerJoining
-k_EMsgGC_QP_ScoreServers
-k_EMsgGC_QuestDevGive
-k_EMsgGC_QuestIdentify
-k_EMsgGC_QuestMapDebug
-k_EMsgGC_QuestMapPurchaseReward
-k_EMsgGC_QuestMapUnlockNode
-k_EMsgGC_ReportAbuse
-k_EMsgGC_ReportAbuseResponse
-k_EMsgGC_ReportPlayer
-k_EMsgGC_SDRTicket
-k_EMsgGC_SurveyQuestionRequest
-k_EMsgGC_SurveyQuestionResponse
-k_EMsgGC_TFClientInit
-k_EMsgGC_UpdatePeriodicEvent
-k_EMsgGC_War_IndividualUpdate
-k_EMsgGC_War_JoinWar
-k_EMsgGC_War_RequestGlobalStats
-k_EMsgGC_WorldStatusBroadcast
-k_EProtoObjectLobbyInvite
-k_EProtoObjectPartyInvite
-k_ESOMsg_CacheSubscribed
-k_ESOMsg_CacheSubscriptionCheck
-k_ESOMsg_CacheUnsubscribed
-k_ESOMsg_Create
-k_ESOMsg_Destroy
-k_ESOMsg_Update
-k_ESOMsg_UpdateMultiple
-k_UnlockStyle_Failed_CantAfford
-k_UnlockStyle_Failed_CantCommit
-k_UnlockStyle_Failed_PreReq
-k_UnlockStyle_Succeeded
 k_eTFMatchGroup_%s
-k_eTFMatchGroup_Casual_12v12
-k_eTFMatchGroup_Casual_6v6
-k_eTFMatchGroup_Casual_9v9
-k_eTFMatchGroup_Casual_Default
-k_eTFMatchGroup_Casual_First
-k_eTFMatchGroup_Casual_Last
-k_eTFMatchGroup_Event_Default
-k_eTFMatchGroup_Event_First
-k_eTFMatchGroup_Event_Last
-k_eTFMatchGroup_First
-k_eTFMatchGroup_Invalid
-k_eTFMatchGroup_Invalid"
-k_eTFMatchGroup_Ladder_12v12
-k_eTFMatchGroup_Ladder_6v6
-k_eTFMatchGroup_Ladder_9v9
-k_eTFMatchGroup_Ladder_Default
-k_eTFMatchGroup_Ladder_First
-k_eTFMatchGroup_Ladder_Last
-k_eTFMatchGroup_MvM_Default
-k_eTFMatchGroup_MvM_First
-k_eTFMatchGroup_MvM_Last
-k_eTFMatchGroup_MvM_MannUp
-k_eTFMatchGroup_MvM_Practice
-k_eTFPartyChatType_Invalid
-k_eTFPartyChatType_MemberChat
-k_eTFSyncedMMMenuStep_Invalid
-k_eTFSyncedMMMenuStep_None
 kart_dust_trail_blue
 kart_dust_trail_red
 kart_impact_sparks
@@ -28396,14 +26056,12 @@ kartdamage_4
 kartimpacttrail
 kdtree_test
 keep_disguise_on_attack
-key_id
 key_to_lookup
 keyframe_rope
 keyframe_track
 keyless_case
 keymappingindex
 keynameindex
-keys
 keyvalues2
 keyvalues2_flat
 keyvalues2_flat_v1
@@ -28440,10 +26098,7 @@ killeater_event_contracts
 killeater_event_points
 killed_ball_carrier
 killed_capping_player
-killer_account_id
-killer_steam_id
 killing %s\n
-kills
 kills_rank
 killsthislife
 killstreak tier
@@ -28453,7 +26108,6 @@ killstreak_tier
 killstreakifier
 killtarget
 killvector
-knife
 ko_KR
 kochanek
 kochanek_early
@@ -28501,29 +26155,18 @@ koth_viaduct_event
 koth_winter_ridge
 krampus_melee
 krampus_ranged
-label
 ladderSurfaceProperties
 landmarkModelSpace
-language
 large car
-last_connect_time
-last_duel_account_id
-last_duel_status
-last_duel_timestamp
 last_shot_crits
 last_valid_class
 latam
-late_join_eligible
-latitude
 launchDirection
 launchTarget
-lazy
 lchown@GLIBC_2.2.5
 ld-linux-x86-64.so.2
 lead_fail
-leader_ui_state
 leaderboard_name
-leading_comments
 leave_vehicle
 left_
 left_cheek_raiser
@@ -28540,13 +26183,10 @@ left_puckerer
 left_upper_raiser
 leftedge
 leftedge %s %.3f 
-legacy_mission_index
 lengthprop%d
 lengthproxy
-level
 levelName
 level_data
-level_id
 lfomodpitch
 lfomodvol
 lforate
@@ -28560,7 +26200,6 @@ libstdc++.so.6
 libsteam_api.so
 libtier0.so
 libvstdlib.so
-license
 lifeleech_on_damage
 lifespan_decay
 lifetime_max
@@ -28575,7 +26214,6 @@ lightcolor
 lightfov
 lightonlytarget
 lightworld
-limit_maxbytes
 limited quantity item
 linear_interp
 linked_cp_1
@@ -28594,7 +26232,6 @@ linked_pathtrack_5
 linked_pathtrack_6
 linked_pathtrack_7
 linked_pathtrack_8
-links
 linktype
 listRecentNPCSpeech
 list_image
@@ -28624,23 +26261,18 @@ loadout_slot_taunt8
 loadout_slot_utility
 loadtime
 loaner_defindex
-lobby_id
-lobby_match_group
-lobby_mm_version
 locBody
 locHeader
 loc_key
 loc_key_weapon
 localSound
 localhost
-localization_token
 localize_name
 localized_desc
 localized_name
 localizedname
 localplayer_changeclass
 localtime@GLIBC_2.2.5
-location
 locationproxy
 lock to bone
 lock to saved position along path
@@ -28683,7 +26315,6 @@ logic_relay
 logic_scene_list_manager
 logic_script
 logic_timer
-logical
 long const& google::protobuf::internal::GeneratedMessageReflection::GetRaw<long>(google::protobuf::Message const&, google::protobuf::FieldDescriptor const*) const
 longjmp
 longjmp@GLIBC_2.2.5
@@ -28706,7 +26337,6 @@ loot_list
 loot_list_collection
 loot_list_footer_desc
 loot_list_header_desc
-loot_list_name
 loot_response
 lootlist_job_template_definitions
 lootlist_job_templates
@@ -28722,7 +26352,6 @@ lowV_debrischunks
 lowerThreshold
 lowerleft
 lowerright
-lpHP
 lseek
 lseek@GLIBC_2.2.5
 lservercfgfile
@@ -32925,7 +30554,6 @@ malloc_usable_size
 malloc_usable_size@GLIBC_2.2.5
 mamamamamama
 mannup_points
-mannup_tour_name
 mantreads
 map %s\n
 map key must name a scalar or string field.
@@ -32935,7 +30563,6 @@ map_check_version %s %d
 map_file_override
 map_has_deep_water
 map_key must not name a repeated field.
-map_name
 map_showspawnpoints
 mapcycle.txt
 mapcyclefile
@@ -32972,7 +30599,6 @@ mass %.1f
 mass ratio %.4f:%.4f\n
 massoverride
 massscale
-master_dir_index
 master_maps_list
 matDesiredLocalToWorld
 matEntityToTemplate
@@ -32981,12 +30607,9 @@ mat_dxlevel
 mat_hdr_manual_tonemap_rate
 mat_hdr_tonemapscale
 mat_queue_mode
-match_id
 matched, weight %4.2f (s %4.2f x c %4.2f)
 matchingTeleporter
 matchmaking_categories
-matchmaking_queues
-matchmaking_state
 matchonce
 materialName
 materialVar
@@ -33017,7 +30640,6 @@ max_particles
 max_pass_range
 max_points
 max_recipients
-max_spectators
 max_speed
 max_val
 max_waves
@@ -33057,7 +30679,6 @@ medicgun_beam_red_invun
 medicgun_beam_red_targeted
 medicgun_invulnstatus_fullcharge_blue
 medicgun_invulnstatus_fullcharge_red
-medigun
 medigun_blast_resist_deployed
 medigun_blast_resist_passive
 medigun_bullet_resist_deployed
@@ -33080,9 +30701,6 @@ melts_in_fire
 memagold
 memalign
 memalign@GLIBC_2.2.5
-member
-member_account_id
-members
 memcmp
 memcmp@GLIBC_2.2.5
 memcpy
@@ -33110,7 +30728,6 @@ merasmus_escape_warning
 merasmus_escaped
 merasmus_grenade
 merasmus_killed
-merasmus_level
 merasmus_object_spawn
 merasmus_player_bomb
 merasmus_prop_found
@@ -33121,21 +30738,16 @@ merasmus_summoned
 merasmus_tp
 merasmus_tp_bits
 merasmus_zap
-merging_key_field
-message
 message $0
-message_set_wire_format
 messageattenuation
 messagelist.cpp
 messagesound
 messagevolume
-method
 microtxn
 midnight
 milk_attack
 minState
 minStateTime
-min_allowed_version
 min_ilevel
 min_points
 min_speed_change
@@ -33158,7 +30770,6 @@ minicrits_become_crits
 minigame_type
 minigame_win
 minigame_won
-minigun
 minigunfiretime
 minimum rendered frames
 minimum sim tick rate
@@ -33575,7 +31186,6 @@ models/workshop_partner/weapons/c_models/c_shogun_warpack/c_shogun_warpack.mdl
 models\weapons\c_models\c_engineer_gunslinger.mdl
 modelscale
 modelsounds.cache
-modification_type
 modifiedconvars_t
 momentary_door
 momentary_rot_button
@@ -33703,12 +31313,7 @@ mp_windifference_min
 mp_winlimit
 mp_winlimit %d;
 msg_fallback
-msg_type
-msgpool_hard_limit
-msgpool_soft_limit
 msgprotobuf.cpp
-msgs
-msgtype
 mul_nonrocketjump_attackrate
 mult_aiming_knockback_resistance
 mult_airblast_cone_scale
@@ -33808,8 +31413,6 @@ mult_wpn_burndmg
 mult_wpn_burntime
 multi_manager
 multiplayer_break
-multiple_instances
-multiqueue_blocked
 multisource
 music.mvm_end_last_wave
 music.mvm_end_mid_wave
@@ -33836,23 +31439,18 @@ mvm_bomb_alarm_triggered
 mvm_bomb_carrier_killed
 mvm_bomb_deploy_reset_by_player
 mvm_bomb_reset_by_player
-mvm_bootcamp_missions
 mvm_cash_embers
 mvm_cash_embers_red
 mvm_cash_explosion
 mvm_creditbonus_all
 mvm_creditbonus_all_advanced
 mvm_creditbonus_wave
-mvm_credits_acquired
-mvm_credits_dropped
 mvm_kill_robot_delivering_bomb
 mvm_levelup1
 mvm_levelup2
 mvm_levelup3
 mvm_mannhattan
 mvm_mannhattan_pit
-mvm_mannup_missions
-mvm_mannup_tour
 mvm_maps
 mvm_medic_powerup_shared
 mvm_mission_complete
@@ -33867,11 +31465,9 @@ mvm_sentrybuster_detonate
 mvm_sentrybuster_killed
 mvm_sniper_headshot_currency
 mvm_soldier_shockwave
-mvm_squad_surplus
 mvm_squad_surplus_reward
 mvm_tank_destroyed_by_players
 mvm_tours
-mvm_wave
 mvm_wave_failed
 my_team:0
 my_team:1
@@ -33885,12 +31481,10 @@ nObjects
 nPlayerDeaths
 nTargetWCNodeID
 nWCNodeID
-n\n\nDefinition
 nailtrails_medic_blue
 nailtrails_medic_blue_crit
 nailtrails_medic_red
 nailtrails_medic_red_crit
-name
 nameable
 namechange
 namelockid %d %d\n
@@ -34099,9 +31693,6 @@ nearest
 nearz
 neck_trans
 needs_weapon
-negative_int_value
-net_payment_row_usd
-net_payment_us_usd
 netmsg
 networkid
 never craftable
@@ -34109,18 +31700,13 @@ nevertimeout
 new_flame
 new_flame_crit_blue
 new_flame_crit_red
-new_slot
-new_team
-new_user_accountid
 newname
 newtarget
 newunit
-nexonid
 nextMap
 next_action_point
 next_level_cvar
 next_map_vote
-next_maps_for_vote
 next_rarity
 nextassaultpoint
 nextthink
@@ -34138,15 +31724,12 @@ no_item_def
 no_metal_from_dispensers_while_active
 no_primary_ammo_from_dispensers
 no_self_blast_dmg
-no_standard_descriptor_accessor
 noclip OFF\n
 noclip ON\n
 nocrits
 nodamageforces
-node"r\n
 node_create %s %d %g %g %g
 node_delete %d
-node_id
 node_viewer_fly
 node_viewer_human
 node_viewer_large
@@ -34166,16 +31749,11 @@ noquickplay
 noquota
 norepeat
 norespawntime
-normalized_rating
-normalized_uncertainty
 norwegian
 noscene
 not started
 notarget OFF\n
 notarget ON\n
-notification_id
-notification_res
-notification_string
 notsolid
 nozzle
 npc_*
@@ -34205,17 +31783,12 @@ npc_vphysics
 npcstate
 null code
 num_direct_hit
-num_flags_last_day
 num_hit
 num_item_presets
 num_item_presets not set!
-num_new_users_helped
 num_sections
-num_spectators
 num_upgrades
-num_votes_last_day
 numadvanced
-number
 numbronze
 numflexsettings
 numgold
@@ -34226,7 +31799,6 @@ numsilver
 nutsnbolts_build
 nutsnbolts_repair
 nutsnbolts_upgrade
-o\n\nradio_freq
 obj_attachment_sapper
 obj_capture_damage
 obj_child_damage_factor
@@ -34253,7 +31825,6 @@ object_type
 object_verbose
 objectives
 objectivetrackers
-objects
 objecttype
 objtype:dispenser
 objtype:sapper
@@ -34266,7 +31837,6 @@ occludernumber
 odds
 offense
 official
-offset
 old_radiusdamage
 oldname
 oldteam
@@ -34275,7 +31845,6 @@ on_spawn
 onbreak
 onfirstimpact
 onlaunch
-online
 onlyVelocityCheck
 only_others
 only_self
@@ -34289,31 +31858,20 @@ opendir
 opendir@GLIBC_2.2.5
 operation
 operation_lootlist
-operation_node
 operation_start_date
-operation_template
 operations
-operations_submitted
-operations_timed_out_in_queue
 operator
 operators
 option_duck_method
 optional
-options
 or_crit_vs_not_playercond
 or_crit_vs_playercond
 or_minicrit_vs_playercond_burning
 orientationtype
-origin
 origin_max_delta
 origin_relative
-original_item_id
-original_party_id
-os_type
 oscillate_scalar
 oscillate_vector
-other_party_id
-other_steamids
 out of order tags : %s : (%s:%s:%s)\n
 out1
 out2
@@ -34321,7 +31879,6 @@ output: (%s,%s) -> (%s,%s)\n
 output: (%s,%s) -> (%s,%s,%.1f)\n
 output_class
 output_items
-output_items_criteria
 overheal_expert
 overheal_fill_rate
 overhealedplayer_blue_pluses
@@ -34335,22 +31892,14 @@ override_footstep_sound_set
 override_projectile_type
 overridescript
 overview
-overwrite_existing
-owned_game_servers
-owner
-owner_account_id
 owner_entindex
-owner_id
 ownerid
 owninginstance
-p09Y
 pEntity->PhysicsSimulate
 pGears
 pVehicle->ProcessMovement()
 pWorldObject
-package
 package $0;\n\n
-packed
 packheal
 paint_can
 paintable
@@ -34359,11 +31908,9 @@ paintcan_index
 paintkit
 paintkit%d_item%d_wear%d
 paintkit%d_item%d_wear%d_festive
-paintkit_defindex
 paintkit_proto_def_index
 paintkit_weapon_festivizer
 paintsplat
-panel_class_override
 panel_style
 panelname
 panic_attack_negative
@@ -34374,10 +31921,6 @@ param2
 param2 "%s"\n
 param3
 param3 "%s"\n
-param_a
-param_d
-param_m
-param_s
 parameter
 parentattachment
 parentname
@@ -34400,9 +31943,6 @@ particle_test_start
 particle_test_stop
 particles.cpp
 particles/particles_manifest.txt
-partner_accounts
-party_id
-party_lobby_id
 passActivator
 pass_ball_blocked
 pass_ball_stolen
@@ -34412,24 +31952,18 @@ pass_get
 pass_pass_caught
 pass_score
 passer
-passes_granted
-passes_to_grant
 passtime/passtime_balltrail_blu.vmt
 passtime/passtime_balltrail_red.vmt
 passtime/passtime_balltrail_unassigned.vmt
 passtime_logic
 passtime_stats_%u.txt
-path
 path_*
 path_corner
 path_corner_crash
 path_track %s tried to tell the npc_vehicledriver to set speed to %.3f. npc_vehicledriver only accepts values between 0 and 1.\n
 path_track_passed
-payload
 payload_pushed
 payload_race
-payment_row_usd
-payment_us_usd
 pctChance
 pd_atom_smash
 pd_circus
@@ -34457,20 +31991,12 @@ peekEyeDist
 peekEyeDistZ
 peekTime
 peekTimeAfterDamage
-pending_members
-pending_player_id
 penetration_damage_penalty
 penny
 period
 periodic_score_reward
 permitrepeats
 permitresponses
-persona
-persona_name_tokens
-phone_id
-phone_identifying
-phone_verification_time
-phone_verified
 phonemes
 phonemes_strong
 phonemes_weak
@@ -34521,11 +32047,8 @@ physicsshadowupdate_render
 pickaxe
 picked up
 pickup_particle
-ping
 ping-pong ball
-pingdata
 piranha
-pistol
 pitch "%i"\n
 pitchstart
 pkgitem
@@ -34613,7 +32136,6 @@ player_class
 player_command.cpp
 player_condition
 player_connect
-player_criteria
 player_debug_print_damage
 player_directhit_stun
 player_disconnect
@@ -34661,10 +32183,8 @@ player_speedmod
 player_squad
 player_stand
 player_stealsandvich
-player_steamid
 player_stunned
 player_turned_to_ghost
-player_uistate
 player_upgraded
 player_upgradedobject
 player_used_powerup_bottle
@@ -34678,8 +32198,6 @@ playerlocaldata.cpp
 playermodel
 playerpenetratecount
 playerperf
-players
-players_involved
 playerspeed
 playerweapon
 playing_commentary
@@ -34737,22 +32255,14 @@ point_viewcontrol
 point_warn_on_cap
 point_warn_sound
 point_worldtext
-points
 points_%d
-points_0
-points_1
-points_2
 points_per_player
 polish
 popularity_seed
 populator_internal_spawn_point
 portalnumber
 portuguese
-pos_x
-pos_y
-pos_z
 pose: %s\n
-position
 position0
 position1
 position3
@@ -34764,7 +32274,6 @@ position_offset_random
 position_warp_random
 position_within_box
 position_within_sphere
-positive_int_value
 post_inventory_application
 postcommands
 postion_lock_to_controlpoint
@@ -34819,21 +32328,15 @@ powf@GLIBC_2.27
 preciptype
 precommands
 predelay
-predicted_experience
 prefab
 prefabs
 preferredcarryangles
 premium_only
-prepared_statements_executed
 preventNameBasedLookup
 prevent_movement
 preventor
 preview_item
-preview_item_def
 preview_item_purchased
-price
-price_in_local_currency
-price_sheet_version
 primary_ammo
 primary_death_backstab
 primary_death_headshot
@@ -34894,11 +32397,8 @@ prop_vehicle_driveable
 prop_vehicle_jeep
 propdata
 propername
-prophunt_time1
-prophunt_time2
 props_break_max_pieces
 props_break_max_pieces_perframe
-protobuf_field
 provide_on_active
 provider_must_be_owner
 pszConvar
@@ -34923,23 +32423,17 @@ pthread_mutexattr_settype@GLIBC_2.2.5
 pthread_once
 pthread_once@GLIBC_2.2.5
 ptr( 0x%p )
-public_dependency
-publisher_group_id
 pumpkin_explode
 pumpkin_lord_killed
 pumpkin_lord_summoned
 punchangle
 puntsound
-purchase_limit
-purchase_result_detail
 purgatory_escaped
 pushdir
 pusher
 pushing entity (%s) that has parent (%s)!\n
 pve_win_panel
 pvsplayer
-pwid
-py_generic_services
 pyro_blast
 pyro_entindex
 pyrotaunt_rainbow_norainbow
@@ -34953,35 +32447,24 @@ pyrovision_scorchshot_trail_crit_blue
 pyrovision_scorchshot_trail_crit_red
 pyrovision_scorchshot_trail_red
 python
-p}?fff?
 qangle
 qangle_array
 qsort
 qsort@GLIBC_2.2.5
-quadball
 qualifying_items
 qualities
-quality
 quality text override
-quantity
 quaternion
 quaternion_array
 quest loaner id hi
 quest loaner id low
-quest_attrib_index
-quest_def_index
 quest_defindex
 quest_events
-quest_id
-quest_item_res
 quest_list_res_file
 quest_log_res_file
-quest_map_node_source_id
 quest_objective_conditions
 quest_output
 quest_progress
-quest_reward_credits
-queue_position
 quit\n
 r_AirboatViewDampenDamp
 r_AirboatViewDampenFreq
@@ -35026,21 +32509,12 @@ randommap
 randommap: selecting map %i out of %i\n
 randomnum
 range %.1f %.1f 
-rank
 rank_name
-rankdata
-ranked_banned_time
-ranked_low_priority
-ranked_low_priority_time
 rareitem
 rarities
 rarities_lootlist_weights
-rarity
 rate of allowing impact damage
 rateoffire
-rating_primary
-rating_secondary
-rating_tertiary
 raytrace_fl
 raytrace_fr
 raytrace_rl
@@ -35061,19 +32535,13 @@ realloc
 realloc@GLIBC_2.2.5
 really freaking heavy
 realpath@GLIBC_2.3
-reason
 recalculate_truce
 recall
-receiver
-receiver_account_name
 recentkills
 recipe_output
 recipes
-recipient_account_id
-recipient_account_ids
 reciprocal
 recorder
-records
 red_capture
 red_score
 red_score_prev
@@ -35096,7 +32564,6 @@ relativetag "%s" "%s"\n
 released
 reload\n
 reload_npc
-remaining_health
 remap_scalar
 remapactivity
 remapped_item_def_index
@@ -35116,18 +32583,13 @@ repair_claw_heal_blue
 repair_claw_heal_red
 repathOnRouteTolerance
 repeated
-repeated_index
 reponded to EVENT %s with 
 report_entities
-report_period_begin
-report_period_end
 report_simthinklist
 report_soundpatch
 report_touchlinks
 reported_position
 reports sound patch count
-request
-request_method
 require_all_tags
 required
 required_holiday
@@ -35135,13 +32597,8 @@ required_item_name
 required_items
 required_missing_tags
 required_tags
-requires_all_same_class
-requires_all_same_slot
 rescue_ranger_reflect
-reserve_shooter
-reset_operation
 resetclass
-resfile
 reslists\%s.snd
 resolution
 resource/ModEvents.res
@@ -35160,14 +32617,12 @@ respawn_reduction_scale
 respawn_time
 respawnroomname
 respeakdelay
-response
 response %s = '%s'\n
 response entry '%s' with unknown command '%s'\n
 response entry '%s' with unknown response type '%s'\n
 restore_health_on_kill
 restriction_type
 restriction_value
-result
 resumecondition
 resumecondition\n
 retainBuildings
@@ -35176,17 +32631,12 @@ returndelay
 returnspeed
 reveal_cloaked_victim_on_hit
 reveal_disguised_victim_on_hit
-revenue_percentage
 reverse_airblast
 revive_player_complete
 revive_player_notify
 revive_player_stopped
 reviver
-revolver
 revolving_loot_lists
-reward_credits_earned
-reward_item_name
-reward_lootlist_name
 rgbaVal
 right_
 right_cheek_raiser
@@ -35221,7 +32671,6 @@ rocket_l
 rocket_specialist
 rocketjump_attackrate_bonus
 rocketjump_smoke
-rocketlauncher
 rocketlauncher_directhit
 rocketpack_exhaust
 rocketpack_exhaust_launch
@@ -35236,7 +32685,6 @@ room_trigger
 room_type
 rope_anchor
 ropes_holiday_lights_allowed
-rotation
 rotation_movement
 rotation_random
 rotation_speed_random
@@ -35251,8 +32699,6 @@ round_limit_reached
 round_redspawn
 round_start_pre_entity
 rounds_remaining
-routing
-routing_app_id
 rps_paper_blue
 rps_paper_blue_win
 rps_paper_red
@@ -35271,16 +32717,12 @@ rr_debugresponses
 rr_debugrule
 rr_dumpresponses
 rr_reloadresponsesystems
-rt_identity_linked
-rtime_vacban_starts
 ru_RU
-rule_description
 rumble
 russian
 sLockedSentence
 sPhases
 sUnlockedSentence
-s\n\vreturn_link
 salmann
 samples_use_time
 sanguisuge
@@ -35296,7 +32738,6 @@ sawmovelinear01
 sawmovelinear02
 saxxy
 say_team
-scale_uv
 scalesettings
 scalesettings\n
 scandir@GLIBC_2.2.5
@@ -35364,16 +32805,12 @@ scenes/player/spy/low/taunt03
 sched_yield
 sched_yield@GLIBC_2.2.5
 scheduleCrc
-schema_catalog
 schema_updated
 schinese
-scimitar
 scorchshot_trail_blue
 scorchshot_trail_crit_blue
 scorchshot_trail_crit_red
 scorchshot_trail_red
-score
-score_id
 score_interval
 score_keys
 score_rank
@@ -35381,7 +32818,6 @@ score_style
 score_type
 scoreboard_minigame
 scorer
-scorer_account_id
 scorer_key
 scores
 scorestats_accumulated_reset
@@ -35474,19 +32910,14 @@ scripts/weapon_manifest.txt
 scriptsound
 sd_doomsday
 sd_doomsday_event
-searching_players_by_group
 second_sequence_random
 secondary_ammo
 seconds_added
 seenbyplayer
 seeplayer
-select
 selectable
 selectcmd
-selected_maps_bits
-selected_quest_def
 self_destruct_think
-self_inherit_only
 self_mark_for_death
 selfcollisions
 sentry_build_rate_multiplier
@@ -35502,10 +32933,8 @@ sequenceduration
 sequenceduration %f\n
 sequential
 sequential position along path
-serialized_ticket
 serializing
 server_
-server_address
 server_bootcamp.cfg
 server_casual.cfg
 server_casual_max_rounds_win_conditions.cfg
@@ -35524,20 +32953,12 @@ server_competitive_stopwatch_win_conditions.cfg
 server_competitive_stopwatch_win_conditions_high_skill.cfg
 server_custom.cfg
 server_cvar
-server_dedicated
 server_game_time
-server_loadavg
 server_mannup.cfg
 server_map_change
-server_response_code
 server_shutdown
 server_spawn
-server_steam_id
-server_trusted
-server_version
 serveranimdata
-servers
-service
 service $0 {\n
 session_begin %s %d
 set item tint rgb
@@ -35554,7 +32975,6 @@ set_disguise_on_backstab
 set_dmg_apply_to_sapper
 set_dmgtype_ignite
 set_flamethrower_back_crit
-set_for_output
 set_item_remap
 set_item_texture_wear
 set_nocrit_vs_nonburning
@@ -35596,7 +33016,6 @@ shifted_time
 shootmodel
 shootsound
 shootsounds
-shotgun
 shotloc:arm
 shotloc:gut
 shotloc:leg
@@ -35605,7 +33024,6 @@ should_never_see_this
 show_annotation
 show_distance
 show_effect
-show_hat_descriptions
 show_htmlpage
 show_in_armory
 show_in_hud
@@ -35619,7 +33037,6 @@ showroundinfo
 showtriggers
 showtriggers_toggle
 showusagehint
-side
 sides
 signal
 signal@GLIBC_2.2.5
@@ -35658,8 +33075,6 @@ skid_highfriction
 skid_lowfriction
 skid_normalfriction
 skill.cfg
-skill_rating_6v6
-skill_rating_9v9
 skin%d
 skip
 skip_next_map
@@ -35679,11 +33094,7 @@ sleepstate
 slideaxis
 slidefriction
 slideshow_display_screen
-slot_id
-slot_item_original_id
 slot_token_id
-slot_usage_for_output
-sm<g
 small car
 smg1_grenade
 smoke_attachment
@@ -35706,10 +33117,6 @@ sniper_penetrate_players_when_charged
 sniperzoomed
 snowflake
 socache
-socaches
-socaches_loading
-socaches_to_unload
-soid
 soldierbuff_blue_soldier
 soldierbuff_mvm
 soldierbuff_red_soldier
@@ -35738,11 +33145,7 @@ soundscape_debug
 soundscape_flush
 soundtype
 soundunlockedoverride
-source
-source_code_info
-sources
 space shuttle
-span
 spanish
 spark_shower
 spawnOnlyWhenTriggered
@@ -35751,13 +33154,11 @@ spawn_cloud
 spawn_loot
 spawn_loot_%s
 spawn_manager_name
-spawn_meta_info
 spawn_on_start
 spawn_purgatory
 spawn_warcrimes
 spawn_with_physics_toy
 spawnball
-spawned_health
 spawngroup
 spawnobject
 spawnpos
@@ -35768,7 +33169,6 @@ speaker_dsp_preset
 speaker_entity
 speakers
 speakonce
-spec
 spec_freeze_time
 spec_freeze_traveltime
 spec_goto
@@ -35784,7 +33184,6 @@ special3
 special_delivery
 special_dsp
 special_events
-special_payments
 special_score
 special_taunt
 specialevent_placeholder
@@ -35890,15 +33289,10 @@ spunup_damage_resistance
 spunup_push_force_immunity
 spy_start_disguise_blue
 spy_start_disguise_red
-squad_surplus_claimer_steam_id
 squadname
 squadslot
 squirrel
 srcid
-stage
-stage"
-stars_to_unlock
-start
 start drop date
 start: (%.2f,%.2f,%.2f)
 start_active
@@ -35907,7 +33301,6 @@ start_at_customorigin
 start_at_origin
 start_building
 start_disabled
-start_expanded
 start_node
 start_paused
 start_taunting
@@ -35930,84 +33323,120 @@ startsound
 startspeed
 startvalue
 startwidth
-stat_id
-state
 static_attrs
 statica
 staticb
 staticc
 staticsolid
-stats
 stats.txt
-stats_kv
 stats_resetround
 statsidentifier
-status
 stay_time
 std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
+std::_Rb_tree_decrement(std::_Rb_tree_node_base*)@GLIBCXX_3.4
 std::_Rb_tree_increment(std::_Rb_tree_node_base const*)
+std::_Rb_tree_increment(std::_Rb_tree_node_base const*)@GLIBCXX_3.4
 std::_Rb_tree_increment(std::_Rb_tree_node_base*)
+std::_Rb_tree_increment(std::_Rb_tree_node_base*)@GLIBCXX_3.4
 std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)@GLIBCXX_3.4
 std::_Rb_tree_rebalance_for_erase(std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+std::_Rb_tree_rebalance_for_erase(std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)@GLIBCXX_3.4
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_append(char const*, unsigned long)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_append(char const*, unsigned long)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_construct(unsigned long, char)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_construct(unsigned long, char)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_create(unsigned long&, unsigned long)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_create(unsigned long&, unsigned long)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_dispose()
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_dispose()@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace(unsigned long, unsigned long, char const*, unsigned long)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace(unsigned long, unsigned long, char const*, unsigned long)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace_aux(unsigned long, unsigned long, unsigned long, char)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace_aux(unsigned long, unsigned long, unsigned long, char)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, char const*, char const*)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, char const*, char const*)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::append(char const*)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::append(char const*)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(char const*, std::allocator<char> const&)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(char const*, std::allocator<char> const&)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::compare(char const*) const
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::compare(char const*) const@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::compare(unsigned long, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&) const
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::compare(unsigned long, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&) const@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::find(char const*, unsigned long, unsigned long) const
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::find(char const*, unsigned long, unsigned long) const@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::find(char, unsigned long) const
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::find(char, unsigned long) const@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::find_first_not_of(char const*, unsigned long, unsigned long) const
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::find_first_not_of(char const*, unsigned long, unsigned long) const@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::find_first_of(char const*, unsigned long, unsigned long) const
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::find_first_of(char const*, unsigned long, unsigned long) const@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::push_back(char)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::push_back(char)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::reserve(unsigned long)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::reserve(unsigned long)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::resize(unsigned long, char)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::resize(unsigned long, char)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::rfind(char, unsigned long) const
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::rfind(char, unsigned long) const@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::swap(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::swap(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string()
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string()@GLIBCXX_3.4.21
 std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const
+std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const@GLIBCXX_3.4.18
 std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const
+std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const@GLIBCXX_3.4.18
 std::__throw_bad_alloc()
+std::__throw_bad_alloc()@GLIBCXX_3.4
 std::__throw_bad_function_call()
+std::__throw_bad_function_call()@GLIBCXX_3.4.14
 std::__throw_length_error(char const*)
+std::__throw_length_error(char const*)@GLIBCXX_3.4
 std::__throw_logic_error(char const*)
+std::__throw_logic_error(char const*)@GLIBCXX_3.4
 std::__throw_out_of_range_fmt(char const*, ...)
+std::__throw_out_of_range_fmt(char const*, ...)@GLIBCXX_3.4.20
 std::bad_alloc::~bad_alloc()
+std::bad_alloc::~bad_alloc()@GLIBCXX_3.4
 std::basic_istream<char, std::char_traits<char>>& std::ws<char, std::char_traits<char>>(std::basic_istream<char, std::char_traits<char>>&)
+std::basic_istream<char, std::char_traits<char>>& std::ws<char, std::char_traits<char>>(std::basic_istream<char, std::char_traits<char>>&)@GLIBCXX_3.4
 std::basic_ostream<char, std::char_traits<char>>& std::__ostream_insert<char, std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>>&, char const*, long)
+std::basic_ostream<char, std::char_traits<char>>& std::__ostream_insert<char, std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>>&, char const*, long)@GLIBCXX_3.4.9
 std::exception::~exception()
+std::exception::~exception()@GLIBCXX_3.4
 std::ios_base::Init::Init()
+std::ios_base::Init::Init()@GLIBCXX_3.4
 std::ios_base::Init::~Init()
+std::ios_base::Init::~Init()@GLIBCXX_3.4
 std::istream::putback(char)
+std::istream::putback(char)@GLIBCXX_3.4
 std::istream::read(char*, long)
+std::istream::read(char*, long)@GLIBCXX_3.4
 std::ostream::write(char const*, long)
+std::ostream::write(char const*, long)@GLIBCXX_3.4
 std::set_new_handler(void (*)())
+std::set_new_handler(void (*)())@GLIBCXX_3.4
 std::terminate()
+std::terminate()@GLIBCXX_3.4
 std::uncaught_exception()
+std::uncaught_exception()@GLIBCXX_3.4
 stderr
 stderr@GLIBC_2.2.5
 steam://openurl/
 steam://openurl_external/
-steam_id
 steamextra/tier1/tsmultimempool.cpp
-steamid
-steamids
 steammessages.proto
-steammessages.proto")\n\rCMsgSOIDOwner
-steammessages.proto"E\n
-steammessages.proto"}\n
 steamworks_sessionid_server
 step_number
 step_spline
-sticker
 stickies_detonate_stickies
 sticky_arm_time
 sticky_jump
@@ -36016,7 +33445,6 @@ sticky_resistance
 stickybomb_charge_damage_increase
 stickybomb_charge_rate
 stickybomb_fizzle_time
-stickybomb_launcher
 stickybombtrail_blue
 stickybombtrail_red
 stop_adding_to_queue_date
@@ -36030,8 +33458,6 @@ stop_watch_changed
 stopfollowonkill
 stoppoint
 store_bundle
-store_country_code
-store_item_defindex
 store_remap
 stored_as_integer
 strEntityName
@@ -36049,14 +33475,9 @@ strange restriction user value 3
 strange restriction value 1
 strange restriction value 2
 strange restriction value 3
-strange_attr_index
-strange_count_adjustments
 strange_count_transfer
-strange_event_id
 strange_part
-strange_part_item_id
 strange_part_restriction
-strange_part_score_type
 strange_parts
 strangeprefixtoken
 strangifier
@@ -36078,8 +33499,6 @@ strerror
 strerror@GLIBC_2.2.5
 strftime
 strftime@GLIBC_2.2.5
-strict
-string
 string_array
 string_lookups
 strings::Substitute format string invalid: asked for "$
@@ -36116,7 +33535,6 @@ strtoul
 strtoul@GLIBC_2.2.5
 strtoull
 strtoull@GLIBC_2.2.5
-student_is_friend
 stun_effects
 stun_enemies_wielding_same_weapon
 stun_flags
@@ -36124,27 +33542,20 @@ stun_on_damage
 stun_type
 stun_waist_high_airborne
 stunner
-style
 style changes on strange level
 styles
-sub_conditions
 subcla
 subject
-subject_item_id
 submodel_index
 subscene
 subtract_victim_cloak_on_hit
 subtract_victim_medigun_charge_onhit
 subtype mismatch
-succeeded_lookups
-success
 suitvolume
 summer
 superrare_beams1
 support
-support_bronze
 support_rank
-support_silver
 suppressFire
 surface_flags
 surface_name
@@ -36152,7 +33563,6 @@ surface_props
 surfaceprop
 surfaceprops::Init:  Manifest '%s' with bogus file type '%s', expecting 'file'\n
 surfacetype
-suspension_end_time
 sv_SE
 sv_accelerate
 sv_airaccelerate
@@ -36323,9 +33733,7 @@ szFailSchedule
 szIdealSchedule
 szSchedule
 t-rex
-t\n\tcondition
 tagged_player_as_it
-tags
 take_health
 tan@GLIBC_2.2.5
 tank
@@ -36333,24 +33741,15 @@ tank_boss
 tank_destruction
 tanktrain_ai
 tanktrain_aitarget
-targetID
 targetMoveTolerance
 target_attachment
 target_base_name
 target_break
 target_cdaudio
 target_changegravity
-target_defindex
-target_game_server_ip
-target_game_server_port
 target_id
-target_inhibit
-target_job_name
-target_node_defid
-target_region_defid
 target_rule
 target_score
-target_steam_id
 target_type_global
 targetattachment
 targetentityname
@@ -36386,7 +33785,6 @@ tc_hydro
 tchinese
 td_buyback
 te_tester
-team
 teamToBlock
 team_
 team_base_icon_
@@ -36470,9 +33868,7 @@ teleporter_red_entrance
 teleporter_red_exit
 teleportfollowdistance
 teleportoffset
-template
 template_debug
-template_exists
 template_t
 test_dispatcheffect
 test_effect
@@ -36481,14 +33877,11 @@ test_existing_item
 test_proxytoggle
 test_traceline
 texframeindex
-text
 text format contains deprecated field "
 text_entry
 textsize
 textspacingX
 textspacingY
-texture
-texture_lookup
 texture_wear_default
 textureframe
 texturename
@@ -37478,12 +34871,9 @@ tfnonlocaldata
 tfsharedlocaldata
 th_TH
 thai
-thanked_user_accountid
-thanker_steam_id
 the Earth
 the global scope
 them
-theme
 thermal_thruster_air_launch
 theta
 thick_max
@@ -37493,14 +34883,11 @@ thinkfunc_t
 thinkfunction
 thinktime %f, %i entities\n
 threads
-threads_active
-threads_connected
 threshold
 throwable_detonation_time
 throwable_hit
 throwable_recharge_time
 tickle_enemies_wielding_same_weapon
-time
 time %f %f\n
 time after uncloaking that the spy is prohibited from attacking
 time to sleep when not drawn
@@ -37514,38 +34901,29 @@ timeSpoken
 timeStarted
 timeToTrigger
 timeValidEnemy
-time_all_trusted
-time_banned_until
 time_delay
 time_limit_reached
-time_submitted
 timedeventmgr.cpp
 timer_length
 times_to_fire
 timesincecombat
 timesinceseenplayer
 toggles whether the server allows spectator mode or not
-tokens
 tolerance ang (dot): %.2f (%f)
 tolower
 tolower@GLIBC_2.2.5
-tomislav
 tool escrow until date
 tool needs giftwrap
 tool target item
-tool_id
 toptrack
 torch_player_burn
 torch_red_core_1
 torquelimit
 torso_scale
-total_near_you_active_players
-total_worldwide_active_players
 touchStamp
 toupper
 toupper@GLIBC_2.2.5
 tour_name
-tour_name_mannup
 tournament_player_readystate
 tournament_readystate
 tournament_stateupdate
@@ -37570,12 +34948,10 @@ tracertype
 tracker
 trackinfo
 tradable after date
-trade_ban_expiration
 trade_up
 traded
 trail_effect
 trail_length_random
-trailing_comments
 train_can_recede
 train_recede_time
 training_annotation
@@ -37599,7 +34975,6 @@ training_class
 training_complete
 training_continue
 training_prop_dynamic
-transid
 trigger_add_or_remove_tf_player_attributes
 trigger_add_tf_player_condition
 trigger_apply_impulse
@@ -37645,12 +35020,6 @@ trigger_togglesave
 trigger_transition
 trigger_vphysics_motion
 trigger_wind
-true
-true:9\n\tlocalized
-true:;\n\fallow_delete
-true:=\n
-true:C\n\nvalid_type
-trusted
 ttg_watch_spy
 turkish
 tv_allow_camera_man
@@ -37678,18 +35047,13 @@ tw_soldierbot_armor
 tw_soldierbot_helmet
 tw_spybot_armor
 tw_spybot_hood
-two_factor_enabled_time
-twofactor_enabled
-txn_country_code
-txn_id
-type
-type_id
-type_instances
 typeinfo for CThread
 typeinfo for CryptoPP::BlockPaddingSchemeDef::BlockPaddingScheme
 typeinfo for CryptoPP::Integer::RandomNumberType
 typeinfo for bool
+typeinfo for bool@CXXABI_1.3
 typeinfo for float
+typeinfo for float@CXXABI_1.3
 typeinfo for google::protobuf::Closure
 typeinfo for google::protobuf::DescriptorBuilder::OptionInterpreter::AggregateOptionFinder
 typeinfo for google::protobuf::DescriptorDatabase
@@ -37760,13 +35124,22 @@ typeinfo for google::protobuf::io::ZeroCopyInputStream
 typeinfo for google::protobuf::io::ZeroCopyOutputStream
 typeinfo for int
 typeinfo for int const*
+typeinfo for int const*@CXXABI_1.3
+typeinfo for int@CXXABI_1.3
 typeinfo for std::bad_alloc
+typeinfo for std::bad_alloc@GLIBCXX_3.4
 typeinfo for std::exception
+typeinfo for std::exception@GLIBCXX_3.4
 typeinfo for unsigned char
 typeinfo for unsigned char const*
+typeinfo for unsigned char const*@CXXABI_1.3
 typeinfo for unsigned char*
+typeinfo for unsigned char*@CXXABI_1.3
+typeinfo for unsigned char@CXXABI_1.3
 typeinfo for unsigned int
+typeinfo for unsigned int@CXXABI_1.3
 typeinfo for unsigned long long
+typeinfo for unsigned long long@CXXABI_1.3
 typeinfo name for CryptoPP::BlockPaddingSchemeDef::BlockPaddingScheme
 typeinfo name for CryptoPP::Integer::RandomNumberType
 typeinfo name for google::protobuf::Closure
@@ -37837,15 +35210,11 @@ typeinfo name for google::protobuf::io::OstreamOutputStream::CopyingOstreamOutpu
 typeinfo name for google::protobuf::io::StringOutputStream
 typeinfo name for google::protobuf::io::ZeroCopyInputStream
 typeinfo name for google::protobuf::io::ZeroCopyOutputStream
-types
 u64( %lld = 0x%llX )
-u\n\vcash_reward
-u\n\vprefab_only
 uber_on_damage_taken
 ubercharge_ammo
 ubercharge_preserved_on_spawn_max
 ubercharge_transfer
-ubersaw
 ui_group
 uint32
 uint64
@@ -37875,7 +35244,6 @@ unsigned
 unsigned int const& google::protobuf::internal::GeneratedMessageReflection::GetRaw<unsigned int>(google::protobuf::Message const&, google::protobuf::FieldDescriptor const*) const
 unsigned long const& google::protobuf::internal::GeneratedMessageReflection::GetRaw<unsigned long>(google::protobuf::Message const&, google::protobuf::FieldDescriptor const*) const
 unspecified
-unsubscribe_from
 unused
 unused (???) 15
 unused (???) 19
@@ -37886,9 +35254,6 @@ unused (weapon_slam) 23
 unused (weapon_smg2) 22
 unusual_index
 unusualifier
-update_base_points
-updates
-upgrade_card_item_id
 upgrade_rate_mod
 upgrades_file_changed
 upperThreshold
@@ -37905,7 +35270,6 @@ useTeamSpawnPoint
 useThresholdCheck
 use_angles
 use_coin_particle_effect
-use_head
 use_large_smoke_explosion
 use_parents_item_def
 use_per_class_bodygroups
@@ -37916,7 +35280,6 @@ use_visualsblock_as_base
 useairlinkradius
 used_by_classes
 usehelper
-user_code_string
 user_data_downloaded
 uses_ammo_while_aiming
 uses_credits
@@ -37929,8 +35292,6 @@ v@Lead
 vLastKnownLocation
 vLastSeenLocation
 vLocationWhenUnreachable
-v\n,associated_workshop_file_for_direct_payments
-v\n\nitem_logic
 v_angle
 v_skin
 v_skin_blu
@@ -37949,8 +35310,6 @@ valid_for_self_made
 valid_for_shuffle
 valid_match_groups
 valid_objects
-value
-value"\\n
 value1
 value2
 value3
@@ -37968,11 +35327,7 @@ value_is_particle_index
 value_is_percentage
 value_max
 value_min
-values
 valve_hint_reload
-var_field_type
-variable
-variable_template
 variant
 vban
 vcd error, gesture %s of model %s is marked as STUDIO_LOOPING!\n
@@ -38029,12 +35384,6 @@ vel: %.2f, time: %.2f, max: %.2f, animspeed: %.2f
 velocity_random
 velocity_relative
 velocitytype
-version
-version_check_ex
-version_check_ex2
-version_checksum
-version_checksum_ex
-version_verbose
 vgui/screens/vgui_overlay
 vgui/white
 vgui_screen
@@ -38044,12 +35393,10 @@ victim:0
 victim_account_id
 victim_capping
 victim_entindex
-victim_steam_id
 victimdoublejumping:0
 victimdoublejumping:1
 victimstunned:0
 victimstunned:1
-video_entry_ids
 view model effect
 view_ofs
 viewoffset %3.2f, %3.2f, %3.2f
@@ -38107,11 +35454,7 @@ vote_cast
 vote_controller
 vote_option
 vote_options
-vote_yay
 voteidx
-voter_id
-votes
-voucher_missing
 voxeltree_box
 voxeltree_playerview
 voxeltree_sphere
@@ -38136,7 +35479,9 @@ vswprintf
 vswprintf@GLIBC_2.2.5
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__enum_type_info
+vtable for __cxxabiv1::__enum_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__pointer_type_info
+vtable for __cxxabiv1::__pointer_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
 vtable for google::protobuf::Closure
@@ -38208,8 +35553,8 @@ vtable for google::protobuf::io::StringOutputStream
 vtable for google::protobuf::io::ZeroCopyInputStream
 vtable for google::protobuf::io::ZeroCopyOutputStream
 vtable for std::bad_alloc
+vtable for std::bad_alloc@GLIBCXX_3.4
 vtune
-w\n\nServerInfo
 wade
 wait
 waiting for lock
@@ -38225,10 +35570,7 @@ war definition %s has invalid side index: %d
 war definition %s side %s missing side leaderboard name
 war definition %s side %s missing side localization name
 war_definitions
-war_id
 was_building
-was_destruction
-was_random_person
 was_sudden_death
 water_balloon_hit
 water_balloon_kill
@@ -38264,8 +35606,6 @@ wcstoll
 wcstoll@GLIBC_2.2.5
 wcstombs
 wcstombs@GLIBC_2.2.5
-weak
-weak_dependency
 weapon%d
 weaponSlot
 weapon_*
@@ -38307,11 +35647,8 @@ weapondelay
 weaponid
 weaponmode
 weaponscripts
-wear
 wearable_item
 wedding_ring
-weight
-weighted_strings
 weptype
 wet_immunity
 wheel
@@ -38335,12 +35672,9 @@ winreason
 wipe_nav_attributes
 wm_bodygroup_override
 wm_bodygroup_state_override
-wn>Jj
-word_id
 work item
 workshop/%llu
 workshop/%s.ugc%llu
-workshop_file_id
 workthreadpool.cpp
 worldNormalX
 worldNormalY
@@ -38356,15 +35690,12 @@ worldspawn
 wrangler_kill
 wrapped_gift
 wrapped_gift_item_def
-wrench
 wrench_builds_minisentry
 wrinkler
 write
 write@GLIBC_2.2.5
-writeback_queue
 wrong submessage type
 www.
-x_pos
 xbox_autothrottle
 xbox_steering_deadzone
 xbox_throttlebias
@@ -38382,18 +35713,14 @@ xms_ornament_glitter
 xms_ornament_smash_blue
 xms_ornament_smash_red
 xms_snowburst
-xpos
 y?Weapon_Hands.Push
 yCBlockCapture
 yDCAI_SpeechFilter
 yDThis should not happen!
-y_pos
+yaw "%i"\n
 yaw: %f
 yielding
 your_team_score_sound
-your_wait_time
-youtube_account_name
-ypos
 z?time: %.2f
 zh_TW
 zi_atoll
@@ -38414,4 +35741,3 @@ zz_stopwatch_timer
 zz_teamplay_timelimit_timer
 zz_teamplay_waiting_timer
 |BCTextureToggle
-}C0f

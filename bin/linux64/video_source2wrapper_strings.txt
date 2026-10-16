@@ -8,6 +8,8 @@
  clientcmd_can_execute
  failed to dlopen %s error=%s\n
  game
+ max. %f
+ min. %f
  notconnected
  notify
  replicated
@@ -33,11 +35,17 @@ $nolod
 $nomip
 $spriteorientation
 $translucent
+%%.%if%s
 %02x
+%A %b %d
 %f %f %f %f
+%i%s
 %lld
 %ls [wstring, len = %d]
+%s %d\n
+%s %f\n
 %s %s %s %s\n
+%s/%s
 %s/bin/linux64/%s
 &AElig;
 &Aacute;
@@ -203,7 +211,6 @@ ConMsg(char const*, ...)
 ConVarRef %s doesn't point to an existing ConVar\n
 CreateInterface
 CreateVideoPlayer
-DDDDDDDDDDDDDDDD
 DebugTextureInfo001
 DeleteVideoPlayer
 DevMsg
@@ -285,7 +292,6 @@ _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
 _SpewInfo
 _SpewMessage
-_ZSt20__throw_system_errori@GLIBCXX_3.4.11
 __bss_start
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
@@ -393,8 +399,8 @@ qsort@GLIBC_2.2.5
 raise
 raise@GLIBC_2.2.5
 script
-ssssssssssssssss
 std::__throw_system_error(int)
+std::__throw_system_error(int)@GLIBCXX_3.4.11
 steam://openurl/
 steam://openurl_external/
 strcasecmp

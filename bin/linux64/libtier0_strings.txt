@@ -18,6 +18,9 @@
 %s test: single thread push, multithread pop, %s
 %s test: single thread push/pop, in order... 
 %s test: single thread push/pop, interleaved... 
+%s"%s"
+%s: %s
+%s:%i\n
 %zu %zu %zu %zu %zu %zu %zu
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
@@ -420,6 +423,7 @@ ZeroMemory
 [ func+child   func ]     Count\n
 [ func+child   func ]  [ func+child   func ]  [ func+child   func ]  Count   Peak\n
 [1;31m%s
+[1;32m:%i:
 [1;33mASSERT:
 [38;2;%d;%d;%dm%s
 \nTesting %d threads:\n
@@ -434,15 +438,6 @@ _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
 _SpewInfo
 _SpewMessage
-_ZNSt8__detail15_List_node_base7_M_hookEPS0_@GLIBCXX_3.4.15
-_ZNSt8__detail15_List_node_base9_M_unhookEv@GLIBCXX_3.4.15
-_ZSt17__throw_bad_allocv@GLIBCXX_3.4
-_ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base@GLIBCXX_3.4
-_ZSt20__throw_length_errorPKc@GLIBCXX_3.4
-_ZSt29_Rb_tree_insert_and_rebalancebPSt18_Rb_tree_node_baseS0_RS_@GLIBCXX_3.4
-_ZTIi@CXXABI_1.3
-_ZTVN10__cxxabiv117__class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv120__si_class_type_infoE@CXXABI_1.3
 __cxa_allocate_exception
 __cxa_allocate_exception@CXXABI_1.3
 __cxa_atexit
@@ -742,11 +737,17 @@ simple.log
 srand
 srand@GLIBC_2.2.5
 std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
+std::_Rb_tree_decrement(std::_Rb_tree_node_base*)@GLIBCXX_3.4
 std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)@GLIBCXX_3.4
 std::__detail::_List_node_base::_M_hook(std::__detail::_List_node_base*)
+std::__detail::_List_node_base::_M_hook(std::__detail::_List_node_base*)@GLIBCXX_3.4.15
 std::__detail::_List_node_base::_M_unhook()
+std::__detail::_List_node_base::_M_unhook()@GLIBCXX_3.4.15
 std::__throw_bad_alloc()
+std::__throw_bad_alloc()@GLIBCXX_3.4
 std::__throw_length_error(char const*)
+std::__throw_length_error(char const*)@GLIBCXX_3.4
 stderr
 stderr@GLIBC_2.2.5
 strcasecmp
@@ -797,6 +798,7 @@ tolower@GLIBC_2.2.5
 typeinfo for CThread
 typeinfo for CWorkerThread
 typeinfo for int
+typeinfo for int@CXXABI_1.3
 typeinfo name for CThread
 typeinfo name for CWorkerThread
 uname -m
@@ -812,7 +814,9 @@ vsnprintf@GLIBC_2.2.5
 vtable for CThread
 vtable for CWorkerThread
 vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__si_class_type_info@CXXABI_1.3
 vtune
 x86_64
 |  |  |  |  |  |  |  |  |  

@@ -16,7 +16,11 @@
 "%s": not a valid integer
 "%{file|basename|cescape}" %{index} "%{-file{%{=unparse|cescape}}}"
 %04x:
+%4s=%g
+%d(i)
 %g %g %g %g
+%g(f)
+%ld\n
 %lg %lg %lg %lg
 %s -> %s%s%s%s\n
 %s charset
@@ -47,10 +51,7 @@
 /proc/self/exe
 /usr/local/share
 /usr/share
-0123456789abcdef
 1@IB
-2Jq]\nU
-9`B\fY
 <fontconfig>\t<dir>/usr/share/fonts</dir>\n\t<dir>/usr/local/share/fonts</dir>\n  <dir prefix="xdg">fonts</dir>  <cachedir>/mnt/Code/josh_s2_pango/build_linux64/dist/var/cache/fontconfig</cachedir>  <cachedir prefix="xdg">fontconfig</cachedir>  <include ignore_missing="yes">/mnt/Code/josh_s2_pango/build_linux64/dist/etc/fonts/conf.d</include>  <include ignore_missing="yes" prefix="xdg">fontconfig/conf.d</include>  <include ignore_missing="yes" prefix="xdg">fontconfig/fonts.conf</include></fontconfig>
 <match target="scan"> cannot edit user-defined object "%s"
 <ultra
@@ -69,7 +70,6 @@ AppendLast
 Assign
 AssignReplace
 BIG-5
-BcSX
 Best score
 Bigelow
 Bitstream
@@ -1011,7 +1011,6 @@ Regular
 Reset font directories!
 Round
 Round 
-S5|D~
 SETWIDTH_NAME
 SFNT
 SJIS
@@ -1059,12 +1058,13 @@ XML_SetElementHandler
 XML_SetUserData
 Xorg
 [%g %g; %g %g]
+[%g %g]
+[%lg %lg]
 [edit]
 [test]
 \f0fr
 \f4fr
 \f8fr
-\fdUy
 \fzh-hk
 \n0es
 \n4es
@@ -1080,7 +1080,6 @@ Xorg
 \t%s config file from %s done\n
 \t%s config file from %s\n
 \t%s: (None) -> 
-\t0PP
 \t0en
 \t4en
 \tDen
@@ -1097,7 +1096,6 @@ Xorg
 \tos2 weight class %d multiplier %g maps to weight %g\n
 \tos2 width class %d multiplier %g maps to width %g\n
 \tsetwidth %s maps to %g\n
-\vD]GW
 _DYNAMIC
 _FcBaseConstants
 _FcConfigHomeEnabled
@@ -1408,7 +1406,6 @@ invalid test qual "%s"
 invalid test target "%s"
 italic
 its:
-j02^
 ku-am
 ku-iq
 ku-ir

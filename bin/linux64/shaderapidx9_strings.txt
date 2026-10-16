@@ -8,6 +8,8 @@
  client
  clientcmd_can_execute
  failed to dlopen %s error=%s\n
+ max. %f
+ min. %f
  notconnected
  notify
  replicated
@@ -27,13 +29,20 @@ $POSIX
 $WIN32
 $WINDOWS
 $X360
+%%.%if%s
 %02x
+%A %b %d
 %d MB of system RAM\n
 %d: Stream: %d, Offset: %d, Type: %s, Method: %s, Usage: %s, UsageIndex: %d\n
 %f %f %f %f
+%i%s
 %lld
 %ls [wstring, len = %d]
+%s %d %d
+%s %d\n
+%s %f\n
 %s %s %s %s\n
+%s - Add
 %s - BlitTextureBits
 %s - BlitTextureBits - %d
 %s - ConvertImageFormat
@@ -47,6 +56,7 @@ $X360
 %s - pTextureLevel->Release
 %s ps-combo %d
 %s vs-combo %d
+%s/%s
 %s/bin/linux64/%s
 %s_%d_%d.%s
 &AElig;
@@ -152,6 +162,7 @@ $X360
 &yacute;
 &yen;
 &yuml;
+(%s)%s
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
 ** NOTE: The real value is %.3f but the server has temporarily restricted it to %.3f **\n
@@ -271,15 +282,12 @@ $X360
 8IMeshMgr
 9CFunctor1IPFvP21IDirect3DBaseTexture9ES1_12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEEE
 9CMeshBase
-9a&g
 </script>
 << NULL >>\n
 <img src="
 <pre>
 ><a href=
 >DLOPEN Error:%s\n
-?333333
-????????????????
 ?AlphaFunc: invalid param\n
 @/proc/meminfo
 ABGR8888
@@ -522,7 +530,6 @@ GL_NVX_gpu_memory_info: Total Dedicated: %u, Total Avail: %u, Current Avail: %u\
 GL_RENDERER: %s\n
 GL_VENDOR: %s\n
 GL_VERSION: %s\n
-Ga=o
 GetCPUInformation
 GetDynamicMesh
 GetOpenGLEntryPoints
@@ -638,7 +645,6 @@ KeyValues::ParseIncludedKeys: Couldn't load included keyvalue file %s\n
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
 KeyValues::SaveToFile: couldn't open file "%s" in path "%s".\n
 KeyValuesSystem
-L=33s?
 LZMA Decompression failed (%i)\n
 LZMA Decompression overflowed (%zu > %zu)\n
 LZMA Decompression overflowed (read: %zu > %zu or write: %zu > %zu)\n
@@ -655,7 +661,6 @@ LoadVolumeTextureFromVTF: couldn't get texture level description\n
 Loaded program cache file "%s", total keyvalues: %i, total successfully linked: %i\n
 Lock nFirstIndex
 Lowered '%s' -> '%s'\n
-MGiI
 MIPMAPLODBIAS %s WBUFFER %s ZBIAS %s ZTEST %s\n
 Matched '%s' -> '%s'\n
 Material %s does not support vertex format used by the mesh (maybe missing fields or mismatched vertex compression?), mesh will not be rendered. Grab a programmer!\n
@@ -665,12 +670,10 @@ Max Texture Dimensions : %d x %d\n
 Max Textures : %d Max Stages : %d\n
 MaxDXLevel
 MaxDeviceID
-MbP?
 MemTotal:
 MinDeviceID
 ModifyTexture
 N %1.2f %1.2f %1.2f 
-NAUU
 NV_DST16
 NV_DST24
 NV_INTZ
@@ -698,7 +701,6 @@ PolyMode: invalid poly mode\n
 PreLock
 Precache: Took %d ms, Vertex %d, Pixel %d\n
 Print all vertex and pixel shaders currently loaded to the console
-Qkkbal
 QueuedLoaderVersion004
 RGB565
 RGB888
@@ -868,7 +870,6 @@ V_MakeAbsolutePath: tried to ".." past the root.
 VendorID
 Vertex Shader Version : %d.%d Pixel Shader Version : %d.%d\n
 Wr %8.2f 
-Zjz\v
 [/code]
 [/list]
 [COMPRESSED]
@@ -898,9 +899,6 @@ _ZGVbN2vv_pow
 _ZGVbN2vv_pow@GLIBC_2.22
 _ZGVbN4vv_powf
 _ZGVbN4vv_powf@GLIBC_2.22
-_ZTVN10__cxxabiv117__class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv120__si_class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv121__vmi_class_type_infoE@CXXABI_1.3
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
 __ctype_tolower_loc
@@ -1059,7 +1057,6 @@ glshadercachev002
 glshaders.cfg
 grab/ungrab window.
 grab_window
-i]Wb
 iconv
 iconv@GLIBC_2.2.5
 iconv_close
@@ -1407,8 +1404,11 @@ vsnprintf@GLIBC_2.2.5
 vswprintf
 vswprintf@GLIBC_2.2.5
 vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__si_class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__vmi_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info@CXXABI_1.3
 wcslen
 wcslen@GLIBC_2.2.5
 wcsncat
@@ -1421,4 +1421,3 @@ wcstoll
 wcstoll@GLIBC_2.2.5
 wcstombs
 wcstombs@GLIBC_2.2.5
-wn>Jj

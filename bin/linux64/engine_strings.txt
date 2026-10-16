@@ -180,6 +180,8 @@
  failed to dlopen %s error=%s\n
  jpeg_quality nnn = set jpeq quality to nnn (range 1 to 100), default %d\n
  jpg/jpeg = JPegs\n
+ max. %f
+ min. %f
  mode\n
  never used\n
  notconnected
@@ -194,6 +196,7 @@
  wav = Write .wav audio file\n
  webm = WebM encoded audio and video\n
  {0x%x, 0x%x}
+!%s%d
 !\t@14IMixerControls
 !xxtestxx
 "%s" %s %s %d %d %d %d\n
@@ -364,7 +367,6 @@
 #vgui_TimeLeftSeconds
 #vgui_cancel
 #vgui_ok
-$3br
 $AlphaTestReference
 $DECK
 $LINUX
@@ -397,13 +399,19 @@ $tIEnt %3d: %s class %s\n
 $translucent
 $vertexalpha
 $vertexcolor
-%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+%%%s%%
+%%.%if%s
 %-30.30s %-30.30s %-45.45s %-10.10s
 %-40s : %-8s : %-16s : %s\n
 %-6.2f %-10.2f %-11.2f %-7i %-12i %-8.2f %-8i %-8i
+%-8.3f
+%-8i
+%.*s
 %.10f
+%.1f %%
 %.1fM
 %.2f %.2f %.2f
+%.3f : 
 %.3f at tick %i (%.3f s)
 %02i %6.3ff %20s %03i bytes
 %02i %6.3ff %20s %03i bytes\n
@@ -422,23 +430,29 @@ $vertexcolor
 %3i fps (showbudget 3D driver time included)
 %3i fps -- inp(%.2f) sv(%.2f) cl(%.2f) render(%.2f) snd(%.2f) cl_dll(%.2f) exec(%.2f) ents(%d) ticks(%d)
 %3i.%3i.%3i.%3i
+%3i:  %s\n
 %3i: %c %s\n
 %3s % 2i : %20s\n
 %4.0f ms : %s\n
 %4d: Flags:0x%8.8x %s\n
 %4d: Flags:0x%8.8x RefCount:%2d %s\n
+%5.1f,
 %5.2f MB (%zu bytes)\n
 %5.2f MB: %s\n
 %5.2f MB: total\n
+%5d %s\n
 %6.2fms       %5.2f    %6.2fms    %4d        %4d          %s\n
 %64.64s : %8d bits (%8.3f bytes)\n
 %6d unresolved strings\n
 %8d bytes BBox physics: %d boxes\n
 %8d bytes:%s\n
+%A %b %d
+%c%s%s
 %c00000000000000
 %cBanned by server\n
 %cMasterRequestRestart\n
 %d %d %d %d
+%d %s\n
 %d (%d%c): %s [ref: %d (%dc)] %s%s%s%s\n
 %d == '%s'\n
 %d decals: %d permanent, %d dynamic\nr_decals: %d\n
@@ -487,6 +501,8 @@ $vertexcolor
 %i users\n
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
+%i: %s\n
+%i:%02i %s
 %i:%02i:%02i
 %i:%i:"%s"\n
 %i:\t"%s"%s\n
@@ -497,16 +513,24 @@ $vertexcolor
 %lld
 %llu
 %ls [wstring, len = %d]
+%s "%s"
+%s %.2f
+%s %f
+%s %f\n
+%s %s
+%s %s %d
 %s %s %s %s \n
 %s %s %s %s\n
 %s %s %s (%s)\n
 %s %s = %s\n
 %s %s the game\n
+%s %x
 %s '%f' '%f'\n
 %s '%s' '%s'\n
 %s (header only: %d, nForceFlags: %d, skipMips: %d)
 %s (name: %s listeners: %d)
 %s - %0.1f%%%%
+%s - %s
 %s - %s finding %s
 %s - %s: Action signal
 %s - %s: Color overrides
@@ -515,6 +539,7 @@ $vertexcolor
 %s IFileSystem::Connect failed.
 %s IFileSystem::Init failed.
 %s Kb  %dx%d  %.*s%s  %s
+%s [%s]
 %s c:%d %d/%d
 %s encoding %s %d format %s %d %s\n
 %s has invalid demo header ID.\n
@@ -538,10 +563,15 @@ $vertexcolor
 %s%cfilesystem_steam.so
 %s%creplays%c
 %s%creplays%c%s%c%s
+%s%s%c
+%s%s%s
 %s%s%s.tga
+%s%s*.HL?
+%s%s\n%s
 %s%s\n%s Kb    %dx%d    %s
 %s%s\r\n%s Kb    %dx%d    %s
 %s(%d) : %s\n
+%s(%s, %s)
 %s, Failed to open sv_lan port.\n
 %s, bool textHidden, bool editable, bool unicode, bool NumericInputOnly, int maxchars
 %s, int SubTabPosition
@@ -563,6 +593,8 @@ $vertexcolor
 %s.dem
 %s.vprof
 %s.ztmp
+%s/%i
+%s/%s%4.4d
 %s/%s.bsp
 %s/%s.jpg
 %s/%s.manifest
@@ -589,10 +621,12 @@ $vertexcolor
 %s:  password failed.\n
 %s: %0.3fMB\n
 %s: %1.2f (%1.2f)
+%s: %d\n
 %s: %i "%s" (len:%i)
 %s: %i bytes
 %s: %i cvars
 %s: %i cvars, "%s"="%s"
+%s: %s
 %s: %s %.1f %.1f %.1f 
 %s: (%.1f %.1f %.1f)
 %s: Creating for:\n
@@ -626,12 +660,22 @@ $vertexcolor
 %s: type %i index %i
 %s: type %i, bytes %i
 %s: view entity %i
+%s:%d
+%s:%s:%s
+%s:/%s
+%s:/%s.HL1
+%s:/%s.HL2
+%s:/%s.HL3
 %s:Dropped %i packets at %i\n
 %s:Too many dropped packets (%i) at %i\n
+%s:\%s
 %s:\%s%02d.%s
 %s:\%s*.HL?
+%s:\%s.%s
+%s:\%s.HL2
 %s:\autosave%s.sav
 %s:\autosavedangerous%s.sav
+%s:\n%s\n
 %s:corrupted packet %i at %i\n
 %s:duplicate packet %i at %i\n
 %s:out of order packet %i at %i\n
@@ -641,10 +685,12 @@ $vertexcolor
 %sLaunching "%s"\n
 %sPP PAGES: used: %d, free %d\n
 %s[F %s Kb] / [T %s Kb] / [S %s Kb]
+%s\%s
 %s\%s.lst
 %s\all.lst
 %s\engine.lst
 %s\t%d\t%.3f\t%d\t%.3f\t%d\t%.3f\t%.3f\t%.2f\t%.3f\t%.3f\n
+%s_%03i.%s
 %s_%i.dem
 %s_hdr
 %s_l_%d.lmp
@@ -656,7 +702,7 @@ $vertexcolor
 %slf.pfm
 %srt.pfm
 %sup.pfm
-&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+%u:%u:%u
 &AElig;
 &Aacute;
 &Acirc;
@@ -780,7 +826,10 @@ $vertexcolor
 (%d %.3f [%d]) 
 (%d %X [%d/%d]) 
 (%d %X [%d]) 
+(%d)%-.*s
 (%f, %f, %f)
+(%i) %s
+(%s)%s
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
 (3DNow) 
@@ -856,12 +905,11 @@ $vertexcolor
 +timedemoquit
 +vgui_drawtree
 +voicerecord
+, Lan %u
 , console
 , detailed dump disabled
 , udp
 ,%03d
-,@UUUUUU
-,In>T
 - "%s" = "%.2f"\n
 - "%s" = "%i"\n
 - "%s" = "%s" (local)\n
@@ -882,6 +930,7 @@ $vertexcolor
 - reliable: %s\n
 - remote IP: %s %s\n
 - total: in %.1f, out %.1f MB\n\n
+-%s %i\n
 -- no materials --
 --- SourceTV Status ---\n
 --- Total %i connected clients ---\n
@@ -2601,7 +2650,7 @@ $vertexcolor
 20IStaticPropMgrEngine
 20IStaticPropMgrServer
 20IUniformRandomStream
-21:13:50
+21:45:38
 21CAudioMixerWave16Mono
 21CAudioSourceStreamMP3
 21CBaseActionEditDialog
@@ -2731,14 +2780,12 @@ $vertexcolor
 4CJob
 4CLog
 4fff>fff>fff>fff>
-4is?Bv
 50/15ms
 5000
 5CGame
 5CVEfx
 5IGame
 5IVEfx
-5b&?2U
 60 fps (16 2/3 ms)
 65536
 66.666666667
@@ -2802,8 +2849,8 @@ $vertexcolor
 9IRegistry
 9IWaveData
 9SVC_Print
-9a&g
 9gf0B
+;%s %c %d;
 ;----- dt_ShowPartialChangeEnts -----
 <!-- DMXVersion
 <-- [%s] Split packet %4i/%4i seq %5i size %4zd mtu %4llu from %s\n
@@ -2827,15 +2874,8 @@ $vertexcolor
 =hit prop %d\n
 >/proc/self/maps
 >333?
->433?r=
->BAY>
 >CAskConnectPanel
->LRY?
->hxs
 >hxs?
->lww?
-?333333
-????????????????
 ???redo
 ???undo
 ?CMapLoadHelper::Init, map %s has wrong identifier\n
@@ -2848,21 +2888,17 @@ $vertexcolor
 ?PlaneList: bad model
 ?ServerUploadGameStats001
 ?Too many players!\n
-?UUUUUU
 ?VPhysicsSurfaceProps001
 ?bench_start
 ?cl_soundscape_flush
 ?engine_no_focus_sleep
 ?fff?
-?ffffff
-?wwwwww
 @<a href=
 @CDemoUIPanel
 @UUUUUU
 @VFileSystem022
 @gl_screen.cpp
 A Source engine game is required to run mods\n
-A!;I2
 AABBTree_Ray
 AASamples
 ABGR8888
@@ -2912,8 +2948,6 @@ Address of remote server if sending unconnected rcon commands (format x.x.x.x:p)
 Adds a new user info value
 Adjust LOD of the last viewed texture +1 to inc resolution, -1 to dec resolution
 Adobe APP14 marker: version %d, flags 0x%04x 0x%04x, transform %d
-Ael?
-Afff?fff?fff?
 After this many seconds without a message from a client, the client is dropped
 After this many seconds without receiving a packet from the server, the client will disconnect itself
 Alias a command.
@@ -3009,7 +3043,6 @@ BGRA5551
 BGRA8888
 BGRX5551
 BGRX8888
-BKbhTb~XBK!;
 Back off
 BackgroundMaps
 Backing store not supported
@@ -3452,6 +3485,7 @@ COverlayMgr::RenderOverlays
 CPU    In_(KB/s)  Out_(KB/s)  Uptime  Map_changes  FPS      Players  Connects\n%s\n
 CPU cost
 CPU/msg
+CPU:  %i\n
 CPanelKeyBindingMapDictionary::m_PanelKeyBindingMapPool
 CPanelMessageMapDictionary::m_PanelMessageMapPool
 CPerfUIChildPanel
@@ -3608,7 +3642,6 @@ CVideoMode_Common::Init  SetupStartupGraphic
 CVmtTextEntry
 CXXABI_1.3
 CXXABI_1.3.8
-Ca\v6;
 CacheCustomFiles: can't read '%s'.\n
 CacheCustomFiles: can't write '%s'.\n
 CacheSoundsFromResFile:  Unable to find '%s'\n
@@ -4510,6 +4543,7 @@ Event System loaded %i events from file %s.\n
 Exceeded MAX_DECALS (%d).\n
 Exception thrown building console/convar history.\n
 Exclu Props   : %i\n
+Exe:  %s\n
 Execute script file.
 Executing command outside main loop thread\n
 Existing player on this server is on this players block list.
@@ -4538,7 +4572,6 @@ Explicitly delete dormant client entities caused by AllowImmediateReuse().
 Explore
 Exponential
 ExtraPanelIcon
-F?V}f
 FADEINOUT
 FADEINOUT "1"\n
 FCMOV 
@@ -4800,7 +4833,6 @@ GLIBC_2.27
 GLIBC_2.29
 GLIBC_2.3
 GLIBC_2.7
-Ga=o
 Gain
 Game            : %s\n
 Game Time %s, Mod "%s", Map "%s", Players %i\n
@@ -4857,7 +4889,6 @@ Got a request to record a movie using AVI, but AVI is deprecated. Using QuickTim
 GotoButton
 GraphPanel.BgColor
 Gzip compress logfile and rename to logfilename.log.gz on close.
-H1\?r
 HALF-LIFE 2
 HALL Detected \n
 HCPrecisionSlider
@@ -4946,7 +4977,6 @@ HueSlider
 Huffman code size table overflow
 Huffman table 0x%02x was not defined
 HushAsserts
-I-0?z7
 IA88
 IBSPPACK004
 ID filter list: %i entries\n
@@ -5232,7 +5262,6 @@ KEY_X
 KEY_Y
 KEY_Z
 KNQ\r
-KS?Y
 Keep this many old copies in history of autosaves and quicksaves.
 Key Pad *
 Key Pad +
@@ -5280,16 +5309,13 @@ Kicked by %s : %s
 Kicked from server
 Kicks everybody connected with a message.
 Kilobytes
-KwV\r
 L %02i/%02i/%04i - %02i:%02i:%02i: %s
 L%02i%02i
 L2Miss
 L>FATAL ERROR: %s\n
-L?333?
 L?Max bytes/sec the host can receive data
 L?delta entity: %i\n
 L?fff?33s?H
-L?fff?fff?
 LINEAR
 LIN_IN
 LIN_OUT
@@ -5523,7 +5549,6 @@ Maximum queries per second to respond to from anywhere.
 Maximum replay time in seconds
 Maximum supported image dimension is %u pixels
 Maximum updates per second that the server will allow
-MbP?
 MemAllocScratch
 MemFreeScratch
 MemTotal: %llu kB
@@ -5568,6 +5593,7 @@ Minimum amount of memory to dedicate to engine hunk and datacache (in mb)
 Minimum number of file hashes to agree to form a consensus.
 Minimum size (in bytes) for stringtablebaseline buffer to be compressed.
 Minimum updates per second that the server will allow
+Misc:  %s\n
 Miscellaneous marker 0x%02x, length %u
 Mismatched shutdown function %s\n
 Missing CD Key from registry, inserting blank key\n
@@ -5715,7 +5741,6 @@ N6snappy15ByteArraySourceE
 N6snappy22UncheckedByteArraySinkE
 N6snappy4SinkE
 N6snappy6SourceE
-NAUU
 NET_AddToLagged::Packet already linked\n
 NET_BufferToBufferDecompress with improperly sized dest buffer (%u in, %u needed)\n
 NET_BufferToBufferDecompress: Snappy decompression failed\n
@@ -5766,7 +5791,6 @@ NV_DST24
 NV_INTZ
 NV_NULL
 NV_RAWZ
-Nae?`
 Name %s is already registered as console command\n
 NameEntry
 Need to rebuild map to get bumped lighting on material %s\n
@@ -5864,7 +5888,6 @@ Number of rounds player sprays are visible
 Number of seconds to track failed rcon authentications
 Number of times a user can fail rcon authentication in sv_rcon_minfailuretime before being banned
 NumericInputOnly
-O?z7
 OKButton
 OPEN SIDED OUTDOOR AREA Detected \n
 OPTIONS
@@ -5883,7 +5906,7 @@ Obtained XMS handle %u
 Occl %.2f (%d/%d)\n
 Occlusion Tool
 OcclusionSystem.cpp
-Oct  5 2026
+Oct 14 2026
 Offloads a bit of decal rendering setup work to the material system queue when enabled.
 OnCancel
 OnChangeChild
@@ -5940,7 +5963,6 @@ Overrides IP for multihomed hosts
 Overrides the SourceTV master root address.
 Overrides the max players reported to prospective clients
 Owner not set!\n
-P96>
 PARALLEL2
 PARALLEL4
 PARALLEL5
@@ -6163,7 +6185,6 @@ Pure server: file: %s\%s ( %d %d %x ) %s : %s : %s\n
 PureServerWhitelist
 PushBack
 QC,A
-Qkkbal
 Quantization table 0x%02x was not defined
 Quantizing to %d = %d*%d*%d colors
 Quantizing to %d colors
@@ -6217,10 +6238,12 @@ RadioButton.SelectedTextColor
 RadioButton.TextColor
 RadioButtonChecked
 RaisedBorder
+Ram:  %lu\n
 RandomFloat
 RandomFloatExp
 RandomInt
 RandomSeed
+Rate:\t\t%d\n
 Rcon auth failed from rcon whitelist address %s\n
 Re-order the HDR/LDR mode switch to do most of the material system reloading with the device offline. This reduces unnecessary device resource uploads and may drastically reduce load time and memory pressure on certain drivers, but may trigger bugs in some very old source engine pathways.
 Reached end of buffer.
@@ -6417,6 +6440,8 @@ Run the host in threaded mode, (0 == off, 1 == if multicore, 2 == force)
 Running a deathmatch server.
 Runs a map as the background to the main menu.
 Runs time demo X number of times.
+S(%s%s)
+S(%s%s) 
 S3: Client connected with expired ticket: UserID: %x\n
 S3: Client connected with invalid ticket ( old version ): UserID: %x\n
 S3: Client connected with invalid ticket: UserID: %x\n
@@ -7384,10 +7409,8 @@ UNLOGGED
 URLClicked
 URLLabel
 USERINFO
-US]CQ
 UTF-32LE
 UTF-8
-UUUUUU
 UV88
 UVWQ8888
 Unable to allocate %i bytes for bug description\n
@@ -7853,7 +7876,6 @@ Wrote '%s':  %s (%dx%d) compresssed (quality %i) to %s\n
 Wrote partial config file "%s" out, to write full file use host_writeconfig "%s" full\n
 XSessionCreate failed with error %d\n
 XboxSystemInterface001
-Y?z7
 Y@skybox/%s_dx80%s
 YellowBlueSlider
 You have been kicked and banned %s by the server.\n
@@ -7873,7 +7895,6 @@ Zip-bug: the anticipated size turned out wrong
 Zip-bug: tried to change mind, but not allowed
 Zip-bug: trying to seek the unseekable
 Zipfile is corrupt or not a zipfile
-Zjz\v
 Zoom FOV
 ZoomFOV
 ZoomHold
@@ -7891,6 +7912,7 @@ ZoomStayout
 [/code]
 [/list]
 [A:%u:%u:%u]
+[C:%u:%u]
 [CShadowMgr::RenderShadowList] growing disp shadow decal cache (decals: %d, cache: %d, diff: %d).\n
 [CShadowMgr::RenderShadowList] growing shadow decal cache (decals: %d, cache: %d, diff: %d).\n
 [Cloud]: Default setting with remote data non-existent, sync all\n
@@ -7898,6 +7920,8 @@ ZoomStayout
 [Cloud]: FAILED saving %s in remote storage\n
 [Cloud]: SUCCEESS retrieved %s from remote storage into %s\n
 [Cloud]: SUCCEESS saving %s in remote storage\n
+[G:%u:%u]
+[I:%u:%u]
 [JoinInviteSession:INVITE_ACCEPTING] Accepting the invite.\n
 [JoinInviteSession:INVITE_NONE] Initial call to join invite session.\n
 [JoinInviteSession:INVITE_NONE] Rejecting invite session since it is the current session.\n
@@ -7906,15 +7930,23 @@ ZoomStayout
 [JoinInviteSession:INVITE_PENDING] Waiting, current state = %d.\n
 [JoinInviteSession:UnknownState=%d] Aborting.\n
 [JoinInviteSession] resetting.\n
+[L:%u:%u]
 [M:%u:%u:%u]
 [MM] Current state: %d\n
 [MM] Filled Slots:\n[MM] Public: %d of %d\n[MM] Private: %d of %d\n
 [MM] Send timer: %f\n
 [MM] Total players: %d\n
 [MM] Wait timer: %f\n
+[P:%u:%u]
 [SteamAPI] %s\n
 [SteamNetworkingSockets] %s\n
+[T:%u:%u]
+[U:%u:%u]
+[a:%u:%u]
+[c:%u:%u]
 [code]
+[g:%u:%u]
+[i:%u:%u]
 [img]
 [list]
 [nothing currently selected]
@@ -7935,6 +7967,7 @@ ZoomStayout
 \nConsole History (reversed)\n\n
 \nCurrent server edicts:\n
 \nCurrent sv_pure value is %d.\n
+\nF%u
 \nHost_Error: %s\n\n
 \nHunk Memory Used:\n
 \nPaged Pool\nprev PP PAGES: used: %lu, free %lu\nfinal PP PAGES: used: %lu, free %lu\n
@@ -7969,6 +8002,7 @@ ZoomStayout
 \t5:\tFILESYSTEM_WARNING_REPORTALLACCESSES_READWRITE\n
 \t6:\tFILESYSTEM_WARNING_REPORTALLACCESSES_ASYNC\n
 ^Ghit surface has no samples\n
+_%i%s
 _CL_ParsePacketEntities
 _ExitOnFatalAssert
 _Host_RunFrame
@@ -7985,6 +8019,8 @@ _Host_RunFrame_Upto_MarkFrame
 _IMaterialProxy003
 _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
+_LPT_%s_%d
+_ST_%s_%d
 _SpewInfo
 _SpewMessage
 _ZGVbN2v_sin
@@ -7995,8 +8031,6 @@ _ZGVbN4v_sinf
 _ZGVbN4v_sinf@GLIBC_2.22
 _ZGVbN4vv_powf
 _ZGVbN4vv_powf@GLIBC_2.22
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6resizeEmc@GLIBCXX_3.4.21
-_ZSt9terminatev@GLIBCXX_3.4
 __ColorDepthWrite00
 __ColorDepthWrite01
 __ColorDepthWrite10
@@ -8804,11 +8838,9 @@ fdopen
 fdopen@GLIBC_2.2.5
 ferror
 ferror@GLIBC_2.2.5
-fff?
 fff?fff?
 fff?fff?fff?fff?fff?fff?
 fffff
-ffffff
 fflush
 fflush@GLIBC_2.2.5
 fg_image
@@ -8856,6 +8888,7 @@ fog_radialskybox 1\n
 fog_start %i\n
 fog_startskybox %i\n
 fogui
+font "%s"\n
 fopen64@GLIBC_2.2.5
 fopen@GLIBC_2.2.5
 for %.2f minutes
@@ -9035,6 +9068,7 @@ history label
 hit material "%s"\n
 hl1mp
 hl2.exe
+hl2://%s
 hl2mp
 hllog.txt
 hltv->RunFrame()
@@ -9086,9 +9120,6 @@ hu_HU
 hud_classautokill
 hud_combattext
 hungarian
-hxs?
-hxs?z7
-i]Wb
 iconImage
 iconv
 iconv@GLIBC_2.2.5
@@ -9584,6 +9615,7 @@ musicsave_t
 nChanges
 nSourceTV connection timed out
 name "%s" not found\n
+name "%s"\n
 namelockid
 navActivate
 navBack
@@ -9738,7 +9770,6 @@ overview_names
 overview_tracks
 overview_zoom
 owner %s\n
-p7?D
 pBSPData->numareas > MAX_MAP_AREAS
 pBWatchdogHandler called - server exiting.\n
 pClass->m_ClassID(%i) >= %i\n
@@ -9866,7 +9897,6 @@ putchar
 putchar@GLIBC_2.2.5
 pvsinfopool
 p}?fff?
-q=yv
 qangle
 qangle_array
 qsort
@@ -10166,7 +10196,6 @@ run with -p4 to get p4 operations upon mat_crosshair_edit\n
 runevent
 runeventchild
 russian
-sAmTb
 s_CacheMutex
 s_CommandBufferMutex
 s_MsgData.entityMsg.m_DataOut
@@ -10514,7 +10543,9 @@ stayout
 stayout "%i"\n
 stayselectedonclick
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::resize(unsigned long, char)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::resize(unsigned long, char)@GLIBCXX_3.4.21
 std::terminate()
+std::terminate()@GLIBCXX_3.4
 stderr
 stderr@GLIBC_2.2.5
 stdin
@@ -10776,9 +10807,6 @@ sys_minidumpspewlines
 system
 system@GLIBC_2.2.5
 systemlinkport
-t>hxs?
-t?z7
-tK?Y
 tabPosition
 tabheight
 tabheight_small
@@ -11189,7 +11217,6 @@ width,
 width: %d\n
 wild scan
 windowed,
-wn>Jj
 writebuf
 writeid
 writeip

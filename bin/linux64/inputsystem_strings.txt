@@ -6,14 +6,22 @@
  clientcmd_can_execute
  failed to dlopen %s error=%s\n
  game
+ max. %f
+ min. %f
  notconnected
  notify
  replicated
  server_can_execute
  singleplayer
 "%s" = "%s"
+%%.%if%s
 %02x
+%A %b %d
+%i%s
+%s %d\n
+%s %f\n
 %s %s %s %s\n
+%s/%s
 %s/bin/linux64/%s
 &AElig;
 &Aacute;
@@ -144,13 +152,11 @@
 6ConVar
 7IConVar
 8CFmtStrNILi256ELb0EE
-9%xH.b
 </script>
 <img src="
 <pre>
 ><a href=
 >DLOPEN Error:%s\n
-@FBCA>?SOQUTPRV
 A_BUTTON
 Analog axis range before a button press is registered.
 Automatically set to 1 if an xcontroller has been detected.
@@ -199,7 +205,6 @@ GLIBC_2.29
 GLIBC_2.3
 Game controller mapping (passed to SDL with SDL_HINT_GAMECONTROLLERCONFIG), can also be configured in Steam Big Picture mode.
 Got hotplug remove event for removed joystick #%i, ignoring.\n
-HJLIKM[YZXE/012@
 How to map the analog joystick deadzone and extents 0 = Scaled Cross, 1 = Concentric Mapping to Square.
 Ignoring hotplug remove for #%i, active joystick is #%i.\n
 InGameHUDControls

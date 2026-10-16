@@ -1,22 +1,6 @@
-            
-                
-                   
-            """"""""
-          \v\v \v\v        \v\v"" , 
   aa RFA  ba KBA  fa KFA  ka AKA  ma HMA  na GRA  ra ARA  sa MSA  va RVA  ya MYA  za EZA  ab HSB  eb LEB  gb RGB  ib SIB  ib PPC  mb BMB  nb NEB  ob BIT  rb ERB  sb SOB  ac TAC  ec EHC  hc AHC  oc SOC  rc ERC  sc YSC  uc LSC  vc UHC  yc LEW  ad NAD  ed UED  vd VID  vd VHD  zd NZD  ee EWE  le LLE  ne GNE  oe OTN  se PSE  te ITE  ue QUE  af RAF  ff LUF  if NIF  jf IJF  of SOF  rf ARF  yf IRF  ag IRI  ag TRI  dg EAG  lg LAG  ng AUG  ug JUG  vg XNM  ah UAH  eh RWI  ih NIH  oh OMH  oh PPC  rh VRH  th IAH  th PPC  uh NUH  yh0EYH  yh EYH  zh REH  ai ANI  di DNI  di YLM  ei ELI  gi OBI  ii MIY  ki KPI  ni DNI  ni YLM  oi ODI  si LSI  ti ATI  ui UNI  uiKUNI  wi RWI  aj NAJ  ij IIJ  vj VAJ  wj VAJ  ak TAK  gk0NOK  ik KIK  jk AUK  kk ZAK  lk NRG  mk MHK  nk NAK  ok ROK  ok HOK  rk RNK  sk HSK  uk RUK  vk MOK  wk ROC  yk RIK  al TAL  bl ZTL  gl GUL  il MIL  nl NIL  ol OAL  tl HTL  ul BUL  vl IVL  gm GLM  hm HAM  im IRM  km DKM  lm LAM  lm RLM  nm GNM  om LOM  om MOR  rm RAM  sm YLM  tm STM  ym MRB  an UAN  bn RON  dn BDN  en PEN  gn GDN  ln DLN  nn NYN  on RON  rn BDN  vn VAN  vn HTA  yn IHC  co ICO  jo BJO  mo ORO  ro IRO  so SSO  ap NAP  ip LAP  lp KLP  sp SAP  tp GTP  uq ZUQ  mr SMR  nr NUR  or MOR  ur SUR  wr AUR  as NAS  cs DRS  ds DNS  es MSN  gs OGS  hs SOB  hs VRH  hs BRS  is HNS  ks YKS  ls VLS  ms OMS  ns0ANS  os LMS  qs IQS  rs BRS  ss ZWS  ts TOS  us NUS  vs EVS  ws KWS  at MAT  et LET  gt JAT  ht AHT  it YGT  kt MKT  lt LGT  nt ANT  ot NGT  rt KRT  st GST  tt TAT  wt IWT  wt AKA  yt THT  gu GYU  ku RKU  ru DRU  zu BZU  ev NEV  iv TIV  ov LOV  aw NLW  ow FLW  hx SHX  iy IIJ  oy ABY  az AHZ  hz SHZ  uz LUZ
- !"#$%&'(!)*+,-./0'
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_
- !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !&&             
  !{vvv v{vv
- "& \v      
- ##            # !$$             
- %&&             
- %''             
- %((             
- **))))))))))))*)
- 1" "\v 2++3   \v""""""
- 5OQdeUf{|^
  aby
  ach PPC ndh0IAH aeh NMH ijh YLM tlh NIQ amh NMH cmh NMH dmh DMH dmh NMH emh NMH gmh NMH hmh NMH imh NMH jmh NMH lmh NMH mmh NMH pmh NMH qmh NMH rmh NIQ smh NMH wmh NMH ymh NMH zmh ZMH zmh NMH enh HHC jnh NMH onh DNH coh  OH ioh HTA joh RAH joh JAR arh NIQ mrh NMH bsh BSU nsh SHZ juh NMH puh HTA suh NYM cwh PPC wyh EYH ybi OJI rci PPC adi HUL bdi PPC bgi IBE bhi PPC cji OJI eji OJI nji OJI sji OJI eki UNI ekiKUNI tki UNI gni HTA hni GNI iri
  ahk ISK bhk DBX khk GNM nhk
@@ -182,8 +166,6 @@
  zkk HTA mlk
  zti NYM lxi NYM caj NYM kaj YLM maj MAJ maj PPC naj
 !!(type & GPOS_impl::ATTACH_TYPE_MARK) ^ !!(type & GPOS_impl::ATTACH_TYPE_CURSIVE)
-!""             
-!"$%&'()*+0123456789<=>?ABCDEILMNORSTVYZ[]^_`abcdefghijklmnopqrstuvwxyz{|}~
 !buffer->have_output
 !buffer->have_output && !source->have_output
 !buffer->len
@@ -197,101 +179,27 @@
 !obj->real_links.length
 !obj->virtual_links.length
 !st.path_open
-"""""""""""""
 """""#"""""""""$"""""""""""""R
 """#""""""""""""""""""""""""""B
-"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRS
-"n,,\v\v\v\v\v/0\v
 #""""!!!###\f
 ###########
-#(#$$$G$G$F$$$^WUCCP,
 #((((*(***.
-$$$$$$$$$$$$
-$$$$$$$$$$$$$$$$$$
-$$$$$$$$F++++(
-$$$$$$$,$$=,,,,,$$$$$$,,$$$$$,,,
-$$$$$$$,+++++++++++Y+++U+WP,,,,$$$=$>$$F++P,P+9+++F,,,,$$$>=$$$$$$$$VVZ+YWW=,,,$FUk@,,,+^$$$$$$$$V++P,VU<
-$$$$$$=$$==$>=$$$$$$))))))))u,,,,,,,>$$$$$$$$$$$$$
-$$$$$E$$$$$$$$$$$$$$(,$$$,$$$,$$$,$=,
-$$$$=$$,$$$==$$,=$$,$$$==$$,$$$$$$$=$$$$$$$$$=9+
-$$$$N$$$$$FP,
-$$$++K++++K+K++,
-$$$F+++++V,,,,,]$FV++V+Vk
-$$$V+$$+GVb^VVV$F+G$$$$$$UWUVVW^
-$$%"&%""""""""
-$$+,VW+++UWW<
-$$=$$$$F++UWUWP,,,,$F$$$$U,
-$$S$$$$$CCC\,,,,$$$$$$
-$$VVVV++++V+,]
-$$^U+++PUUW+++UVVW++++P9
-$,,       F3
-$G$$$$$$$$$H+++I2++JKL++$
-%%%%%%%%%%%%%%
-%%%&&&&&&&&&&
 %%&%''%'''''#
 '%%&%''%''''''')
 '''''''''''''
-'(&)&&&&&&&*+,-./012'3456&789&:;&<=>?<
-'(&)&&&&&&&*+,-./012'3456&789&:;&<=>?<&&&&@&&?&'(&)&&&&&&&*+,-./012'3456&789&&&&<=>?<&&&&@&&?&'&&&&&&&&&&&&)&&&&&&&&+,-.&&&&&&&&&&789&&&&&=>?A&&&&+&)&&&&&&&&+,-.&&&&&&&&&&789&&&&&=>?A&)&&&&&&&&&,-.&&&&&&&&&&&&&&&&&&=>?&)&&&&&&&&&&-.&&&&&&&&&&&&&&&&&&=>?&)&&&&&&&&&&&.&&&&&&&&&&&&&&&&&&=>?&)&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&=>&)&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&>&)&)&&&&&&&&&,-.&&&&&&&&&&789&&&&&=>?A&)&&&&&&&&&,-.&&&&&&&&&&&89&&&&&=>?A&)&&&&&&&&&,-.&&&&&&&&&&&&9&&&&&=>?A&B&&&&&&&&&&&&)&)&&&&&&&&&,-.&&&&&&&&&&&&&&&&&&=>?A&)&&&&&&&*+,-.&&&&&&456&789&&&&&=>?A&&&&+&)&&&&&&&&+,-.&&&&&&456&789&&&&&=>?A&&&&+&)&&&&&&&&+,-.&&&&&&&56&789&&&&&=>?A&&&&+&)&&&&&&&&+,-.&&&&&&&&6&789&&&&&=>?A&&&&+&C&)&&&&&&&*+,-.&01&&&456&789&&&&&=>?A&&&&+&)&&&&&&&&+,-.&&&&&&&&&&789&&&&&=>?A&&&&+&C&)&&&&&&&*+,-.&&1&&&456&789&&&&&=>?A&&&&+&C&)&&&&&&&*+,-.&&&&&&456&789&&&&&=>?A&&&&+&C&)&&&&&&&*+,-./01&&&456&789&&&&&=>?A&&&&+&'(&)&&&&&&&*+,-./012&3456&789&&&&<=>?<&&&&@&&?&'&&&&&&&&&&&&)&'&&&&&&&&&&&&)&&&&&&&&+,-.&&&&&&&&&&789&&&&&=>?A&)&&&&&&&&&&&&&&&&&&&&&&&&&&:;&)&&&&&&&&&&&&&&&&&&&&&&&&&&&;&
 '112223427116661
-((((((((())(((((()))))))((*)))**))))))))++++++++  * ,-
-((((((((3333333322222222222222
-(((()       
-(8Cz
 (char *) obj <= this->head
 (content_type == HB_BUFFER_CONTENT_TYPE_GLYPHS) || (!len && (content_type == HB_BUFFER_CONTENT_TYPE_INVALID))
 (content_type == HB_BUFFER_CONTENT_TYPE_UNICODE) || (!len && (content_type == HB_BUFFER_CONTENT_TYPE_INVALID))
 (size_t) (this->head - (char *) obj) <= size
 (uintptr_t) pos % sizeof (scratch_buffer_t) == 0
-))))))))))))))))
-)))))))))))))))))))
-))CCCC,,CCCCC\,7CCCCCC,,,,CCCCC,,7CCC\,,,CCCCCCC\7C\CCCCCCO,,,,,,,
-),--)))))))))))))
-),..)))))))))))))
-),//)))))))))))))
-***)))))))))))
-************
 *uuuuuuuu1uuuu*u
-+$F@,,,,9U>$$$$>$>$$$$$$=$>$$,GVW++9UYW,=,,,,,,,B,,,>+++9V>$$$=>=$>$$,GWW+PYZYW,,,9U,,$>N
-++)))))))))))))
-++++++++++++
-+++++X      (+$$$iiiii+
-+++LC2++++++++LCCC2CCCCCCCL
 +9.909+9090e09.e
-+b$$$$$$^++V+W+$$$$U+VWW+V,,,,
 ,"ax":%d,"ay":%d
 ,"dx":%d,"dy":%d
 ,"w":%d,"h":%d
 ,"xb":%d,"yb":%d
-,$$$$$$$$$$$,,,7$$$$$$
-,$$$$,,,4@,,,,,,9$$$=,,,,$$$=$$$=
-,$$>$$$$$>==>>$$$$=$$>>,,,=,>>>>$>==>>>>>>==>$=$$$=$$>$==$$$$$>$$>$>$$>$$
-,$,,,,,,,,$=,,,,,,,,,,,++
-,+++++++m+++++++P++b$$$$$$$U++UUVVUb$$$=
-,,$$$$,,,,$$,,,,,]\v\v\v\v\v/\v\v\v/\v
-,,$$$++P,,$$$$$$$]$$,,$$$$
-,,$$=$$$$$$$$$$$=O]
-,,,,+<++++++U+++G$F$$$G^+=,,
-,,,,,,$$$$$=9WV++W++,,
-,,,,,,,++++++
-,,,,,,,,,,>==$$=$$$$>>$$$$F$++++G,$$=Q+++P
-,,,,,,,CCCCCC,,7CCCCCCC
-,,,,,,\v\v\v\v\v
-,,,,,G>$$=,$=$$,>==$,>=,$=,$$$$$$,,VUZ,VZVW,=,,Y,,,,
-,,,,V$$$$$$$$$VVVVVVVV+,,,,
-,,,?,,,,,,,+++P+++W?
-,,M$$$$$$$P$$$$$$++
-,,Wb$$$$$$$$$$+++++++<
-,,`$$$$$S++
-,7CCCCii
-,CCCCC7CCCC,,,,,,CCC,,,,,
-,]$$$$$,,]$$$$,,
-,]$$$=$$>=$$=
-,e$$$$$$$$$$$$$MHf$$$$$$$$$$$$gh,$$$$$?
--!"#$13456./0()*7%&'89:+
 -,,,,,,,,,,,,,
---)))))))))))))
---------------
 -arevmda
 -geok
 -hak
@@ -303,7 +211,6 @@ $G$$$$$$$$$H+++I2++JKL++$
 -syre
 -syrj
 -syrn
-.............
 ../src/OT/Color/CBDT/../../../hb-sanitize.hh
 ../src/OT/Color/sbix/sbix.hh
 ../src/OT/Layout/GPOS/GPOS.hh
@@ -331,48 +238,19 @@ $G$$$$$$$$$H+++I2++JKL++$
 ../src/hb-vector.hh
 .notdef
 .null
-////////////////////
-//////////////////////////////
-///////////////////////6//////
-//////////////////////6//////
-//////////////\f///////////////
-//////////////\f////////1//////
-/////////////\f///////////////
-///////////\n/\f///////////////
-//////////2//\f///////////////
-//////////2//\f////////3//////
-//////////2//\f////////3//4///
-//////////\t\n/\f///////////////
-//////////\t\n\v\f///////////
-//////////\t\n\v\f///////////////
-//////////\t\n\v\f////////8//
-//////////\t\n\v\f////////8//////
-//////////\t\n\v\f////////9//
-//////////\t\n\v\f////////\r//
-////\t\n\v\f////////\r//
-/77////////////7/
-/QQQQQQQQQQQQQQ
-/\v,/0/0\v/\v\v\v\v
 0 == (Length & 3)
 0 == (allocated_var_bits & bits)
 0!0"6
-0000
-00000
-0000000000000
-000000000000000
-000044444444444444
 001.000
 001.001
 001.002
 001.003
 0123456789
 0123456789.EE?-?
-0123456789:;
 01ss#
 02ss#
 09-909-90909-909,,-909,9+|\t|\t|\t|\t|\t|\t|\t|\t|\t|\t|\t|\t|\t|
 09pj
-0\v\v\v\v\v\v\v\v\v\v/4
 0d,-jf
 0ddd
 0dddddgd,-jk
@@ -384,10 +262,6 @@ $G$$$$$$$$$H+++I2++JKL++$
 0dltd
 10.1.0
 10ss#
-11111
-1111111
-1111111111
-111111111111
 11ss#
 20ss#
 21;u;uu
@@ -396,7 +270,6 @@ $G$$$$$$$$$H+++I2++JKL++$
 21ss#
 21us
 21uu
-22222
 233343Sv
 23456)89:;
 2DDDDDDDDDDeDDDDDDDDDDDGDDDDDDD
@@ -404,32 +277,18 @@ $G$$$$$$$$$H+++I2++JKL++$
 30ss#
 31ss#
 38pj
-3m3m+++++P,,,,,,,C
 40pj
 40ss#
 41ss#
-44444
-4555555555
-456789
 50ss#
 51ss#
-55555
-55555555555555
-56789++++++++++++++:;<+;,,,,$$$$$$$$$$$$$=,>$?@,,,,,AAA
 56789:
-5;;;;;;;;;;;;
-5\f5\f5\f5\v8
 60ss#
 61ss#
-66[[[[[[[[[[[[[[[
-6777777777
 7*47
 7*7D
-7/8b8|8
 70ss#
 71ss#
-7777777777
-7777777========
 77=7*777@A7
 77=789:?
 77=79??
@@ -441,23 +300,10 @@ $G$$$$$$$$$H+++I2++JKL++$
 80ss#
 81ss#
 87pj
-88888
-8888888
-888888887777
-8?P9U>$$=,>=$>=$,PVWP,9P9+,9,,,>$==,,,
-8\v8\v8
 90ss#
 91ss#
-99999999
-999999999999999999999
-9:;<=>?@ABCDE
-::666666666666
-::::::::::::
-:;;;;;;;;<<<<<<<<<<<<<<<<<<<<<<<<<
 ; sms
 ;$smn
-;+T$S$$$$$$$$$$=,,,$$FG$$$$$$$$F=,,$$$,,,,,$$$$$$$=+UVWUV,,VUVVW+,,\,
-;,,,,F++UW+$$$$$$$++++++U+
 <%d,%d,%d,%d>
 <777
 <77777*7*777BA7
@@ -467,32 +313,10 @@ $G$$$$$$$$$H+++I2++JKL++$
 <7<77C<7<7<777<7*7D7BB7
 <7@7BB7
 <7BJ7
-<<<<<<<<<<<<<
-<<<<<<<<<<<<<<<
 <=====>=================?
-<\tBE=\vJKN
-=,,,,$^V++++Ub$?
->$$$$$$$$$$,,>$(E$$$$$$$$$$$S
 >333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
->>>>>>>>>>>>>
->>LLLLLLLL]]]]]]]]]]]]
->?L@ABCPRSTUMNOGHIVDEFWXYJKQ
-?@ABCDEFG
-?ACD\nG\fI
 ?void hb_vector_t<Type, sorted>::set_error() [with Type = hb_aat_map_builder_t::feature_info_t; bool sorted = true]
-@$$$$F+,@$$$$$=,,$$$$R$$=A,,9++++$$$$S++++T+++++++U$$$$$$$$$$$UGVW+++UVWVF+++$$$$$+
-@,$$$$$FWV+++W?,,,
-@,,$$$$$=,9^VVVVVVVVVVVVVVVVVVV,,,9+J(((((((XP,,,,,V,,,,,,,,,,,,,,>((4(((4Q$=,,,,,,,=,,,,,,$=>,,,,,,,$$,,,,$$$$$,2<AA,,,,,,+++++++,+++P,,,,CCC\7CCCCC
-@,,$$$$$^W+U+++WUWG
-@,,,,$$$$,$$$^V++,+VVGHZ,,,,,F++++G$$$F++UF+<
-@,,,,,?@,,,,,,AAAAAAAAG$$F+++++++,,,,,$$$$$$$++++++VW+++<,,,,,+++<
-@@@@@@@@@@@
-@@@ZZZZZZZZZZZZZZ
-@AAAAAAAAA
-AAAAA
-AAAAAAAAAA
-AAAAAAAAKKKKKKKKKKKKKK
-AAAT+++L2+++CCCCCCC++CC+L,,,,,
+@%d,%d
 AAT::Chain<AAT::ExtendedTypes>::apply(AAT::hb_aat_apply_context_t*, AAT::hb_aat_layout_chain_accelerator_t const*) const
 AAT::Chain<AAT::ObsoleteTypes>::apply(AAT::hb_aat_apply_context_t*, AAT::hb_aat_layout_chain_accelerator_t const*) const
 AAT::FeatureName::get_feature_type() const
@@ -535,32 +359,12 @@ Aringsmall
 Asmall
 Atilde
 Atildesmall
-Ax",N
-BBBBB
-BBBBBBBBBBBB
-BD\nZ
-BHHHHHHHHHH
 BUSGSOPG
 Black
 Bold
 Book
 Brevesmall
 Bsmall
-C uh
-C1\v\vCCC
-C4CYC
-CCC,CCCCCCCC7CCCC \v """"\v  "
-CCCC
-CCCCCC
-CCCCCCC
-CCCCCCCC
-CCCCCCCC,,,,,,]iiiiiii
-CCCCCCCC,,,,7CCCCCCC\
-CCCCCCCCC
-CCCCCCCCCCC
-CCCCCCCCCCCC
-CCCCCCCCCCCC\,,
-CDEFG
 CFF::FDSelect3_4<OT::IntType<unsigned short, 2u>, OT::IntType<unsigned char, 1u>>::sanitize(hb_sanitize_context_t*, unsigned int) const
 CFF::cff1_top_dict_opset_t::process_op(unsigned int, CFF::cff1_top_dict_interp_env_t&, CFF::cff1_top_dict_values_t&)
 CFF::cff2_cs_interp_env_t<CFF::number_t>::process_blend()
@@ -587,8 +391,6 @@ CFF::path_procs_t<cff2_path_procs_path_t, CFF::cff2_cs_interp_env_t<CFF::number_
 CFF::path_procs_t<cff2_path_procs_path_t, CFF::cff2_cs_interp_env_t<CFF::number_t>, cff2_path_param_t>::rcurveline(CFF::cff2_cs_interp_env_t<CFF::number_t>&, cff2_path_param_t&)
 CFF::path_procs_t<cff2_path_procs_path_t, CFF::cff2_cs_interp_env_t<CFF::number_t>, cff2_path_param_t>::vhcurveto(CFF::cff2_cs_interp_env_t<CFF::number_t>&, cff2_path_param_t&)
 CSWTCH.230
-C\CCCCCC\,\,,,,,,,CCCCCC2,
-C\vDkD+E]EaEkE
 Cacute
 Caronsmall
 Ccaron
@@ -597,43 +399,13 @@ Ccedillasmall
 Cedillasmall
 Circumflexsmall
 Csmall
-DDDD
-DDDDDD
-DDDDDDDDDDDDDDD
-DDDDDDDDDDDDFDDDDDDDDHIJKDDDDDDDDDDTUVDDDDDXYZ^DDDDHDFDDDDDDDDHIJKDDDDDDDDDDTUVDDDDDXYZ^DFDDDDDDDDDIJKDDDDDDDDDDDDDDDDDDXYZDFDDDDDDDDDDJKDDDDDDDDDDDDDDDDDDXYZDFDDDDDDDDDDDKDDDDDDDDDDDDDDDDDDXYZDFDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDXYDFDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDYDFDFDDDDDDDDDIJKDDDDDDDDDDTUVDDDDDXYZ^DFDDDDDDDDDIJKDDDDDDDDDDDUVDDDDDXYZ^DFDDDDDDDDDIJKDDDDDDDDDDDDVDDDDDXYZ^D`____________a_FDDDDDDDDDIJKDDDDDDDDDDDDDDDDDDXYZ^DFDDDDDDDGHIJKDDDDDDQRSDTUVDDDDDXYZ^DDDDHDFDDDDDDDDHIJKDDDDDDQRSDTUVDDDDDXYZ^DDDDHDFDDDDDDDDHIJKDDDDDDDRSDTUVDDDDDXYZ^DDDDHDFDDDDDDDDHIJKDDDDDDDDSDTUVDDDDDXYZ^DDDDHDbDFDDDDDDDGHIJKDMNDDDQRSDTUVDDDDDXYZ^DDDDHDFDDDDDDDDHIJKDDDDDDDDDDTUVDDDDDXYZ^DDDDHDbDFDDDDDDDGHIJKDDNDDDQRSDTUVDDDDDXYZ^DDDDHDbDFDDDDDDDGHIJKDDDDDDQRSDTUVDDDDDXYZ^DDDDHDbDFDDDDDDDGHIJKLMNDDDQRSDTUVDDDDDXYZ^DDDDHD
-DDDDDDDDDDDDFDDDDDDDDHIJKDDDDDDDDDDTUVDDDDDXYZ^Ddcfge
-DDDD\\\\\\\\\\\
-DDDDmD
-DDDDmDFDDDDDDDDmnopDDDDDDDDDDyz{DDDDD}~
-DDDDmDFDDDDDDDDmnopDDDDDDDDxDyz{DDDDD}~
-DDDDmDFDDDDDDDDmnopDDDDDDDwxDyz{DDDDD}~
-DDDDmDFDDDDDDDDmnopDDDDDDvwxDyz{DDDDD}~
-DDDDmDjkDFDDDDDDDlmnopqrstDuvwxDyz{DDDD|}~
 DEFGH
 DEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abc
-DFDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD}~DFDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD~DFDFDDDDDDDDDnopDDDDDDDDDDyz{DDDDD}~
-DFDDDDDDDDDDDpDDDDDDDDDDDDDDDDDD}~
-DFDDDDDDDDDDopDDDDDDDDDDDDDDDDDD}~
-DFDDDDDDDDDnopDDDDDDDDDDDDDDDDDD}~
-DFDDDDDDDDDnopDDDDDDDDDDDD{DDDDD}~
-DFDDDDDDDDDnopDDDDDDDDDDDz{DDDDD}~
-DFDDDDDDDlmnopDDDDDDvwxDyz{DDDDD}~
-DFDDDDDDDlmnopDDsDDDvwxDyz{DDDDD}~
-DFDDDDDDDlmnopDrsDDDvwxDyz{DDDDD}~
-DFDDDDDDDlmnopqrsDDDvwxDyz{DDDDD}~
 Delta
 Dieresissmall
-DjDDDDDDDDDDDDFDDDDDDDDmnopDDDDDDDDDDyz{DDDDD}~
-Djccccccccccccdcj____________a_jDDDDDDDDDDDDFDDDDDDDDmnopDDDDDDDDDDyz{DDDDD}~
-DjkDFDDDDDDDlmnopqrstjuvwxDyz{DDDD|}~
 Dotaccentsmall
 Dsmall
-E$$$$$?(E,,>$$$$$C
-E$$MC^U$G+GFG$$+F=,,,,,,,,,,,>S
-EDFDDDDDDDGHIJKLMNO
-EDFDDDDDDDGHIJKLMNODPQRSDTUVDDDDWXYZ[DDDD\DD]D
 EEEEEEEEEEEEEE
-EJJJJJJJJJJJJ
 Eacute
 Eacutesmall
 Ecircumflex
@@ -644,11 +416,6 @@ Egrave
 Egravesmall
 Esmall
 Ethsmall
-F+9P,,++$$>$>$$$$$$,+P,9
-FFFFF
-FFFFFFF
-FFFIIIIIIII
-FGHI
 FT_Add_Default_Modules
 FT_Done_Face
 FT_Done_Library
@@ -679,10 +446,6 @@ FT_Set_Var_Design_Coordinates
 FT_Sfnt_Table_Info
 Fsmall
 GCC: (SteamRT 10.3.0-3+steamrt3.1+bsrt3.1) 10.3.0
-GF,,,,,,,$$$==$$>$$$$$$$>$$$$?,,,$$$$$$$FVW+++P,,+V>$$$=>=$>$$9GVUVZYZYV,=,,Y,,>$$V,+++P,++P,,,,,$$$$$>,=$$$>VW++PZYYVZVUGG
-GFG,,,,9VW+UW<
-GGGGG
-GGGGGGGGGGGGG
 GHIJKL
 GHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefg
 GLIBC_2.14
@@ -693,13 +456,8 @@ Gravesmall
 Gsmall
 HB_OPTIONS
 HB_SHAPER_LIST
-HGIJAI
-HIIIIIIIII
-HIJKLMNOPQRSTUVWXYZ[\]^_`
-Hbbbbbbbbaaaaaaaa
 Hsmall
 Hungarumlautsmall
-I\n^^L\nZA`\n\
 Iacute
 Iacutesmall
 Icircumflex
@@ -709,33 +467,21 @@ Idieresissmall
 Idotaccent
 Igrave
 Igravesmall
-InJvJ
 Ismall
-JJJJJ
 Jsmall
-KKKK
-KLMN
 Ksmall
-LVM\rN&N2N8N9N=NAN
 Light
 Lslash
 Lslashsmall
 Lsmall
-M>F7
-MMMMMMMMMM
 Macronsmall
 Medium
 Msmall
-NNNNN
-NNNNNNNSSSSSSSSSSSSSS
 Nsmall
 Ntilde
 Ntildesmall
 OEsmall
-OF$$$$$$$+++++P>$$$$+++++G,,,,,,,
-OOOOO
 OOOOOOOO
-OPQR
 OT::Affine2x3::paint_glyph(OT::hb_paint_context_t*, unsigned int) const
 OT::ArrayOf<OT::HBGlyphID16, OT::IntType<unsigned short, 2u>>::sanitize_shallow(hb_sanitize_context_t*) const
 OT::ArrayOf<OT::HBGlyphID16, OT::IntType<unsigned short, 2u>>::serialize(hb_serialize_context_t*, unsigned int, bool)
@@ -987,11 +733,6 @@ Oslashsmall
 Osmall
 Otilde
 Otildesmall
-P+PzP
-P,,,,>$$=>$$=>$$=,,,,
-P,,,,O,+G$$$$$$$$$F++W+++P
-P00L\v\v\vi.(\vjJ
-P@QEQMQTQdQgQhQiQmQwQ
 PKKKKKTKPKK\PKPKPKKKPKTK]K[[K
 PKKKKKTKTKKK[[K
 PKKKKKTKWMXY\f\rPKK
@@ -1000,31 +741,20 @@ PKUK[[K
 PKWMSS\f\rPKKK\fKKQKWMXS\f\rPKK
 PK[[K
 PK[cK
-PPPPPPPPPPPPPP
-PQRSDTUVDDDDWXYZ[DDDD\DD]D
 Psmall
-Q3QIR
 QQQQQQQQ
-QRRRRRRRRR
 Qsmall
-Qxxxxxxxxttttttttttttttt
-R)R:R;RFRrRwR
-RRRRRRRRRRR
 RSTUVW
 Regular
 Ringsmall
 Roman
 Rsmall
 Rttttttttttttt
-S?SISQSZSsSuS}S
 Scaron
 Scaronsmall
 Scedilla
 Semibold
 Ssmall
-T8TBTHThT
-TSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSUSVVVVV
-TTTTTTTTTTTTTT
 TVUUUUU
 Thorn
 Thornsmall
@@ -1061,9 +791,6 @@ Type* hb_serialize_context_t::extend_size(Type*, size_t, bool) [with Type = OT::
 Type* hb_serialize_context_t::start_serialize() [with Type = OT::Layout::GSUB_impl::SubstLookup]
 Type* hb_serialize_context_t::start_serialize() [with Type = OT::OpenTypeFontFile]
 U+%04X
-USUUUcU
-UUUUUUUUVUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUW
-UVWXYZ
 Uacute
 Uacutesmall
 Ucircumflex
@@ -1073,50 +800,26 @@ Udieresissmall
 Ugrave
 Ugravesmall
 Usmall
-V$$$$>$$$$$$$$$=,9++++++U++<+$$F+++++9+++++++++PCCCCLCC\C
 VARC.cc
-VQVhVtV
 VVVVVVVVMMMMMMMMMMMM
-VWC\v\v\v0,,0,
-VXZ[
 Vsmall
-WWWWWW
-W\rX1X2X@XZX^X
 Wsmall
-X$$$$$$$FV>$$$=>=>$$$$$$$$$$=$$$==,$$,GVW+PYZYW=,,,Y,,$>$+,
-XXXXXXXXuuuuuuuuppppppppppppppp
 Xsmall
-Y"YDYHYQYTYbYsY
-YYYYY
 Yacute
 Yacutesmall
 Ydieresis
 Ydieresissmall
 Ysmall
-Z'ZbZfZ
-ZZZZZZZ
 Zcaron
 Zcaronsmall
 Zsmall
-[$$$9V>$$$$$$$$=,$$$$>$$$$>,$$$=,P,YV+PPVVVV,V@,,,,,>$$$$$$$F$+++P,`$$$K+++<
-[CC8\,,UVG$$$=$=$$$$$$$$$$$$,G+UVZ+P++,,,9P$=>,,,,]
-[CCC8
-[CCCCCCCC
-[CCCCCCCC,,,,CCCCCC\,,,,,,CCCC\,,,C,,,,,,,CCCCC
-[FVH$$$=$$$>$$,GWVVZUZV+,,,YZ,,>=>^,,,,,,+V$$$$=$$$$$$FGVW+PVZVWM,,$^
-\"\?\`\b\d\e\n\
-\,,,,OAC,$$$$$$>$$$$$$=$>
-\\\\\WWWWWWWWWWWWWWW
-\]^_`abcdef
 \f0fr
 \f4fr
 \f8fr
 \fKKQKRMSO\f\rPKKK\fKKQKMSO\f\rPKKK\fKKQKTKKKUVK
 \fKKQKZMSS\f\rPKKK\fKKQKMSS\f\rPKKK\fKKQKTKKK[VK
 \fKKQK\n\v\v\f\rKKKK\fKLMSO\f\rPKKK\fKKQKe-ff
-\f\f\f\f\f\f\f\f\f\f\f\f\f\f
 \fzh-hk
-\n,,).\v//\v"\v\v\v\v\v\v\v\v0\v\v\v\v
 \n0es
 \n4es
 \n8es
@@ -1125,47 +828,20 @@ Zsmall
 \nLes
 \nPes
 \nTes
-\n\n\n\n\n\n\n\n\n\n\n\n\n\n
-\n\v\v\f\r\t\t\t\t\f\t
-\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
-\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r<\r\r\r=>\r\r\r\r?\r\r\r\r\r\r@A
 \t0en
 \t4en
 \tDen
 \tHen
-\t\n\v\v\v\v\v\v\v\v\v\v\v\v\f\r
 \t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r
 \t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r
-\t\t\t\t\f\t\v\v\f\r\t\t\t\t\f\t\f\t
 \t\t\t\t\n\t\v\f\r\t\t\t
-\t\t\t\t\t\t\t77777777777777
-\t\t\t\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \tu+f0f09\t|\t|\t|\t|
 \t{\t"auxy""\t:\t909\t}\t}\t]\t}""\t:\t909\t}\t}ll""\t:\t9\t}\t}xy""\t:\t909\t}\t}""\t:\t909\t}\t}ll""\t:\t9\t}\t}""\t:\t9"\\t}"\\t}\t}""\t:\t9\t}\t{
-\v" ""\v     
-\v+-./23/01\n
-\v.ttt\vtt
-\v0\v/0\v\v\v/\v\v\v/
-\v0\v/\v\v//,\v\v\v/
 \v356277
-\v\v\f\r\t\t\t\t\f\t\n\v\v\f\r\t\t\t
-\v\v\v\v\v\v\v\v\v\v\v
-\v\v\v\v\v\v\v\v\v\v\v\v
-\v\v\v\v\v\v\v\v\v\v\v\v\v
-\v\v\v\v\v\v\v\v\v\v\v\v\v\v
-\v\vquvvvvvwAAxxx
-]@,,,9P,,,,,,$$^V++++V+UG$?
-]C]P]k]n]|]
-]GVW++UUVWU+$H,,,,$$$$$$$^V++,VV+W<
-]]]]FFFFFFFF
-^UUUUUUUUUUU
-^^^^^^^^^^^^^^
-_"_S_b_i_k_
-_1vr
 _DYNAMIC
 _GLOBAL_OFFSET_TABLE_
 _ITM_deregisterTMCloneTable
@@ -1173,9 +849,6 @@ _ITM_registerTMCloneTable
 __FRAME_END__
 __GNU_EH_FRAME_HDR
 __TMC_END__
-____________
-____________a_
-____________a_FDDDDDDDDDnopDDDDDDDDDDDDDDDDDD}~
 __assert_fail
 __assert_fail@GLIBC_2.2.5
 __cxa_atexit
@@ -1364,20 +1037,10 @@ _use_syllable_machine_key_spans
 _use_syllable_machine_trans_actions
 _use_syllable_machine_trans_keys
 _use_syllable_machine_trans_targs
-`````````````
-``ooooooooooooooo
 `abc
 `abcdefghijklmn
-a(bGb
 a-latg
-aCCCC2++++CCCC
-aDaHaLaNa`ahaza
-aaC+CCC
-aaaa
-aaaaaa9999
-aaaaaaaaaa
 aacute
-abcddddddddde
 abcdefghijklmnopqrstuvwxyz
 acircumflex
 acute
@@ -1421,9 +1084,6 @@ attached mark glyph at %u to glyph at %u
 attaching mark glyph at %u to glyph at %u
 aveD
 ayrO
-b.b4b]b
-b:Qcd
-b=cPchc{c
 backslash
 bits == (allocated_var_bits & bits)
 bool OT::Condition::evaluate<OT::ItemVarStoreInstancer>(int const*, unsigned int, OT::ItemVarStoreInstancer*) const
@@ -1569,8 +1229,6 @@ canon_map
 carf\v
 caron
 ccaron
-ccccccccccc
-ccccccccccccdc
 ccedilla
 cedilla
 cent
@@ -1623,15 +1281,9 @@ currency
 current->head <= (const char *) &ofs
 cursive attached glyph at %u to glyph at %u
 cursive attaching glyph at %u to glyph at %u
-d"dRdidwd~d
 d*4d8
-d,,,,,$$$$$$VW+VU+
-d,,,,,>$$$=>,$$$$>=$$$$VVVYZ9UGbW
 d,-ff
-d,CCCCC,,,\v\v\v,
-d,CCCCCCCCC$$$FUW,
 d0ddm0ddd
-dOeVelexe
 dagger
 daggerdbl
 dart
@@ -1651,12 +1303,6 @@ dd4d-ff
 dd4dgdddhid
 dd4dgdddlid
 dd4drss
-dddd
-ddddd
-dddddddd
-ddddddddd
-dddddddddddd
-dddddddddddddd<<<<<<<<<<<<<<<
 deallocate_buffer_var(hb_ot_shape_plan_t const*, hb_font_t*, hb_buffer_t*)
 decltype((*this)._dispatch(fp, (hb_priority<16u>)(), ())) hb_sanitize_context_t::dispatch<OT::Layout::Common::Coverage>(OT::Layout::Common::Coverage const&)
 decltype(fp.sanitize(this, ())) hb_sanitize_context_t::_dispatch<OT::Layout::Common::Coverage>(OT::Layout::Common::Coverage const&, hb_priority<1u>) (.part.0)
@@ -1666,7 +1312,6 @@ decompose(hb_ot_shape_normalize_context_t const*, bool, unsigned int)
 decompose_current_character(hb_ot_shape_normalize_context_t const*, bool)
 decompose_indic(hb_ot_shape_normalize_context_t const*, unsigned int, unsigned int*, unsigned int*)
 decompose_khmer(hb_ot_shape_normalize_context_t const*, unsigned int, unsigned int*, unsigned int*)
-defg=?h
 degree
 deleted glyph at %u (multiple substitution)
 deleting glyph at %u (multiple substitution)
@@ -1696,7 +1341,6 @@ dsuperior
 eacute
 ecircumflex
 edieresis
-eeeeeeeee
 egrave
 eight
 eightinferior
@@ -1739,7 +1383,6 @@ expert_charset_to_sid
 expert_encoding_to_code
 expert_subset_charset_sid_to_gid
 expert_subset_charset_to_sid
-fIftf
 fallback
 fasthash64(void const*, unsigned long, unsigned long) (.constprop.0)
 fclose
@@ -1750,8 +1393,6 @@ feof@GLIBC_2.2.5
 ferpL
 ferror
 ferror@GLIBC_2.2.5
-ffffffffff
-fgmu
 fhprL
 figuredash
 final_reordering_indic(hb_ot_shape_plan_t const*, hb_font_t*, hb_buffer_t*)
@@ -1806,8 +1447,6 @@ fvbaL
 fwlbL
 fwrite
 fwrite@GLIBC_2.2.5
-g!gNgSgVg^g{g
-g<k6l
 g_bytes_get_data
 g_bytes_ref
 g_bytes_unref
@@ -1824,7 +1463,6 @@ germandbls
 get_gsubgpos_table(hb_face_t*, unsigned int)
 getenv
 getenv@GLIBC_2.2.5
-gggggggggggggg
 gid%u
 gilc
 gild
@@ -2738,10 +2376,7 @@ hb_vector_t<hb_set_t, false>::shrink_vector(unsigned int)
 hb_version
 hb_version_atleast
 hb_version_string
-hddddddddddddddddddddddddddidddddd
-hhhhhhhhhihjkDFDDDDDDDlmnopqrstjuvwxDyz{D:;D|}~
 hhijhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-hijklmnopqrstuvwxyz{|}~
 horizontal_features
 hsws$
 hungarumlaut
@@ -2754,7 +2389,6 @@ hypotf@GLIBC_2.2.5
 i < ARRAY_LENGTH (HB_STRING_ARRAY_OFFS_NAME) - 1
 i < page_map.length
 i <= out_len + (len - idx)
-i\t4^l\t9A
 iacute
 icircumflex
 idieresis
@@ -2763,13 +2397,6 @@ idx <= end
 idx <= len
 idx >= count
 igrave
-ii,,,,,\v\v\v\v
-iiii
-iiii++V
-iiiii
-iiiiiiiii
-iiiiiiiiiii
-ij$$$=,,,$+U,,,,>$+k@,,,,$+,,,,,,$$$$$$=$=+,,,,,,$$+W+++VVVVUW+++++
 ij:&Q
 index <= count
 indic_configs
@@ -2784,8 +2411,6 @@ invalid
 is_deleted_glyph(hb_glyph_info_t const*)
 isuperior
 j - i <= ARRAY_LENGTH (temp)
-jjjjjjjjhhhhhhhhhhhh
-jkdlmn
 joining_table
 joining_type(unsigned int)
 json
@@ -2793,16 +2418,9 @@ jy-hans
 jy-hant
 jy-hant-hk
 jy-hant-mo
-k!kTkrkwkyk
-kNlgl
 kcln
 kerned glyphs at %u,%u
 khmer_features
-kkkk
-kkkkk
-kkkkkkk
-kkkkkkkk
-kkkkkkkkkkkkkk
 kkkkvv\t
 kmkm\r
 kram\r
@@ -2831,9 +2449,6 @@ ligature_mark_table
 ligature_table
 link.width == 2 || link.width == 3 || link.width == 4
 link.width == 2 || link.width == 4
-lkm,o
-lllllll
-llllllllll
 lmaT
 logicalnot
 losianif2nif3nifidem2demtini
@@ -2844,7 +2459,6 @@ lslash
 lsuperior
 ltit
 m
-m4m>mAmimjmwmxm
 m<7\ntttt
 machine_index_t<hb_zip_iter_t<hb_iota_iter_t<unsigned int, unsigned int>, hb_filter_iter_t<hb_filter_iter_t<hb_zip_iter_t<hb_iota_iter_t<unsigned int, unsigned int>, hb_array_t<hb_glyph_info_t>>, find_syllables_use(hb_buffer_t*)::'lambda'(hb_glyph_info_t const&), ._anon_132 const&, (void*)0>, find_syllables_use(hb_buffer_t*)::'lambda0'(hb_pair_t<unsigned int, hb_glyph_info_t const&>), ._anon_120 const&, (void*)0>>>::operator=(machine_index_t<hb_zip_iter_t<hb_iota_iter_t<unsigned int, unsigned int>, hb_filter_iter_t<hb_filter_iter_t<hb_zip_iter_t<hb_iota_iter_t<unsigned int, unsigned int>, hb_array_t<hb_glyph_info_t>>, find_syllables_use(hb_buffer_t*)::'lambda'(hb_glyph_info_t const&), ._anon_132 const&, (void*)0>, find_syllables_use(hb_buffer_t*)::'lambda0'(hb_pair_t<unsigned int, hb_glyph_info_t const&>), ._anon_120 const&, (void*)0>>> const&)
 macron
@@ -2863,7 +2477,6 @@ minus
 minus_1
 mmap64
 mmap64@GLIBC_2.2.5
-mmmmmmmmmmm
 mn-hans
 mn-hant
 mn-hant-hk
@@ -2883,14 +2496,10 @@ muno
 munp
 munt
 mvba
-mvhjxo
 mwlb
 myanmar_basic_features
 myanmar_other_features
 mylM
-n,(((4((((Q((((Q,,$$$,=$$$$$$>=,=>$$$]
-n,,+++P++++++++P9+++9P++P,,(((((((,,,,,,,,9+++J(((,
-n/nnn
 ndro\n
 newlocale
 newlocale@GLIBC_2.3
@@ -2901,8 +2510,6 @@ nineinferior
 nineoldstyle
 ninesuperior
 nlahM
-nnnnnn
-nnnnnnnnnnnnnnn
 nonbreakingspace
 nonmarkingreturn
 notequal
@@ -2910,14 +2517,11 @@ np-hans
 np-hant
 np-hant-hk
 np-hant-mo
-nprs
 nrek
 nsuperior
 ntilde
 num_contours > 0
 numbersign
-o"o#ono
-o),,$^WVUkW,$$,,,,,,$$$=,>$$
 o-bok
 o-nyn
 oacute
@@ -2950,8 +2554,6 @@ otilde
 override_features_hangul(hb_ot_shape_planner_t*)
 override_features_indic(hb_ot_shape_planner_t*)
 override_features_khmer(hb_ot_shape_planner_t*)
-p9pJpppwp}p
-pEqIqnq
 packed.length > 1
 packed.tail ()->head == tail
 pacp%
@@ -2978,9 +2580,6 @@ position_cluster(hb_ot_shape_plan_t const*, hb_font_t*, hb_buffer_t*, unsigned i
 positioned glyph at %u
 positioning glyph at %u
 postprocess_glyphs_arabic(hb_ot_shape_plan_t const*, hb_buffer_t*, hb_font_t*)
-pppp
-pppppNNNNNNNNNNNNNN
-pqdddddddddddddddddr
 pqr9
 preprocess_text_hangul(hb_ot_shape_plan_t const*, hb_buffer_t*, hb_font_t*)
 preprocess_text_indic(hb_ot_shape_plan_t const*, hb_buffer_t*, hb_font_t*)
@@ -3001,9 +2600,6 @@ px-hant
 px-hant-hk
 px-hant-mo
 qfffrs
-qqqqqqqq
-qqqqqqqqqqqqq
-qtul
 question
 questiondown
 questiondownsmall
@@ -3016,8 +2612,6 @@ quoteleft
 quoteright
 quotesinglbase
 quotesingle
-r(r+r5rPrbr
-r*suszs
 radical
 rafcL
 realloc
@@ -3047,7 +2641,6 @@ replacing glyph at %u (single substitution)
 ring
 rjuG
 ro-MD
-rrrrrrrrrrrrr
 rsuperior
 rt-lojban
 rtrv
@@ -3102,7 +2695,6 @@ sp-hant-mo
 space
 spus\n
 sruc
-sssssssssssssss
 ssuperior
 standard_encoding_to_code
 standard_encoding_to_sid
@@ -3141,7 +2733,6 @@ static_paint_extents_funcs
 static_shaper_list
 static_shapers
 static_ucd_funcs
-stdddddddddudddddddddddddddv'wxyz{|}~
 stderr
 stderr@GLIBC_2.2.5
 sterling
@@ -3180,7 +2771,6 @@ swlbM
 swlb\r
 sysconf
 sysconf@GLIBC_2.2.5
-t\tt"tGt\titqt
 table_tags
 tail <= snap_tail
 tail == obj->head
@@ -3222,13 +2812,11 @@ try kerning glyphs at %u,%u
 tsid
 tsih(
 tsuperior
-ttttt
 twodotenleader
 twoinferior
 twooldstyle
 twosuperior
 twothirds
-u$u;u>uYueupu
 uacute
 ucircumflex
 udieresis
@@ -3263,10 +2851,8 @@ v#{vvvvv~v
 v#{vvvvv~vwxy1 !{vv" vv|v~vvv
 v#{vvvvv~v{vv
 v#{vvvvv~v~vvv
-vBviv
 vfprintf
 vfprintf@GLIBC_2.2.5
-vh\]^_lnopqijkcdewxyr`ab~s
 void AAT::Lookup<OT::IntType<unsigned int, 4u>>::collect_glyphs<hb_set_digest_combiner_t<hb_set_digest_bits_pattern_t<unsigned long, 4u>, hb_set_digest_combiner_t<hb_set_digest_bits_pattern_t<unsigned long, 0u>, hb_set_digest_bits_pattern_t<unsigned long, 9u>>>>(hb_set_digest_combiner_t<hb_set_digest_bits_pattern_t<unsigned long, 4u>, hb_set_digest_combiner_t<hb_set_digest_bits_pattern_t<unsigned long, 0u>, hb_set_digest_bits_pattern_t<unsigned long, 9u>>>&, unsigned int) const
 void AAT::Lookup<OT::IntType<unsigned short, 2u>>::collect_glyphs<hb_set_digest_combiner_t<hb_set_digest_bits_pattern_t<unsigned long, 4u>, hb_set_digest_combiner_t<hb_set_digest_bits_pattern_t<unsigned long, 0u>, hb_set_digest_bits_pattern_t<unsigned long, 9u>>>>(hb_set_digest_combiner_t<hb_set_digest_bits_pattern_t<unsigned long, 4u>, hb_set_digest_combiner_t<hb_set_digest_bits_pattern_t<unsigned long, 0u>, hb_set_digest_bits_pattern_t<unsigned long, 9u>>>&, unsigned int) const
 void AAT::StateTableDriver<AAT::ExtendedTypes, AAT::ContextualSubtable<AAT::ExtendedTypes>::EntryData>::drive<AAT::ContextualSubtable<AAT::ExtendedTypes>::driver_context_t>(AAT::ContextualSubtable<AAT::ExtendedTypes>::driver_context_t*, AAT::hb_aat_apply_context_t*)
@@ -3375,14 +2961,8 @@ void* hb_object_get_user_data(Type*, hb_user_data_key_t*) [with Type = const hb_
 void* hb_object_get_user_data(Type*, hb_user_data_key_t*) [with Type = const hb_unicode_funcs_t; hb_user_data_key_t = hb_user_data_key_t]
 vsnprintf
 vsnprintf@GLIBC_2.2.5
-vvvvvvvvvvv
 vwxy
-w@wJw
-wNxkx
 workspace.length == pages.length
-wwwww
-wwwwwwwwwwwwww
-x*y<y>yHyIyPyVy]y^yey
 x-hbot-%08x
 xxxxy
 xxxy
@@ -3391,9 +2971,6 @@ yacute
 ybur
 ydieresis
 yyyZhniZzzzZbarAnmrAgneBlryCaveDroeGkerGrjuGuruGgnaHinaHrbeHariHadnKanaKooaLntaLmylMayrOlmaTuleTiahTtbiTopoBiarBsnaCrehCihtErmhKgnoMrmyMmagOrnuRhniScrySaahTiiiYtrsDhtoGlatIdhuBonaHglgTbgaTtrpCbmiLbniLamsOwahSelaTragUiguBtpoCgalGrahKulaToepXolySgnfTilaBxusXookNgahPxnhPiraCmahCilaKcpeLicyLidyLkclOgnjRruaSdnuSiiaVtsvAumaBpygEimrAilhPitrPavaJihtKusiLietMbraShkrOrmaSanaLtvaTktaBharBdnaMmkaCcreMoreMdrlPdrhSaroSrkaTssaBbhgAlpuDablEnarGjohKdniSaniLjhaMinaMdneMidoMoorMtabNbraNmrePgnmHmlaPcuaPplhPddiShriTaraWmohAwulHrtaHtluMgnuHwngSmldAskhBcraMegsOgnaTaweNmnoGuhsNoyoSbnaZrgoDgnoGghoRakaMfdeMogoSdgoSmylEdnaNpnmHohcWsrhCkaiDstiKizeYnmpCrguOasnTotoThtiVhtmZiwaKmgaNaraGhkuGiarKoanOunuSrdoTgtuTType* hb_object_reference(Type*) [with Type = hb_unicode_funcs_t]
-yyyyyyyyy
-yzyz
-z@zJzOz
 zcaron
 zero
 zeroinferior
@@ -3414,11 +2991,5 @@ zo-hans
 zo-hant
 zo-hant-hk
 zo-hant-mo
-zzzz
-zzzzzzzYYYYYYYYY
-zzzzzzzzzz
 {vvv vwxzz !{vvv vv|v
 {v{v{vvv{v~v
-{{{{{{{{{{{{{{
-}}}}}}}}}}}
-~~~~~~~~~~~

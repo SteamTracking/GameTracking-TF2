@@ -1,4 +1,3 @@
-                
    %c=%d ~%d%%
  ( def. "%s" )
  ReadToken overflow
@@ -8,6 +7,8 @@
  client
  clientcmd_can_execute
  failed to dlopen %s error=%s\n
+ max. %f
+ min. %f
  notconnected
  notify
  replicated
@@ -26,12 +27,17 @@ $POSIX
 $WIN32
 $WINDOWS
 $X360
+%%.%if%s
 %02x
+%A %b %d
 %d hour%s, %d minute%s, %d second%s
 %d minute%s, %d second%s
 %f %f %f %f
+%i%s
 %lld
 %ls [wstring, len = %d]
+%s %d\n
+%s %f\n
 %s %s %s %s\n
 %s (header only: %d, nForceFlags: %d, skipMips: %d)
 %s IFileSystem::Connect failed.
@@ -44,10 +50,13 @@ $X360
 %s%cfilesystem_stdio.so
 %s%cfilesystem_steam.so
 %s%s%03d%s
+%s%s%s
+%s/%s
 %s/%s%s.vtf
 %s/%s.vmt
 %s/bin/linux64/%s
 %s/linux64
+%s: %s\n
 %s: Channels restricted to %d, but cannot fill white because pixel format is %d (size in bytes %d)! Proceeding with unmodified channels.\n
 %s: If you use startframe, you must use endframe, and vice versa.\n
 %s: Invalid setting restricting number of channels to %d, discarded!\n
@@ -243,18 +252,14 @@ $X360
 6ConVar
 7IConVar
 8CFmtStrNILi256ELb0EE
-9a&g
 ;0123456789ABCDEF
 </script>
 << NULL >>\n
 <img src="
 <pre>
->33s?
 ><a href=
 >DLOPEN Error:%s\n
-?333333
 ?7CP4File
-????????????????
 ABGR8888
 ARGB8888
 ATI1N
@@ -356,7 +361,6 @@ GLIBC_2.27
 GLIBC_2.29
 GLIBC_2.3
 GLIBC_2.7
-Ga=o
 GetCPUInformation
 Half-Life 2
 Half-Life 2: Deathmatch
@@ -396,10 +400,8 @@ Left 4 Dead 2
 LoadFromBuffer: missing {
 LoadFromFile
 Lowered '%s' -> '%s'\n
-MGiI
 Matched '%s' -> '%s'\n
 MaterialSystemHardwareConfig012
-NAUU
 NV_DST16
 NV_DST24
 NV_INTZ
@@ -407,6 +409,7 @@ NV_NULL
 NV_RAWZ
 NetworkSystemVersion001
 No such file
+OK: %s\n
 OLD TEXTURE FORMAT: %s\n
 PF\n%d %d\n-1.000000\n
 PLATFORM
@@ -420,7 +423,6 @@ PostProcessSkyBox: ComputeMipSize differs (src=%d, dest=%d)\n
 PostProcessSkyBox: IVTFTexture::Init() failed.\n
 PreprocessSkyBox: filename %s doesn't have a proper extension (bk, dn, rt, etc..)\n
 Problem figuring out outputdir for %s\n
-Qkkbal
 QueuedLoaderVersion004
 Quick convert of '%s'...\n
 RGB565
@@ -499,7 +501,6 @@ Warning: falling back to auto detection of vproject directory.\n
 Warning: invalid mipblend setting "%s"\n
 Warning: psd file "%s" exists, but not used, delete tga and txt files to use psd file directly\n
 WebDavRedirector
-Zjz\v
 [/code]
 [/list]
 [code]
@@ -520,9 +521,6 @@ _ZGVbN2vv_pow
 _ZGVbN2vv_pow@GLIBC_2.22
 _ZGVbN4vv_powf
 _ZGVbN4vv_powf@GLIBC_2.22
-_ZTVN10__cxxabiv117__class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv120__si_class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv121__vmi_class_type_infoE@CXXABI_1.3
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
 __ctype_tolower_loc
@@ -691,7 +689,6 @@ getenv
 getenv@GLIBC_2.2.5
 green
 headerSize
-i]Wb
 iconv
 iconv@GLIBC_2.2.5
 iconv_close
@@ -906,8 +903,11 @@ vsnprintf@GLIBC_2.2.5
 vswprintf
 vswprintf@GLIBC_2.2.5
 vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__si_class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__vmi_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info@CXXABI_1.3
 vtf.cpp
 wcslen
 wcslen@GLIBC_2.2.5
@@ -921,7 +921,6 @@ wcstoll
 wcstoll@GLIBC_2.2.5
 wcstombs
 wcstombs@GLIBC_2.2.5
-wn>Jj
 |all_source_engine_paths|
 |appid_
 |gameinfo_path|

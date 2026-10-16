@@ -4,68 +4,23 @@
 %!PS-AdobeFont
 %!PS-TrueTypeFont
 %ADOBeginFontDict
-&2&6&:&>&B&F&J&N&R&V0
-' '$'(','0'4'8'<'@0
-'!$J$N$R$V$Z$^$b$f$j$n0
-'\'`'d'h'l'p't'x'|'
-'\r%2%6%:%>%B%F%J%N%R%V0
-( ($(((,(0(4(8(<(@0
 (Hex)
-(Z(^(b(f(j(n(r(v(z1
--j'j2j>jU
 .AppleDouble/
-.B.F.J.N.R.V.Z.^2
-.\v1o0
 .notdef
 .null
 /..namedfork/rsr
-/5\n,6,:,>,B,F,J,N,R,V,Z0
 /FSType
 /sfnts
-0!0%0)0-014
 001.000
 001.001
 001.002
 001.003
 0123456789ABCDEF
-050s0
-1"1i3
-1*1V1[0
 10646
-1:1>1B1F1J1N1R0
-1a1e1
-2)202<2U2e2
-2C2L
-2q2z2
-3)323A3O3
-3333333333333333
-3h3q
-4%43
-4G4Pe
-4j4r4}4
-575A
-5G5S
-5_5i5p
 646.1991
-646B
-6K6S
-6o6v6
-797k7
-7F7W7c
-7\n0K0O0S0W0[0_0c0g0k0o0
 8859
-8n8y
-9@9Y9`9y9
-9F9O
-9g9p
-:4\t/B/F/J/N/R/V/Z/^/b0
->7>Ba
-?0 1 2 3 4 5 6 7 
-A*A3
-A;AAA[
 ADD_STYLE_NAME
 AEsmall
-AJAU
 Aacute
 Aacutesmall
 Acircumflex
@@ -75,7 +30,6 @@ Adieresis
 Adieresissmall
 Agrave
 Agravesmall
-AiAtA
 Aring
 Aringsmall
 Ascender
@@ -84,7 +38,6 @@ Atilde
 Atildesmall
 AxisLabel
 AxisType
-B<B{B
 BBox_Conic_To
 BBox_Cubic_To
 BBox_Line_To
@@ -94,12 +47,10 @@ BDF_Face_Init
 BDF_Glyph_Load
 BDF_Size_Request
 BDF_Size_Select
-BFBQB[Bb
 BITMAP
 BZ2_bzDecompress
 BZ2_bzDecompressEnd
 BZ2_bzDecompressInit
-BiBr
 Black
 BlendAxisTypes
 BlendDesignMap
@@ -126,8 +77,6 @@ CIDFontVersion
 CIDMapOffset
 COMMENT
 COPYRIGHT
-CQCtC
-CWCf
 Cacute
 CapHeight
 Caronsmall
@@ -145,7 +94,6 @@ Compute_Point_Displacement
 Csmall
 Current_Ppem
 Current_Ppem_Stretched
-D&D4a
 DEFAULT_CHAR
 DESTINATION
 DEVICE_FONT_NAME
@@ -160,7 +108,6 @@ DFKai-SB
 DFKaiSho-SB
 DFKaiShu
 DFMing
-DWDbDgD
 DWIDTH
 Delta
 Descender
@@ -172,12 +119,9 @@ Direct_Move_Orig_X
 Direct_Move_Orig_Y
 Direct_Move_X
 Direct_Move_Y
-DmDs
 Dotaccentsmall
 Dsmall
 Dual_Project
-E+E\HTH\HfHrH
-E3EAEL
 ENDCHAR
 ENDFONT
 ENDPROPERTIES
@@ -189,7 +133,6 @@ Edieresis
 Edieresissmall
 Egrave
 Egravesmall
-EnEyE
 EncodingScheme
 EndAxis
 EndCharMetrics
@@ -205,13 +148,11 @@ Esmall
 Ethsmall
 ExpansionFactor
 ExpertEncoding
-F'F2F>F\Fsa
 FACE_NAME
 FAMILY_NAME
 FC\r4
 FDArray
 FDBytes
-FKFV
 FNT_Face_Done
 FNT_Face_Init
 FNT_Load_Glyph
@@ -519,7 +460,6 @@ FULL_NAME
 FamilyBlues
 FamilyName
 FamilyOtherBlues
-FbFi
 FontBBox
 FontDirectory
 FontMatrix
@@ -527,23 +467,16 @@ ForceBold
 ForceBoldThreshold
 Fsmall
 FullName
-G!G&C
-G+GXGfGkGpGuG{G
 G7G;G@GEGJM
-G9\n-.-2-6-:->-B-F-J-N-R0
 GCC: (SteamRT 10.3.0-3+steamrt3.1+bsrt3.1) 10.3.0
 GDBytes
 GLIBC_2.14
 GLIBC_2.2.5
 GLIBC_2.28
-GPGTB
-G^GbF
 Gbreve
 Gravesmall
 Gsmall
 H E Z L O C U S
-H=HF
-Ho\thwh
 Horizontal_Sweep_Drop
 Horizontal_Sweep_Init
 Horizontal_Sweep_Span
@@ -552,10 +485,8 @@ Hsmall
 HuaTianKaiTi?
 HuaTianSongTi?
 Hungarumlautsmall
-I&I,I:IJ
 ISOLatin1Encoding
 ITALIC_ANGLE
-IaIrI
 Iacute
 Iacutesmall
 Icircumflex
@@ -582,29 +513,16 @@ IsMacResource
 IsMacResource.cold
 Ismall
 ItalicAngle
-J1J7JU
-J?JH
 Jsmall
-JvKsK}l\tJ
-K&K8KFKQ
-KUMUX
-K^Kd
 Ksmall
-L'LZa
-L0L:LA
-LHLQ
-LaLj
 LanguageGroup
 Light
 Line_Up.part.0
 Load_SBit_Png
-LrMDM
 Lslash
 Lslashsmall
 Lsmall
 MGiI
-MJM|a
-MRM\Mc
 Macronsmall
 MappingScheme
 Medium
@@ -614,23 +532,17 @@ Ming(for ISO10646)
 MingLi43
 MingLiU
 MingMedium
-MjMs
 Move_CVT
 Move_CVT_Stretched
 Move_Zp2_Point
 Msmall
-N;NHNQNkN
 NOTICE
-NWNb
 New_Profile
 Notice
-NqNy
 Nsmall
 Ntilde
 Ntildesmall
-O5OFO\OgO
 OEsmall
-OQOV
 Oacute
 Oacutesmall
 Oblique
@@ -642,7 +554,6 @@ Ogoneksmall
 Ograve
 Ogravesmall
 Omega
-OpOti
 OpticalSize
 Ordering
 Oslash
@@ -650,8 +561,6 @@ Oslashsmall
 Osmall
 Otilde
 Otildesmall
-P.P5
-PAPU
 PCF_Face_Done
 PCF_Face_Done.part.0
 PCF_Face_Init
@@ -663,18 +572,12 @@ PNG16_0
 PS_Conv_ToFixed
 PS_Conv_ToInt
 PaintType
-PmXh]=b
 Pop_Push_Count
 Private
 Project_x
 Project_y
 Psmall
-Q)Q7QWQ
-Q=QH
-Q_Qd
 Qsmall
-R%R<RqS
-R+R2
 RAW_ASCENT
 RAW_AVERAGE_WIDTH
 RAW_AVG_CAPITAL_WIDTH
@@ -708,7 +611,6 @@ RELATIVE_WEIGHT
 RESOLUTION
 RESOLUTION_X
 RESOLUTION_Y
-RFRQR\Rf
 Read255UShort
 Read_CVT
 Read_CVT_Stretched
@@ -727,14 +629,10 @@ Round_To_Grid
 Round_To_Half_Grid
 Round_Up_To_Grid
 Rsmall
-S%S?a
-S+S6
 SDBytes
 SETWIDTH_NAME
 SLANT
-SLSnSzS
 SPACING
-SRSd
 STARTCHAR
 STARTFONT
 STARTPROPERTIES
@@ -771,7 +669,6 @@ SubrMapOffset
 Subrs
 Supplement
 T H E Z O C Q S
-T#T.Tk
 T1_Compute_Max_Advance
 T1_Done_Blend
 T1_Driver_Done
@@ -812,9 +709,6 @@ T42_Size_Done
 T42_Size_Init
 T42_Size_Request
 T42_Size_Select
-T4T;
-TETNTc
-TTT[
 TT_Access_Glyph_Frame
 TT_Forget_Glyph_Frame
 TT_Get_Default_Named_Instance
@@ -841,9 +735,7 @@ Tildesmall
 TrueType
 Tsmall
 Type 42
-UEUeUt
 UIDBase
-UUUUUUUUUUUUUUUU
 Uacute
 Uacutesmall
 Ucircumflex
@@ -856,51 +748,31 @@ UnderlinePosition
 UnderlineThickness
 UniqueID
 Usmall
-V$VYW
-V,V7VB
 VVector
 Vertical_Sweep_Drop
 Vertical_Sweep_Init
 Vertical_Sweep_Span
 Vertical_Sweep_Step
-VgVrV
 Vsmall
-W$W>WBWSW
-W,W6
 W1.6.37
 WEIGHT_NAME
 Weight
 WeightVector
-WiWr
 Windows FNT
 Write_CVT
 Write_CVT_Stretched
 Wsmall
-XCXVXac
 XHeight
-XIXP
 XUID
 Xsmall
-YLYVh
-Y]Ym[u[
 Yacute
 Yacutesmall
 Ydieresis
 Ydieresissmall
-YeYii
 Ysmall
-Z!Z1
-ZDZUZ]Zj
 Zcaron
 Zcaronsmall
 Zsmall
-[#[/[:[[[c[n
-\!\(\A\\\~\
-\f(\f6\fC\fP\f_\fn\f|\f
-\n"\n)\n7\nA\nH\nS\nc\np\n|\n
-\r%\r1\rB\rQ\rZ\rf\rr\r~\r
-\t \t$\t6\tI\tY\th\ts\tz\t
-\v"\v,\v9\vE\vR\v[\ve\vr\v
 _DYNAMIC
 _GLOBAL_OFFSET_TABLE_
 _ITM_deregisterTMCloneTable
@@ -925,10 +797,6 @@ __gmon_start__
 _fini
 _setjmp
 _setjmp@GLIBC_2.2.5
-a'aCaYb"b8b
-a-a8
-aJaP
-a\ft/tOtet
 aacute
 acircumflex
 acute
@@ -936,7 +804,6 @@ adieresis
 adler32_z
 adnKooaLntaL
 adobe
-aeam
 af_adlm_dflt_style_class
 af_adlm_nonbase_uniranges
 af_adlm_script_class
@@ -1291,10 +1158,6 @@ atilde
 autofit.c
 autofit_module_class
 autofitter
-b(b0
-bBbMb
-bTbm
-b^be
 backslash
 bbox_interface
 bdf_add_property_.constprop.0
@@ -1332,12 +1195,7 @@ bsdf_raster_reset
 bsdf_raster_set_mode
 bsuperior
 bullet
-bwb~
 by_encoding
-c c2
-c7cPc
-c>cG
-cZcccqc
 cacute
 caron
 ccaron
@@ -1542,8 +1400,6 @@ crtstuff.c
 cs2c
 cubic_peak
 currency
-d6d?a
-d]dbdpdyd
 dagger
 daggerdbl
 darkening-parameters
@@ -1557,7 +1413,6 @@ destroy_charmaps.part.0
 destroy_face
 destroy_size
 dext.0
-dhdl3
 dieresis
 distfix.4
 divide
@@ -1569,10 +1424,7 @@ dollarsuperior
 dotaccent
 dotlessi
 dsuperior
-e e%e.e=eM
-eZe}e
 eacute
-ebegeq
 ecircumflex
 edieresis
 eexec
@@ -1592,10 +1444,6 @@ exclamdown
 exclamdownsmall
 exclamsmall
 f i j k d b h
-f!f=fEfwf
-f'f5
-fPfo
-fWfc
 fallback-script
 fcntl64
 fcntl64@GLIBC_2.28
@@ -1834,8 +1682,6 @@ ftwinfnt.c
 func_interface
 fvar_fields.1
 fvaraxis_fields.0
-g5g>gK
-gZgnhKhWhci
 galGhtoGkerGrjuGuruGrbeHilaKrmhK
 gbreve
 germandbls
@@ -1910,7 +1756,6 @@ hungarumlaut
 hyphen
 hypheninferior
 hyphensuperior
-i(i4i:iP
 iacute
 icircumflex
 idieresis
@@ -1940,18 +1785,10 @@ invalid window size
 isFixedPitch
 isuperior
 iup_worker_interpolate_.part.0
-jDjK
-j[ros
-k k.k;m
-kZkjk
-k\vnK
 kclOhkrOegsOamsOghoRruaSwahShniSdnuSlmaTtvaTuleTgnfTiahTiiaVbmiLayrOolyStbiTinaHltit
 kerning
 known
 known_tags.0
-l*l3
-lElblrl
-lKlV
 langTag_record_fields.14
 lbase.3
 lenBuildCharArray
@@ -1975,9 +1812,6 @@ lozenge
 lslash
 lsuperior
 ltit
-mRmom}m
-mXme
-m\tm9e
 macron
 malloc
 malloc@GLIBC_2.2.5
@@ -2007,9 +1841,6 @@ multiply
 munmap
 munmap@GLIBC_2.2.5
 n r x z o e s c
-n2n?
-nPnq
-n^nf
 name_record_fields.13
 name_table_fields.15
 ndro
@@ -2026,14 +1857,12 @@ nsuperior
 ntilde
 numbersign
 o O 0
-oEoOoZoaozo
 oacute
 ocircumflex
 odieresis
 offset_table_fields.19
 ogonek
 ograve
-ohoq
 onedotenleader
 oneeighth
 onefitted
@@ -2066,7 +1895,6 @@ ot-svg
 otilde
 overlaps
 p q g j y
-p#p7pP
 pacp
 pamcdaehaehhxtmhpxameman2/SOtsop tvcmgpffylgacolperp FFCGROVTDBECLBEpsagxmdhnrekHSTLTLCPXMDVaehvxtmvESABFEDGSOPGBUSGCSBEFTSJHTAMTDBCCLBCRLOCLAPC GVSxibstncaravatadbcolbnlsbravccsdftaefxtmfravfravgytshtsujracltromxromdbpoporpkartfpaZfliStalGcolGtaeFlliS
 paragraph
@@ -2290,8 +2118,6 @@ psnames
 psnames.c
 psnames_get_service
 psnames_module_class
-q4qIqQ
-qYqaqnq
 qsort
 qsort@GLIBC_2.2.5
 question
@@ -2306,8 +2132,6 @@ quoteleft
 quoteright
 quotesinglbase
 quotesingle
-r*r4r;
-rQr\
 raccess_guess_apple_double
 raccess_guess_apple_generic.constprop.0
 raccess_guess_apple_single
@@ -2340,8 +2164,6 @@ rsuperior
 ruby_coverage
 ruby_feature
 rupiah
-s&sg
-s1s:sHsX
 sbus
 scaron
 scedilla
@@ -2402,7 +2224,6 @@ small_capitals_from_capitals_coverage
 small_capitals_from_capitals_feature
 smooth
 smooth.c
-smsv
 snprintf
 snprintf@GLIBC_2.2.5
 space
@@ -2523,8 +2344,6 @@ t42_service_glyph_dict
 t42_service_ps_font_name
 t42_service_ps_info
 t42_services
-t5tF
-tUt[
 table_dir_entry_fields.18
 tcommaaccent
 thorn
@@ -2538,7 +2357,6 @@ threesuperior
 tilde
 titling_coverage
 titling_feature
-tlt~
 too many length or distance symbols
 trademark
 trick_names.4
@@ -2732,22 +2550,15 @@ type1cid.c
 type42
 type42.c
 u v x z o e s c
-u,uEu
-uKu`
 uacute
 ucircumflex
 udieresis
 ugrave
-uluzu
 underscore
 unknown compression method
 unknown header flags set
 usiLmylMfdeMgnoMrmyMookN
-v8vUb
-vnvyv
-wDwNwYw`wy
 warning_callback
-wgwp
 winfnt_driver_class
 winfnt_get_header
 winfnt_get_service
@@ -2764,19 +2575,11 @@ winpe_rsrc_dir_entry_fields
 winpe_rsrc_dir_fields
 woff2_header_fields.1
 woff_header_fields.2
-x>xoxyx~
-xIxRx[xe
-y'y6y?yMa
-yZygy
 yacute
 ybur
 ydieresis
-ymyx
-z<zRz_zvz
-zCzI
 zcaron
 zero
 zeroinferior
 zerooldstyle
 zerosuperior
-zezn

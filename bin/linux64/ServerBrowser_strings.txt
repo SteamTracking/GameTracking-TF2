@@ -10,6 +10,8 @@
  clientcmd_can_execute
  failed to dlopen %s error=%s\n
  game
+ max. %f
+ min. %f
  notconnected
  notify
  replicated
@@ -196,26 +198,36 @@ $POSIX
 $WIN32
 $WINDOWS
 $X360
+%%%s%%
+%%.%if%s
 %02x
+%A %b %d
 %a %d %b %I:%M%p
 %d %d %d %d
+%d / %d
 %d ms
 %d.%d.%d.%d:%d
 %d_hidden
 %d_width
 %dh %dm %ds
 %f %f %f %f
+%i%s
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
 %lld
 %ls [wstring, len = %d]
+%s %d\n
+%s %f\n
 %s %s %s %s\n
+%s - %s
 %s - %s finding %s
 %s - %s: Action signal
 %s - %s: Color overrides
 %s - %s: Keyboard enabled
 %s - %s: Pin Sibling
 %s string image, int src_corner_height, int src_corner_width, int draw_corner_height, int draw_corner_width
+%s%d
+%s%s
 %s, bool textHidden, bool editable, bool unicode, bool NumericInputOnly, int maxchars
 %s, int SubTabPosition
 %s, string URLText
@@ -228,6 +240,7 @@ $X360
 %s, string progress, string variable
 %s, string text, bool scrollbar
 %s, string title
+%s/%s
 %s/bin/linux64/%s
 %u.%u.%u.%u:%i
 &AElig;
@@ -338,6 +351,7 @@ $X360
 &yacute;
 &yen;
 &yuml;
+(%s)%s
 (null)
 ** NOTE: The real value is %.3f but the server has temporarily restricted it to %.3f **\n
 *.txt
@@ -406,7 +420,6 @@ $X360
 19CBlacklistedServers
 19CCheckBoxWithStatus
 19CUtlNoEscConversion
-1U\$ug
 2 - bottom-left
 2 - resize down
 20CDialogServerWarning
@@ -455,7 +468,6 @@ $X360
 <pre>
 ><a href=
 >[unknown]
-?333333
 ?CLanGames
 ?RunGameEngine005
 ?ServerContextMenu
@@ -728,7 +740,6 @@ GLIBC_2.27
 GLIBC_2.29
 GLIBC_2.3
 GLIBC_2.7
-Ga=o
 Gain
 GameDesc
 GameDir
@@ -1056,7 +1067,6 @@ N4vgui9ListPanelE
 N4vgui9ScrollBarE
 N4vgui9TextEntryE
 N4vgui9TextImageE
-NAUU
 NULL
 NetworkSystemVersion001
 NewControls
@@ -1410,7 +1420,6 @@ _ZGVbN2vv_pow
 _ZGVbN2vv_pow@GLIBC_2.22
 _ZGVbN4vv_powf
 _ZGVbN4vv_powf@GLIBC_2.22
-_ZSt9terminatev@GLIBCXX_3.4
 __bss_start
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
@@ -1856,6 +1865,7 @@ state
 stay_armed_on_click
 stayselectedonclick
 std::terminate()
+std::terminate()@GLIBCXX_3.4
 steam://
 steam://openurl/
 steam://openurl_external/

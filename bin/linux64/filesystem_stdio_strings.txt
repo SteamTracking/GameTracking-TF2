@@ -22,6 +22,8 @@
  is an invalid window size
  is less than the minimum of 
  is not a valid key length
+ max. %f
+ min. %f
  more bytes of input needed
  notconnected
  notify
@@ -45,7 +47,9 @@ $POSIX
 $WIN32
 $WINDOWS
 $X360
+%%.%if%s
 %02x
+%A %b %d
 %d %s %s ( %d, %d ) %d %d%s%s\n
 %d Active Jobs\n
 %d Queued Jobs\n
@@ -54,15 +58,23 @@ $X360
 %d:  %s -> subtree at parent %i\n
 %d_%d_%d_%d_%d.tmp
 %f %f %f %f
+%i%s
 %lld
 %ls [wstring, len = %d]
+%s %d\n
+%s %f\n
+%s %s %d
 %s %s %s %s\n
+%s %t
 %s (%d bytes)
 %s (pos=%d, whence=%d)
+%s%c%s
+%s%s
 %s%s%s crc=0x%x metadatasz=%d
 %s(%s, %s, %u %s )
 %s, %s, %s\n
 %s.vpk
+%s/%s
 %s/bin/linux64/%s
 %s_%03d.vpk
 %s_dir.vpk
@@ -171,6 +183,7 @@ $X360
 &yuml;
 ', stored '
 ', trying to retrieve '
+(%s)%s
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
 (Late) 
@@ -235,7 +248,6 @@ $X360
 0100000000000000000001F4C8F927AED3CA752257
 0100000000000000D9CCEC8A39E56F
 010000000000000108789B2496AF93
-010\r
 0123456789ABCDEF
 0123456789abcdef
 0163F35A5137C2CE3EA6ED8667190B0BC43ECD69977702709B
@@ -305,8 +317,6 @@ $X360
 0:Off, 1:Blocking only, 2:All
 0:Off, 1:Timing, 2:Completions, 3:Late Completions, 4:Purges, -1:All 
 0:Off, 1:Warn main thread, 2:Warn other threads
-0A0\r
-0Q0\r
 0x%016llX
 10CStdioFile
 10ConCommand
@@ -413,8 +423,6 @@ $X360
 9CFunctor4IPFvP9FileJob_tPvi13LoaderError_tES1_S2_iS3_12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEEE
 9CPackFile
 9IFileList
-9JLX
-9a&g
 : IV length 
 : Missing required parameter '
 : Nonblocking input is not implemented by this object.
@@ -441,7 +449,6 @@ $X360
 <pre>
 ><a href=
 ?333333
-?456789:;<=
 ?InvertibleRSAFunction: computational error during private key operation
 ?UUUUUU
 A9FB57DBA1EEA9BC3E660A909D838D718C397AA3B561A6F7901E0E82974856A7
@@ -604,7 +611,6 @@ D35E472036BC4FB7E13C785ED201E065F98FCFA6F6F40DEF4F92B9EC7893EC28FCD412B1F1B32E27
 D6031998D1B3BBFEBF59CC9BBFF9AEE1
 D7C134AA264366862A18302575D0FB98D116BC4B6DDEBCA3A5A7939F
 D7C134AA264366862A18302575D1D787B09F075797DA89F57EC8C0FF
-D7q/;M
 DB7C2ABF62E35E668076BEAD2088
 DB7C2ABF62E35E668076BEAD208B
 DB7C2ABF62E35E7628DFAC6561C5
@@ -767,9 +773,7 @@ Log2Base
 Log2WindowSize
 Loose
 Lowered '%s' -> '%s'\n
-LwH'
 MGF1
-MGiI
 MSG_FILEWRITE - Filesystem was asked to write to '%s', but we don't own that location. Allowing.\n
 Matched '%s' -> '%s'\n
 MaterialSystemHardwareConfig012
@@ -1315,7 +1319,6 @@ PropLighting
 PublicElement
 PublicExponent
 PutMessage
-Qkkbal
 Queued Loader:\n\n
 QueuedLoader.cpp
 QueuedLoader: %s Creating: %.2f seconds\n
@@ -1411,7 +1414,6 @@ Tried to close unknown file pointer %p\n
 Tried to read %i bytes from unknown file pointer %p\n
 Tried to write %i bytes from unknown file pointer %p\n
 TruncatedDigestSize
-Ts\ne
 UCS-2LE
 UCS-4LE
 UTF-32LE
@@ -1464,7 +1466,6 @@ ZIP_LocalFileHeader
 ZIP_PreloadDirectoryEntry
 ZIP_PreloadHeader
 Zip: Failed decompressing LZMA data\n
-Zjz\v
 [/code]
 [/list]
 [Failed]
@@ -1487,48 +1488,6 @@ _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
 _SpewInfo
 _SpewMessage
-_ZNSi4readEPcl@GLIBCXX_3.4
-_ZNSi7putbackEc@GLIBCXX_3.4
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEmmPKcm@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcPKcS7_@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE14_M_replace_auxEmmmc@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6appendEPKc@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7reserveEm@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_appendEPKcm@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_createERmm@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9push_backEc@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1EOS4_@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1EPKcRKS3_@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev@GLIBCXX_3.4.21
-_ZNSt8ios_base4InitC1Ev@GLIBCXX_3.4
-_ZNSt8ios_base4InitD1Ev@GLIBCXX_3.4
-_ZNSt9bad_allocD1Ev@GLIBCXX_3.4
-_ZNSt9exceptionD2Ev@GLIBCXX_3.4
-_ZSt15set_new_handlerPFvvE@GLIBCXX_3.4
-_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l@GLIBCXX_3.4.9
-_ZSt17__throw_bad_allocv@GLIBCXX_3.4
-_ZSt18uncaught_exceptionv@GLIBCXX_3.4
-_ZSt19__throw_logic_errorPKc@GLIBCXX_3.4
-_ZSt20__throw_length_errorPKc@GLIBCXX_3.4
-_ZSt2wsIcSt11char_traitsIcEERSt13basic_istreamIT_T0_ES6_@GLIBCXX_3.4
-_ZSt9terminatev@GLIBCXX_3.4
-_ZTIPKh@CXXABI_1.3
-_ZTIPKi@CXXABI_1.3
-_ZTIPh@CXXABI_1.3
-_ZTISt9bad_alloc@GLIBCXX_3.4
-_ZTISt9exception@GLIBCXX_3.4
-_ZTIb@CXXABI_1.3
-_ZTIh@CXXABI_1.3
-_ZTIi@CXXABI_1.3
-_ZTIj@CXXABI_1.3
-_ZTVN10__cxxabiv116__enum_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv117__class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv119__pointer_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv120__si_class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv121__vmi_class_type_infoE@CXXABI_1.3
-_ZTVSt9bad_alloc@GLIBCXX_3.4
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
 __ctype_tolower_loc
@@ -1755,7 +1714,6 @@ ftello64
 ftello64@GLIBC_2.2.5
 fwrite
 fwrite@GLIBC_2.2.5
-g&3g
 g_AsyncFinishMutex
 g_KVMutex
 g_Telemetry
@@ -1771,7 +1729,6 @@ getenv@GLIBC_2.2.5
 gettimeofday
 gettimeofday@GLIBC_2.2.5
 goto done\n
-i]Wb
 iconv
 iconv@GLIBC_2.2.5
 iconv_close
@@ -1806,7 +1763,6 @@ localtime@GLIBC_2.2.5
 log@GLIBC_2.29
 longjmp
 longjmp@GLIBC_2.2.5
-lpHP
 lzma_persistent_buffer
 m_AsyncCallbackMutex
 m_FunctorQueueMutex
@@ -1855,7 +1811,6 @@ open /dev/random
 open /dev/urandom
 opendir@GLIBC_2.2.5
 opened_files.txt
-p09Y
 packedstore.cpp
 pow@GLIBC_2.29
 pthread_mutex_destroy
@@ -1902,32 +1857,59 @@ sprintf
 sprintf@GLIBC_2.2.5
 startOfCentralDirOffset
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_append(char const*, unsigned long)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_append(char const*, unsigned long)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_create(unsigned long&, unsigned long)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_create(unsigned long&, unsigned long)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_dispose()
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_dispose()@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace(unsigned long, unsigned long, char const*, unsigned long)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace(unsigned long, unsigned long, char const*, unsigned long)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace_aux(unsigned long, unsigned long, unsigned long, char)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace_aux(unsigned long, unsigned long, unsigned long, char)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, char const*, char const*)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, char const*, char const*)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::append(char const*)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::append(char const*)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(char const*, std::allocator<char> const&)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(char const*, std::allocator<char> const&)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::push_back(char)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::push_back(char)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::reserve(unsigned long)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::reserve(unsigned long)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string()
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string()@GLIBCXX_3.4.21
 std::__throw_bad_alloc()
+std::__throw_bad_alloc()@GLIBCXX_3.4
 std::__throw_length_error(char const*)
+std::__throw_length_error(char const*)@GLIBCXX_3.4
 std::__throw_logic_error(char const*)
+std::__throw_logic_error(char const*)@GLIBCXX_3.4
 std::bad_alloc::~bad_alloc()
+std::bad_alloc::~bad_alloc()@GLIBCXX_3.4
 std::basic_istream<char, std::char_traits<char>>& std::ws<char, std::char_traits<char>>(std::basic_istream<char, std::char_traits<char>>&)
+std::basic_istream<char, std::char_traits<char>>& std::ws<char, std::char_traits<char>>(std::basic_istream<char, std::char_traits<char>>&)@GLIBCXX_3.4
 std::basic_ostream<char, std::char_traits<char>>& std::__ostream_insert<char, std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>>&, char const*, long)
+std::basic_ostream<char, std::char_traits<char>>& std::__ostream_insert<char, std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>>&, char const*, long)@GLIBCXX_3.4.9
 std::exception::~exception()
+std::exception::~exception()@GLIBCXX_3.4
 std::ios_base::Init::Init()
+std::ios_base::Init::Init()@GLIBCXX_3.4
 std::ios_base::Init::~Init()
+std::ios_base::Init::~Init()@GLIBCXX_3.4
 std::istream::putback(char)
+std::istream::putback(char)@GLIBCXX_3.4
 std::istream::read(char*, long)
+std::istream::read(char*, long)@GLIBCXX_3.4
 std::set_new_handler(void (*)())
+std::set_new_handler(void (*)())@GLIBCXX_3.4
 std::terminate()
+std::terminate()@GLIBCXX_3.4
 std::uncaught_exception()
+std::uncaught_exception()@GLIBCXX_3.4
 stderr
 stderr@GLIBC_2.2.5
 steam://openurl/
@@ -1987,14 +1969,23 @@ true
 typeinfo for CryptoPP::BlockPaddingSchemeDef::BlockPaddingScheme
 typeinfo for CryptoPP::Integer::RandomNumberType
 typeinfo for bool
+typeinfo for bool@CXXABI_1.3
 typeinfo for int
 typeinfo for int const*
+typeinfo for int const*@CXXABI_1.3
+typeinfo for int@CXXABI_1.3
 typeinfo for std::bad_alloc
+typeinfo for std::bad_alloc@GLIBCXX_3.4
 typeinfo for std::exception
+typeinfo for std::exception@GLIBCXX_3.4
 typeinfo for unsigned char
 typeinfo for unsigned char const*
+typeinfo for unsigned char const*@CXXABI_1.3
 typeinfo for unsigned char*
+typeinfo for unsigned char*@CXXABI_1.3
+typeinfo for unsigned char@CXXABI_1.3
 typeinfo for unsigned int
+typeinfo for unsigned int@CXXABI_1.3
 typeinfo name for CryptoPP::BlockPaddingSchemeDef::BlockPaddingScheme
 typeinfo name for CryptoPP::Integer::RandomNumberType
 u64( %lld = 0x%llX )
@@ -2018,11 +2009,17 @@ vsnprintf@GLIBC_2.2.5
 vswprintf
 vswprintf@GLIBC_2.2.5
 vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__enum_type_info
+vtable for __cxxabiv1::__enum_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__pointer_type_info
+vtable for __cxxabiv1::__pointer_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__si_class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__vmi_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info@CXXABI_1.3
 vtable for std::bad_alloc
+vtable for std::bad_alloc@GLIBCXX_3.4
 wcslen
 wcslen@GLIBC_2.2.5
 wcsncat
@@ -2035,4 +2032,3 @@ wcstoll
 wcstoll@GLIBC_2.2.5
 wcstombs
 wcstombs@GLIBC_2.2.5
-wn>Jj

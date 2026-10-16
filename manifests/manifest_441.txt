@@ -1,10 +1,10 @@
 Content Manifest for Depot 441 
 
-Manifest ID / date     : 1065615024733472732 / 10/12/2026 18:18:50 
+Manifest ID / date     : 8116815534774807823 / 10/16/2026 19:05:41 
 Total number of files  : 1204 
-Total number of chunks : 32934 
-Total bytes on disk    : 32631930201 
-Total bytes compressed : 16827280208 
+Total number of chunks : 32970 
+Total bytes on disk    : 32666095460 
+Total bytes compressed : 16860352944 
 
 
           Size Chunks File SHA                                 Flags Name
@@ -670,7 +670,7 @@ Total bytes compressed : 16827280208
       24500234     24 5d254a2c83edeab982d309fc46265dfb87fe9689     0 tf/maps/cp_gullywash_final1.bsp
       30418703     31 bdb293c0443e7cce4e97447f907c5667d42c7565     0 tf/maps/cp_hadal.bsp
       48911525     49 30af18956a58885dc2ecbb505092fae39787035b     0 tf/maps/cp_hardwood_final.bsp
-      90928924     87 4d65af38621690f4bd964b24d62ae1dd26051f4d     0 tf/maps/cp_holyhell.bsp
+     125165911    123 5f09f581449edf405c619dafae259660ced86a54     0 tf/maps/cp_holyhell.bsp
       31464656     31 e03e9831025181f00ca4fd64daa4a4f5f1be244b     0 tf/maps/cp_junction_final.bsp
       24424237     24 1b7eeaf96c4b335e75f31e26e5783f82e30460bc     0 tf/maps/cp_lavapit_final.bsp
       20081417     20 d52cb0725da2714d7d7bd05913995f32d2634d69     0 tf/maps/cp_manor_event.bsp
@@ -853,12 +853,12 @@ Total bytes compressed : 16827280208
       63874099     65 bbaf5a3321cc6fafe61563aef20837c87320686b     0 tf/maps/vsh_outburst.bsp
       44158448     45 23485027ca705587927b942494461461078f7481     0 tf/maps/vsh_skirmish.bsp
       55732147     56 2e3253bac447fae1d49886aa28abedad9b3bc1f8     0 tf/maps/vsh_tinyrock.bsp
-      40958720     42 f6e0f2bba3baa5636d586c3b6c15ef98103e947c     0 tf/maps/zi_atoll.bsp
-      59246069     60 81cc0b37609470586f5e8a8ebd357603064ab818     0 tf/maps/zi_blazehattan.bsp
-      43436020     45 89902c17666112bf64226a54ac8e72a30e1e7a9c     0 tf/maps/zi_devastation_final1.bsp
-      47006181     48 3916691541aaad0cf405c0fc94f7856108a5ff47     0 tf/maps/zi_murky.bsp
-      64790420     70 7a22055012b8b1ce159a3cd513d8222bbd8d678c     0 tf/maps/zi_sanitarium.bsp
-      60243835     60 ab34604f202e1379337a37e197ca41998dc3fc69     0 tf/maps/zi_woods.bsp
+      41247839     42 9c1b62684cbe770ec73793697d90414c3dd62b28     0 tf/maps/zi_atoll.bsp
+      59235056     60 c45a2310a6e55197b17f3b2e5d859d61db9fc2e8     0 tf/maps/zi_blazehattan.bsp
+      43282666     45 219309efde74c062cbef2b741247d53982cd522f     0 tf/maps/zi_devastation_final1.bsp
+      47013408     48 6d1c34ba6b7f4c50a0fd7d81aba0e5dba1267b2a     0 tf/maps/zi_murky.bsp
+      64796843     70 a115391fae2a94c650d5d311718bb75d783f70c9     0 tf/maps/zi_sanitarium.bsp
+      59992994     59 b71f7480bdcde81a969530f4f59e984d444700ad     0 tf/maps/zi_woods.bsp
              0      0 0000000000000000000000000000000000000000    40 tf/materials
              0      0 0000000000000000000000000000000000000000    40 tf/materials/models
              0      0 0000000000000000000000000000000000000000    40 tf/materials/models/player
@@ -935,34 +935,34 @@ Total bytes compressed : 16827280208
          73900      1 5e161a1b33ef39019f6a56cf766ed606a0d6e2a2     0 tf/resource/tf2secondary.ttf
          44180      1 fd41395ea204fe38d9fe5edb3dbc9e0aff902006     0 tf/resource/tfd.ttf
           8420      1 1c27e315977f323fe53bf409838d8cd361088157     0 tf/resource/tflogo.ttf
-       3330328      4 eb68507a1e6374e10d9eef5b7331400a8b1ef0ac     0 tf/resource/tf_brazilian.txt
-       3411138      4 d967c1634ecbbc69b934733b12319a0bdf2f76a0     0 tf/resource/tf_bulgarian.txt
-       3122438      3 f6449c963787a8b8e7ba389d8233c833b45b1ed2     0 tf/resource/tf_czech.txt
-       3199606      4 8ccc516efa4dd68e523fa5f6f9aab7d0509be0ac     0 tf/resource/tf_danish.txt
-       3229132      4 b3e4f43b4bf3a82b4fe51818a53038526e7871b9     0 tf/resource/tf_dutch.txt
+       3363818      4 5b2a072d4a4682941aede95040bbbd2afbfa0825     0 tf/resource/tf_brazilian.txt
+       3420014      5 736cc38ddd1c3741daa586135d57c8884d63c8bc     0 tf/resource/tf_bulgarian.txt
+       3123648      4 21e8da4d3adf33925b455bbac5aec82ed112c730     0 tf/resource/tf_czech.txt
+       3202042      4 96ca12b5e40495212e4a9362cc46fe61952ddd17     0 tf/resource/tf_danish.txt
+       3228756      4 5a953613b30c3a5a16b18292f49ebaf49152e7de     0 tf/resource/tf_dutch.txt
        3120620      4 bbaf4a4a40ef5f6eb2c63e4286fe4456965d2617     0 tf/resource/tf_english.txt
-       3176688      4 bb47d136499b94a2246168f335d4b407cea14961     0 tf/resource/tf_finnish.txt
-       3453918      4 84efc3c3f0e8c19e7065fada00b99a745f986907     0 tf/resource/tf_french.txt
-       3445754      4 030854fedf6ba4ac9807f2fdee6c40e54e1a0481     0 tf/resource/tf_german.txt
-       3373764      4 8516bb23e432954092f7fd4bd8f7104f2ec166d2     0 tf/resource/tf_greek.txt
-       3228268      4 2f5aa7eb1f757b6414c370091bdebb0cca4d9cb5     0 tf/resource/tf_hungarian.txt
-       3461970      4 1c76fe15fa41fc818c511b87d74afd5bcbf79f27     0 tf/resource/tf_italian.txt
-       2444646      3 3af54ebe9c4d5f6a5930e8927bf114c6239f5d04     0 tf/resource/tf_japanese.txt
-       2416492      3 ada89753e10b59755c3361695fc274f16943f9c5     0 tf/resource/tf_korean.txt
-       2416492      3 ada89753e10b59755c3361695fc274f16943f9c5     0 tf/resource/tf_koreana.txt
-       3406390      4 609eca996f00b35cb41c7ab1bd2cbde555c2f736     0 tf/resource/tf_latam.txt
-       3185630      4 b70eca495a32b3db7a073f338524fa276fe77ec8     0 tf/resource/tf_norwegian.txt
+       3176896      4 975ea4d561ac5c9c01c03a3cdd40671457783619     0 tf/resource/tf_finnish.txt
+       3454874      4 8fc6c9b9c4eac631abe08bc23c27a2a159abb11a     0 tf/resource/tf_french.txt
+       3444966      4 38ab760646a132831d9bcff104cfee9a87de1540     0 tf/resource/tf_german.txt
+       3373300      4 f56d01fd5b8b6fb8064cdd956332ccc828bd9c50     0 tf/resource/tf_greek.txt
+       3227832      4 cb925cd46bf66412cbec7ff5459dfaf3ccc86185     0 tf/resource/tf_hungarian.txt
+       3461780      4 db0e95fff4749f90b7cba0deaa7cf90eebddadd0     0 tf/resource/tf_italian.txt
+       2444270      3 cd95827c4ba8cbb443963cdc867555f51372608a     0 tf/resource/tf_japanese.txt
+       2415774      3 4aa11eb61ee831b5b3d1a3aa9ad8ea75fb50b260     0 tf/resource/tf_korean.txt
+       2415774      3 4aa11eb61ee831b5b3d1a3aa9ad8ea75fb50b260     0 tf/resource/tf_koreana.txt
+       3405586      4 fd5bb8858e4a2869da04c9ac11dd8370baf90d70     0 tf/resource/tf_latam.txt
+       3185204      4 4a6307ee6de4ea5559f5967247b683e03370e8db     0 tf/resource/tf_norwegian.txt
        2097132      2 a63e1d0dd1c4985d845859dcf19e4c598277a868     0 tf/resource/tf_pirate.txt
-       3246444      4 a83be841a25fc9ceba9daba70a82cd6de0a283ad     0 tf/resource/tf_polish.txt
-       3453324      4 df3433a5a2da299d551cbdcaffa0c34950e82ebb     0 tf/resource/tf_portuguese.txt
-        145678      1 416df43e1d4cd6fc0d61eabdb8625875ced37ed8     0 tf/resource/tf_proto_obj_defs_brazilian.txt
+       3245648      4 fd815468197b659a50fb1bc28b6f883b7d6cbcc6     0 tf/resource/tf_polish.txt
+       3452900      4 2ef1bbe670fb21d9b97ffa9525d45ed79831f015     0 tf/resource/tf_portuguese.txt
+        149414      1 ff91c281c9e11a9367e63f74bff7f807caa3bb62     0 tf/resource/tf_proto_obj_defs_brazilian.txt
         151336      1 ba878772f26a5bc1b610363c02a3579641bb560e     0 tf/resource/tf_proto_obj_defs_bulgarian.txt
         148934      1 3605d4c242a8b7cfd3d32268aa38ba35a2d37475     0 tf/resource/tf_proto_obj_defs_czech.txt
-        142782      1 d066141073ae2dac346d1aebcf29c98332816b5b     0 tf/resource/tf_proto_obj_defs_danish.txt
+        143122      1 c6299527fbf06e123591dc60bc4594c961405ad5     0 tf/resource/tf_proto_obj_defs_danish.txt
         143356      1 a72e711f5a62becf329775c755eccc5175f58793     0 tf/resource/tf_proto_obj_defs_dutch.txt
         142502      1 9d866d568ac6330729cbdca698dca7e481deb8bc     0 tf/resource/tf_proto_obj_defs_english.txt
         145352      1 7fd3752db7a404a98eb38391e351fb6d94df6f8a     0 tf/resource/tf_proto_obj_defs_finnish.txt
-        155372      1 1915cb360139fb82852e26b484d4671ddbdabccf     0 tf/resource/tf_proto_obj_defs_french.txt
+        155158      1 0f6c6aafe119e2994975b6995aeb0c68704a8a20     0 tf/resource/tf_proto_obj_defs_french.txt
         154530      1 dff32102ef3d1cb8bd839a1a7c22e63b2e88b5b8     0 tf/resource/tf_proto_obj_defs_german.txt
         151700      1 e6c92dd27ff8dfd960eb0ee762da2d45d9f3cf94     0 tf/resource/tf_proto_obj_defs_greek.txt
         148744      1 c2b919549aa790c84902d8b25d197509b1426f3f     0 tf/resource/tf_proto_obj_defs_hungarian.txt
@@ -976,12 +976,12 @@ Total bytes compressed : 16827280208
         143694      1 fb4c378c717b586ab983bc3dfcad8853ac0cc725     0 tf/resource/tf_proto_obj_defs_romanian.txt
         144158      1 21941754fc4d6c0e9d34a2cfec555b47d1a0f99f     0 tf/resource/tf_proto_obj_defs_russian.txt
         115112      1 dd2f76d985d2a0e4986cc5bda4929d49edd98e0c     0 tf/resource/tf_proto_obj_defs_schinese.txt
-        151140      1 6321c26c5b01247c05c5e108e210a2775723b0ef     0 tf/resource/tf_proto_obj_defs_spanish.txt
+        151520      1 b2b7792bb84c9dca5b0658a1f2c3cc93765bb82a     0 tf/resource/tf_proto_obj_defs_spanish.txt
         143536      1 190fc3436377443d15427c07528ba985003ac6a5     0 tf/resource/tf_proto_obj_defs_swedish.txt
-        119726      1 cca37ddd403144e57204bbb51aa6f91c2dfbc2c2     0 tf/resource/tf_proto_obj_defs_tchinese.txt
+        120006      1 e761a927274a0f92c536aa1447fa9f006bc77b0a     0 tf/resource/tf_proto_obj_defs_tchinese.txt
         136046      1 e510b2999725895607119b183b8e9410ea9c8d83     0 tf/resource/tf_proto_obj_defs_thai.txt
         131538      1 0fca4c32586216a19585ae93000ee5fbe2d67bdd     0 tf/resource/tf_proto_obj_defs_turkish.txt
-        146718      1 8bde03b0a2463e0453abebde8c09023a5f9a519d     0 tf/resource/tf_proto_obj_defs_ukrainian.txt
+        146828      1 14f3656f6297c2d1649527898473c7abcd3d8610     0 tf/resource/tf_proto_obj_defs_ukrainian.txt
          88770      1 0856dbcac1879c3b6900339c004303c2dc80bb79     0 tf/resource/tf_quests_brazilian.txt
          94062      1 ac20b4f441c238de8bdfda125f6d4c111b977556     0 tf/resource/tf_quests_bulgarian.txt
          88588      1 62fbaab399efe595db66436f5028f2a078b27e27     0 tf/resource/tf_quests_czech.txt
@@ -1010,15 +1010,15 @@ Total bytes compressed : 16827280208
          87932      1 7b975d754532db3d85bc7e6ca0e43f5ac081c33c     0 tf/resource/tf_quests_thai.txt
          89866      1 b9110cc47a0f791a7b74d0e883ed3236372d358d     0 tf/resource/tf_quests_turkish.txt
          87608      1 4112531740b86d36993a286a74eebe4aaa3d5448     0 tf/resource/tf_quests_ukrainian.txt
-       3328488      4 5b1b49c37b6a0efd9af93246ea5cff34e811317c     0 tf/resource/tf_romanian.txt
-       3215164      4 3658df669ae1a262624f6a086f0ef20f4ce60d9b     0 tf/resource/tf_russian.txt
-       2116622      3 76c7ec904777392f7186531cdf29079e4243c0e0     0 tf/resource/tf_schinese.txt
-       3390958      4 f7e8143d9884ca655b60f4527f9aedef9fdeaded     0 tf/resource/tf_spanish.txt
-       3174280      4 d25d3b81b385e1743f6b8585116b57c472d28061     0 tf/resource/tf_swedish.txt
-       2159692      3 03ff4129e5c7f7b86919baec30e4898c7d1e6814     0 tf/resource/tf_tchinese.txt
-       3009786      3 0de29607b4855efa7091d0be2137055a47476bbc     0 tf/resource/tf_thai.txt
-       2976420      3 0934a9311212621967d064773a732001e2dd299f     0 tf/resource/tf_turkish.txt
-       3234046      4 86cbcad8a778e2d30e6d3968c55ecaa7a00b4486     0 tf/resource/tf_ukrainian.txt
+       3327706      4 c64e9360f5917c360fba2e42ef4a1dc50f3cd457     0 tf/resource/tf_romanian.txt
+       3214764      4 93ce3ae5f2b68d83321df3be202f36ffbb40be64     0 tf/resource/tf_russian.txt
+       2119478      3 799b60b1716938446d0f6409e25746651fdc2282     0 tf/resource/tf_schinese.txt
+       3393912      4 f751c152c436fd7ec0b29fc29b07030427a9bd16     0 tf/resource/tf_spanish.txt
+       3173868      4 8faca4fe2ccf4229dcae2c110b28e1995da5c029     0 tf/resource/tf_swedish.txt
+       2159534      3 816a48c57956757f57c47dc278039b2c8465b989     0 tf/resource/tf_tchinese.txt
+       3009582      3 5141c479ffcddafb37a3a533d6a6362273962326     0 tf/resource/tf_thai.txt
+       2976272      3 d2f0c89a46adfb4364efb7514e980e41e299cc82     0 tf/resource/tf_turkish.txt
+       3236692      4 9304eedeb0d76d4a4e0e60c721a1cd4a1a1d7b82     0 tf/resource/tf_ukrainian.txt
              0      0 0000000000000000000000000000000000000000    40 tf/scripts
              0      0 0000000000000000000000000000000000000000    40 tf/scripts/items
        8245712     10 e66e5f62b0415338385e70fdd3e67f493e8f5ed5     0 tf/scripts/items/items_game.txt
@@ -1026,7 +1026,7 @@ Total bytes compressed : 16827280208
              0      0 0000000000000000000000000000000000000000    40 tf/scripts/protodefs
        9830030     12 c1e6da656014c8f812bbaeed03d23390ba617388     0 tf/scripts/protodefs/proto_defs.vpd
            128      1 b2d13012fa04f38a1e1b98cdb1a9be81a9c59ccd     0 tf/scripts/protodefs/proto_defs.vpd.sig
-           118      1 67a405e211c098b28eb8fdb47199b07a4ecd2e2b     0 tf/steam.inf
+           118      1 7110613c1b8df2f3b6a0ea1bed8b282df6c93bd0     0 tf/steam.inf
      106800068    121 3f23a3aa21657addd8867d11e29e0092997e01ee     0 tf/tf2_misc_000.vpk
      107163006    113 aa3117ea852c067aa51f8df93c344cac8eb33c3f     0 tf/tf2_misc_001.vpk
      114469772    120 f41e579246aee1c6e2fa29c24c3764297a875647     0 tf/tf2_misc_002.vpk
@@ -1043,7 +1043,7 @@ Total bytes compressed : 16827280208
      117007822    116 d575cd0d5c94a383fff6462f84f0940239b597af     0 tf/tf2_misc_013.vpk
      117432543    129 778bb3a109906d52ce8eadcf0a6cd88a7a7035a6     0 tf/tf2_misc_014.vpk
      120826215    127 57058a608912e1625bdae589e3ab7064519cdbf7     0 tf/tf2_misc_015.vpk
-     113465461    124 a70db520c8d5ebebba58a27ed2abf97087a71afc     0 tf/tf2_misc_016.vpk
+     113465480    124 30bf1d5a582f69eb3f0e497ee895af6b327c2fd4     0 tf/tf2_misc_016.vpk
      113409982    124 0ab5bcb318f6c57d86594f7c29f084572ea1339a     0 tf/tf2_misc_017.vpk
      114375336    126 c80189f555d45dd8c830960e99453f3bb5c7620c     0 tf/tf2_misc_018.vpk
      114457957    127 0af14975e55f11a31417de5f0f3a6643742c5328     0 tf/tf2_misc_019.vpk
@@ -1055,7 +1055,7 @@ Total bytes compressed : 16827280208
      119929799    129 37b1f3f756f42f7dcfc0edbd6d025ced397d7cb4     0 tf/tf2_misc_025.vpk
      114844421    120 6a9220469a1840d0001c22f51895f4f5bf210c1b     0 tf/tf2_misc_026.vpk
      114832850    128 7ae26745a791107fadb9eb03ee0a25e26fd4166d     0 tf/tf2_misc_027.vpk
-       5402349      6 4147122061301e8d7c943017353ecb1f09566368     0 tf/tf2_misc_dir.vpk
+       5402349      6 6d3e213505df2085af71d133854f8b4e6855baae     0 tf/tf2_misc_dir.vpk
       47873247     52 72a52596061ccf2f0724453c298c4a7d0320af05     0 tf/tf2_sound_misc.vpk.sound.cache
      106136036    105 b62829c0a0aab66087fbee9a047800e996651645     0 tf/tf2_sound_misc_000.vpk
      111828380    108 93ae1db44e9e4bca921c51ef53e7fef65479398d     0 tf/tf2_sound_misc_001.vpk
@@ -1139,10 +1139,10 @@ Total bytes compressed : 16827280208
      138158320    138 5aa8b7bc940fd6dcedeb31b8e06740a6603ce18d     0 tf/tf2_textures_061.vpk
      107613669    113 32512bfe5662bbee7c67e577e2c6a7254ebac070     0 tf/tf2_textures_062.vpk
      113968112    121 918dcc8c70bd27fb12458ebd84d0d5612e95cae9     0 tf/tf2_textures_063.vpk
-     118704712    133 ecfadc8f5f2d1920ff13023866c2193169196e15     0 tf/tf2_textures_064.vpk
+     118704704    133 e77bd06f31c50a8900d0bc14103400200664834c     0 tf/tf2_textures_064.vpk
      117475237    115 d3d8bc279417e4737f24594a02a4bb3c2d55579f     0 tf/tf2_textures_065.vpk
      118682243    124 882c0d05874882ae63d3a5b7fd986cc24784859f     0 tf/tf2_textures_066.vpk
-     116948735    120 b913eabef79fb93c8d03987f6473937252428e46     0 tf/tf2_textures_067.vpk
+     116937791    120 7d7dcd9db16f18e9e904d59324fbc9c62a5fb606     0 tf/tf2_textures_067.vpk
      140636344    141 3b5c7cc8ffba742d3b4e024535444392ea29b9b9     0 tf/tf2_textures_068.vpk
      140174381    143 fdc19e9e95b397281572b0368535195eec802f2b     0 tf/tf2_textures_069.vpk
      137075936    139 7a7f267ca4cff44c5058564bf6b23bf3e6ea73eb     0 tf/tf2_textures_070.vpk
@@ -1177,13 +1177,13 @@ Total bytes compressed : 16827280208
      114450889    120 4a62a7c58b6ad5859ad2109e7de8366197123630     0 tf/tf2_textures_099.vpk
      114223112    126 dff2949846568cc1dfe2ff2ea7884a137028887f     0 tf/tf2_textures_100.vpk
      160987548    165 e114ec0acabbe4933784f0ab808c501e70a77aa2     0 tf/tf2_textures_101.vpk
-     124459412    124 3b9bb5742d33ffe0000b0742550899e840995251     0 tf/tf2_textures_102.vpk
+     124459412    124 12b7e9e2c2619c8092c058ff801ad8decf0286bd     0 tf/tf2_textures_102.vpk
      137203584    137 125c22b355469e5884ac7438518181feae35f726     0 tf/tf2_textures_103.vpk
      140558640    142 4ed16e48b10ecfe352a1823bb18f0cb891668a19     0 tf/tf2_textures_104.vpk
      142815892    147 b32cb1997623722529f14e05240de7f2d6023f44     0 tf/tf2_textures_105.vpk
      121694056    118 bf6f96efbc82b487920a8313d83fea90c41a0a8d     0 tf/tf2_textures_106.vpk
      143587812    143 635ea745d186b5f50cbf245b71a34c0cf7936dea     0 tf/tf2_textures_107.vpk
-       1974706      2 656acb0e549fcd64e1838c5e7cbc0a9541b6fb0c     0 tf/tf2_textures_dir.vpk
+       1974706      2 8b4ff101a065a17c8ce17863715b8be3474d71f5     0 tf/tf2_textures_dir.vpk
              0      0 0000000000000000000000000000000000000000    40 tf/workshop
              0      0 0000000000000000000000000000000000000000    40 tf/workshop/content
              0      0 0000000000000000000000000000000000000000    40 tf/workshop/content/models

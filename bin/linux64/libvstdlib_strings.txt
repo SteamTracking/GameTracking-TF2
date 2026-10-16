@@ -8,6 +8,8 @@
  clientcmd_can_execute
  failed to dlopen %s error=%s\n
  game
+ max. %f
+ min. %f
  notconnected
  notify
  replicated
@@ -25,15 +27,24 @@ $POSIX
 $WIN32
 $WINDOWS
 $X360
+%%.%if%s
 %02x
+%A %b %d
 %f %f %f %f
+%i%s
 %lld
 %ls [wstring, len = %d]
 %s !PeekCall()
+%s %d\n
+%s %f\n
+%s %s %d
 %s %s %s %s\n
 %s PeekCall():%d
+%s%d
 %s(%d) SPINNING %t
+%s/%s
 %s/bin/linux64/%s
+%s::%s
 &AElig;
 &Aacute;
 &Acirc;
@@ -137,6 +148,7 @@ $X360
 &yacute;
 &yen;
 &yuml;
+(%s)%s
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
 (main)
@@ -451,9 +463,6 @@ YieldWait
 \t(%zu) comparing %s with %s\n
 _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
-_ZTVN10__cxxabiv117__class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv120__si_class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv121__vmi_class_type_infoE@CXXABI_1.3
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
 __ctype_tolower_loc
@@ -739,8 +748,11 @@ vswprintf
 vswprintf@GLIBC_2.2.5
 vtable for CUniformRandomStream
 vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__si_class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__vmi_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info@CXXABI_1.3
 wcslen
 wcslen@GLIBC_2.2.5
 wcsncat

@@ -8,6 +8,8 @@
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 %llu
+%s%c%s
+%s%s
 %s/.steam/%s
 %s/.steam/steam
 %u.%u.%u.%u:%i
@@ -1351,6 +1353,7 @@ gameoverlayrenderer.so
 getenv
 global constructors keyed to 
 global destructors keyed to 
+gold 1.15
 guard variable for 
 half
 hidden alias for 

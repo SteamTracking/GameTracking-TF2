@@ -25695,7 +25695,7 @@ materials/vgui/maps/menu_thumb_cp_gravelpit_snowy.vmt CRC:00fe8e077e size:134
 materials/vgui/maps/menu_thumb_cp_gullywash_final1.vmt CRC:00da84a966 size:152
 materials/vgui/maps/menu_thumb_cp_hadal.vmt CRC:00856a06b1 size:156
 materials/vgui/maps/menu_thumb_cp_hardwood_final.vmt CRC:007b15eedb size:132
-materials/vgui/maps/menu_thumb_cp_holyhell.vmt CRC:00bbbcc8b5 size:127
+materials/vgui/maps/menu_thumb_cp_holyhell.vmt CRC:00e56f7dd7 size:146
 materials/vgui/maps/menu_thumb_cp_junction_final.vmt CRC:0076106072 size:152
 materials/vgui/maps/menu_thumb_cp_lavapit_final.vmt CRC:00744f44b9 size:130
 materials/vgui/maps/menu_thumb_cp_manor_event.vmt CRC:005f316e3f size:130

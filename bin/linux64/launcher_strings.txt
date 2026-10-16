@@ -8,6 +8,8 @@
  clientcmd_can_execute
  failed to dlopen %s error=%s\n
  game
+ max. %f
+ min. %f
  notconnected
  notify
  replicated
@@ -26,10 +28,15 @@ $POSIX
 $WIN32
 $WINDOWS
 $X360
+%%.%if%s
 %02x
+%A %b %d
 %f %f %f %f
+%i%s
 %lld
 %ls [wstring, len = %d]
+%s %d\n
+%s %f\n
 %s %s %s %s\n
 %s %s %s -reslistdir %s
 %s -reslistdir %s -rebuildaudio
@@ -41,6 +48,7 @@ $X360
 %s%cfilesystem_stdio.so
 %s%cfilesystem_steam.so
 %s.lst
+%s/%s
 %s/bin/linux64/%s
 %s/linux64
 %s/source_engine_%u.lock
@@ -244,7 +252,6 @@ $X360
 7CSDLMgr
 7IConVar
 8CFmtStrNILi256ELb0EE
-9a&g
 ;0123456789ABCDEF
 </script>
 << NULL >>\n
@@ -355,7 +362,6 @@ LoadFromBuffer: missing {
 LoadFromFile
 Lowered '%s' -> '%s'\n
 MDLCache004
-MGiI
 Maplist file '%s' empty or missing!!!\n
 MatSystemSurface008
 Matched '%s' -> '%s'\n
@@ -376,7 +382,6 @@ Plat_VerifyHardwareKeyPrompt
 Plat_localtime
 Portal
 Portal 2
-Qkkbal
 QueuedLoaderVersion004
 RecursiveLoadFromBuffer:  got EOF instead of keyname
 RecursiveLoadFromBuffer:  got NULL key
@@ -509,7 +514,6 @@ Warning
 Warning!
 Warning: falling back to auto detection of vproject directory.\n
 WebDavRedirector
-Zjz\v
 [/code]
 [/list]
 [code]
@@ -675,7 +679,6 @@ gl_swaplimit_mt
 gl_swaptear
 grab/ungrab window.
 grab_window
-i]Wb
 iconv
 iconv@GLIBC_2.2.5
 iconv_close
@@ -859,7 +862,6 @@ wcstoll
 wcstoll@GLIBC_2.2.5
 wcstombs
 wcstombs@GLIBC_2.2.5
-wn>Jj
 workdir
 xdg-open "%s"
 |all_source_engine_paths|

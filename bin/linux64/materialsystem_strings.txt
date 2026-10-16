@@ -1,4 +1,3 @@
-                
         %dx%d refCount: %d numframes: %d\n
     "%s" "%s"\n
     "%s" "env_cubemap"\n
@@ -18,6 +17,8 @@
  clientcmd_can_execute
  failed to dlopen %s error=%s\n
  game
+ max. %f
+ min. %f
  notconnected
  notify
  replicated
@@ -105,18 +106,26 @@ $vertexalpha
 $vertexcolor
 $wireframe
 $znearer
+%%.%if%s
+%.3f 
 %02x
+%A %b %d
 %d Cached, %d Total Materials\n
 %d Errors\n
 %d calls queued for %llu bytes in parameters and overhead, %d bytes verts, %d bytes indices, %d bytes other\n
 %f %f %f %f
+%i%s
 %lld
 %ls [wstring, len = %d]
 %noToolTexture
+%s %d\n
+%s %f\n
+%s %s
 %s %s %s %s\n
 %s (%d bytes)
 %s (header only: %d, nForceFlags: %d, skipMips: %d)
 %s (shader: %s) refCount: %d.\n
+%s - %s
 %s - Allocate
 %s - Allocation
 %s - Begin
@@ -136,13 +145,17 @@ $znearer
 %s - conversion from (%d to %d)
 %s bDeviceReady false\n
 %s m_MissingList count: %d\n
+%s-%s
 %s-Allocations
 %s-ByteSwapInPlace
 %s-CreateNew
 %s-TryExisting
+%s/%s
+%s/%s/
 %s/%s/replacements.vmt
 %s/bin/linux64/%s
 %s/replacements.txt
+%s_%s
 %s_ZBuffer
 %s_replacement
 %toolTexture
@@ -249,6 +262,7 @@ $znearer
 &yacute;
 &yen;
 &yuml;
+(%s)%s
 (source/spike)%s %.2fms %t
 ** NOTE: The real value is %.3f but the server has temporarily restricted it to %.3f **\n
 *** Encountered VTF file with an invalid full header!\n
@@ -519,14 +533,11 @@ $znearer
 <UNDEFINED>
 <img src="
 <pre>
->33s?
 ><a href=
 >=DX90
 >=DX90_20b
 >DLOPEN Error:%s\n
 >DX90
-?333333
-????????????????
 ?shader_error
 @10IShaderDLL
 @NULL material
@@ -742,7 +753,6 @@ GLIBC_2.27
 GLIBC_2.29
 GLIBC_2.3
 GLIBC_2.7
-Ga=o
 Game shader '%s' override shader '%s' from '%s'.
 GenerateMipmaps
 GetCPUInformation
@@ -821,7 +831,6 @@ Morph stats:\n
 Morph texture is too big!!! Make brian add support for morphs having multiple textures.\n
 MorphAccumulate
 N23CMatQueuedRenderContext18CCallQueueExternalE
-NAUU
 NV_DST16
 NV_DST24
 NV_INTZ
@@ -985,6 +994,7 @@ Workaround certain GL drivers holding unnecessary amounts of data when loading m
 WriteDataToShaderAPITexture
 [ %.4f %.4f %.4f %.4f ] 
 [ weight %.2f; base "%s"; spec "%s" ]
+[%d %d %d]
 [/code]
 [/list]
 [BLACK_TEXID]
@@ -1029,9 +1039,6 @@ _ZGVbN2vv_pow
 _ZGVbN2vv_pow@GLIBC_2.22
 _ZGVbN4vv_powf
 _ZGVbN4vv_powf@GLIBC_2.22
-_ZTVN10__cxxabiv117__class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv120__si_class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv121__vmi_class_type_infoE@CXXABI_1.3
 ___%s_%d.vmt
 ___AccumulateMorph%d.vmt
 ___buffer_clear_obey_stencil0.vmt
@@ -1414,7 +1421,6 @@ pthread_once@GLIBC_2.2.5
 ptr( 0x%p )
 putchar
 putchar@GLIBC_2.2.5
-q=yv
 qsort
 qsort@GLIBC_2.2.5
 queued_single
@@ -1546,8 +1552,11 @@ vsnprintf@GLIBC_2.2.5
 vswprintf
 vswprintf@GLIBC_2.2.5
 vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__si_class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__vmi_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info@CXXABI_1.3
 vtf.cpp
 wcslen
 wcslen@GLIBC_2.2.5

@@ -9,7 +9,10 @@
 %10s: user: %ld.%03ld s, system: %ld.%03ld s, faults: %lu, rss: 
 %12s
 %24s
+%d   %-3s
 %ld.%ld %-3s
+%s%s%s
+%s%s\n
 %sthread 0x%llx: 
 , commit: 
 -abandoned
@@ -32,10 +35,6 @@ GLIBC_2.2.5
 GLIBC_2.3
 _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
-_ZNSt9bad_allocD1Ev@GLIBCXX_3.4
-_ZSt15get_new_handlerv@GLIBCXX_3.4.20
-_ZTISt9bad_alloc@GLIBCXX_3.4
-_ZTVSt9bad_alloc@GLIBCXX_3.4
 __cxa_allocate_exception
 __cxa_allocate_exception@CXXABI_1.3
 __cxa_atexit
@@ -343,7 +342,9 @@ segments
 show_errors
 show_stats
 std::bad_alloc::~bad_alloc()
+std::bad_alloc::~bad_alloc()@GLIBCXX_3.4
 std::get_new_handler()
+std::get_new_handler()@GLIBCXX_3.4.20
 stderr
 stderr@GLIBC_2.2.5
 stdout
@@ -367,6 +368,7 @@ trying to free an already freed arena block: %p, size %zu\n
 trying to free from non-existent arena block: %p, size %zu, memid: 0x%zx\n
 trying to free from non-existent arena: %p, size %zu, memid: 0x%zx\n
 typeinfo for std::bad_alloc
+typeinfo for std::bad_alloc@GLIBCXX_3.4
 unable to allocate OS memory (error: %d (0x%x), size: 0x%zx bytes, align: 0x%zx, commit: %d, allow large: %d)\n
 unable to allocate aligned OS memory directly, fall back to over-allocation (size: 0x%zx bytes, address: %p, alignment: 0x%zx, commit: %d)\n
 unable to allocate huge (1GiB) page, trying large (2MiB) pages instead (errno: %i)\n
@@ -391,3 +393,4 @@ vfree
 vsnprintf
 vsnprintf@GLIBC_2.2.5
 vtable for std::bad_alloc
+vtable for std::bad_alloc@GLIBCXX_3.4

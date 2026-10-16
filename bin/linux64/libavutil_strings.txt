@@ -1,58 +1,53 @@
      %-15s 
     Last message repeated %d times\n
     Last message repeated %d times\r
- !"#$%&'()*+,-./0123
+  %s%-17s 
  (default 
  (from 
  @libavutil/fifo.c
- iciNWq
  is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.\n
 !"valid element size"
 !)19libavutil/dict.c
 !c->plane && !c->step && !c->offset && !c->shift && !c->depth
 %-11s %7d %10d
 %-12ld 
+%-12s 
 %-6s   %2d 
 %02X
 %02u:%02u:%02u%c%02u
+%H%M%S
 %Y - %m - %d
+%Y%m%d
 %Y-%m-%dT%H:%M:%S
 %d channels
 %d%*1[:/]%d%c
 %d.%06d
+%d/%d
 %d:%02d.%06d
 %d:%d:%d%c%d
 %dx%d
 %ld:%02d:%02d.%06d
 %s AVOptions:\n
 %s%02d:%02d:%02d%c%02d
+%s%s%s%s
+&@%d:%d%c
 ((dst_linesize) >= 0 ? (dst_linesize) : (-(dst_linesize))) >= bytewidth
 ((src_linesize) >= 0 ? (src_linesize) : (-(src_linesize))) >= bytewidth
-(UhP
 (state[4] & 3) == 3
-)eyC
-+LVvuOx39]O#2
 --prefix=/data/dev/build_ubuntu12_64 --cc=gcc --extra-cflags='-m64 -mfpmath=sse -g -O2 -fno-strict-aliasing -ffast-math -fno-omit-frame-pointer -Wno-unused-parameter' --strip=strip --disable-linux-perf --arch=x86_64 --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avfilter --enable-avutil --enable-avresample --enable-avformat --enable-swscale --enable-parser='h264,hevc' --enable-decoder='aac,h264,hevc,gif,vorbis,mp3,flac,alac,pcm*,valve*,apng,libvpx_vp8,libvpx_vp9' --enable-encoder='h264_vaapi,hevc_vaapi' --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav,flv,apng' --enable-hwaccels --enable-vdpau --enable-vaapi --enable-libdrm --enable-muxer='flv,mp4,dash,webm' --disable-decoder='h263,mpeg1video,mpeg2video,vc1,vp8,vp9' --enable-libvpx --enable-libvorbis --enable-protocol='file,rtmp'
--7HD
 -DBL_MAX
 -DBL_MIN
 -FLT_MAX
 -FLT_MIN
 .%06dZ
-.97yY
-.x7B
 /dev/dri/renderD%d
 /dev/random
 /dev/urandom
 /tmp/%sXXXXXX
 0000
-000000
-00006
 0000x
 000`
-00x\f|
 0123456789ABCDEFabcdef
-08bX
 0bgr
 0p0000
 0rgb
@@ -60,11 +55,8 @@
 0x%08X
 0x%lx
 0xx00
-0|004
 16cif
-1d[O~
 256color
-27;C
 2kdci
 2kflat
 2kscope
@@ -82,7 +74,6 @@
 4kscope
 5.0(side)
 5.1(side)
-6"8d
 6.0(front)
 6.1(back)
 6.1(front)
@@ -91,7 +82,6 @@
 6666666
 66666666
 66666666666
-6666666666666
 666666666666666666666666
 666666666666666?
 666666666666670766666666
@@ -99,19 +89,12 @@
 6666666?
 66666707666
 666676666670?
-6BJ^
-7,gm;
 7.0(front)
 7.1(wide)
 7.1(wide-side)
 8*c->step >= c->depth
-8On\f
-8l8v
 8ld`
 8ll8
-8ll8v
-9)PF
-;"lY7
 <00000000<
 <binary>
 <boolean>
@@ -122,7 +105,6 @@
 <duration>
 <fBBf<
 <fff<
-<ffff<
 <flags>
 <float>
 <image_size>
@@ -139,22 +121,14 @@
 ?0766666
 ?076666666666666
 ?3?0000p
-?3?00p
-?456789:;<=
-?6666666
-?666666666666666
 ?MMX implied by specified flags\n
-?UUUUUU
-@ffffff
 @libavutil/dovi_meta.c
-@n2w
 A device with a derived frame context cannot be used as the destination of a HW -> HW transfer.
 A device with a derived frame context cannot be used as the source of a HW -> HW transfer.
 A4.3.4
 AB24
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ABGR
-AJsN
 AR24
 ARGB
 ATSC A53 Part 4 Closed Captions
@@ -167,8 +141,6 @@ AVReplayGain
 AV_LOG_FORCE_256COLOR
 AV_LOG_FORCE_COLOR
 AV_LOG_FORCE_NOCOLOR
-Ab61
-AcG\nt
 Active format description
 Alibavutil/rc4.c
 AliceBlue
@@ -179,18 +151,14 @@ Assertion %s failed at %s:%d\n
 Audio service type
 AuthenticAMD
 Azure
-B*k@5
 BA24
-BFUa.X
 BGRA
 BGRX
-BN"r
 BSF_NOT_FOUND
 BUFFER_TOO_SMALL
 BUG2
 BX24
 Beige
-Bh;+j
 Bisque
 Bitstream filter not found
 Black
@@ -198,7 +166,6 @@ BlanchedAlmond
 BlueViolet
 Buffer too small
 BurlyWood
-C?9z
 CRC32
 CadetBlue
 Cannot find color '%s'\n
@@ -220,7 +187,6 @@ Created surface %#x.\n
 Crimson
 DECODER_NOT_FOUND
 DEMUXER_NOT_FOUND
-DGt2
 DRM PRIME fd is %ld.\n
 DRM format not supported by VAAPI.\n
 DRM instance fd does not appear to refer to a DRM device.\n
@@ -279,12 +245,10 @@ Error querying the supported pixel formats\n
 Error retrieving the data from a VDPAU surface\n
 Error setting option %s to value %s.\n
 Error uploading the data to a VDPAU surface\n
-Eub'z
 Eval
 Experimental feature
 FFmpeg version 4.3.4
 FILTER_NOT_FOUND
-FS(l
 Failed to create VAAPI surface pool.\n
 Failed to create image for surface %#x: %d (%s).\n
 Failed to create surface from DRM object: %d (%s).\n
@@ -336,17 +300,14 @@ GhostWhite
 Gold
 GreenYellow
 HDR Dynamic Metadata SMPTE2094-40 (HDR10+)
-HJI\f
 HTTP_BAD_REQUEST
 HTTP_FORBIDDEN
 HTTP_NOT_FOUND
 HTTP_OTHER_4XX
 HTTP_SERVER_ERROR
 HTTP_UNAUTHORIZED
-HWyn
 HoneyDew
 HotPink
-H{1S
 I420
 I64_MAX
 I64_MIN
@@ -360,7 +321,6 @@ INT_MAX
 INT_MIN
 INVALIDDATA
 IPBSipb
-IS\fgN
 IYUV
 If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)\n
 Ignoring device %d with non-matching kernel driver (%s).\n
@@ -406,7 +366,6 @@ LightYellow
 Lime
 LimeGreen
 Linen
-MCi).
 Map DRM object %d to VAAPI as %08x.\n
 Map VAAPI surface %#x to DRM.\n
 Map surface %#x.\n
@@ -414,7 +373,6 @@ Mapped DRM object %d to surface %#x.\n
 Maroon
 Mastering display metadata
 Matched driver string as known nonstandard driver "%s", setting quirks (%#x).\n
-MbP?
 MediumAquaMarine
 MediumBlue
 MediumOrchid
@@ -445,7 +403,6 @@ No target formats are supported for this chroma type\n
 Not supported option type: %d, option name: %s\n
 Not yet implemented in FFmpeg, patches welcome
 OPTION_NOT_FOUND
-O\fxW2
 OldLace
 Olive
 OliveDrab
@@ -458,9 +415,7 @@ OrangeRed
 Output changed
 P010
 PATCHWELCOME
-PIMAC
 PROTOCOL_NOT_FOUND
-PaH?
 PaleGoldenRod
 PaleGreen
 PaleTurquoise
@@ -476,8 +431,6 @@ Protocol not found
 QP table data
 QP table properties
 QP2LAMBDA
-QVlM
-Qjh/T
 R8  RG88
 RA24
 RGBA
@@ -490,10 +443,6 @@ RX24
 Regions Of Interest
 RosyBrown
 RoyalBlue
-S2zw
-S4n)
-S9v.i
-SH6tc
 SHA160
 SHA224
 SHA256
@@ -502,9 +451,7 @@ SHA512
 SHA512/224
 SHA512/256
 SMPTE 12-1 timecode
-SRqDIK
 STREAM_NOT_FOUND
-SU2`\t
 SaddleBrown
 SandyBrown
 SeaShell
@@ -518,7 +465,6 @@ Setting '%s' to value '%s'\n
 Setting entry with key '%s' to value '%s'\n
 Sienna
 Silver
-Sj~=eI
 Skip samples
 Snow
 Spherical Mapping
@@ -526,7 +472,6 @@ Splitted-Desktop Systems VDPAU backend for VA-API
 Stereo 3D
 Stream not found
 Successfully created a VDPAU device (%s) on X11 display %s\n
-T0.S
 TEMPFILE
 TERM
 Teal
@@ -544,7 +489,6 @@ Thistle
 Tomato
 Trying to use DRM render node for device %d, with matching kernel driver (%s).\n
 Trying to use DRM render node for device %d.\n
-U$qk.
 UINT32_MAX
 UNKNOWN
 UYVY
@@ -580,15 +524,11 @@ VA_API_0.33.0
 VDPAU
 VDPAU device creation on X11 display %s failed.\n
 VDPAU wrapper
-VM\rf
 Valid timecode frame rate must be specified. Minimum value is 1\n
 Value %d for parameter '%s' out of %s format range [%d - %d]\n
 Value %f for parameter '%s' is not a valid set of 32bit integer flags\n
 Value %f for parameter '%s' out of range [%g - %g]\n
 Video encoding parameters
-W1O\tg_?
-WFgO
-Wcr"
 Wheat
 WhiteSmoke
 XB24
@@ -606,18 +546,12 @@ YUY2
 YV12
 YV16
 YellowGreen
-YnFpW
-Zbby
-Ze2Zh@
+[%u;3%um%s
 [38;5;%dm%s
 [38;5;%um%s
 [48;5;%um
 [truncated strftime output]
 \f>ffff<
-\n6I*h<8
-\nIh8
-\t-f3F2
-\vh1\rHZ
 _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
 _Jv_RegisterClasses
@@ -646,16 +580,9 @@ __stack_chk_fail
 __strcpy_chk
 __vsnprintf_chk
 __xpg_strerror_r
-_g@Cg
-_maz
-_xU`u
 ``flxxlf
 ``lvffff
 ``xlffff|
-`flxl
-`lvff
-a.z9
-a3bt
 abgr
 abort
 acos
@@ -1248,7 +1175,6 @@ bayer_grbg8
 bayer_rggb16be
 bayer_rggb16le
 bayer_rggb8
-bcKU\r!
 between
 bgr0
 bgr24
@@ -1266,8 +1192,6 @@ bgr565le
 bgr8
 bgra64be
 bgra64le
-bhxh`
-bhxhb
 bikeshed
 bitand
 bitor
@@ -1284,7 +1208,6 @@ bt2020nc
 bt470bg
 bt470m
 bt709
-ccccg
 ceil
 checkerboard
 chroma-derived-c
@@ -1306,8 +1229,6 @@ d->nb_components <= 4
 d3d11
 d3d11va
 d3d11va_vld
-dU\t2
-d^AE
 dblp
 debug
 december
@@ -1327,12 +1248,10 @@ drmGetRenderDeviceNameFromFd
 drmGetVersion
 drm_prime
 duration >= 0
-dv&4
 dxva2
 dxva2_vld
 ebu3213
 error
-fC\tc
 fabs
 false
 false,n,no,disable,disabled,off
@@ -1354,11 +1273,8 @@ fff|ffff
 fff|lfff
 fflxxlff
 ff|bfofff
-ff|ff
-ff|lf
 floor
 fltp
-flxlf
 fma3
 fma4
 format_desc
@@ -1368,8 +1284,6 @@ frexp
 front left-of-center
 front right-of-center
 fwqvga
-gC_7
-gTzu
 gauss
 gbrap
 gbrap10be
@@ -1411,7 +1325,6 @@ gray9be
 gray9le
 grayf32be
 grayf32le
-h,DUu
 hd1080
 hd480
 hd720
@@ -1425,7 +1338,6 @@ ictcp
 iec61966-2-1
 iec61966-2-4
 ifnot
-ilRdV
 in_ts != ((int64_t)0x8000000000000000UL)
 info
 interleaved columns
@@ -1434,19 +1346,13 @@ isatty
 isinf
 isnan
 j == pix_fmt_count
-j Bz
 january
 july
 june
 k < ctx->nb_formats
-kMxn
 kernel_driver
-l88l
-lCu7&
-lbfL
 lerp
 lffffffl
-lfffl
 libX11.so.6
 libavutil license: LGPL version 2.1 or later
 libavutil.so.56
@@ -1510,7 +1416,6 @@ libva.so.2
 libva: %s
 libvdpau.so.1
 linear
-llll
 lllll
 lllllll
 localtime_r
@@ -1518,7 +1423,6 @@ log100
 log316
 low frequency
 low frequency 2
-mK1f
 march
 mediacodec
 memchr
@@ -1532,20 +1436,16 @@ mmal
 mmap64
 mmx2
 mmxext
-mn`I:T`H
 mono
 monob
 monow
 munmap
 murmur3
-n6j/
-n:2C[
 name   depth
 name nb_components nb_bits
 nanosleep
 nb_jobs > 0
 nb_threads >= 0
-no:7
 none
 november
 ntsc-film
@@ -1578,7 +1478,6 @@ pixelutils support is required but libavutil is not compiled with it\n
 plane <= AV_DRM_MAX_PLANES
 pool->alloc || pool->alloc2
 posix_memalign
-pqT3^-ZI
 print
 pthread_cond_broadcast
 pthread_cond_destroy
@@ -1592,15 +1491,12 @@ pthread_mutex_init
 pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once
-pzKD)
-qUN1
 qntsc
 qpal
 qqvga
 quad
 quad(side)
 qxga
-r3A~
 reserved
 rgb0
 rgb24
@@ -1621,7 +1517,6 @@ rgba64be
 rgba64le
 root
 round
-s%iH
 s16p
 s32p
 s64p
@@ -1674,8 +1569,6 @@ surround direct left
 surround direct right
 svga
 sysconf
-t6Q8
-tT0~
 tail_len <= 5
 tanh
 taylor
@@ -1696,7 +1589,6 @@ true
 true,y,yes,enable,enabled,on
 trunc
 u.libavutil/tx.c
-uU~b
 ubit
 uhd2160
 uhd4320
@@ -1704,8 +1596,6 @@ unknown
 unspecified
 uyvy422
 uyyvyy411
-vOB9`
-v^FES
 vaAcquireBufferHandle
 vaCreateImage
 vaCreateSurfaces
@@ -1743,14 +1633,12 @@ video
 videotoolbox
 videotoolbox_vld
 vulkan
-w?6r
 warning
 while
 whsxga
 whuxga
 wide left
 wide right
-wj-K
 woxga
 wqsxga
 wquxga
@@ -1760,16 +1648,12 @@ wvga
 wxga
 x00000x
 x00x
-x<fff<
 xllll
 xvmc
 xyz12be
 xyz12le
-xzdD]
 y210be
 y210le
-y7bT
-yU\n2`
 ya16be
 ya16le
 ycgco
@@ -1846,7 +1730,3 @@ yuvj440p
 yuvj444p
 yuyv422
 yvyu422
-{OJW
-|sG2
-}oaO
-~8lI

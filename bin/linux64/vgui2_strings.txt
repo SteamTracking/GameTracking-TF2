@@ -9,6 +9,8 @@
  client
  clientcmd_can_execute
  failed to dlopen %s error=%s\n
+ max. %f
+ min. %f
  notconnected
  notify
  replicated
@@ -27,12 +29,17 @@ $POSIX
 $WIN32
 $WINDOWS
 $X360
+%%.%if%s
 %02x
+%A %b %d
 %d %d %d %d
 %f %f %f %f
+%i%s
 %language%
 %lld
 %ls [wstring, len = %d]
+%s %d\n
+%s %f\n
 %s %s %s %s\n
 %s - Ticks
 %s - Ticks: %s
@@ -46,10 +53,14 @@ $X360
 %s%c..%cbin
 %s%cfilesystem_stdio.so
 %s%cfilesystem_steam.so
+%s%s
+%s%s-%s
 %s*.txt
+%s/%s
 %s/bin/linux64/%s
 %s/linux64
 %s_tempcontent
+%x %x
 &AElig;
 &Aacute;
 &Acirc;
@@ -154,6 +165,7 @@ $X360
 &yen;
 &yuml;
 '"KEY_APOSTROPHE
+(%s)%s
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
 (no name)
@@ -230,6 +242,7 @@ $X360
 7CScheme
 7CSystem
 7IConVar
+8%s_%d
 8*KEY_8
 8CFmtStrNILi256ELb0EE
 9(KEY_9
@@ -728,9 +741,6 @@ WizardSubPanel.BgColor
 ]}KEY_RBRACKET
 _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
-_ZTVN10__cxxabiv117__class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv120__si_class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv121__vmi_class_type_infoE@CXXABI_1.3
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
 __ctype_tolower_loc
@@ -1087,8 +1097,11 @@ vsnprintf@GLIBC_2.2.5
 vswprintf
 vswprintf@GLIBC_2.2.5
 vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__si_class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__vmi_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info@CXXABI_1.3
 wWKEY_W
 wcschr
 wcschr@GLIBC_2.2.5

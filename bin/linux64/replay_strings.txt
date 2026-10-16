@@ -40,8 +40,10 @@
   DUMP INTERVAL: %i\n
   LAST BLOCK TO DOWNLOAD: %i
   LAST CONSECUTIVE BLOCK DOWNLOADED: %i
+  NAME: %s
   NAME: %s\n
   Ss=%d, Se=%d, Ah=%d, Al=%d
+  URL: %s
   date: %i/%i/%i\n
   handle: %i\n
   session handle: %i\n
@@ -59,6 +61,8 @@
  clientcmd_can_execute
  failed to dlopen %s error=%s\n
  game
+ max. %f
+ min. %f
  notconnected
  notify
  reliable,
@@ -145,7 +149,6 @@
 #base is NULL 
 #include
 #include is NULL 
-$3br
 $DECK
 $LINUX
 $OSX
@@ -153,7 +156,7 @@ $POSIX
 $WIN32
 $WINDOWS
 $X360
-%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+%%.%if%s
 %02i:%02i:%02i
 %03i %03i %03i %03i %03i %03i %03i %03i %03i %03i %03i %03i %03i %03i %03i %03i
 %04i%02i%02i-%02i%02i%02i-%s
@@ -161,6 +164,7 @@ $X360
 %20u
 %35s
 %6d unresolved strings\n
+%A %b %d
 %f %f %f %f
 %f %s: Index flagged\n
 %f %s: Obj %s flagged for flush\n
@@ -182,6 +186,7 @@ $X360
 %f: Attempting to publish a file locally...\n
 %f: Attempting to rename file to local fileserver path...
 %f: CReplayHistoryManager::FireGameEvent()\n
+%f: CUT\n
 %f: Compression succeeded.\n
 %f: Data validation successful.\n
 %f: Download failed - either data validation failed\n
@@ -198,10 +203,14 @@ $X360
 %f: Unloading session.\n
 %i %s removed.\n
 %i: handle=%i  ticks=[%i %i]
+%i:%02i %s
 %i:%02i:%02i
 %ld%c
 %lld
 %ls [wstring, len = %d]
+%s %d\n
+%s %f\n
+%s %s %d
 %s %s %s %s\n
 %s (header only: %d, nForceFlags: %d, skipMips: %d)
 %s block %i from %s to path %s...\n
@@ -211,15 +220,20 @@ $X360
 %s%cmaterials%cvgui%creplay%cthumbnails
 %s%creplays%c
 %s%creplays%c%s%c%s
+%s%s%c
+%s%s*.%s
+%s%s.%s
 %s%s_%i.dem
 %s%s_part_%i.%s
 %s%s_part_%u.%s
+%s/%s
 %s/bin/linux64/%s
 %s:  handle=%i  [%i, %i]  C? %s R? %s  MaxBlock: %i
 %s: %i "%s" (len:%i)
 %s: %i bytes
 %s: %i cvars
 %s: %i cvars, "%s"="%s"
+%s: %s
 %s: %s %.1f %.1f %.1f 
 %s: (%.1f %.1f %.1f)
 %s: Downloaded %i/%i bytes\n
@@ -254,7 +268,6 @@ $X360
 %s_part_%i
 %smovie_%02i%02i%04i_%02i%02i%02i%c
 %stemp%d.tga
-&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
 &AElig;
 &Aacute;
 &Acirc;
@@ -359,6 +372,7 @@ $X360
 &yen;
 &yuml;
 '7Show Replay debug info.
+(%s)%s
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
 (null)
@@ -573,13 +587,10 @@ $X360
 <pre>
 ><a href=
 >[unknown]
-?333333
-????????????????
 ?replay_%i
 @@#Replay_DL_Err_SI_Unknown
 @Validating
 A 'changelevel' or 'map' is required - recording will
-A!;I2
 ABGR8888
 ALIGN_TYPE is wrong, please fix
 ARGB8888
@@ -611,7 +622,6 @@ BGRA5551
 BGRA8888
 BGRX5551
 BGRX8888
-BKbhTb~XBK!;
 Backing store not supported
 Backslashes not allowed!
 Bad format string in CLocalizeStringTable::ConstructString\n
@@ -639,7 +649,6 @@ Breaking '%s' in '%s'\n
 Buffer passed to JPEG library is too small
 BytesDownloaded
 BytesTotal
-C33s?
 CBaseRecordingSessionManager::Think
 CCIR601 sampling not implemented yet
 CClientRecordingSessionManager::Think
@@ -819,7 +828,6 @@ GLIBC_2.29
 GLIBC_2.3
 GLIBC_2.4
 GLIBC_2.7
-Ga=o
 GetCPUInformation
 HJob
 Hash succeeded\n
@@ -887,7 +895,6 @@ KeyValues::ParseIncludedKeys: Couldn't load included keyvalue file %s\n
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
 KeyValues::SaveToFile: couldn't open file "%s" in path "%s".\n
 KeyValuesSystem
-KwV\r
 L>Block publish failed!\n
 Last life
 Left/right offset for sentry POV screenshot
@@ -915,7 +922,6 @@ Migrate Message
 Miscellaneous marker 0x%02x, length %u
 Missing Huffman code table entry
 Must be one of the following (case-sensitive): 
-NAUU
 NET_SetConVar::ReadFromBuffer
 NET_SignonState::ReadFromBuffer
 NET_StringCmd::ReadFromBuffer
@@ -1112,7 +1118,6 @@ Too much menu data (4096 bytes max)\n
 UCS-2LE
 UCS-4LE
 UNEXPECTED_EOF
-US]CQ
 UTF-32LE
 UTF-8
 UV88
@@ -1172,7 +1177,6 @@ Writing block w/ recon index %i to session info buffer\n
 Writing temp file
 Wrong JPEG library version: library is %d, caller expects %d
 Y@\n    [%d: huff+mtf 
-YhTH
 ZLIB_1.2.0
 [/code]
 [/list]
@@ -1193,8 +1197,12 @@ ZLIB_1.2.0
 \n\tblocks:\n\n
 \n\theader:\n
 \t   index        status                        MD5               compressor    size (uncompressed)  size (compressed)\n
+\t%27s: %i\n
+\t%27s: %s\n
 \t%27s: %u bytes\n
+\t%27s: %u\n
 \t(%zu) comparing %s with %s\n
+_%i%s
 _ExitOnFatalAssert
 _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
@@ -1206,9 +1214,6 @@ _ZGVbN2vv_pow
 _ZGVbN2vv_pow@GLIBC_2.22
 _ZGVbN4vv_powf
 _ZGVbN4vv_powf@GLIBC_2.22
-_ZTVN10__cxxabiv117__class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv120__si_class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv121__vmi_class_type_infoE@CXXABI_1.3
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
 __ctype_tolower_loc
@@ -1758,7 +1763,6 @@ replaysystem.cpp
 rmdir@GLIBC_2.2.5
 root
 rt+rld
-sAmTb
 save_replay
 scale
 scandir@GLIBC_2.2.5
@@ -1902,8 +1906,11 @@ vsnprintf@GLIBC_2.2.5
 vswprintf
 vswprintf@GLIBC_2.2.5
 vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__si_class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__vmi_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info@CXXABI_1.3
 vtex_dll
 vtf.cpp
 wcscat

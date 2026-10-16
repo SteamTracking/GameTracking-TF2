@@ -1,4 +1,3 @@
-                
             %s%s
         %d batch(es):\n
         numPasses:%d\n
@@ -13,6 +12,8 @@
  clientcmd_can_execute
  failed to dlopen %s error=%s\n
  game
+ max. %f
+ min. %f
  notconnected
  notify
  replicated
@@ -68,11 +69,19 @@ $treeswayspeedlerpstart
 $treeswaystartheight
 $treeswaystartradius
 $treeswaystrength
+%%.%if%s
 %02x
+%A %b %d
 %f %f %f %f
+%i%s
 %lld
 %ls [wstring, len = %d]
+%s %d
+%s %d\n
+%s %f\n
 %s %s %s %s\n
+%s [%p]
+%s/%s
 %s/bin/linux64/%s
 &AElig;
 &Aacute;
@@ -177,6 +186,7 @@ $treeswaystrength
 &yacute;
 &yen;
 &yuml;
+(%s)%s
 ** NOTE: The real value is %.3f but the server has temporarily restricted it to %.3f **\n
 ,%03d
 -gamepadui
@@ -238,10 +248,8 @@ $treeswaystrength
 << NULL >>\n
 <img src="
 <pre>
->33s?
 ><a href=
 >DLOPEN Error:%s\n
-?333333
 Bad data found in model "%s" (bad bone weights)\n
 CCommand::Tokenize: Encountered command which overflows the argument buffer.. Clamped!\n
 CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. Skipping!\n
@@ -297,7 +305,6 @@ GLIBC_2.27
 GLIBC_2.29
 GLIBC_2.3
 GLIBC_2.7
-Ga=o
 GetCPUInformation
 HW Morphing
 Hardware morphing of decals will be busted! Too many unique bones on flexed vertices!\n
@@ -320,13 +327,11 @@ LoadFromFile
 MDLCache004
 MatSystemSurface008
 MaterialSystemHardwareConfig012
-MbP?
 Missing LODs for %s, lod index is %d.\n
 Model Verts
 Model has missing body part: %s\n
 Model textures
 MouthShader
-NAUU
 NULL
 NetworkSystemVersion001
 No such file
@@ -406,9 +411,6 @@ _ZGVbN2vv_pow
 _ZGVbN2vv_pow@GLIBC_2.22
 _ZGVbN4vv_powf
 _ZGVbN4vv_powf@GLIBC_2.22
-_ZTVN10__cxxabiv117__class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv120__si_class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv121__vmi_class_type_infoE@CXXABI_1.3
 __ColorDepthWrite000
 __ColorDepthWrite001
 __ColorDepthWrite010
@@ -616,8 +618,11 @@ vsnprintf@GLIBC_2.2.5
 vswprintf
 vswprintf@GLIBC_2.2.5
 vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__si_class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__vmi_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info@CXXABI_1.3
 wcslen
 wcslen@GLIBC_2.2.5
 wcsncat

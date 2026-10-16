@@ -5,8 +5,11 @@
   Program %d %s\n
   duration=%0.3f\n
   keyframe=%d\n
+  size=%d\n
+ %.2s:%.2s
  %02X
  %02x
+ %d%c
  (attached pic)
  (captions)
  (clean effects)
@@ -24,7 +27,6 @@
  (still image)
  (timed thumbnails)
  (visual impaired)
- 23\fq
  HD422
  NULL\n
  bandwidth="%d"
@@ -33,6 +35,7 @@
  frameRate="%d/%d"
  full %u
  inflate 1.2.11 Copyright 1995-2017 Mark Adler 
+ lang="%s"
  maxFrameRate="%d/%d"
  maxPlayoutRate="%d"
  maxWidth="%d" maxHeight="%d"
@@ -46,7 +49,6 @@
  string '%s'\n
 !(e=av_dict_get(*options, "protocol_blacklist", ((void *)0), 0)) || (uc->protocol_blacklist && !__extension__ ({ size_t __s1_len, __s2_len; (__builtin_constant_p (uc->protocol_blacklist) && __builtin_constant_p (e->value) && (__s1_len = __builtin_strlen (uc->protocol_blacklist), __s2_len = __builtin_strlen (e->value), (!((size_t)(const void *)((uc->protocol_blacklist) + 1) - (size_t)(const void *)(uc->protocol_blacklist) == 1) || __s1_len >= 4) && (!((size_t)(const void *)((e->value) + 1) - (size_t)(const void *)(e->value) == 1) || __s2_len >= 4)) ? __builtin_strcmp (uc->protocol_blacklist, e->value) : (__builtin_constant_p (uc->protocol_blacklist) && ((size_t)(const void *)((uc->protocol_blacklist) + 1) - (size_t)(const void *)(uc->protocol_blacklist) == 1) && (__s1_len = __builtin_strlen (uc->protocol_blacklist), __s1_len < 4) ? (__builtin_constant_p (e->value) && ((size_t)(const void *)((e->value) + 1) - (size_t)(const void *)(e->value) == 1) ? __builtin_strcmp (uc->protocol_blacklist, e->value) : (__extension__ ({ __const unsigned char *__s2 = (__const unsigned char *) (__const char *) (e->value); register int __result = (((__const unsigned char *) (__const char *) (uc->protocol_blacklist))[0] - __s2[0]); if (__s1_len > 0 && __result == 0) { __result = (((__const unsigned char *) (__const char *) (uc->protocol_blacklist))[1] - __s2[1]); if (__s1_len > 1 && __result == 0) { __result = (((__const unsigned char *) (__const char *) (uc->protocol_blacklist))[2] - __s2[2]); if (__s1_len > 2 && __result == 0) __result = (((__const unsigned char *) (__const char *) (uc->protocol_blacklist))[3] - __s2[3]); } } __result; }))) : (__builtin_constant_p (e->value) && ((size_t)(const void *)((e->value) + 1) - (size_t)(const void *)(e->value) == 1) && (__s2_len = __builtin_strlen (e->value), __s2_len < 4) ? (__builtin_constant_p (uc->protocol_blacklist) && ((size_t)(const void *)((uc->protocol_blacklist) + 1) - (size_t)(const void *)(uc->protocol_blacklist) == 1) ? __builtin_strcmp (uc->protocol_blacklist, e->value) : (__extension__ ({ __const unsigned char *__s1 = (__const unsigned char *) (__const char *) (uc->protocol_blacklist); register int __result = __s1[0] - ((__const unsigned char *) (__const char *) (e->value))[0]; if (__s2_len > 0 && __result == 0) { __result = (__s1[1] - ((__const unsigned char *) (__const char *) (e->value))[1]); if (__s2_len > 1 && __result == 0) { __result = (__s1[2] - ((__const unsigned char *) (__const char *) (e->value))[2]); if (__s2_len > 2 && __result == 0) __result = (__s1[3] - ((__const unsigned char *) (__const char *) (e->value))[3]); } } __result; }))) : __builtin_strcmp (uc->protocol_blacklist, e->value)))); }))
 !(e=av_dict_get(*options, "protocol_whitelist", ((void *)0), 0)) || (uc->protocol_whitelist && !__extension__ ({ size_t __s1_len, __s2_len; (__builtin_constant_p (uc->protocol_whitelist) && __builtin_constant_p (e->value) && (__s1_len = __builtin_strlen (uc->protocol_whitelist), __s2_len = __builtin_strlen (e->value), (!((size_t)(const void *)((uc->protocol_whitelist) + 1) - (size_t)(const void *)(uc->protocol_whitelist) == 1) || __s1_len >= 4) && (!((size_t)(const void *)((e->value) + 1) - (size_t)(const void *)(e->value) == 1) || __s2_len >= 4)) ? __builtin_strcmp (uc->protocol_whitelist, e->value) : (__builtin_constant_p (uc->protocol_whitelist) && ((size_t)(const void *)((uc->protocol_whitelist) + 1) - (size_t)(const void *)(uc->protocol_whitelist) == 1) && (__s1_len = __builtin_strlen (uc->protocol_whitelist), __s1_len < 4) ? (__builtin_constant_p (e->value) && ((size_t)(const void *)((e->value) + 1) - (size_t)(const void *)(e->value) == 1) ? __builtin_strcmp (uc->protocol_whitelist, e->value) : (__extension__ ({ __const unsigned char *__s2 = (__const unsigned char *) (__const char *) (e->value); register int __result = (((__const unsigned char *) (__const char *) (uc->protocol_whitelist))[0] - __s2[0]); if (__s1_len > 0 && __result == 0) { __result = (((__const unsigned char *) (__const char *) (uc->protocol_whitelist))[1] - __s2[1]); if (__s1_len > 1 && __result == 0) { __result = (((__const unsigned char *) (__const char *) (uc->protocol_whitelist))[2] - __s2[2]); if (__s1_len > 2 && __result == 0) __result = (((__const unsigned char *) (__const char *) (uc->protocol_whitelist))[3] - __s2[3]); } } __result; }))) : (__builtin_constant_p (e->value) && ((size_t)(const void *)((e->value) + 1) - (size_t)(const void *)(e->value) == 1) && (__s2_len = __builtin_strlen (e->value), __s2_len < 4) ? (__builtin_constant_p (uc->protocol_whitelist) && ((size_t)(const void *)((uc->protocol_whitelist) + 1) - (size_t)(const void *)(uc->protocol_whitelist) == 1) ? __builtin_strcmp (uc->protocol_whitelist, e->value) : (__extension__ ({ __const unsigned char *__s1 = (__const unsigned char *) (__const char *) (uc->protocol_whitelist); register int __result = __s1[0] - ((__const unsigned char *) (__const char *) (e->value))[0]; if (__s2_len > 0 && __result == 0) { __result = (__s1[1] - ((__const unsigned char *) (__const char *) (e->value))[1]); if (__s2_len > 1 && __result == 0) { __result = (__s1[2] - ((__const unsigned char *) (__const char *) (e->value))[2]); if (__s2_len > 2 && __result == 0) __result = (__s1[3] - ((__const unsigned char *) (__const char *) (e->value))[3]); } } __result; }))) : __builtin_strcmp (uc->protocol_whitelist, e->value)))); }))
-!AxU
 !blacklist || !(e=av_dict_get(*options, "protocol_blacklist", ((void *)0), 0)) || !__extension__ ({ size_t __s1_len, __s2_len; (__builtin_constant_p (blacklist) && __builtin_constant_p (e->value) && (__s1_len = __builtin_strlen (blacklist), __s2_len = __builtin_strlen (e->value), (!((size_t)(const void *)((blacklist) + 1) - (size_t)(const void *)(blacklist) == 1) || __s1_len >= 4) && (!((size_t)(const void *)((e->value) + 1) - (size_t)(const void *)(e->value) == 1) || __s2_len >= 4)) ? __builtin_strcmp (blacklist, e->value) : (__builtin_constant_p (blacklist) && ((size_t)(const void *)((blacklist) + 1) - (size_t)(const void *)(blacklist) == 1) && (__s1_len = __builtin_strlen (blacklist), __s1_len < 4) ? (__builtin_constant_p (e->value) && ((size_t)(const void *)((e->value) + 1) - (size_t)(const void *)(e->value) == 1) ? __builtin_strcmp (blacklist, e->value) : (__extension__ ({ __const unsigned char *__s2 = (__const unsigned char *) (__const char *) (e->value); register int __result = (((__const unsigned char *) (__const char *) (blacklist))[0] - __s2[0]); if (__s1_len > 0 && __result == 0) { __result = (((__const unsigned char *) (__const char *) (blacklist))[1] - __s2[1]); if (__s1_len > 1 && __result == 0) { __result = (((__const unsigned char *) (__const char *) (blacklist))[2] - __s2[2]); if (__s1_len > 2 && __result == 0) __result = (((__const unsigned char *) (__const char *) (blacklist))[3] - __s2[3]); } } __result; }))) : (__builtin_constant_p (e->value) && ((size_t)(const void *)((e->value) + 1) - (size_t)(const void *)(e->value) == 1) && (__s2_len = __builtin_strlen (e->value), __s2_len < 4) ? (__builtin_constant_p (blacklist) && ((size_t)(const void *)((blacklist) + 1) - (size_t)(const void *)(blacklist) == 1) ? __builtin_strcmp (blacklist, e->value) : (__extension__ ({ __const unsigned char *__s1 = (__const unsigned char *) (__const char *) (blacklist); register int __result = __s1[0] - ((__const unsigned char *) (__const char *) (e->value))[0]; if (__s2_len > 0 && __result == 0) { __result = (__s1[1] - ((__const unsigned char *) (__const char *) (e->value))[1]); if (__s2_len > 1 && __result == 0) { __result = (__s1[2] - ((__const unsigned char *) (__const char *) (e->value))[2]); if (__s2_len > 2 && __result == 0) __result = (__s1[3] - ((__const unsigned char *) (__const char *) (e->value))[3]); } } __result; }))) : __builtin_strcmp (blacklist, e->value)))); })
 !dst->codec_whitelist && !dst->format_whitelist && !dst->protocol_whitelist && !dst->protocol_blacklist
 !flv->keyframe_filepositions
@@ -75,15 +77,18 @@
 #EXTINF:%f,\n
 #EXTINF:%ld,\n
 #EXTM3U\n
-#bML"
 $Bandwidth
 $Number
 $RepresentationID$
 $Time
 $ext$
+%%%s
 %*X %X %X %X
 %+08.4f%+09.4f
 %.*s\n%.*s\n%.*s
+%.4s
+%.6g
+%0*d
 %0.3f
 %02d:%02d:%012.9f
 %02d:%02d:%02d%c%02d
@@ -92,10 +97,15 @@ $ext$
 %06x%s
 %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x
 %08x
+%1.0f %s
 %1.0fk %s
+%1.4f %s
+%3.2f %s
 %Y-%m-%dT%H:%M:%S
 %a, %d %b %Y %H:%M:%S %z
 %c%02d%02d
+%d %X %d \n
+%d.%dS
 %ld %ld %ld / %s %s %s target:%s limit:%ld start:%ld noc:%d\n
 %ld kb/s
 %ld%s
@@ -107,13 +117,17 @@ $ext$
 %s only supported in MP4.\n
 %s rawvideo cannot be written to mov, output file will be unreadable\n
 %s size:%d dts:%s pts:%s\n
+%s%c%s
 %s%d.%06d
+%s-%s
 %s-stream%d.%s
 %s.tmp
+%s/%s
 %s: pri %d trc %d matrix %d
 %s: sequence_number: %d, width: %u, height: %u, x_offset: %u, y_offset: %u, delay_num: %u, delay_den: %u, dispose_op: %d, blend_op: %d\n
 %sMetadata:\n
 %sSide data:\n
+%s_%d
 %smaster.m3u8
 %smedia_%d.m3u8
 %td bytes of comment header remain\n
@@ -121,7 +135,6 @@ $ext$
 (%f/%f/%f) 
 (none)
 (start&1) == 0
-*5KS
 *pkt_buffer
 +dash+delay_moov+global_sidx+skip_trailer
 +dash+delay_moov+skip_sidx+skip_trailer
@@ -141,6 +154,7 @@ $ext$
 ,NAME="subtitle_%d",DEFAULT=%s,
 ,RESOLUTION=%dx%d
 ,SUBTITLES="%s"
+-%.2s-%.2s
 --prefix=/data/dev/build_ubuntu12_64 --cc=gcc --extra-cflags='-m64 -mfpmath=sse -g -O2 -fno-strict-aliasing -ffast-math -fno-omit-frame-pointer -Wno-unused-parameter' --strip=strip --disable-linux-perf --arch=x86_64 --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avfilter --enable-avutil --enable-avresample --enable-avformat --enable-swscale --enable-parser='h264,hevc' --enable-decoder='aac,h264,hevc,gif,vorbis,mp3,flac,alac,pcm*,valve*,apng,libvpx_vp8,libvpx_vp9' --enable-encoder='h264_vaapi,hevc_vaapi' --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav,flv,apng' --enable-hwaccels --enable-vdpau --enable-vaapi --enable-libdrm --enable-muxer='flv,mp4,dash,webm' --disable-decoder='h263,mpeg1video,mpeg2video,vc1,vp8,vp9' --enable-libvpx --enable-libvorbis --enable-protocol='file,rtmp'
 .%01u.%01u%01u%01u.%02u.%02u.%02u.%01u
 .%01u.%02u%s.%02u
@@ -152,26 +166,18 @@ $ext$
 .f4v
 .flv
 .mp1
-.mp2
-.mp3
 .mp4
-/P8i
 /_definst_
 /file:
 /ondemand/
-/yQA
 00000001
 0123456789ABCDEF0123456789abcdefavformat_find_stream_info
-012v
 0x%016lX%016lX%016lX%016lX
 0x%016lX%016lX%016lX%016lX%016lX%016lX%016lX%016lX
 0x%lx
 0x00 at pos %ld (0x%lx) invalid as first byte of an EBML number\n
 1.2.11
 16-bit big-endian audio in flv is valid but most likely unplayable (hardware dependent); use s16le\n
-1A26b
-1wsHp
-2 F!\#J&U(8*W+A-;0O1]3Y7_=LCSMP
 2006/04/01 11:11:11
 24BG\r
 2Vu1\r
@@ -188,13 +194,9 @@ $ext$
 3gp4
 3gp6
 4XMV
-52F*
 5ALBUMARTIST
 77214d4b196a87cd520045fd20a51d67
-7~8A
 8BPS1
-9a&g
-:Feje$
 <%s systemBitrate="%ld">\n
 </switch>\n
 <?xml version="1.0" encoding="utf-8"?>\n
@@ -214,6 +216,7 @@ $ext$
 <param name="%s" value="%s" valuetype="data"/>\n
 <smil xmlns="http://www.w3.org/2001/SMIL20/Language">\n
 <switch>\n
+>%08x 
 ?authmod=%s&user=%s
 ?authmod=%s&user=%s&challenge=%s&response=%s
 ?authmod=%s&user=%s&nonce=%s&cnonce=%s&nc=%s&response=%s
@@ -224,12 +227,10 @@ $ext$
 ?reason=nosuchuser
 @aac_adtstoasc
 @genre
-@j@ffffff
 @payload_type
 @setDataFrame
 A Cappella
 A bright coloured fish
-A(L4
 AAC sequence header: %02x %02x.\n
 AACH
 AACL
@@ -260,7 +261,6 @@ ASV1
 ASV2#
 AUR2
 AURA|
-AV01
 AV1x
 AV1x\r
 AV32\r
@@ -274,7 +274,6 @@ AVIndex stream %d, sample %d, offset %lx, dts %ld, size %u, distance %d, keyfram
 AVIndex stream %d, sample %u, offset %lx, dts %ld, size %u, distance %u, keyframe %d\n
 AVRn
 AVS2X
-AVUI
 AVd1
 AVdh
 AVdnc
@@ -282,7 +281,6 @@ AVdv
 AVin
 AVj2Y
 AVmp
-AVrp
 AVup
 AVupe
 AYUV
@@ -388,14 +386,11 @@ Breakbeat
 BritPop
 Broken file, %skeyframe not correctly marked.\n
 Broken file, trak/mdat not at top-level\n
-C-Yn
-C210
 CAVS
 CDV5
 CDVH
 CENC-AVC: nal size %d remaining %d\n
 CENC-AVC: remaining size %d smaller than nal length+type %d\n
-CFHD
 CHAP
 CHAPTER
 CHQX
@@ -536,7 +531,6 @@ DVR
 DVX3
 DX50\f
 DXD3
-DXDI
 DXGM\f
 DYM4\f
 D_WEBVTT/CAPTIONS
@@ -671,7 +665,6 @@ FLV4
 FMLE/3.0 (compatible; %s)
 FMP4\f
 FMS/3,0,1,123
-FMVC
 FPS1
 FRWU
 FSV1
@@ -788,8 +781,6 @@ Gothic
 Gothic Rock
 Graphic Control Extension block's size less than 4.\n
 Grunge
-H$6t
-H*0"ZOW
 H.263 macroblock info
 H261
 H263
@@ -892,7 +883,6 @@ IPLT
 IPRD
 IPRT
 ISBJ
-ISCC
 ISFT
 ISHP
 ISMP
@@ -931,7 +921,6 @@ Ignoring saio box with non-zero aux_info_type_parameter\n
 Ignoring saiz box with non-zero aux_info_type\n
 Ignoring saiz box with non-zero aux_info_type_parameter\n
 Ignoring unsupported var %s\n
-IiGM>nw
 Illbient
 Illustration
 Impossible to open the '%s' protocol for reading\n
@@ -1063,17 +1052,7 @@ Lounge
 Low Latency mode enabled without Producer Reference Time element option! Resulting manifest may not be complaint\n
 Lucida Grande
 Lyricist/text writer
-M0G0
-M0R0
-M0RA
-M0RG
-M0Y2
-M0Y4
-M101
-M102
 M263
-M2RA
-M2RG
 M4A 
 M4CC\f
 M4S2\f
@@ -1084,21 +1063,11 @@ M702
 M703
 M704
 M705
-M8G0
-M8MF
-M8RA
-M8RG
-M8Y0
-M8Y2
-M8Y4
-M8YA
 MAC3\nP
 MAC6*P
-MAGY
 MAIN
 MEGA
 METADATA_BLOCK_PICTURE
-MGiI
 MJ2CX
 MJLS
 MJLS\v
@@ -1152,7 +1121,6 @@ Maximum fragment size
 Maximum number of packets to probe a codec
 Maximum segment size for outgoing TCP packets
 Maximum timeout (in seconds) to wait for incoming connections. -1 is infinite. Implies -rtmp_listen 1
-Mb@C
 MbP?
 Mbp?Failed to set close on exec\n
 Media (e.g. label side of CD)
@@ -1179,9 +1147,7 @@ NAL_unit_type[%u]:                    %u\n
 NAME
 NELL
 NGINX RTMP
-NJ2"v
 NO16\r
-NONE
 NTP time format roll over detected\n
 NULL
 NV12\r
@@ -1230,10 +1196,8 @@ Nu-Breakz
 Number of lookahead entries for ISM files
 Number of packets flushed in the same request (RTMPT only).
 Number of streams exceeds max_streams parameter (%d), see the documentation if you wish to increase it\n
-O*9y]
 OUTdelayed:%d/%d pts:%s, dts:%s cur_dts:%s st:%d (%d)\n
 OVP80
-OZw3(?
 Offset DTS by %ld to make first pts zero.\n
 OggS
 Oldies
@@ -1284,7 +1248,6 @@ Packets poorly interleaved, failed to avoid negative timestamp %s in stream %d.\
 Page at %ld is missing granule\n
 Parse error, descriptor string should be a self-closing xml tag\n
 Pause at timestamp %d\n
-Pe6^
 Peer bandwidth packet is less than 4 bytes long (%d)\n
 Planar Y'CbCr 8-bit 4:2:0
 Podcast
@@ -1328,14 +1291,10 @@ QDMC#P
 QIVG
 QMP4\f
 QPEG<
-Qclp
-Qclq
 QkBk\r
-Qkkbal
 QuickTime / MOV
 R10g
 R10k
-R1h58
 R411
 R420\r
 RASC)
@@ -1389,19 +1348,9 @@ Rhythmic Soul
 Rock & Roll
 Run a second pass to put the index (moov atom) at the beginning of the file
 S263V
-SCPR
 SEDG\f
 SHA256 hash of the decompressed SWF file (32 bytes).
-SHQ0
-SHQ1
-SHQ2
-SHQ3
-SHQ4
-SHQ5
-SHQ7
-SHQ9
 SIPP\f
-SKyu
 SL25
 SLDV
 SLMJ
@@ -1413,7 +1362,6 @@ SN40\f
 SNOW"
 SP54{
 SPV1
-SPXN
 SRGC$
 STCO outside TRAK\n
 STREAMINFO must be first FLACMetadataBlock\n
@@ -1423,7 +1371,6 @@ STSZ sample size %d invalid (too large), ignoring\n
 STSZ sample size %d invalid (too small), ignoring\n
 SUDS
 SVQ1
-SVQ3
 SVQ3\f
 S_ASS
 S_DVBSUB
@@ -1476,14 +1423,6 @@ Setting default whitelist '%s'\n
 Shifting DTS by %d because of negative CTTS.\n
 Shoegaze
 Showtunes
-Shr0
-Shr1
-Shr2
-Shr3
-Shr4
-Shr5
-Shr6
-Shr7
 Signal that the next fragment is discontinuous from earlier ones
 Signature mismatch\n
 Size of the decompressed SWF file, required for SWFVerification.
@@ -1556,7 +1495,6 @@ TDSC
 TENC
 TIT2
 TLAN
-TM20
 TPE1
 TPE2
 TPE3
@@ -1619,7 +1557,6 @@ Trop Rock
 Truncating packet of size %d to %ld\n
 Type answer %d\n
 U263
-UCOD
 UDTA parsing failed retrying raw\n
 ULDX\f
 ULH0
@@ -1643,6 +1580,7 @@ UQRA
 UQRG
 UQY0
 UQY2
+URI="%s"\n
 URL of the SWF player. By default no value will be sent
 URL of the page that will return the UTC timestamp in ISO format
 URL of the target stream. Defaults to proto://host[:port]/app.
@@ -1748,8 +1686,6 @@ VDTZ\r
 VIDM\f
 VIXL<
 VMnc]
-VNna
-VNo7
 VP30-
 VP31
 VP31*
@@ -1795,7 +1731,6 @@ V_UNCOMPRESSED
 V_VP8
 V_VP9
 Variable %s has NULL value\n
-Vc0a
 Version %d
 Version of the Flash plugin used to run the SWF player.
 Video codec (%x)
@@ -1849,17 +1784,14 @@ XDCAM
 XMPG
 XVID\f
 XVIX\f
-XsBI
 Xxanq
 Y216
 Y411\r
 Y41B\r
-Y41P
 Y41P2
 Y422\r
 Y42B\r
 Y800\r
-YLC0
 YUNV\r
 YUV8J
 YUV9\r
@@ -1874,24 +1806,21 @@ YVYU\r
 You requested a copy of the original timecode track so timecode metadata are now ignored\n
 ZECO
 ZJPG
-ZLIB\f
 ZMBVU
 ZMP4\f
 Zero bytes per frame, but %d samples per frame
-Zjz\v
 ZyGo
 [%zu, %zu, %zu, %zu] 
+[0x%x]
 [aax] activation_bytes option is missing!\n
 [aax] activation_bytes value needs to be 4 bytes!\n
 [aax] audible_fixed_key value needs to be 16 bytes!\n
 [aax] error in drm blob decryption!\n
 [aax] file checksum == 
 [aax] mismatch in checksums!\n
-[h1R
+[pad %u] 
 \fencd
 \n%s  %-16s: 
-\r\r\r\r\v\v\v\v\v\v\v\v\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
-\rmj>zjZ
 \t</Period>\n
 \t</ProgramInformation>\n
 \t</ServiceDescription>\n
@@ -1920,7 +1849,6 @@ ZyGo
 \t\t\t\t<Resync dT="%ld" type="1"/>\n
 \t\t\t\t<SegmentList timescale="%d" duration="%ld" startNumber="%d">\n
 \t\t\t\t<SegmentTemplate timescale="%d" 
-\t\t\t\t\n\n\n\n\v\v\v\v\f\f\f\f\r\r\r\r
 \t\t\t\t\t</SegmentTimeline>\n
 \t\t\t\t\t<Initialization range="%ld-%ld" />\n
 \t\t\t\t\t<Initialization sourceURL="%s" />\n
@@ -1928,7 +1856,6 @@ ZyGo
 \t\t\t\t\t<SegmentURL media="%s" />\n
 \t\t\t\t\t<SegmentURL mediaRange="%ld-%ld" 
 \t\t\t\t\t<UTCTiming schemeIdUri="urn:mpeg:dash:utc:http-xsdate:2014" value="%s"/>\n
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
 \tavailabilityStartTime="%s"\n
 \tmaxSegmentDuration="
 \tmediaPresentationDuration="
@@ -1939,7 +1866,6 @@ ZyGo
 \ttimeShiftBufferDepth="
 \ttype="%s"\n
 \x%02x
-^oEZ_
 _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
 _Jv_RegisterClasses
@@ -1966,7 +1892,6 @@ aac_seq_header_detect
 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+-.
 abort
 abort decoding on minor error detection
-ac-3
 ac-3(P
 access
 account_id
@@ -2485,7 +2410,6 @@ buf_size >= 0
 buffer error
 bxbg\r
 bxrg\r
-bxy2
 bxyv\r
 bytes <= 8
 bytes >= needed_bytes
@@ -2560,7 +2484,6 @@ ctts_sample
 ctype=%s\n
 cvid0
 cvid3
-dQy/
 dash muxer
 dash_segment_type
 dash_track_number
@@ -2621,10 +2544,6 @@ drop a frame at curr_cts: %ld @ %ld\n
 ds64
 dscp
 dts shift %d\n
-dtsc
-dtse
-dtsh
-dtsl
 dump_separator
 duration="%ld" 
 duration=%ld time=%ld rate=%f\n
@@ -2639,7 +2558,6 @@ dvbsub
 dvbtxt
 dvc 
 dvcC
-dvca
 dvcp
 dvcs
 dvh1
@@ -2660,7 +2578,6 @@ dvvC
 dynamic
 eac3
 earth
-ec-3
 edit_date
 effects
 emergency
@@ -2690,7 +2607,6 @@ error parsing VorbisComment metadata\n
 error reading header\n
 error unaligned chunk\n
 esds object type id 0x%02x\n
-ewh/?y
 experimental
 explode
 export_all
@@ -2703,7 +2619,6 @@ f3ff33f3
 fLaC
 fLaC,P
 fLaC<P
-fP~V
 f_err_detect
 f_strict
 failed to avoid negative pts %s in stream %d.\nTry -avoid_negative_ts 1 as a possible workaround.\n
@@ -2802,7 +2717,6 @@ framerate
 free
 freeaddrinfo
 from
-fu`z
 gai_strerror
 gamma value %g\n
 gamma value for gama atom
@@ -2829,12 +2743,10 @@ global_sidx
 gmtime_r
 gnre
 gpmd
-gqr<
 grouping
 h263
 h264
 h264_mode0
-hPU3
 handler_name
 hasAudio
 hasCuePoints
@@ -2869,9 +2781,7 @@ https
 https protocol not found, recompile FFmpeg with openssl, gnutls or securetransport enabled.\n
 https:
 hvc1
-i91k
 iTunSMPB
-i]Wb
 icod
 id3v2 ver:%d flags:%02X len:%d\n
 id3v2_priv.%s
@@ -2899,7 +2809,6 @@ ignoring wrong sample_count %ld\n
 ilbc\tP
 im24
 im32
-ima4
 image/bmp
 image/gif
 image/jpeg
@@ -2975,8 +2884,6 @@ keyframes have been parsed\n
 keyw
 keywords
 kuxdec
-l6qnk
-lDa>
 language
 lastkeyframelocation
 lastkeyframetimestamp
@@ -3121,7 +3028,6 @@ mkdir
 mktime
 mkv,mk3d,mka,mks
 mlpa<P
-mlpa\fP
 model
 mono
 moof offset %lx\n
@@ -3139,7 +3045,6 @@ movflags
 mp1v
 mp2,mp3,m2a,mpa
 mp2vX
-mp3 
 mp4 muxer
 mp4a
 mp4a config channels %d obj %d ext obj %d sample rate %d ext sample rate %d\n
@@ -3251,6 +3156,7 @@ output_ts_offset
 overread end of atom '%.4s' by %ld bytes\n
 override User-Agent field in HTTP header
 packetsize
+pad %d %d\n
 pageUrl
 palette
 palette:
@@ -3389,7 +3295,6 @@ rtmpts
 rtpflags
 rtphint
 rtpo
-ru&o
 rv64
 rw_timeout
 s->buf_ptr < s->buf_end
@@ -3407,8 +3312,6 @@ sample rate not set\n
 sample_count=%d, sample_duration=%d\n
 sample_rate %u, 
 sample_size = %u sample_count = %u\n
-samr
-sawb
 sbtl
 sc->listen
 sc->stsc_data[i+1].first >= 2
@@ -3448,7 +3351,6 @@ setsockopt(SO_REUSEADDR) failed\n
 setsockopt(SO_SNDBUF)
 setsockopt(TCP_MAXSEG)
 setsockopt(TCP_NODELAY)
-sevc
 sgi 
 shift timestamps so they are non negative
 shift timestamps so they start at 0
@@ -3491,8 +3393,6 @@ specify how many microseconds are analyzed to probe the input
 speex packet too small\n
 spex#P
 spherical: 
-sqcp
-ssmv\fP
 st->index_entries
 st->internal->avctx->ticks_per_frame
 st->request_probe <= 0
@@ -3639,7 +3539,6 @@ tven
 tvnn
 tvsh
 twos
-tx3g
 type %d, len %d\n
 type:%d, size:%d, last:%d, dts:%ld pos:%ld\n
 type:'%s' parent:'%s' sz: %ld %ld %ld\n
@@ -3690,15 +3589,12 @@ using cached pos_min=0x%lx dts_min=%s\n
 utc_timing_url
 uyv1\r
 v210
-v308
 v408
 v410
-vQO+t
 vbv_delay: %lu
 vbv_delay: N/A
 vc-1W
 vc-1t
-vdva
 verify embedded CRCs
 version =%d, isom =%d\n
 version: %d.%d, profile: %d, level: %d, rpu flag: %d, el flag: %d, bl flag: %d, compatibility id: %d
@@ -3720,12 +3616,8 @@ voice over
 volume %s, len %d\n
 vorbis
 vp08
-vp09
 vp09.%02d.%02d.%02d
 vp9_superframe
-w+OQvr
-w3Xc
-wXR\r
 wall-clock time when stream begins (PTS==0)
 wallclock
 warning
@@ -3747,7 +3639,6 @@ wide
 width %u height %u
 window acknowledgement size
 wma 
-wn>Jj
 write a CRC32 element inside every Level 1 element
 write zero-length name string in hdlr atoms within mdia and minf atoms
 write_colr
@@ -3760,7 +3651,6 @@ writing
 writing gama value %d\n
 wrong chunk count %u\n
 wrong sample count\n
-wwwUUUDDD"""
 x264
 xalg
 xd51
@@ -3792,11 +3682,9 @@ xdve
 xdvf
 xface
 xtor
-y9*O
 yrrc
 yuv10
 yuv2\r
 yuv4
 yuvs\r
-{kHw
 |RtmpSampleAccess

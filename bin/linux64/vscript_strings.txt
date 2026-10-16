@@ -7,17 +7,26 @@
  clientcmd_can_execute
  failed to dlopen %s error=%s\n
  game
+ max. %f
+ min. %f
  notconnected
  notify
  replicated
  server_can_execute
  singleplayer
 "%s" = "%s"
+%%.%if%s
 %.14g
+%A %b %d
 %f %f %f %f
+%i%s
 %lld
+%s %d\n
+%s %f\n
 %s %s %s %s\n
+%s [%lld]\n
 %s line = (%d) column = (%d) : error %s\n
+%s/%s
 %s/bin/linux64/%s
 &AElig;
 &Aacute;
@@ -127,7 +136,9 @@
 'base' cannot be modified
 'break' has to be in a loop block
 'continue' has to be in a loop block
+(%s %p)
 (%s : 0x%p)
+(%s)%s
 (instance : 0x%p)
 (qangle : (%f, %f, %f)
 (quaternion : (%f, %f, %f, %f)
@@ -199,7 +210,6 @@
 <unnamed>
 ><a href=
 >DLOPEN Error:%s\n
-?333333
 ?null vector
 @INDEX@
 @ITERATOR@
@@ -210,7 +220,6 @@ Accessed null instance
 BOOL
 Bad key string passed to a ISquirrelMetamethodDelegate _get()
 Bad user pointer passed to a ISquirrelMetamethodDelegate _get()
-C33s?
 CCommand::Tokenize: Encountered command which overflows the argument buffer.. Clamped!\n
 CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. Skipping!\n
 CLASS
@@ -260,7 +269,6 @@ GLIBC_2.22
 GLIBC_2.27
 GLIBC_2.29
 GLIBC_2.3
-Ga=o
 Generate a random floating point number within a range, inclusive
 Generate a random integer within a range, inclusive
 GetCPUInformation
@@ -286,7 +294,6 @@ Length2DSqr
 LengthSqr
 MakeNamespace
 NATIVECLOSURE
-NAUU
 NULL
 Namespace table '%s' continuation must be a table\n
 Native stack overflow
@@ -354,6 +361,7 @@ Warning
 [%s] GENERATOR\n
 [%s] INSTANCE\n
 [%s] NATIVECLOSURE\n
+[%s] NULL\n
 [%s] TABLE\n
 [%s] THREAD\n
 [%s] USERDATA\n
@@ -375,6 +383,7 @@ Warning
 \tConnected!\n
 \tfailed to connect.\n
 \x%02x
+_%x%llx_%s
 _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
 _ZGVbN2v_sin
@@ -383,19 +392,6 @@ _ZGVbN2vv_pow
 _ZGVbN2vv_pow@GLIBC_2.22
 _ZGVbN4vv_powf
 _ZGVbN4vv_powf@GLIBC_2.22
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEmmPKcm@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE14_M_replace_auxEmmmc@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_appendEPKcm@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_assignERKS4_@GLIBCXX_3.4.21
-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm@GLIBCXX_3.4.21
-_ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base@GLIBCXX_3.4
-_ZSt18_Rb_tree_incrementPKSt18_Rb_tree_node_base@GLIBCXX_3.4
-_ZSt20__throw_length_errorPKc@GLIBCXX_3.4
-_ZSt28_Rb_tree_rebalance_for_erasePSt18_Rb_tree_node_baseRS_@GLIBCXX_3.4
-_ZSt29_Rb_tree_insert_and_rebalancebPSt18_Rb_tree_node_baseS0_RS_@GLIBCXX_3.4
-_ZTVN10__cxxabiv117__class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv120__si_class_type_infoE@CXXABI_1.3
-_ZTVN10__cxxabiv121__vmi_class_type_infoE@CXXABI_1.3
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
 __ctype_tolower_loc
@@ -899,15 +895,25 @@ stack overflow, cannot resize stack while in a metamethod
 startswith
 static
 std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
+std::_Rb_tree_decrement(std::_Rb_tree_node_base*)@GLIBCXX_3.4
 std::_Rb_tree_increment(std::_Rb_tree_node_base const*)
+std::_Rb_tree_increment(std::_Rb_tree_node_base const*)@GLIBCXX_3.4
 std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)@GLIBCXX_3.4
 std::_Rb_tree_rebalance_for_erase(std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+std::_Rb_tree_rebalance_for_erase(std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)@GLIBCXX_3.4
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_append(char const*, unsigned long)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_append(char const*, unsigned long)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace(unsigned long, unsigned long, char const*, unsigned long)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace(unsigned long, unsigned long, char const*, unsigned long)@GLIBCXX_3.4.21
 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace_aux(unsigned long, unsigned long, unsigned long, char)
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace_aux(unsigned long, unsigned long, unsigned long, char)@GLIBCXX_3.4.21
 std::__throw_length_error(char const*)
+std::__throw_length_error(char const*)@GLIBCXX_3.4
 std_blob
 std_stream
 steam://openurl/
@@ -1023,8 +1029,11 @@ vsnprintf@GLIBC_2.2.5
 vswprintf
 vswprintf@GLIBC_2.2.5
 vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__si_class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__vmi_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info@CXXABI_1.3
 wakeup
 wakeupthrow
 watches
@@ -1050,3 +1059,4 @@ wrong parameter
 wrong type
 wrong type(expected class or instance)
 yield
+{%lld}
