@@ -114253,14 +114253,6 @@
 			{
 				"spy"		"1"
 			}
-			"attributes"
-			{
-				"attach particle effect static"
-				{
-					"attribute_class"		"set_attached_particle_static"
-					"value"		"28"
-				}
-			}
 			"visuals"
 			{
 				"styles"
@@ -114278,7 +114270,6 @@
 						"skin_red"		"0"
 						"skin_blu"		"1"
 						"name"		"#TF_style1"
-						"use_smoke_particle_effect"		"0"
 					}
 					"2"
 					{
@@ -114286,7 +114277,6 @@
 						"skin_red"		"0"
 						"skin_blu"		"1"
 						"name"		"#TF_style2"
-						"use_smoke_particle_effect"		"0"
 					}
 				}
 			}
