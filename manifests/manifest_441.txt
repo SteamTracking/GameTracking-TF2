@@ -1,10 +1,10 @@
 Content Manifest for Depot 441 
 
-Manifest ID / date     : 4227915440761813811 / 10/29/2026 19:26:23 
+Manifest ID / date     : 1451099152040369643 / 10/30/2026 21:10:31 
 Total number of files  : 1204 
-Total number of chunks : 32983 
-Total bytes on disk    : 32677629592 
-Total bytes compressed : 16865013280 
+Total number of chunks : 32985 
+Total bytes on disk    : 32679290540 
+Total bytes compressed : 16864821072 
 
 
           Size Chunks File SHA                                 Flags Name
@@ -694,7 +694,7 @@ Total bytes compressed : 16865013280
       22116510     22 490347e79766876608cb9b7053c743cc0585dab0     0 tf/maps/cp_sunshine_event.bsp
       23923129     24 48cc329af22b961ae184d8a7bb282d08e4fdfffd     0 tf/maps/cp_vanguard.bsp
       25758354     25 1ad8887f7e774684420202e9653f340cd8173db2     0 tf/maps/cp_well.bsp
-      29043683     29 6c0b2fdd610fc65893e7f5c4f24e36de46944fb9     0 tf/maps/cp_wildcat_event.bsp
+      28834460     29 3a5bb416ab35ad50ffbaf2918c8e6643fb37e7dd     0 tf/maps/cp_wildcat_event.bsp
       45109920     44 29c8fbcdeecd4d63c3805342c9b375197ef60579     0 tf/maps/cp_yukon_final.bsp
       22899183     22 52e53af929f9a234537c8c47a8ad1ff31186efa7     0 tf/maps/ctf_2fort.bsp
       67736140     65 28f2cdc68d21a1b44c76d959950c11d3ba2e42fb     0 tf/maps/ctf_2fort_invasion.bsp
@@ -940,10 +940,10 @@ Total bytes compressed : 16865013280
        3124036      4 b2baea0800862130a5bad92749c889c192fc295f     0 tf/resource/tf_czech.txt
        3202402      4 8b0dd3dcb6b55061952e8883b628fa0e3aa9914d     0 tf/resource/tf_danish.txt
        3228756      4 5a953613b30c3a5a16b18292f49ebaf49152e7de     0 tf/resource/tf_dutch.txt
-       3120620      4 bbaf4a4a40ef5f6eb2c63e4286fe4456965d2617     0 tf/resource/tf_english.txt
+       3121910      4 3b101871ad918cb1f34513d379380c0c8404a91d     0 tf/resource/tf_english.txt
        3176166      4 a67a4d46ec0d77c27ff31053d3543fee9f11af36     0 tf/resource/tf_finnish.txt
        3454874      4 8fc6c9b9c4eac631abe08bc23c27a2a159abb11a     0 tf/resource/tf_french.txt
-       3445362      4 69860c3a76280d86a66494d9d805156026d408b5     0 tf/resource/tf_german.txt
+       3445358      4 ae70d8fd17148f27c52dd1c6c54172a2698a8215     0 tf/resource/tf_german.txt
        3373300      4 f56d01fd5b8b6fb8064cdd956332ccc828bd9c50     0 tf/resource/tf_greek.txt
        3227832      4 cb925cd46bf66412cbec7ff5459dfaf3ccc86185     0 tf/resource/tf_hungarian.txt
        3461780      4 db0e95fff4749f90b7cba0deaa7cf90eebddadd0     0 tf/resource/tf_italian.txt
@@ -953,7 +953,7 @@ Total bytes compressed : 16865013280
        3405982      4 ecc10560432a6b21c9a59521ee4379afa827de97     0 tf/resource/tf_latam.txt
        3185204      4 4a6307ee6de4ea5559f5967247b683e03370e8db     0 tf/resource/tf_norwegian.txt
        2097132      2 a63e1d0dd1c4985d845859dcf19e4c598277a868     0 tf/resource/tf_pirate.txt
-       3283232      4 38f590559e5c4e46d781dd175d89eed8af3ee987     0 tf/resource/tf_polish.txt
+       3283222      4 357e2ed185e2c93c310fa11eaef63e897e22a480     0 tf/resource/tf_polish.txt
        3452900      4 2ef1bbe670fb21d9b97ffa9525d45ed79831f015     0 tf/resource/tf_portuguese.txt
         149414      1 ff91c281c9e11a9367e63f74bff7f807caa3bb62     0 tf/resource/tf_proto_obj_defs_brazilian.txt
         151336      1 ba878772f26a5bc1b610363c02a3579641bb560e     0 tf/resource/tf_proto_obj_defs_bulgarian.txt
@@ -1021,12 +1021,12 @@ Total bytes compressed : 16865013280
        3240636      4 0eb5a820a44978961531c1fd7ba22ecd18548707     0 tf/resource/tf_ukrainian.txt
              0      0 0000000000000000000000000000000000000000    40 tf/scripts
              0      0 0000000000000000000000000000000000000000    40 tf/scripts/items
-       8245476     10 d848a4a308f1ae990f20eda2ac650b66638d3b26     0 tf/scripts/items/items_game.txt
-           128      1 705e35869deb6e288bac5bf24abf1ab1bbf7470a     0 tf/scripts/items/items_game.txt.sig
+       8251383     10 12f71a89032a7c6243e1603ef85dd130a5bd93eb     0 tf/scripts/items/items_game.txt
+           128      1 6fbff8a58000624bf13bd83223990bc60766ec90     0 tf/scripts/items/items_game.txt.sig
              0      0 0000000000000000000000000000000000000000    40 tf/scripts/protodefs
        9830030     12 c1e6da656014c8f812bbaeed03d23390ba617388     0 tf/scripts/protodefs/proto_defs.vpd
            128      1 b2d13012fa04f38a1e1b98cdb1a9be81a9c59ccd     0 tf/scripts/protodefs/proto_defs.vpd.sig
-           118      1 8930fe22dfcf0972b68118ec872c2f60e2e6f996     0 tf/steam.inf
+           118      1 2f8ba95a9272083250b94d2d179ae751fdbddd24     0 tf/steam.inf
      106800068    121 3f23a3aa21657addd8867d11e29e0092997e01ee     0 tf/tf2_misc_000.vpk
      107163006    113 aa3117ea852c067aa51f8df93c344cac8eb33c3f     0 tf/tf2_misc_001.vpk
      114469772    120 f41e579246aee1c6e2fa29c24c3764297a875647     0 tf/tf2_misc_002.vpk
@@ -1045,7 +1045,7 @@ Total bytes compressed : 16865013280
      120826215    127 57058a608912e1625bdae589e3ab7064519cdbf7     0 tf/tf2_misc_015.vpk
      113465480    124 30bf1d5a582f69eb3f0e497ee895af6b327c2fd4     0 tf/tf2_misc_016.vpk
      113409982    124 0ab5bcb318f6c57d86594f7c29f084572ea1339a     0 tf/tf2_misc_017.vpk
-     120277750    132 83b5547281bf3e8f16c80adf058ea2720f63c4de     0 tf/tf2_misc_018.vpk
+     120279662    132 bf39202d94f85f391b68635a9094d07bc4f5b5ea     0 tf/tf2_misc_018.vpk
      114457957    127 0af14975e55f11a31417de5f0f3a6643742c5328     0 tf/tf2_misc_019.vpk
      114380382    116 2d16827baa615d07fe57903a8798efb0bd2fd68a     0 tf/tf2_misc_020.vpk
      117134974    131 a196799f5b08db47d41eb865e646b4ea9fa8b66c     0 tf/tf2_misc_021.vpk
@@ -1055,7 +1055,7 @@ Total bytes compressed : 16865013280
      119929799    129 37b1f3f756f42f7dcfc0edbd6d025ced397d7cb4     0 tf/tf2_misc_025.vpk
      114844421    120 6a9220469a1840d0001c22f51895f4f5bf210c1b     0 tf/tf2_misc_026.vpk
      114832850    128 7ae26745a791107fadb9eb03ee0a25e26fd4166d     0 tf/tf2_misc_027.vpk
-       5413991      6 8e0dac5ea31fd04920a4a1510326be303591f96f     0 tf/tf2_misc_dir.vpk
+       5414781      6 86104287c96f9b4538700db0b217ca45770d6139     0 tf/tf2_misc_dir.vpk
       47873247     52 72a52596061ccf2f0724453c298c4a7d0320af05     0 tf/tf2_sound_misc.vpk.sound.cache
      106136036    105 b62829c0a0aab66087fbee9a047800e996651645     0 tf/tf2_sound_misc_000.vpk
      111828380    108 93ae1db44e9e4bca921c51ef53e7fef65479398d     0 tf/tf2_sound_misc_001.vpk
@@ -1160,7 +1160,7 @@ Total bytes compressed : 16865013280
      115446800    114 b7f8a10aff963ae6f011502e0af0dce27dade27b     0 tf/tf2_textures_082.vpk
      128250544    128 3b2557702ced64efe08fa8e70b4e825f91ec71d2     0 tf/tf2_textures_083.vpk
      119392908    125 bd9bc1b21d30a8a99cd72e12fbcdec716ca1aa99     0 tf/tf2_textures_084.vpk
-     132374412    133 cd24ca3606d48be0d9e2ad7ff2e4abcb6bbd358b     0 tf/tf2_textures_085.vpk
+     134233852    135 8dd0929663e99f3405ecf1418175e5825b73379e     0 tf/tf2_textures_085.vpk
      127478448    128 48c01d568f4be3d1380f0c87d6d707ec6220670e     0 tf/tf2_textures_086.vpk
      118535304    115 215c666fd9fe30f12ab80eb5b44099660686dc88     0 tf/tf2_textures_087.vpk
      109338368    111 f82768f1ea6a638edf8712c27a701cf15d61e7d5     0 tf/tf2_textures_088.vpk
@@ -1183,7 +1183,7 @@ Total bytes compressed : 16865013280
      142815892    147 b32cb1997623722529f14e05240de7f2d6023f44     0 tf/tf2_textures_105.vpk
      121694056    118 bf6f96efbc82b487920a8313d83fea90c41a0a8d     0 tf/tf2_textures_106.vpk
      143587812    143 635ea745d186b5f50cbf245b71a34c0cf7936dea     0 tf/tf2_textures_107.vpk
-       1976453      2 db533394f22421bb6b274e6cee9f58072fa5c009     0 tf/tf2_textures_dir.vpk
+       1977299      2 f88f85214a43b89c9222689fbe605296473d79f3     0 tf/tf2_textures_dir.vpk
              0      0 0000000000000000000000000000000000000000    40 tf/workshop
              0      0 0000000000000000000000000000000000000000    40 tf/workshop/content
              0      0 0000000000000000000000000000000000000000    40 tf/workshop/content/models

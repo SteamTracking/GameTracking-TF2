@@ -217274,6 +217274,187 @@
 			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant"
 			"model_player"		"models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl"
 		}
+		"19250"
+		{		
+			"name"				"Operation Mooncrash 1st Place Medal"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_Painters_First"
+			"item_description"	"#TF_TournamentMedal_Painters_Mooncrash_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/painters_workshop_mooncrash/painters_workshop_mooncrash_gold"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/painters_workshop_gold/painters_workshop_gold_%s.mdl"
+			}
+			"attributes"
+			{
+				"set item tint RGB"
+				{
+					"attribute_class"	"set_item_tint_rgb"
+					"value"				"7497651" 
+				}
+			}
+		}
+		"19251"
+		{		
+			"name"				"Operation Mooncrash 2nd Place Medal"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_Painters_Second"
+			"item_description"	"#TF_TournamentMedal_Painters_Mooncrash_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/painters_workshop_mooncrash/painters_workshop_mooncrash_silver"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/painters_workshop_silver/painters_workshop_silver_%s.mdl"
+			}
+			"attributes"
+			{
+				"set item tint RGB"
+				{
+					"attribute_class"	"set_item_tint_rgb"
+					"value"				"7497651" 
+				}
+			}
+		}
+		"19252"
+		{		
+			"name"				"Operation Mooncrash 3rd Place Medal"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_Painters_Third"
+			"item_description"	"#TF_TournamentMedal_Painters_Mooncrash_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/painters_workshop_mooncrash/painters_workshop_mooncrash_bronze"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/painters_workshop_bronze/painters_workshop_bronze_%s.mdl"
+			}
+			"attributes"
+			{
+				"set item tint RGB"
+				{
+					"attribute_class"	"set_item_tint_rgb"
+					"value"				"7497651" 
+				}
+			}
+		}
+		"19253"
+		{		
+			"name"				"Operation Mooncrash Winner Medal"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_Painters_Winner"
+			"item_description"	"#TF_TournamentMedal_Painters_Mooncrash_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/painters_workshop_mooncrash/painters_workshop_mooncrash_winner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/painters_workshop_supporter/painters_workshop_supporter_%s.mdl"
+			}
+			"attributes"
+			{
+				"set item tint RGB"
+				{
+					"attribute_class"	"set_item_tint_rgb"
+					"value"				"7497651" 
+				}
+			}
+		}
+		"19254"
+		{		
+			"name"				"Operation Mooncrash Runner-up Medal"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_Painters_Runner"
+			"item_description"	"#TF_TournamentMedal_Painters_Mooncrash_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/painters_workshop_mooncrash/painters_workshop_mooncrash_runner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/painters_workshop_supporter/painters_workshop_supporter_%s.mdl"
+			}
+			"attributes"
+			{
+				"set item tint RGB"
+				{
+					"attribute_class"	"set_item_tint_rgb"
+					"value"				"12357295" 
+				}
+			}
+		}
+		"19255"
+		{		
+			"name"				"Americana Contest 1st Place Medal"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_Painters_First"
+			"item_description"	"#TF_TournamentMedal_Painters_Americana_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/painters_workshop_americana/painters_workshop_americana_gold"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/painters_workshop_gold/painters_workshop_gold_%s.mdl"
+			}
+			"attributes"
+			{
+				"set item tint RGB"
+				{
+					"attribute_class"	"set_item_tint_rgb"
+					"value"				"7383185" 
+				}
+			}
+		}
+		"19256"
+		{		
+			"name"				"Americana Contest 2nd Place Medal"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_Painters_Second"
+			"item_description"	"#TF_TournamentMedal_Painters_Americana_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/painters_workshop_americana/painters_workshop_americana_silver"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/painters_workshop_silver/painters_workshop_silver_%s.mdl"
+			}
+			"attributes"
+			{
+				"set item tint RGB"
+				{
+					"attribute_class"	"set_item_tint_rgb"
+					"value"				"7383185" 
+				}
+			}
+		}
+		"19257"
+		{		
+			"name"				"Americana Contest 3rd Place Medal"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_Painters_Third"
+			"item_description"	"#TF_TournamentMedal_Painters_Americana_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/painters_workshop_americana/painters_workshop_americana_bronze"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/painters_workshop_bronze/painters_workshop_bronze_%s.mdl"
+			}
+			"attributes"
+			{
+				"set item tint RGB"
+				{
+					"attribute_class"	"set_item_tint_rgb"
+					"value"				"7383185" 
+				}
+			}
+		}
+		"19258"
+		{		
+			"name"				"Americana Contest Runner-up Medal"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_Painters_Runner"
+			"item_description"	"#TF_TournamentMedal_Painters_Americana_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/painters_workshop_americana/painters_workshop_americana_runner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/painters_workshop_supporter/painters_workshop_supporter_%s.mdl"
+			}
+			"attributes"
+			{
+				"set item tint RGB"
+				{
+					"attribute_class"	"set_item_tint_rgb"
+					"value"				"7383185" 
+				}
+			}
+		}
+
 
 
 

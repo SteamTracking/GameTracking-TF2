@@ -3681,6 +3681,14 @@
 "TF_TournamentMedal_Particle2_Staff"					"Particle Mayhem 2 - Staff"
 "TF_TournamentMedal_Particle2_Staff_Desc"				"This little guy makes for the best alarm clock."
 
+"TF_TournamentMedal_Painters_First"						"Painter's Workshop 1st Place Medal"
+"TF_TournamentMedal_Painters_Second"					"Painter's Workshop 2nd Place Medal"
+"TF_TournamentMedal_Painters_Third"						"Painter's Workshop 3rd Place Medal"
+"TF_TournamentMedal_Painters_Winner"					"Painter's Workshop Winner"
+"TF_TournamentMedal_Painters_Runner"					"Painter's Workshop Runner-up"
+"TF_TournamentMedal_Painters_Mooncrash_Desc"			"For an out-of-this-world contribution to the 2026 Operation Mooncrash Event."
+"TF_TournamentMedal_Painters_Americana_Desc"			"For an outstanding contribution to the 2026 Americana War Paint/Limited Skin Contest."
+
 "TF_heals4reals_gold"			"Heals for Reals Event 1st Place"
 "TF_heals4reals_silver"			"Heals for Reals Event 2nd Place"
 "TF_heals4reals_bronze"			"Heals for Reals Event 3rd Place"
