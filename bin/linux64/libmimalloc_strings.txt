@@ -1,6 +1,20 @@
   blocks in use ('x'): %zu\n
   not all freed!\n
+  what():  
  (in large os pages)
+ [clone 
+ _Complex
+ _Imaginary
+ __vector(
+ class
+ const
+ for 
+ noexcept
+ requires 
+ restrict
+ throw
+ transaction_safe
+ volatile
 %10s:
 %10s: %11s %11s %11s %11s %11s %11s\n
 %10s: %5ld.%03ld s\n
@@ -13,47 +27,87 @@
 %ld.%ld %-3s
 %s%s%s
 %s%s\n
+%s: __pos (which is %zu) > this->size() (which is %zu)
 %sthread 0x%llx: 
+(anonymous namespace)
+*N12_GLOBAL__N_121system_error_categoryE
+*N12_GLOBAL__N_122generic_error_categoryE
+++CCUNG
+++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 , commit: 
 -abandoned
 -cached
 -extended
 -noretire
+/dev/random
 /dev/urandom
 /proc/sys/vm/overcommit_memory
 /sys/devices/system/node/node%u
+0123456789
 0;FALSE;NO;OFF
 1;TRUE;YES;ON
-CXXABI_1.3
 Cprocess done: 0x%zx\n
-GCC: (SteamRT 10.3.0-3+steamrt3.1+bsrt3.1) 10.3.0
-GLIBCXX_3.4
-GLIBCXX_3.4.20
+GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
+GLIBCXX_TUNABLES
 GLIBC_2.14
 GLIBC_2.17
 GLIBC_2.2.5
+GLIBC_2.25
 GLIBC_2.3
+GLIBC_2.3.2
+JArray
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv117__class_type_infoE
+N10__cxxabiv119__foreign_exceptionE
+N10__cxxabiv120__si_class_type_infoE
+N9__gnu_cxx24__concurrence_lock_errorE
+N9__gnu_cxx26__concurrence_unlock_errorE
+NSt3_V214error_categoryE
+St10bad_typeid
+St11logic_error
+St11range_error
+St12domain_error
+St12length_error
+St12out_of_range
+St12system_error
+St13bad_exception
+St13runtime_error
+St14overflow_error
+St15underflow_error
+St16invalid_argument
+St20bad_array_new_length
+St8bad_cast
+St9bad_alloc
+St9exception
+St9type_info
+TLS init function for 
+TLS wrapper function for 
+VTT for 
+[abi:
+[friend]
+_Float
+_GLOBAL_
+_ITM_RU1
+_ITM_RU8
+_ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
+_ITM_memcpyRnWt
+_ITM_memcpyRtWn
 _ITM_registerTMCloneTable
-__cxa_allocate_exception
-__cxa_allocate_exception@CXXABI_1.3
 __cxa_atexit
 __cxa_atexit@GLIBC_2.2.5
 __cxa_finalize
 __cxa_finalize@GLIBC_2.2.5
-__cxa_guard_acquire
-__cxa_guard_acquire@CXXABI_1.3
-__cxa_guard_release
-__cxa_guard_release@CXXABI_1.3
-__cxa_throw
-__cxa_throw@CXXABI_1.3
+__cxa_pure_virtual
 __environ
 __environ@GLIBC_2.2.5
 __errno_location
 __errno_location@GLIBC_2.2.5
+__float128
 __gmon_start__
-__gxx_personality_v0
-__gxx_personality_v0@CXXABI_1.3
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+__int128
 __libc_calloc
 __libc_cfree
 __libc_free
@@ -67,6 +121,10 @@ __lxstat64
 __lxstat64@GLIBC_2.2.5
 __lxstat@GLIBC_2.2.5
 __posix_memalign
+__pthread_key_create
+__pthread_key_create@GLIBC_2.2.5
+__tls_get_addr
+__tls_get_addr@GLIBC_2.3
 __xmknod
 __xmknod@GLIBC_2.2.5
 __xstat
@@ -74,37 +132,100 @@ __xstat64
 __xstat64@GLIBC_2.2.5
 __xstat@GLIBC_2.2.5
 _aligned_malloc
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
+_txnal_cow_string_D1(void*)
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_c_str(void const*)
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
+_txnal_sso_string_c_str(void const*)
 abandoned_page_purge
 abandoned_page_reset
+abort
+abort@GLIBC_2.2.5
 access
 access@GLIBC_2.2.5
+alignof 
 allocation request is too large (%zu bytes)\n
+allocator
 allow_large_os_pages
 arena %zu: %zu blocks with %zu fields\n
 arena_eager_commit
 arena_purge_mult
 arena_reserve
+auto
+auto:
+basic_iostream
+basic_istream
+basic_ostream
+basic_string
+basic_string: construction from null is not valid
+basic_string::_M_create
+basic_string::_M_replace
+basic_string::_M_replace_aux
+basic_string::_S_construct null not valid
+basic_string::_S_create
+basic_string::append
+basic_string::assign
+basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
+basic_string::basic_string
+basic_string::compare
+basic_string::copy
+basic_string::erase
+basic_string::insert
+basic_string::replace
+basic_string::resize
+basic_string::substr
+basic_string_view::substr
+bool
+bool __gnu_cxx::__is_null_pointer<char const>(char const*)
+bool __gnu_cxx::__is_null_pointer<char>(char*)
+boolean
+byte
 cannot %s OS memory (error: %d (0x%x), address: %p, size: 0x%zx bytes)\n
 cannot commit OS memory (error: %d (0x%x), address: %p, size: 0x%zx bytes)\n
 cannot decommit OS memory (error: %d (0x%x), address: %p, size: 0x%zx bytes)\n
 cannot reset OS memory (error: %d (0x%x), address: %p, size: 0x%zx bytes)\n
+char
+char16_t
+char32_t
+char8_t
 chmod
 chmod@GLIBC_2.2.5
 clock_gettime
 clock_gettime@GLIBC_2.17
+close
+close@GLIBC_2.2.5
+co_await 
 commit mask overflow: idx=%zu count=%zu start=%zx end=%zx p=0x%p size=%zu fullsize=%zu\n
 committed
+const_cast
+construction vtable for 
 corrupted thread-free list\n
 could not allocate contiguous huge OS page %zu at %p\n
 count   
+covariant return thunk to 
 creat
 creat@GLIBC_2.2.5
 current   
+decimal128
+decimal32
+decimal64
+decltype (
+decltype(auto)
+decltype(nullptr)
 decommit_extend_delay
+default
+delete 
+delete[] 
 deprecated_page_reset
 deprecated_segment_cache
 deprecated_segment_reset
 destroy_on_exit
+dl_iterate_phdr
+dl_iterate_phdr@GLIBC_2.2.5
+double
+dynamic_cast
 eager_commit_delay
 eager_region_commit
 elapsed
@@ -114,27 +235,50 @@ expand 32-byte k
 failed to bind huge (1GiB) pages to numa node %d (error: %d (0x%x))\n
 failed to reserve %zu GiB huge pages\n
 failed to reserve %zu k memory\n
+false
+float
 fopen
 fopen64
 fopen64@GLIBC_2.2.5
 fopen@GLIBC_2.2.5
+fputc
+fputc@GLIBC_2.2.5
 fputs
 fputs@GLIBC_2.2.5
 freed   
 freopen
 freopen@GLIBC_2.2.5
-getenv
+fwrite
+fwrite@GLIBC_2.2.5
+generic
+getentropy
+getentropy@GLIBC_2.25
 getenv@GLIBC_2.2.5
 getrusage
 getrusage@GLIBC_2.2.5
+glibcxx.eh_pool
+global constructors keyed to 
+global destructors keyed to 
+guard variable for 
+half
+hardware
 heap stats
+hidden alias for 
 huge OS page allocation timed out (after allocating %zu page(s))\n
+initializer for module 
+ioctl
+ioctl@GLIBC_2.2.5
+java Class for 
+java resource 
 lchown
 lchown@GLIBC_2.2.5
+ld-linux-x86-64.so.2
 libc.so.6
 libpthread.so.0
-libstdc++.so.6
 limit_os_alloc
+long
+long double
+long long
 madvise
 madvise@GLIBC_2.2.5
 max_errors
@@ -143,8 +287,12 @@ max_warnings
 mem tracking: %s\n
 memchr
 memchr@GLIBC_2.2.5
+memcmp
+memcmp@GLIBC_2.2.5
 memcpy
 memcpy@GLIBC_2.14
+memmove
+memmove@GLIBC_2.2.5
 memset
 memset@GLIBC_2.2.5
 mi__expand
@@ -296,22 +444,41 @@ mount
 mount@GLIBC_2.2.5
 mprotect
 mprotect@GLIBC_2.2.5
+mt19937
 munmap
 munmap@GLIBC_2.2.5
+new 
+new[]
+noexcept
+non-transaction clone for 
+non-virtual thunk to 
 none
 not all freed
 numa node %i: reserved %zu GiB huge pages (of the %zu GiB requested)\n
 numa nodes
+obj_count
+obj_size
 opendir
 opendir@GLIBC_2.2.5
+operator
+operator 
+operator"" 
 option '%s': %ld\n
 os_tag
 out of memory in 'new'
 peak   
 process
 process init: 0x%zx\n
-pthread_key_create
-pthread_key_create@GLIBC_2.2.5
+pthread_cond_broadcast
+pthread_cond_broadcast@GLIBC_2.3.2
+pthread_cond_wait
+pthread_cond_wait@GLIBC_2.3.2
+pthread_mutex_lock
+pthread_mutex_lock@GLIBC_2.2.5
+pthread_mutex_unlock
+pthread_mutex_unlock@GLIBC_2.2.5
+pthread_once
+pthread_once@GLIBC_2.2.5
 pthread_setspecific
 pthread_setspecific@GLIBC_2.2.5
 purge_decommits
@@ -319,7 +486,20 @@ purge_delay
 purge_extend_delay
 purged
 purges
+random_device could not be read
+random_device: getentropy failed
+random_device: rdrand failed
+random_device: rdseed failed
+random_device::random_device(const std::string&): device not available
+random_device::random_device(const std::string&): unsupported token
+rdrand
+rdrnd
+rdseed
+read
+read@GLIBC_2.2.5
 realpath@GLIBC_2.3
+reference temporary #
+reinterpret_cast
 rename
 rename@GLIBC_2.2.5
 reserve_huge_os_pages
@@ -338,37 +518,101 @@ sched_yield
 sched_yield@GLIBC_2.2.5
 searches
 secure level: %d\n
+secure_getenv
+secure_getenv@GLIBC_2.17
 segments
+short
 show_errors
 show_stats
-std::bad_alloc::~bad_alloc()
-std::bad_alloc::~bad_alloc()@GLIBCXX_3.4
-std::get_new_handler()
-std::get_new_handler()@GLIBCXX_3.4.20
+signed char
+sizeof 
+sizeof...
+sprintf
+sprintf@GLIBC_2.2.5
+static_cast
+std::allocator
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::bad_typeid
+std::basic_iostream<char, std::char_traits<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_string
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::bfloat16_t
+std::exception
+std::iostream
+std::istream
+std::ostream
+std::string
 stderr
 stderr@GLIBC_2.2.5
 stdout
 stdout@GLIBC_2.2.5
+strchr
+strchr@GLIBC_2.2.5
+strcmp
+strcmp@GLIBC_2.2.5
+strcpy
+strcpy@GLIBC_2.2.5
+strerror_r
+strerror_r@GLIBC_2.2.5
+string literal
+string::string
 strlen
 strlen@GLIBC_2.2.5
+strncmp
+strncmp@GLIBC_2.2.5
 strstr
 strstr@GLIBC_2.2.5
 strtol
 strtol@GLIBC_2.2.5
+strtoul
+strtoul@GLIBC_2.2.5
 symlink
 symlink@GLIBC_2.2.5
 syscall
 syscall@GLIBC_2.2.5
 sysconf
 sysconf@GLIBC_2.2.5
+system
+template
+template parameter object for 
+terminate called after throwing an instance of '
+terminate called recursively\n
+terminate called without an active exception\n
+this
+this 
 threads
+throw
+throw 
 total   
 touched
+transaction clone for 
+transaction clone for operator delete(void*)
+transaction clone for operator new[](unsigned long)
+true
 trying to free an already freed arena block: %p, size %zu\n
 trying to free from non-existent arena block: %p, size %zu, memid: 0x%zx\n
 trying to free from non-existent arena: %p, size %zu, memid: 0x%zx\n
-typeinfo for std::bad_alloc
-typeinfo for std::bad_alloc@GLIBCXX_3.4
+typeinfo fn for 
+typeinfo for 
+typeinfo for __cxxabiv1::__class_type_info
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__si_class_type_info
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for 
+typeinfo name for __cxxabiv1::__class_type_info
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo name for __cxxabiv1::__si_class_type_info
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typename
 unable to allocate OS memory (error: %d (0x%x), size: 0x%zx bytes, align: 0x%zx, commit: %d, allow large: %d)\n
 unable to allocate aligned OS memory directly, fall back to over-allocation (size: 0x%zx bytes, address: %p, alignment: 0x%zx, commit: %d)\n
 unable to allocate huge (1GiB) page, trying large (2MiB) pages instead (errno: %i)\n
@@ -382,6 +626,13 @@ unit
 unlink
 unlink@GLIBC_2.2.5
 unprotect
+unsigned
+unsigned __int128
+unsigned char
+unsigned int
+unsigned long
+unsigned long long
+unsigned short
 use_numa_nodes
 using %zd numa regions\n
 utime
@@ -390,7 +641,19 @@ utimes
 utimes@GLIBC_2.2.5
 verbose
 vfree
+virtual thunk to 
+void
 vsnprintf
 vsnprintf@GLIBC_2.2.5
-vtable for std::bad_alloc
-vtable for std::bad_alloc@GLIBCXX_3.4
+vtable for 
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
+vtable for __cxxabiv1::__si_class_type_info
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+wchar_t
+{default arg#
+{lambda
+{parm#
+{unnamed type#

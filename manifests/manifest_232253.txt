@@ -1,10 +1,10 @@
 Content Manifest for Depot 232253 
 
-Manifest ID / date     : 6651822907445434856 / 10/16/2026 19:06:43 
-Total number of files  : 104 
-Total number of chunks : 472 
-Total bytes on disk    : 455328535 
-Total bytes compressed : 333884960 
+Manifest ID / date     : 6016570021038958983 / 11/23/2026 20:14:42 
+Total number of files  : 105 
+Total number of chunks : 486 
+Total bytes on disk    : 469820207 
+Total bytes compressed : 338615328 
 
 
           Size Chunks File SHA                                 Flags Name
@@ -18,15 +18,15 @@ Total bytes compressed : 333884960
         310041      1 5611a2a611491ee7985e784b54579c7a8cf191c0     0 bin/dxsupport_sp.cfg
              0      0 0000000000000000000000000000000000000000    40 bin/filters
           5128      1 1fd24709fe086ca04d8c22cdad898cf7b2fa62cf     0 bin/filters/dispfilters.txt
-        604240      1 7ae6546a3e491d1771cc491b8ca15c853d9b827b     0 bin/linux64/bsppack.so
-        274584      1 32f67fd6228219bc3f661b3354e3b459a1f038a8     0 bin/linux64/bugreporter_filequeue.so
-        197056      1 2d8a870c47caaaf4e59ceaa36c09837c1532a282     0 bin/linux64/bugreporter_public.so
-        537728      1 b2d30e37cef2a9b5925e8886a04188a0c6a239ac     0 bin/linux64/datacache.so
-      10555824     11 684b39e07f2a87642618e8fa0adb55426a30f401     0 bin/linux64/engine.so
-       2347008      3 d6babcb49d75350a35fd5501609c61a4c7de9c30     0 bin/linux64/filesystem_stdio.so
-       7388040      8 746450380d197126e869d4295aa7f450e2e57b42     0 bin/linux64/GameUI.so
-        231776      1 7e262d9fed4a0cfc25fe7c990ace497f5b891c3e     0 bin/linux64/inputsystem.so
-        343800      1 5666c2d2cba2a6bae611ddfdbeee37a8d2727072     0 bin/linux64/launcher.so
+        811728      1 292d3b424e4de132b1d3c79a05739e81c607c59c     0 bin/linux64/bsppack.so
+        478192      1 600da9592a0c4a3610bc66caa10ad67eb507fd5f     0 bin/linux64/bugreporter_filequeue.so
+        397016      1 b06c11432403bf32dd2eec4518d4524a4e6a76b8     0 bin/linux64/bugreporter_public.so
+        745632      1 9fc4d617733009a9d46940ab226f4dbe7e0e4715     0 bin/linux64/datacache.so
+      10831592     11 e1e117efd86c444c45084a09d04999c73f7b1879     0 bin/linux64/engine.so
+       3777224      4 dc50201375d3b4fe9e17a2e8cdcf0468ee379bd0     0 bin/linux64/filesystem_stdio.so
+       7457920      8 a0fe5fe35bbbb0b1356030f23b4105fb33313d68     0 bin/linux64/GameUI.so
+        240064      1 26acf0b6b6d2b919ea15381628337f2df38ae8b6     0 bin/linux64/inputsystem.so
+        364568      1 255745deaf85df798ab0bf266a6bfa485f096eb6     0 bin/linux64/launcher.so
        3678112      4 b92582c593ef08a6330085188f6b54ad57a91cf8     0 bin/linux64/libavcodec.so
        3678216      4 68f95c77a3ab19b380f142ab7e6ccb543af9d37c     0 bin/linux64/libavcodec.so.58
         888744      1 838b84810eee5e3ff9613c40a66560dfe3a968af     0 bin/linux64/libavformat.so
@@ -45,34 +45,35 @@ Total bytes compressed : 333884960
        1666272      2 d4abc08afba666606cf1abde6f97db2bea26ecde     0 bin/linux64/libharfbuzz.so
        1666272      2 d4abc08afba666606cf1abde6f97db2bea26ecde     0 bin/linux64/libharfbuzz.so.0
        1666272      2 d4abc08afba666606cf1abde6f97db2bea26ecde     0 bin/linux64/libharfbuzz.so.0.61010.0
-        138184      1 db15de36f9fc1f407b6850024db2ed2c5d72dcd5     0 bin/linux64/libmimalloc.so
+        371024      1 b521a4281c7897f77c595096c0c22970c9d13b3f     0 bin/linux64/libmimalloc.so
         421001      1 95dcd3f3e03c0674e6604968a645c1d83d3caba9     0 bin/linux64/libsteam_api.so
         555352      1 aa7dfe6bf69d2aafe6fe8f9c3885e671db0b763a     0 bin/linux64/libswscale.so
         555448      1 a1191c624317a97fbf634aa13990bc12abd45179     0 bin/linux64/libswscale.so.5
-        212792      1 3e76ed0a4bd2a58bcb3045edf99e54b9807af94a     0 bin/linux64/libtier0.so
-        757640      1 9bfb6962df36503c682dff460abb9bdd9081a96a     0 bin/linux64/libtogl.so
+        455840      1 57d0226ad7cfb812a000dab513e46c74beffb862     0 bin/linux64/libtier0.so
+        956840      1 f454f5edc8c5ce41f3cbc795ae731751f74d3e9d     0 bin/linux64/libtogl.so
        7032600      7 f892d251c04221fc7e54c32c379a368b8f041bee     0 bin/linux64/libvideo.so
        3205672      4 0fbd661454aa8292f58edcd6adc113749da83d53     0 bin/linux64/libvpx.so
        3205768      4 7ee108b86e414426587fcf8d64e037c7f3f78544     0 bin/linux64/libvpx.so.6
-        352904      1 9a8b5258053546060cad82b329fc5f861b200b00     0 bin/linux64/libvstdlib.so
-       1452168      2 f0381c9d630bc55e66db1bab37b9b2551f27d403     0 bin/linux64/materialsystem.so
-       1318480      2 528d25740b0c0a809ab4f5c51b3cfaef31316e6f     0 bin/linux64/replay.so
-        187656      1 28a50951d4883f9b334356a29cd34b6c65abd7d1     0 bin/linux64/scenefilecache.so
-       4008552      4 db6dd8034f19128f0f884b96f7c7a36343c407b1     0 bin/linux64/ServerBrowser.so
-        992968      1 926514f3bfc32d6ca935f514a8b34526c20cd79b     0 bin/linux64/shaderapidx9.so
-        195624      1 6e0d1838fd2943406156fed30c38d595c87783ee     0 bin/linux64/shaderapiempty.so
-        948328      1 c3b7b713f35874acfe2d44f7b4de39899326b9d6     0 bin/linux64/shaderapivk.so
-        283896      1 186dc821e1d9c52dee3291e3ad789e5c3c203be2     0 bin/linux64/soundemittersystem.so
-        981024      1 aa900157705f3b8e89e54c24d1352a6f4f94823d     0 bin/linux64/stdshader_dx9.so
-        842352      1 778a72fd20e8ec929d2114f5609b8b4603c67f72     0 bin/linux64/studiorender.so
-        175056      1 f71464cbefe7f8bda1f127badde7df981ec0af66     0 bin/linux64/vaudio_minimp3.so
-        442768      1 c351fd6e50f798854f4eefe7ee90c6a66ffcda84     0 bin/linux64/vgui2.so
-       3113984      3 b725f9408fdd9590f96375d1e44bea464ee6cc62     0 bin/linux64/vguimatsurface.so
-        187768      1 0b23631ab8bf544bc79f1812f18a89b280600123     0 bin/linux64/video_services.so
-        254856      1 ba97ca588ee864387260fd2484c57c3d75370963     0 bin/linux64/video_source2wrapper.so
-       1720488      2 49cfa479e54e290254069174cc93a8a7e3e38644     0 bin/linux64/vphysics.so
-        697912      1 64980b4a6dce288038ce55c1808a3ef193d08512     0 bin/linux64/vscript.so
-        546736      1 9c72361fa931fb4dc4bfdbe605b75d6dd8f708cc     0 bin/linux64/vtex_dll.so
+        560880      1 99d5f04ff7bfd99d20cab60a4ed94ae3a4b7b523     0 bin/linux64/libvstdlib.so
+       1737696      2 0980a781df373eb530c416437f863f1e7e755f48     0 bin/linux64/materialsystem.so
+       1583120      2 c1141a4324a9059605719698fdc6706e6bce144f     0 bin/linux64/replay.so
+        391640      1 e06771ee5b53b959aad6daa1f35a6ff3f3e2eaee     0 bin/linux64/scenefilecache.so
+       4025160      4 13c2b4156d8366d3c1582281642454cc40680404     0 bin/linux64/ServerBrowser.so
+       1253808      2 b9261051b908c05e441c3bce4d475c59d6d42ce5     0 bin/linux64/shaderapidx9.so
+        395592      1 4616f33d66f3c30875038d1535e09bdfc74eb6db     0 bin/linux64/shaderapiempty.so
+       1205024      2 70e6deff3b88c6c91e8c92b41abcbf6eeda29b6f     0 bin/linux64/shaderapivk.so
+        487704      1 f1c4c826533064caa74f9cc123e121b7e38dbcee     0 bin/linux64/soundemittersystem.so
+       1209328      2 533156810754c704c6387d2d8359d01a9f9aa6ef     0 bin/linux64/stdshader_dx9.so
+       1082840      2 c7021dd5f8f6f981f11df4b593ed9a96c8a6e8ff     0 bin/linux64/studiorender.so
+        379072      1 004e531189372074840fd56c98aa865cdd14125c     0 bin/linux64/vaudio_minimp3.so
+        650520      1 ec1c6e64f31fa021293f0298b6917180e1dea728     0 bin/linux64/vgui2.so
+       3366232      4 78e584d06bdfbfd84e37d7e796430a15ee6cc332     0 bin/linux64/vguimatsurface.so
+        387648      1 fbcf12c8d21f8e68e7c1670d16f4e1d1459e83cf     0 bin/linux64/video_services.so
+       1823968      2 93e8a0ed124519634e561a918df0232b473865e6     0 bin/linux64/video_source2wrapper.so
+       1936152      2 723e58c66faac09971bd5dd4f63b255d56febfc2     0 bin/linux64/vphysics.so
+       3028080      3 361817e2e9893998061c10a0ff92928628fa39b3     0 bin/linux64/vphysics_rubikon.so
+        896264      1 85854474637f7dec5cf27be8e576b759bee90857     0 bin/linux64/vscript.so
+        791032      1 58cd937d0c82e66106d8ca2772db1564b80e7e61     0 bin/linux64/vtex_dll.so
            110      1 d80a8cec4676fdc0f5467b2d67adcdefe83979eb     0 bin/sdkenginetools.txt
              0      0 0000000000000000000000000000000000000000    40 bin/x64
            122      1 5cf74712aa221e766d35e18088f744ea721be6a6     0 bin/x64/sdkenginetools.txt
@@ -82,8 +83,8 @@ Total bytes compressed : 333884960
        1323798      2 dcb306efc9faf450af6604a844b3d7460daf9ae5     0 hl2/media/valve.webm
              0      0 0000000000000000000000000000000000000000    40 tf
           3056      1 21e06ca61ba7babef6a4b6bc37826626043fe713    20 tf.sh
-      48158872     46 627598ef5d092f56859e233aa1f2685f56138845     0 tf/bin/linux64/client.so
-      28994336     28 4cc4e46f7842e4186e6948a8bffe67d4f4488d91     0 tf/bin/linux64/server.so
+      49322664     48 14dade847c7dea2ca97e53d75fda788367ba952a     0 tf/bin/linux64/client.so
+      30534832     30 b463bb3f7ab050bf53e358c9a3720a2586153b0e     0 tf/bin/linux64/server.so
              0      0 0000000000000000000000000000000000000000    40 tf/media
        6085011      6 05fbc73e04bf74a4f426da4a16058ff3da406c9b     0 tf/media/arena_intro.webm
        5687549      6 ba3df06b936cc8d3eabea3a385c3c7990975c106     0 tf/media/cp_badlands.webm
@@ -111,4 +112,4 @@ Total bytes compressed : 333884960
        5757770      6 5dd1c280410e1856830aab5f5a0b6671eb7ee196     0 tf/media/tr_target_spy.webm
       13303046     13 0d647dc3e94859c622ee6759d006ce14f9b797b4     0 tf/media/vsh_intro.webm
       19025736     19 7308d4bf2fc541e0ac2161649c92d314b0b6fc67     0 tf/media/zi_intro.webm
-         16704      1 a382e1b7c3b390e016c5ffa4be043573c99df043    20 tf_linux64
+         16880      1 e7be350682da042e7a439bb1ea9a62e9c98ba226    20 tf_linux64

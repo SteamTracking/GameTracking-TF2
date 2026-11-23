@@ -1,19 +1,33 @@
+  what():  
  ( def. "%s" )
  ReadToken overflow
+ [clone 
+ _Complex
+ _Imaginary
+ __vector(
  archive
  bytes
  cheat
+ class
  client
  clientcmd_can_execute
+ const
  failed to dlopen %s error=%s\n
+ for 
  game
  max. %f
  min. %f
+ noexcept
  notconnected
  notify
  replicated
+ requires 
+ restrict
  server_can_execute
  singleplayer
+ throw
+ transaction_safe
+ volatile
 "%s" = "%s"
 #base
 #base is NULL 
@@ -43,6 +57,7 @@ $gender
 %s%s%s
 %s/%s
 %s/bin/linux64/%s
+%s: __pos (which is %zu) > this->size() (which is %zu)
 %s:%s
 &AElig;
 &Aacute;
@@ -147,11 +162,21 @@ $gender
 &yacute;
 &yen;
 &yuml;
+(anonymous namespace)
 ** NOTE: The real value is %.3f but the server has temporarily restricted it to %.3f **\n
+*N12_GLOBAL__N_121system_error_categoryE
+*N12_GLOBAL__N_122generic_error_categoryE
+++CCUNG
+++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGN9__gnu_cxx20recursive_init_errorE
+++CCUNGstd::exception
 ,%03d
 -DLOPEN Error:%s\n
 -gamepadui
 -nogamepadui
+/dev/random
+/dev/urandom
+0123456789
 0123456789abcdef
 0x%016llX
 10ConCommand
@@ -227,8 +252,6 @@ CThreadSyncObject::~CThreadSyncObject()
 CUtlLinkedList overflow! (exhausted index range)\n
 CUtlLinkedList overflow! (exhausted memory allocator)\n
 CUtlRBTree overflow!\n
-CXXABI_1.3
-CXXABI_1.3.8
 Can't UpdateSoundParameters %s, no such sound\n
 Can't move '%s', no such sound!\n
 Can't remove %s, no such sound!\n
@@ -249,12 +272,17 @@ Exceeded maximum number of sound emitter entries\n
 FCVAR_NEVER_AS_STRING
 FmtStrVSNPrintf truncated to %d without QUIET_TRUNCATION specified!\n
 GAME
-GCC: (SteamRT 10.3.0-3+steamrt3.1+bsrt3.1) 10.3.0
+GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
+GLIBCXX_TUNABLES
 GLIBC_2.14
+GLIBC_2.17
 GLIBC_2.2.5
+GLIBC_2.25
 GLIBC_2.29
 GLIBC_2.3
+GLIBC_2.3.2
 GLIBC_2.7
+JArray
 KeyValues Error: %s in file %s\n
 KeyValues.cpp
 KeyValues::LoadFromBuffer(%s%s%s): Begin
@@ -268,6 +296,11 @@ KeyValues::SaveToFile: couldn't open file "%s" in path "%s".\n
 KeyValuesSystem
 LoadFromBuffer: missing {
 LoadFromFile
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv119__foreign_exceptionE
+N9__gnu_cxx24__concurrence_lock_errorE
+N9__gnu_cxx26__concurrence_unlock_errorE
+NSt3_V214error_categoryE
 NULL
 No such file
 PITCH_HIGH
@@ -320,8 +353,26 @@ SceneManager_SaveSoundsToScriptFile:  Unable to write file %s!!!\n
 Sound %s references missing file %s\n
 SoundEmitter:  adding map sound overrides from %s [%i total, %i replacements, %i duplicated replacements]\n
 SoundEmitter:  removing map sound overrides [%i to remove, %i to restore]\n
+St10bad_typeid
+St11logic_error
+St11range_error
+St12domain_error
+St12length_error
+St12out_of_range
+St12system_error
+St13bad_exception
+St13runtime_error
+St14overflow_error
+St15underflow_error
+St16invalid_argument
+St20bad_array_new_length
+St8bad_cast
+St9bad_alloc
+St9exception
 SteamDeck
 SteamTenFoot
+TLS init function for 
+TLS wrapper function for 
 The soundemittersystem system requires the filesystem to run!\n
 ThreadGetCurrentId
 UCS-2LE
@@ -334,13 +385,16 @@ VFileSystem022
 VOL_NORM
 VProcessUtils001
 VSoundEmitter002
+VTT for 
 V_AppendSlash: ran out of space on %s.
 V_MakeAbsolutePath: _getcwd failed.
 V_MakeAbsolutePath: tried to ".." past the root.
 Warning
 [/code]
 [/list]
+[abi:
 [code]
+[friend]
 [img]
 [list]
 [url=
@@ -353,7 +407,14 @@ Warning
 \t"volume"\t\t"%s"\n
 \t"wave"\t\t\t"%s"\n
 \t\t"wave"\t"%s"\n
+_Float
+_GLOBAL_
+_ITM_RU1
+_ITM_RU8
+_ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
+_ITM_memcpyRnWt
+_ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
@@ -363,39 +424,90 @@ __ctype_toupper_loc
 __ctype_toupper_loc@GLIBC_2.3
 __cxa_atexit
 __cxa_atexit@GLIBC_2.2.5
-__cxa_call_unexpected
-__cxa_call_unexpected@CXXABI_1.3
 __cxa_finalize
 __cxa_finalize@GLIBC_2.2.5
-__cxa_guard_abort
-__cxa_guard_abort@CXXABI_1.3
-__cxa_guard_acquire
-__cxa_guard_acquire@CXXABI_1.3
-__cxa_guard_release
-__cxa_guard_release@CXXABI_1.3
 __cxa_pure_virtual
-__cxa_pure_virtual@CXXABI_1.3
-__cxa_throw_bad_array_new_length
-__cxa_throw_bad_array_new_length@CXXABI_1.3.8
-__dynamic_cast
-__dynamic_cast@CXXABI_1.3
+__errno_location
+__errno_location@GLIBC_2.2.5
+__float128
 __gmon_start__
-__gxx_personality_v0
-__gxx_personality_v0@CXXABI_1.3
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+__int128
 __isoc99_sscanf
 __isoc99_sscanf@GLIBC_2.7
 __pthread_key_create
 __pthread_key_create@GLIBC_2.2.5
+__test_and_acquire(long*)
+__tls_get_addr
+__tls_get_addr@GLIBC_2.3
+__wrap_open
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
+_txnal_cow_string_D1(void*)
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_c_str(void const*)
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
+_txnal_sso_string_c_str(void const*)
+abort
 abort@GLIBC_2.2.5
+alignof 
 allactors
+allocator
 attenuation
+auto
+auto:
+basic_iostream
+basic_istream
+basic_ostream
+basic_string
+basic_string: construction from null is not valid
+basic_string::_M_create
+basic_string::_M_replace
+basic_string::_M_replace_aux
+basic_string::_S_construct null not valid
+basic_string::_S_create
+basic_string::append
+basic_string::assign
+basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
+basic_string::basic_string
+basic_string::compare
+basic_string::copy
+basic_string::erase
+basic_string::insert
+basic_string::replace
+basic_string::resize
+basic_string::substr
+basic_string_view::substr
 bin/linux64
+bool
+bool __gnu_cxx::__is_null_pointer<char const>(char const*)
+bool __gnu_cxx::__is_null_pointer<char>(char*)
+boolean
+byte
 chan_
 channel
+char
+char16_t
+char32_t
+char8_t
 chdir
 chdir@GLIBC_2.2.5
+co_await 
+const_cast
+construction vtable for 
+covariant return thunk to 
 cvar
+decimal128
+decimal32
+decimal64
+decltype (
+decltype(auto)
+decltype(nullptr)
+default
 delay_msec
+delete 
+delete[] 
 developer
 dl_iterate_phdr
 dl_iterate_phdr@GLIBC_2.2.5
@@ -407,19 +519,38 @@ dlopen
 dlopen@GLIBC_2.2.5
 dlsym
 dlsym@GLIBC_2.2.5
+double
+dynamic_cast
 exp@GLIBC_2.29
 faceposer_file
+false
 female
+float
 float( %f )
+fputc
+fputc@GLIBC_2.2.5
+fputs
+fputs@GLIBC_2.2.5
 free
 free@GLIBC_2.2.5
+fwrite
+fwrite@GLIBC_2.2.5
 g_KVMutex
 g_Telemetry
 g_pMemAlloc
+generic
 getcwd
 getcwd@GLIBC_2.2.5
-getenv
+getentropy
+getentropy@GLIBC_2.25
 getenv@GLIBC_2.2.5
+glibcxx.eh_pool
+global constructors keyed to 
+global destructors keyed to 
+guard variable for 
+half
+hardware
+hidden alias for 
 iconv
 iconv@GLIBC_2.2.5
 iconv_close
@@ -427,24 +558,33 @@ iconv_close@GLIBC_2.2.5
 iconv_open
 iconv_open@GLIBC_2.2.5
 image not found
+initializer for module 
 int( %d = 0x%X )
+ioctl
+ioctl@GLIBC_2.2.5
 isspace
 isspace@GLIBC_2.2.5
 iswspace
 iswspace@GLIBC_2.2.5
+java Class for 
+java resource 
 ld-linux-x86-64.so.2
 libc.so.6
 libdl.so.2
 libm.so.6
 libpthread.so.0
-libstdc++.so.6
 libtier0.so
 libvstdlib.so
+long
+long double
+long long
 m_mutex
 malloc
 malloc@GLIBC_2.2.5
 mbstowcs
 mbstowcs@GLIBC_2.2.5
+memchr
+memchr@GLIBC_2.2.5
 memcmp
 memcmp@GLIBC_2.2.5
 memcpy
@@ -453,10 +593,25 @@ memmove
 memmove@GLIBC_2.2.5
 memset
 memset@GLIBC_2.2.5
+mt19937
+new 
+new[]
+noexcept
+non-transaction clone for 
+non-virtual thunk to 
+obj_count
+obj_size
+operator
+operator 
+operator"" 
 pitch
 play_to_owner_only
 precache_file
 preload_file
+pthread_cond_broadcast
+pthread_cond_broadcast@GLIBC_2.3.2
+pthread_cond_wait
+pthread_cond_wait@GLIBC_2.3.2
 pthread_mutex_destroy
 pthread_mutex_destroy@GLIBC_2.2.5
 pthread_mutex_init
@@ -474,13 +629,55 @@ pthread_once@GLIBC_2.2.5
 ptr( 0x%p )
 qsort
 qsort@GLIBC_2.2.5
+random_device could not be read
+random_device: getentropy failed
+random_device: rdrand failed
+random_device: rdseed failed
+random_device::random_device(const std::string&): device not available
+random_device::random_device(const std::string&): unsupported token
+rdrand
+rdrnd
+rdseed
+read
+read@GLIBC_2.2.5
+realloc
+realloc@GLIBC_2.2.5
+reference temporary #
+reinterpret_cast
 rndwave
 script
 scripts/game_sounds_header.txt
 scripts/game_sounds_manifest.txt
 scripts/global_actors.txt
+secure_getenv
+secure_getenv@GLIBC_2.17
+short
+signed char
+sizeof 
+sizeof...
 sound/%s
 soundlevel
+sprintf
+sprintf@GLIBC_2.2.5
+static_cast
+std::allocator
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::bad_typeid
+std::basic_iostream<char, std::char_traits<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_string
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::bfloat16_t
+std::iostream
+std::istream
+std::ostream
+std::string
+stderr
+stderr@GLIBC_2.2.5
 steam://openurl/
 steam://openurl_external/
 strcasecmp
@@ -491,14 +688,20 @@ strcmp
 strcmp@GLIBC_2.2.5
 strcpy
 strcpy@GLIBC_2.2.5
+strerror_r
+strerror_r@GLIBC_2.2.5
 strftime
 strftime@GLIBC_2.2.5
+string literal
+string::string
 strlen
 strlen@GLIBC_2.2.5
 strncasecmp
 strncasecmp@GLIBC_2.2.5
 strncat
 strncat@GLIBC_2.2.5
+strncmp
+strncmp@GLIBC_2.2.5
 strncpy
 strncpy@GLIBC_2.2.5
 strstr
@@ -515,6 +718,18 @@ strtoul
 strtoul@GLIBC_2.2.5
 strtoull
 strtoull@GLIBC_2.2.5
+syscall
+syscall@GLIBC_2.2.5
+system
+template
+template parameter object for 
+terminate called after throwing an instance of '
+terminate called recursively\n
+terminate called without an active exception\n
+this
+this 
+throw
+throw 
 tolower
 tolower@GLIBC_2.2.5
 toupper
@@ -523,18 +738,49 @@ towlower
 towlower@GLIBC_2.2.5
 towupper
 towupper@GLIBC_2.2.5
+transaction clone for 
+transaction clone for operator delete(void*)
+transaction clone for operator new[](unsigned long)
+true
+typeinfo fn for 
+typeinfo for 
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::recursive_init_error
+typeinfo name for 
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __gnu_cxx::recursive_init_error
+typename
 u64( %lld = 0x%llX )
+unsigned
+unsigned __int128
+unsigned char
+unsigned int
+unsigned long
+unsigned long long
+unsigned short
+virtual thunk to 
+void
 volume
 vsnprintf
 vsnprintf@GLIBC_2.2.5
 vswprintf
 vswprintf@GLIBC_2.2.5
+vtable for 
 vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__class_type_info@CXXABI_1.3
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
 vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__si_class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__vmi_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info@CXXABI_1.3
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+vtable for __gnu_cxx::recursive_init_error
+wchar_t
 wcslen
 wcslen@GLIBC_2.2.5
 wcsncat
@@ -547,3 +793,8 @@ wcstoll
 wcstoll@GLIBC_2.2.5
 wcstombs
 wcstombs@GLIBC_2.2.5
+zD<br>
+{default arg#
+{lambda
+{parm#
+{unnamed type#

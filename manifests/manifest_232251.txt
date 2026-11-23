@@ -1,37 +1,37 @@
 Content Manifest for Depot 232251 
 
-Manifest ID / date     : 3447145031938049636 / 10/16/2026 19:06:32 
-Total number of files  : 301 
-Total number of chunks : 761 
-Total bytes on disk    : 612239541 
-Total bytes compressed : 418219920 
+Manifest ID / date     : 3128696242745256676 / 11/23/2026 20:14:27 
+Total number of files  : 303 
+Total number of chunks : 764 
+Total bytes on disk    : 614046805 
+Total bytes compressed : 419105472 
 
 
           Size Chunks File SHA                                 Flags Name
              0      0 0000000000000000000000000000000000000000    40 bin
-        909464      1 ca390dea59c4e0b93a30ea45247261300762f12d     0 bin/AdminServer.dll
+        906392      1 7e8c6ad700bfaf8ae1e01137a4f262d6cf51a5fb     0 bin/AdminServer.dll
         345338      1 315e64dbc0c5469df9c4e80e955097e66e25bbec     0 bin/base.fgd
         233760      1 d51ab5d0d3e6566275ed7b57524e32e5d2ffc84f     0 bin/binkw32.dll
-        363672      1 71c11c374a847fc451f18ba06143a610ad0c4633     0 bin/bsppack.dll
-        388248      1 57fa63d948882416dc38b5abeff482a5c00d4189     0 bin/bspzip.exe
-        200856      1 ee70a456807106466c54a597fe72fd5d969dbc4d     0 bin/bugreporter.dll
-        225944      1 99cd0f51de5e89da953000fc8a47275c1fa20780     0 bin/bugreporter_filequeue.dll
-        177304      1 1bc1bfe1c308791318fa5620339db1107f9259ce     0 bin/bugreporter_public.dll
-        253592      1 d2b060fd5839ee0da830de08a0eba0f8adc4fd17     0 bin/captioncompiler.exe
+        363672      1 7ed8ecbf148da25b4b2512bc4ba99b501cddecda     0 bin/bsppack.dll
+        388248      1 6332bf484ac79c9aca6c1beb86e2a7a0a41cda4f     0 bin/bspzip.exe
+        200344      1 f896e607570ac81e18221922327b93be5880d227     0 bin/bugreporter.dll
+        225944      1 05ed4995ac838487440561c6deb5b85f6e1301e3     0 bin/bugreporter_filequeue.dll
+        177304      1 9aa353388204a1facfc5ffd2d088f5614786244f     0 bin/bugreporter_public.dll
+        253592      1 25b412a7cde9e9077a2aa4bed8153388e1c74fa6     0 bin/captioncompiler.exe
            244      1 cee520816b5e5ec72c4a5f4c8fc85915c76222c5     0 bin/check_sdk_env.bat
          21063      1 21a3bec4365df8aefa96ec20a03b5dce49a6d303     0 bin/CmdSeq.wc
-        297112      1 56fd31d6f2c2bf9daae5f888c53e76d2ac44807a     0 bin/datacache.dll
+        297112      1 c435fb8b8f613b3f985587dfdcdd0ce7d8e69a44     0 bin/datacache.dll
        1040384      1 eed9c674fba7caf6ea2ec1dd45dfdb981bd65e3e     0 bin/datamodel.dll
         102400      1 79a20deacff599531e313eacff7564dadcb2445d     0 bin/demoinfo.exe
         712704      1 96d17dded640b85596433b9e667211647fff3a81     0 bin/dmserializers.dll
-        571544      1 7257455b1152a9c847311f0f78721a36ce3ea5cb     0 bin/dmxconvert.exe
-       1586328      2 128c686c0ff08a9a12cc076f644cc7fb48e0f579     0 bin/dmxedit.exe
+        569496      1 4dd7bcac78f4c95aa6c47c1954e0751582239c0f     0 bin/dmxconvert.exe
+       1585304      2 cc6c2c5238ab513bb18ae9f61036662cab5eead1     0 bin/dmxedit.exe
        3870734      4 41ede31d6f33ef943a18e3320766d68844bfd231     0 bin/dxvk_d3d9.dll
-       3049624      3 a3883de5127a72307cd8b771d7f5b5d452f39b97     0 bin/elementviewer.exe
-       4296856      5 66df9e980639f010ff9e014ce8773ef3bf242316     0 bin/engine.dll
+       3045528      3 772767418577a82526682c190724bbcded8ba1a6     0 bin/elementviewer.exe
+       4298904      5 6e13164e80e9fef462348740f8cfceb8541886ae     0 bin/engine.dll
            278      1 380df65a9307733539dda25f494153ae9400bd75     0 bin/Faceposer.bat
-       2122392      3 202b1e7def0a78dba5e381e47729e578f35f7279     0 bin/FileSystemOpenDialog.dll
-        695960      1 806691de64a3c44bf8eac6628368d5ab0d4735e3     0 bin/FileSystem_Stdio.dll
+       2122392      3 71051d368715fe93cabfabc582df603592b60230     0 bin/FileSystemOpenDialog.dll
+        695960      1 20948fb0e54dc07b09971b1437e1e0d41343261e     0 bin/FileSystem_Stdio.dll
           3126      1 cab5db6f5e545e474ddb1393f0039d35e414e91e     0 bin/filters/add1x1.ico
           3126      1 2b4fa33231fd2335b33b7b234c7d192a7283a40d     0 bin/filters/add3x3.ico
           3126      1 a95973a60895aa2bb46bcdf4552977a74a4709a4     0 bin/filters/add5x5.ico
@@ -46,24 +46,24 @@ Total bytes compressed : 418219920
            630      1 386bc0c44df62895c881da0929f24d39c5a7ef9e     0 bin/filters/raiseto1x1.ico
           3126      1 ff7dab6fd2f9d65bf7d100e835b7840c52847a76     0 bin/filters/raiseto5x5.ico
           3126      1 6f54ae3d3f454a5c8fb5cca77ed7a65068ea05e2     0 bin/filters/smooth3x3.ico
-       2047640      2 b7057533ea0a50b94e816daf430c66a496e7b270     0 bin/GameUI.dll
-        260248      1 3599926f4247eeb81cfc622bd304c80f13929472     0 bin/glview.exe
+       2045080      2 48ecc465c65e544627a4d07cd437ac9c164d1d7e     0 bin/GameUI.dll
+        260248      1 99531f340deb749b5eb337331b0ded1a535d58ba     0 bin/glview.exe
         207606      1 ecf24829bda72017509024d7682ef4450978dbb2     0 bin/halflife2.fgd
            266      1 9557808134ea182e800517f722311a7dbda68aad     0 bin/Hammer.bat
-        225944      1 845544ac3e7e3108ced69095afeea18c6f05e2b5     0 bin/hammer.exe
-       5845144      6 e5774403ce2a81deae986ce398a753e66df7bc72     0 bin/hammer_dll.dll
-        269464      1 d68d16b176020705b842da035da2ba65ee18bd87     0 bin/haptics.dll
-        762008      1 3f3bab2c2a4b398639e7ae6a7d1617de59a58a82     0 bin/height2normal.exe
+        225944      1 bb0f21766543b10528b0d94f4930d985357e740b     0 bin/hammer.exe
+       5843096      6 ab30faf7db0282cb336d23f384540819fd3db82f     0 bin/hammer_dll.dll
+        268952      1 32e398aad93d97ad92ae4f8c7c0e63ad178ff364     0 bin/haptics.dll
+        762008      1 5b0e848b4edba46151f609324dac0e0443583d21     0 bin/height2normal.exe
          29926      1 a735b29513f36bb290603fa411069088e4cb476f     0 bin/height2normal.ico
-        772248      1 6102e9cd98c70466db29e2e6fd0104512c853e1c     0 bin/height2ssbump.exe
-       1646744      2 86264fc71d3c2de763b4bcec1ea07036e047ad8f     0 bin/hlfaceposer.exe
+        772248      1 c2ae7ecb1a5fcb05cfd736e93cf10632b2c171ae     0 bin/height2ssbump.exe
+       1645720      2 7ea9fc773d1d7e3588e6695aa35cc7d7d7c92d73     0 bin/hlfaceposer.exe
            267      1 ee2bc51ebc79f02dd35412b36b3157fac4a7a505     0 bin/HLMV.bat
-        545432      1 1aa3e607bff65c447a5ebd2fa2dcf113f8db47fc     0 bin/hlmv.exe
+        545432      1 ca598183869d9dbee1e05e2b333694016737dc81     0 bin/hlmv.exe
        9955112     10 63e1df7559eda81c8c0869f7f2144f553f94dd03     0 bin/icudt.dll
       10899456     12 96ac598192327ac271eb499b43f3fda37bf58be8     0 bin/icudt42.dll
-        217752      1 d562b074aea463b63aedb4914f956bdbb54da802     0 bin/inputsystem.dll
-       2009752      2 fc5a058eee32b2244cfc16d7625d8f9fcdc34f5d     0 bin/itemtest.com
-        237208      1 c7ce57923c2ae1592ad11cfe03839aed238f7fa3     0 bin/launcher.dll
+        217752      1 cb528869205bb9dc25aaee0296f767151834195b     0 bin/inputsystem.dll
+       2008216      2 8d1dc27bb2b13a8159ec3ddf88226409474da8fa     0 bin/itemtest.com
+        236696      1 c113e51b65d124bf2acb8b3be223fb4536a376f3     0 bin/launcher.dll
         323584      1 2a8159c57d0fcce2c71c3125aa90583c3276b85b     0 bin/libcurl.dll
        7382912      8 a0ab635a20431b1792eb4547693c87b636621f4c     0 bin/libfbxsdk.dll
         801215      1 cdad1cdc088f8212185a36afeba392634f8bf1c7     0 bin/libfontconfig-1.dll
@@ -71,11 +71,11 @@ Total bytes compressed : 418219920
        2185677      3 3d08d87e19da0a71b6c7e92e2b6f70ad385cdf86     0 bin/libharfbuzz-0.dll
          81920      1 405cd7839dd839679af5b97228e9b136397c114f     0 bin/libsasl.dll
        2447781      3 d0e6eec0522cd99b1241c51afe1b95436fe4adc3     0 bin/libxml2-2.dll
-       1475736      2 9b79853fbe2aace21f40d9e7b8bb4d4845de080f     0 bin/MakeScenesImage.exe
-       1283224      2 8a2cf9a33f9478f86ba9157f28c208714dcd402c     0 bin/MaterialSystem.dll
-        178840      1 ae1c270de6e3d6095c5269cd2760f675b90609e9     0 bin/mdllib.dll
-        773784      1 9a7bbeb68b9908ee0f8ce3841889a656e1d8bbaa     0 bin/mksheet.exe
-        306328      1 90f9092171bf0afc3938a307711f1fc1aaeb147a     0 bin/motionmapper.exe
+       1474200      2 a8db98e460ab44fb018cb29ddf148d95aac25732     0 bin/MakeScenesImage.exe
+       1283224      2 eb7bc621ae81404ffd6a8dcae5c9034a6df5bd14     0 bin/MaterialSystem.dll
+        178840      1 3f5b679f007bdb53b996fe3a40e9038a4f296a42     0 bin/mdllib.dll
+        773784      1 19f3cb2c8a13aaa877b7c5e9f09e5293fed0b91e     0 bin/mksheet.exe
+        306328      1 c45c662da1fc499e38d14d1548e6eca5beff9feb     0 bin/motionmapper.exe
            759      1 73a2f39f504fcb27a004b078544f58323fa84733     0 bin/motionmappertemplates/default.mmt
           1142      1 1ec876164c5502535e53e12160c6f5e09bd3e815     0 bin/motionmappertemplates/rootLock.mmt
           1356      1 38554033ebbef624c6585036be9c9804fe6a130d     0 bin/motionmappertemplates/template1.mmt
@@ -97,113 +97,113 @@ Total bytes compressed : 418219920
          19744      1 46b2df8a9556e4332b1ed2c3bc267258dde2b046     0 bin/msssrs.flt
         160032      1 0979d8be180494832e357bf96a6cc8ea0ab420ef     0 bin/mssvoice.asi
         348160      1 d5502a1d00787d68f548ddeebbde1eca5e2b38ca     0 bin/msvcr71.dll
-        118936      1 ce97d12ff9d288159868765a9a5f3c21405858dc     0 bin/mysql_wrapper.dll
-        756888      1 a71282974e81dd9f31b81b4780de84f7c87a92b0     0 bin/normal2ssbump.exe
+        118936      1 3430b51c9a1e4fbcf71cf04313b195926a40fdfe     0 bin/mysql_wrapper.dll
+        756888      1 9568270f5183a4b5db6ff3c6d331747eaddcfb30     0 bin/normal2ssbump.exe
          65312      1 12893fbec342151321532d6af7ce564a79d5a594     0 bin/openvr_api.dll
-        669848      1 eaa18869846d84b37732587c502efdf919fa6483     0 bin/pfm2tgas.exe
+        669848      1 9aaeea0b0c4a42937d196a6b0e07e1f370c1b745     0 bin/pfm2tgas.exe
              0      0 0000000000000000000000000000000000000000    40 bin/phonemeextractors
         471040      1 2fc94466e52a9b979feee8549d1db3ecd737c91a     0 bin/phonemeextractors/ims_helper.dll
-        180888      1 cbcbbfc0476c20837aba652ff077379277d60d92     0 bin/phonemeextractors/phonemeextractor.dll
-        180888      1 0a0e71af7ed77838430018615d0ef7170458547f     0 bin/phonemeextractors/phonemeextractor_ims.dll
-       3106968      3 a097e3b773711fa70864803393d3b11b11e81e9e     0 bin/qc_eyes.exe
-        940696      1 5c11e5a009658ec738ba52762c21482d73e73438     0 bin/replay.dll
-        170136      1 d037bb74f0e96c316471acd0314a1078b98b2236     0 bin/scenefilecache.dll
+        180888      1 0114a09dd11cb48b4b3e1b3ecd97d7d6b54a1fd5     0 bin/phonemeextractors/phonemeextractor.dll
+        180888      1 10542bcb1f8011d6c1a204aadb058eeb8369adc9     0 bin/phonemeextractors/phonemeextractor_ims.dll
+       3106968      3 b5d159da07af73a2aaa7c5cb19ec47a4c0be41c4     0 bin/qc_eyes.exe
+        940184      1 47324f7f6b57c230e507923637dc002f965b6bb4     0 bin/replay.dll
+        170136      1 387ce85dc4b079c1218343d166207a2252a648fa     0 bin/scenefilecache.dll
            110      1 d80a8cec4676fdc0f5467b2d67adcdefe83979eb     0 bin/sdkenginetools.txt
         781600      1 299e597a800b8181de8d7805bb63c0d1c15b3537     0 bin/SDL2.dll
-        962200      1 e55ea486262b5439f66ea3478958da28ce55a2a1     0 bin/ServerBrowser.dll
-        191128      1 01ac643a132d0412db156c2103bccf40390f53f8     0 bin/serverplugin_empty.dll
+        959640      1 be06a29bca44571d7682fc6450c5caf6bb238b3e     0 bin/ServerBrowser.dll
+        191128      1 e95c1825f6a7f35e0d4e0b9b7c6b2b6019acb065     0 bin/serverplugin_empty.dll
            588      1 b2a14fadef9f3f8dcad8c05a4c87f1c4d99673a4     0 bin/set_sdk_env.bat
-        993432      1 c11ee7d6f2e28f0e72125da978584dd56e85515e     0 bin/shaderapidx9.dll
-        124568      1 030f8b583245ef484ea1aec9af75431157c9574d     0 bin/shaderapiempty.dll
-        989336      1 4a0bd51d3487ad1e9e9f11be7b63f53429fa47f1     0 bin/shaderapivk.dll
-        162968      1 d108e9858f43a74fcda9e671f9a88a0227cda720     0 bin/shadercompile.exe
-        488088      1 491768a94ceeab0fa8493f4bd2ff25d15dc2770d     0 bin/shadercompile_dll.dll
+        993432      1 7108fdaae729d7fda0f976fab379454be4ef5a22     0 bin/shaderapidx9.dll
+        124568      1 fb0ba7d916ddf73dcf0108b04a9195a0f099b999     0 bin/shaderapiempty.dll
+        989848      1 22a0f1e57576a3a2058b86adead31ff45f3c1a15     0 bin/shaderapivk.dll
+        162968      1 7e6a0dfbf642f78bf975872442283b9fdc190873     0 bin/shadercompile.exe
+        488088      1 e90566855c506e6fc5d0a26d76476936fc4a44fc     0 bin/shadercompile_dll.dll
         622592      1 95646090d2674956b9d3ccdceb1bff7906d8640f     0 bin/sixense.dll
         294912      1 abc69f8e8b5f65ea3ae712440ed1d8df2e0c92f8     0 bin/sixense_utils.dll
-        213656      1 d7dde4cd5e63fd76f52fd54cc6bfe45ee85229d8     0 bin/SoundEmitterSystem.dll
-        203928      1 751dba7c399234c0665b82200a8d60f37926ffca     0 bin/soundsystem.dll
+        213656      1 898d457b8249880f68e2a8d55b256ac76cd71b9f     0 bin/SoundEmitterSystem.dll
+        203928      1 d2dc28f2d920978026de7caa7196c89adf9f8f32     0 bin/soundsystem.dll
         187200      1 5a0fcc44ce39e03bdcde1c30b95c8c75da89cea1     0 bin/sourcevr.dll
-        229016      1 f85b5fdec51a0c9f90f33c565e207adfcb2746ef     0 bin/splitskybox.exe
-        200344      1 297aa443bf08b3dfb870b022283d021fa6d004ca     0 bin/stdshader_dbg.dll
-        279192      1 bcd4eafc50e08246d471cd7895fa63f92f7b3c86     0 bin/stdshader_dx6.dll
-        209560      1 24e38012217a0b60f868c94b1af6237ac179e831     0 bin/stdshader_dx7.dll
-        397464      1 135830a24fc619e45dac27842d959a94cc21101c     0 bin/stdshader_dx8.dll
-        620696      1 035920dba9ffe2fc3bf0321194e5eaab73103bba     0 bin/stdshader_dx9.dll
+        229016      1 d9dce89c654dacbee9d9595fe0dc61394ecf0bc4     0 bin/splitskybox.exe
+        200344      1 371c25aefc1beabda5811bcf1d1f711bf86e41d4     0 bin/stdshader_dbg.dll
+        279192      1 2d2607439db410abc50de89b047f639958d9912d     0 bin/stdshader_dx6.dll
+        209560      1 a9c16c5a41fd9c9866c264eae6233f50bbd432a8     0 bin/stdshader_dx7.dll
+        397464      1 dd315fe677803f7eee773492ef9e4cd2deb65396     0 bin/stdshader_dx8.dll
+        620696      1 fa76d3848b72dc892579541891a6ed9b88ee25d5     0 bin/stdshader_dx9.dll
         513216      1 e29e3d33d5e39823b4e85397d8a5abdf36c91e0b     0 bin/steamerrorreporter.exe
        2777472      3 c797e71a16b391c0fc0ed0050ce20f0b53de1f78     0 bin/steamnetworkingsockets.dll
         266600      1 16ed4d83b41a490a1143f5b055b1934639dcb455     0 bin/steam_api.dll
-       1719960      2 6ab19edc543ea932035f81bab0830913fded8a17     0 bin/studiomdl.exe
-        548504      1 016604227db15730259eb59b2a595cfa230c84b1     0 bin/StudioRender.dll
+       1699480      2 1775da332e37e31310b92fc0cb13ac2888b4bb91     0 bin/studiomdl.exe
+        551576      1 1ec269461feead7e75f43009c13a59c726867002     0 bin/StudioRender.dll
          75264      1 6e9f2caac35139b6809a039c2ca97e60c99de1ff     0 bin/telemetry32.dll
-        407192      1 0e29bcc7f26d6c58a1efdad0a31b64108aa19a2f     0 bin/texturecompile_dll.dll
+        406680      1 a1a2142ede8bd86746bc121c46bf6f11cfbcf17f     0 bin/texturecompile_dll.dll
         125503      1 811efaab912d17195209fdb2269f1d3bb553da07     0 bin/tf.fgd
-        330904      1 2a83119a81265f12ec5aeb39d496437599420109     0 bin/tier0.dll
+        332440      1 8065b9112b57c0cf8683670f424d79e3e6d0b427     0 bin/tier0.dll
              0      0 0000000000000000000000000000000000000000    40 bin/tools
-       1451672      2 87ce6917aa8cc41152c5b13306076dd8e04dad80     0 bin/tools/commedit.dll
-       3551384      4 9c1a4cf7d8ab1bc1660236bbf71df79249ec76f5     0 bin/tools/pet.dll
-       3152536      4 780def8b1fc63828d7d85375cc9a7ed0d8f4a680     0 bin/tools/vmt.dll
+       1448088      2 d5d5e9ca336ccdcdc47a670f0ffec761b213f167     0 bin/tools/commedit.dll
+       3548312      4 66443927dcc387f1a026b768fad4a98907b0fc59     0 bin/tools/pet.dll
+       3147928      4 16bd3ba904e8497d73774ac71d015831e833987a     0 bin/tools/vmt.dll
              0      0 0000000000000000000000000000000000000000    40 bin/tools/x64
-       3778200      4 694915d2a350739364462dea85694b632cfcf525     0 bin/tools/x64/actbusy.dll
-       2140312      3 13b36aac4d7c6f0560a18cd3a700ee2cac035d3d     0 bin/tools/x64/commedit.dll
-       1916056      2 91728ef08e4ced3e721d19fdc9cf79caf7095d2c     0 bin/tools/x64/gameevents.dll
-       4271768      5 a7bc7ee58d5bd6a473e2e49fd634b79d8b67ae52     0 bin/tools/x64/pet.dll
-       1899672      2 72afc4b176f6224b73ae0ad30f57bd8741d98d60     0 bin/tools/x64/sampletool.dll
-       2071192      2 bb8ece1f12019c987fd2116f6039725743932239     0 bin/tools/x64/vcdblock.dll
-       3781784      4 f32b8361e2464f75ec3a2e08e51b6c3241de8d33     0 bin/tools/x64/vmt.dll
-        117400      1 3e9d5db8b13dbb2b396fd1e335a80cea3be8dc96     0 bin/unicode.dll
+       3778712      4 d8f41ab2fe77e397328de47148b0875936bdaa9b     0 bin/tools/x64/actbusy.dll
+       2137752      3 9f827a34a35304062c5acbb29aaaf5f84faf5b30     0 bin/tools/x64/commedit.dll
+       1913496      2 d24e3826285f8376de5a7df2ef7c6899c796c39d     0 bin/tools/x64/gameevents.dll
+       4272792      5 5b13561d43a2fa63448b07b2f9c3325d59bd0039     0 bin/tools/x64/pet.dll
+       1896600      2 f72a6b4315b18fe288a48dbf72a4551245172383     0 bin/tools/x64/sampletool.dll
+       2067608      2 8f657020ddcec13b0714dfbb3553aed7eface647     0 bin/tools/x64/vcdblock.dll
+       3782296      4 649e36b8c863d95f3e0d6abfe543f6928216ee6a     0 bin/tools/x64/vmt.dll
+        117400      1 9c2a5e36fa73edac9ed2b3097df07f0715fd2cc2     0 bin/unicode.dll
         245408      1 d8d88ea7083aee9c40f6fdc6c56451a018d21a83     0 bin/unicows.dll
-         94360      1 0c456769d0bd1fd615d7adab20b1fcbef8998707     0 bin/unitlib.dll
+         94360      1 712fb88739070fdba7fcedfc98422502761131c7     0 bin/unitlib.dll
         125440      1 1f3060e0299b9c594c465bbbe56c823f38298ac6     0 bin/valvedeviceapi.dll
-        204440      1 2d0decf15eac13f7def3188290eca21f7529710d     0 bin/vaudio_celt.dll
+        204440      1 0ec1f44a70b2a46b84e2590b76c5774351b8129d     0 bin/vaudio_celt.dll
         120640      1 1edede1bf1a3fc9be37d40f231ab0e2469d3faba     0 bin/vaudio_miles.dll
-        138904      1 bf9a42af3ce4b51ba9f6a56003ce9dafe15b149c     0 bin/vaudio_minimp3.dll
-        318104      1 ba3922fa5f1f8519a082292461ec9a762263e219     0 bin/vaudio_speex.dll
-       1310872      2 61579d41147936304f0eb0e954d78e87cbe37e4b     0 bin/vbsp.exe
-        343704      1 d0e25de12922cbe00e191179cefb5fed3403a674     0 bin/vbspinfo.exe
-        905880      1 b71be4eea07b43f11b278386b5d4b727a6d0da9b     0 bin/vgui2.dll
-       1387672      2 70a6ac90a2fcacf6d81fd267f08840408a3fb40d     0 bin/vguimatsurface.dll
-        192152      1 9c59c9cd80ef625ca63b22fc4d06826c913ff3ba     0 bin/video_bink.dll
-        193688      1 147821ed43abbb4d5b0326f913ce09b617fcdc95     0 bin/video_quicktime.dll
-        173208      1 0e286025d9620be7ce37aaacf97e9d417fc6e9cb     0 bin/video_services.dll
-        951960      1 de8c8af4dc0697f8b548519987fd65d7fb43151f     0 bin/vphysics.dll
-        677528      1 d96f385a41d7d168e81d2352d1ae0688096cd655     0 bin/vpk.exe
-        163480      1 ab9f1941ea2a41f4af0e6e23c7a5221bd8397a58     0 bin/vrad.exe
-       1461912      2 3497e6d5a70b5f1bedc83cd1cdf6c2b83f3d8262     0 bin/vrad_dll.dll
-        444056      1 34c05cae1adc2a352d55dca88fb1d7e1ff6e4ab8     0 bin/vscript.dll
-        239768      1 27b0a2582e28b25c389c4aa5809905af0d45a020     0 bin/vstdlib.dll
+        138904      1 1312813f8daa2cf29e79c1e128def557792e8741     0 bin/vaudio_minimp3.dll
+        318104      1 a41303710ef1ec2cfedb29f69fde0fccacf9cb24     0 bin/vaudio_speex.dll
+       1310872      2 14bdcf52069ccab9c27e2d498876cbe39f34b68f     0 bin/vbsp.exe
+        343704      1 20d04e3c3262b7e3987566cff983e2b102fd94cf     0 bin/vbspinfo.exe
+        904344      1 253dd4a7cf6c0bf2acc4a47b5a1be950fb68c9e0     0 bin/vgui2.dll
+       1386648      2 f9a704728a439f7408c02f8c4a03db8ddb17d9d2     0 bin/vguimatsurface.dll
+        191640      1 2481e8211f7d7eeef5e91cd5f4ed458d191061d4     0 bin/video_bink.dll
+        193688      1 108162da672ddca9ffecbeab8b7003568b0e03f8     0 bin/video_quicktime.dll
+        173208      1 05bde33fe361df5974a24d68d060da338b5a1199     0 bin/video_services.dll
+        951960      1 168ee4331d48352da0abe19b66cbe838530c7f77     0 bin/vphysics.dll
+        677528      1 598d5d0b32235fc561b0a040eb341511d91a24a2     0 bin/vpk.exe
+        163480      1 ecf6d8db70640ff9da5719f46475b8258150e8f2     0 bin/vrad.exe
+       1461912      2 028ef7aed8d8f1ea17d01287573d1cb017d1dea2     0 bin/vrad_dll.dll
+        444056      1 bbe3a10278f3ec3fae28213be4826a6fae774619     0 bin/vscript.dll
+        239768      1 fc41ee9320034c6bf81a008e036b491cdac2dd77     0 bin/vstdlib.dll
            240      1 317e895099903e6cb2fc4ceda0ab5a6fb4ce4e0b     0 bin/vtex.bat
         368640      1 9aa2c712acfe23c857abda02d4563a6d458bd01e     0 bin/vtex.dll
-        152728      1 d55b01734aac7ff68b9ebaed43627c19c6b68202     0 bin/vtex.exe
+        152728      1 c74574d49aeed14d9a4e1437f788f25839f85885     0 bin/vtex.exe
          29926      1 9631ffdfb1508420c51800a605bade7a2413beb3     0 bin/vtex.ico
-        880792      1 5b86896a84f71f668fec05ba5b694a5772874d94     0 bin/vtex_dll.dll
-        776344      1 7123dc825a013ad9d97a775b4395cde724afd75f     0 bin/vtf2tga.exe
-        152728      1 06bf0e14a833918d09d4bc9fd02728a158150ae8     0 bin/vvis.exe
-        574104      1 03aa7492c8a2f8c30788016215a278f608cc3c3e     0 bin/vvis_dll.dll
+        880280      1 5479f1f8ade3d5caf321f90976b4d6017580879e     0 bin/vtex_dll.dll
+        776344      1 3cca630ad70d48851bbf5fc69f77dcfb7c2d80a3     0 bin/vtf2tga.exe
+        152728      1 19aac7242d34181f1dfc6a2c7c2d7e839eb810b5     0 bin/vvis.exe
+        574104      1 915c0daa05a06bc6004b99b484e9e1895dc4d821     0 bin/vvis_dll.dll
              0      0 0000000000000000000000000000000000000000    40 bin/x64
-        614040      1 d163c5547a72f798469a6c504bb1f7cd559554a5     0 bin/x64/bsppack.dll
-        653976      1 c5c5c9bae205370c703458a0ed0fd550da1050e2     0 bin/x64/bspzip.exe
-        286360      1 77bd2afdf57d330626c5b50c5b2df2c14bc878aa     0 bin/x64/bugreporter_filequeue.dll
-        226456      1 adf1b10d8dec09c2e7ff6d9ebbe2cea02ae0d236     0 bin/x64/bugreporter_public.dll
-        320664      1 79afec043c4e4ed1f68088b94ed65fb26cc4938f     0 bin/x64/captioncompiler.exe
-        393880      1 f9581bdf1bbfd90c47ff2d734638373ec58e8f56     0 bin/x64/datacache.dll
-       1774744      2 fc4160458e0378579b4a37a3784b207b4b1edb89     0 bin/x64/dedicated.dll
-        929944      1 da04257583f46234b20882396da1646432875d45     0 bin/x64/dmxconvert.exe
-       2317976      3 230f4582b61d01c57f811cf15637169cfa3d104a     0 bin/x64/dmxedit.exe
+        614552      1 b678607dd8ae9c308f01740d3aee3aa9bcd8d2d8     0 bin/x64/bsppack.dll
+        653976      1 4cccbc163b0de7102dc5fc189c8116f6e973ae64     0 bin/x64/bspzip.exe
+        286360      1 bdd59b4b1b2d138c5aec744e3bb911ac1b027b1f     0 bin/x64/bugreporter_filequeue.dll
+        226456      1 f7f5b37fde86def361fb04cb1121e5249074631c     0 bin/x64/bugreporter_public.dll
+        320664      1 8eaf760cb11b5aa2c7646b111d680bd59da3303e     0 bin/x64/captioncompiler.exe
+        393368      1 ae882535fca0f03f04c49c7fd9d06d5d14641b2c     0 bin/x64/datacache.dll
+       1774232      2 91fa78e0053a16ccd2cf32bcaf1941a34227bed2     0 bin/x64/dedicated.dll
+        927384      1 82f01938856e3bbe395392f0d3ded3c82011e482     0 bin/x64/dmxconvert.exe
+       2317464      3 6cfcc15a4553f12eb8b2ebbb497ca84f79535453     0 bin/x64/dmxedit.exe
        3493902      4 fa3854a9c07fbe44f2a2de1333be4f096dad05bc     0 bin/x64/dxvk_d3d9.dll
-       3636376      4 eab714ec832331beab57d733362b8963ea5f875c     0 bin/x64/elementviewer.exe
-       5224088      5 9eafe5404922e4fdf33d82c5c3b38e5125a2dc07     0 bin/x64/engine.dll
-       2705048      3 87400c84bcf3aefbc7752027274d16a75f548882     0 bin/x64/FileSystemOpenDialog.dll
-        878232      1 8ab7a39c766d75f2b77adf14e9d517a632a5f412     0 bin/x64/filesystem_stdio.dll
-       2235032      3 0856a821253c12e6535df52d708c3b29f35fa7be     0 bin/x64/GameUI.dll
-        480920      1 7562b2b4e5b4bec528e0043ad134f7a3891f5e4b     0 bin/x64/glview.exe
-        294552      1 7bf660a51a7fac12b7dc8edbd3842c235443e9f3     0 bin/x64/hammer.exe
-       6847640      7 9cc6de84ccaa4c2b61e5f74e592df66b20538ec5     0 bin/x64/hammer_dll.dll
-        488600      1 108aa2b798b25eaa02cdc05474c0a8ce7ec449aa     0 bin/x64/height2normal.exe
-        501912      1 a85518c6187fc05f179d034251dab45a8a161698     0 bin/x64/height2ssbump.exe
-       2337944      3 72c1b3750a2640b1198f62a278c63cf62d52e136     0 bin/x64/hlfaceposer.exe
-        858264      1 3a855987017ec955cb0ab64a4b026d0f7c6efa35     0 bin/x64/hlmv.exe
-        252568      1 32254f883de0e01c4d4e77f20ef64899a0382b3b     0 bin/x64/inputsystem.dll
-        304792      1 922a116e9f841a727ee3bad35cb17762aadf1800     0 bin/x64/launcher.dll
+       3636376      4 9b7966679ee46aceef6bb44a637d86bc97dad04e     0 bin/x64/elementviewer.exe
+       5227160      5 79ff25a56d813b58a49fa9968acc080b0dd9ab66     0 bin/x64/engine.dll
+       2705048      3 48ea66daba4914d0e0ef71d130c03ca10b9b24fb     0 bin/x64/FileSystemOpenDialog.dll
+        877208      1 7f3558b18e22327772978ababc38d4d8111920e5     0 bin/x64/filesystem_stdio.dll
+       2234008      3 ebf923672f56e55ebdf04712733465db6d129d28     0 bin/x64/GameUI.dll
+        480920      1 5028536de8d4f6e143b20311cfa7a018ee369e17     0 bin/x64/glview.exe
+        294552      1 3b77e601de25dc11a0466bcbee14e62757a9dc50     0 bin/x64/hammer.exe
+       6847640      7 97d61fb3f1122cabc7aa63450a00d5e0bb1a9758     0 bin/x64/hammer_dll.dll
+        488600      1 d9e4cb9e2339b70331f4ccddf1d625b0c2308681     0 bin/x64/height2normal.exe
+        501912      1 99040704886bebfa6a51d517d199179b14292731     0 bin/x64/height2ssbump.exe
+       2336920      3 f6f1b681d7f5c3214d9c43f57c57adef2b91ff52     0 bin/x64/hlfaceposer.exe
+        857752      1 07a0e545c4b65ea33a4b16748a5f226dbd789f38     0 bin/x64/hlmv.exe
+        252568      1 b585151af3c8b984fd26742499a69ee1bc9340bb     0 bin/x64/inputsystem.dll
+        304280      1 eeeb63fbb10a852a731922239ed3b0145fe4dd31     0 bin/x64/launcher.dll
        6627176      7 49b2ad8a4e67451776d9c4e62c7aaf62a51e9735     0 bin/x64/libavcodec-58.dll
        1847656      2 612200abbd317ae2c2173e52248cb5bcdcf6a9a1     0 bin/x64/libavformat-58.dll
         756584      1 8949c887bd27fe265d1b4df08eb2d86cc74695a5     0 bin/x64/libavresample-4.dll
@@ -214,73 +214,75 @@ Total bytes compressed : 418219920
        2092948      2 3d35c61d3856e1c21cdc528c483312d12047c10c     0 bin/x64/libharfbuzz-0.dll
        1283432      2 9867b4ab6b1a430242eae51aa2b1700a1ace4a2e     0 bin/x64/libswscale-5.dll
        2423793      3 4219e70c2cbe041f21a7adaead1f765bc289973b     0 bin/x64/libxml2-2.dll
-       1451160      2 cbbf7c39b8f5da380b5932e2787b14aae5699463     0 bin/x64/MakeScenesImage.exe
-       1176728      2 1b693f03d88a14fce8434ded68f869fbf42d2efc     0 bin/x64/materialsystem.dll
-        500376      1 28607548500d96940d45178109d5293e64cb368d     0 bin/x64/mksheet.exe
-        541848      1 25d11d82b9edc652839b131c428f59412f97ad4c     0 bin/x64/motionmapper.exe
+       1449112      2 dc142e594bc198c0788692845b14e6cd1aa3b214     0 bin/x64/MakeScenesImage.exe
+       1176728      2 5ab37bacbab7a9790cfa431b9dac5fe200d570f5     0 bin/x64/materialsystem.dll
+        227480      1 47f08704d574280483fb55218bc9ed770e3d4a48     0 bin/x64/mdllib.dll
+        500376      1 7b31f04d306a3bf79098b032cc49b346bc4f7cd4     0 bin/x64/mksheet.exe
+        541848      1 6a8cb942e8d2c033b29e533b3a2efbae6247ba6e     0 bin/x64/motionmapper.exe
         226912      1 562c1e7e4d79f1b5fe572f792548fd3616d2c27f     0 bin/x64/networksystem.dll
-        480408      1 aec33c8024646300279cde31b6b4c818d0478f3e     0 bin/x64/normal2ssbump.exe
-       8087704      8 72e4cde8a7d37646101b3a92303664460c7116df     0 bin/x64/p4lib.dll
-        390808      1 c62f5ac798715a76a715f2b79a1e91cb733a328e     0 bin/x64/pfm2tgas.exe
-       3694744      4 d20c3ab8b0af7f720a169ca24ba8cfd977d08316     0 bin/x64/qc_eyes.exe
-        199832      1 eacf74cdeb6f93d3662c8f5ef7adc83a1a7f4f94     0 bin/x64/remoteshadercompile.exe
-        756888      1 c652bf27611a301b921ef9ea38800c7bce1c8233     0 bin/x64/replay.dll
-        213656      1 a54f3a255e7954392f8975da98c233c3e86ebd58     0 bin/x64/scenefilecache.dll
+        480408      1 c5a92259e15460a4b9c08132469b8d963cce3f45     0 bin/x64/normal2ssbump.exe
+       8087704      8 89206af7cf82a330e721c900d28d9abebf8cb622     0 bin/x64/p4lib.dll
+        390808      1 991481f099eebe61a411674f173dffab99ccad77     0 bin/x64/pfm2tgas.exe
+       3694744      4 0951881787acdcbb7a0cdf30c752611a659bd0b3     0 bin/x64/qc_eyes.exe
+        199832      1 66fca1a9a5fe7525111f667b4f1c47f757c7c1dd     0 bin/x64/remoteshadercompile.exe
+        756376      1 8c4c05b08147bc637fd662416297cf5289332e4f     0 bin/x64/replay.dll
+        213656      1 5761e8546b10cd57e900c1561b1ab22b447e4122     0 bin/x64/scenefilecache.dll
        2500096      3 fd645add0a7117463b88d10b74c3ea250faebbcc     0 bin/x64/SDL2.dll
-       1450648      2 c23d9608167dfb1ed55272ded6a02ac77dde54dc     0 bin/x64/ServerBrowser.dll
-        395416      1 63c190497c294540e5fb7358ffa886b67840b25f     0 bin/x64/serverplugin_empty.dll
-        822424      1 353de361e8b0ea84fbd4c93b5b26e243d42a71cc     0 bin/x64/shaderapidx9.dll
-        165528      1 51da4c061222ebd90f627b0ff5f01eb2e6918b17     0 bin/x64/shaderapiempty.dll
-        807064      1 8c03f7f84f2d128f68fb202f6161d6c3f5bc546a     0 bin/x64/shaderapivk.dll
-        369304      1 2d55638f603a416f3eae1f907e3ed96535f67915     0 bin/x64/simdtest.exe
-        273048      1 0de718d49cf755fbbe399442f13bd9a8a1848e24     0 bin/x64/soundemittersystem.dll
-        415384      1 e094f3c085cfc862d728759432e28d479841ff17     0 bin/x64/soundsystem.dll
-        289944      1 b51a3b4151de479405251d0f8206342b261e8d98     0 bin/x64/splitskybox.exe
-        407192      1 f87f81db8fb473b71d0116d5831c44dd33fd707a     0 bin/x64/stdshader_dbg.dll
-        515224      1 895977d3f83d7edefc4a97efb290bf73b0fcb020     0 bin/x64/stdshader_dx6.dll
-        419992      1 706d4a3bdadf1245ccab4fee2751cad2ec7ee990     0 bin/x64/stdshader_dx7.dll
-        677016      1 b0b9d42ddc85d37c0739b85ca892c898958d7706     0 bin/x64/stdshader_dx8.dll
-        946840      1 07a5ba96ff60715cb06239367b67fa87bc24bf71     0 bin/x64/stdshader_dx9.dll
+       1449112      2 da97416e5099faa34649ebf0e32e0ce4086d90e2     0 bin/x64/ServerBrowser.dll
+        395416      1 dfb2d2a23a4e4bf9ceefe4fe172fd9e6a52070d1     0 bin/x64/serverplugin_empty.dll
+        821912      1 8053ebf8e6c71e2b27ba27e6e766e2c64774394e     0 bin/x64/shaderapidx9.dll
+        165528      1 dbda60d6ebfd9bc95f491ae38b4520734af2be39     0 bin/x64/shaderapiempty.dll
+        806552      1 a2e4c3e36261c318b501a2ff2b8b7db9f8f23fe7     0 bin/x64/shaderapivk.dll
+        369304      1 96dc24910efd766ced4700c44de6906d302447dd     0 bin/x64/simdtest.exe
+        273048      1 a77c37a7d744e79bc48161e2c8238b908e71b57e     0 bin/x64/soundemittersystem.dll
+        415384      1 dde5c26f3083f397b076fb4fdf17c28011cc3c5e     0 bin/x64/soundsystem.dll
+        289944      1 867ec804c88ad7a2ca4e17a27796ffad96e6f4d6     0 bin/x64/splitskybox.exe
+        407192      1 5f78a8439269a764b653486f07c40cb41d354f66     0 bin/x64/stdshader_dbg.dll
+        515224      1 383a20668942c7f3cf3504c59a5bd1090f66d0ac     0 bin/x64/stdshader_dx6.dll
+        419992      1 ec960e3bf3ee5bbfca9a48bf6c3b19f0c566c0ff     0 bin/x64/stdshader_dx7.dll
+        677016      1 f1311ebb9a69f297ca2695678370a298d4fa5b18     0 bin/x64/stdshader_dx8.dll
+        946840      1 38a864d5ff5c591919e1c0df72fab94a29597cbb     0 bin/x64/stdshader_dx9.dll
         298856      1 40d0ae44e090db49b2309fb152fbd3e11124a376     0 bin/x64/steam_api64.dll
-       2459800      3 d5870f769255fd4c3ecb8633fedfd505e08f9fc8     0 bin/x64/studiomdl.exe
-        784024      1 d08cb661d38dc767fad8d409b8c2a94a11064e7d     0 bin/x64/studiorender.dll
-        415384      1 b2f7689ed97694823ac9e3a35ce4394a468d6eec     0 bin/x64/tier0.dll
-        153240      1 e847605f84c7fc63630d621a885431445cdd761e     0 bin/x64/unicode.dll
-        124568      1 8fb9238fcbaad7bbf3e33420d4ac3d5dcc0b887d     0 bin/x64/unitlib.dll
-        280728      1 db561fd963758b463b96ed9714e9dbfc3d568e89     0 bin/x64/vaudio_celt.dll
-        180888      1 ec30012abda95f57026ff5ce956c74648a98e98b     0 bin/x64/vaudio_minimp3.dll
-       1230488      2 ec46a47827e5f72c8be041d4dfb86be955b5302c     0 bin/x64/vbsp.exe
-        591512      1 6a81a408c9fabe23f618ef87e07b6fc8a3f252e8     0 bin/x64/vbspinfo.exe
-        693400      1 892c8985808cf17b964b2d630b0a68a3bb2d5412     0 bin/x64/vgui2.dll
-       1346200      2 50b5b02160efb60dcdb96e5dff3a13642eb941da     0 bin/x64/vguimatsurface.dll
+       2424472      3 ea6c5025ba6e0392d1c5e7055cea96ac2dc5478c     0 bin/x64/studiomdl.exe
+        786584      1 be6ea5ea93284174578f9b4b32adda47cdffae3c     0 bin/x64/studiorender.dll
+        416408      1 6c35e21907b76060ea38d94b29b1c7cebe94e7da     0 bin/x64/tier0.dll
+        153240      1 0b20f6cbd22787e87e3507098c6f3156b37b7f14     0 bin/x64/unicode.dll
+        124568      1 c78d0c912daf7113f88274ba10aaa3b4c86f5894     0 bin/x64/unitlib.dll
+        280728      1 74291db494b0b047964ae9139832ce675a85ce7a     0 bin/x64/vaudio_celt.dll
+        180888      1 fd68000586c88f446cc037e3ffd44e7332d96c8a     0 bin/x64/vaudio_minimp3.dll
+       1231000      2 476cabf35879e3330cc88197f37af979fca62388     0 bin/x64/vbsp.exe
+        592024      1 18319abe4babb5f0bce3617fcde8424e6d634ddd     0 bin/x64/vbspinfo.exe
+        692376      1 4ee89747d02be840a662c2c08f8978782c995685     0 bin/x64/vgui2.dll
+       1345176      2 0d506610fd81b232b47542631a45f3ed1073b2c9     0 bin/x64/vguimatsurface.dll
        4610448      5 6e02ca508c3fcbd7972475e7b1530d0a2dfa12c3     0 bin/x64/video64.dll
-        122008      1 2de19ce3a6bf4ba8611fc0166eea57abbb353b1d     0 bin/x64/video_quicktime.dll
-        219800      1 42608f0215e8e83172661f938715975badb65ca7     0 bin/x64/video_services.dll
-        243352      1 2968cef031ecd6e6c9183812e92f2651f9ddadbe     0 bin/x64/video_source2wrapper.dll
-       1412760      2 d28acfd8693aea370a70f15e28386b3315b0d9fb     0 bin/x64/vphysics.dll
-        993944      1 94f4e5641740ba354f1dcd9c22781e2757286eb4     0 bin/x64/vpk.exe
-        206488      1 d53ea6e60d43fc1096c65e9ce26367305e66b535     0 bin/x64/vrad.exe
-       1202840      2 06c6577819223a7847cb19371d519a7dbb6bdb32     0 bin/x64/vrad_dll.dll
-        753304      1 c3410e159034fae0cb89cf04a80737bd6866448c     0 bin/x64/vscript.dll
-        322200      1 e3817d7501b86b496044a19c93059473b97c9c84     0 bin/x64/vstdlib.dll
-        194200      1 5d8767a40674f8f0c48732a8176ede737ff7de0d     0 bin/x64/vtex.exe
-        644760      1 255a3dd9132a949cc7017db0ec847f763e7c2dc5     0 bin/x64/vtex_dll.dll
-        513176      1 1a6e9814a9c7a750880b702f177355f8a4d20857     0 bin/x64/vtf2tga.exe
-        194200      1 65b8fd4bfb1ce66b0647471f91afa207ea471739     0 bin/x64/vvis.exe
-        656024      1 68cf2380d7f573f158270ab539cf5fd3e0b0a522     0 bin/x64/vvis_dll.dll
+        122008      1 bafad596a20c78810b4c4d040803741b3d444b97     0 bin/x64/video_quicktime.dll
+        219800      1 8d677c7fcede25f831dd4511a631e56739f2a43c     0 bin/x64/video_services.dll
+        243352      1 a10f7daa2822e91c535eb10bd7743980c2598314     0 bin/x64/video_source2wrapper.dll
+       1412760      2 51c7c82a2ea1cf596cc32d1be4ec0a4350af1932     0 bin/x64/vphysics.dll
+       1705624      2 2b8cb6743053ed18cb820d0bd659a261d916ce07     0 bin/x64/vphysics_rubikon.dll
+        993432      1 daeb61b492c423f76c51bc954d7b160045dd3c5a     0 bin/x64/vpk.exe
+        206488      1 aeb4704b1226307971aac961bc63507e1d1c3815     0 bin/x64/vrad.exe
+       1202840      2 becadb48c16ef008e83d836e1c5f16887d59f582     0 bin/x64/vrad_dll.dll
+        753304      1 db0f930750eff529ff81dad2918fe054325976f7     0 bin/x64/vscript.dll
+        322200      1 b1ed81fee89c78764847f4293a9dbc850aeaa8e0     0 bin/x64/vstdlib.dll
+        194200      1 647bcf667b21f46a9bcfe5423bcddba03422fb5e     0 bin/x64/vtex.exe
+        644760      1 e6a5613148e9f98d8a8b37fbcef380f026c537a9     0 bin/x64/vtex_dll.dll
+        513176      1 53ed83fe2567ae36e0a858bb97dea56e39958180     0 bin/x64/vtf2tga.exe
+        194200      1 9e7986fdae8af7806eb1b4f0513113548615bd30     0 bin/x64/vvis.exe
+        656536      1 953c0df4427895ea0a8eb08ee125be05d102e525     0 bin/x64/vvis_dll.dll
          68888      1 78447c8fc4633b86d3cea374fb619fb53e9f9ad7     0 bin/xinput1_3.dll
              0      0 0000000000000000000000000000000000000000    40 hl2
              0      0 0000000000000000000000000000000000000000    40 hl2/media
       14672796     14 147516b55c21423be284cb3d7657260743ac42a2     0 hl2/media/valve.bik
        1323798      2 dcb306efc9faf450af6604a844b3d7460daf9ae5     0 hl2/media/valve.webm
              0      0 0000000000000000000000000000000000000000    40 tf
-        164960      1 e086b0e1acedf4fea93cfbe9aabeee3fee38b914     0 tf.exe
+        165016      1 a65ec1e74b6d10f59d6f91ccb1d372e584ac8c47     0 tf.exe
              0      0 0000000000000000000000000000000000000000    40 tf/bin
-      14391960     14 5dd910d819d445bd1025bb5b41c00e20255269c1     0 tf/bin/client.dll
-      11500184     11 792756852909f31ae0f067a04869ca1775d70ab9     0 tf/bin/server.dll
+      14388888     14 bf6efb11c93bef5a0cf3684b8ef97d71f5c9f08a     0 tf/bin/client.dll
+      11493016     11 49c91b52938646538f92d12ce9dbf4cddc7d5dc7     0 tf/bin/server.dll
              0      0 0000000000000000000000000000000000000000    40 tf/bin/x64
-      18799256     18 6628bf87044a02324730e2f82d56d390f3776a16     0 tf/bin/x64/client.dll
-      15387800     15 e206295c4127cd45673647caee417b76c94b5f55     0 tf/bin/x64/server.dll
+      18797208     18 ffb37652ba627dfea245eff24e772a52c573e322     0 tf/bin/x64/client.dll
+      15378584     15 28ff4b59b1e9769c3e9c83625b2d1fd75bb81078     0 tf/bin/x64/server.dll
              0      0 0000000000000000000000000000000000000000    40 tf/media
        6085011      6 05fbc73e04bf74a4f426da4a16058ff3da406c9b     0 tf/media/arena_intro.webm
        5687549      6 ba3df06b936cc8d3eabea3a385c3c7990975c106     0 tf/media/cp_badlands.webm
@@ -308,4 +310,4 @@ Total bytes compressed : 418219920
        5757770      6 5dd1c280410e1856830aab5f5a0b6671eb7ee196     0 tf/media/tr_target_spy.webm
       13303046     13 0d647dc3e94859c622ee6759d006ce14f9b797b4     0 tf/media/vsh_intro.webm
       19025736     19 7308d4bf2fc541e0ac2161649c92d314b0b6fc67     0 tf/media/zi_intro.webm
-        180832      1 307f4c064e2bbb193bb0c2c3d6fe8f7d479fd5c0     0 tf_win64.exe
+        180888      1 a76645f8ae5ca305dfd52779da61f163e72a51c3     0 tf_win64.exe

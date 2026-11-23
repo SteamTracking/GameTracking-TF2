@@ -1,4 +1,3 @@
-                [
          -> EQUIPPED: 
         %3d %3d %3d %3d %3d %3d %3d %3d
         %4u %4u %4u %4u %4u %4u %4u %4u
@@ -39,6 +38,7 @@
   Version: %llu:\n
   class: %s\n
   killer: name=%s class=%s\n
+  what():  
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123<?xml version="1.0" encoding="UTF-8"?>\n
  %02X
@@ -48,9 +48,8 @@
  ( def. "%s" )
  (classmap missing)
  (inactive)
- 9m_flCheapWaterStartDistance
  = { <proto text format> }". To set fields within it, use syntax like "
- AOnGameRulesCreationStringChanged: game rules entity (%s) not created
+ AOnGameRulesCreationStringChanged: missing gamerules class '%s' on the client
  BackUp() can only be called after Next().
  Bm_bFaceLeft
  Botkiller 
@@ -113,7 +112,6 @@
 !! Missing selectcmd on Player Class
 !!! Missing printname on weapon
 !HEV_AMO0
-!\t@particle/particle_fire
 !contains
 !float<
 !float<=
@@ -178,7 +176,7 @@
 ". This appears to be a value from a sibling type.
 ". Value: "
 "????'????????????????????????????????????????????????????\????
-"@BigShot
+"Em_flRechargeScale
 "MutableRawRepeatedField"
 "UnlitGeneric"\n{\n\t"$basetexture"\t"%s%c%s"\n\t"$translucent" "1"\n\t"$ignorez" "1"\n\t"$vertexcolor" "1"\n\t"$vertexalpha" "1"\n}\n
 "ctrl"\t"1"\n
@@ -391,7 +389,6 @@
 #FileOpenDialog_Save
 #FileOpenDialog_Select
 #FileOpenDialog_ToolTip_NewFolder
-#FileOpenDialog_ToolTip_OpenInDesktopManagerButton
 #FileOpenDialog_ToolTip_Up
 #Frame_Untitled
 #FreezePanel_Callout
@@ -942,7 +939,6 @@
 #Replay_RenderReplay
 #Replay_RenderReplays
 #Replay_RenderSetting_High
-#Replay_RenderSetting_Low
 #Replay_RenderSetting_Max
 #Replay_RenderSetting_Medium
 #Replay_ReplaySavedAlive
@@ -1659,7 +1655,6 @@
 #TF_PVE_UsePowerup_BuildinginstaUpgrade
 #TF_PVE_UsePowerup_CritBoost
 #TF_PVE_UsePowerup_MinMode
-#TF_PVE_UsePowerup_RadiusStealth
 #TF_PVE_UsePowerup_Recall
 #TF_PVE_UsePowerup_RefillAmmo
 #TF_PVE_UsePowerup_Ubercharge
@@ -1935,6 +1930,7 @@
 #TF_UseItem_GiftNoPlayers
 #TF_UseItem_MiniGameAlreadyStarted
 #TF_UseItem_RecipientCannotRecieve
+#TF_UseItem_Success
 #TF_UseItem_Text
 #TF_UseItem_Title
 #TF_UseOperationPassAlreadyActive_Text
@@ -2203,6 +2199,7 @@
 #rarity4
 #selfmade
 #strange
+#tIplayer/hwm
 #unique
 #var_
 #var_%s
@@ -2246,6 +2243,7 @@ $TEXTURE0
 $TEXTURE1
 $TEXTURE2
 $TEXTURE3
+$USINGPIXELSHADER
 $WEIGHTS
 $WIN32
 $WINDOWS
@@ -2302,6 +2300,7 @@ $spriteRenderMode
 $spriteorientation
 $spriteorigin
 $spritesize
+$tIClientEffect textures
 $tJTF_EjectBrass
 $translucent
 $underwateroverlay
@@ -2319,10 +2318,12 @@ $world_mins
 %-20s
 %-30s %-20s (%i %i)
 %-30s %-20s (%s)
+%.*Lf
 %.*g
 %.0f
 %.0f fps - %s\n
 %.0f%%
+%.10f
 %.18g
 %.1f
 %.2f                                                                                       %.2f                                                                                           %.2f
@@ -2373,7 +2374,9 @@ $world_mins
 %8.4f : %30s : %5.3f : %4.2f : %1d\n
 %8.4f : %30s : %5.3f : %4.2f\n
 %A %b %d
+%I:%M:%S %p
 %Y-%m-%dT%H:%M:%SZ
+%a %b %e %T %Y
 %a, %e %b %Y %H:%M:%S
 %a, %e-%b-%y %H:%M:%S
 %c(%s) %s%c: %s
@@ -2404,7 +2407,6 @@ $world_mins
 %f%%
 %f%f%f
 %hu:%u:%u%c
-%i %i %i %i
 %i %s %.3f %.3f 1\n
 %i %s %s : %s\n
 %i gametitle fade\n
@@ -2799,7 +2801,7 @@ $world_mins
 (weapon_print_name)
 )", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
 ).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-)Eresfile
+)EMaterialImage
 )items/pyro_music_tube.wav
 )weapons/flame_thrower_end.wav
 )weapons/flame_thrower_fire_hit.wav
@@ -2841,10 +2843,29 @@ $world_mins
 *N12_GLOBAL__N_114CYouTubeSystemE
 *N12_GLOBAL__N_115ScrollBarButtonE
 *N12_GLOBAL__N_116CaptionGripPanelE
+*N12_GLOBAL__N_117io_error_categoryE
+*N12_GLOBAL__N_121system_error_categoryE
+*N12_GLOBAL__N_122generic_error_categoryE
 *N12_GLOBAL__N_19GripPanelE
 *N6google8protobuf12_GLOBAL__N_123AggregateErrorCollectorE
 *N6google8protobuf12_GLOBAL__N_123GeneratedMessageFactoryE
 *N6google8protobuf12_GLOBAL__N_129FieldValuePrinterUtf8EscapingE
+*NSt13__facet_shims12_GLOBAL__N_112collate_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_112collate_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_113messages_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_113messages_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_113numpunct_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_113numpunct_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_113time_get_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_113time_get_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_114money_get_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_114money_get_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_114money_put_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_114money_put_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb0EEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb1EEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb0EEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb1EEE
 *Z19GetBackgroundDimmervE13CDimmerButton
 *Z19GetCompRanksTooltipvE29CPositionedSimplePanelToolTip
 *Z19GetDashboardTooltip11EMMTooltipsE19CTFDashboardTooltip
@@ -2864,6 +2885,8 @@ $world_mins
 *ZNK14C_EconItemView17IterateAttributesEP26IEconItemAttributeIteratorE46CEconItemAttributeIterator_EconItemViewWrapper
 *this
 +++ %-20.20s:  %s (was %s)
+++CCUNG
+++CCUNGstd::exception
 +?Weapon_RocketPack.BoostersExtend
 +alt1
 +alt2
@@ -2930,6 +2953,8 @@ $world_mins
 ,%03d
 - CURRENT SOUNDSCAPE: %d [%s]\n
 - PLAYING DEBUG SOUNDSCAPE: %d [%s]\n
+-+xX0123456789abcdef0123456789ABCDEF
+-+xX0123456789abcdefABCDEF
 --- Spewing all trackers for %s ---\n
 ----- ---------------------------------------------- ---------- ------ -------------- ------ --------- ---------- ----------\n
 ----- ---------------------------------------------- ---------- ------ -------------- ------ ---------- ---------- ---------- ------ -------------- ------\n
@@ -2938,6 +2963,7 @@ $world_mins
 --------------------------------------------------\n
 --------------------------------------------\n\n
 ----------------------------------\n\n
+-0123456789
 -1.25
 -10 -10 -10
 -100.0f
@@ -3289,7 +3315,6 @@ $world_mins
 ../shared/tf/tf_weaponbase.cpp
 ../sprites/obj_icons/capture_highlight
 ../sprites/obj_icons/icon_obj_white
-../vgui/achievements/tf_soldier_kill_spy_killer
 ..\%s_locked
 ..\HUD\death_wheel_%d
 ..\HUD\death_wheel_whammy
@@ -3328,7 +3353,8 @@ $world_mins
 /data/src/public/tier1/UtlSortVector.h
 /data/src/public/vstdlib/jobthread.h
 /data/src/thirdparty/protobuf-2.6.1/src/google/protobuf/repeated_field.h
-/high
+/dev/random
+/dev/urandom
 /materials/
 /mvm/mvm_tank_deploy.wav
 0 - Sort is off, 1 - Sort is Alphabet (Pub)
@@ -3415,6 +3441,7 @@ $world_mins
 0100000000000000000001F4C8F927AED3CA752257
 0100000000000000D9CCEC8A39E56F
 010000000000000108789B2496AF93
+0123456789
 0123456789ABCDEF
 0123456789abcdef
 0163F35A5137C2CE3EA6ED8667190B0BC43ECD69977702709B
@@ -5473,7 +5500,6 @@ $world_mins
 18CPaintKitVariables
 18CParticleAttractor
 18CParticleCollision
-18CPotteryWheelManip
 18CPotteryWheelPanel
 18CPrepareFileThread
 18CProxyResistShield
@@ -5557,6 +5583,7 @@ $world_mins
 18IGameClientExports
 18IModelLoadCallback
 18IPanelMetaClassMgr
+18IReplayItemManager
 18IScreenSpaceEffect
 18IVoiceStatusHelper
 18MenuItemCheckImage
@@ -5820,7 +5847,6 @@ $world_mins
 1=translate the viewmodel with the head motion.
 1C97BEFC54BD7A8B65ACF89F81D4D4ADC565FA45
 1E589A8595423412134FAA2DBDEC95C8D8675E58
-1G%.10f
 2 - bottom-left
 2 - resize down
 2.5f
@@ -7725,6 +7751,7 @@ $world_mins
 3DF91610A83441CAEA9863BC2DED5D5AA8253AA10A2EF1C98B9AC8B57F1117A72BF2C7B9E7C1AC4D77FC94CADC083E67984050B75EBAE5DD2809BD638016F723
 3EE30B568FBAB0F883CCEBD46D3F3BB8A2A73513F5EB79DA66190EB085FFA9F492F375A97D860EB4
 3FFFFFFF7FFFFFFFBE0024720613B5A3
+3m_iPing[0]
 4.5f
 40 5 0
 40.0
@@ -7926,8 +7953,11 @@ $world_mins
 49CMsgRequestItemPurgatory_FinalizePurchaseResponse
 4Bm_bHeadlightIsOn
 4CFPS
+4CHudMedicChargeMeter
 4CJob
 4CLCD
+4Cfixed_shot_pattern
+4DTeamTexture_IMaterialProxy003
 4fff>fff>fff>fff>
 500.0
 5000
@@ -7949,6 +7979,7 @@ $world_mins
 56CAchievementTFEngineer_DestroySappersOnNonOwnedBuildings
 58CMsgNotificationOfSuspiciousActivity_MultipleGameInstances
 59CMsgGC_DailyCompetitiveStatsRollup_Response_RankBucketEntry
+5?33s?m_nPlasmaModelIndex
 5AC635D8AA3A93E7B3EBBD55769886BC651D06B0CC53B0F63BCE3C3E27D2604B
 5CSHA1
 5CSave
@@ -8011,6 +8042,7 @@ $world_mins
 7IConVar
 7IHudLCD
 7VParticleSystemQuery001
+7m_iNormalY
 7src_corner_height
 80.f
 800.0f
@@ -8058,7 +8090,9 @@ $world_mins
 8IVehicle
 8SoftLine
 8b  16-May-2010
+8m_fDisappearDist
 8particle/particle_sphere
+8physpropclientside.cpp
 90.0
 900.0f
 99.0
@@ -8163,13 +8197,14 @@ $world_mins
 : this object doesn't support resynchronization
 : this object requires an IV
 : unexpected channel name "
+:-particles
+:CGameStringPool
 :CHudTeamGoal
-:CKeyValueLabelPanel
-:effects/christmas_bulb.vmt
+:CQuestMapNodePanel
 :episodic_intro
 ;$lighting
-;Ecritical_pipe_blue
-;TE_PhysicsProp
+;DT_FuncTrackTrain
+;Ecritical_grenade_blue
 ;demoman_red
 < Reload >
 < not bound >
@@ -8182,9 +8217,13 @@ $world_mins
 <<OfflinePracticePanel
 <<illegal>>
 <?xml version="1.0"?><entry xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:yt="http://gdata.youtube.com/schemas/2007"><media:group><media:title type="plain">%s</media:title><media:description type="plain">%s</media:description><media:category scheme="http://gdata.youtube.com/schemas/2007/categories.cat">%s</media:category>%s<media:keywords>%s</media:keywords><media:category scheme="http://gdata.youtube.com/schemas/2007/developertags.cat">%s</media:category></media:group>%s</entry>
+<CHudArenaCapPointCountdown
+<PF\n%d %d\n-1.000000\n
+<ViewEffects
 <_rt_PowerOfTwoFB
 <a href=
 <a href=item://%u>%s</a>
+<c_te_fizz.cpp
 <entindex> <fieldname>:  Track changes to entity index entindex, for field fieldname.
 <img src="
 <internalReason>Private video</internalReason>
@@ -8194,121 +8233,96 @@ $world_mins
 <no file>
 <null>
 <pre>
-<tpdamage_2
+<tpdamage_4
 <unknown (%d)>
 <unknown>
 <yt:accessControl action="list" permission="denied"/>
 <yt:private/>
+=%i %i %i %i
 == Invite %d: Lobby %llu, MatchGroup %s (%d)\n
 ============================================\n
 ========================================\n
 =CRagdoll
 =DT_WeaponSyringeGun
 =TF2ReplayRenders
-=ViewEffects
-=\r9333333
+=Y?#Replay_RenderSetting_Low
+=\r9m_iMode
+=effects/fleck_wood1
 =gff=
-=physpropclientside.cpp
-=sequence number %d too high in sheet file!!!\n
 >1001
 >@33333?
+>Bm_bReadyToBackstab
+>CHudHistoryResource
+>CSimplePanelToolTip
 >ExplosionCore_wall
 >Seconds:%d Fraction:%f Sample:%d  L:%f R:%f\n
->blood_impact_backscatter
 >fff?CReplayReminderPanel
 >gameui_activated
->m_nSceneStringIndex
+>pda_panel
+>std::bad_alloc
 ?$AAInternal1
-?$USINGPIXELSHADER
 ?***\nShared activity collision! %s<->%s\n***\n
 ?+inspect_server
-?18IReplayItemManager
+?18CPotteryWheelManip
 ?20CEntityMaterialProxy
 ?333333
-?333?333?333?333?
 ?33s?333?
-?433333
 ?433333s?
 ?8IConsole
 ???\f???????\n???\r?\t?\v
 ?ButtonClicked
 ?CAvatarImagePanel
 ?CCenterStringLabel
-?CConfirmGiftWrapDialog
-?CDisguiseStatus
 ?CGenericNotificationToast
-?CHudArenaCapPointCountdown
 ?CHudArenaNotification
 ?CHudHDRDemo
-?CHudMedicChargeMeter
-?CLIENT:  %s(%s) thinking for %.02f ms!!!\n
+?CHudStalemate
 ?CMvMScoreboardEnemyInfo
-?CQuestMapNodePanel
 ?CQuestMapPathsPanel
-?CQuestObjectivePanel
 ?CRecipeComponentItemModelPanel
 ?CReplayBasePanel
-?CReplayRenderDialog
-?CSimplePanelToolTip
 ?CTFArrowPanel
 ?CTFTextWindow
-?Changing collision rules within a callback is likely to cause crashes!\n
-?Client Soundscape data dump:\n
-?ClientEffect textures
 ?DT_PhysMagnet
 ?DT_TFWeaponBaseMelee
-?Flip view models.
 ?InvertibleRSAFunction: computational error during private key operation
 ?MMDashboard:Exiting state %s\n
 ?TE_BreakModel
-?TE_MuzzleFlash
-?TeamTexture_IMaterialProxy003
 ?UUUUUU
 ?Weapon_Slap.OpenHand
 ?[Tick %d] %03i %s::%s - %s
-?debug/showz
+?body_yaw
+?emit noise
 ?fff?333?
 ?fff?CompiledCaptionHeader_t
-?ffffff
 ?light has _fifty_percent_distance of %f but no zero_percent_distance\n
 ?m_bMeasurePerf
 ?m_flPrevCycle
-?m_hProjectile
-?m_iMode
-?models/props_forest/dove.mdl
+?m_nSceneStringIndex
+?particle/particle_fire
 ?particle_sort.cpp
-?passtime/hud/passtime_pass_to_me_prompt
-?projectile_none
-?r_cheapwaterstart: %f\n
 ?start_framed
 ?stop_watch_changed
-?unknown_language
-?unspecified
 ?wwwwww
-@333
-@33s?
-@@CTFPingPanel
+@@CReplayRenderDialog
+@@C_PlayerDestructionDispenser
 @@N4vgui5ImageE
 @CBaseViewport
-@CGameRules
-@CHudBaseTimer
 @CHudChatLine
 @CTFParticlePanel
-@CTFTips
-@DT_BCCLocalPlayerExclusive
 @backward
 @cc_emit
-@m_bSendHandle: %d, m_Handle.Get: 0x%p\n
-@m_fDisappearDist
-@m_flDamage
+@ctf_item_start
+@m_flFadeEndDist
 @m_iRoundsWon
-@m_mouseaccel1
+@m_mousespeed
 @pass_get
 @should_never_see_this
 A burning player that gibs has burning gibs.
 A file with this name is already in the pool.
 A protocol message was rejected because it was too big (more than 
 A simple way for the training client to communicate with the server.
+A33s?33s?
 A5fSXbf7
 A9FB57DBA1EEA9BC3E660A909D838D718C397AA3B561A6F7901E0E82974856A7
 A9FB57DBA1EEA9BC3E660A909D838D726E3BF623D52620282013481D1F6E5377
@@ -8321,6 +8335,7 @@ ABCDEFGHIJKMNPQRSTUVWXYZ23456789
 ABGR8888
 ACHIEVED
 ACID
+ACNavProgress
 ACTFMMIssueDialog
 ACTOR
 ACT_180_LEFT
@@ -10327,15 +10342,17 @@ AI39si7JIn2nj67YoxWPzmsGHO2R-WSpN0su1f3-BF9lVC5jWz9DEOPbOxFz-MiXuaMtoCZnS3nSPjwG
 AI39si7XuLuXg3-2T06aVUaM-45HSXYFqzXfyPR6y5K4XotWKf78lfCByXnD1T8Kj9jeIR85NelpjGYGsH8pR3RO4k3TrwlTbw
 AIRBOAT
 AIWalkable
+AKST
 ALIGN_TYPE is wrong, please fix
 ALWAYSGIB
 ARGB8888
 ARS$
+ASCII
+ASCII//TRANSLIT
 ATI1N
 ATI2N
 ATI_DST16
 ATI_DST24
-AT\tK
 AWARDED
 AbandonButton
 Abbey
@@ -10355,6 +10372,7 @@ AbuseRepotManager
 AbuseType
 AbuseTypeComboBox
 AbuseTypeLabel
+Ac_te_smoke.cpp
 AccelSlider
 Accept Nth match invite
 AcceptButton
@@ -10482,6 +10500,8 @@ AlreadyCommitted
 AltMode%d
 AltModes
 Altitude
+Am_flDamage
+Am_flLastCritCheckTime
 Am_iBossHealthPercentageByte
 Ambient %s:Unknown command %s\n
 Ambient.Siren
@@ -10632,6 +10652,7 @@ ApplyDataToControls
 ApplySchemeSettings
 ApplyStampButton
 Applying new item schema, version %08X\n
+April
 Aquarius
 ArenaStreakLabel
 ArenaStreaksBG
@@ -10656,7 +10677,6 @@ Assertion Failed: cubMaxPlaintext <= ULONG_MAX / cBlocks
 Assertion Failed: false
 Assertion Failed: i >= 0 && i < Obj().members_size()
 Assertion Failed: idxMatchPlayer.value >= 0
-Assertion Failed: rsaEncryptor.FixedCiphertextLength() <= ULONG_MAX / cBlocks
 Assign target CP
 AssignItemToPanel
 AssistsLabel
@@ -10709,6 +10729,7 @@ Attribute index %i not found when specifying dynamic recipe
 AttributesLabel
 AudioLanguage
 AuditData
+August
 Auth=
 AuthenticAMD
 AuthenticatedDecryptionFilter
@@ -10744,10 +10765,12 @@ B17C_RecipientFilter
 B3312FA7E23EE7E4988E056BE3F82D19181D9C6EFE8141120314088F5013875AC656398D8A2ED19D2A85C8EDD3EC2AEF
 B4050A850C04B3ABF54132565044B0B7D7BFD8BA270B39432355FFB4
 B4E134D3FB59EB8BAB57274904664D5AF50388BA
+B?Player.PickupWeapon
 BAD ATTRIBUTE IN MVM_UPGRADES: %s\n
 BADFUNCTIONPOINTER
 BAE_EMPTY
 BCHudWeapon
+BCParticleMgr::CreateEffect: factory not found for effect '%s'\n
 BCTFStreakNotice
 BER decode error
 BER decode error: unknown object identifier
@@ -10949,6 +10972,7 @@ BenefactorLevel_IMaterialProxy003
 Beyond this number of degrees, the mouse clamps
 Beyond this number of degrees, the mouse drags the torso
 BgAlpha
+BigShot
 Bind a concommand to a button.
 BitLength
 Bitfield - locks HUD axes to the world - 0=pitch, 1=yaw, 2=roll
@@ -11004,8 +11028,8 @@ BlueprintPanelMousePressed
 BlueprintPanelMouseReleased
 BlurX
 BlurYAndBloom
+Bm_hProjectile
 Bm_lifeState
-Bm_vecPlayerMountPositionTop
 Boardwalk
 BodygroupPanel
 Bogus DAC index %d
@@ -11061,6 +11085,7 @@ Bounce.ShotgunShell
 Bounce.Shrapnel
 Bounce.Wood
 BoxTops
+Bprocedural_chamber
 BrassModel
 Brazil
 Bread Space
@@ -11150,7 +11175,7 @@ ByteQueue: size specified for UndoLazyPut is too large
 C&opy
 C302F41D932A36CDA7A3462F9E9E916B5BE8F1029AC4ACC1
 C302F41D932A36CDA7A3463093D18DB78FCE476DE1A86297
-C333?w
+C333?
 CAI_BaseNPC
 CAM_Think
 CATEGORY
@@ -11269,6 +11294,7 @@ CBuildingStatusItem_TeleporterExit
 CBulletWhizTimer
 CBuyMenu
 CBuySubMenu
+CCHudBaseTimer
 CCIR601 sampling not implemented yet
 CCLientEffectPrecacheSystem
 CCLientShadowMgr
@@ -11281,6 +11307,7 @@ CCartViewItemEntry
 CCasualCategory
 CCasualCriteriaHelper: Attempting to set map %s as selected, but not in any valid game modes!\n
 CCasualCriteriaHelper: Map %s is selected, but not in any valid game modes!\n
+CCasualCriteriaPanel
 CCasualSidePanel
 CCharInfoLoadoutSubPanel
 CCharacterInfoPanel
@@ -11294,6 +11321,7 @@ CClientLeafSystem::ComputeTranslucentRenderLeaf
 CClientLeafSystem::PreRender
 CClientLeafSystem::ProjectFlashlight
 CClientRenderablesList pool
+CClientScoreBoardDialog
 CClientShadowMgr::AddShadowToReceiver
 CClientShadowMgr::BuildFlashlight
 CClientShadowMgr::BuildPerspectiveWorldToFlashlightMatrix
@@ -11327,7 +11355,6 @@ CCommentaryModelPanel
 CCommentaryModelViewer
 CCompAccessSlidePanel
 CCompStatsPanel
-CCompetitiveAccessInfoPanel
 CConfirmApplyPaintCanBaseDialog
 CConfirmApplyPaintCanDialog
 CConfirmApplyStrangifierDialog
@@ -11341,6 +11368,7 @@ CConfirmDeleteReplayDialog
 CConfirmDialog
 CConfirmDisconnectFromServerDialog
 CConfirmDuckTokenApplicationDialog
+CConfirmGiftWrapDialog
 CConfirmItemPreviewDialog
 CConfirmNameDialog
 CConfirmSpellbookPageApplicationDialog
@@ -11420,6 +11448,7 @@ CDetailObjectSystem::RenderTranslucentDetailObjectsInLeaf
 CDetailObjectSystem::SortSpritesBackToFront
 CDetailObjectSystem::SortSpritesBackToFront -- Sort
 CDirtySpatialPartitionEntityList
+CDisguiseStatus
 CDispenserControlPanel
 CDmxElement::UnpackIntoStructure: Mismatched attribute type in attribute "%s"!\n
 CDominationsPanel
@@ -11429,6 +11458,7 @@ CDrawingPanel
 CDucksLeaderboard
 CDucksLeaderboardManager
 CDummyMaterialProxy::CDummyMaterialProxy()\n
+CDummyMaterialProxy::Init( material = "%s" )\n
 CDummyMaterialProxy::OnBind( %p )\n
 CDummyMaterialProxy::~CDummyMaterialProxy()\n
 CDynamicLight
@@ -11600,9 +11630,9 @@ CGameMovement::PlayerMove
 CGameMovement::TracePlayerBBox
 CGameMovement::TryTouchGround
 CGameMovement::TryTouchGroundInQuadrants
+CGameRules
 CGameRulesProxy
 CGameStats
-CGameStringPool
 CGaussianRandomStream::AttachToStream(IUniformRandomStream*)
 CGaussianRandomStream::CGaussianRandomStream(IUniformRandomStream*)
 CGaussianRandomStream::RandomFloat(float, float)
@@ -11725,7 +11755,6 @@ CHudGeiger
 CHudHintDisplay
 CHudHintKeyDisplay
 CHudHintKeyDisplay::MsgFunc_KeyHintText: string count != 1.\n
-CHudHistoryResource
 CHudInspectPanel
 CHudItemAttributeTracker
 CHudItemEffectMeter
@@ -11743,7 +11772,6 @@ CHudSapperChargeMeter
 CHudScope
 CHudScopeCharge
 CHudSpellMenu
-CHudStalemate
 CHudStopWatch
 CHudTFCrosshair
 CHudTeamGoalTournament
@@ -11795,15 +11823,18 @@ CJobMgr::CheckForJobTimeouts
 CJobMgr::m_WorkThreadPool
 CJobThreadFuncWorkItem::DispatchCompleted
 CJobThreadFuncWorkItem::ThreadProcess
+CKeyValueLabelPanel
 CKillsPanel
 CLIENT
 CLIENT MAIN ACT: %s\n
 CLIENT SPECIFIC ACT: %s\n
+CLIENT:  %s(%s) thinking for %.02f ms!!!\n
 CLOSECAPTION
 CLP$
 CLadderLobbyLeaderboard
 CLaserDot
 CLayeredMapToolTip
+CLcx
 CLightGlow
 CLoadingDiscPanel
 CLoadoutItemOptionsPanel
@@ -12314,7 +12345,6 @@ CTFHudObjectiveStatus
 CTFHudPasstime
 CTFHudPasstimeBallOffscreenArrow
 CTFHudPasstimeBallStatus
-CTFHudPasstimeOffscreenArrow
 CTFHudPasstimePanel
 CTFHudPasstimePassNotify
 CTFHudPasstimePlayerOffscreenArrow
@@ -12379,6 +12409,7 @@ CTFParticleCannon
 CTFParty
 CTFPartyInvite
 CTFPasstimeLogic
+CTFPingPanel
 CTFPipebombLauncher
 CTFPistol
 CTFPistol_Scout
@@ -12526,7 +12557,6 @@ CTFWearableVM
 CTFWinPanel
 CTFWrench
 CTSListBase: Misaligned list\n
-CTakeDamageInfo
 CTargetID
 CTeam
 CTeamMenu
@@ -12672,8 +12702,6 @@ CWorkerThread::Reply(unsigned int)
 CWorkerThread::WaitForCall(unsigned int*)
 CWorld
 CXPSource
-CXXABI_1.3
-CXXABI_1.3.8
 CYOA.MapClose
 CYOA.MapOpen
 CYOA.NodeAbsent
@@ -12788,7 +12816,6 @@ C_ParticleSystem::ClientThink SkipToTime
 C_PasstimeBall
 C_PhysPropClientside::ImpactTrace
 C_PhysPropClientside::Initialize: PhysModelParseSolid failed for entity %i.\n
-C_PlayerDestructionDispenser
 C_PlayerResource
 C_PointCommentaryNode
 C_PointWorldText
@@ -12902,7 +12929,6 @@ CameraFirst
 CameraFree
 CameraFringe
 CameraThird
-Camo_IMaterialProxy003
 Camp Saxton
 Can players call votes to kick players from the server?
 Can't 
@@ -13152,6 +13178,10 @@ CloseSideStack
 CloseWeaponSelectionMenu
 Closed temporary file %s
 Closer than
+Cm_flFadeStartDist
+Cm_vecPlayerMountPositionTop
+Cmaps/%s_particles.txt
+Cmodels/props_forest/dove.mdl
 CoachNameLabel
 CoachPlayersButton
 Coal Pit
@@ -13467,6 +13497,7 @@ CutButton%i
 Cutoff area %.2f\n
 Cutter
 CvarToggleCheckButton
+Cvoice_ban.dt
 Cycle through the aim & move modes.
 CycleRankTypeButton
 CycleTargetFwdHintIcon
@@ -13486,7 +13517,6 @@ DB7C2ABF62E35E668076BEAD2088
 DB7C2ABF62E35E668076BEAD208B
 DB7C2ABF62E35E7628DFAC6561C5
 DBG_PATHMATCH
-DCNavProgress
 DCT coefficient out of range
 DCT scaled block size %dx%d not supported
 DEBRIS
@@ -13527,6 +13557,7 @@ DT_AttributeContainer
 DT_AttributeContainerPlayer
 DT_AttributeList
 DT_AttributeManager
+DT_BCCLocalPlayerExclusive
 DT_BaseAnimating
 DT_BaseAnimatingOverlay
 DT_BaseAttributableItem
@@ -13604,7 +13635,6 @@ DT_FuncRespawnRoom
 DT_FuncRespawnRoomVisualizer
 DT_FuncRotating
 DT_FuncSmokeVolume
-DT_FuncTrackTrain
 DT_Func_Dust
 DT_Func_LOD
 DT_GameRulesProxy
@@ -13786,7 +13816,6 @@ DT_TFProjectile_Arrow
 DT_TFProjectile_BallOfFire
 DT_TFProjectile_Cleaver
 DT_TFProjectile_EnergyBall
-DT_TFProjectile_EnergyRing
 DT_TFProjectile_Flare
 DT_TFProjectile_GrapplingHook
 DT_TFProjectile_HealingBolt
@@ -13966,6 +13995,7 @@ DebugTextureInfo001
 Debugging tool to test the item giveaway panel. Usage: test_giveawayitem <weapon name>\n   <weapon id>: 0 = primary, 1 = secondary, 2 = melee.
 Decal textures
 Decal: entity = %i
+December
 DeclineButton
 DecodingLookupArray
 DecrementButton
@@ -14056,7 +14086,6 @@ Detail_Prop_Rendering
 DetailsLabel
 DetailsView
 DetectUncompressible
-Detected one or more errors parsing %s\n
 DetermineWaterRenderInfo
 Determines the location of the spectator targetID panel.
 Determines whether netgraph font is proportional or not
@@ -14218,7 +14247,6 @@ DownloadLabel
 DownloadOverlay
 DownloadProgress
 Downward Fast
-Dpda_panel
 DragDrop
 DragDrop.DragFrame
 DragDrop.DropFrame
@@ -14315,6 +14343,7 @@ E2NcUkG2
 E87579C11079F43DD824993C2CEE5ED3
 E95E4A5F737059DC60DF5991D45029409E60FC09
 E95E4A5F737059DC60DFC7AD95B3D8139515620F
+E?models/weapons/v_models/v_baseball.mdl
 ECDSA
 EHandle (%p)\n
 EHandle (0x%p->%s)
@@ -14375,6 +14404,7 @@ EditLoadoutButton
 EditLoadoutHintIcon
 EditMenu
 EditableTooltip
+Eevent %s "%s"\n
 Effects/AnimatedSheen/animatedsheen0
 EffectsOwner
 Ehalloween_pumpkin_grab
@@ -14600,6 +14630,7 @@ FATAL
 FCHudArenaPlayerCount
 FCVAR_CHEAT cvars reverted to defaults.\n
 FCVAR_NEVER_AS_STRING
+FChanging collision rules within a callback is likely to cause crashes!\n
 FDT_TFParachute
 FFFFFFFDFFFFFFFFFFFFFFFFFFFFFFFC
 FFFFFFFDFFFFFFFFFFFFFFFFFFFFFFFF
@@ -14790,6 +14821,7 @@ FastHexToBuffer() wants non-negative integers, not
 Featured
 FeaturedItemLabel
 FeaturedItemPrice
+February
 FeedbackSize
 Feel free to add support for more if you need it.
 Field "
@@ -14876,6 +14908,7 @@ FlashlightState
 Flicker
 Flinch
 Flip Percentage
+Flip view models.
 FloatingNumberLabel
 Flushes async'd captions.
 Flushes the client side soundscapes
@@ -14954,6 +14987,7 @@ FreezePanelBG
 FreezePanelBase
 FreezeTeamIcon
 Friction multiplier when sliding against surfaces while trapped in an air current
+Friday
 Friendly Item
 FriendsInGame
 Frostcliff
@@ -14973,20 +15007,18 @@ GAMETITLE
 GC sent malformed CGCUpdateItemSchema message: No schema data, no URL\n
 GC told us to expect %08X, we got %08X\n
 GCC: (SteamRT 10.3.0-3+steamrt3.1+bsrt3.1) 10.3.0
+GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GCHost
+GDT_TFWeaponSword
 GData-Version
 GENERIC
-GLIBCXX_3.4
-GLIBCXX_3.4.18
-GLIBCXX_3.4.20
-GLIBCXX_3.4.21
-GLIBCXX_3.4.9
 GLIBC_2.14
 GLIBC_2.2.5
-GLIBC_2.22
+GLIBC_2.25
 GLIBC_2.27
 GLIBC_2.29
 GLIBC_2.3
+GLIBC_2.3.2
 GLIBC_2.4
 GLIBC_2.7
 GPUDeviceID
@@ -15130,6 +15162,8 @@ Gunzip: header decoding error
 Gunzip: length check error
 Gunzip: tail too short
 H:%x
+HAprojectile_none
+HBspell_fireball_small_blue
 HDR Demo HUD Element toggle.
 HDRDemoText
 HKEY_CURRENT_USER\Software\Valve\Steam\Offline
@@ -15250,6 +15284,7 @@ Health_IMaterialProxy003
 Heartbeat!\n
 HeartbeatScale_IMaterialProxy003
 HeavyHintIcon
+Heffects/christmas_bulb.vmt
 Height and width must be equal for cubemaps!\n
 Height of netgraph panel
 HelicopterMegaBomb
@@ -15257,7 +15292,6 @@ Hellstone
 Helltower
 Helltrain
 HelpTextLabel
-Hentity_capture_flag
 Hide the HUD during freeze-cam
 HideBodygroupCheckBox%d
 HideButton
@@ -15433,6 +15467,7 @@ HuffmanDecoder:
 HunterDamage
 HushAsserts
 Hydro
+I@Weapon_Crossbow.BoltSkewer
 IA88
 IBSPPACK004
 IDAT stream error
@@ -15835,6 +15870,7 @@ JPEG Files (*.jpg)
 JPEG datastream contains no image
 JPEG parameter struct mismatch: library thinks size is %u, caller expects %u
 JPEGMEM
+January
 Job %s attempted to pause even though pauses were disabled\n
 Job %s detected and cleaned up leak of %d lock(s):\n
 Job %s trying to release lock %s at %s(%d) it's not holding\n
@@ -15855,11 +15891,12 @@ JoinSpectatorsHintIcon
 JoiningContainer
 JoiningLabel
 Journal_DuckBadge
+July
 JumpToItem
+June
 Jungle Inferno Contracts Pass
 K/MumbleLink.%d
-K@<a href=
-KCDummyMaterialProxy::Init( material = "%s" )\n
+K@<a href=<br>VEngineCvar004
 KDRButton
 KEY_0
 KEY_1
@@ -16032,8 +16069,23 @@ Kong King
 Krampus
 Kritz Or Treat Canteen
 L8start %f %f %f
-L@-particles
+L=presence
+L>CQuestObjectivePanel
+LANG
 LAUNCH_BALL_THINK
+LC_ADDRESS
+LC_ALL
+LC_COLLATE
+LC_CTYPE
+LC_IDENTIFICATION
+LC_MEASUREMENT
+LC_MESSAGES
+LC_MONETARY
+LC_NAME
+LC_NUMERIC
+LC_PAPER
+LC_TELEPHONE
+LC_TIME
 LIST
 LOADOUT_POSITION_ACTION
 LOADOUT_POSITION_BUILDING
@@ -16082,6 +16134,7 @@ Launches the Steam Controller binding panel UI
 Lava Pit
 Layer %s: Weight: %.2f, Cycle: %.2f
 Lazarus
+Ldebug/showz
 LeaderIcon
 LeaderboardEntry
 LearnMore2Button
@@ -16423,6 +16476,7 @@ MapsCheckbox_Night
 MapsCheckbox_Smissmas
 MapsContainer
 MapsPlayed
+March
 MarketButton
 Marlett
 MarlettSmall
@@ -16477,7 +16531,6 @@ MatchmakingCategoryMapPanel
 MatchmakingCategoryPanel
 MatchmakingGroupPanel
 MaterialButton
-MaterialImage
 MaterialModifyAnimated_IMaterialProxy003
 MaterialModify_IMaterialProxy003
 MaterialSystemHardwareConfig012
@@ -16521,7 +16574,6 @@ Maximum speed any ballistically moving object is allowed to attain per axis.
 Maximum supported image dimension is %u pixels
 Maximum think time in milliseconds, warning is printed if this is exceeded.
 Maximum visible distance
-MbP?body_yaw
 MedalButton
 MedalsHelp
 Medi-Evil
@@ -16649,6 +16701,7 @@ Modulus
 ModulusSize
 Mojave
 Moldergrove
+Monday
 Monster Bash
 MontgomeryRepresentation: Montgomery representation requires an odd modulus
 Moonshine Event
@@ -16772,6 +16825,11 @@ MvM_UpgradesDone
 MyTeam
 N10C_Hairball17CHairballDelegateE
 N10C_TFPlayer29NetworkVar_m_AttributeManagerE
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv116__enum_type_infoE
+N10__cxxabiv117__class_type_infoE
+N10__cxxabiv119__foreign_exceptionE
+N10__cxxabiv120__si_class_type_infoE
 N11CTextWindow9CMOTDHTMLE
 N12C_BaseEntity22NetworkVar_m_CollisionE
 N12C_BaseEntity22NetworkVar_m_ParticlesE
@@ -17821,10 +17879,57 @@ N8CryptoPP9PK_SignerE
 N8CryptoPP9PublicKeyE
 N8CryptoPP9TimerBaseE
 N9HTMLPopup9PopupHTMLE
+N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE
+N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE
+N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
+N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
+N9__gnu_cxx24__concurrence_lock_errorE
+N9__gnu_cxx26__concurrence_unlock_errorE
 NERVEGAS
 NEVERGIB
 NPC_CombineS
+NSt3_V214error_categoryE
+NSt6locale5facet6__shimE
+NSt6locale5facetE
+NSt7__cxx1110moneypunctIcLb0EEE
+NSt7__cxx1110moneypunctIcLb1EEE
+NSt7__cxx1110moneypunctIwLb0EEE
+NSt7__cxx1110moneypunctIwLb1EEE
 NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+NSt7__cxx1114collate_bynameIcEE
+NSt7__cxx1114collate_bynameIwEE
+NSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEEE
+NSt7__cxx1115basic_stringbufIwSt11char_traitsIwESaIwEEE
+NSt7__cxx1115messages_bynameIcEE
+NSt7__cxx1115messages_bynameIwEE
+NSt7__cxx1115numpunct_bynameIcEE
+NSt7__cxx1115numpunct_bynameIwEE
+NSt7__cxx1115time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx1115time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt7__cxx1117moneypunct_bynameIcLb0EEE
+NSt7__cxx1117moneypunct_bynameIcLb1EEE
+NSt7__cxx1117moneypunct_bynameIwLb0EEE
+NSt7__cxx1117moneypunct_bynameIwLb1EEE
+NSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE
+NSt7__cxx1118basic_stringstreamIwSt11char_traitsIwESaIwEEE
+NSt7__cxx1119basic_istringstreamIcSt11char_traitsIcESaIcEEE
+NSt7__cxx1119basic_istringstreamIwSt11char_traitsIwESaIwEEE
+NSt7__cxx1119basic_ostringstreamIcSt11char_traitsIcESaIcEEE
+NSt7__cxx1119basic_ostringstreamIwSt11char_traitsIwESaIwEEE
+NSt7__cxx117collateIcEE
+NSt7__cxx117collateIwEE
+NSt7__cxx118messagesIcEE
+NSt7__cxx118messagesIwEE
+NSt7__cxx118numpunctIcEE
+NSt7__cxx118numpunctIwEE
+NSt7__cxx118time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx118time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt7__cxx119money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx119money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt7__cxx119money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx119money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt8ios_base7failureB5cxx11E
+NSt8ios_base7failureE
 NULL Ent in UTIL_PrecacheOther\n
 NULLNAME
 NUMBER
@@ -17986,6 +18091,7 @@ Notifications_Control
 Notifications_Panel
 Notifications_Scroller
 Notifications_ShowButtonPanel
+November
 Nucleus VSH
 NullRNG: NullRNG should only be passed to functions that don't need to generate random bytes
 Num Lock
@@ -18028,6 +18134,7 @@ OG_Price
 OG_Price_CrossOut
 OPTIONS
 OPTIONS\n
+OSIX
 OS_Rng: 
 Object descriptions
 ObjectPower_IMaterialProxy003
@@ -18041,6 +18148,7 @@ ObjectiveStatusTraining
 ObjectivesInfoImage
 Obtained EMS handle %u
 Obtained XMS handle %u
+October
 Octopus.StepCommon
 OddTextColor
 Odyssey
@@ -18067,7 +18175,7 @@ OnCursorMoved
 OnDataChanged
 OnFinishRequest
 OnFolderUp
-OnGameRulesCreationStringChanged: missing gamerules class '%s' on the client
+OnGameRulesCreationStringChanged: game rules entity (%s) not created
 OnMouseFocusTicked
 OnNavigateFrom
 OnNavigateTo
@@ -18109,8 +18217,6 @@ OpenButton
 OpenColumnChoiceMenu
 OpenContextMenu
 OpenCrafting
-OpenInExplorer
-OpenInExplorerButton
 OpenLoadoutButton
 OpenMutePlayerDialog
 OpenReportPlayerDialog
@@ -18177,6 +18283,7 @@ Owner disguised as the player
 OwnerLabel
 P12C_BaseEntity
 P8?2
+P?AI39si6dQGxX2TWkOT9V9ihFpKmokaDhqIw3mgJcnnRFjX5f00HMRXqj69Fg1ulTdYF9Aw4wIt5NYHCxQAXHPPEcbQ89rEaCeg
 PANEL_ARENA_TEAM
 PANEL_ARENA_WIN
 PANEL_CLASS_BLUE
@@ -18201,7 +18308,6 @@ PC_EFFECTS_THINK
 PDump
 PDumpSmall
 PDumpVerySmall
-PF\n%d %d\n-1.000000\n
 PHRASE
 PIN_BOTTOMLEFT
 PIN_BOTTOMRIGHT
@@ -18253,6 +18359,7 @@ PNG output not set
 PNG\r\n
 PNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
 POISON
+POSIX
 POV manipulator operates on diagonal axes, too.
 PREVENT_PHYSICS_FORCE
 PRIMARY2
@@ -18457,7 +18564,6 @@ Player.KillSoundSpace
 Player.KillSoundSquasher
 Player.KillSoundVortex
 Player.OnFire
-Player.PickupWeapon
 Player.ReceiveSouls
 Player.Spy_Cloak
 Player.Spy_Disguise
@@ -18699,6 +18805,7 @@ PvPRankLevelUpModel
 PvPRankLevelUpXPBar
 PvPRankModelClicked
 PyroHintIcon
+Q8>DT_TFProjectile_EnergyRing
 Q9BumperCar.BumpHard
 QC,A
 Quad
@@ -18795,8 +18902,8 @@ Quit after rendering is completed.
 QuitButton
 QuitWhenDone
 QuitWhenDoneChecked
-R@DT_TFWeaponSword
 RADIATION
+RBCTFHudPasstimeOffscreenArrow
 RD.BotDeathExplosion
 RD.EnemyCaptured
 RD.EnemyDropped
@@ -19432,6 +19539,7 @@ Samurai.Conch
 Sandcastle
 Sanitarium
 SapperIcon
+Saturday
 Save Offset
 Save current animation to file
 Save the sixense bindings to a file.
@@ -19605,6 +19713,7 @@ SentenceModeMenu
 SentryIcon
 SeparatorBar
 SeparatorLine
+September
 Sequence Number
 Sequence Number 1
 Sequence Random
@@ -19737,12 +19846,10 @@ Setting this to 1 will make the active weapon persist between lives.
 Settings for the contract HUD element during competitive matches: 0 show nothing, 1 show everything, 2 show only active contracts.
 Settings for the contract HUD element: 0 show nothing, 1 show everything, 2 show only active contracts.
 SetupBG
-SetupBones: SetupBones_AttachmentHelper failed.\n
 SetupBones: invalid bone array size (%d - needs %d)\n
 SetupCurrentView
 SetupLabel
 SetupMain3DView
-Sgmodels/crossbow_bolt.mdl
 Shade
 Shadow color %d %d %d\n
 Shadow distance %.2f\n
@@ -19972,6 +20079,121 @@ SquadSurplusLabel
 SquadSurplusTicket
 SquadSurplusTicketBackground
 SquarizeComboBox
+St10bad_typeid
+St10ctype_base
+St10money_base
+St10moneypunctIcLb0EE
+St10moneypunctIcLb1EE
+St10moneypunctIwLb0EE
+St10moneypunctIwLb1EE
+St11__timepunctIcE
+St11__timepunctIwE
+St11logic_error
+St11range_error
+St12codecvt_base
+St12ctype_bynameIcE
+St12ctype_bynameIwE
+St12domain_error
+St12length_error
+St12out_of_range
+St12system_error
+St13__ios_failure
+St13bad_exception
+St13basic_filebufIcSt11char_traitsIcEE
+St13basic_filebufIwSt11char_traitsIwEE
+St13basic_fstreamIcSt11char_traitsIcEE
+St13basic_fstreamIwSt11char_traitsIwEE
+St13basic_istreamIwSt11char_traitsIwEE
+St13basic_ostreamIwSt11char_traitsIwEE
+St13messages_base
+St13runtime_error
+St14basic_ifstreamIcSt11char_traitsIcEE
+St14basic_ifstreamIwSt11char_traitsIwEE
+St14basic_iostreamIwSt11char_traitsIwEE
+St14basic_ofstreamIcSt11char_traitsIcEE
+St14basic_ofstreamIwSt11char_traitsIwEE
+St14codecvt_bynameIcc11__mbstate_tE
+St14codecvt_bynameIwc11__mbstate_tE
+St14collate_bynameIcE
+St14collate_bynameIwE
+St14overflow_error
+St15basic_streambufIcSt11char_traitsIcEE
+St15basic_streambufIwSt11char_traitsIwEE
+St15messages_bynameIcE
+St15messages_bynameIwE
+St15numpunct_bynameIcE
+St15numpunct_bynameIwE
+St15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St15underflow_error
+St16__numpunct_cacheIcE
+St16__numpunct_cacheIwE
+St16invalid_argument
+St17__timepunct_cacheIcE
+St17__timepunct_cacheIwE
+St17moneypunct_bynameIcLb0EE
+St17moneypunct_bynameIcLb1EE
+St17moneypunct_bynameIwLb0EE
+St17moneypunct_bynameIwLb1EE
+St18__moneypunct_cacheIcLb0EE
+St18__moneypunct_cacheIcLb1EE
+St18__moneypunct_cacheIwLb0EE
+St18__moneypunct_cacheIwLb1EE
+St19__codecvt_utf8_baseIDiE
+St19__codecvt_utf8_baseIDsE
+St19__codecvt_utf8_baseIwE
+St19__iosfail_type_info
+St20__codecvt_utf16_baseIDiE
+St20__codecvt_utf16_baseIDsE
+St20__codecvt_utf16_baseIwE
+St20bad_array_new_length
+St21__ctype_abstract_baseIcE
+St21__ctype_abstract_baseIwE
+St23__codecvt_abstract_baseIDiDu11__mbstate_tE
+St23__codecvt_abstract_baseIDic11__mbstate_tE
+St23__codecvt_abstract_baseIDsDu11__mbstate_tE
+St23__codecvt_abstract_baseIDsc11__mbstate_tE
+St23__codecvt_abstract_baseIcc11__mbstate_tE
+St23__codecvt_abstract_baseIwc11__mbstate_tE
+St25__codecvt_utf8_utf16_baseIDiE
+St25__codecvt_utf8_utf16_baseIDsE
+St25__codecvt_utf8_utf16_baseIwE
+St5ctypeIcE
+St5ctypeIwE
+St7codecvtIDiDu11__mbstate_tE
+St7codecvtIDic11__mbstate_tE
+St7codecvtIDsDu11__mbstate_tE
+St7codecvtIDsc11__mbstate_tE
+St7codecvtIcc11__mbstate_tE
+St7codecvtIwc11__mbstate_tE
+St7collateIcE
+St7collateIwE
+St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St8bad_cast
+St8ios_base
+St8messagesIcE
+St8messagesIwE
+St8numpunctIcE
+St8numpunctIwE
+St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St9bad_alloc
+St9basic_iosIcSt11char_traitsIcEE
+St9basic_iosIwSt11char_traitsIwEE
+St9exception
+St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St9time_base
+St9type_info
 StalemateLabel
 StampedItems
 StarCostImage
@@ -20141,6 +20363,7 @@ SuddenDeathLabelPulseRed
 SuggestedPlayerCountLabel
 Suijin
 Sulfur
+Sunday
 SupportCommunityMapMakersCheckButton
 SupportCommunityMapMakersLabel
 SupportLabel
@@ -20208,6 +20431,7 @@ TE_DynamicLight
 TE_Explosion
 TE_GlowSprite
 TE_MetalSparks
+TE_MuzzleFlash
 TE_ProjectDecal
 TE_ShatterSurface
 TE_Smoke
@@ -21639,6 +21863,7 @@ ThreadSleep
 ThreadingMain
 Three keys down for a button '%c' '%c' '%c'!\n
 Thunder Mountain
+Thursday
 Time Coordinate Offset
 Time Noise Coordinate Scale
 Time Reward %s: loot_list (%s) does not exist
@@ -21867,6 +22092,7 @@ TruncatedDigestSize
 TryItOutButton
 Trying to load more than 9 menu items in voicecommands.txt, extras ignored
 Trying to play unknown soundscape %s\n
+Tuesday
 Turbine Event
 Turn
 Turn off pose debugger or hide ents from pose debugger UI
@@ -21966,6 +22192,7 @@ Unknown button %s, shoud be '1' '2' '3' '4' 'start' 'trigger' or 'joystick'\n
 Unknown controller %s, should be 'left' or 'right'\n
 Unknown direction %s, shoud be 'up' 'down' 'left' 'right' 'cw' or 'ccw'\n
 Unknown enumeration value of "
+Unknown error
 Unknown interpolation type %d\n
 Unknown visuals block: %s
 Unknown/malformed expiration_date string "%s" in item %s.
@@ -22124,7 +22351,6 @@ VERSION %.1f\r\n\r\n
 VERSION 1.0\n
 VEngineClient014
 VEngineClientStringTable001
-VEngineCvar004
 VEngineEffects001
 VEngineModel016
 VEngineRandom001
@@ -22177,8 +22403,6 @@ VTFFileHeaderV7_2_t
 VTFFileHeaderV7_3_t
 VTFFileHeaderX360_t
 VTFFileHeader_t
-VTT for std::__cxx11::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>
-VTT for std::__cxx11::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>@GLIBCXX_3.4.21
 V_AppendSlash: ran out of space on %s.
 V_MakeAbsolutePath: _getcwd failed.
 V_MakeAbsolutePath: tried to ".." past the root.
@@ -22358,7 +22582,6 @@ Weapon_BuffBanner.HornRed
 Weapon_CompoundBow.SinglePull
 Weapon_CowMangler.Charging
 Weapon_CowMangler.ReloadFinal
-Weapon_Crossbow.BoltSkewer
 Weapon_DragonsFury.Nearmiss
 Weapon_DumpsterRocket.Reload
 Weapon_DumpsterRocket.Reload_FP
@@ -22412,6 +22635,7 @@ Weapon_bm_throwable.throw
 WearSlider
 Weather effects wind direction angle
 Weather effects wind speed scalar
+Wednesday
 Well
 WheatlyEyeGlow_IMaterialProxy003
 WheelDust
@@ -22502,7 +22726,6 @@ X917RNG: Continuous random number generator test failed.
 XBff&?
 XPSourceShow_Negative
 XPSourceShow_Positive
-Y@AI39si6dQGxX2TWkOT9V9ihFpKmokaDhqIw3mgJcnnRFjX5f00HMRXqj69Fg1ulTdYF9Aw4wIt5NYHCxQAXHPPEcbQ89rEaCeg
 YYYY
 YYYY-MM-DD hh:mm:ss
 YellowBlood
@@ -22552,7 +22775,6 @@ ZoomPanel
 [I:%u:%u]
 [L:%u:%u]
 [M:%u:%u:%u]
-[NO NAME]
 [NYI] %s
 [P:%u:%u]
 [PartyClientDbg] Auto-rejecting invite from %s - ignore party invites [%d], allowed to party with [%d]\n
@@ -22649,7 +22871,7 @@ ZoomPanel
 [url=
 \%03o
 \U%08x
-\high
+\f@cl_updaterate
 \n    Actual    : 
 \n    Field type: 
 \n  Field       : 
@@ -22663,7 +22885,6 @@ ZoomPanel
 \nConstruction at %.0f percent\nHealth at %.0f percent
 \nHealth at %.0f percent
 \n\nRecorded kill: name=%s, class=%s (this=%p)\n\n
-\rEm_bReadyToBackstab
 \r\nContent-Type: application/atom+xml; charset=UTF-8\r\n\r\n---x\r\nContent-Disposition: form-data; name="apirequest"\r\n\r\n%s\r\n---x\r\nContent-Disposition: form-data; name="video"\r\nContent-Type: %s\r\nContent-Transfer-Encoding: binary\r\n\r\n
 \t(%zu) comparing %s with %s\n
 \tHolding lock %s:\n
@@ -22683,24 +22904,30 @@ ZoomPanel
 \t\t{\r\n\t\t\tLIST\r\n
 \u00
 \x%02x
+]?Client Soundscape data dump:\n
+]GCTakeDamageInfo
 _%i%s
 _CGCReplicateConVars
 _ExitOnFatalAssert
+_ITM_RU1
+_ITM_RU8
+_ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
+_ITM_memcpyRnWt
+_ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _LPT_%s_%d
 _Prop
 _ST_%s_%d
 _SpewInfo
 _SpewMessage
-_ZGVbN2v_sin
-_ZGVbN2v_sin@GLIBC_2.22
-_ZGVbN2vv_pow
-_ZGVbN2vv_pow@GLIBC_2.22
-_ZGVbN4v_sinf
-_ZGVbN4v_sinf@GLIBC_2.22
-_ZGVbN4vv_powf
-_ZGVbN4vv_powf@GLIBC_2.22
+_ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IcEEv
+_ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IwEEv
+_ZSt10__exchangeIP8_IO_FILEDnET_RS3_OT0_
+_ZSt10__exchangeIPKcDnET_RS3_OT0_
+_ZSt10__exchangeIPNSt8ios_base14_Callback_listEDnET_RS4_OT0_
+_ZSt10__exchangeIPcDnET_RS2_OT0_
+_ZSt10__exchangeIPwDnET_RS2_OT0_
 __CustomTextureFilterPreview
 __DepthWrite01
 __MsgFunc_QuestObjectiveCompleted
@@ -22714,6 +22941,8 @@ ___debug
 __bss_start
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
+__ctype_get_mb_cur_max
+__ctype_get_mb_cur_max@GLIBC_2.2.5
 __ctype_tolower_loc
 __ctype_tolower_loc@GLIBC_2.3
 __ctype_toupper_loc
@@ -22721,46 +22950,83 @@ __ctype_toupper_loc@GLIBC_2.3
 __cxa_allocate_exception
 __cxa_atexit
 __cxa_atexit@GLIBC_2.2.5
-__cxa_begin_catch
+__cxa_call_terminate
 __cxa_call_unexpected
-__cxa_end_catch
+__cxa_current_exception_type
+__cxa_demangle
 __cxa_finalize
 __cxa_finalize@GLIBC_2.2.5
 __cxa_free_exception
+__cxa_get_globals
+__cxa_get_globals_fast
 __cxa_guard_abort
 __cxa_guard_acquire
 __cxa_guard_release
 __cxa_pure_virtual
 __cxa_rethrow
 __cxa_throw
-__cxa_throw_bad_array_new_length
-__cxa_throw_bad_array_new_length@CXXABI_1.3.8
 __daylight
 __daylight@GLIBC_2.2.5
-__dynamic_cast
-__dynamic_cast@CXXABI_1.3
+__duplocale
+__duplocale@GLIBC_2.2.5
 __errno_location
 __errno_location@GLIBC_2.2.5
+__freelocale
+__freelocale@GLIBC_2.2.5
+__fxstat
+__fxstat@GLIBC_2.2.5
 __gmon_start__
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
 __gxx_personality_v0
 __isoc99_sscanf
 __isoc99_sscanf@GLIBC_2.7
 __isoc99_swscanf
 __isoc99_swscanf@GLIBC_2.7
+__iswctype_l
+__iswctype_l@GLIBC_2.2.5
 __lxstat64@GLIBC_2.2.5
 __lxstat@GLIBC_2.2.5
+__newlocale
+__newlocale@GLIBC_2.2.5
+__nl_langinfo_l
+__nl_langinfo_l@GLIBC_2.2.5
 __particlesDepthWrite
 __pthread_key_create
 __pthread_key_create@GLIBC_2.2.5
 __screenshot_internal "%s"
 __stack_chk_fail
 __stack_chk_fail@GLIBC_2.4
+__strcoll_l
+__strcoll_l@GLIBC_2.2.5
+__strftime_l
+__strftime_l@GLIBC_2.3
+__strtod_l
+__strtod_l@GLIBC_2.2.5
+__strtof_l
+__strtof_l@GLIBC_2.2.5
+__strxfrm_l
+__strxfrm_l@GLIBC_2.2.5
 __timezone
 __timezone@GLIBC_2.2.5
+__towlower_l
+__towlower_l@GLIBC_2.2.5
+__towupper_l
+__towupper_l@GLIBC_2.2.5
+__uselocale
+__uselocale@GLIBC_2.3
 __utilVertexColor
 __utilVertexColorIgnoreZ
 __utilWireframe
 __utilWireframeIgnoreZ
+__wcscoll_l
+__wcscoll_l@GLIBC_2.2.5
+__wcsftime_l
+__wcsftime_l@GLIBC_2.3
+__wcsxfrm_l
+__wcsxfrm_l@GLIBC_2.2.5
+__wctype_l
+__wctype_l@GLIBC_2.2.5
 __wrap___lxstat
 __wrap___lxstat64
 __wrap___xstat
@@ -22838,11 +23104,19 @@ _shortdesc
 _teamcolor_blue
 _teamcolor_red
 _to_curve_
-`@CParticleMgr::CreateEffect: factory not found for effect '%s'\n
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
+_txnal_cow_string_D1(void*)
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_c_str(void const*)
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
+_txnal_sso_string_c_str(void const*)
+`?CTFTips
+`ACamo_IMaterialProxy003
 `Aa\v6C
-a?resource/UI/econ/GenericWaitingDialog.res
+`jFw
 aClassStats
-aFfx_impact.cpp
+aEm_flLightScale
 aMapStats
 abandon_match
 abcdefghijkmnpqrstuvwxyz23456789
@@ -22951,6 +23225,8 @@ allow_rot
 allowoutofrange
 allowstatic
 allseecrit
+alnum
+alpha
 alpha_fade
 alpha_fade_in_random
 alpha_fade_out_random
@@ -23177,11 +23453,31 @@ baseitem
 basename
 baseplayer
 basic_control_panel
+basic_filebuf::_M_convert_to_external conversion error
+basic_filebuf::underflow codecvt::max_length() is not valid
+basic_filebuf::underflow error reading the file
+basic_filebuf::underflow incomplete character in file
+basic_filebuf::underflow invalid byte sequence in file
+basic_filebuf::xsgetn error reading the file
+basic_ios::clear
 basic_movement
+basic_string: construction from null is not valid
 basic_string::_M_construct null not valid
+basic_string::_M_create
+basic_string::_M_replace
+basic_string::_M_replace_aux
+basic_string::_S_construct null not valid
+basic_string::_S_create
 basic_string::append
+basic_string::assign
+basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
 basic_string::basic_string
+basic_string::compare
+basic_string::copy
 basic_string::erase
+basic_string::insert
+basic_string::replace
+basic_string::resize
 basic_string::substr
 basictraining_classselection_
 basictrainingselected
@@ -23226,6 +23522,10 @@ bind "%s" "+inspect"\n
 bind "%s" "+taunt"\n
 bind "%s" "+use_action_slot_item"\n
 bind "%s" "+use_action_slot_item_server"\n
+bind_textdomain_codeset
+bind_textdomain_codeset@GLIBC_2.2.5
+bindtextdomain
+bindtextdomain@GLIBC_2.2.5
 bip_hand_L
 bip_hand_R
 bip_head
@@ -23236,6 +23536,7 @@ bip_spine_1
 bip_spine_2
 bip_spine_3
 blah
+blank
 blink
 blinkFgColor_override
 blink_duration
@@ -23252,6 +23553,7 @@ blog_forward
 blog_forward_disabled
 blood_bread_biting
 blood_decap
+blood_impact_backscatter
 blood_impact_green_01
 blood_impact_yellow_01
 blooddrops
@@ -23296,6 +23598,11 @@ bonuseffect
 bonusprogressbarKV
 bool
 bool (%s)
+bool __gnu_cxx::__is_null_pointer<char const>(char const*)
+bool __gnu_cxx::__is_null_pointer<char>(char*)
+bool __gnu_cxx::__is_null_pointer<wchar_t const>(wchar_t const*)
+bool __gnu_cxx::__is_null_pointer<wchar_t>(wchar_t*)
+bool __gnu_cxx::__ops::_Iter_less_val::operator()<unsigned long const*, unsigned long const>(unsigned long const*, unsigned long const&) const
 bool const& google::protobuf::internal::GeneratedMessageReflection::GetRaw<bool>(google::protobuf::Message const&, google::protobuf::FieldDescriptor const*) const
 bool differs (net %s pred %s)\n
 bool google::protobuf::internal::AllAreInitialized<google::protobuf::RepeatedPtrField<google::protobuf::EnumDescriptorProto>>(google::protobuf::RepeatedPtrField<google::protobuf::EnumDescriptorProto> const&)
@@ -23354,6 +23661,8 @@ brush only
 bsp_repack
 bspline
 bsppack
+btowc
+btowc@GLIBC_2.2.5
 bucket1
 bucket_360
 bucket_position
@@ -23451,7 +23760,6 @@ c_te_decal.cpp
 c_te_dynamiclight.cpp
 c_te_effect_dispatch.cpp
 c_te_energysplash.cpp
-c_te_fizz.cpp
 c_te_footprint.cpp
 c_te_glassshatter.cpp
 c_te_glowsprite.cpp
@@ -23462,7 +23770,6 @@ c_te_muzzleflash.cpp
 c_te_physicsprop.cpp
 c_te_playerdecal.cpp
 c_te_projecteddecal.cpp
-c_te_smoke.cpp
 c_te_sprite.cpp
 c_te_spritespray.cpp
 c_te_worlddecal.cpp
@@ -23522,6 +23829,7 @@ cancelselect
 cancelselect\n
 canceltool
 cannon_fuse
+cannot create shim for unknown locale::facet
 cannot create std::deque larger than max_size()
 cannot create std::vector larger than max_size()
 cannot delete
@@ -23874,7 +24182,6 @@ cl_trading_show_requests_from
 cl_training_class_unlock_all
 cl_training_completed_with_classes
 cl_trigger_first_notification
-cl_updaterate
 cl_upspeed
 cl_use_tournament_specgui
 cl_vote_non_input_alpha
@@ -24049,6 +24356,7 @@ closedir@GLIBC_2.2.5
 closerange_backattack_minicrits
 closex
 cloud_custom_images/%08X%08X
+cntrl
 coach/coach_student_died.wav
 coach_command %u
 coach_command_%u
@@ -24073,8 +24381,11 @@ collectionnamelabel
 collision mode
 collisionpair
 collisionrules
+color cp override
 color1
+color1 cp override
 color2
+color2 cp override
 color_active
 color_array
 color_bar_health_high
@@ -24303,8 +24614,8 @@ crit_kill
 critboost
 critgun_weaponmodel_blu
 critgun_weaponmodel_red
-critical_grenade_blue
 critical_grenade_red
+critical_pipe_blue
 critical_pipe_red
 critical_rocket_blue
 critical_rocket_red
@@ -24328,7 +24639,6 @@ ctf_frosty
 ctf_gorge
 ctf_haarp
 ctf_helltrain_event
-ctf_item_start
 ctf_item_stop
 ctf_landfall
 ctf_mannpower
@@ -24496,7 +24806,6 @@ dead_wide
 dead_xpos
 dead_ypos
 deadflag
-death_flags
 death_tick
 death_width
 debug building damage
@@ -24591,6 +24900,7 @@ declined
 decodable
 decoded by itemdefindex
 decoder_ring
+default
 defaultBgColor_override
 defaultFgColor_override
 defaultPanel
@@ -24706,12 +25016,15 @@ dev/pyro_vignette_border
 dev/upscale
 dev_loadtime_mainmenu
 dev_loadtime_map_elapsed
+dgettext
+dgettext@GLIBC_2.2.5
 di_A
 di_B
 di_C
 dieviolent
 differs
 difficultyvalue
+digit
 digit2_xpos
 digit2_ypos
 digit_height
@@ -25022,7 +25335,6 @@ effects/fleck_glass1
 effects/fleck_glass2
 effects/fleck_tile1
 effects/fleck_tile2
-effects/fleck_wood1
 effects/fleck_wood2
 effects/gas_overlay
 effects/gunshipmuzzle
@@ -25074,7 +25386,6 @@ emission minimum
 emission_duration
 emission_rate
 emission_start_time
-emit noise
 emit_continuously
 emit_instantaneously
 emitter
@@ -25143,6 +25454,7 @@ entered_performance_mode
 entity # %i: %s%s%s
 entity %d: Removing sleeping ragdoll\n
 entity %d: start time=%d  duration=%d  num bones=%d
+entity_capture_flag
 entity_killed
 entity_medigun_shield
 entity_revive_marker
@@ -25192,7 +25504,6 @@ equipclass%d
 equippedlabel
 error in transition graph: %s to %s\n
 error loading %s\n
-es-8R
 es_419
 es_ES
 escort_progress
@@ -25201,7 +25512,6 @@ escort_speed
 eureka_teleport %d
 evaluator
 even_chance_templates
-event %s "%s"\n
 event date
 eventHudCartAlarmPulseStop
 event_24_7
@@ -25295,7 +25605,7 @@ eyeglow_R
 eyelids
 eyes_rightleft
 eyes_updown
-f@player/hwm
+fCCCompetitiveAccessInfoPanel
 faceandhair
 faceposermodel
 faceposermodel "%s"\n
@@ -25316,12 +25626,15 @@ fadescale
 fakeplayer
 falloff power
 falloff range
+false
 false 
 fast_reload
 favoriteCount
 favorited
 fclose
 fclose@GLIBC_2.2.5
+fdopen
+fdopen@GLIBC_2.2.5
 featured
 featured_item_index
 featured_item_panel
@@ -25331,7 +25644,7 @@ feof
 feof@GLIBC_2.2.5
 festivized_item
 fff?
-fff?fff?CClientScoreBoardDialog
+fff?fff?
 ffffff
 fflush
 fflush@GLIBC_2.2.5
@@ -25343,6 +25656,8 @@ fieldName
 file://
 file://%s
 fileTypeString
+fileno
+fileno@GLIBC_2.2.5
 filesDownloaded
 filesize
 filesizeint
@@ -25378,7 +25693,6 @@ fish_notice
 fish_notice__arm
 fixed_item
 fixed_paintkit
-fixed_shot_pattern
 fixedlength
 fixedlength\n
 flEnterExitDuration
@@ -25428,6 +25742,10 @@ float( %f )
 float_array
 fluid
 flying_flaming_arrow
+fmaxf
+fmaxf@GLIBC_2.2.5
+fminf
+fminf@GLIBC_2.2.5
 fog_color
 fog_colorskybox
 fog_enable
@@ -25491,6 +25809,8 @@ fps:  435  ping: 533 ms lerp 112.3 ms   0/0
 fps:%4i   ping: %i ms
 fputc
 fputc@GLIBC_2.2.5
+fputs
+fputs@GLIBC_2.2.5
 fr_FR
 frags
 frame %lld
@@ -25531,8 +25851,12 @@ friendsName
 frontcolor
 fseek
 fseek@GLIBC_2.2.5
+fseeko64
+fseeko64@GLIBC_2.2.5
 ftell
 ftell@GLIBC_2.2.5
+ftello64
+ftello64@GLIBC_2.2.5
 full_reset
 full_round
 fullpath
@@ -25551,6 +25875,7 @@ fwrite@GLIBC_2.2.5
 fx_drawimpactdebris
 fx_drawimpactdust
 fx_drawmetalspark
+fx_impact.cpp
 fx_quad.cpp
 fx_sparks.cpp
 fx_water.cpp
@@ -25627,10 +25952,13 @@ generated_proto_tf/gcsystemmsgs.pb.cc
 generated_proto_tf/steammessages.pb.cc
 generated_proto_tf/tf_gcmessages.pb.cc
 generated_proto_tf/tf_proto_def_messages.pb.cc
+generic
 german
 get_player
 getcwd
 getcwd@GLIBC_2.2.5
+getentropy
+getentropy@GLIBC_2.25
 getenv
 getenv@GLIBC_2.2.5
 gethostbyname
@@ -27143,6 +27471,7 @@ goto_page_
 goto_page_%d
 gotoreplays
 grant_operation_pass
+graph
 greaterVar
 greek
 grenade_launcher_mortar_mode
@@ -27179,6 +27508,7 @@ halloween_souls_pack
 halloween_voice_modulation
 halloween_zapper
 handle
+hardware
 has team color paintkit
 has_detailed_icon
 has_pass_width
@@ -27583,6 +27913,7 @@ impulse_y
 impulse_z
 in :%4i   %2.2f k/s 
 in_camera.cpp
+in_graph
 in_jlook
 in_usekeyboardsampletime
 inactive_item_%d
@@ -27709,6 +28040,12 @@ invert absolute value
 invnext
 invprev
 invulns
+ioctl
+ioctl@GLIBC_2.2.5
+ios_base::_M_grow_words allocation failed
+ios_base::_M_grow_words is not valid
+iostream
+iostream error
 is australium item
 is commodity
 is looking good!
@@ -28136,10 +28473,8 @@ level_down
 libc.so.6
 libdl.so.2
 libm.so.6
-libmvec.so.1
 libpthread.so.0
 librt.so.1
-libstdc++.so.6
 libsteam_api.so
 libtier0.so
 libvstdlib.so
@@ -28188,6 +28523,12 @@ local space CP
 localLights
 localPlayerBG
 localPlayerImage
+locale::_Impl::_M_replace_facet
+locale::_S_normalize_category category not found
+locale::facet::_S_create_c_locale name not valid
+locale::facet::_S_lc_ctype_c_locale duplocale error
+locale::facet::_S_lc_ctype_c_locale newlocale error
+locale::locale null not valid
 localeconv
 localeconv@GLIBC_2.2.5
 localhost
@@ -28266,6 +28607,7 @@ lowV_blood_impact_red_01
 lowV_blood_spray_red_01
 lowV_blood_spray_red_01_far
 lowV_water_blood_impact_red_01
+lower
 lseek
 lseek@GLIBC_2.2.5
 m_Activity
@@ -28715,6 +29057,7 @@ m_bRopesHolidayLightsAllowed
 m_bSaveMeParity
 m_bScattergunJump
 m_bSendHandle
+m_bSendHandle: %d, m_Handle.Get: 0x%p\n
 m_bServerOverridePlacement
 m_bShieldEquipped
 m_bShielded
@@ -28766,7 +29109,6 @@ m_bUseConVarMinMax
 m_bUseCustomAutoExposureMax
 m_bUseCustomAutoExposureMin
 m_bUseCustomBloomScale
-m_bUseHitboxesForRenderBox
 m_bUseItemRenderTarget
 m_bUseItemSounds
 m_bUseNewProjectileCode
@@ -28925,6 +29267,7 @@ m_flChargeMeter
 m_flChargeStartTime
 m_flChargedDamage
 m_flCheapWaterEndDistance
+m_flCheapWaterStartDistance
 m_flCloakMeter
 m_flCloseCaptionDuration
 m_flConnectTime
@@ -28978,7 +29321,6 @@ m_flFOVOffsetY
 m_flFOVRate
 m_flFOVTime
 m_flFadeDist
-m_flFadeEndDist
 m_flFadeInLength
 m_flFadeInStart
 m_flFadeOutLength
@@ -28987,7 +29329,6 @@ m_flFadeOutModelStart
 m_flFadeOutPercentage
 m_flFadeOutStart
 m_flFadeScale
-m_flFadeStartDist
 m_flFallVelocity
 m_flFarZ
 m_flFinaleLength
@@ -29058,7 +29399,6 @@ m_flLargeBoxWide
 m_flLastAccuracyCheck
 m_flLastAttackedTime
 m_flLastComboHit
-m_flLastCritCheckTime
 m_flLastFireTime
 m_flLastStealthExposeTime
 m_flLastTime
@@ -29069,7 +29409,6 @@ m_flLazyCapPerc[0]
 m_flLifeTime
 m_flLifetime
 m_flLightFOV
-m_flLightScale
 m_flLineHeight
 m_flLineSpacing
 m_flMagnitude
@@ -29149,7 +29488,6 @@ m_flRadius
 m_flRageMeter
 m_flRandomLifeTimeOffset
 m_flRecedeTime
-m_flRechargeScale
 m_flRechargeTime
 m_flRedFinaleEndTime
 m_flRedTeamRespawnScale
@@ -29272,7 +29610,6 @@ m_fog.colorSecondary
 m_fog.colorSecondaryLerpTo
 m_fog.dirPrimary
 m_fog.duration
-m_fog.enable
 m_fog.end
 m_fog.endLerpTo
 m_fog.farz
@@ -29717,7 +30054,6 @@ m_iNewWidth
 m_iNextMeleeCrit
 m_iNodeNumber
 m_iNodeNumberMax
-m_iNormalY
 m_iNumControlPoints
 m_iNumSections
 m_iNumTeamMembers
@@ -29752,7 +30088,6 @@ m_iPartyLeaderRedTeamIndex
 m_iPhysicsMode
 m_iPing
 m_iPingWidth
-m_iPing[0]
 m_iPipebombCount
 m_iPlayer
 m_iPlayerClass
@@ -29961,8 +30296,8 @@ m_maxInterval
 m_minFalloff
 m_minInterval
 m_modelIndex
+m_mouseaccel1
 m_mouseaccel2
-m_mousespeed
 m_mutex
 m_mutexRawAllocations
 m_nActiveTauntSlot
@@ -30136,7 +30471,6 @@ m_nOverlaySize
 m_nPaintBackgroundType
 m_nPanelBits
 m_nPanelName
-m_nPlasmaModelIndex
 m_nPlasmaModelIndex2
 m_nPlayer
 m_nPlayerCond
@@ -30570,7 +30904,6 @@ maps/%s
 maps/%s.txt
 maps/%s_%s.txt
 maps/%s_english.txt
-maps/%s_particles.txt
 maps/arena_byre.bsp
 maps/cp_manor_event.bsp
 maps/ctf_2fort_invasion.bsp
@@ -30753,6 +31086,12 @@ maximum_strange_part_slots
 maxmvm
 maxplayers %d
 maxvalue
+mbrtowc
+mbrtowc@GLIBC_2.2.5
+mbsnrtowcs
+mbsnrtowcs@GLIBC_2.2.5
+mbsrtowcs
+mbsrtowcs@GLIBC_2.2.5
 mbstowcs
 mbstowcs@GLIBC_2.2.5
 mean
@@ -30797,19 +31136,10 @@ melee_range_multiplier
 meleehit
 memalign
 memalign@GLIBC_2.2.5
-memchr
-memchr@GLIBC_2.2.5
-memcmp
-memcmp@GLIBC_2.2.5
-memcpy
 memcpy@GLIBC_2.14
 memcpy_s: buffer overflow
-memmove
-memmove@GLIBC_2.2.5
 memmove_s: buffer overflow
 mempool.cpp
-memset
-memset@GLIBC_2.2.5
 menu_
 menu_exit
 menu_label
@@ -31021,6 +31351,7 @@ models/buildables/dispenser_light.mdl
 models/buildables/sapper_placement.mdl
 models/buildables/sentry_shield.mdl
 models/class_menu/random_class_icon.mdl
+models/crossbow_bolt.mdl
 models/effects/bday_gib01.mdl
 models/effects/bday_gib02.mdl
 models/effects/bday_gib03.mdl
@@ -31141,7 +31472,6 @@ models/weapons/c_models/c_xms_festive_ornament.mdl
 models/weapons/c_models/stattrack.mdl
 models/weapons/pedestal/pedestal.mdl
 models/weapons/shells/shell_cigarrette.mdl
-models/weapons/v_models/v_baseball.mdl
 models/weapons/w_models/w_arrow.mdl
 models/weapons/w_models/w_arrow_xmas.mdl
 models/weapons/w_models/w_baseball.mdl
@@ -31255,6 +31585,7 @@ mp_winlimit %d
 mpcontrol_t
 msg_fallback
 msgprotobuf.cpp
+mt19937
 mtlName
 mul_nonrocketjump_attackrate
 mult_airblast_cost
@@ -31549,6 +31880,7 @@ numkills
 numlikes
 numsettings
 numsilver
+o@m_bUseHitboxesForRenderBox
 o@vNewLocalVel: %f %f %f\n
 obj_attachment_sapper
 obj_minisentry
@@ -31709,8 +32041,8 @@ overviews/caparrows
 overviews/redteam
 ownerid
 ownername
-p?CCasualCriteriaPanel
 pBDT_TFWeaponInvis
+pFTE_PhysicsProp
 pWorldObject
 package $0;\n\n
 padding_height
@@ -31819,6 +32151,7 @@ passer
 passtime/hud/passtime_ball_reticle_passlock
 passtime/hud/passtime_ball_reticle_piece_1
 passtime/hud/passtime_ball_reticle_piece_2
+passtime/hud/passtime_pass_to_me_prompt
 passtime/hud/passtime_teamicon_blue
 passtime/hud/passtime_teamicon_red
 passtime_beam
@@ -32096,6 +32429,8 @@ pointslabel
 pointworldtext_rainbowspeed_char
 pointworldtext_rainbowspeed_time
 polish
+poll
+poll@GLIBC_2.2.5
 pop_index
 popfile
 popularity_seed
@@ -32150,6 +32485,7 @@ powerup_king_red
 powerup_max_charges
 powerup_plague_carrier
 powerup_supernova_ready
+powf
 powf@GLIBC_2.27
 prec_
 pred error %6.3f units (%6.3f %6.3f %6.3f)
@@ -32161,7 +32497,6 @@ preloadDataSize
 premium_only
 prepend_count
 prepended_words
-presence
 present_time
 preserveAspectRatio
 presetbutton_kv
@@ -32193,12 +32528,12 @@ primary_ammo
 primary_death_backstab
 primary_death_headshot
 primaryaction
+print
 print soundscapes
 printname
 private
 proc/icon/item%d_id%lld%lld_w%d_h%d
 proc/icon/mdl_%s_body%d_skin%d_w%d_h%d
-procedural_chamber
 profile
 progress_bar
 progress_bar_blu
@@ -32267,6 +32602,10 @@ prp_helmet
 psapper
 pt_BR
 pt_PT
+pthread_cond_broadcast
+pthread_cond_broadcast@GLIBC_2.3.2
+pthread_cond_wait
+pthread_cond_wait@GLIBC_2.3.2
 pthread_mutex_destroy
 pthread_mutex_destroy@GLIBC_2.2.5
 pthread_mutex_init
@@ -32289,8 +32628,11 @@ publish
 publish_file_last_dir
 pumpkin_lord_killed
 pumpkin_lord_summoned
+punct
 putchar
 putchar@GLIBC_2.2.5
+putwc
+putwc@GLIBC_2.2.5
 pve/buy_disabled
 pve/buy_enabled
 pve/buy_selected
@@ -32386,7 +32728,6 @@ quickplay_
 quickplay_%d
 quit\n
 r6CTestItemBotControls
-r@ffffff
 r_3dsky
 r_AirboatViewDampenDamp
 r_AirboatViewDampenFreq
@@ -32438,6 +32779,7 @@ r_WaterDrawRefraction
 r_cheapwaterend
 r_cheapwaterend: %f\n
 r_cheapwaterstart
+r_cheapwaterstart: %f\n
 r_debugcheapwater
 r_decal_cullsize
 r_decals
@@ -32592,6 +32934,12 @@ random yaw
 randomDist
 random_attribute_templates
 random_attributes
+random_device could not be read
+random_device: getentropy failed
+random_device: rdrand failed
+random_device: rdseed failed
+random_device::random_device(const std::string&): device not available
+random_device::random_device(const std::string&): unsupported token
 random_seed
 random_speed_max
 random_speed_min
@@ -32625,6 +32973,9 @@ rd_robot_impact
 rd_robot_killed
 rd_rules_state_changed
 rd_team_points_changed
+rdrand
+rdrnd
+rdseed
 reached chunk/cache limits
 reached end-of-image state
 read /dev/random
@@ -32819,6 +33170,7 @@ reset view angles!
 resetclass
 resetplayerstats
 resetstatsbutton
+resfile
 resize_time
 resize_to_text
 resource/ChatScheme.res
@@ -33012,6 +33364,7 @@ resource/UI/disguise_menu/spy_blue.res
 resource/UI/disguise_menu/spy_red.res
 resource/UI/disguise_menu_360
 resource/UI/disguise_menu_sc
+resource/UI/econ/GenericWaitingDialog.res
 resource/UI/econ/store/v1/StoreStatusDialog.res
 resource/UI/hud_obj_dispenser.res
 resource/UI/hud_obj_sapper.res
@@ -33074,7 +33427,6 @@ resource/icon_folder
 resource/icon_folder_selected
 resource/icon_folderup
 resource/icon_newfolder
-resource/icon_play_once
 resource/layout/htmlfindbar.layout
 resource/maphtml/%s_%s.html
 resource/maphtml/%s_english.html
@@ -33453,6 +33805,7 @@ sentrydamage_3
 sentrydamage_4
 separator_height
 separator_width
+sequence number %d too high in sheet file!!!\n
 sequence_max
 sequence_min
 sequence_number
@@ -33518,11 +33871,15 @@ setclosebuttonvisible
 setfilter
 setinfo %s "%s"\n
 setinputenabled
+setlocale
+setlocale@GLIBC_2.2.5
 setpos
 setpos_exact
 settick_
 settingscombo
 settitlebarvisible
+setvbuf
+setvbuf@GLIBC_2.2.5
 setvisible
 sf14.Merasmus.DuckHunt.BonusDucks
 sf15.Merasmus.Gargoyle.Gone
@@ -33778,6 +34135,7 @@ south-east
 south-west
 southeast
 southwest
+space
 space shuttle
 spacer0
 spacer1
@@ -33797,7 +34155,8 @@ spec_freeze_traveltime
 spec_goto %.1f %.1f %.1f %.1f %.1f\n
 spec_next
 spec_player
-spec_player "%s"
+spec_player #%d
+spec_player #%d\n
 spec_player %d\n
 spec_pos
 spec_prev
@@ -33842,7 +34201,6 @@ spell_batball_throw_blue
 spell_batball_throw_red
 spell_cast_wheel_blue
 spell_cast_wheel_red
-spell_fireball_small_blue
 spell_fireball_small_red
 spell_fireball_tendril_parent_blue
 spell_fireball_tendril_parent_red
@@ -34013,122 +34371,18 @@ stattype
 status_width
 stay_armed_on_click
 stayselectedonclick
-std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
-std::_Rb_tree_decrement(std::_Rb_tree_node_base*)@GLIBCXX_3.4
-std::_Rb_tree_increment(std::_Rb_tree_node_base const*)
-std::_Rb_tree_increment(std::_Rb_tree_node_base const*)@GLIBCXX_3.4
-std::_Rb_tree_increment(std::_Rb_tree_node_base*)
-std::_Rb_tree_increment(std::_Rb_tree_node_base*)@GLIBCXX_3.4
-std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
-std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)@GLIBCXX_3.4
-std::_Rb_tree_rebalance_for_erase(std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
-std::_Rb_tree_rebalance_for_erase(std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)@GLIBCXX_3.4
-std::__cxx11::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::~basic_ostringstream()
-std::__cxx11::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::~basic_ostringstream()@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_append(char const*, unsigned long)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_append(char const*, unsigned long)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_construct(unsigned long, char)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_construct(unsigned long, char)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_create(unsigned long&, unsigned long)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_create(unsigned long&, unsigned long)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_dispose()
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_dispose()@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace(unsigned long, unsigned long, char const*, unsigned long)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace(unsigned long, unsigned long, char const*, unsigned long)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace_aux(unsigned long, unsigned long, unsigned long, char)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace_aux(unsigned long, unsigned long, unsigned long, char)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, char const*, char const*)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, char const*, char const*)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::append(char const*)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::append(char const*)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(char const*, std::allocator<char> const&)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(char const*, std::allocator<char> const&)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::compare(char const*) const
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::compare(char const*) const@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::compare(unsigned long, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&) const
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::compare(unsigned long, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&) const@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::find(char const*, unsigned long, unsigned long) const
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::find(char const*, unsigned long, unsigned long) const@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::find(char, unsigned long) const
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::find(char, unsigned long) const@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::find_first_not_of(char const*, unsigned long, unsigned long) const
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::find_first_not_of(char const*, unsigned long, unsigned long) const@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::find_first_of(char const*, unsigned long, unsigned long) const
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::find_first_of(char const*, unsigned long, unsigned long) const@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::push_back(char)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::push_back(char)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::reserve(unsigned long)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::reserve(unsigned long)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::resize(unsigned long, char)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::resize(unsigned long, char)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::rfind(char, unsigned long) const
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::rfind(char, unsigned long) const@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::swap(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::swap(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string()
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string()@GLIBCXX_3.4.21
-std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::_M_assign(std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>> const&)
-std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::_M_assign(std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>> const&)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::_M_replace(unsigned long, unsigned long, wchar_t const*, unsigned long)
-std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::_M_replace(unsigned long, unsigned long, wchar_t const*, unsigned long)@GLIBCXX_3.4.21
-std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const
-std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const@GLIBCXX_3.4.18
-std::__throw_bad_alloc()
-std::__throw_bad_alloc()@GLIBCXX_3.4
-std::__throw_length_error(char const*)
-std::__throw_length_error(char const*)@GLIBCXX_3.4
-std::__throw_logic_error(char const*)
-std::__throw_logic_error(char const*)@GLIBCXX_3.4
-std::__throw_out_of_range_fmt(char const*, ...)
-std::__throw_out_of_range_fmt(char const*, ...)@GLIBCXX_3.4.20
-std::bad_alloc::~bad_alloc()
-std::bad_alloc::~bad_alloc()@GLIBCXX_3.4
-std::basic_ios<wchar_t, std::char_traits<wchar_t>>::imbue(std::locale const&)
-std::basic_ios<wchar_t, std::char_traits<wchar_t>>::imbue(std::locale const&)@GLIBCXX_3.4
-std::basic_ios<wchar_t, std::char_traits<wchar_t>>::init(std::basic_streambuf<wchar_t, std::char_traits<wchar_t>>*)
-std::basic_ios<wchar_t, std::char_traits<wchar_t>>::init(std::basic_streambuf<wchar_t, std::char_traits<wchar_t>>*)@GLIBCXX_3.4
-std::basic_istream<char, std::char_traits<char>>& std::ws<char, std::char_traits<char>>(std::basic_istream<char, std::char_traits<char>>&)
-std::basic_istream<char, std::char_traits<char>>& std::ws<char, std::char_traits<char>>(std::basic_istream<char, std::char_traits<char>>&)@GLIBCXX_3.4
-std::basic_ostream<char, std::char_traits<char>>& std::__ostream_insert<char, std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>>&, char const*, long)
-std::basic_ostream<char, std::char_traits<char>>& std::__ostream_insert<char, std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>>&, char const*, long)@GLIBCXX_3.4.9
-std::basic_ostream<wchar_t, std::char_traits<wchar_t>>& std::basic_ostream<wchar_t, std::char_traits<wchar_t>>::_M_insert<double>(double)
-std::basic_ostream<wchar_t, std::char_traits<wchar_t>>& std::basic_ostream<wchar_t, std::char_traits<wchar_t>>::_M_insert<double>(double)@GLIBCXX_3.4.9
-std::exception::~exception()
-std::exception::~exception()@GLIBCXX_3.4
-std::ios_base::Init::Init()
-std::ios_base::Init::Init()@GLIBCXX_3.4
-std::ios_base::Init::~Init()
-std::ios_base::Init::~Init()@GLIBCXX_3.4
-std::ios_base::ios_base()
-std::ios_base::ios_base()@GLIBCXX_3.4
-std::ios_base::~ios_base()
-std::ios_base::~ios_base()@GLIBCXX_3.4
-std::istream::putback(char)
-std::istream::putback(char)@GLIBCXX_3.4
-std::istream::read(char*, long)
-std::istream::read(char*, long)@GLIBCXX_3.4
-std::locale::locale()
-std::locale::locale()@GLIBCXX_3.4
-std::locale::locale(char const*)
-std::locale::locale(char const*)@GLIBCXX_3.4
-std::locale::~locale()
-std::locale::~locale()@GLIBCXX_3.4
-std::ostream::write(char const*, long)
-std::ostream::write(char const*, long)@GLIBCXX_3.4
-std::set_new_handler(void (*)())
-std::set_new_handler(void (*)())@GLIBCXX_3.4
-std::terminate()
-std::terminate()@GLIBCXX_3.4
-std::uncaught_exception()
-std::uncaught_exception()@GLIBCXX_3.4
+std::__facet_shims::__any_string::operator std::basic_string<char, std::char_traits<char>, std::allocator<char>><char>() const
+std::__facet_shims::__any_string::operator std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>><wchar_t>() const
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::bad_typeid
 stderr
 stderr@GLIBC_2.2.5
+stdin
+stdin@GLIBC_2.2.5
+stdout
+stdout@GLIBC_2.2.5
 steam://
 steam://openurl/
 steam://openurl_external/
@@ -34237,11 +34491,14 @@ strdup@GLIBC_2.2.5
 stream::imbue() failed with locale: '%s', exception: %s\n
 strerror
 strerror@GLIBC_2.2.5
+strerror_r
+strerror_r@GLIBC_2.2.5
 strftime
 strftime@GLIBC_2.2.5
 string (%s)
 string differs (net %s pred %s)\n
 string fieldName, int xpos, int ypos, int wide, int tall, bool visible, bool enabled, int tabPosition, corner pinCorner, autoresize autoResize, string tooltiptext
+string::string
 string_array
 string_lookups
 stringcmds
@@ -34272,6 +34529,8 @@ strtok
 strtok@GLIBC_2.2.5
 strtol
 strtol@GLIBC_2.2.5
+strtold_l
+strtold_l@GLIBC_2.3
 strtoll
 strtoll@GLIBC_2.2.5
 strtoul
@@ -34386,7 +34645,6 @@ syringe_charge_level
 sysconf
 sysconf@GLIBC_2.2.5
 system
-system@GLIBC_2.2.5
 t-rex
 tRNS chunk with incompatible color type
 tZ6CReplayInputPanel
@@ -34527,6 +34785,9 @@ teleporter_red_out
 teleports
 temp/%s
 temporary ent model invalid\n
+terminate called after throwing an instance of '
+terminate called recursively\n
+terminate called without an active exception\n
 termsofservice
 test view animation
 test_anim
@@ -35358,8 +35619,8 @@ towlower@GLIBC_2.2.5
 towupper
 towupper@GLIBC_2.2.5
 tpdamage_1
+tpdamage_2
 tpdamage_3
-tpdamage_4
 tr_TR
 tr_dustbowl
 tr_target
@@ -35416,6 +35677,8 @@ training_complete
 training_continue
 training_map_video
 trainingprogress.txt
+transaction clone for operator delete(void*)
+transaction clone for operator new[](unsigned long)
 transition_time
 translateVar
 travel time
@@ -35453,10 +35716,15 @@ typedata
 typeinfo for CThread
 typeinfo for CryptoPP::BlockPaddingSchemeDef::BlockPaddingScheme
 typeinfo for CryptoPP::Integer::RandomNumberType
+typeinfo for __cxxabiv1::__class_type_info
+typeinfo for __cxxabiv1::__enum_type_info
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__si_class_type_info
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for bool
-typeinfo for bool@CXXABI_1.3
 typeinfo for float
-typeinfo for float@CXXABI_1.3
 typeinfo for google::protobuf::Closure
 typeinfo for google::protobuf::DescriptorBuilder::OptionInterpreter::AggregateOptionFinder
 typeinfo for google::protobuf::DescriptorDatabase
@@ -35527,24 +35795,20 @@ typeinfo for google::protobuf::io::ZeroCopyInputStream
 typeinfo for google::protobuf::io::ZeroCopyOutputStream
 typeinfo for int
 typeinfo for int const*
-typeinfo for int const*@CXXABI_1.3
-typeinfo for int@CXXABI_1.3
-typeinfo for std::bad_alloc
-typeinfo for std::bad_alloc@GLIBCXX_3.4
-typeinfo for std::exception
-typeinfo for std::exception@GLIBCXX_3.4
 typeinfo for unsigned char
 typeinfo for unsigned char const*
-typeinfo for unsigned char const*@CXXABI_1.3
 typeinfo for unsigned char*
-typeinfo for unsigned char*@CXXABI_1.3
-typeinfo for unsigned char@CXXABI_1.3
 typeinfo for unsigned int
-typeinfo for unsigned int@CXXABI_1.3
 typeinfo for unsigned long long
-typeinfo for unsigned long long@CXXABI_1.3
 typeinfo name for CryptoPP::BlockPaddingSchemeDef::BlockPaddingScheme
 typeinfo name for CryptoPP::Integer::RandomNumberType
+typeinfo name for __cxxabiv1::__class_type_info
+typeinfo name for __cxxabiv1::__enum_type_info
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo name for __cxxabiv1::__si_class_type_info
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for google::protobuf::Closure
 typeinfo name for google::protobuf::DescriptorBuilder::OptionInterpreter::AggregateOptionFinder
 typeinfo name for google::protobuf::DescriptorDatabase
@@ -35614,6 +35878,7 @@ typeinfo name for google::protobuf::io::StringOutputStream
 typeinfo name for google::protobuf::io::ZeroCopyInputStream
 typeinfo name for google::protobuf::io::ZeroCopyOutputStream
 u64( %lld = 0x%llX )
+u<death_flags
 uber_start
 uber_stop
 ubercharge
@@ -35668,13 +35933,19 @@ unavailable_target_%d
 unconnected
 undefined
 undeploy
+ungetc
+ungetc@GLIBC_2.2.5
+ungetwc
+ungetwc@GLIBC_2.2.5
 unichar
 unicode
+uninitialized __any_string
 uninterpreted_option
 unique craft index
 universe:%u;account_type:%u;id:%u;instance:%u;team:%d
 unknown critical chunk
 unknown error
+unknown_language
 unknown_type
 unlimited quantity
 unlink@GLIBC_2.2.5
@@ -35689,6 +35960,7 @@ unpause
 unselectedcolor
 unsigned int const& google::protobuf::internal::GeneratedMessageReflection::GetRaw<unsigned int>(google::protobuf::Message const&, google::protobuf::FieldDescriptor const*) const
 unsigned long const& google::protobuf::internal::GeneratedMessageReflection::GetRaw<unsigned long>(google::protobuf::Message const&, google::protobuf::FieldDescriptor const*) const
+unspecified
 untradable_items
 untradablecheckbox
 unusual_bubbles_green_fumes
@@ -35714,6 +35986,7 @@ upgradebuypanel_delta
 upgradebuypanel_xpos
 upgradebuypanel_ypos
 upgrades_file_changed
+upper
 url 
 url_ok
 usable
@@ -35826,6 +36099,7 @@ vector4_array
 vector4d: %f %f %f %f
 vector::_M_default_append
 vector::_M_fill_insert
+vector::_M_realloc_append
 vector::_M_realloc_insert
 vector::reserve
 vector<bool>::_M_fill_insert
@@ -36237,7 +36511,6 @@ vo/spy_PositiveVocalization04.mp3
 vo/spy_PositiveVocalization05.mp3
 voice
 voice/icntlk_pl
-voice_ban.dt
 voice_clientdebug
 voice_duck
 voice_duck %d\n
@@ -36366,11 +36639,13 @@ vswprintf
 vswprintf@GLIBC_2.2.5
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__enum_type_info
-vtable for __cxxabiv1::__enum_type_info@CXXABI_1.3
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
 vtable for __cxxabiv1::__pointer_type_info
-vtable for __cxxabiv1::__pointer_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
 vtable for google::protobuf::Closure
 vtable for google::protobuf::DescriptorBuilder::OptionInterpreter::AggregateOptionFinder
 vtable for google::protobuf::DescriptorDatabase
@@ -36439,18 +36714,9 @@ vtable for google::protobuf::io::OstreamOutputStream::CopyingOstreamOutputStream
 vtable for google::protobuf::io::StringOutputStream
 vtable for google::protobuf::io::ZeroCopyInputStream
 vtable for google::protobuf::io::ZeroCopyOutputStream
-vtable for std::__cxx11::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>
-vtable for std::__cxx11::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>@GLIBCXX_3.4.21
-vtable for std::__cxx11::basic_stringbuf<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>
-vtable for std::__cxx11::basic_stringbuf<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>@GLIBCXX_3.4.21
-vtable for std::bad_alloc
-vtable for std::bad_alloc@GLIBCXX_3.4
-vtable for std::basic_ios<wchar_t, std::char_traits<wchar_t>>
-vtable for std::basic_ios<wchar_t, std::char_traits<wchar_t>>@GLIBCXX_3.4
-vtable for std::basic_streambuf<wchar_t, std::char_traits<wchar_t>>
-vtable for std::basic_streambuf<wchar_t, std::char_traits<wchar_t>>@GLIBCXX_3.4
 vtex_dll
 vtf.cpp
+w+bx
 wade
 waiting for lock
 waitingtoplay
@@ -36486,6 +36752,8 @@ watersplash
 wave_count
 wave_index
 waveheader
+wcrtomb
+wcrtomb@GLIBC_2.2.5
 wcscat
 wcscat@GLIBC_2.2.5
 wcschr
@@ -36504,6 +36772,8 @@ wcsncmp
 wcsncmp@GLIBC_2.2.5
 wcsncpy
 wcsncpy@GLIBC_2.2.5
+wcsnrtombs
+wcsnrtombs@GLIBC_2.2.5
 wcsstr
 wcsstr@GLIBC_2.2.5
 wcstod
@@ -36516,6 +36786,8 @@ wcstoll
 wcstoll@GLIBC_2.2.5
 wcstombs
 wcstombs@GLIBC_2.2.5
+wctob
+wctob@GLIBC_2.2.5
 weapon%d
 weapon_allow_inspect
 weapon_blocks_healing
@@ -36579,6 +36851,16 @@ winreason
 wintext
 wm_bodygroup_override
 wm_bodygroup_state_override
+wmemchr
+wmemchr@GLIBC_2.2.5
+wmemcmp
+wmemcmp@GLIBC_2.2.5
+wmemcpy
+wmemcpy@GLIBC_2.2.5
+wmemmove
+wmemmove@GLIBC_2.2.5
+wmemset
+wmemset@GLIBC_2.2.5
 word_plural
 word_replacements
 work item
@@ -36598,11 +36880,13 @@ worldmodel
 wrangler_kill
 wrapped_gift_item_def
 wrench_builds_minisentry
+writev
+writev@GLIBC_2.2.5
 writing bindings to %s\n
 wrong submessage type
 www.
 x = %i, y = %i, w = %i h = %i text %s\n
-xdg-open "%s" &
+xdigit
 xifier_class_remap
 xlook
 xmas.jingle
@@ -36633,7 +36917,6 @@ youtubeapi.cpp
 youtubeupload
 yt:rating
 yt:statistics
-zT?in_graph
 zh_CN
 zh_TW
 zi_atoll
@@ -36654,3 +36937,4 @@ zoom_y
 {height}
 {width}
 }CSendAudio
+~Cm_fog.enable

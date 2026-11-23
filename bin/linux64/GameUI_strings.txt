@@ -1,4 +1,3 @@
-                
         %3d %3d %3d %3d %3d %3d %3d %3d
         %4u %4u %4u %4u %4u %4u %4u %4u
     Component %d: %dhx%dv q=%d
@@ -34,7 +33,6 @@
 #%s_Chapter%s_Title
 #%s_DESC
 #%s_NAME
-#>BaseUI
 #Achievement_Group_%d
 #Bonus_Map_AdvancedChambers
 #Console_Submit
@@ -66,7 +64,6 @@
 #FileOpenDialog_Save
 #FileOpenDialog_Select
 #FileOpenDialog_ToolTip_NewFolder
-#FileOpenDialog_ToolTip_OpenInDesktopManagerButton
 #FileOpenDialog_ToolTip_Up
 #Frame_Untitled
 #GAMEUI_Commentary_Console_Explanation
@@ -464,7 +461,6 @@
 #gameui_ultra
 #include
 #include is NULL 
-#var_
 #var_%s
 #vgui_TimeLeftMinuteSecond
 #vgui_TimeLeftMinuteSeconds
@@ -671,6 +667,8 @@ $frame
 *N12_GLOBAL__N_115ScrollBarButtonE
 *N12_GLOBAL__N_116CaptionGripPanelE
 *N12_GLOBAL__N_19GripPanelE
+++CCUNG
+++CCUNGstd::exception
 ,%03d
 -defaultgamedir
 -dontusegamedir
@@ -857,6 +855,7 @@ $frame
 30COptionsSubKeyboardAdvancedDlg
 32CCreateMultiplayerGameServerPage
 333333
+333?
 34CCreateMultiplayerGameGameplayPage
 36COptionsSubAudioThirdPartyCreditsDlg
 36COptionsSubVideoThirdPartyCreditsDlg
@@ -878,17 +877,19 @@ $frame
 < unset >
 </script>
 << NULL >>\n
+<PF\n%d %d\n-1.000000\n
 <Select A Challenge>
 <a href=
 <img src="
 <pre>
 <unknown>
+=autohide_scrollbar
 >CCvarSlider
 >CSessionBrowserDialog
 >[unknown]
 ?<a href=
 ?CursorExited
-?VMaterialSystem082
+?N4vgui6IImageE
 @%c%s\n
 @CrosshairImagePanelBase
 ABGR8888
@@ -940,7 +941,6 @@ AudioSpokenLanguage
 AutoResize
 AutoSaveImage
 B17CBitmapImagePanel
-B333?
 BCCvarToggleCheckButton
 BGR565
 BGR888
@@ -958,6 +958,7 @@ Bad format string in CLocalizeStringTable::ConstructString\n
 Bad map name!\n
 BaseGameUIPanel
 BaseInputDialog
+BaseUI
 BenchmarkButton
 BestMoments
 Bias
@@ -1039,6 +1040,7 @@ CBrowserItem
 CBuildFactoryHelper:  Factory for '%s' already exists!!!!\n
 CBuildModeNavCombo
 CCIR601 sampling not implemented yet
+CCPlayerListDialog
 CCommand::Tokenize: Encountered command which overflows the argument buffer.. Clamped!\n
 CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. Skipping!\n
 CCommandItem
@@ -1108,7 +1110,6 @@ CPanelListPanel
 CPanelListPanelVScroll
 CPanelMessageMapDictionary::m_PanelMessageMapPool
 CPauseDialog
-CPlayerListDialog
 CPostCommentaryDialog
 CPropertyLabel
 CQuitQueryBox
@@ -1143,8 +1144,6 @@ CVProfNode::EnterScope()
 CVProfNode::ExitScope()
 CVProfNode::GetSubNode(char const*, int, char const*, int)
 CWelcomeDialog
-CXXABI_1.3
-CXXABI_1.3.8
 CallAssertFailedNotifyFunc
 Can't add Keybindings Context for unnamed panels\n
 Can't condump! Too many existing condump output files in the gamedir!\n
@@ -1488,14 +1487,13 @@ Freed XMS handle %u
 Friends
 FullPathEdit
 GAME
-GCC: (SteamRT 10.3.0-3+steamrt3.1+bsrt3.1) 10.3.0
-GLIBCXX_3.4
+GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GLIBC_2.14
 GLIBC_2.2.5
-GLIBC_2.22
 GLIBC_2.27
 GLIBC_2.29
 GLIBC_2.3
+GLIBC_2.3.2
 GLIBC_2.4
 GLIBC_2.7
 Gain
@@ -1909,6 +1907,8 @@ Mute
 MuteButton
 Muted
 N10CBasePanel16CAsyncJobContextE
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv119__foreign_exceptionE
 N4vgui10CheckImageE
 N4vgui10ClickPanelE
 N4vgui10GraphPanelE
@@ -1971,7 +1971,6 @@ N4vgui5ImageE
 N4vgui5LabelE
 N4vgui5PanelE
 N4vgui6ButtonE
-N4vgui6IImageE
 N4vgui6SliderE
 N4vgui7DividerE
 N4vgui7MenuBarE
@@ -2057,8 +2056,6 @@ OpenCustomMapsDialog
 OpenFriendsDialog
 OpenGameMenu
 OpenGammaDialog
-OpenInExplorer
-OpenInExplorerButton
 OpenLoadCommentaryDialog
 OpenLoadDemoDialog
 OpenLoadGameDialog
@@ -2085,7 +2082,7 @@ OptionsItem.res
 OptionsSubVideoGammaDlg
 Output file write error --- out of disk space?
 OverwriteGameCancelled
-PF\n%d %d\n-1.000000\n
+P?VMaterialSystem082
 PIN_BOTTOMLEFT
 PIN_BOTTOMRIGHT
 PIN_CENTER_BOTTOM
@@ -2441,6 +2438,12 @@ SpeakerSetup
 Spew TabContainer dimensions.
 Spline
 SpraypaintList
+St10bad_typeid
+St13bad_exception
+St20bad_array_new_length
+St8bad_cast
+St9bad_alloc
+St9exception
 Standard Dialog
 Start Of Frame 0x%02x: width=%u, height=%u, components=%d
 Start Of Scan: %d components
@@ -2591,7 +2594,6 @@ VENGINE_MATCHMAKING_VERSION001
 VERSION
 VERSION %.1f\r\n\r\n
 VEngineClient014
-VEngineCvar004
 VEngineVGui002
 VFileSystem022
 VGUI Build Mode Editor
@@ -2679,12 +2681,6 @@ _ITM_registerTMCloneTable
 _Ranked
 _SpewInfo
 _SpewMessage
-_ZGVbN2v_sin
-_ZGVbN2v_sin@GLIBC_2.22
-_ZGVbN2vv_pow
-_ZGVbN2vv_pow@GLIBC_2.22
-_ZGVbN4vv_powf
-_ZGVbN4vv_powf@GLIBC_2.22
 __bss_start
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
@@ -2692,8 +2688,10 @@ __ctype_tolower_loc
 __ctype_tolower_loc@GLIBC_2.3
 __ctype_toupper_loc
 __ctype_toupper_loc@GLIBC_2.3
+__cxa_allocate_exception
 __cxa_atexit
 __cxa_atexit@GLIBC_2.2.5
+__cxa_call_terminate
 __cxa_call_unexpected
 __cxa_finalize
 __cxa_finalize@GLIBC_2.2.5
@@ -2701,10 +2699,7 @@ __cxa_guard_abort
 __cxa_guard_acquire
 __cxa_guard_release
 __cxa_pure_virtual
-__cxa_throw_bad_array_new_length
-__cxa_throw_bad_array_new_length@CXXABI_1.3.8
-__dynamic_cast
-__dynamic_cast@CXXABI_1.3
+__cxa_throw
 __errno_location
 __errno_location@GLIBC_2.2.5
 __gmon_start__
@@ -2794,7 +2789,6 @@ attributes
 auto_tall_tocontents
 auto_wide_tocontents
 autohide_buttons
-autohide_scrollbar
 back
 bench_showstatsdialog
 bench_upload\n
@@ -3247,9 +3241,7 @@ libSDL2-2.0.so.0
 libc.so.6
 libdl.so.2
 libm.so.6
-libmvec.so.1
 libpthread.so.0
-libstdc++.so.6
 libsteam_api.so
 libtier0.so
 libvstdlib.so
@@ -3456,6 +3448,7 @@ polish
 portuguese
 positionImage
 pow@GLIBC_2.29
+powf
 powf@GLIBC_2.27
 preloadDataSize
 prepend
@@ -3478,6 +3471,10 @@ proportional_xpos
 proportional_ypos
 pt_BR
 pt_PT
+pthread_cond_broadcast
+pthread_cond_broadcast@GLIBC_2.3.2
+pthread_cond_wait
+pthread_cond_wait@GLIBC_2.3.2
 pthread_mutex_destroy
 pthread_mutex_destroy@GLIBC_2.2.5
 pthread_mutex_init
@@ -3547,7 +3544,6 @@ resource/icon_folder
 resource/icon_folder_selected
 resource/icon_folderup
 resource/icon_newfolder
-resource/icon_play_once
 resource/ui/AchievementItem.res
 resource/ui/AchievementsDialog.res
 resource\autosave
@@ -3639,8 +3635,11 @@ startFrame
 stats_reset
 stay_armed_on_click
 stayselectedonclick
-std::terminate()
-std::terminate()@GLIBCXX_3.4
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::bad_typeid
 stderr
 stderr@GLIBC_2.2.5
 steam/games/PlatformMenu.vdf
@@ -3715,8 +3714,6 @@ sv_player_funnel_into_portals
 sv_unlockedchapters
 swedish
 symlink@GLIBC_2.2.5
-system
-system@GLIBC_2.2.5
 tRNS chunk with incompatible color type
 tabPosition
 tabheight
@@ -3774,6 +3771,10 @@ trackinfo
 transition_time
 true
 turkish
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
 u64( %lld = 0x%llX )
 ui/%s
 ui/holiday/%s
@@ -3849,6 +3850,8 @@ vsnprintf@GLIBC_2.2.5
 vswprintf
 vswprintf@GLIBC_2.2.5
 vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
 vtex_dll
@@ -3877,10 +3880,10 @@ wcstoll@GLIBC_2.2.5
 wcstombs
 wcstombs@GLIBC_2.2.5
 www.
-xdg-open "%s" &
 xload %s
 xsave %s
 yoffset
+zD<br>VEngineCvar004
 zh_CN
 zh_TW
 zlib error

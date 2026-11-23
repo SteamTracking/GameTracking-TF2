@@ -5,26 +5,40 @@
     with %d x %d thumbnail image
    %c=%d ~%d%%
   Ss=%d, Se=%d, Ah=%d, Al=%d
+  what():  
  ( def. "%s" )
  ReadToken overflow
+ [clone 
+ _Complex
+ _Imaginary
+ __vector(
  archive
  black
  bold
  bytes
  cheat
+ class
  client
  clientcmd_can_execute
+ const
  failed to dlopen %s error=%s\n
+ for 
  light
  max. %f
  min. %f
+ noexcept
  notconnected
  notify
  regular
  replicated
+ requires 
+ restrict
  semibold
  server_can_execute
  singleplayer
+ throw
+ transaction_safe
+ volatile
 "%s" = "%s"
 "UnlitGeneric"\n{\n\t"$basetexture"\t"%s%c%s"\n\t"$translucent" "1"\n\t"$ignorez" "1"\n\t"$vertexcolor" "1"\n\t"$vertexalpha" "1"\n}\n
 "ctrl"\t"1"\n
@@ -49,7 +63,6 @@
 #base is NULL 
 #include
 #include is NULL 
-#var_
 #var_%s
 #vgui_TimeLeftMinuteSecond
 #vgui_TimeLeftMinuteSeconds
@@ -118,6 +131,7 @@ $vertexcolor
 %s/%s
 %s/bin/linux64/%s
 %s: Can't set font scale on a non-bitmap font!\n
+%s: __pos (which is %zu) > this->size() (which is %zu)
 %stemp%d.tga
 &AElig;
 &Aacute;
@@ -230,6 +244,7 @@ $vertexcolor
 (%s)%s
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
+(anonymous namespace)
 (no name)
 (null)
 ** NOTE: The real value is %.3f but the server has temporarily restricted it to %.3f **\n
@@ -245,7 +260,12 @@ $vertexcolor
 *** Unable to serialize... have no image data!\n
 *N12_GLOBAL__N_115ScrollBarButtonE
 *N12_GLOBAL__N_116CaptionGripPanelE
+*N12_GLOBAL__N_121system_error_categoryE
+*N12_GLOBAL__N_122generic_error_categoryE
 *N12_GLOBAL__N_19GripPanelE
+++CCUNG
+++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGstd::exception
 ,%03d
 - game
 --- Missing Vgui material %s\n
@@ -268,6 +288,8 @@ $vertexcolor
 -vguimessages
 .pfm
 /data/src/public/tier1/UtlSortVector.h
+/dev/random
+/dev/urandom
 /materials/
 /usr/share/fonts/adobe-source-han-sans/SourceHanSansCN-Regular.otf
 /usr/share/fonts/adobe-source-han-sans/SourceHanSansJP-Regular.otf
@@ -280,7 +302,7 @@ $vertexcolor
 0 - no auto-resize
 0 - top-left
 0.7.2
-0123456789ABCDEF
+0123456789
 0123456789abcdef
 0x%016llX
 1 - resize right
@@ -342,7 +364,6 @@ $vertexcolor
 29CKeyValuesDumpContextAsDevMsg
 3 - bottom-right
 3 - down & right
-333333
 40CProportionalIntWithScreenspacePropertyX
 40CProportionalIntWithScreenspacePropertyY
 4fff>fff>fff>fff>
@@ -352,15 +373,19 @@ $vertexcolor
 7IConVar
 8CFmtStrNILi256ELb0EE
 8b  16-May-2010
+;0123456789ABCDEF
 </script>
 << NULL >>\n
+<PF\n%d %d\n-1.000000\n
 <a href=
 <img src="
 <pre>
+=ContinuousProgressBar
 ><a href=
 >[unknown]
-?333?
+?333333
 ?ComboBox
+?N4vgui5ImageE
 ?vgui/cursors/arrow
 A magical prince
 ABGR8888
@@ -477,8 +502,6 @@ CUtlRBTree overflow!\n
 CVProfNode::EnterScope()
 CVProfNode::ExitScope()
 CVProfNode::GetSubNode(char const*, int, char const*, int)
-CXXABI_1.3
-CXXABI_1.3.8
 CallAssertFailedNotifyFunc
 Can't add Keybindings Context for unnamed panels\n
 CanBeDefaultButton
@@ -522,7 +545,6 @@ Component index %d: mismatching sampling ratio %d:%d, %d:%d, %c
 ConColorMsg(Color const&, char const*, ...)
 ConMsg(char const*, ...)
 ConVarRef %s doesn't point to an existing ConVar\n
-ContinuousProgressBar
 ControlFactory
 ControlModified
 ControlName
@@ -709,14 +731,16 @@ FrameTitleButton.FgColor
 Freed EMS handle %u
 Freed XMS handle %u
 GAME
-GCC: (SteamRT 10.3.0-3+steamrt3.1+bsrt3.1) 10.3.0
-GLIBCXX_3.4
+GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
+GLIBCXX_TUNABLES
 GLIBC_2.14
+GLIBC_2.17
 GLIBC_2.2.5
-GLIBC_2.22
+GLIBC_2.25
 GLIBC_2.27
 GLIBC_2.29
 GLIBC_2.3
+GLIBC_2.3.2
 GLIBC_2.4
 GLIBC_2.7
 Gain
@@ -778,6 +802,7 @@ Invalid progressive parameters Ss=%d Se=%d Ah=%d Al=%d
 Invalid progressive parameters at scan script entry %d
 Invalid scan script at entry %d
 Invalidate
+JArray
 JFIF APP0 marker: version %d.%02d, density %dx%d  %d
 JFIF extension marker: JPEG-compressed thumbnail image, length %u
 JFIF extension marker: RGB thumbnail image, length %u
@@ -1008,6 +1033,8 @@ MouseWheeled
 Move
 MoveScrollBar
 MoveScrollBarDirect
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv119__foreign_exceptionE
 N4vgui10CheckImageE
 N4vgui10ClickPanelE
 N4vgui10GraphPanelE
@@ -1051,7 +1078,6 @@ N4vgui29IForceVirtualInheritancePanelE
 N4vgui32IPanelAnimationPropertyConverterE
 N4vgui4MenuE
 N4vgui5FrameE
-N4vgui5ImageE
 N4vgui5LabelE
 N4vgui5PanelE
 N4vgui6ButtonE
@@ -1070,6 +1096,10 @@ N4vgui9ListPanelE
 N4vgui9ScrollBarE
 N4vgui9TextEntryE
 N4vgui9TextImageE
+N9__gnu_cxx20recursive_init_errorE
+N9__gnu_cxx24__concurrence_lock_errorE
+N9__gnu_cxx26__concurrence_unlock_errorE
+NSt3_V214error_categoryE
 NV_DST16
 NV_DST24
 NV_INTZ
@@ -1116,7 +1146,6 @@ Outline fonts textures.
 Output file write error --- out of disk space?
 PANGO_LIBDIR
 PANGO_SYSCONFDIR
-PF\n%d %d\n-1.000000\n
 PIN_BOTTOMLEFT
 PIN_BOTTOMRIGHT
 PIN_CENTER_BOTTOM
@@ -1268,6 +1297,22 @@ Source Han Sans TW
 Space
 Spew TabContainer dimensions.
 Spline
+St10bad_typeid
+St11logic_error
+St11range_error
+St12domain_error
+St12length_error
+St12out_of_range
+St12system_error
+St13bad_exception
+St13runtime_error
+St14overflow_error
+St15underflow_error
+St16invalid_argument
+St20bad_array_new_length
+St8bad_cast
+St9bad_alloc
+St9exception
 Start Of Frame 0x%02x: width=%u, height=%u, components=%d
 Start Of Scan: %d components
 Start of Image
@@ -1278,6 +1323,8 @@ StopPanelAnimations
 StoreUndo
 Suspension not allowed here
 TGA doesn't match source data.\n
+TLS init function for 
+TLS wrapper function for 
 TabContainer
 TabContainer nFlags:%x nPos:%d nParentSize:%d nPosDelta:%d nSize:%d GetParent:%p (%s) pszInput:'%s'\n
 Tahoma
@@ -1353,7 +1400,6 @@ UpdateSubTextureRGBA: Invalid texture id %i\n
 VBAllocTracker001
 VDataCache003
 VDmeMakeFileUtils001
-VEngineCvar004
 VFileSystem022
 VGUI Build Mode Editor
 VGUI textures
@@ -1383,6 +1429,7 @@ VTFFileHeaderV7_2_t
 VTFFileHeaderV7_3_t
 VTFFileHeaderX360_t
 VTFFileHeader_t
+VTT for 
 V_AppendSlash: ran out of space on %s.
 V_MakeAbsolutePath: _getcwd failed.
 V_MakeAbsolutePath: tried to ".." past the root.
@@ -1414,25 +1461,26 @@ ZLIB_1.2.0
 [/list]
 [CFontManager] Forcing freetype2 for %s\n
 [CMatSystemSurface] FcConfigAppFontAddFile failed for %s\n
+[abi:
 [code]
+[friend]
 [img]
 [list]
 [nothing currently selected]
 [url=
 \t(%zu) comparing %s with %s\n
 _ExitOnFatalAssert
+_Float
+_GLOBAL_
+_ITM_RU1
+_ITM_RU8
+_ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
+_ITM_memcpyRnWt
+_ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _SpewInfo
 _SpewMessage
-_ZGVbN2v_exp
-_ZGVbN2v_exp@GLIBC_2.22
-_ZGVbN2v_sin
-_ZGVbN2v_sin@GLIBC_2.22
-_ZGVbN2vv_pow
-_ZGVbN2vv_pow@GLIBC_2.22
-_ZGVbN4vv_powf
-_ZGVbN4vv_powf@GLIBC_2.22
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
 __ctype_tolower_loc
@@ -1441,30 +1489,19 @@ __ctype_toupper_loc
 __ctype_toupper_loc@GLIBC_2.3
 __cxa_atexit
 __cxa_atexit@GLIBC_2.2.5
-__cxa_call_unexpected
-__cxa_call_unexpected@CXXABI_1.3
 __cxa_finalize
 __cxa_finalize@GLIBC_2.2.5
-__cxa_guard_abort
-__cxa_guard_abort@CXXABI_1.3
-__cxa_guard_acquire
-__cxa_guard_acquire@CXXABI_1.3
-__cxa_guard_release
-__cxa_guard_release@CXXABI_1.3
 __cxa_pure_virtual
-__cxa_pure_virtual@CXXABI_1.3
-__cxa_throw_bad_array_new_length
-__cxa_throw_bad_array_new_length@CXXABI_1.3.8
-__dynamic_cast
-__dynamic_cast@CXXABI_1.3
 __errno_location
 __errno_location@GLIBC_2.2.5
+__float128
 __font_page_%d
 __fontpage
 __fontpage_additive
 __gmon_start__
-__gxx_personality_v0
-__gxx_personality_v0@CXXABI_1.3
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+__int128
 __isoc99_sscanf
 __isoc99_sscanf@GLIBC_2.7
 __lxstat64@GLIBC_2.2.5
@@ -1473,6 +1510,9 @@ __pthread_key_create
 __pthread_key_create@GLIBC_2.2.5
 __stack_chk_fail
 __stack_chk_fail@GLIBC_2.4
+__test_and_acquire(long*)
+__tls_get_addr
+__tls_get_addr@GLIBC_2.3
 __vgui_texture_%d
 __wrap___lxstat
 __wrap___lxstat64
@@ -1511,6 +1551,14 @@ _normal
 _rt_FullScreen
 _setjmp
 _setjmp@GLIBC_2.2.5
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
+_txnal_cow_string_D1(void*)
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_c_str(void const*)
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
+_txnal_sso_string_c_str(void const*)
+abort
 abort@GLIBC_2.2.5
 access
 access@GLIBC_2.2.5
@@ -1518,7 +1566,9 @@ acosf
 acosf@GLIBC_2.2.5
 actionsignallevel
 alignment
+alignof 
 allcaps
+allocator
 anim_framerate
 animate
 append
@@ -1532,20 +1582,48 @@ atan2f
 atan2f@GLIBC_2.2.5
 atanf
 atanf@GLIBC_2.2.5
+auto
+auto:
 auto_tall_tocontents
 auto_wide_tocontents
 autohide_buttons
 autohide_scrollbar
+basic_iostream
+basic_istream
+basic_ostream
+basic_string
+basic_string: construction from null is not valid
+basic_string::_M_create
+basic_string::_M_replace
+basic_string::_M_replace_aux
+basic_string::_S_construct null not valid
+basic_string::_S_create
+basic_string::append
+basic_string::assign
+basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
+basic_string::basic_string
+basic_string::compare
+basic_string::copy
+basic_string::erase
+basic_string::insert
+basic_string::replace
+basic_string::resize
+basic_string::substr
+basic_string_view::substr
 bg_image
 bgcolor
 bin/linux64
 blinkFgColor_override
 bool
+bool __gnu_cxx::__is_null_pointer<char const>(char const*)
+bool __gnu_cxx::__is_null_pointer<char>(char*)
+boolean
 border_override
 brighttext
 buffer already set
 bumpScale
 button_activation_type
+byte
 calloc
 calloc@GLIBC_2.2.5
 cbrtf
@@ -1554,6 +1632,10 @@ cellcolor
 center
 centerwrap
 changed
+char
+char16_t
+char32_t
+char8_t
 chdir
 chdir@GLIBC_2.2.5
 chmod@GLIBC_2.2.5
@@ -1563,19 +1645,29 @@ cl_hud_minmode
 clientinsetx_override
 closedir
 closedir@GLIBC_2.2.5
+co_await 
 column
 compress2
 compressBound
 compressBound@ZLIB_1.2.0
 compressedSize
 configVersion
+const_cast
+construction vtable for 
 cos@GLIBC_2.2.5
+covariant return thunk to 
 crc32
 ctrl
 custom_mod
 cvar
 cvar_name
 cvar_value
+decimal128
+decimal32
+decimal64
+decltype (
+decltype(auto)
+decltype(nullptr)
 default
 defaultBgColor_override
 defaultFgColor_override
@@ -1586,6 +1678,8 @@ deflateBound
 deflateBound@ZLIB_1.2.0
 deflateEnd
 deflateInit2_
+delete 
+delete[] 
 delta
 depressedBgColor_override
 depressedFgColor_override
@@ -1605,6 +1699,7 @@ dlopen
 dlopen@GLIBC_2.2.5
 dlsym
 dlsym@GLIBC_2.2.5
+double
 draw_corner_height
 draw_corner_width
 drawcolor
@@ -1626,6 +1721,7 @@ duplicate sRGB chunk
 duplicate suggested palette (sPLT) name
 duplicate tIME chunk
 duplicate tRNS chunk
+dynamic_cast
 eXIfoFFstIMEsPLTpHYshISTbKGDiTXtzTXttEXtsRGBsBITiCCPgAMAcHRMtRNSIDATPLTEIHDR
 eaFO
 editable
@@ -1637,6 +1733,7 @@ error loading %s\n
 exp@GLIBC_2.29
 expf
 expf@GLIBC_2.27
+false
 false 
 family
 fclose
@@ -1651,6 +1748,7 @@ fillcolor
 fillcolor_override
 filtered
 firecommand
+float
 float( %f )
 fontconfig/fonts.conf
 fopen64@GLIBC_2.2.5
@@ -1659,6 +1757,8 @@ fprintf
 fprintf@GLIBC_2.2.5
 fputc
 fputc@GLIBC_2.2.5
+fputs
+fputs@GLIBC_2.2.5
 frame_blGrip
 frame_bottomGrip
 frame_brGrip
@@ -1689,12 +1789,21 @@ g_VProfCurrentProfile
 g_pMemAlloc
 gamepadui/fonts/NotoSans-Regular.ttf
 gc^A
+generic
 getcwd
 getcwd@GLIBC_2.2.5
-getenv
+getentropy
+getentropy@GLIBC_2.25
 getenv@GLIBC_2.2.5
+glibcxx.eh_pool
+global constructors keyed to 
+global destructors keyed to 
+guard variable for 
+half
 handle
+hardware
 headerSize
+hidden alias for 
 http://
 https://
 i/o error
@@ -1717,6 +1826,7 @@ inflate
 inflateEnd
 inflateInit2_
 infocus_bgcolor_override
+initializer for module 
 int( %d = 0x%X )
 internal error
 invalid IHDR chunk size
@@ -1762,6 +1872,8 @@ invalid tEXt keyword
 invalid tIME chunk
 invalid zTXt chunk
 invalid zTXt compression method
+ioctl
+ioctl@GLIBC_2.2.5
 ipanel()->PaintTraverse
 isspace
 isspace@GLIBC_2.2.5
@@ -1776,6 +1888,8 @@ iswspace@GLIBC_2.2.5
 itemID
 itemIndex
 japanese
+java Class for 
+java resource 
 jpeg
 keybindings
 keybindings\n
@@ -1795,9 +1909,7 @@ libdl.so.2
 libfontconfig.so.1
 libfreetype.so.6
 libm.so.6
-libmvec.so.1
 libpthread.so.0
-libstdc++.so.6
 libtier0.so
 libvstdlib.so
 libz.so.1
@@ -1805,6 +1917,9 @@ localize
 log@GLIBC_2.29
 logf
 logf@GLIBC_2.27
+long
+long double
+long long
 longjmp
 longjmp@GLIBC_2.2.5
 lowResImageFormat
@@ -1862,6 +1977,7 @@ mkfifo@GLIBC_2.2.5
 model_pos
 mount@GLIBC_2.2.5
 mouseinputenabled
+mt19937
 navActivate
 navBack
 navDown
@@ -1869,9 +1985,14 @@ navLeft
 navRight
 navToRelay
 navUp
+new 
 newPanel
+new[]
 nobuttons
+noexcept
 non-recoverable state
+non-transaction clone for 
+non-virtual thunk to 
 north
 north-east
 north-west
@@ -1881,11 +2002,16 @@ numFrames
 numMipLevels
 numResources
 numTicks
+obj_count
+obj_size
 okOP
 oldtall
 oldwide
 open
 opendir@GLIBC_2.2.5
+operator
+operator 
+operator"" 
 original
 out of memory
 outoffocus_bgcolor_override
@@ -1903,6 +2029,7 @@ playsound
 pm"U
 positionImage
 pow@GLIBC_2.29
+powf
 powf@GLIBC_2.27
 preloadDataSize
 prepend
@@ -1919,6 +2046,10 @@ proportional_int
 proportional_width
 proportional_xpos
 proportional_ypos
+pthread_cond_broadcast
+pthread_cond_broadcast@GLIBC_2.3.2
+pthread_cond_wait
+pthread_cond_wait@GLIBC_2.3.2
 pthread_mutex_destroy
 pthread_mutex_destroy@GLIBC_2.2.5
 pthread_mutex_init
@@ -1942,8 +2073,17 @@ raise
 raise@GLIBC_2.2.5
 rand
 rand@GLIBC_2.2.5
+random_device could not be read
+random_device: getentropy failed
+random_device: rdrand failed
+random_device: rdseed failed
+random_device::random_device(const std::string&): device not available
+random_device::random_device(const std::string&): unsupported token
 rangeMax
 rangeMin
+rdrand
+rdrnd
+rdseed
 reached chunk/cache limits
 reached end-of-image state
 readdir64
@@ -1951,7 +2091,9 @@ readdir64@GLIBC_2.2.5
 realloc
 realloc@GLIBC_2.2.5
 realpath@GLIBC_2.3
+reference temporary #
 reflectivity
+reinterpret_cast
 reloadscheme
 rename@GLIBC_2.2.5
 render targets
@@ -1974,6 +2116,8 @@ schinese
 screenx
 screeny
 script
+secure_getenv
+secure_getenv@GLIBC_2.17
 selectallonfirstfocus
 selectedBgColor_override
 selectedFgColor_override
@@ -1985,9 +2129,13 @@ setinputenabled
 settitlebarvisible
 setvisible
 shift
+short
+signed char
 sin@GLIBC_2.2.5
 sincosf
 sincosf@GLIBC_2.2.5
+sizeof 
+sizeof...
 skip_autoresize
 slant
 smallcheckimage
@@ -2005,10 +2153,25 @@ sprintf@GLIBC_2.2.5
 src_corner_height
 src_corner_width
 startFrame
+static_cast
 stay_armed_on_click
 stayselectedonclick
-std::terminate()
-std::terminate()@GLIBCXX_3.4
+std::allocator
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::bad_typeid
+std::basic_iostream<char, std::char_traits<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_string
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::bfloat16_t
+std::iostream
+std::istream
+std::ostream
+std::string
 stderr
 stderr@GLIBC_2.2.5
 steam://
@@ -2029,16 +2192,22 @@ strcpy
 strcpy@GLIBC_2.2.5
 strdup
 strdup@GLIBC_2.2.5
+strerror_r
+strerror_r@GLIBC_2.2.5
 strftime
 strftime@GLIBC_2.2.5
 string
 string fieldName, int xpos, int ypos, int wide, int tall, bool visible, bool enabled, int tabPosition, corner pinCorner, autoresize autoResize, string tooltiptext
+string literal
+string::string
 strlen
 strlen@GLIBC_2.2.5
 strncasecmp
 strncasecmp@GLIBC_2.2.5
 strncat
 strncat@GLIBC_2.2.5
+strncmp
+strncmp@GLIBC_2.2.5
 strncpy
 strncpy@GLIBC_2.2.5
 strpbrk
@@ -2060,12 +2229,20 @@ subFocus
 submrg%dx%d.tga
 success
 symlink@GLIBC_2.2.5
+syscall
+syscall@GLIBC_2.2.5
+system
 tRNS chunk with incompatible color type
 tabPosition
 tabposition
 tan@GLIBC_2.2.5
 tchinese
 temp
+template
+template parameter object for 
+terminate called after throwing an instance of '
+terminate called recursively\n
+terminate called without an active exception\n
 textAlignment
 textHidden
 textfile
@@ -2074,6 +2251,10 @@ textinsety
 textureid
 tf_debug_tabcontainer
 thai
+this
+this 
+throw
+throw 
 thumbwidth
 tileHorizontally
 tileImage
@@ -2095,7 +2276,24 @@ towlower
 towlower@GLIBC_2.2.5
 towupper
 towupper@GLIBC_2.2.5
+transaction clone for 
+transaction clone for operator delete(void*)
+transaction clone for operator new[](unsigned long)
 true
+typeinfo fn for 
+typeinfo for 
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::recursive_init_error
+typeinfo name for 
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __gnu_cxx::recursive_init_error
+typename
 u64( %lld = 0x%llX )
 unichar
 unicode
@@ -2104,6 +2302,13 @@ unknown critical chunk
 unknown error
 unlink@GLIBC_2.2.5
 unnamed
+unsigned
+unsigned __int128
+unsigned char
+unsigned int
+unsigned long
+unsigned long long
+unsigned short
 url 
 use_proportional_insets
 usetitlesafe
@@ -2137,18 +2342,24 @@ vgui_controls is missing a required interface!\n
 vgui_font_reload
 vgui_nav_lock
 vgui_nav_lock_default_button
+virtual thunk to 
+void
 vsnprintf
 vsnprintf@GLIBC_2.2.5
 vswprintf
 vswprintf@GLIBC_2.2.5
+vtable for 
 vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__class_type_info@CXXABI_1.3
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
 vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__si_class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__vmi_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info@CXXABI_1.3
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+vtable for __gnu_cxx::recursive_init_error
 vtex_dll
 vtf.cpp
+wchar_t
 wcschr
 wcschr@GLIBC_2.2.5
 wcscmp
@@ -2171,6 +2382,11 @@ wcstombs
 wcstombs@GLIBC_2.2.5
 weight
 www.
+zD<br>VEngineCvar004
 zlib error
 zlib init error
 zpos
+{default arg#
+{lambda
+{parm#
+{unnamed type#

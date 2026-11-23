@@ -6,7 +6,21 @@
   ---------- ------      ------\n
   ---------------------------------------------------- ----------- ----------- ----------- ------ ----------- ------ ----------- ----------- ----------- -----------\n
   Scope                                                      Calls Calls/Frame  Time+Child    Pct        Time    Pct   Avg/Frame    Avg/Call Avg-NoChild        Peak\n
+  what():  
  Avg Time/Frame (ms)\n
+ [clone 
+ _Complex
+ _Imaginary
+ __vector(
+ class
+ const
+ for 
+ noexcept
+ requires 
+ restrict
+ throw
+ transaction_safe
+ volatile
 %.0f pct of time accounted for\n
 %8.4f / %8.4f:  %s\n
 %d frames sampled for %.2f seconds\n
@@ -20,13 +34,20 @@
 %s test: single thread push/pop, interleaved... 
 %s"%s"
 %s: %s
+%s: __pos (which is %zu) > this->size() (which is %zu)
 %s:%i\n
 %zu %zu %zu %zu %zu %zu %zu
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
+(anonymous namespace)
 *** VCR ASSERT FAILED: %s ***\n
 ******** BEGIN VPROF REPORT ********\n
 ******** END VPROF REPORT ********\n
+*N12_GLOBAL__N_121system_error_categoryE
+*N12_GLOBAL__N_122generic_error_categoryE
+++CCUNG
+++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGstd::exception
 -- Hierarchical Call Graph --\n
 -- Profile scopes sorted by average time (including children) --
 -- Profile scopes sorted by average time (without children) --
@@ -43,6 +64,7 @@
 -profile
 -raiseonassert
 /data/src/public/tier0/tslist.h
+/dev/random
 /dev/urandom
 /proc/cpuinfo
 /proc/self/cmdline
@@ -50,6 +72,7 @@
 /proc/self/statm
 /proc/self/status
 /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq
+0123456789
 12CCommandLine
 12CStdMemAlloc
 12ICommandLine
@@ -58,7 +81,6 @@
 9CVCRTrace
 9IMemAlloc
 9IVCRTrace
->CreateSimpleThread: pthread_create failed. Someone not calling pthread_detach() or pthread_join. Ret:%d\n
 @MemAllocOOMError: %u bytes\n
 ASSERT: %s:%i: %s\n
 Always Ignore
@@ -69,7 +91,6 @@ Assertion Failed
 Assertion Failed: s_dev_urandom_fd >= 0
 Assertion Failed: urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
 Attempting to load %s\n
-Aug 11 202616:51:06
 AuthenticAMD
 Average %.2f fps, %.2f ms per frame\n
 Bad node link detected\n
@@ -187,8 +208,6 @@ CWorkerThread::WaitForCall(unsigned int*)
 CWorkerThread::WaitForCall(unsigned int, unsigned int*)
 CWorkerThread::WaitForReply(unsigned int)
 CWorkerThread::WaitForReply(unsigned int, unsigned int (*)(int, CThreadEvent* const*, int, unsigned int))
-CXXABI_1.3
-CXXABI_1.3.8
 CallAssertFailedNotifyFunc
 CatchAndWriteMiniDump
 Client_Animation
@@ -211,7 +230,15 @@ Corefile
 CrackSmokingCompiler
 CreateSimpleThread
 CreateSimpleThread(unsigned long long (*)(void*), void*, unsigned long long*, unsigned int)
+CreateSimpleThread: pthread_create failed. Someone not calling pthread_detach() or pthread_join. Ret:%d\n
 DBG_PATHMATCH
+DF128_
+DF16_
+DF16b
+DF32_
+DF32x
+DF64_
+DF64x
 DeclareCurrentThreadIsMainThread
 DecodeBinaryFromString
 DefaultSpewFunc
@@ -238,13 +265,13 @@ Fast Path Model Rendering
 Fatal assert failed: %s, line %d.  Application exiting.\n
 File: %s\nLine: %i\nExpr: %s\n
 FileSystem
-GCC: (SteamRT 10.3.0-3+steamrt3.1+bsrt3.1) 10.3.0
+GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GCC: (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
-GLIBCXX_3.4
-GLIBCXX_3.4.15
+GLIBCXX_TUNABLES
 GLIBC_2.14
 GLIBC_2.17
 GLIBC_2.2.5
+GLIBC_2.25
 GLIBC_2.3
 GLIBC_2.3.2
 GLIBC_2.3.4
@@ -275,6 +302,7 @@ InstallProgressReportHandler
 Interpolation
 Is64BitOS
 IsSpewActive
+JArray
 Light_Cache
 LogV
 Lowered '%s' -> '%s'\n
@@ -288,20 +316,54 @@ MinidumpUserStreamInfoAppend
 MinidumpUserStreamInfoGet
 MinidumpUserStreamInfoSetHeader
 MsgV
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv117__class_type_infoE
+N10__cxxabiv117__pbase_type_infoE
+N10__cxxabiv119__foreign_exceptionE
+N10__cxxabiv119__pointer_type_infoE
+N10__cxxabiv120__si_class_type_infoE
+N10__cxxabiv123__fundamental_type_infoE
+N10__cxxabiv129__pointer_to_member_type_infoE
 N11TSListTests8CListOpsE
 N11TSListTests8CTestOpsE
 N11TSListTests9CQueueOpsE
+N9__gnu_cxx20recursive_init_errorE
+N9__gnu_cxx24__concurrence_lock_errorE
+N9__gnu_cxx26__concurrence_unlock_errorE
 NPCs
+NSt3_V214error_categoryE
 NetLog
 NetMsg
 NetWarning
 Networking
 No samples\n
+Nov 21 202619:56:52
 Occlusion
 Other_Model_Rendering
 Out of memory or address space.  Texture quality setting may be too high.\n
 Out of thread local storage!\n
 Overlays
+PDF128_
+PDF16_
+PDF16b
+PDF32_
+PDF32x
+PDF64_
+PDF64x
+PKDF128_
+PKDF16_
+PKDF16b
+PKDF32_
+PKDF32x
+PKDF64_
+PKDF64x
+PKDd
+PKDe
+PKDf
+PKDi
+PKDn
+PKDs
+PKDu
 POSIX_ASSERT_BACKTRACE
 Parameter file '%s' not found, skipping...
 Particle/Effect_Rendering
@@ -367,10 +429,29 @@ ShutdownPME
 Shutting down telemetry.\n
 Sound
 SpewActivate
+St10bad_typeid
+St11logic_error
+St11range_error
+St12domain_error
+St12length_error
+St12out_of_range
+St12system_error
+St13bad_exception
+St13runtime_error
+St14overflow_error
+St15underflow_error
+St16invalid_argument
+St20bad_array_new_length
+St8bad_cast
+St9bad_alloc
+St9exception
+St9type_info
 StackToolsNotify_LoadedLibrary
 Static_Prop_Rendering
 Swap_Buffers
 TELEMETRY: Calling tmOpen( %s )...\n
+TLS init function for 
+TLS wrapper function for 
 TSList cannot hold more that %d nodes\n
 Telemetry Warning/Error! %s version %d.%d.%d.%d,\n  but you linked with libTelemetryX64.so version %d.%d.%d.%d!\n  This might work, but it will probably just crash!\n
 Telemetry initialized at level %u.\n
@@ -414,6 +495,7 @@ VCR_GenericRecord( %s ): nameLen too long (%d)
 VCR_GenericRecord( %s ): not recording a VCR file
 VCR_Playback( %s ): not playing back a VCR file
 VGUI
+VTT for 
 VoidFnPtrLookup_Tier0
 WarningV
 WatchDog! Server took too long to process (probably infinite loop).\n
@@ -426,6 +508,8 @@ ZeroMemory
 [1;32m:%i:
 [1;33mASSERT:
 [38;2;%d;%d;%dm%s
+[abi:
+[friend]
 \nTesting %d threads:\n
 \t(%zu) comparing %s with %s\n
 _AssertValidReadPtr
@@ -434,41 +518,29 @@ _AssertValidWritePtr
 _DSpewMessage
 _ExitOnFatalAssert
 _ExitOnFatalAssert\n
+_Float
+_GLOBAL_
+_ITM_RU1
+_ITM_RU8
+_ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
+_ITM_memcpyRnWt
+_ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _SpewInfo
 _SpewMessage
-__cxa_allocate_exception
-__cxa_allocate_exception@CXXABI_1.3
 __cxa_atexit
 __cxa_atexit@GLIBC_2.2.5
-__cxa_begin_catch
-__cxa_begin_catch@CXXABI_1.3
-__cxa_call_unexpected
-__cxa_call_unexpected@CXXABI_1.3
-__cxa_end_catch
-__cxa_end_catch@CXXABI_1.3
 __cxa_finalize
 __cxa_finalize@GLIBC_2.2.5
-__cxa_guard_abort
-__cxa_guard_abort@CXXABI_1.3
-__cxa_guard_acquire
-__cxa_guard_acquire@CXXABI_1.3
-__cxa_guard_release
-__cxa_guard_release@CXXABI_1.3
 __cxa_pure_virtual
-__cxa_pure_virtual@CXXABI_1.3
-__cxa_rethrow
-__cxa_rethrow@CXXABI_1.3
-__cxa_throw
-__cxa_throw@CXXABI_1.3
-__cxa_throw_bad_array_new_length
-__cxa_throw_bad_array_new_length@CXXABI_1.3.8
 __errno_location
 __errno_location@GLIBC_2.2.5
+__float128
 __gmon_start__
-__gxx_personality_v0
-__gxx_personality_v0@CXXABI_1.3
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+__int128
 __isoc99_fscanf
 __isoc99_fscanf@GLIBC_2.7
 __isoc99_sscanf
@@ -485,6 +557,9 @@ __strcat_chk
 __strcat_chk@GLIBC_2.3.4
 __strcpy_chk
 __strcpy_chk@GLIBC_2.3.4
+__test_and_acquire(long*)
+__tls_get_addr
+__tls_get_addr@GLIBC_2.3
 __wrap___lxstat
 __wrap___lxstat64
 __wrap___xstat
@@ -520,30 +595,86 @@ __xstat64@GLIBC_2.2.5
 __xstat@GLIBC_2.2.5
 _exit
 _exit@GLIBC_2.2.5
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
+_txnal_cow_string_D1(void*)
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_c_str(void const*)
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
+_txnal_sso_string_c_str(void const*)
+abort
 abort@GLIBC_2.2.5
 access
 access@GLIBC_2.2.5
 alarm
 alarm@GLIBC_2.2.5
+alignof 
+allocator
 assert_dialog.cpp
+auto
+auto:
 autoMutex__
 backtrace
 backtrace@GLIBC_2.2.5
 backtrace_symbols
 backtrace_symbols@GLIBC_2.2.5
+basic_iostream
+basic_istream
+basic_ostream
+basic_string
+basic_string: construction from null is not valid
+basic_string::_M_create
+basic_string::_M_replace
+basic_string::_M_replace_aux
+basic_string::_S_construct null not valid
+basic_string::_S_create
+basic_string::append
+basic_string::assign
+basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
+basic_string::basic_string
+basic_string::compare
+basic_string::copy
+basic_string::erase
+basic_string::insert
+basic_string::replace
+basic_string::resize
+basic_string::substr
+basic_string_view::substr
+bool
+bool __gnu_cxx::__is_null_pointer<char const>(char const*)
+bool __gnu_cxx::__is_null_pointer<char>(char*)
+boolean
+byte
 c.so
+char
+char16_t
+char32_t
+char8_t
 chdir@GLIBC_2.2.5
 chmod@GLIBC_2.2.5
 clock_gettime
 clock_gettime@GLIBC_2.17
 closedir
 closedir@GLIBC_2.2.5
+co_await 
 command line too long, %i max\n
 console
+const_cast
+construction vtable for 
 core id
+covariant return thunk to 
 ctime_r
 ctime_r@GLIBC_2.2.5
 currentEvent == type
+decimal128
+decimal32
+decimal64
+decltype (
+decltype(auto)
+decltype(nullptr)
+default
+delete 
+delete[] 
 developer
 distributed...
 dl_iterate_phdr
@@ -557,7 +688,10 @@ dlopen@GLIBC_2.2.5
 dlsym
 dlsym@GLIBC_2.2.5
 done\n
+double
+dynamic_cast
 failed: %s\n
+false
 false 
 fatalassert_%s_%d
 fclose
@@ -572,10 +706,13 @@ fgetc
 fgetc@GLIBC_2.2.5
 fgets
 fgets@GLIBC_2.2.5
+float
 fopen64@GLIBC_2.2.5
 fopen@GLIBC_2.2.5
 fprintf
 fprintf@GLIBC_2.2.5
+fputc
+fputc@GLIBC_2.2.5
 fputs
 fputs@GLIBC_2.2.5
 fread
@@ -603,20 +740,34 @@ g_dwClockSpeed
 g_pMemAlloc
 g_pVCR
 game/PlaybackTick
+generic
 getcwd
 getcwd@GLIBC_2.2.5
-getenv
+getentropy
+getentropy@GLIBC_2.25
 getenv@GLIBC_2.2.5
 getloadavg
 getloadavg@GLIBC_2.2.5
 gettimeofday
 gettimeofday@GLIBC_2.2.5
+glibcxx.eh_pool
+global constructors keyed to 
+global destructors keyed to 
 gmtime_r
 gmtime_r@GLIBC_2.2.5
+guard variable for 
+half
+hardware
+hidden alias for 
+initializer for module 
+ioctl
+ioctl@GLIBC_2.2.5
 isatty
 isatty@GLIBC_2.2.5
 isspace
 isspace@GLIBC_2.2.5
+java Class for 
+java resource 
 lchown@GLIBC_2.2.5
 ld-linux-x86-64.so.2
 len == (unsigned char)strlen(pToken)
@@ -624,17 +775,21 @@ libSDL2-2.0.so.0
 libc.so.6
 libdl.so.2
 libpthread.so.0
-libstdc++.so.6
 loadlibrary() - could not get exe path
 localhost
 localtime@GLIBC_2.2.5
 localtime_r
 localtime_r@GLIBC_2.2.5
+long
+long double
+long long
 m_Lock
 malloc
 malloc@GLIBC_2.2.5
 malloc_usable_size
 malloc_usable_size@GLIBC_2.2.5
+memchr
+memchr@GLIBC_2.2.5
 memcmp
 memcmp( msg, tempData, len ) == 0
 memcmp(pToken, test, len) == 0
@@ -649,9 +804,20 @@ memstats
 mkdir@GLIBC_2.2.5
 mkfifo@GLIBC_2.2.5
 mount@GLIBC_2.2.5
+mt19937
 network
+new 
+new[]
 no affinity...
+noexcept
+non-transaction clone for 
+non-virtual thunk to 
+obj_count
+obj_size
 opendir@GLIBC_2.2.5
+operator
+operator 
+operator"" 
 pass\n
 pclose
 pclose@GLIBC_2.2.5
@@ -664,6 +830,8 @@ pthread_attr_init
 pthread_attr_init@GLIBC_2.2.5
 pthread_attr_setstacksize
 pthread_attr_setstacksize@GLIBC_2.2.5
+pthread_cond_broadcast
+pthread_cond_broadcast@GLIBC_2.3.2
 pthread_cond_destroy
 pthread_cond_destroy@GLIBC_2.3.2
 pthread_cond_init
@@ -672,6 +840,8 @@ pthread_cond_signal
 pthread_cond_signal@GLIBC_2.3.2
 pthread_cond_timedwait
 pthread_cond_timedwait@GLIBC_2.3.2
+pthread_cond_wait
+pthread_cond_wait@GLIBC_2.3.2
 pthread_create
 pthread_create@GLIBC_2.2.5
 pthread_detach
@@ -713,6 +883,15 @@ pthread_setspecific
 pthread_setspecific@GLIBC_2.2.5
 raise
 raise@GLIBC_2.2.5
+random_device could not be read
+random_device: getentropy failed
+random_device: rdrand failed
+random_device: rdseed failed
+random_device::random_device(const std::string&): device not available
+random_device::random_device(const std::string&): unsupported token
+rdrand
+rdrnd
+rdseed
 readdir64
 readdir64@GLIBC_2.2.5
 readlink
@@ -725,29 +904,44 @@ recv
 recv@GLIBC_2.2.5
 recvfrom
 recvfrom@GLIBC_2.2.5
+reference temporary #
+reinterpret_cast
 rename@GLIBC_2.2.5
 rmdir@GLIBC_2.2.5
 scandir@GLIBC_2.2.5
 sched_yield
 sched_yield@GLIBC_2.2.5
+secure_getenv
+secure_getenv@GLIBC_2.17
 send
 send@GLIBC_2.2.5
+short
 signal@GLIBC_2.2.5
+signed char
 simple.log
+sizeof 
+sizeof...
+sprintf
+sprintf@GLIBC_2.2.5
 srand
 srand@GLIBC_2.2.5
-std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
-std::_Rb_tree_decrement(std::_Rb_tree_node_base*)@GLIBCXX_3.4
-std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
-std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)@GLIBCXX_3.4
-std::__detail::_List_node_base::_M_hook(std::__detail::_List_node_base*)
-std::__detail::_List_node_base::_M_hook(std::__detail::_List_node_base*)@GLIBCXX_3.4.15
-std::__detail::_List_node_base::_M_unhook()
-std::__detail::_List_node_base::_M_unhook()@GLIBCXX_3.4.15
-std::__throw_bad_alloc()
-std::__throw_bad_alloc()@GLIBCXX_3.4
-std::__throw_length_error(char const*)
-std::__throw_length_error(char const*)@GLIBCXX_3.4
+static_cast
+std::allocator
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::bad_typeid
+std::basic_iostream<char, std::char_traits<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_string
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::bfloat16_t
+std::iostream
+std::istream
+std::ostream
+std::string
 stderr
 stderr@GLIBC_2.2.5
 strcasecmp
@@ -766,12 +960,18 @@ strdup
 strdup@GLIBC_2.2.5
 strerror
 strerror@GLIBC_2.2.5
+strerror_r
+strerror_r@GLIBC_2.2.5
+string literal
+string::string
 strlen
 strlen@GLIBC_2.2.5
 strncasecmp
 strncasecmp@GLIBC_2.2.5
 strncat
 strncat@GLIBC_2.2.5
+strncmp
+strncmp@GLIBC_2.2.5
 strncpy
 strncpy@GLIBC_2.2.5
 strpbrk
@@ -786,39 +986,307 @@ strtol
 strtol@GLIBC_2.2.5
 strtoll
 strtoll@GLIBC_2.2.5
+strtoul
+strtoul@GLIBC_2.2.5
 success!
 symlink@GLIBC_2.2.5
+syscall
+syscall@GLIBC_2.2.5
+system
 tempLen <= sizeof( tempData )
+template
+template parameter object for 
+terminate called after throwing an instance of '
+terminate called recursively\n
+terminate called without an active exception\n
+this
+this 
 threadtools.cpp
+throw
+throw 
 timegm@GLIBC_2.2.5
 timestamped.log
 tmGetAPI
 tolower
 tolower@GLIBC_2.2.5
+transaction clone for 
+transaction clone for operator delete(void*)
+transaction clone for operator new[](unsigned long)
+true
+typeinfo fn for 
+typeinfo for 
 typeinfo for CThread
 typeinfo for CWorkerThread
+typeinfo for _Float128
+typeinfo for _Float128 const*
+typeinfo for _Float128*
+typeinfo for _Float16
+typeinfo for _Float16 const*
+typeinfo for _Float16*
+typeinfo for _Float32
+typeinfo for _Float32 const*
+typeinfo for _Float32*
+typeinfo for _Float32x
+typeinfo for _Float32x const*
+typeinfo for _Float32x*
+typeinfo for _Float64
+typeinfo for _Float64 const*
+typeinfo for _Float64*
+typeinfo for _Float64x
+typeinfo for _Float64x const*
+typeinfo for _Float64x*
+typeinfo for __cxxabiv1::__class_type_info
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__fundamental_type_info
+typeinfo for __cxxabiv1::__pbase_type_info
+typeinfo for __cxxabiv1::__pointer_to_member_type_info
+typeinfo for __cxxabiv1::__pointer_type_info
+typeinfo for __cxxabiv1::__si_class_type_info
+typeinfo for __float128
+typeinfo for __float128 const*
+typeinfo for __float128*
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::recursive_init_error
+typeinfo for __int128
+typeinfo for __int128 const*
+typeinfo for __int128*
+typeinfo for bool
+typeinfo for bool const*
+typeinfo for bool*
+typeinfo for char
+typeinfo for char const*
+typeinfo for char*
+typeinfo for char16_t
+typeinfo for char16_t const*
+typeinfo for char16_t*
+typeinfo for char32_t
+typeinfo for char32_t const*
+typeinfo for char32_t*
+typeinfo for char8_t
+typeinfo for char8_t const*
+typeinfo for char8_t*
+typeinfo for decimal128
+typeinfo for decimal128 const*
+typeinfo for decimal128*
+typeinfo for decimal32
+typeinfo for decimal32 const*
+typeinfo for decimal32*
+typeinfo for decimal64
+typeinfo for decimal64 const*
+typeinfo for decimal64*
+typeinfo for double
+typeinfo for double const*
+typeinfo for double*
+typeinfo for float
+typeinfo for float const*
+typeinfo for float*
 typeinfo for int
-typeinfo for int@CXXABI_1.3
+typeinfo for int const*
+typeinfo for int*
+typeinfo for long
+typeinfo for long const*
+typeinfo for long double
+typeinfo for long double const*
+typeinfo for long double*
+typeinfo for long long
+typeinfo for long long const*
+typeinfo for long long*
+typeinfo for long*
+typeinfo for short
+typeinfo for short const*
+typeinfo for short*
+typeinfo for signed char
+typeinfo for signed char const*
+typeinfo for signed char*
+typeinfo for std::bfloat16_t
+typeinfo for std::bfloat16_t const*
+typeinfo for std::bfloat16_t*
+typeinfo for std::nullptr_t
+typeinfo for std::nullptr_t const*
+typeinfo for std::nullptr_t*
+typeinfo for unsigned __int128
+typeinfo for unsigned __int128 const*
+typeinfo for unsigned __int128*
+typeinfo for unsigned char
+typeinfo for unsigned char const*
+typeinfo for unsigned char*
+typeinfo for unsigned int
+typeinfo for unsigned int const*
+typeinfo for unsigned int*
+typeinfo for unsigned long
+typeinfo for unsigned long const*
+typeinfo for unsigned long long
+typeinfo for unsigned long long const*
+typeinfo for unsigned long long*
+typeinfo for unsigned long*
+typeinfo for unsigned short
+typeinfo for unsigned short const*
+typeinfo for unsigned short*
+typeinfo for void
+typeinfo for void const*
+typeinfo for void*
+typeinfo for wchar_t
+typeinfo for wchar_t const*
+typeinfo for wchar_t*
+typeinfo name for 
 typeinfo name for CThread
 typeinfo name for CWorkerThread
+typeinfo name for _Float128
+typeinfo name for _Float128 const*
+typeinfo name for _Float128*
+typeinfo name for _Float16
+typeinfo name for _Float16 const*
+typeinfo name for _Float16*
+typeinfo name for _Float32
+typeinfo name for _Float32 const*
+typeinfo name for _Float32*
+typeinfo name for _Float32x
+typeinfo name for _Float32x const*
+typeinfo name for _Float32x*
+typeinfo name for _Float64
+typeinfo name for _Float64 const*
+typeinfo name for _Float64*
+typeinfo name for _Float64x
+typeinfo name for _Float64x const*
+typeinfo name for _Float64x*
+typeinfo name for __cxxabiv1::__class_type_info
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo name for __cxxabiv1::__fundamental_type_info
+typeinfo name for __cxxabiv1::__pbase_type_info
+typeinfo name for __cxxabiv1::__pointer_to_member_type_info
+typeinfo name for __cxxabiv1::__pointer_type_info
+typeinfo name for __cxxabiv1::__si_class_type_info
+typeinfo name for __float128
+typeinfo name for __float128 const*
+typeinfo name for __float128*
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __gnu_cxx::recursive_init_error
+typeinfo name for __int128
+typeinfo name for __int128 const*
+typeinfo name for __int128*
+typeinfo name for bool
+typeinfo name for bool const*
+typeinfo name for bool*
+typeinfo name for char
+typeinfo name for char const*
+typeinfo name for char*
+typeinfo name for char16_t
+typeinfo name for char16_t const*
+typeinfo name for char16_t*
+typeinfo name for char32_t
+typeinfo name for char32_t const*
+typeinfo name for char32_t*
+typeinfo name for char8_t
+typeinfo name for char8_t const*
+typeinfo name for char8_t*
+typeinfo name for decimal128
+typeinfo name for decimal128 const*
+typeinfo name for decimal128*
+typeinfo name for decimal32
+typeinfo name for decimal32 const*
+typeinfo name for decimal32*
+typeinfo name for decimal64
+typeinfo name for decimal64 const*
+typeinfo name for decimal64*
+typeinfo name for double
+typeinfo name for double const*
+typeinfo name for double*
+typeinfo name for float
+typeinfo name for float const*
+typeinfo name for float*
+typeinfo name for int
+typeinfo name for int const*
+typeinfo name for int*
+typeinfo name for long
+typeinfo name for long const*
+typeinfo name for long double
+typeinfo name for long double const*
+typeinfo name for long double*
+typeinfo name for long long
+typeinfo name for long long const*
+typeinfo name for long long*
+typeinfo name for long*
+typeinfo name for short
+typeinfo name for short const*
+typeinfo name for short*
+typeinfo name for signed char
+typeinfo name for signed char const*
+typeinfo name for signed char*
+typeinfo name for std::bfloat16_t
+typeinfo name for std::bfloat16_t const*
+typeinfo name for std::bfloat16_t*
+typeinfo name for std::nullptr_t
+typeinfo name for std::nullptr_t const*
+typeinfo name for std::nullptr_t*
+typeinfo name for unsigned __int128
+typeinfo name for unsigned __int128 const*
+typeinfo name for unsigned __int128*
+typeinfo name for unsigned char
+typeinfo name for unsigned char const*
+typeinfo name for unsigned char*
+typeinfo name for unsigned int
+typeinfo name for unsigned int const*
+typeinfo name for unsigned int*
+typeinfo name for unsigned long
+typeinfo name for unsigned long const*
+typeinfo name for unsigned long long
+typeinfo name for unsigned long long const*
+typeinfo name for unsigned long long*
+typeinfo name for unsigned long*
+typeinfo name for unsigned short
+typeinfo name for unsigned short const*
+typeinfo name for unsigned short*
+typeinfo name for void
+typeinfo name for void const*
+typeinfo name for void*
+typeinfo name for wchar_t
+typeinfo name for wchar_t const*
+typeinfo name for wchar_t*
+typename
 uname -m
 unknown
 unlink@GLIBC_2.2.5
+unsigned
+unsigned __int128
+unsigned char
+unsigned int
+unsigned long
+unsigned long long
+unsigned short
 usleep
 usleep@GLIBC_2.2.5
 utime@GLIBC_2.2.5
 utimes@GLIBC_2.2.5
-vector::_M_realloc_insert
+vector::_M_realloc_append
+virtual thunk to 
+void
 vsnprintf
 vsnprintf@GLIBC_2.2.5
+vtable for 
 vtable for CThread
 vtable for CWorkerThread
 vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__class_type_info@CXXABI_1.3
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
+vtable for __cxxabiv1::__fundamental_type_info
+vtable for __cxxabiv1::__pbase_type_info
+vtable for __cxxabiv1::__pointer_to_member_type_info
+vtable for __cxxabiv1::__pointer_type_info
 vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__si_class_type_info@CXXABI_1.3
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+vtable for __gnu_cxx::recursive_init_error
 vtune
+wchar_t
 x86_64
+{default arg#
+{lambda
+{parm#
+{unnamed type#
 |  |  |  |  |  |  |  |  |  
 |  |  |  |  |  |  |  |  |  |  
 |  |  |  |  |  |  |  |  |  |  |  

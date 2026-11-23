@@ -105,6 +105,7 @@
   number of trials
   same cycle:
   standard deviation
+  what():  
  # p%d (v%d)\n
  # p%d is coplanar or isolated\n
  %2.2g
@@ -124,7 +125,6 @@
  ( def. "%s" )
  (%.1fx)\n
  0 # infinity not used\n
- A../ivp_intern/ivp_ball.cxx
  AMatrix: %s\n
  DUP
  DUPLICATEridge\n
@@ -132,14 +132,20 @@
  MERGEridge\n
  NULLfacet\n
  QR%d\n\n
+ [clone 
+ _Complex
+ _Imaginary
+ __vector(
  and at-infinity
  and distance: 
  archive
  bottom
  bytes
  cheat
+ class
  client
  clientcmd_can_execute
+ const
  coplanar
  degenerate
  distance= %4.2g\n
@@ -147,6 +153,7 @@
  f%d
  failed to dlopen %s error=%s\n
  flipped
+ for 
  game
  keepcentrum
  max. %f
@@ -156,6 +163,7 @@
  min. %f
  new
  newmerge
+ noexcept
  nonconvex
  notG
  notconnected
@@ -163,15 +171,20 @@
  notify
  p%d (v%d)
  replicated
+ requires 
+ restrict
  ridgedeleted
  seen
  server_can_execute
  simplicial
  singleplayer
  tested
+ throw
  top
+ transaction_safe
  upperDelaunay
  visible
+ volatile
 !stiff_spring
 "%s" = "%s"
 # %d f%d\n
@@ -180,8 +193,8 @@
 # intersect f%d f%d\n
 # r%d between f%d f%d\n
 # ridge between f%d f%d\n
-#@sys:friction
 $MATERIAL_INDEX_SHADOW
+$tI<br>VEngineCvar004
 % 1.3e 
 %%.%if%s
 %.4f 
@@ -233,10 +246,10 @@ $MATERIAL_INDEX_SHADOW
 %s | %s\nbegin\n%d %d real\n
 %s/%s
 %s/bin/linux64/%s
+%s: __pos (which is %zu) > this->size() (which is %zu)
 %s\tIntrusion Status\n
 %s\tIntrusion_Point
 %s\tTetra-Point: Mask %X  Coverbits %X %X %X  pntnum=%i\n
-%s\tTetra_Edge: Bits %X %X %X\n
 &AElig;
 &Aacute;
 &Acirc;
@@ -344,16 +357,22 @@ $MATERIAL_INDEX_SHADOW
 (%.2f, %.2f, %.2f), 
 (%.2f, %.2f, %.2f)\n
 (%s)%s
+(anonymous namespace)
 * NULL pop
 ** NOTE: The real value is %.3f but the server has temporarily restricted it to %.3f **\n
 *** Done with convex pointsoup.\n\n
 *** ERROR *** Excessive amount of children: %d\n
 *** ERROR *** Excessive sizelevel (%d) for element\n
-*** IVP_SurfaceBuilder_Halfspacesoup::convert_halfspacesoup_to_compact_surface - skipping ledge due to invalid topology
 *** IVP_SurfaceBuilder_Pointsoup::convert_pointsoup_to_template_polygon - couldn't build convex hull! Skipping object...\n
 *** P_Pop_Eps went smaller than P_DOUBLE_EPS!!
 *** Qhull failed. Retrying with different parameters.\n
 **empty**
+*N12_GLOBAL__N_121system_error_categoryE
+*N12_GLOBAL__N_122generic_error_categoryE
+++CCUNG
+++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGN9__gnu_cxx20recursive_init_errorE
+++CCUNGstd::exception
 , line %d is the first comment
 , line %d is the first long line
 , line %d is the first short\nline
@@ -363,6 +382,7 @@ $MATERIAL_INDEX_SHADOW
 .  Continue with %d points.\n
 ../ivp_collision/ivp_compact_ledge_solver.cxx
 ../ivp_collision/ivp_mindist.cxx
+../ivp_collision/ivp_mindist_event.cxx
 ../ivp_collision/ivp_mindist_minimize.cxx
 ../ivp_controller/ivp_actuator.cxx
 ../ivp_controller/ivp_actuator_spring.cxx
@@ -371,12 +391,16 @@ $MATERIAL_INDEX_SHADOW
 ../ivp_intern/ivp_mindist_friction.cxx
 ../ivp_intern/ivp_physic_private.cxx
 ../ivp_utility/ivu_linear.cxx
+../ivp_utility/ivu_vhash.cxx
 ./rbox D4
 .EXE
 .G33s?fff?
 .exe
 /data/src/ivp/ivp_utility/ivu_linear.hxx
+/dev/random
+/dev/urandom
 0 1 1 1  # color of points\n
+0123456789
 0123456789ABCDEF
 0123456789abcdef
 1 %d\n
@@ -509,7 +533,6 @@ $MATERIAL_INDEX_SHADOW
 20IVP_3D_Solver_PF_NPF
 20IVP_3D_Solver_S_VALS
 20IVP_Actuator_Rot_Mot
-20IVP_Constraint_Local
 20IVP_Controller_Golem
 20IVP_Controller_VHash
 20IVP_Listener_Phantom
@@ -589,6 +612,7 @@ $MATERIAL_INDEX_SHADOW
 26IVP_Controller_Independent
 26IVP_Controller_Raycast_Car
 26IVP_Event_Manager_Standard
+26IVP_SurfaceManager_Polygon
 26IVP_U_Active_Float_Delayed
 26IVP_U_Active_Value_Manager
 26hk_Local_Constraint_System
@@ -612,7 +636,6 @@ $MATERIAL_INDEX_SHADOW
 31IVP_3D_Solver_VEC_PARALLEL_AREA
 31IVP_Standard_Gravity_Controller
 32CVPhysPtrUtlVectorSaveRestoreOps
-333333
 33IVP_Collision_Callback_Table_Hash
 34CPhysics_Car_System_Raycast_Wheels
 35IVP_Collision_Filter_Exclusive_Pair
@@ -622,7 +645,6 @@ $MATERIAL_INDEX_SHADOW
 4OFF %d %d 1\n
 4VECT %d %d 1\n
 4fff>fff>fff>fff>
-5System of %d constraints\n
 6ConVar
 7 %d %d %d %d %d %d %d\n2 
 7IConVar
@@ -636,26 +658,31 @@ $MATERIAL_INDEX_SHADOW
 9IVP_U_SetI8IVP_CoreE
 9IVP_VHash
 ;DoubleVal
-<../ivp_collision/ivp_mindist_event.cxx
 </script>
+<core_status %lx  trans %f %f %f  rot %f %f %f\n
 <img src="
 <pre>
 =../ivp_intern/ivp_object.cxx
 =Degenerate Triangle\n
+=hinge
 ><a href=
 ? p%d
+?%s\tTetra_Edge: Bits %X %X %X\n
+?*** IVP_SurfaceBuilder_Halfspacesoup::convert_halfspacesoup_to_compact_surface - skipping ledge due to invalid topology
 ?../ivp_collision/ivp_mindist_recursive.cxx
 ?/data/src/ivp/ivp_physics/ivp_time_event.hxx
+?17IVP_Listener_Hull
+?20IVP_Constraint_Local
 ?20IVP_Ray_Hit_Listener
-?26IVP_SurfaceManager_Polygon
+?333333
 ?@\nAt %02d:%02d:%02d & %2.5g CPU secs, qhull has created %d facets and merged %d.\n The current hull contains %d facets and %d vertices.  Last point was p%d\n
 ?Virtual mesh!\n
-?es-8R
-?static_object
-?vphysics:player
+@../ivp_intern/ivp_ball.cxx
 @20IVP_Collision_Filter
 @sys
 @sys:buoyancy
+@vphysics:player
+ASystem of %d constraints\n
 Ang Velocity: %.2f, %.2f, %.2f \n
 Angle-postmerge
 Angle-postmerge-with-random
@@ -694,8 +721,6 @@ CUtlRBTree overflow!\n
 CVProfNode::EnterScope()
 CVProfNode::ExitScope()
 CVProfNode::GetSubNode(char const*, int, char const*, int)
-CXXABI_1.3
-CXXABI_1.3.8
 Cannot convert
 Centrum-postmerge
 Centrum-postmerge-with-random
@@ -758,16 +783,18 @@ Ftriangles
 Fvertices
 Fvoronoi
 Fxtremes
-GCC: (SteamRT 10.3.0-3+steamrt3.1+bsrt3.1) 10.3.0
+GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GDrop-dim
+GLIBCXX_TUNABLES
 GLIBC_2.14
+GLIBC_2.17
 GLIBC_2.2.5
-GLIBC_2.22
+GLIBC_2.25
 GLIBC_2.27
 GLIBC_2.29
 GLIBC_2.3
+GLIBC_2.3.2
 GLIBC_2.7
-Ga>o
 Gall-points
 Gcentrums
 GetCPUInformation
@@ -786,8 +813,8 @@ HushAsserts
 IVP Failed at %s %d\n
 Inertia: %.2f, %.2f, %.2f (inv %.3f, %.3f, %.3f)\n
 IntVal
+JArray
 L?23hk_Rigid_Body_Binary_EF
-L?pulley
 LIST # %s | %s\n
 Last point added to hull was p%d.
 Limit[%g, %g](
@@ -806,6 +833,11 @@ Material: %s : density(%.1f), thickness(%.2f), friction(%.2f), elasticity(%.2f)\
 Matrix:
 MbP?
 Mbp?
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv119__foreign_exceptionE
+N9__gnu_cxx24__concurrence_lock_errorE
+N9__gnu_cxx26__concurrence_unlock_errorE
+NSt3_V214error_categoryE
 NULL edge in check_concavity.
 No 2d representation
 No such file
@@ -821,6 +853,7 @@ Old format .PHY file loaded!!!\n
 Option 'Qx' may avoid this problem.\n
 Options selected for %s:\n%s\n
 Options selected for qhull %s:\n%s\n
+P?10hk_Console
 PArea-keep
 PDrop-facets-dim-more
 PFacet-area-keep
@@ -882,12 +915,30 @@ Simple material
 Sine[F %g, A %g, N %g, ts %g](
 SolveSeparation
 Square[F %g, L %g, H %g](
+St10bad_typeid
+St11logic_error
+St11range_error
+St12domain_error
+St12length_error
+St12out_of_range
+St12system_error
+St13bad_exception
+St13runtime_error
+St14overflow_error
+St15underflow_error
+St16invalid_argument
+St20bad_array_new_length
+St8bad_cast
+St9bad_alloc
+St9exception
 State: %s, Collision %s, Motion %s, %sFlags %04X (game %04x, index %d)\n
 SupportMapCached
 SupportMap_Leaf
 SupportMap_Walk
 TCone-stop
 TFacet-log
+TLS init function for 
+TLS wrapper function for 
 TOT %2.1f%% %2.2f COLL %2.2f  DYN %2.2f     det:  UNIV: %2.2f CONTR: %2.2f INTEGR: %2.2f HULL: %2.2f SHORT: %2.2f CRITIC: %2.2f AT %2.2f\n
 TOutput-file
 TRACE
@@ -923,11 +974,11 @@ VECT 1 %d 1 %d 1
 VECT 1 1 1 1 1\n
 VECT 1 2 1 2 1 # f%d\n
 VECT 1 2 1 2 1\n
-VEngineCvar004
 VPhysicsCollision007
 VPhysicsDebugOverlay001
 VPhysicsSurfaceProps001
 VProcessUtils001
+VTT for 
 V_AppendSlash: ran out of space on %s.
 V_MakeAbsolutePath: _getcwd failed.
 V_MakeAbsolutePath: tried to ".." past the root.
@@ -958,7 +1009,9 @@ You are limiting a translation axis of a constraint which does not exist.
 You are repositioning a constraint which does not exist.
 [/code]
 [/list]
+[abi:
 [code]
+[friend]
 [img]
 [list]
 [url=
@@ -1023,14 +1076,15 @@ You are repositioning a constraint which does not exist.
 \t\tMATRIX_START\n
 \t\t\tMATRIX_POS %g %g %g\n
 \t\t\tMATRIX_ROT %g %g %g %g %g %g %g %g %g\n
+_Float
+_GLOBAL_
+_ITM_RU1
+_ITM_RU8
+_ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
+_ITM_memcpyRnWt
+_ITM_memcpyRtWn
 _ITM_registerTMCloneTable
-_ZGVbN2v_sin
-_ZGVbN2v_sin@GLIBC_2.22
-_ZGVbN2vv_pow
-_ZGVbN2vv_pow@GLIBC_2.22
-_ZGVbN4vv_powf
-_ZGVbN4vv_powf@GLIBC_2.22
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
 __ctype_tolower_loc
@@ -1039,29 +1093,24 @@ __ctype_toupper_loc
 __ctype_toupper_loc@GLIBC_2.3
 __cxa_atexit
 __cxa_atexit@GLIBC_2.2.5
-__cxa_call_unexpected
-__cxa_call_unexpected@CXXABI_1.3
 __cxa_finalize
 __cxa_finalize@GLIBC_2.2.5
-__cxa_guard_abort
-__cxa_guard_abort@CXXABI_1.3
-__cxa_guard_acquire
-__cxa_guard_acquire@CXXABI_1.3
-__cxa_guard_release
-__cxa_guard_release@CXXABI_1.3
 __cxa_pure_virtual
-__cxa_pure_virtual@CXXABI_1.3
-__cxa_throw_bad_array_new_length
-__cxa_throw_bad_array_new_length@CXXABI_1.3.8
-__dynamic_cast
-__dynamic_cast@CXXABI_1.3
+__errno_location
+__errno_location@GLIBC_2.2.5
+__float128
 __gmon_start__
-__gxx_personality_v0
-__gxx_personality_v0@CXXABI_1.3
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+__int128
 __isoc99_sscanf
 __isoc99_sscanf@GLIBC_2.7
 __pthread_key_create
 __pthread_key_create@GLIBC_2.2.5
+__test_and_acquire(long*)
+__tls_get_addr
+__tls_get_addr@GLIBC_2.3
+__wrap_open
 _joggle-seed
 _max-width
 _merge-exact
@@ -1072,10 +1121,19 @@ _pre-merge
 _run
 _setjmp
 _setjmp@GLIBC_2.2.5
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
+_txnal_cow_string_D1(void*)
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_c_str(void const*)
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
+_txnal_sso_string_c_str(void const*)
 _wide-facet
 _zero-centrum
 `vphysics:drag
 a ridge with more than two neighbors
+a\v6C
+abort
 abort@GLIBC_2.2.5
 accel1 
 acos
@@ -1086,6 +1144,8 @@ actives_inactives
 addGravity
 addgravity
 additionalIterations
+alignof 
+allocator
 allowPhysicsMovement
 allowPhysicsRotation
 angDragCoefficient
@@ -1112,6 +1172,8 @@ audioHardMinVelocity
 audioHardnessFactor
 audioReflectivity
 audioRoughnessFactor
+auto
+auto:
 autoMutex__
 autobrakeSpeedFactor
 autobrakeSpeedGain
@@ -1142,11 +1204,37 @@ axles
 b_vals 
 ball_socket
 base
+basic_iostream
+basic_istream
+basic_ostream
+basic_string
+basic_string: construction from null is not valid
+basic_string::_M_create
+basic_string::_M_replace
+basic_string::_M_replace_aux
+basic_string::_S_construct null not valid
+basic_string::_S_create
+basic_string::append
+basic_string::assign
+basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
+basic_string::basic_string
+basic_string::compare
+basic_string::copy
+basic_string::erase
+basic_string::insert
+basic_string::replace
+basic_string::resize
+basic_string::substr
+basic_string_view::substr
 begin
 best merges used centrum instead of vertices
 bin/linux64
 body
 bodyMassScale
+bool
+bool __gnu_cxx::__is_null_pointer<char const>(char const*)
+bool __gnu_cxx::__is_null_pointer<char>(char*)
+boolean
 boostDelay
 boostDuration
 boostForce
@@ -1165,6 +1253,7 @@ brakematerial
 break
 build hull statistics
 bulletimpact
+byte
 calc_line_representation: no orig_surface specified!\n
 callbacks
 cbrtf
@@ -1173,21 +1262,28 @@ center point
 center:
 centrums frozen due to a wide merge
 centrums frozen due to extra vertices
+char
+char16_t
+char32_t
+char8_t
 chdir
 chdir@GLIBC_2.2.5
 child
 clearly convex
 climbable
+co_await 
 collideType
 collisionEnabled
 compactsurfaceheader_t
 computing area of each facet and volume of the convex hull\n
 concave half ridges in output
 concave ridges in getmergeset
+const_cast
 constraintPosition
 constraintToAttached
 constraintToReference
 constraintType
+construction vtable for 
 contents
 contentsMask
 convex_test:  edge is concav %f, but neighbours are unhidden.
@@ -1205,9 +1301,9 @@ coplanar points during partitioning
 coplanar ridge
 coplanar/concave merges due to avoiding old merge
 coplanarset for f
-core_status %lx  trans %f %f %f  rot %f %f %f\n
 counterTorqueFactor
 countertorquefactor
+covariant return thunk to 
 cpu seconds for qhull after input
 currentSpeed.k
 current_time
@@ -1217,6 +1313,12 @@ cycles of facets merged into coplanar horizon
 dampFactor
 dampening
 datamanager.cpp
+decimal128
+decimal32
+decimal64
+decltype (
+decltype(auto)
+decltype(nullptr)
 default
 degenerate facets due to dropped neighbors
 degenerate hyperplanes recomputed with gaussian elimination
@@ -1225,6 +1327,8 @@ degreesFast
 degreesSlow
 delaunay
 delay
+delete 
+delete[] 
 deleted ridges due to renamed vertices
 density
 dependency %d is 
@@ -1256,6 +1360,7 @@ dlopen@GLIBC_2.2.5
 dlsym
 dlsym@GLIBC_2.2.5
 do_constraint_system: Couldn't invert rot matrix!\n
+double
 double_null
 dragAxisAreas
 dragCoefficient
@@ -1266,6 +1371,7 @@ duplicated ridges with flipped facets
 duration
 dustCloud
 dustcloud
+dynamic_cast
 easingerror: %f %f %f should equal %f %f %f\n
 elasticity
 empty horizon
@@ -1283,6 +1389,7 @@ exact:
 exp@GLIBC_2.29
 facets before post merge
 facets created altogether
+false
 fastcarspeed
 faststeeringrate
 fclose
@@ -1300,6 +1407,7 @@ finite
 finite@GLIBC_2.2.5
 flipped facet
 flipped facets
+float
 for facets and their normals, neighbor and vertex sets
 for input points and outside and coplanar sets
 for ridges and their vertex sets
@@ -1327,16 +1435,25 @@ gamematerial
 gear
 gearCount
 gearRatio
+generic
 getcwd
 getcwd@GLIBC_2.2.5
+getentropy
+getentropy@GLIBC_2.25
 gfffff
+glibcxx.eh_pool
+global constructors keyed to 
+global destructors keyed to 
 good 
 good facets found
 gravityEnabled
+guard variable for 
+half
+hardware
 hasShadowController
 hasTouchedDynamic
 hash %d f%d 
-hinge
+hidden alias for 
 hingeAxis
 horizon facets merged into new facets
 horsepower
@@ -1356,6 +1473,7 @@ index
 inertia
 initial facet is coplanar with interior point
 initial non-convex ridges for post merging
+initializer for module 
 input has same x coordinate
 insert_active_float: name '%s' already exists in name_hash!\n
 insert_active_float: tried to insert active_IVP_FLOAT without name!
@@ -1365,6 +1483,8 @@ inside points
 intersections failed to find a redundant vertex
 intersections found redundant vertices
 invalid:
+ioctl
+ioctl@GLIBC_2.2.5
 ipion 99/07/10
 isActive
 isAsleep
@@ -1381,6 +1501,8 @@ iswspace
 iswspace@GLIBC_2.2.5
 ivp_object_polygon_tetra.cxx
 ivp_tetra_intrude.cxx
+java Class for 
+java resource 
 jumpfactor
 keepUprightTorque
 keepuprighttorque
@@ -1388,15 +1510,17 @@ ld-linux-x86-64.so.2
 libc.so.6
 libdl.so.2
 libm.so.6
-libmvec.so.1
 libpthread.so.0
-libstdc++.so.6
 libtier0.so
+libvstdlib.so
 limitMax
 limitMin
 localtime@GLIBC_2.2.5
 logf
 logf@GLIBC_2.27
+long
+long double
+long long
 longjmp
 longjmp@GLIBC_2.2.5
 m_bEngineDisable
@@ -1452,6 +1576,8 @@ maxspeed
 maxspeedfactor
 mbstowcs
 mbstowcs@GLIBC_2.2.5
+memchr
+memchr@GLIBC_2.2.5
 memcmp
 memcmp@GLIBC_2.2.5
 memcpy
@@ -1480,30 +1606,40 @@ minRotation
 mm\t%g %g %g\n\t%g %g %g\n\t%g %g %g\n
 modelType
 motionEnabled
+mt19937
 naturalLength
 nearly incident point
 nearly incident point (narrow hull)
 nearly singular or axis-parallel hyperplanes
 neighbors for f
 neighbors for v
+new 
 new facets merged
 new facets merged into horizon
+new[]
 no 3d representation
 no normal for facet f%d\n
 no valid pierce index!? Probably a backside triangle...
+noexcept
 non-convex vertex neighbors
 non-simplicial Voronoi vertices for all ridges
+non-transaction clone for 
+non-virtual thunk to 
 noname
 normals
 not concave, flipped, or duplicate ridged
 num %i: 
 number of facets in output
 number of vertices in output
-o@10hk_Console
+obj_count
+obj_size
 objectPosition
 offFile
 onlyAngularLimits
 onlyStretch
+operator
+operator 
+operator"" 
 orig_A
 origin
 outsideset for f
@@ -1541,11 +1677,16 @@ points ignored (not above max_outside)
 points processed
 pow@GLIBC_2.29
 powerSlideAccel
+powf
 powf@GLIBC_2.27
 precision problems
 precision statistics
 prismatic
 projected p%d\n
+pthread_cond_broadcast
+pthread_cond_broadcast@GLIBC_2.3.2
+pthread_cond_wait
+pthread_cond_wait@GLIBC_2.3.2
 pthread_mutex_destroy
 pthread_mutex_destroy@GLIBC_2.2.5
 pthread_mutex_init
@@ -1560,11 +1701,11 @@ pthread_mutexattr_settype
 pthread_mutexattr_settype@GLIBC_2.2.5
 pthread_once
 pthread_once@GLIBC_2.2.5
+pulley
 pulleyPosition
 putchar
 putchar@GLIBC_2.2.5
 pysic_test: tri->calc_areasize() < 1E-6f in triangle: %g
-q=../ivp_utility/ivu_vhash.cxx
 qd2 = %f\n
 qh_addpoint: NULL facet.  Use qh_findbestfacet\n
 qh_addpoint: add p%d (v%d) to hull of %d facets (%2.2g above f%d) and %d outside at %4.4g CPU secs.  Previous was p%d.\n
@@ -2035,9 +2176,24 @@ radius
 ragdoll
 rand
 rand@GLIBC_2.2.5
+random_device could not be read
+random_device: getentropy failed
+random_device: rdrand failed
+random_device: rdseed failed
+random_device::random_device(const std::string&): device not available
+random_device::random_device(const std::string&): unsupported token
 raytraceCenterOffset
 raytraceOffset
+rdrand
+rdrnd
+rdseed
+read
+read@GLIBC_2.2.5
+realloc
+realloc@GLIBC_2.2.5
 reason
+reference temporary #
+reinterpret_cast
 relativeDamping
 rename failures due to duplicated ridges
 renamed vertex statistics
@@ -2065,9 +2221,13 @@ scrapesmooth
 script
 searches of all points for initial simplex
 secondsToArrival
+secure_getenv
+secure_getenv@GLIBC_2.17
 shadowParams
 shiftDownRPM
 shiftUpRPM
+short
+signed char
 similar
 similar and redundant
 simplices merged into coplanar horizon
@@ -2075,6 +2235,8 @@ sincos
 sincos@GLIBC_2.2.5
 sincosf
 sincosf@GLIBC_2.2.5
+sizeof 
+sizeof...
 skidMaterial
 skidMaterialIndex
 skidSpeed
@@ -2097,9 +2259,27 @@ springdampingcompression
 stabilizerConstant
 stabilizerconstant
 startPosition
+static_cast
+static_object
 statistics for determining merges
 statistics for matching ridges
 statistics for merging
+std::allocator
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::bad_typeid
+std::basic_iostream<char, std::char_traits<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_string
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::bfloat16_t
+std::iostream
+std::istream
+std::ostream
+std::string
 stderr
 stderr@GLIBC_2.2.5
 stdout
@@ -2125,14 +2305,20 @@ strcmp@GLIBC_2.2.5
 strcpy
 strcpy@GLIBC_2.2.5
 strength
+strerror_r
+strerror_r@GLIBC_2.2.5
 strftime
 strftime@GLIBC_2.2.5
+string literal
+string::string
 strlen
 strlen@GLIBC_2.2.5
 strncasecmp
 strncasecmp@GLIBC_2.2.5
 strncat
 strncat@GLIBC_2.2.5
+strncmp
+strncmp@GLIBC_2.2.5
 strncpy
 strncpy@GLIBC_2.2.5
 strrchr
@@ -2159,6 +2345,7 @@ syn0:
 sys:actuator
 sys:constraint
 sys:force_actuator
+sys:friction
 sys:gravity
 sys:motor
 sys:spring
@@ -2166,12 +2353,24 @@ sys:stabilizer
 sys:suspension
 sys:torque_actuator
 sys:vehicle
+syscall
+syscall@GLIBC_2.2.5
+system
 targetPosition
 targetRotation
 teleportDistance
+template
+template parameter object for 
+terminate called after throwing an instance of '
+terminate called recursively\n
+terminate called without an active exception\n
 thickness
+this
+this 
 throttleSteeringRestRateFactor
 throttleTime
+throw
+throw 
 tiltForce
 tiltForceHeight
 tiltforce
@@ -2196,11 +2395,36 @@ towlower@GLIBC_2.2.5
 towupper
 towupper@GLIBC_2.2.5
 trace.cpp
+transaction clone for 
+transaction clone for operator delete(void*)
+transaction clone for operator new[](unsigned long)
 triangle\n
+true
 turnThrottleReduceFast
 turnThrottleReduceSlow
 two facets with the same vertices
+typeinfo fn for 
+typeinfo for 
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::recursive_init_error
+typeinfo name for 
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __gnu_cxx::recursive_init_error
+typename
 unknown
+unsigned
+unsigned __int128
+unsigned char
+unsigned int
+unsigned long
+unsigned long long
+unsigned short
 useClockwiseRotations
 useLocalPositions
 v%d 
@@ -2227,6 +2451,8 @@ vertices removed from facets due to no ridges
 very strange: no alpha vec in get_angles!
 vfprintf
 vfprintf@GLIBC_2.2.5
+virtual thunk to 
+void
 volume
 vphysics: Invalid collide map\n
 vphysics:motion
@@ -2256,15 +2482,19 @@ vsprintf
 vsprintf@GLIBC_2.2.5
 vswprintf
 vswprintf@GLIBC_2.2.5
+vtable for 
 vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__class_type_info@CXXABI_1.3
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
 vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__si_class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__vmi_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info@CXXABI_1.3
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+vtable for __gnu_cxx::recursive_init_error
 vv\t%g %g %g\n
 warning: tried to add NULL ledge in IVP_SurfaceBuilder_Ledge_Soup::insert_ledge()\n
 water
+wchar_t
 wcslen
 wcslen@GLIBC_2.2.5
 wcsncat
@@ -2292,8 +2522,8 @@ xmin
 yfriction
 ymax
 ymin
-z>17IVP_Listener_Hull
 zD333@
+zDk\v^
 zero diagonal on back substitution
 zero divisors during back substitute
 zero divisors during gaussian elimination
@@ -2310,3 +2540,7 @@ zmin
 {appearance {-edge -normal normscale 0} {\nINST geom {define vsphere OFF\n18 32 48\n\n0 0 1\n1 0 0\n0 1 0\n-1 0 0\n0 -1 0\n0 0 -1\n0.707107 0 0.707107\n0 -0.707107 0.707107\n0.707107 -0.707107 0\n-0.707107 0 0.707107\n-0.707107 -0.707107 0\n0 0.707107 0.707107\n-0.707107 0.707107 0\n0.707107 0.707107 0\n0.707107 0 -0.707107\n0 0.707107 -0.707107\n-0.707107 0 -0.707107\n0 -0.707107 -0.707107\n\n3 0 6 11\n3 0 7 6\t\n3 0 9 7\t\n3 0 11 9\n3 1 6 8\t\n3 1 8 14\n3 1 13 6\n3 1 14 13\n3 2 11 13\n3 2 12 11\n3 2 13 15\n3 2 15 12\n3 3 9 12\n3 3 10 9\n3 3 12 16\n3 3 16 10\n3 4 7 10\n3 4 8 7\n3 4 10 17\n3 4 17 8\n3 5 14 17\n3 5 15 14\n3 5 16 15\n3 5 17 16\n3 6 13 11\n3 7 8 6\n3 9 10 7\n3 11 12 9\n3 14 8 17\n3 15 13 14\n3 16 12 15\n3 17 10 16\n} transforms { TLIST\n
 {appearance {-normal -edge normscale 0} 
 {appearance {linewidth 3} LIST # %s | %s\n
+{default arg#
+{lambda
+{parm#
+{unnamed type#

@@ -1,4 +1,4 @@
-                VFileSystem022
+        VFileSystem022
  ( def. "%s" )
  +connect %s
  +password "
@@ -40,7 +40,6 @@
 #FileOpenDialog_Save
 #FileOpenDialog_Select
 #FileOpenDialog_ToolTip_NewFolder
-#FileOpenDialog_ToolTip_OpenInDesktopManagerButton
 #FileOpenDialog_ToolTip_Up
 #Frame_Untitled
 #MessageBox_Cancel
@@ -358,6 +357,8 @@ $X360
 *N12_GLOBAL__N_115ScrollBarButtonE
 *N12_GLOBAL__N_116CaptionGripPanelE
 *N12_GLOBAL__N_19GripPanelE
+++CCUNG
+++CCUNGstd::exception
 ,%03d
 -defaultgamedir
 -game
@@ -466,12 +467,13 @@ $X360
 <game label>
 <img src="
 <pre>
+=PanelListPanel
 ><a href=
 >[unknown]
 ?CLanGames
+?ComboBox
 ?RunGameEngine005
 ?ServerContextMenu
-@ComboBox
 Accel
 ActivateItem
 ActiveGameName
@@ -571,8 +573,6 @@ CVACBannedConnRefusedDialog
 CVProfNode::EnterScope()
 CVProfNode::ExitScope()
 CVProfNode::GetSubNode(char const*, int, char const*, int)
-CXXABI_1.3
-CXXABI_1.3.8
 CallAssertFailedNotifyFunc
 Can't add Keybindings Context for unnamed panels\n
 CanBeDefaultButton
@@ -731,14 +731,13 @@ FrameTitleButton.DisabledFgColor
 FrameTitleButton.FgColor
 FullPathEdit
 GAME
-GCC: (SteamRT 10.3.0-3+steamrt3.1+bsrt3.1) 10.3.0
-GLIBCXX_3.4
+GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GLIBC_2.14
 GLIBC_2.2.5
-GLIBC_2.22
 GLIBC_2.27
 GLIBC_2.29
 GLIBC_2.3
+GLIBC_2.3.2
 GLIBC_2.7
 Gain
 GameDesc
@@ -995,6 +994,8 @@ MouseWheeled
 Move
 MoveScrollBar
 MoveScrollBarDirect
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv119__foreign_exceptionE
 N4vgui10CheckImageE
 N4vgui10ClickPanelE
 N4vgui10GraphPanelE
@@ -1100,8 +1101,7 @@ OnScreenSizeChanged
 OpenButton
 OpenColumnChoiceMenu
 OpenContextMenu
-OpenInExplorer
-OpenInExplorerButton
+P?Memory leak: mempool blocks left in memory: %d\n
 PIN_BOTTOMLEFT
 PIN_BOTTOMRIGHT
 PIN_CENTER_BOTTOM
@@ -1120,7 +1120,6 @@ Panel.cpp
 Panel::ReloadKeyBindings:  Can't find entry for panel '%s'\n
 Panel::SaveKeyBindings '%s' is read-only!!!\n
 PanelListEmbedded
-PanelListPanel
 PanelListPanelVScroll
 PanelMoved
 PanelPtr
@@ -1283,6 +1282,12 @@ Space
 SpectateGames
 Spew TabContainer dimensions.
 Spline
+St10bad_typeid
+St13bad_exception
+St20bad_array_new_length
+St8bad_cast
+St9bad_alloc
+St9exception
 StatusLabel
 SteamAPI_GetHSteamUser
 SteamAPI_InitSafe
@@ -1370,7 +1375,6 @@ UpdateControlData
 VBAllocTracker001
 VDataCache003
 VDmeMakeFileUtils001
-VEngineCvar004
 VGUI Build Mode Editor
 VGUI_Input005
 VGUI_Localize005
@@ -1414,12 +1418,6 @@ _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
 _SpewInfo
 _SpewMessage
-_ZGVbN2v_sin
-_ZGVbN2v_sin@GLIBC_2.22
-_ZGVbN2vv_pow
-_ZGVbN2vv_pow@GLIBC_2.22
-_ZGVbN4vv_powf
-_ZGVbN4vv_powf@GLIBC_2.22
 __bss_start
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
@@ -1427,8 +1425,10 @@ __ctype_tolower_loc
 __ctype_tolower_loc@GLIBC_2.3
 __ctype_toupper_loc
 __ctype_toupper_loc@GLIBC_2.3
+__cxa_allocate_exception
 __cxa_atexit
 __cxa_atexit@GLIBC_2.2.5
+__cxa_call_terminate
 __cxa_call_unexpected
 __cxa_finalize
 __cxa_finalize@GLIBC_2.2.5
@@ -1436,10 +1436,7 @@ __cxa_guard_abort
 __cxa_guard_acquire
 __cxa_guard_release
 __cxa_pure_virtual
-__cxa_throw_bad_array_new_length
-__cxa_throw_bad_array_new_length@CXXABI_1.3.8
-__dynamic_cast
-__dynamic_cast@CXXABI_1.3
+__cxa_throw
 __gmon_start__
 __gxx_personality_v0
 __isoc99_sscanf
@@ -1639,9 +1636,7 @@ leftText
 libc.so.6
 libdl.so.2
 libm.so.6
-libmvec.so.1
 libpthread.so.0
-libstdc++.so.6
 libsteam_api.so
 libtier0.so
 libvstdlib.so
@@ -1708,7 +1703,6 @@ north-west
 northeast
 northwest
 numTicks
-o@Memory leak: mempool blocks left in memory: %d\n
 oldtall
 oldwide
 open
@@ -1731,6 +1725,7 @@ playercount
 playsound
 positionImage
 pow@GLIBC_2.29
+powf
 powf@GLIBC_2.27
 prefix
 prepend
@@ -1747,6 +1742,10 @@ proportional_width
 proportional_xpos
 proportional_ypos
 proxy
+pthread_cond_broadcast
+pthread_cond_broadcast@GLIBC_2.3.2
+pthread_cond_wait
+pthread_cond_wait@GLIBC_2.3.2
 pthread_mutex_destroy
 pthread_mutex_destroy@GLIBC_2.2.5
 pthread_mutex_init
@@ -1783,7 +1782,6 @@ resource/icon_folder
 resource/icon_folder_selected
 resource/icon_folderup
 resource/icon_newfolder
-resource/icon_play_once
 result
 rfgc %s\n
 rightText
@@ -1864,8 +1862,11 @@ src_corner_width
 state
 stay_armed_on_click
 stayselectedonclick
-std::terminate()
-std::terminate()@GLIBCXX_3.4
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::bad_typeid
 steam://
 steam://openurl/
 steam://openurl_external/
@@ -1908,8 +1909,6 @@ strtoul@GLIBC_2.2.5
 strtoull
 strtoull@GLIBC_2.2.5
 subFocus
-system
-system@GLIBC_2.2.5
 tabPosition
 tabheight
 tabheight_small
@@ -1953,6 +1952,10 @@ towupper
 towupper@GLIBC_2.2.5
 transition_time
 true
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
 u64( %lld = 0x%llX )
 unichar
 unicode
@@ -1990,6 +1993,8 @@ vsnprintf@GLIBC_2.2.5
 vswprintf
 vswprintf@GLIBC_2.2.5
 vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
 wcscat
@@ -2016,6 +2021,6 @@ wcstombs
 wcstombs@GLIBC_2.2.5
 workshopfilter
 www.
-xdg-open "%s" &
 yoffset
+zD<br>VEngineCvar004
 zpos

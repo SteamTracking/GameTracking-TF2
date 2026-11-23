@@ -1,19 +1,33 @@
+  what():  
  ( def. "%s" )
  2008, Valve Corporation, All rights reserved. ========\n//\n// Purpose: Script initially run after squirrel VM is initialized\n//\n//=============================================================================\n\n//-----------------------------------------------------------------------------\n// General\n//-----------------------------------------------------------------------------\n\nrealPrint <- print\nprint_indent <- 0\n\nfunction print( text )\n{\n\tfor ( local i = print_indent; i > 0; --i )\n\t{\n\t\trealPrint( "  " )\n\t}\n\trealPrint( text )\n}\n\nfunction printl( text )\n{\n\treturn print( text + "\n" );\n}\n\nfunction Msg( text )\n{\n\treturn print( text );\n}\n\nfunction Assert( b, msg = null )\n{\n\tif ( b )\n\t\treturn;\n\t\t\n\tif ( msg != null )\n\t{\n\t\tthrow "Assertion failed: " + msg;\n\t}\n\telse\n\t{\n\t\tthrow "Assertion failed";\n\t}\n}\n\n//-----------------------------------------------------------------------------\n\nfunction FindCircularReference( target )\n{\n\tlocal visits = {}\n\tlocal result = false\n\t\n\tfunction RecursiveSearch( current )\n\t{\n\t\tif ( current in visits )\n\t\t{\n\t\t\treturn;\n\t\t}\n\t\tvisits[current] <- true;\n\t\t\n\t\tforeach( key, val in current )\n\t\t{\n\t\t\tif ( val == target && !IsWeakref( target, key ) )\n\t\t\t{\n\t\t\t\tprint( "    Circular reference to " + target.tostring() + " in key " + key.tostring() + " slot " + val.tostring() + " of object " + current.tostring() + "\n" )\n\t\t\t\tresult = true\n\t\t\t}\n\t\t\telse if ( typeof( val ) == "table" || typeof( val ) == "array" || typeof( val ) == "instance" )\n\t\t\t{\n\t\t\t\tif ( !IsWeakref( target, key ) )\n\t\t\t\t{\n\t\t\t\t\tRecursiveSearch( val )\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\t\n\tif ( typeof( target ) == "table" || typeof( target ) == "array" || typeof( target ) == "instance" )\n\t\tRecursiveSearch( target );\n\t\t\n\treturn result\n}\n\nfunction FindCircularReferences( resurrecteds )\n{\n\tprintl( "Circular references:" )\n\n\tif ( resurrecteds == null )\n\t{\n\t\tprintl( "    None");\n\t\treturn\n\t}\n\t\n\tif ( typeof( resurrecteds ) != "array" )\n\t{\n\t\tthrow "Bad input to FindCircularReference"\n\t}\n\n\tforeach( val in resurrecteds )\n\t{\n\t\tFindCircularReference( val )\n\t}\n\t\n\tprint("Resurrected objects: ")\n\tDumpObject( resurrecteds );\n}\t\n\n//-----------------------------------------------------------------------------\n\nfunction ScriptDebugDumpKeys( name, table = null )\n{\n\tif ( table == null )\n\t{\n\t\ttable = getroottable()\n\t}\n\n\tif ( name == "" )\n\t{\n\t\tprintl( table.tostring() + "\n{" );\n\t}\n\telse\n\t{\n\t\tprintl( "Find \"" + name + "\"\n{" );\n\t}\n\t\n\tlocal function PrintKey( keyPath, key, value )\n\t{\n\t\tprintl( "    " + keyPath + " = " + value ); \n\t}\n\t\n\tScriptDebugIterateKeys( name, PrintKey, table );\n\t\n\tprintl( "}" );\n}\n\n//-----------------------------------------------------------------------------\n\nfunction ScriptDebugIterateKeys( name, callback, table = null )\n{\n\tlocal visits = {}\n\tlocal pattern;\n\t\n\tlocal function MatchRegexp( keyPath )\n\t{\n\t\treturn pattern.match( keyPath );\n\t}\n\t\n\tlocal function MatchSubstring( keyPath )\n\t{\n\t\treturn keyPath.find( name ) != null;\n\t}\n\n\tlocal function MatchAll( keyPath )\n\t{\n\t\treturn true;\n\t}\n\t\n\tlocal matchFunc;\n\t\n\tif ( table == null )\n\t{\n\t\ttable = getroottable()\n\t}\n\n\tif ( name == "" )\n\t{\n\t\tmatchFunc = MatchAll\n\t}\n\telse if ( name[0] == '#' ) // exact\n\t{\n\t\tpattern = regexp( "^" + name + "$" )\n\t\tmatchFunc = MatchRegexp\n\t}\n\telse if ( name[0] == '@' ) // regexp\n\t{\n\t\tpattern = regexp( name.slice( 1 ) )\n\t\tmatchFunc = MatchRegexp\n\t}\n\telse // general\n\t{\n\t\tmatchFunc = MatchSubstring\n\t}\n\t\t\n\tScriptDebugIterateKeysRecursive( matchFunc, null, table, visits, callback );\n}\n\n//-----------------------------------------------------------------------------\n\nfunction ScriptDebugIterateKeysRecursive( matchFunc, path, current, visits, callback )\n{\n\tif ( ! ( current in visits ) )\n\t{\n\t\tvisits[current] <- true\n\t\t\n\t\tforeach( key, value in current )\n\t\t{\n\t\t\tif ( typeof(key) == "string" )\n\t\t\t{\n\t\t\t\tlocal keyPath = ( path ) ? path + "." + key : key\n\t\t\t\tif ( matchFunc(keyPath) )\n\t\t\t\t{\n\t\t\t\t\tcallback( keyPath, key, value );\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\tif ( typeof(value) == "table" )\n\t\t\t\t{\n\t\t\t\t\tScriptDebugIterateKeysRecursive( matchFunc, keyPath, value, visits, callback )\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n\n//-----------------------------------------------------------------------------\n// Documentation table\n//-----------------------------------------------------------------------------\n\nif ( developer() > 0 )\n{\n\tDocumentation <-\n\t{\n\t\tclasses = {}\n\t\tfunctions = {}\n\t\tinstances = {}\n\t}\n\n\n\tfunction RetrieveNativeSignature( nativeFunction )\n\t{\n\t\tif ( nativeFunction in NativeFunctionSignatures )\n\t\t{\n\t\t\treturn NativeFunctionSignatures[nativeFunction]\n\t\t}\n\t\treturn "<unnamed>"\n\t}\n\t\n\tfunction RegisterFunctionDocumentation( func, name, signature, description )\n\t{\n\t\tif ( description.len() )\n\t\t{\n\t\t\tlocal b = ( description[0] == '#' );\n\t\t\tif ( description[0] == '#' )\n\t\t\t{\n\t\t\t\tlocal colon = description.find( ":" );\n\t\t\t\tif ( colon == null )\n\t\t\t\t{\n\t\t\t\t\tcolon = description.len();\n\t\t\t\t}\n\t\t\t\tlocal alias = description.slice( 1, colon );\n\t\t\t\tdescription = description.slice( colon + 1 );\n\t\t\t\tname = alias;\n\t\t\t\tsignature = "#";\n\t\t\t}\n\t\t}\n\t\tDocumentation.functions[name] <- [ signature, description ]\n\t}\n\n\tfunction Document( symbolOrTable, itemIfSymbol = null, descriptionIfSymbol = null )\n\t{\n\t\tif ( typeof( symbolOrTable ) == "table" )\n\t\t{\n\t\t\tforeach( symbol, itemDescription in symbolOrTable )\n\t\t\t{\n\t\t\t\tAssert( typeof(symbol) == "string" )\n\t\t\t\t\n\t\t\t\tDocument( symbol, itemDescription[0], itemDescription[1] );\n\t\t\t}\n\t\t}\n\t\telse\n\t\t{\n\t\t\tprintl( symbolOrTable + ":" + itemIfSymbol.tostring() + "/" + descriptionIfSymbol );\n\t\t}\n\t}\n\t\n\tfunction PrintHelp( string = "*", exact = false )\n\t{\n\t\tlocal matches = []\n\t\t\n\t\tif ( string == "*" || !exact )\n\t\t{\n\t\t\tforeach( name, documentation in Documentation.functions )\n\t\t\t{\n\t\t\t\tif ( string != "*" && name.tolower().find( string.tolower() ) == null )\n\t\t\t\t{\n\t\t\t\t\tcontinue;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\tmatches.append( name ); \n\t\t\t}\n\t\t} \n\t\telse if ( exact )\n\t\t{\n\t\t\tif ( string in Documentation.functions )\n\t\t\t\tmatches.append( string )\n\t\t}\n\t\t\n\t\tif ( matches.len() == 0 )\n\t\t{\n\t\t\tprintl( "Symbol " + string + " not found" );\n\t\t\treturn;\n\t\t}\n\t\t\n\t\tmatches.sort();\n\t\t\n\t\tforeach( name in matches )\n\t\t{\n\t\t\tlocal result = name;\n\t\t\tlocal documentation = Documentation.functions[name];\n\t\t\t\n\t\t\tprintl( "Function:    " + name );\n\t\t\tlocal signature;\n\t\t\tif ( documentation[0] != "#" )\n\t\t\t{\n\t\t\t\tsignature = documentation[0];\n\t\t\t}\n\t\t\telse\n\t\t\t{\n\t\t\t\tsignature = GetFunctionSignature( this[name], name );\n\t\t\t}\n\t\t\t\n\t\t\tprintl( "Signature:   " + signature );\n\t\t\tif ( documentation[1].len() )\n\t\t\t\tprintl( "Description: " + documentation[1] );\n\t\t\tprint( "\n" ); \n\t\t}\n\t}\n}\nelse\n{\n\tfunction RetrieveNativeSignature( nativeFunction ) { return "<unnamed>"; }\n\tfunction RegisterFunctionDocumentation( func, name, signature, description ) {}\n\tfunction Document( symbolOrTable, itemIfSymbol = null, descriptionIfSymbol = null ) {}\n\tfunction PrintHelp( string = "*", exact = false )\n\t{\n\t\tprintl( "You must have started the script VM in developer mode to use this. Start a map/the app with '-dev'" );\n\t}\n}\n\n//-----------------------------------------------------------------------------\n// VSquirrel support functions\n//-----------------------------------------------------------------------------\n\nfunction VSquirrel_OnCreateScope( name, outer )\n{\n\tlocal result;\n\tif ( !(name in outer) )\n\t{\n\t\tresult = outer[name] <- { __vname=name, __vrefs = 1 };\n\t\tresult.setdelegate( outer );\n\t}\n\telse\n\t{\n\t\tresult = outer[name];\n\t\tresult.__vrefs += 1;\n\t}\n\treturn result;\n}\n\nfunction VSquirrel_OnReleaseScope( scope )\n{\n\tscope.__vrefs -= 1;\n\tif ( scope.__vrefs < 0 )\n\t{\n\t\tthrow "Bad reference counting on scope " + scope.__vname;\n\t}\n\telse if ( scope.__vrefs == 0 )\n\t{\n\t\tdelete scope.getdelegate()[scope.__vname];\n\t\tscope.__vname = null;\n\t\tscope.setdelegate( null );\n\t}\n}\n\n\n//-----------------------------------------------------------------------------\n//\n//-----------------------------------------------------------------------------\nclass CCallChainer\n{\n\tconstructor( prefixString, scopeForThis = null )\n\t{\n\t\tprefix = prefixString;\n\t\tif ( scopeForThis != null )\n\t\t\tscope = scopeForThis;\n\t\telse\n\t\t\tscope = ::getroottable();\n\t\tchains = {};\n\t\t\n\t\t// Expose a bound global function to dispatch to this object\n\t\tscope[ "Dispatch" + prefixString ] <- Call.bindenv( this );\n\t}\n\t\n\tfunction PostScriptExecute() \n\t{\n\t\tforeach( key, value in scope )\n\t\t{\n\t\t\tif ( typeof( value ) == "function" ) \n\t\t\t{\n\t\t\t\tif ( key.find( prefix ) == 0 )\n\t\t\t\t{\n\t\t\t\t\tkey = key.slice( prefix.len() );\n\t\t\t\t\t\n\t\t\t\t\tif ( !(key in chains) )\n\t\t\t\t\t{\n\t\t\t\t\t\t//::print( "Creating new call chain " + key + "\n");\n\t\t\t\t\t\tchains[key] <- [];\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\tlocal chain = chains[key];\n\t\t\t\t\t\n\t\t\t\t\tif ( !chain.len() || chain.top() != value )\n\t\t\t\t\t{\n\t\t\t\t\t\tchain.push( value );\n\t\t\t\t\t\t//::print( "Added " + value + " to call chain " + key + "\n" );\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\t\n\tfunction Call( event, ... )\n\t{\n\t\tif ( event in chains )\n\t\t{\n\t\t\tlocal chain = chains[event];\n\t\t\tif ( chain.len() )\n\t\t\t{\n\t\t\t\tlocal i;\n\t\t\t\tlocal args = [];\n\t\t\t\tif ( vargv.len() > 0 )\n\t\t\t\t{\n\t\t\t\t\targs.push( scope );\n\t\t\t\t\tfor ( i = 0; i < vargv.len(); i++ )\n\t\t\t\t\t{\n\t\t\t\t\t\targs.push( vargv[i] );\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\tfor ( i = chain.len() - 1; i >= 0; i -= 1 )\n\t\t\t\t{\n\t\t\t\t\tlocal func = chain[i];\n\t\t\t\t\tlocal result;\n\t\t\t\t\tif ( !args.len() )\n\t\t\t\t\t{\n\t\t\t\t\t\tresult = func();\n\t\t\t\t\t}\n\t\t\t\t\telse\n\t\t\t\t\t{\n\t\t\t\t\t\tresult = func.acall( args ); \n\t\t\t\t\t}\n\t\t\t\t\tif ( result != null && !result )\n\t\t\t\t\t\treturn false;\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\t\n\t\treturn true;\n\t}\n\t\n\tscope = null;\n\tprefix = null;\n\tchains = null;\n};\n\n\n//-----------------------------------------------------------------------------\n//\n//-----------------------------------------------------------------------------\nclass CSimpleCallChainer\n{\n\tconstructor( prefixString, scopeForThis = null, exactNameMatch = false )\n\t{\n\t\tprefix = prefixString;\n\t\tif ( scopeForThis != null )\n\t\t\tscope = scopeForThis;\n\t\telse\n\t\t\tscope = ::getroottable();\n\t\tchain = [];\n\t\t\n\t\t// Expose a bound global function to dispatch to this object\n\t\tscope[ "Dispatch" + prefixString ] <- Call.bindenv( this );\n\t\t\n\t\texactMatch = exactNameMatch\n\t}\n\t\n\tfunction PostScriptExecute() \n\t{\n\t\tforeach( key, value in scope )\n\t\t{\n\t\t\tif ( typeof( value ) == "function" ) \n\t\t\t{\n\t\t\t\tlocal foundMatch = false;\n\t\t\t\tif ( exactMatch )\n\t\t\t\t{\n\t\t\t\t\tfoundMatch = ( prefix == key );\n\t\t\t\t}\n\t\t\t\telse\n\t\t\t\t{\n\t\t\t\t\tfoundMatch = ( key.find( prefix ) == 0 )\n\t\t\t\t}\n\t\t\t\t\t\t\n\t\t\t\tif ( foundMatch )\n\t\t\t\t{\n\t\t\t\t\tif ( !exactMatch )\n\t\t\t\t\t\tkey = key.slice( prefix.len() );\n\t\t\t\t\t\n\t\t\t\t\tif ( !(chain) )\n\t\t\t\t\t{\n\t\t\t\t\t\t//::print( "Creating new call simple chain\n");\n\t\t\t\t\t\tchain <- [];\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\tif ( !chain.len() || chain != value )\n\t\t\t\t\t{\n\t\t\t\t\t\tchain.push( value );\n\t\t\t\t\t\t//::print( "Added " + value + " to call chain.\n" );\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\t\n\tfunction Call( ... )\n\t{\n\t\tif ( chain.len() )\n\t\t{\n\t\t\tlocal i;\n\t\t\tlocal args = [];\n\t\t\tif ( vargv.len() > 0 )\n\t\t\t{\n\t\t\t\targs.push( scope );\n\t\t\t\tfor ( i = 0; i < vargv.len(); i++ )\n\t\t\t\t{\n\t\t\t\t\targs.push( vargv[i] );\n\t\t\t\t}\n\t\t\t}\n\t\t\tfor ( i = chain.len() - 1; i >= 0; i -= 1 )\n\t\t\t{\n\t\t\t\tlocal func = chain[i];\n\t\t\t\tlocal result;\n\t\t\t\tif ( !args.len() )\n\t\t\t\t{\n\t\t\t\t\tresult = func.pcall( scope );\n\t\t\t\t}\n\t\t\t\telse\n\t\t\t\t{\n\t\t\t\t\tresult = func.pacall( scope, args ); \n\t\t\t\t}\n\t\t\t\tif ( result != null && !result )\n\t\t\t\t\treturn false;\n\t\t\t}\n\t\t}\n\t\t\n\t\treturn true;\n\t}\n\t\n\texactMatch = false\n\tscope = null;\n\tprefix = null;\n\tchain = null;\n};\n\n//-----------------------------------------------------------------------------\n// Late binding: allows a table to refer to parts of itself, it's children,\n// it's owner, and then have the references fixed up after it's fully parsed\n//\n// Usage:\n//    lateBinder <- LateBinder();\n//    lateBinder.Begin( this );\n//    \n//    Test1 <-\n//    {   \n// \t   Foo=1\n//    }   \n//    \n//    Test2 <-\n//    {   \n// \t   FooFoo = "I'm foo foo"\n// \t   BarBar="@Test1.Foo"\n// \t   SubTable = { boo=[bah, "@Test2.FooFoo", "@Test1.Foo"], booboo2={one=bah, two="@Test2.FooFoo", three="@Test1.Foo"} }\n// \t   booboo=[bah, "@Test2.FooFoo", "@Test1.Foo"]\n// \t   booboo2={one=bah, two="@Test2.FooFoo", three="@Test1.Foo"}\n// \t   bah=wha\n//    }   \n//    \n//    lateBinder.End();\n//    delete lateBinder;\n//\n// When End() is called, all of the unresolved symbols in the tables and arrays will be resolved,\n// any left unresolved will become a string prepended with '~', which later code can deal with\n//-----------------------------------------------------------------------------\n\nclass LateBinder\n{\n\t// public:\n\tfunction Begin( target, log = false )\n\t{\n\t\tm_log = log;\n\t\t\n\t\tHookRootMetamethod( "_get", function( key ) { return "^" + key; } );\n\t\tHookRootMetamethod( "_newslot", function( key, value ) { if ( typeof value == "table" ) { m_fixupSet.push( [ key, value ] ); this.rawset( key, value ); };  }.bindenv(this) );\n\t\tm_targetTable = target;\n\t\t\n\t\tLog( "Begin late bind on table " + m_targetTable );\n\t}\n\t\n\tfunction End()\n\t{\n\t\tUnhookRootMetamethod( "_get" );\n\t\tUnhookRootMetamethod( "_newslot" );\n\n\t\tLog( "End late bind on table " + m_targetTable );\n\t\t\n\t\tforeach( subTablePair in m_fixupSet )\n\t\t{\n\t\t\tEstablishDelegation( m_targetTable, subTablePair[1] );\n\t\t}\n\n\t\tLog( "Begin resolution... " )\n\t\tm_logIndent++;\n\t\t\n\t\tlocal found = true;\n\t\t\n\t\twhile ( found )\n\t\t{\n\t\t\tforeach( subTablePair in m_fixupSet )\n\t\t\t{\n\t\t\t\tLog( subTablePair[0] + " = " );\n\t\t\t\tLog( "{" );\n\t\t\t\tif ( !Resolve( subTablePair[1], subTablePair[1], false ) )\n\t\t\t\t{\n\t\t\t\t\tfound = false;\n\t\t\t\t}\n\t\t\t\tLog( "}" );\n\t\t\t}\n\t\t}\n\t\t\t\n\t\tm_logIndent--;\n\t\t\n\t\tforeach( subTablePair in m_fixupSet )\n\t\t{\n\t\t\tRemoveDelegation( subTablePair[1] );\n\t\t}\n\t\t\n\t\tLog( "...end resolution" );\n\t}\n\t\t\n\t// private:\n\tfunction HookRootMetamethod( name, value )\n\t{\n\t\tlocal saved = null;\n\t\tlocal roottable = getroottable();\n\t\tif ( name in roottable )\n\t\t{\n\t\t\tsaved = roottable[name];\n\t\t}\n\t\troottable[name] <- value;\n\t\troottable["__saved" + name] <- saved;\n\t}\n\n\tfunction UnhookRootMetamethod( name )\n\t{\n\t\tlocal saveSlot = "__saved" + name;\n\t\tlocal roottable = getroottable();\n\t\tlocal saved = roottable[saveSlot];\n\t\tif ( saved != null )\n\t\t{\n\t\t\troottable[name] = saved;\n\t\t}\n\t\telse\n\t\t{\n\t\t\tdelete roottable[name];\n\t\t}\n\t\tdelete roottable[saveSlot];\n\t}\n\n\tfunction EstablishDelegation( parentTable, childTable )\n\t{\n\t\tchildTable.setdelegate( parentTable );\n\t\t\n\t\tforeach( key, value in childTable )\n\t\t{\n\t\t\tlocal type = typeof value;\n\t\t\tif ( type == "table" )\n\t\t\t{\n\t\t\t\tEstablishDelegation( childTable, value );\n\t\t\t}\n\t\t}\n\t}\n\t\n\tfunction RemoveDelegation( childTable )\n\t{\n\t\tchildTable.setdelegate( null );\n\t\t\n\t\tforeach( key, value in childTable )\n\t\t{\n\t\t\tlocal type = typeof value;\n\t\t\tif ( type == "table" )\n\t\t\t{\n\t\t\t\tRemoveDelegation( value );\n\t\t\t}\n\t\t}\n\t}\n\n\tfunction Resolve( lookupTable, subTableOrArray, throwException = false )\n\t{\n\t\tm_logIndent++;\n\t\tlocal found = false;\n\t\n\t\tforeach( key, value in subTableOrArray )\n\t\t{\n\t\t\tlocal type = typeof value;\n\t\t\tif ( type == "string" )\n\t\t\t{\n\t\t\t\tif ( value.len() )\n\t\t\t\t{\n\t\t\t\t\tlocal unresolvedId = null;\n\t\t\t\t\tlocal controlChar = value[0]\n\t\t\t\t\tif ( controlChar == '^' )\n\t\t\t\t\t{\n\t\t\t\t\t\tfound = true;\n\t\t\t\t\t\tvalue = value.slice( 1 );\n\t\t\t\t\t\tif ( value in lookupTable )\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tsubTableOrArray[key] = lookupTable[value];\n\t\t\t\t\t\t\tLog( key + " = " + lookupTable[value] + " <-- " + value );\n\t\t\t\t\t\t}\n\t\t\t\t\t\telse\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tsubTableOrArray[key] = "~" + value;\n\t\t\t\t\t\t\tunresolvedId = value;\n\t\t\t\t\t\t\tLog( key + " = \"" + "~" + value + "\" (unresolved)" );\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t\telse if ( controlChar == '@' )\n\t\t\t\t\t{\n\t\t\t\t\t\tfound = true;\n\t\t\t\t\t\tlocal identifiers = [];\n\t\t\t\t\t\tlocal iLast = 1;\n\t\t\t\t\t\tlocal iNext;\n\t\t\t\t\t\twhile ( ( iNext = value.find( ".", iLast ) ) != null )\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tidentifiers.push( value.slice( iLast, iNext ) );\n\t\t\t\t\t\t\tiLast = iNext + 1;\n\t\t\t\t\t\t}\n\t\t\t\t\t\tidentifiers.push( value.slice( iLast ) );\n\t\t\t\t\t\t\n\t\t\t\t\t\tlocal depthSuccess = 0;\n\t\t\t\t\t\tlocal result = lookupTable;\n\t\t\t\t\t\tforeach( identifier in identifiers )\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tif ( identifier in result )\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tdepthSuccess++;\n\t\t\t\t\t\t\t\tresult = result[identifier];\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\telse\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tbreak;\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t\tif ( depthSuccess == identifiers.len() )\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tsubTableOrArray[key] = result;\n\t\t\t\t\t\t\tLog( key + " = " + result + " <-- " + value );\n\t\t\t\t\t\t}\n\t\t\t\t\t\telse\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tsubTableOrArray[key] = "~" + value.slice( 1 );\n\t\t\t\t\t\t\tunresolvedId = value;\n\t\t\t\t\t\t\tLog( key + " = \"" + "~" + value + "\" (unresolved)" );\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\tif ( unresolvedId != null )\n\t\t\t\t\t{\n\t\t\t\t\t\tif ( throwException )\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tlocal exception = "Unresolved symbol: " + bind + " in ";\n\t\t\t\t\t\t\tforeach ( entry in m_bindNamesStack )\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\texception += entry;\n\t\t\t\t\t\t\t\texception += "."\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\texception += unresolvedId;\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tthrow exception; \n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t\tforeach( key, value in subTableOrArray )\n\t\t{\n\t\t\tlocal type = typeof value;\n\t\t\tlocal isTable = ( type == "table" );\n\t\t\tlocal isArray = ( type == "array" )\n\t\t\tif ( isTable || isArray )\n\t\t\t{\n\t\t\t\tLog( key + " =" );\n\t\t\t\tLog( isTable ? "{" : "[" );\n\t\t\t\t\n\t\t\t\tm_bindNamesStack.push( key );\n\t\t\t\tif ( Resolve( ( isTable ) ? value : lookupTable, value, throwException ) )\n\t\t\t\t{\n\t\t\t\t\tfound = true;\n\t\t\t\t}\n\t\t\t\tm_bindNamesStack.pop();\n\t\t\t\t\n\t\t\t\tLog( isTable ? "}" : "]" );\n\t\t\t}\n\t\t}\n\t\tm_logIndent--;\n\t\treturn found;\n\t}\n\t\n\tfunction Log( string )\n\t{\n\t\tif ( m_log )\n\t\t{\n\t\t\tfor ( local i = 0; i < m_logIndent; i++ )\n\t\t\t{\n\t\t\t\tprint( "  " );\n\t\t\t}\n\t\t\t\n\t\t\tprintl( string );\n\t\t}\n\t}\n\n\tm_targetTable = null;\n\tm_fixupSet = [];\n\tm_bindNamesStack = [];\n\tm_log = false;\n\tm_logIndent = 0;\n}\n\n// support function to assemble help strings for script calls - call once all your stuff is in the VM\n::_PublishedHelp <- {}\nfunction AddToScriptHelp( scopeTable )\n{\n\tforeach (idx, val in scopeTable )\n\t{\n\t\tif (typeof(val) == "function")\n\t\t{\n\t\t\tlocal helpstr = "scripthelp_" + idx\n\t\t\tif ( ( helpstr in scopeTable ) && ( ! (helpstr in ::_PublishedHelp) ) )\n\t\t\t{\n//\t\t\t\tRegisterFunctionDocumentation( val, idx, "#", scopeTable[helpstr] )\n\t\t\t\tRegisterFunctionDocumentation( val, idx, GetFunctionSignature( val, idx ), scopeTable[helpstr] )\n\t\t\t\t::_PublishedHelp[helpstr] <- true\n\t\t\t\tprintl("Registered " + helpstr + " for " + val.tostring)\n\t\t\t}\n\t\t}\n\t}\n}\n
+ [clone 
+ _Complex
+ _Imaginary
+ __vector(
  archive
  bytes
  cheat
+ class
  client
  clientcmd_can_execute
+ const
  failed to dlopen %s error=%s\n
+ for 
  game
  max. %f
  min. %f
+ noexcept
  notconnected
  notify
  replicated
+ requires 
+ restrict
  server_can_execute
  singleplayer
+ throw
+ transaction_safe
+ volatile
 "%s" = "%s"
 %%.%if%s
 %.14g
@@ -28,6 +42,7 @@
 %s line = (%d) column = (%d) : error %s\n
 %s/%s
 %s/bin/linux64/%s
+%s: __pos (which is %zu) > this->size() (which is %zu)
 &AElig;
 &Aacute;
 &Acirc;
@@ -139,6 +154,7 @@
 (%s %p)
 (%s : 0x%p)
 (%s)%s
+(anonymous namespace)
 (instance : 0x%p)
 (qangle : (%f, %f, %f)
 (quaternion : (%f, %f, %f, %f)
@@ -149,13 +165,21 @@
 ** NOTE: The real value is %.3f but the server has temporarily restricted it to %.3f **\n
 *FUNCTION [%s()] %s line [%d]\n
 *FUNCTION [%s] %s line [%lld]\n
+*N12_GLOBAL__N_121system_error_categoryE
+*N12_GLOBAL__N_122generic_error_categoryE
 *ZN4SQVM47FindAllClosuresForFunctionBySourceAndLineNumberER8sqvectorI11SQObjectPtrEPKcxE11CHackerator
+++CCUNG
+++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGN9__gnu_cxx20recursive_init_errorE
 , or } expected
 ,%03d
 -sqdbg_superverbose
 .nnn
 .ssb
 //===\t======= Copyright 
+/dev/random
+/dev/urandom
+0123456789
 0123456789ABCDEF
 0123456789abcdef
 10ConCommand
@@ -242,7 +266,6 @@ CUtlRBTree overflow!\n
 CVProfNode::EnterScope()
 CVProfNode::ExitScope()
 CVProfNode::GetSubNode(char const*, int, char const*, int)
-CXXABI_1.3
 CommandLine_Tier0
 ConColorMsg(Color const&, char const*, ...)
 ConMsg(char const*, ...)
@@ -259,16 +282,17 @@ FLOAT
 FindCircularReferences( %s )
 FmtStrVSNPrintf truncated to %d without QUIET_TRUNCATION specified!\n
 Forward
-GCC: (SteamRT 10.3.0-3+steamrt3.1+bsrt3.1) 10.3.0
+GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GENERATOR
-GLIBCXX_3.4
-GLIBCXX_3.4.21
+GLIBCXX_TUNABLES
 GLIBC_2.14
+GLIBC_2.17
 GLIBC_2.2.5
-GLIBC_2.22
+GLIBC_2.25
 GLIBC_2.27
 GLIBC_2.29
 GLIBC_2.3
+GLIBC_2.3.2
 Generate a random floating point number within a range, inclusive
 Generate a random integer within a range, inclusive
 GetCPUInformation
@@ -287,13 +311,19 @@ Invalid type specified for SetValue
 Invert
 IsValid
 IsWeakref
+JArray
 Left
 Length
 Length2D
 Length2DSqr
 LengthSqr
 MakeNamespace
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv119__foreign_exceptionE
+N9__gnu_cxx24__concurrence_lock_errorE
+N9__gnu_cxx26__concurrence_unlock_errorE
 NATIVECLOSURE
+NSt3_V214error_categoryE
 NULL
 Namespace table '%s' continuation must be a table\n
 Native stack overflow
@@ -316,15 +346,32 @@ SQVM::CallNative
 Scale
 Script
 Script debugger disconnected\n
-Script function returned unsupported type\n
 Script running too long, terminating\n
 Script terminated by SQQuerySuspend
 SetPitchYawRoll
 Squirrel
 Squirrel 3.2 stable
 Squirrel debugging only supported on Windows for now.
+St10bad_typeid
+St11logic_error
+St11range_error
+St12domain_error
+St12length_error
+St12out_of_range
+St12system_error
+St13bad_exception
+St13runtime_error
+St14overflow_error
+St15underflow_error
+St16invalid_argument
+St20bad_array_new_length
+St8bad_cast
+St9bad_alloc
+St9exception
 TABLE
 THREAD
+TLS init function for 
+TLS wrapper function for 
 ThreadGetCurrentId
 ThreadSleep
 ToKVString
@@ -339,11 +386,11 @@ UTF-8
 UTLSTRINGTOKEN
 Unaccounted
 Unknown vscript console command %s\n
-VEngineCvar004
 VProcessUtils001
 VScriptManager010
 VSquirrel_OnCreateScope
 VSquirrel_OnReleaseScope
+VTT for 
 V_AppendSlash: ran out of space on %s.
 V_MakeAbsolutePath: _getcwd failed.
 V_MakeAbsolutePath: tried to ".." past the root.
@@ -369,7 +416,9 @@ Warning
 [%s] WEAKREF\n
 [/code]
 [/list]
+[abi:
 [code]
+[friend]
 [img]
 [list]
 [url=
@@ -384,14 +433,15 @@ Warning
 \tfailed to connect.\n
 \x%02x
 _%x%llx_%s
+_Float
+_GLOBAL_
+_ITM_RU1
+_ITM_RU8
+_ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
+_ITM_memcpyRnWt
+_ITM_memcpyRtWn
 _ITM_registerTMCloneTable
-_ZGVbN2v_sin
-_ZGVbN2v_sin@GLIBC_2.22
-_ZGVbN2vv_pow
-_ZGVbN2vv_pow@GLIBC_2.22
-_ZGVbN4vv_powf
-_ZGVbN4vv_powf@GLIBC_2.22
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
 __ctype_tolower_loc
@@ -400,32 +450,23 @@ __ctype_toupper_loc
 __ctype_toupper_loc@GLIBC_2.3
 __cxa_atexit
 __cxa_atexit@GLIBC_2.2.5
-__cxa_begin_catch
-__cxa_begin_catch@CXXABI_1.3
-__cxa_call_unexpected
-__cxa_call_unexpected@CXXABI_1.3
-__cxa_end_catch
-__cxa_end_catch@CXXABI_1.3
 __cxa_finalize
 __cxa_finalize@GLIBC_2.2.5
-__cxa_guard_abort
-__cxa_guard_abort@CXXABI_1.3
-__cxa_guard_acquire
-__cxa_guard_acquire@CXXABI_1.3
-__cxa_guard_release
-__cxa_guard_release@CXXABI_1.3
 __cxa_pure_virtual
-__cxa_pure_virtual@CXXABI_1.3
-__cxa_rethrow
-__cxa_rethrow@CXXABI_1.3
-__dynamic_cast
-__dynamic_cast@CXXABI_1.3
+__errno_location
+__errno_location@GLIBC_2.2.5
+__float128
 __gmon_start__
-__gxx_personality_v0
-__gxx_personality_v0@CXXABI_1.3
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+__int128
 __pthread_key_create
 __pthread_key_create@GLIBC_2.2.5
+__test_and_acquire(long*)
+__tls_get_addr
+__tls_get_addr@GLIBC_2.3
 __vrefs
+__wrap_open
 _add
 _array_default_delegate
 _attributes
@@ -475,6 +516,13 @@ _sub
 _table_default_delegate
 _thread_default_delegate
 _tostring
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
+_txnal_cow_string_D1(void*)
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_c_str(void const*)
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
+_txnal_sso_string_c_str(void const*)
 _typeof
 _unm
 _utlstringtoken_default_delegate
@@ -482,6 +530,7 @@ _version_
 _versionnumber_
 _weakref_default_delegate
 a closure with free variables bound cannot be serialized
+abort
 abort@GLIBC_2.2.5
 acos
 acosf
@@ -489,6 +538,8 @@ acosf@GLIBC_2.2.5
 addbreakpoint
 added bp %d %s\n
 added watch %d %s\n
+alignof 
+allocator
 apply
 arith op %c on between '%s' and '%s'
 array resized during sort operation
@@ -508,7 +559,30 @@ attempt to delete a slot from a %s
 attempt to negate a %s
 attempt to perform a bitwise op on a %s
 attribute
+auto
+auto:
+basic_iostream
+basic_istream
+basic_ostream
+basic_string
+basic_string: construction from null is not valid
+basic_string::_M_create
+basic_string::_M_replace
+basic_string::_M_replace_aux
+basic_string::_S_construct null not valid
+basic_string::_S_create
 basic_string::append
+basic_string::assign
+basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
+basic_string::basic_string
+basic_string::compare
+basic_string::copy
+basic_string::erase
+basic_string::insert
+basic_string::replace
+basic_string::resize
+basic_string::substr
+basic_string_view::substr
 begin
 beginelement
 bin/linux64
@@ -518,7 +592,11 @@ bindenv
 bitwise op between '%s' and '%s'
 blob would reach over total blob size limit
 bool
+bool __gnu_cxx::__is_null_pointer<char const>(char const*)
+bool __gnu_cxx::__is_null_pointer<char>(char*)
+boolean
 break
+byte
 c x|y|t
 callee
 calloc
@@ -558,6 +636,10 @@ catch
 cbrtf
 cbrtf@GLIBC_2.2.5
 ceil
+char
+char16_t
+char32_t
+char8_t
 chdir
 chdir@GLIBC_2.2.5
 class instances do not support the new slot operator
@@ -565,21 +647,33 @@ clear
 clear only works on table and array
 clone
 cloning a %s
+co_await 
 collectgarbage
 compare func failed
 comparison between '%.50s' and '%.50s'
 compilestring
 const
+const_cast
 constant too long
+construction vtable for 
 constructor
 continue
 cos@GLIBC_2.2.5
+covariant return thunk to 
 cppdelegate
 cvar
 dead
+decimal128
+decimal32
+decimal64
+decltype (
+decltype(auto)
+decltype(nullptr)
 default
 defparams
 delegate cycle
+delete 
+delete[] 
 desc
 developer
 disabled
@@ -595,7 +689,9 @@ dlopen
 dlopen@GLIBC_2.2.5
 dlsym
 dlsym@GLIBC_2.2.5
+double
 dummy
+dynamic_cast
 ehandle
 else
 empty class
@@ -632,21 +728,29 @@ failed to initialize the debugger
 false
 filter
 find
+float
 float expected for the specified format
 floor
 flush
 foreach
 found func %s -> %p\n
+fputc
+fputc@GLIBC_2.2.5
+fputs
+fputs@GLIBC_2.2.5
 free
 free@GLIBC_2.2.5
 func
 function 
 function with default parameters cannot have variable number of parameters
+fwrite
+fwrite@GLIBC_2.2.5
 g_ClockSpeedMillisecondsMultiplier
 g_Telemetry
 g_VProfCurrentProfile
 g_pMemAlloc
 generators cannot be tail called
+generic
 getattributes
 getbase
 getclass
@@ -654,13 +758,22 @@ getconsttable
 getcwd
 getcwd@GLIBC_2.2.5
 getdelegate
+getentropy
+getentropy@GLIBC_2.25
 getinfos
 getroot
 getroottable
 getstackinfos
 getstatus
+glibcxx.eh_pool
+global constructors keyed to 
+global destructors keyed to 
 go (execution resumed)
+guard variable for 
+half
+hardware
 hexadecimal number expected
+hidden alias for 
 iconv
 iconv@GLIBC_2.2.5
 iconv_close
@@ -673,6 +786,7 @@ image not found
 inconsistent compare function
 index out of range
 indexing %s with %s
+initializer for module 
 insert
 instanceof
 integer expected for the specified format
@@ -709,6 +823,8 @@ invalid typemask
 io error
 io error (write function failure)
 io error, read function failure, the origin stream could be corrupted/trucated
+ioctl
+ioctl@GLIBC_2.2.5
 isalnum
 isalnum@GLIBC_2.2.5
 isalpha
@@ -729,6 +845,8 @@ iswspace
 iswspace@GLIBC_2.2.5
 isxdigit
 isxdigit@GLIBC_2.2.5
+java Class for 
+java resource 
 key not found in _get()
 keys
 languages/squirrel3/squirrel/sqvm.cpp
@@ -739,9 +857,7 @@ letter expected for argument of escape sequence
 libc.so.6
 libdl.so.2
 libm.so.6
-libmvec.so.1
 libpthread.so.0
-libstdc++.so.6
 libtier0.so
 libvstdlib.so
 line
@@ -752,6 +868,9 @@ log10f
 log10f@GLIBC_2.2.5
 logf
 logf@GLIBC_2.27
+long
+long double
+long long
 longjmp
 longjmp@GLIBC_2.2.5
 lstrip
@@ -761,6 +880,8 @@ malloc@GLIBC_2.2.5
 match
 mbstowcs
 mbstowcs@GLIBC_2.2.5
+memchr
+memchr@GLIBC_2.2.5
 memcmp
 memcmp@GLIBC_2.2.5
 memcpy
@@ -771,16 +892,22 @@ memset
 memset@GLIBC_2.2.5
 missing "*/" in comment
 modulo by zero
+mt19937
 native
 native closure expected
 native function
 negative size
+new 
 new member only works with classes
+new[]
 newline in a constant
 newthread
 no closure in the calls stack
 no data left to read
+noexcept
 non-string key
+non-transaction clone for 
+non-virtual thunk to 
 not enough parameters for the given format string
 not enough params in the stack
 null
@@ -792,10 +919,15 @@ null quaternion
 null vector2D
 null vector4D
 numeric value expected as return value of the compare function
+obj_count
+obj_size
 object must be a class
 only closure can be tail called
 only generators can be resumed
 open/close char can't be the same
+operator
+operator 
+operator"" 
 outer
 overflow in numeric constant
 pAfailed to bind the socket
@@ -804,10 +936,15 @@ parameter %d has an invalid type '%s' ; expected: '%s'
 paramscheck
 pcall
 pow@GLIBC_2.29
+powf
 powf@GLIBC_2.27
 precision format too long
 print
 printf
+pthread_cond_broadcast
+pthread_cond_broadcast@GLIBC_2.3.2
+pthread_cond_wait
+pthread_cond_wait@GLIBC_2.3.2
 pthread_mutex_destroy
 pthread_mutex_destroy@GLIBC_2.2.5
 pthread_mutex_init
@@ -823,8 +960,12 @@ pthread_mutexattr_settype@GLIBC_2.2.5
 pthread_once
 pthread_once@GLIBC_2.2.5
 push
-puts
-puts@GLIBC_2.2.5
+random_device could not be read
+random_device: getentropy failed
+random_device: rdrand failed
+random_device: rdseed failed
+random_device::random_device(const std::string&): device not available
+random_device::random_device(const std::string&): unsupported token
 rawcall
 rawcall requires at least 2 parameters (callee and this)
 rawdelete
@@ -834,13 +975,22 @@ rawin
 rawnewmember
 rawset
 rawset works only on array/table/class and instance
+rdrand
+rdrnd
+rdseed
+read
+read@GLIBC_2.2.5
 readblob
 readn
 ready
+realloc
+realloc@GLIBC_2.2.5
 recv
 recv@GLIBC_2.2.5
 reduce
+reference temporary #
 regexp
+reinterpret_cast
 remove
 removebreakpoint
 removed bp %d %s\n
@@ -864,6 +1014,8 @@ scalar expected : integer, float, or string
 script
 script_guthrie
 search
+secure_getenv
+secure_getenv@GLIBC_2.17
 seek
 select
 select@GLIBC_2.2.5
@@ -876,10 +1028,14 @@ setdelegate
 seterrorhandler
 setroot
 setroottable
+short
+signed char
 sin@GLIBC_2.2.5
 sincosf
 sincosf@GLIBC_2.2.5
 size must be a number
+sizeof 
+sizeof...
 slice
 slice out of range
 socket
@@ -888,34 +1044,36 @@ socket failed
 socket@GLIBC_2.2.5
 sort
 split
+sprintf
+sprintf@GLIBC_2.2.5
 sqrt
 srand
 srand@GLIBC_2.2.5
 stack overflow, cannot resize stack while in a metamethod
 startswith
 static
-std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
-std::_Rb_tree_decrement(std::_Rb_tree_node_base*)@GLIBCXX_3.4
-std::_Rb_tree_increment(std::_Rb_tree_node_base const*)
-std::_Rb_tree_increment(std::_Rb_tree_node_base const*)@GLIBCXX_3.4
-std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
-std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)@GLIBCXX_3.4
-std::_Rb_tree_rebalance_for_erase(std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
-std::_Rb_tree_rebalance_for_erase(std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)@GLIBCXX_3.4
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_append(char const*, unsigned long)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_append(char const*, unsigned long)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace(unsigned long, unsigned long, char const*, unsigned long)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace(unsigned long, unsigned long, char const*, unsigned long)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace_aux(unsigned long, unsigned long, unsigned long, char)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace_aux(unsigned long, unsigned long, unsigned long, char)@GLIBCXX_3.4.21
-std::__throw_length_error(char const*)
-std::__throw_length_error(char const*)@GLIBCXX_3.4
+static_cast
+std::allocator
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::bad_typeid
+std::basic_iostream<char, std::char_traits<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_string
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::bfloat16_t
+std::exception
+std::iostream
+std::istream
+std::ostream
+std::string
 std_blob
 std_stream
+stderr
+stderr@GLIBC_2.2.5
 steam://openurl/
 steam://openurl_external/
 step
@@ -929,15 +1087,21 @@ strcmp
 strcmp@GLIBC_2.2.5
 strcpy
 strcpy@GLIBC_2.2.5
+strerror_r
+strerror_r@GLIBC_2.2.5
 strftime
 strftime@GLIBC_2.2.5
 string expected for the specified format
+string literal
+string::string
 strlen
 strlen@GLIBC_2.2.5
 strncasecmp
 strncasecmp@GLIBC_2.2.5
 strncat
 strncat@GLIBC_2.2.5
+strncmp
+strncmp@GLIBC_2.2.5
 strncpy
 strncpy@GLIBC_2.2.5
 strstr
@@ -959,9 +1123,17 @@ swap2
 swap4
 swapfloat
 switch
+syscall
+syscall@GLIBC_2.2.5
+system
 table expected
 tell
 temp_reg
+template
+template parameter object for 
+terminate called after throwing an instance of '
+terminate called recursively\n
+terminate called without an active exception\n
 terminate from user
 terminated
 terminated by debugger
@@ -981,7 +1153,10 @@ the target is not a closure
 the type doesn't have a default delegate
 the watch does not exists
 this
+this 
 this object cannot be cloned
+throw
+throw 
 tochar
 tofloat
 tointeger
@@ -995,6 +1170,9 @@ towlower
 towlower@GLIBC_2.2.5
 towupper
 towupper@GLIBC_2.2.5
+transaction clone for 
+transaction clone for operator delete(void*)
+transaction clone for operator new[](unsigned long)
 true
 trying to inherit from a %s
 trying to modify a class that has already been instantiated
@@ -1002,17 +1180,37 @@ trying to resume a '%s',only genenerator can be resumed
 trying to set '%s'
 trying to yield a '%s',only genenerator can be yielded
 typecheck
+typeinfo fn for 
+typeinfo for 
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::recursive_init_error
+typeinfo name for 
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __gnu_cxx::recursive_init_error
+typename
 unexpected character
 unexpected character(control)
 unexpected type %s
 unfinished range
 unfinished string
 unknown
-unknown error
 unknown packet
 unnamed
 unnamedbuffer
 unrecognised escaper char
+unsigned
+unsigned __int128
+unsigned char
+unsigned int
+unsigned long
+unsigned long long
+unsigned short
 update
 usage: script_guthrie <sourcename> <linenum>\n
 userdata
@@ -1022,21 +1220,26 @@ values
 varargs
 vargv
 vector::_M_default_append
+virtual thunk to 
 void
 vscript_perf_warning_spew_ms
 vsnprintf
 vsnprintf@GLIBC_2.2.5
 vswprintf
 vswprintf@GLIBC_2.2.5
+vtable for 
 vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__class_type_info@CXXABI_1.3
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
 vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__si_class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__vmi_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info@CXXABI_1.3
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+vtable for __gnu_cxx::recursive_init_error
 wakeup
 wakeupthrow
 watches
+wchar_t
 wcslen
 wcslen@GLIBC_2.2.5
 wcsncat
@@ -1059,4 +1262,9 @@ wrong parameter
 wrong type
 wrong type(expected class or instance)
 yield
+zD<br>VEngineCvar004
 {%lld}
+{default arg#
+{lambda
+{parm#
+{unnamed type#

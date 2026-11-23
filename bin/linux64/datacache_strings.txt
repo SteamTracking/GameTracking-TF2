@@ -1,19 +1,33 @@
-                DLOPEN Error:%s\n
+        DLOPEN Error:%s\n
+  what():  
  ( def. "%s" )
+ [clone 
+ _Complex
+ _Imaginary
+ __vector(
  archive
  bytes
  cheat
+ class
  client
  clientcmd_can_execute
+ const
  failed to dlopen %s error=%s\n
+ for 
  game
  max. %f
  min. %f
+ noexcept
  notconnected
  notify
  replicated
+ requires 
+ restrict
  server_can_execute
  singleplayer
+ throw
+ transaction_safe
+ volatile
 "%s" = "%s"
 %%.%if%s
 %02x
@@ -33,6 +47,7 @@
 %s/%s
 %s/%s : missmatched parent bones on "%s"\n
 %s/bin/linux64/%s
+%s: __pos (which is %zu) > this->size() (which is %zu)
 %s\%s
 &AElig;
 &Aacute;
@@ -138,17 +153,25 @@
 &yen;
 &yuml;
 (%s)%s
+(anonymous namespace)
 ** NOTE: The real value is %.3f but the server has temporarily restricted it to %.3f **\n
+*N12_GLOBAL__N_121system_error_categoryE
+*N12_GLOBAL__N_122generic_error_categoryE
+++CCUNG
+++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGN9__gnu_cxx20recursive_init_errorE
+++CCUNGstd::exception
 ,%03d
 -no_compressed_vvds
 ../public/studio_virtualmodel.cpp
 .360
 .ani
-.dx80.vtx
 .dx90.vtx
-.sw.vtx
 .vmt
 /data/src/public/tier1/mempool.h
+/dev/random
+/dev/urandom
+0123456789
 0123456789ABCDEF
 0123456789abcdef
 1 - show hitches , 2 - show stalls
@@ -261,8 +284,6 @@ CUtlRBTree overflow!\n
 CVProfNode::EnterScope()
 CVProfNode::ExitScope()
 CVProfNode::GetSubNode(char const*, int, char const*, int)
-CXXABI_1.3
-CXXABI_1.3.8
 C[%8.3f] hitch on %s:%s:%d:%d\n
 Call to NULL CStudioHdr::GroupStudioHdr()\n
 Cannot find requested cache section "%s"
@@ -280,6 +301,7 @@ DevWarning(char const*, ...)
 Duplicate add to data cache\n
 Error
 Error Index File for '%s' checksum %d should be %d\n
+Error Index File for '%s' needs %d bones per strip, hardware supports %d\n
 Error Index File for '%s' version %d should be %d\n
 Error Vertex File for '%s' checksum %d should be %d\n
 Error Vertex File for '%s' id %d should be %d\n
@@ -294,16 +316,21 @@ Forces all ANI file loading to stall for specified ms\n
 Forces all model file data into cache on model load.
 GAME
 GAMEROOT
-GCC: (SteamRT 10.3.0-3+steamrt3.1+bsrt3.1) 10.3.0
+GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
+GLIBCXX_TUNABLES
 GLIBC_2.14
+GLIBC_2.17
 GLIBC_2.2.5
+GLIBC_2.25
 GLIBC_2.29
 GLIBC_2.3
+GLIBC_2.3.2
 HushAsserts
 IVideoServices002
 InputSystemVersion001
 Invalid index passed to CStudioHdr(%s)::GroupStudioHdr(): %d, but max is %d\n
 Invalid node
+JArray
 Loading %s\n
 Loading virtual model for %s\n
 Locked %d
@@ -353,6 +380,11 @@ ModelData
 ModelHeader_t
 ModelLODHeader_t
 ModelMesh
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv119__foreign_exceptionE
+N9__gnu_cxx24__concurrence_lock_errorE
+N9__gnu_cxx26__concurrence_unlock_errorE
+NSt3_V214error_categoryE
 NetworkSystemVersion001
 No such file
 Plat_FloatTime
@@ -416,10 +448,28 @@ Shifting misaligned data block by %d bytes at pStudioBone->procindex\n
 Shifting misaligned data block by %d bytes at pStudioHdr2->linearboneindex\n
 Shifting misaligned data block by %d bytes at pStudioHdr2->m_nBoneFlexDriverIndex\n
 Size in MB.
+St10bad_typeid
+St11logic_error
+St11range_error
+St12domain_error
+St12length_error
+St12out_of_range
+St12system_error
+St13bad_exception
+St13runtime_error
+St14overflow_error
+St15underflow_error
+St16invalid_argument
+St20bad_array_new_length
+St8bad_cast
+St9bad_alloc
+St9exception
 StripGroupHeader_t
 StripHeader_t
 Summary: %i resources total %s, %.2f %% of capacity\n
 Sync
+TLS init function for 
+TLS wrapper function for 
 ThreadGetCurrentId
 ThreadInMainThread
 ThreadSleep
@@ -434,7 +484,6 @@ Unknown cache section %s\n
 VBAllocTracker001
 VDataCache003
 VDmeMakeFileUtils001
-VEngineCvar004
 VFileSystem022
 VGUI_Input005
 VGUI_Localize005
@@ -452,6 +501,7 @@ VSoundEmitter002
 VStudioDataCache005
 VStudioRender025
 VTEX_003
+VTT for 
 V_AppendSlash: ran out of space on %s.
 V_MakeAbsolutePath: _getcwd failed.
 V_MakeAbsolutePath: tried to ".." past the root.
@@ -462,12 +512,21 @@ Warning: Attempted to free a locked resource.\n
 [%8.3f] stall on %s:%s:%d:%d\n
 [/code]
 [/list]
+[abi:
 [code]
+[friend]
 [img]
 [list]
 [url=
 \t%16.16s : %12s : 0x%p, 0x%p, 0x%p : %s : %s\n
+_Float
+_GLOBAL_
+_ITM_RU1
+_ITM_RU8
+_ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
+_ITM_memcpyRnWt
+_ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
@@ -477,33 +536,38 @@ __ctype_toupper_loc
 __ctype_toupper_loc@GLIBC_2.3
 __cxa_atexit
 __cxa_atexit@GLIBC_2.2.5
-__cxa_call_unexpected
-__cxa_call_unexpected@CXXABI_1.3
 __cxa_finalize
 __cxa_finalize@GLIBC_2.2.5
-__cxa_guard_abort
-__cxa_guard_abort@CXXABI_1.3
-__cxa_guard_acquire
-__cxa_guard_acquire@CXXABI_1.3
-__cxa_guard_release
-__cxa_guard_release@CXXABI_1.3
 __cxa_pure_virtual
-__cxa_pure_virtual@CXXABI_1.3
-__cxa_throw_bad_array_new_length
-__cxa_throw_bad_array_new_length@CXXABI_1.3.8
-__dynamic_cast
-__dynamic_cast@CXXABI_1.3
+__errno_location
+__errno_location@GLIBC_2.2.5
+__float128
 __gmon_start__
-__gxx_personality_v0
-__gxx_personality_v0@CXXABI_1.3
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+__int128
 __pthread_key_create
 __pthread_key_create@GLIBC_2.2.5
+__test_and_acquire(long*)
+__tls_get_addr
+__tls_get_addr@GLIBC_2.3
+__wrap_open
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
+_txnal_cow_string_D1(void*)
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_c_str(void const*)
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
+_txnal_sso_string_c_str(void const*)
+abort
 abort@GLIBC_2.2.5
 activity
 activitylistversion
 activitymodifierindex
 actweight
 aimvector
+alignof 
+allocator
 alongDamping
 alongStiffness
 angle
@@ -512,6 +576,8 @@ animblock
 animblockikruleindex
 animblockindex
 animindexindex
+auto
+auto:
 autolayerindex
 axis
 axisMapSize
@@ -530,6 +596,28 @@ baseStiffness
 baseUpFriction
 basepos
 baseptr
+basic_iostream
+basic_istream
+basic_ostream
+basic_string
+basic_string: construction from null is not valid
+basic_string::_M_create
+basic_string::_M_replace
+basic_string::_M_replace_aux
+basic_string::_S_construct null not valid
+basic_string::_S_create
+basic_string::append
+basic_string::assign
+basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
+basic_string::basic_string
+basic_string::compare
+basic_string::copy
+basic_string::erase
+basic_string::insert
+basic_string::replace
+basic_string::resize
+basic_string::substr
+basic_string_view::substr
 bin/linux64
 bodyPartOffset
 bodypartindex
@@ -539,21 +627,34 @@ boneWeightIndex
 bonecontroller
 bonecontrollerindex
 bonetablebynameindex
+bool
+bool __gnu_cxx::__is_null_pointer<char const>(char const*)
+bool __gnu_cxx::__is_null_pointer<char>(char*)
+boolean
 boundingradius
+byte
 calloc
 calloc@GLIBC_2.2.5
 cdtextureindex
 chain
+char
+char16_t
+char32_t
+char8_t
 chdir
 chdir@GLIBC_2.2.5
 checkSum
 checksum
 clientmaterial
+co_await 
 compressedikerrorindex
+const_cast
 constdirectionallightdot
+construction vtable for 
 contact
 contents
 control
+covariant return thunk to 
 cvar
 cycle
 cycleposeindex
@@ -562,6 +663,15 @@ datacachesize
 dataend
 datamanager.cpp
 datastart
+decimal128
+decimal32
+decimal64
+decltype (
+decltype(auto)
+decltype(nullptr)
+default
+delete 
+delete[] 
 developer
 dl_iterate_phdr
 dl_iterate_phdr@GLIBC_2.2.5
@@ -573,9 +683,11 @@ dlopen
 dlopen@GLIBC_2.2.5
 dlsym
 dlsym@GLIBC_2.2.5
+double
 dragAxisAreas
 drop
 dummy
+dynamic_cast
 endframe
 entryphase
 event
@@ -586,6 +698,7 @@ eyeballindex
 eyeposition
 fadeintime
 fadeouttime
+false
 fixupTableStart
 flLocalQWeight
 flMaxEyeDeflection
@@ -599,20 +712,37 @@ flexdescindex
 flexindex
 flexpair
 flexruleindex
+float
 floor
 forward
+fputc
+fputc@GLIBC_2.2.5
+fputs
+fputs@GLIBC_2.2.5
 free
 free@GLIBC_2.2.5
+fwrite
+fwrite@GLIBC_2.2.5
 g_AsyncInfoMapMutex
 g_Telemetry
 g_VProfCurrentProfile
 g_pMemAlloc
+generic
 getcwd
 getcwd@GLIBC_2.2.5
+getentropy
+getentropy@GLIBC_2.25
+glibcxx.eh_pool
+global constructors keyed to 
+global destructors keyed to 
 group
 groupsize
+guard variable for 
+half
+hardware
 hardwareID
 height
+hidden alias for 
 hitboxindex
 hitboxsetindex
 hull_max
@@ -635,13 +765,18 @@ illumpositionattachmentindex
 image not found
 includemodelindex
 indexOffset
+initializer for module 
 inputfield
 inv_tolerance
+ioctl
+ioctl@GLIBC_2.2.5
 iris_scale
 isspace
 isspace@GLIBC_2.2.5
 iswspace
 iswspace@GLIBC_2.2.5
+java Class for 
+java resource 
 keyvalueindex
 keyvaluesize
 kneeDir
@@ -653,8 +788,8 @@ libc.so.6
 libdl.so.2
 libm.so.6
 libpthread.so.0
-libstdc++.so.6
 libtier0.so
+libvstdlib.so
 linearboneindex
 linkindex
 linktype
@@ -672,6 +807,9 @@ localnodenameindex
 localposeparamindex
 localseqindex
 lodOffset
+long
+long double
+long long
 loop
 lowerflexdesc
 lowerlidflexdesc
@@ -710,6 +848,8 @@ mbstowcs
 mbstowcs@GLIBC_2.2.5
 mdlcache.cpp
 mem_force_flush
+memchr
+memchr@GLIBC_2.2.5
 memcmp
 memcmp@GLIBC_2.2.5
 memcpy
@@ -791,12 +931,18 @@ mstudiosrcbonetransform_t
 mstudiotexture_t
 mstudiovertanim_t
 mstudiovertex_t
+mt19937
 name
 ndelta
+new 
 newBoneID
+new[]
 nextoffset
 nextseq
 nodeflags
+noexcept
+non-transaction clone for 
+non-virtual thunk to 
 numAllowedRootLODs
 numBodyParts
 numBoneStateChanges
@@ -855,7 +1001,12 @@ numtextures
 numtriggers
 numvertices
 numverts
+obj_count
+obj_size
 offset_ledgetree_root
+operator
+operator 
+operator"" 
 options
 origMeshVertID
 pTangentData
@@ -882,6 +1033,10 @@ posttransform
 pretransform
 procindex
 proctype
+pthread_cond_broadcast
+pthread_cond_broadcast@GLIBC_2.3.2
+pthread_cond_wait
+pthread_cond_wait@GLIBC_2.3.2
 pthread_mutex_destroy
 pthread_mutex_destroy@GLIBC_2.2.5
 pthread_mutex_init
@@ -903,6 +1058,20 @@ quatindex
 r_rootlod
 raise
 raise@GLIBC_2.2.5
+random_device could not be read
+random_device: getentropy failed
+random_device: rdrand failed
+random_device: rdseed failed
+random_device::random_device(const std::string&): device not available
+random_device::random_device(const std::string&): unsupported token
+rdrand
+rdrnd
+rdseed
+read@GLIBC_2.2.5
+realloc
+realloc@GLIBC_2.2.5
+reference temporary #
+reinterpret_cast
 remaptype
 replacementMaterialNameOffset
 replacementOffset
@@ -916,13 +1085,40 @@ rotscaleindex
 script
 sectionframes
 sectionindex
+secure_getenv
+secure_getenv@GLIBC_2.17
+short
 side
+signed char
+sizeof 
+sizeof...
 skinindex
 slot
 solidCount
 sourceVertexID
 speed
+sprintf
+sprintf@GLIBC_2.2.5
 srcbonetransformindex
+static_cast
+std::allocator
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::bad_typeid
+std::basic_iostream<char, std::char_traits<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_string
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::bfloat16_t
+std::iostream
+std::istream
+std::ostream
+std::string
+stderr
+stderr@GLIBC_2.2.5
 steam://openurl/
 steam://openurl_external/
 stereo
@@ -934,8 +1130,12 @@ strcmp
 strcmp@GLIBC_2.2.5
 strcpy
 strcpy@GLIBC_2.2.5
+strerror_r
+strerror_r@GLIBC_2.2.5
 strftime
 strftime@GLIBC_2.2.5
+string literal
+string::string
 stripGroupHeaderOffset
 stripOffset
 strlen
@@ -944,6 +1144,8 @@ strncasecmp
 strncasecmp@GLIBC_2.2.5
 strncat
 strncat@GLIBC_2.2.5
+strncmp
+strncmp@GLIBC_2.2.5
 strncpy
 strncpy@GLIBC_2.2.5
 strstr
@@ -969,6 +1171,9 @@ surfacepropidx
 surfacepropindex
 swapcompactsurfaceheader_t
 switchPoint
+syscall
+syscall@GLIBC_2.2.5
+system
 szFACSindex
 szactivitynameindex
 szanimblocknameindex
@@ -988,7 +1193,16 @@ target0
 target1
 target2
 target3
+template
+template parameter object for 
+terminate called after throwing an instance of '
+terminate called recursively\n
+terminate called without an active exception\n
 texture
+this
+this 
+throw
+throw 
 tipMass
 tolower
 tolower@GLIBC_2.2.5
@@ -998,9 +1212,34 @@ towlower
 towlower@GLIBC_2.2.5
 towupper
 towupper@GLIBC_2.2.5
+transaction clone for 
+transaction clone for operator delete(void*)
+transaction clone for operator new[](unsigned long)
 trigger
 triggerindex
+true
+typeinfo fn for 
+typeinfo for 
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::recursive_init_error
+typeinfo name for 
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __gnu_cxx::recursive_init_error
+typename
 unknown
+unsigned
+unsigned __int128
+unsigned char
+unsigned int
+unsigned long
+unsigned long long
+unsigned short
 unused
 unused0
 unused1
@@ -1033,18 +1272,24 @@ vertexoffset
 vertindex
 view_bbmax
 view_bbmin
+virtual thunk to 
 virtualmodel
+void
 vphysicsID
 vsnprintf
 vsnprintf@GLIBC_2.2.5
 vswprintf
 vswprintf@GLIBC_2.2.5
+vtable for 
 vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__class_type_info@CXXABI_1.3
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
 vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__si_class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__vmi_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info@CXXABI_1.3
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+vtable for __gnu_cxx::recursive_init_error
+wchar_t
 wcslen
 wcslen@GLIBC_2.2.5
 wcsncat
@@ -1058,8 +1303,13 @@ yawBounce
 yawDamping
 yawFriction
 yawStiffness
+zD<br>VEngineCvar004
 zeroframecount
 zeroframeindex
 zeroframespan
 zeroframestalltime
 zoffset
+{default arg#
+{lambda
+{parm#
+{unnamed type#

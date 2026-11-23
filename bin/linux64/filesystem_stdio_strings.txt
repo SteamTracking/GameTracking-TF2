@@ -1,20 +1,28 @@
-                DLOPEN Error:%s\n
+        DLOPEN Error:%s\n
   Total Anonymous Claimed: %d\n
   Total Anonymous Unclaimed: %d\n
+  what():  
  !"#$%&'()*+,-./0123
  ( def. "%s" )
  (invpk)
  ReadToken overflow
+ [clone 
+ _Complex
+ _Imaginary
+ __vector(
  archive
  byte digest to 
  bytes
  cheat
+ class
  client
  clientcmd_can_execute
+ const
  doesn't match the required length of 
  exceeds the maximum of 
  failed to dlopen %s error=%s\n
  fnumber=%d ofs=0x%x sz=%d
+ for 
  for this key
  for this public key
  game
@@ -25,12 +33,18 @@
  max. %f
  min. %f
  more bytes of input needed
+ noexcept
  notconnected
  notify
  operation failed with error 
  replicated
+ requires 
+ restrict
  server_can_execute
  singleplayer
+ throw
+ transaction_safe
+ volatile
 " not used
 "%s" "%s" %s%s\n
 "%s" = "%s"
@@ -48,8 +62,11 @@ $WIN32
 $WINDOWS
 $X360
 %%.%if%s
+%.*Lf
 %02x
 %A %b %d
+%I:%M:%S %p
+%a %b %e %T %Y
 %d %s %s ( %d, %d ) %d %d%s%s\n
 %d Active Jobs\n
 %d Queued Jobs\n
@@ -76,6 +93,8 @@ $X360
 %s.vpk
 %s/%s
 %s/bin/linux64/%s
+%s: __pos (which is %zu) > __size (which is %zu)
+%s: __pos (which is %zu) > this->size() (which is %zu)
 %s_%03d.vpk
 %s_dir.vpk
 &AElig;
@@ -188,12 +207,38 @@ $X360
 (%zu) readdir failed to find '%s' in '%s'\n
 (Late) 
 (VPK)
+(anonymous namespace)
 (internal)
 (map)
 (pack) 
 ** NOTE: The real value is %.3f but the server has temporarily restricted it to %.3f **\n
+*N12_GLOBAL__N_117io_error_categoryE
+*N12_GLOBAL__N_121system_error_categoryE
+*N12_GLOBAL__N_122generic_error_categoryE
+*NSt13__facet_shims12_GLOBAL__N_112collate_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_112collate_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_113messages_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_113messages_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_113numpunct_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_113numpunct_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_113time_get_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_113time_get_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_114money_get_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_114money_get_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_114money_put_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_114money_put_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb0EEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb1EEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb0EEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb1EEE
 *ZNK15CBaseFileSystem24IsFileInWritableLocationEPKcEUlvE_
+++CCUNG
+++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGpure virtual method called\n
+++CCUNGstd::exception
 ,%03d
+-+xX0123456789abcdef0123456789ABCDEF
+-+xX0123456789abcdefABCDEF
 ---- FINISH ANYTIME ( NORMAL PRIORITY )----\n
 ---- FINISH BEFORE GAMEPLAY ( NORMAL PRIORITY )----\n
 ---- FINISH DURING PRELOAD ( HIGH PRIORITY )----\n
@@ -202,6 +247,7 @@ $X360
 ---FS%s:  close %s %p %i (%.3f)\n
 ---FS%s:  read %s %i %p (%.3f)\n
 ---FS%s:  write %s %i %p\n
+-0123456789
 -EncodingParameters
 -fs_logbins
 -fs_nopreloaddata
@@ -220,6 +266,9 @@ $X360
 /data/src/public/tier0/tslist.h
 /data/src/public/tier1/UtlSortVector.h
 /data/src/public/vstdlib/jobthread.h
+/dev/random
+/dev/urandom
+/tmp
 000000000000000000000000000000000000000000000000000000000000
 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
@@ -248,6 +297,7 @@ $X360
 0100000000000000000001F4C8F927AED3CA752257
 0100000000000000D9CCEC8A39E56F
 010000000000000108789B2496AF93
+0123456789
 0123456789ABCDEF
 0123456789abcdef
 0163F35A5137C2CE3EA6ED8667190B0BC43ECD69977702709B
@@ -443,6 +493,7 @@ $X360
 : unexpected channel name "
 :done\n
 :error\n
+;LZMA Decompression failed (%i)\n
 </script>
 << NULL >>\n
 <img src="
@@ -457,16 +508,20 @@ AADD9DB8DBE9C48B3FD4E6AE33C9FC07CB308DB3B3C9D20ED6639CCA70330870553E5C414CA92619
 AADD9DB8DBE9C48B3FD4E6AE33C9FC07CB308DB3B3C9D20ED6639CCA703308717D4D9B009BC66842AECDA12AE6A380E62881FF2F2D82C68528AA6056583A48F3
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ABCDEFGHIJKMNPQRSTUVWXYZ23456789
+AKST
+ASCII
+ASCII//TRANSLIT
 AlgorithmParametersBase: parameter "
 Alignment
 AllocatorBase: requested size would cause integer overflow
 Allow AsyncBegin/EndRead()
 Anonymous
+April
 ArraySink: missing OutputBuffer argument
 Assertion Failed: !m_bNeedsSort
 Assertion Failed: cubMaxPlaintext <= ULONG_MAX / cBlocks
-Assertion Failed: rsaEncryptor.FixedCiphertextLength() <= ULONG_MAX / cBlocks
 Async I/O disabled from command line\n
+August
 AuthenticatedDecryptionFilter
 AuthenticatedDecryptionFilterFlags
 AuthenticatedEncryptionFilter
@@ -577,10 +632,9 @@ CUtlRBTree overflow!\n
 CVProfNode::EnterScope()
 CVProfNode::ExitScope()
 CVProfNode::GetSubNode(char const*, int, char const*, int)
-CXXABI_1.3
-CXXABI_1.3.8
 CallAssertFailedNotifyFunc
 Calling AddBufferToZip with unknown compression type\n
+Cannot convert character sequence
 Cannot open %s for writing
 CipherModeBase: feedback size cannot be specified for this cipher mode
 Claimed
@@ -625,6 +679,7 @@ DSA/
 DSA: not a valid prime length
 DataOffset
 DebugTextureInfo001
+December
 DecodingLookupArray
 DeflateLevel
 Deflator
@@ -693,6 +748,7 @@ FS:  Tried to Write NULL file pointer inside valid file handle!\n
 FS: Specified two path IDs (%s, %s).\n
 FS_fread
 FS_fwrite
+February
 FeedbackSize
 File %s offset %x hash %s does not match ( should be %s ) \n
 File %s was found in %s, but resulting abs filename won't fit in callers buffer of %d bytes\n
@@ -706,16 +762,21 @@ FileSystem
 FilterWithBufferedInput
 FilterWithBufferedInput: invalid buffer size
 FmtStrVSNPrintf truncated to %d without QUIET_TRUNCATION specified!\n
+Friday
 GAME
 GCC: (SteamRT 10.3.0-3+steamrt3.1+bsrt3.1) 10.3.0
-GLIBCXX_3.4
-GLIBCXX_3.4.21
-GLIBCXX_3.4.9
+GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
+GLIBCXX_TUNABLES
 GLIBC_2.11
 GLIBC_2.14
+GLIBC_2.17
 GLIBC_2.2.5
+GLIBC_2.25
 GLIBC_2.29
 GLIBC_2.3
+GLIBC_2.3.2
+GLIBC_2.4
+GLIBC_2.6
 GLIBC_2.7
 GeneratableCryptoMaterial: this object does not support key/parameter generation
 GroupOID
@@ -747,6 +808,10 @@ InvertibleRSAFunction: input is not a valid RSA private key
 InvertibleRSAFunction: invalid public exponent
 InvertibleRSAFunction: specified modulus size is too small
 IteratedHashBase: input data exceeds maximum allowed by hash function 
+JArray
+January
+July
+June
 KeySize
 KeyValues Error: %s in file %s\n
 KeyValues.cpp
@@ -759,7 +824,18 @@ KeyValues::ParseIncludedKeys: Couldn't load included keyvalue file %s\n
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
 KeyValues::SaveToFile: couldn't open file "%s" in path "%s".\n
 KeyValuesSystem
-LZMA Decompression failed (%i)\n
+LC_ADDRESS
+LC_COLLATE
+LC_CTYPE
+LC_IDENTIFICATION
+LC_MEASUREMENT
+LC_MESSAGES
+LC_MONETARY
+LC_NAME
+LC_NUMERIC
+LC_PAPER
+LC_TELEPHONE
+LC_TIME
 LZMA Decompression overflowed (%zu > %zu)\n
 LZMA Decompression overflowed (read: %zu > %zu or write: %zu > %zu)\n
 LZMA file handle: failed reading forward to desired seek position\n
@@ -775,6 +851,7 @@ Loose
 Lowered '%s' -> '%s'\n
 MGF1
 MSG_FILEWRITE - Filesystem was asked to write to '%s', but we don't own that location. Allowing.\n
+March
 Matched '%s' -> '%s'\n
 MaterialSystemHardwareConfig012
 Materials
@@ -784,8 +861,14 @@ ModPrime2PrivateExponent
 Models
 Modulus
 ModulusSize
+Monday
 MontgomeryRepresentation: Montgomery representation requires an odd modulus
 MultiplicativeInverseOfPrime2ModPrime1
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv116__enum_type_infoE
+N10__cxxabiv117__class_type_infoE
+N10__cxxabiv119__foreign_exceptionE
+N10__cxxabiv120__si_class_type_infoE
 N8CryptoPP10ASN1ObjectE
 N8CryptoPP10BufferlessINS_22BufferedTransformationEEE
 N8CryptoPP10BufferlessINS_4SinkEEE
@@ -1252,16 +1335,70 @@ N8CryptoPP9OAEP_BaseE
 N8CryptoPP9PK_SignerE
 N8CryptoPP9PublicKeyE
 N8CryptoPP9TimerBaseE
+N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE
+N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE
+N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
+N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
+N9__gnu_cxx20recursive_init_errorE
+N9__gnu_cxx24__concurrence_lock_errorE
+N9__gnu_cxx26__concurrence_unlock_errorE
+NSt10filesystem16filesystem_errorE
+NSt10filesystem4path8_CodecvtIwEE
+NSt10filesystem7__cxx1116filesystem_errorE
+NSt10filesystem7__cxx114path8_CodecvtIwEE
+NSt3_V214error_categoryE
+NSt6locale5facet6__shimE
+NSt6locale5facetE
+NSt7__cxx1110moneypunctIcLb0EEE
+NSt7__cxx1110moneypunctIcLb1EEE
+NSt7__cxx1110moneypunctIwLb0EEE
+NSt7__cxx1110moneypunctIwLb1EEE
 NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+NSt7__cxx1114collate_bynameIcEE
+NSt7__cxx1114collate_bynameIwEE
+NSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEEE
+NSt7__cxx1115basic_stringbufIwSt11char_traitsIwESaIwEEE
+NSt7__cxx1115messages_bynameIcEE
+NSt7__cxx1115messages_bynameIwEE
+NSt7__cxx1115numpunct_bynameIcEE
+NSt7__cxx1115numpunct_bynameIwEE
+NSt7__cxx1115time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx1115time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt7__cxx1117moneypunct_bynameIcLb0EEE
+NSt7__cxx1117moneypunct_bynameIcLb1EEE
+NSt7__cxx1117moneypunct_bynameIwLb0EEE
+NSt7__cxx1117moneypunct_bynameIwLb1EEE
+NSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE
+NSt7__cxx1118basic_stringstreamIwSt11char_traitsIwESaIwEEE
+NSt7__cxx1119basic_istringstreamIcSt11char_traitsIcESaIcEEE
+NSt7__cxx1119basic_istringstreamIwSt11char_traitsIwESaIwEEE
+NSt7__cxx1119basic_ostringstreamIcSt11char_traitsIcESaIcEEE
+NSt7__cxx1119basic_ostringstreamIwSt11char_traitsIwESaIwEEE
+NSt7__cxx117collateIcEE
+NSt7__cxx117collateIwEE
+NSt7__cxx118messagesIcEE
+NSt7__cxx118messagesIwEE
+NSt7__cxx118numpunctIcEE
+NSt7__cxx118numpunctIwEE
+NSt7__cxx118time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx118time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt7__cxx119money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx119money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt7__cxx119money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx119money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt8ios_base7failureB5cxx11E
+NSt8ios_base7failureE
 NULL
 NameValuePairs: type mismatch for '
 NetworkSystemVersion001
 No VPK Errors occured loading files.\n
 No such file
 NodeSize
+November
 NullRNG: NullRNG should only be passed to functions that don't need to generate random bytes
 OAEP-
 OS_Rng: 
+October
 Open( %s )\n
 OpenEx
 Opening ZIP file with unsupported compression type\n
@@ -1297,6 +1434,7 @@ PN8CryptoPP22DL_GroupParameters_GFPE
 PN8CryptoPP31DL_GroupParameters_IntegerBasedE
 PN8CryptoPP35DL_GroupParameters_IntegerBasedImplINS_20ModExpPrecomputationENS_30DL_FixedBasePrecomputationImplINS_7IntegerEEEEE
 PNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+POSIX
 Pack File %s at offset %x length %x errorcount = %d \n
 Pack file uses unsupported compression method: %hi\n
 Pack file: reading from LZMA stream failed\n
@@ -1366,8 +1504,10 @@ RoundUpToMultipleOf: integer overflow
 Rounds
 SHA-1
 SHA-256
+Saturday
 Seed
 Separator
+September
 Set the async filesystem mode (0 = async, 1 = synchronous)
 ShouldUseNewAssertDialog
 SignatureVerificationFilterFlags
@@ -1376,6 +1516,131 @@ Simulate a delay of up to a set msec per file operation
 Size mismatch determining size of signed data block (%d vs %d)
 Size of per file buffers. 0 for none
 Sounds
+St10bad_typeid
+St10ctype_base
+St10money_base
+St10moneypunctIcLb0EE
+St10moneypunctIcLb1EE
+St10moneypunctIwLb0EE
+St10moneypunctIwLb1EE
+St11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE
+St11__timepunctIcE
+St11__timepunctIwE
+St11logic_error
+St11range_error
+St12codecvt_base
+St12codecvt_utf8IwLm1114111ELSt12codecvt_mode0EE
+St12ctype_bynameIcE
+St12ctype_bynameIwE
+St12domain_error
+St12length_error
+St12out_of_range
+St12system_error
+St13__ios_failure
+St13bad_exception
+St13basic_filebufIcSt11char_traitsIcEE
+St13basic_filebufIwSt11char_traitsIwEE
+St13basic_fstreamIcSt11char_traitsIcEE
+St13basic_fstreamIwSt11char_traitsIwEE
+St13basic_istreamIwSt11char_traitsIwEE
+St13basic_ostreamIwSt11char_traitsIwEE
+St13messages_base
+St13runtime_error
+St14basic_ifstreamIcSt11char_traitsIcEE
+St14basic_ifstreamIwSt11char_traitsIwEE
+St14basic_iostreamIwSt11char_traitsIwEE
+St14basic_ofstreamIcSt11char_traitsIcEE
+St14basic_ofstreamIwSt11char_traitsIwEE
+St14codecvt_bynameIcc11__mbstate_tE
+St14codecvt_bynameIwc11__mbstate_tE
+St14collate_bynameIcE
+St14collate_bynameIwE
+St14overflow_error
+St15basic_streambufIcSt11char_traitsIcEE
+St15basic_streambufIwSt11char_traitsIwEE
+St15messages_bynameIcE
+St15messages_bynameIwE
+St15numpunct_bynameIcE
+St15numpunct_bynameIwE
+St15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St15underflow_error
+St16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE
+St16__numpunct_cacheIcE
+St16__numpunct_cacheIwE
+St16invalid_argument
+St17__timepunct_cacheIcE
+St17__timepunct_cacheIwE
+St17moneypunct_bynameIcLb0EE
+St17moneypunct_bynameIcLb1EE
+St17moneypunct_bynameIwLb0EE
+St17moneypunct_bynameIwLb1EE
+St18__moneypunct_cacheIcLb0EE
+St18__moneypunct_cacheIcLb1EE
+St18__moneypunct_cacheIwLb0EE
+St18__moneypunct_cacheIwLb1EE
+St19_Sp_make_shared_tag
+St19__codecvt_utf8_baseIDiE
+St19__codecvt_utf8_baseIDsE
+St19__codecvt_utf8_baseIwE
+St19__iosfail_type_info
+St20__codecvt_utf16_baseIDiE
+St20__codecvt_utf16_baseIDsE
+St20__codecvt_utf16_baseIwE
+St20bad_array_new_length
+St21__ctype_abstract_baseIcE
+St21__ctype_abstract_baseIwE
+St23_Sp_counted_ptr_inplaceINSt10filesystem16filesystem_error5_ImplESaIS2_ELN9__gnu_cxx12_Lock_policyE2EE
+St23_Sp_counted_ptr_inplaceINSt10filesystem28recursive_directory_iterator10_Dir_stackESaIS2_ELN9__gnu_cxx12_Lock_policyE2EE
+St23_Sp_counted_ptr_inplaceINSt10filesystem4_DirESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE
+St23_Sp_counted_ptr_inplaceINSt10filesystem7__cxx1116filesystem_error5_ImplESaIS3_ELN9__gnu_cxx12_Lock_policyE2EE
+St23_Sp_counted_ptr_inplaceINSt10filesystem7__cxx1128recursive_directory_iterator10_Dir_stackESaIS3_ELN9__gnu_cxx12_Lock_policyE2EE
+St23_Sp_counted_ptr_inplaceINSt10filesystem7__cxx114_DirESaIS2_ELN9__gnu_cxx12_Lock_policyE2EE
+St23__codecvt_abstract_baseIDiDu11__mbstate_tE
+St23__codecvt_abstract_baseIDic11__mbstate_tE
+St23__codecvt_abstract_baseIDsDu11__mbstate_tE
+St23__codecvt_abstract_baseIDsc11__mbstate_tE
+St23__codecvt_abstract_baseIcc11__mbstate_tE
+St23__codecvt_abstract_baseIwc11__mbstate_tE
+St25__codecvt_utf8_utf16_baseIDiE
+St25__codecvt_utf8_utf16_baseIDsE
+St25__codecvt_utf8_utf16_baseIwE
+St5ctypeIcE
+St5ctypeIwE
+St7codecvtIDiDu11__mbstate_tE
+St7codecvtIDic11__mbstate_tE
+St7codecvtIDsDu11__mbstate_tE
+St7codecvtIDsc11__mbstate_tE
+St7codecvtIcc11__mbstate_tE
+St7codecvtIwc11__mbstate_tE
+St7collateIcE
+St7collateIwE
+St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St8bad_cast
+St8ios_base
+St8messagesIcE
+St8messagesIwE
+St8numpunctIcE
+St8numpunctIwE
+St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St9bad_alloc
+St9basic_iosIcSt11char_traitsIcEE
+St9basic_iosIwSt11char_traitsIwEE
+St9exception
+St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St9time_base
+St9type_info
 SteamDeck
 SteamTenFoot
 StolenIV
@@ -1393,8 +1658,14 @@ SubgroupGenerator
 SubgroupOrder
 SubgroupOrderSize
 Submit:%5dms AsyncDuration:%5dms Tag:%d Thread:%llx Size:%7d %s%s\n
+Sunday
+TEMP
+TEMPDIR
 TF_SignerBase: the recoverable message part is too long for the given key and algorithm
 TF_SignerBase: this algorithm does not support messsage recovery or the key is too short
+TLS init function for 
+TLS wrapper function for 
+TMPDIR
 Terminator
 ThisObject:
 ThisPointer:
@@ -1406,6 +1677,7 @@ ThreadSetDebugName
 ThreadSetPriority
 ThreadSleep
 ThreadedProcessMD5Requests
+Thursday
 TrackedVPKFiles:%d AllOpenedFiles:%d files VPKfiles:%d StringPoolCount:%d\n
 TrackerListAllFiles
 TrackerListVPKFiles
@@ -1414,6 +1686,7 @@ Tried to close unknown file pointer %p\n
 Tried to read %i bytes from unknown file pointer %p\n
 Tried to write %i bytes from unknown file pointer %p\n
 TruncatedDigestSize
+Tuesday
 UCS-2LE
 UCS-4LE
 UTF-32LE
@@ -1425,6 +1698,7 @@ Unaccounted
 Unclaimed
 Unflushable<T>: this object has buffered input that cannot be flushed
 Unknown
+Unknown error
 Unknown version %d for vpk %s
 Unmatched %s\n
 Unrecognized LZMA data\n
@@ -1433,8 +1707,8 @@ Uppercase
 Use native FS or STDIO
 VBAllocTracker001
 VBaseFileSystem011
-VEngineCvar004
 VFileSystem022
+VKVF
 VMDLLIB001
 VMaterialSystem082
 VP4002
@@ -1447,6 +1721,7 @@ VPK signature verification failed immediately after signing.  The public key mig
 VPK signing failed.  Private key may be corrupt or invalid
 VPK signing produced %d byte signature.  Expected size was %d bytes
 VProcessUtils001
+VTT for 
 V_AppendSlash: ran out of space on %s.
 V_MakeAbsolutePath: _getcwd failed.
 V_MakeAbsolutePath: tried to ".." past the root.
@@ -1456,6 +1731,7 @@ Verify integrity of your game files, perform memory and disk diagnostics on your
 Version
 WARN_FILEWRITE - Asked to write to '%s', but we don't own that location. Disallowing.\n
 Warning
+Wednesday
 Wrote ZIP buffer, estimated size %i, actual size %i\n
 X917RNG: Continuous random number generator test failed.
 XZP%c %d
@@ -1469,7 +1745,9 @@ Zip: Failed decompressing LZMA data\n
 [/code]
 [/list]
 [Failed]
+[abi:
 [code]
+[friend]
 [img]
 [list]
 [url=
@@ -1484,60 +1762,93 @@ Zip: Failed decompressing LZMA data\n
 \t(%zu) comparing %s with %s\n
 \tf\zip
 _ExitOnFatalAssert
+_Float
+_GLOBAL_
+_ITM_RU1
+_ITM_RU8
+_ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
+_ITM_memcpyRnWt
+_ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _SpewInfo
 _SpewMessage
+_ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IcEEv
+_ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IwEEv
+_ZSt10__exchangeIP11__dirstreamDnET_RS3_OT0_
+_ZSt10__exchangeIP8_IO_FILEDnET_RS3_OT0_
+_ZSt10__exchangeIPKcDnET_RS3_OT0_
+_ZSt10__exchangeIPNSt8ios_base14_Callback_listEDnET_RS4_OT0_
+_ZSt10__exchangeIPcDnET_RS2_OT0_
+_ZSt10__exchangeIPwDnET_RS2_OT0_
+_ZSt8exchangeIP11__dirstreamDnET_RS3_OT0_
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
+__ctype_get_mb_cur_max
+__ctype_get_mb_cur_max@GLIBC_2.2.5
 __ctype_tolower_loc
 __ctype_tolower_loc@GLIBC_2.3
 __ctype_toupper_loc
 __ctype_toupper_loc@GLIBC_2.3
-__cxa_allocate_exception
-__cxa_allocate_exception@CXXABI_1.3
 __cxa_atexit
 __cxa_atexit@GLIBC_2.2.5
-__cxa_begin_catch
-__cxa_begin_catch@CXXABI_1.3
-__cxa_call_unexpected
-__cxa_call_unexpected@CXXABI_1.3
-__cxa_end_catch
-__cxa_end_catch@CXXABI_1.3
 __cxa_finalize
 __cxa_finalize@GLIBC_2.2.5
-__cxa_free_exception
-__cxa_free_exception@CXXABI_1.3
-__cxa_guard_abort
-__cxa_guard_abort@CXXABI_1.3
-__cxa_guard_acquire
-__cxa_guard_acquire@CXXABI_1.3
-__cxa_guard_release
-__cxa_guard_release@CXXABI_1.3
-__cxa_pure_virtual
-__cxa_pure_virtual@CXXABI_1.3
-__cxa_rethrow
-__cxa_rethrow@CXXABI_1.3
-__cxa_throw
-__cxa_throw@CXXABI_1.3
-__cxa_throw_bad_array_new_length
-__cxa_throw_bad_array_new_length@CXXABI_1.3.8
-__dynamic_cast
-__dynamic_cast@CXXABI_1.3
+__duplocale
+__duplocale@GLIBC_2.2.5
 __errno_location
 __errno_location@GLIBC_2.2.5
+__float128
+__freelocale
+__freelocale@GLIBC_2.2.5
+__fxstat
 __fxstat64
 __fxstat64@GLIBC_2.2.5
+__fxstat@GLIBC_2.2.5
 __gmon_start__
-__gxx_personality_v0
-__gxx_personality_v0@CXXABI_1.3
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+__int128
 __isoc99_sscanf
 __isoc99_sscanf@GLIBC_2.7
+__iswctype_l
+__iswctype_l@GLIBC_2.2.5
 __lxstat64@GLIBC_2.2.5
 __lxstat@GLIBC_2.2.5
+__newlocale
+__newlocale@GLIBC_2.2.5
+__nl_langinfo_l
+__nl_langinfo_l@GLIBC_2.2.5
 __preload_section.pre
 __pthread_key_create
 __pthread_key_create@GLIBC_2.2.5
+__strcoll_l
+__strcoll_l@GLIBC_2.2.5
+__strftime_l
+__strftime_l@GLIBC_2.3
+__strtod_l
+__strtod_l@GLIBC_2.2.5
+__strtof_l
+__strtof_l@GLIBC_2.2.5
+__strxfrm_l
+__strxfrm_l@GLIBC_2.2.5
+__test_and_acquire(long*)
+__tls_get_addr
+__tls_get_addr@GLIBC_2.3
+__towlower_l
+__towlower_l@GLIBC_2.2.5
+__towupper_l
+__towupper_l@GLIBC_2.2.5
+__uselocale
+__uselocale@GLIBC_2.3
+__wcscoll_l
+__wcscoll_l@GLIBC_2.2.5
+__wcsftime_l
+__wcsftime_l@GLIBC_2.3
+__wcsxfrm_l
+__wcsxfrm_l@GLIBC_2.2.5
+__wctype_l
+__wctype_l@GLIBC_2.2.5
 __wrap___lxstat
 __wrap___lxstat64
 __wrap___xstat
@@ -1576,10 +1887,22 @@ _fstXXXXXX.tmp
 _hdr_
 _setjmp
 _setjmp@GLIBC_2.2.5
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
+_txnal_cow_string_D1(void*)
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_c_str(void const*)
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
+_txnal_sso_string_c_str(void const*)
 abcdefghijkmnpqrstuvwxyz23456789
+abort
 abort@GLIBC_2.2.5
 access
 access@GLIBC_2.2.5
+alignof 
+allocator
+alnum
+alpha
 alphasort64
 alphasort64@GLIBC_2.2.5
 async_allow_held_files
@@ -1589,30 +1912,108 @@ async_simulate_delay
 async_suspend
 asyncappend
 asyncwrite
+auto
+auto:
 autoMutex__
 basefilesystem.cpp
+basic_filebuf::_M_convert_to_external conversion error
+basic_filebuf::underflow codecvt::max_length() is not valid
+basic_filebuf::underflow error reading the file
+basic_filebuf::underflow incomplete character in file
+basic_filebuf::underflow invalid byte sequence in file
+basic_filebuf::xsgetn error reading the file
+basic_ios::clear
+basic_iostream
+basic_istream
+basic_ostream
+basic_string
+basic_string: construction from null is not valid
 basic_string::_M_construct null not valid
+basic_string::_M_create
+basic_string::_M_replace
+basic_string::_M_replace_aux
+basic_string::_S_construct null not valid
+basic_string::_S_create
 basic_string::append
+basic_string::assign
+basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
+basic_string::basic_string
+basic_string::compare
+basic_string::copy
+basic_string::erase
+basic_string::insert
+basic_string::replace
+basic_string::resize
+basic_string::substr
+basic_string_view::substr
 bin/linux64
+bind_textdomain_codeset
+bind_textdomain_codeset@GLIBC_2.2.5
+bindtextdomain
+bindtextdomain@GLIBC_2.2.5
+blank
 blocking load %s\n
 blocking write %s\n
+bool
+bool __gnu_cxx::__is_null_pointer<char const>(char const*)
+bool __gnu_cxx::__is_null_pointer<char>(char*)
+bool __gnu_cxx::__is_null_pointer<wchar_t const>(wchar_t const*)
+bool __gnu_cxx::__is_null_pointer<wchar_t>(wchar_t*)
+boolean
+btowc
+btowc@GLIBC_2.2.5
+byte
 cThreadedBlocks:%d cDupMD5s:%d\n
+cannot advance non-dereferenceable directory iterator
+cannot check file equivalence
+cannot check if file is empty
+cannot copy
+cannot copy file
+cannot copy symlink
+cannot create directories
+cannot create directory
+cannot create directory symlink
+cannot create hard link
+cannot create shim for unknown locale::facet
 cannot create std::deque larger than max_size()
 cannot create std::vector larger than max_size()
+cannot create symlink
+cannot get current path
+cannot get file size
+cannot get file time
+cannot get free space
+cannot get link count
+cannot increment recursive directory iterator
+cannot make absolute path
+cannot make canonical path
+cannot remove
+cannot remove all
+cannot rename
+cannot resize file
+cannot set current path
+cannot set file time
+cannot set permissions
 centralDirectorySize
+char
+char16_t
+char32_t
+char8_t
 chdir
 chdir@GLIBC_2.2.5
-chmod@GLIBC_2.2.5
 clock
 clock@GLIBC_2.2.5
 closedir
 closedir@GLIBC_2.2.5
+cntrl
+co_await 
 code length exceeds maximum
 codes incomplete
 codes oversubscribed
 commentLength
 compressionMethod
 console.log
+const_cast
+construction vtable for 
 copy "%%binsrc%%\bin\*.asi" "%%fs_target%%\bin"\n
 copy "%%binsrc%%\bin\engine.dll" "%%fs_target%%\bin"\n
 copy "%%binsrc%%\bin\filesystem_stdio.dll" "%%fs_target%%\bin"\n
@@ -1636,14 +2037,32 @@ copy "%%binsrc%%\hl2.exe" "%%fs_target%%"\n
 copy "%%binsrc%%\hl2\bin\gameui.dll" "%%fs_target%%\hl2\bin"\n
 copy "%%binsrc%%\hl2\resource\*.ttf" "%%fs_target%%\hl2\resource"\n
 copy "%s" "%s"\n
+covariant return thunk to 
 crc32
 crypto
 ctime
 ctime@GLIBC_2.2.5
 cvar
+decimal128
+decimal32
+decimal64
+decltype (
+decltype(auto)
+decltype(nullptr)
+default
+delete 
+delete[] 
+deleted virtual method called\n
 deque::_M_new_elements_at_back
 deque::_M_new_elements_at_front
 developer
+dgettext
+dgettext@GLIBC_2.2.5
+digit
+directory iterator cannot advance
+directory iterator cannot open directory
+dirfd
+dirfd@GLIBC_2.2.5
 diskNumberStart
 dl_iterate_phdr
 dl_iterate_phdr@GLIBC_2.2.5
@@ -1655,17 +2074,26 @@ dlopen
 dlopen@GLIBC_2.2.5
 dlsym
 dlsym@GLIBC_2.2.5
+double
+dynamic_cast
 echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"\n
 echo ERROR: must set fs_target=targetpath (ie. "set fs_target=u:\destdir")!\n
 exp@GLIBC_2.29
 externalFileAttribs
 extraFieldLength
 failed to read %d bytes\n
+false
 false 
+fchmod
+fchmod@GLIBC_2.2.5
+fchmodat
+fchmodat@GLIBC_2.4
 fclose
 fclose@GLIBC_2.2.5
 fdopen
 fdopen@GLIBC_2.2.5
+fdopendir
+fdopendir@GLIBC_2.4
 feof
 feof@GLIBC_2.2.5
 ferror
@@ -1677,8 +2105,11 @@ fgets@GLIBC_2.2.5
 file( %s )\n
 fileCommentLength
 fileNameLength
+fileno
+fileno@GLIBC_2.2.5
 fileno_unlocked
 fileno_unlocked@GLIBC_2.2.5
+filesystem error: 
 filesystem_async.cpp
 filesystem_buffer_size
 filesystem_max_stdio_read
@@ -1689,9 +2120,12 @@ filesystem_unbuffered_io
 filetime
 filetracker.cpp
 flags
+float
 float( %f )
 fopen64@GLIBC_2.2.5
 fopen@GLIBC_2.2.5
+fputc
+fputc@GLIBC_2.2.5
 fputs
 fputs@GLIBC_2.2.5
 fread
@@ -1722,13 +2156,23 @@ g_pMemAlloc
 g_pThreadPool
 g_pVCR
 game_write
+generic
 getcwd
 getcwd@GLIBC_2.2.5
-getenv
+getentropy
+getentropy@GLIBC_2.25
 getenv@GLIBC_2.2.5
 gettimeofday
 gettimeofday@GLIBC_2.2.5
+glibcxx.eh_pool
+global constructors keyed to 
+global destructors keyed to 
 goto done\n
+graph
+guard variable for 
+half
+hardware
+hidden alias for 
 iconv
 iconv@GLIBC_2.2.5
 iconv_close
@@ -1736,15 +2180,24 @@ iconv_close@GLIBC_2.2.5
 iconv_open
 iconv_open@GLIBC_2.2.5
 image not found
+initializer for module 
 int( %d = 0x%X )
 internalFileAttribs
 invalid bit length
+ioctl
+ioctl@GLIBC_2.2.5
+ios_base::_M_grow_words allocation failed
+ios_base::_M_grow_words is not valid
+iostream
+iostream error
 isalpha
 isalpha@GLIBC_2.2.5
 isspace
 isspace@GLIBC_2.2.5
 iswspace
 iswspace@GLIBC_2.2.5
+java Class for 
+java resource 
 lastModifiedDate
 lastModifiedTime
 lchown@GLIBC_2.2.5
@@ -1753,16 +2206,26 @@ libc.so.6
 libdl.so.2
 libm.so.6
 libpthread.so.0
-libstdc++.so.6
 libtier0.so
 libvstdlib.so
 loader_dump_table
 loader_spew_info
 loader_spew_info_ex
+locale::_Impl::_M_replace_facet
+locale::_S_normalize_category category not found
+locale::facet::_S_create_c_locale name not valid
+locale::facet::_S_lc_ctype_c_locale duplocale error
+locale::facet::_S_lc_ctype_c_locale newlocale error
 localtime@GLIBC_2.2.5
 log@GLIBC_2.29
+long
+long double
+long long
 longjmp
 longjmp@GLIBC_2.2.5
+lower
+lseek
+lseek@GLIBC_2.2.5
 lzma_persistent_buffer
 m_AsyncCallbackMutex
 m_FunctorQueueMutex
@@ -1777,20 +2240,19 @@ m_threadEventWorkToDo
 malloc
 malloc@GLIBC_2.2.5
 materials\
+mbrtowc
+mbrtowc@GLIBC_2.2.5
+mbsnrtowcs
+mbsnrtowcs@GLIBC_2.2.5
+mbsrtowcs
+mbsrtowcs@GLIBC_2.2.5
 mbstowcs
 mbstowcs@GLIBC_2.2.5
 memalign
 memalign@GLIBC_2.2.5
-memcmp
-memcmp@GLIBC_2.2.5
-memcpy
 memcpy@GLIBC_2.14
 memcpy_s: buffer overflow
-memmove
-memmove@GLIBC_2.2.5
 memmove_s: buffer overflow
-memset
-memset@GLIBC_2.2.5
 mkdir "%%fs_target%%"\n
 mkdir "%%fs_target%%\bin"\n
 mkdir "%s"\n
@@ -1801,18 +2263,39 @@ mkstemps64@GLIBC_2.11
 mod_write
 models\
 mount@GLIBC_2.2.5
+mt19937
 nCentralDirectoryEntries_ThisDisk
 nCentralDirectoryEntries_Total
+new 
+new[]
+noexcept
+non-dereferenceable recursive directory iterator cannot pop
+non-transaction clone for 
+non-virtual thunk to 
 null code
 numberOfTheDiskWithStartOfCentralDirectory
 numberOfThisDisk
+obj_count
+obj_size
 open
 open /dev/random
 open /dev/urandom
+openat
+openat@GLIBC_2.4
 opendir@GLIBC_2.2.5
 opened_files.txt
+operator
+operator 
+operator"" 
 packedstore.cpp
+poll
+poll@GLIBC_2.2.5
 pow@GLIBC_2.29
+print
+pthread_cond_broadcast
+pthread_cond_broadcast@GLIBC_2.3.2
+pthread_cond_wait
+pthread_cond_wait@GLIBC_2.3.2
 pthread_mutex_destroy
 pthread_mutex_destroy@GLIBC_2.2.5
 pthread_mutex_init
@@ -1828,16 +2311,41 @@ pthread_mutexattr_settype@GLIBC_2.2.5
 pthread_once
 pthread_once@GLIBC_2.2.5
 ptr( 0x%p )
+punct
+putwc
+putwc@GLIBC_2.2.5
 qsort
 qsort@GLIBC_2.2.5
 raise
 raise@GLIBC_2.2.5
+random_device could not be read
+random_device: getentropy failed
+random_device: rdrand failed
+random_device: rdseed failed
+random_device::random_device(const std::string&): device not available
+random_device::random_device(const std::string&): unsupported token
+rdrand
+rdrnd
+rdseed
 read /dev/random
 read /dev/urandom
+read_symlink
+readdir
 readdir64
 readdir64@GLIBC_2.2.5
+readdir@GLIBC_2.2.5
+readlink
+readlink@GLIBC_2.2.5
+realloc
+realloc@GLIBC_2.2.5
 realpath@GLIBC_2.3
+recursive directory iterator cannot open directory
+recursive directory iterator cannot pop
+reference temporary #
+reinterpret_cast
 relativeOffsetOfLocalHeader
+remove
+remove@GLIBC_2.2.5
 rename@GLIBC_2.2.5
 rewind
 rewind@GLIBC_2.2.5
@@ -1846,72 +2354,57 @@ scandir64
 scandir64@GLIBC_2.2.5
 scandir@GLIBC_2.2.5
 script
+secure_getenv
+secure_getenv@GLIBC_2.17
+sendfile
+sendfile@GLIBC_2.2.5
 set binsrc="%s"\n
+setlocale
+setlocale@GLIBC_2.2.5
+setvbuf
+setvbuf@GLIBC_2.2.5
+short
 signal
 signal@GLIBC_2.2.5
 signature
+signed char
+sizeof 
+sizeof...
 sleep
 sleep@GLIBC_2.2.5
 sound\
+space
 sprintf
 sprintf@GLIBC_2.2.5
 startOfCentralDirOffset
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_append(char const*, unsigned long)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_append(char const*, unsigned long)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_create(unsigned long&, unsigned long)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_create(unsigned long&, unsigned long)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_dispose()
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_dispose()@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace(unsigned long, unsigned long, char const*, unsigned long)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace(unsigned long, unsigned long, char const*, unsigned long)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace_aux(unsigned long, unsigned long, unsigned long, char)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace_aux(unsigned long, unsigned long, unsigned long, char)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, char const*, char const*)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, char const*, char const*)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::append(char const*)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::append(char const*)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(char const*, std::allocator<char> const&)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(char const*, std::allocator<char> const&)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::push_back(char)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::push_back(char)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::reserve(unsigned long)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::reserve(unsigned long)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string()
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string()@GLIBCXX_3.4.21
-std::__throw_bad_alloc()
-std::__throw_bad_alloc()@GLIBCXX_3.4
-std::__throw_length_error(char const*)
-std::__throw_length_error(char const*)@GLIBCXX_3.4
-std::__throw_logic_error(char const*)
-std::__throw_logic_error(char const*)@GLIBCXX_3.4
-std::bad_alloc::~bad_alloc()
-std::bad_alloc::~bad_alloc()@GLIBCXX_3.4
-std::basic_istream<char, std::char_traits<char>>& std::ws<char, std::char_traits<char>>(std::basic_istream<char, std::char_traits<char>>&)
-std::basic_istream<char, std::char_traits<char>>& std::ws<char, std::char_traits<char>>(std::basic_istream<char, std::char_traits<char>>&)@GLIBCXX_3.4
-std::basic_ostream<char, std::char_traits<char>>& std::__ostream_insert<char, std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>>&, char const*, long)
-std::basic_ostream<char, std::char_traits<char>>& std::__ostream_insert<char, std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>>&, char const*, long)@GLIBCXX_3.4.9
-std::exception::~exception()
-std::exception::~exception()@GLIBCXX_3.4
-std::ios_base::Init::Init()
-std::ios_base::Init::Init()@GLIBCXX_3.4
-std::ios_base::Init::~Init()
-std::ios_base::Init::~Init()@GLIBCXX_3.4
-std::istream::putback(char)
-std::istream::putback(char)@GLIBCXX_3.4
-std::istream::read(char*, long)
-std::istream::read(char*, long)@GLIBCXX_3.4
-std::set_new_handler(void (*)())
-std::set_new_handler(void (*)())@GLIBCXX_3.4
-std::terminate()
-std::terminate()@GLIBCXX_3.4
-std::uncaught_exception()
-std::uncaught_exception()@GLIBCXX_3.4
+static_cast
+status
+statvfs
+statvfs@GLIBC_2.2.5
+std::__facet_shims::__any_string::operator std::basic_string<char, std::char_traits<char>, std::allocator<char>><char>() const
+std::__facet_shims::__any_string::operator std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>><wchar_t>() const
+std::allocator
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::bad_typeid
+std::basic_iostream<char, std::char_traits<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_string
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::bfloat16_t
+std::iostream
+std::istream
+std::ostream
+std::string
 stderr
 stderr@GLIBC_2.2.5
+stdin
+stdin@GLIBC_2.2.5
+stdout
+stdout@GLIBC_2.2.5
 steam://openurl/
 steam://openurl_external/
 strcasecmp
@@ -1926,14 +2419,20 @@ strcpy
 strcpy@GLIBC_2.2.5
 strdup
 strdup@GLIBC_2.2.5
+strerror_r
+strerror_r@GLIBC_2.2.5
 strftime
 strftime@GLIBC_2.2.5
+string literal
+string::string
 strlen
 strlen@GLIBC_2.2.5
 strncasecmp
 strncasecmp@GLIBC_2.2.5
 strncat
 strncat@GLIBC_2.2.5
+strncmp
+strncmp@GLIBC_2.2.5
 strncpy
 strncpy@GLIBC_2.2.5
 strpbrk
@@ -1946,6 +2445,8 @@ strtod
 strtod@GLIBC_2.2.5
 strtol
 strtol@GLIBC_2.2.5
+strtold_l
+strtold_l@GLIBC_2.3
 strtoll
 strtoll@GLIBC_2.2.5
 strtoul
@@ -1953,8 +2454,22 @@ strtoul@GLIBC_2.2.5
 strtoull
 strtoull@GLIBC_2.2.5
 symlink@GLIBC_2.2.5
+symlink_status
+syscall
+syscall@GLIBC_2.2.5
 sysconf
 sysconf@GLIBC_2.2.5
+system
+temp_directory_path
+template
+template parameter object for 
+terminate called after throwing an instance of '
+terminate called recursively\n
+terminate called without an active exception\n
+this
+this 
+throw
+throw 
 tolower
 tolower@GLIBC_2.2.5
 toupper
@@ -1965,37 +2480,69 @@ towupper
 towupper@GLIBC_2.2.5
 trackerlistallfiles
 trackerlistvpkfiles
+transaction clone for 
+transaction clone for operator delete(void*)
+transaction clone for operator new[](unsigned long)
 true
+truncate
+truncate@GLIBC_2.2.5
+typeinfo fn for 
+typeinfo for 
 typeinfo for CryptoPP::BlockPaddingSchemeDef::BlockPaddingScheme
 typeinfo for CryptoPP::Integer::RandomNumberType
+typeinfo for __cxxabiv1::__class_type_info
+typeinfo for __cxxabiv1::__enum_type_info
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__si_class_type_info
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::recursive_init_error
 typeinfo for bool
-typeinfo for bool@CXXABI_1.3
 typeinfo for int
 typeinfo for int const*
-typeinfo for int const*@CXXABI_1.3
-typeinfo for int@CXXABI_1.3
-typeinfo for std::bad_alloc
-typeinfo for std::bad_alloc@GLIBCXX_3.4
-typeinfo for std::exception
-typeinfo for std::exception@GLIBCXX_3.4
 typeinfo for unsigned char
 typeinfo for unsigned char const*
-typeinfo for unsigned char const*@CXXABI_1.3
 typeinfo for unsigned char*
-typeinfo for unsigned char*@CXXABI_1.3
-typeinfo for unsigned char@CXXABI_1.3
 typeinfo for unsigned int
-typeinfo for unsigned int@CXXABI_1.3
+typeinfo name for 
 typeinfo name for CryptoPP::BlockPaddingSchemeDef::BlockPaddingScheme
 typeinfo name for CryptoPP::Integer::RandomNumberType
+typeinfo name for __cxxabiv1::__class_type_info
+typeinfo name for __cxxabiv1::__enum_type_info
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo name for __cxxabiv1::__si_class_type_info
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __gnu_cxx::recursive_init_error
+typename
 u64( %lld = 0x%llX )
 uncompressedSize
+ungetc
+ungetc@GLIBC_2.2.5
+ungetwc
+ungetwc@GLIBC_2.2.5
+uninitialized __any_string
 unknown
 unlink@GLIBC_2.2.5
+unlinkat
+unlinkat@GLIBC_2.4
+unsigned
+unsigned __int128
+unsigned char
+unsigned int
+unsigned long
+unsigned long long
+unsigned short
+upper
 utime@GLIBC_2.2.5
+utimensat
+utimensat@GLIBC_2.6
 utimes@GLIBC_2.2.5
 vector::_M_default_append
 vector::_M_fill_insert
+vector::_M_realloc_append
 vector::_M_realloc_insert
 vector::reserve
 vector<bool>::_M_fill_insert
@@ -2004,31 +2551,60 @@ versionMadeBy
 versionNeededToExtract
 vfprintf
 vfprintf@GLIBC_2.2.5
+virtual thunk to 
+void
 vsnprintf
 vsnprintf@GLIBC_2.2.5
 vswprintf
 vswprintf@GLIBC_2.2.5
+vtable for 
 vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__enum_type_info
-vtable for __cxxabiv1::__enum_type_info@CXXABI_1.3
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
 vtable for __cxxabiv1::__pointer_type_info
-vtable for __cxxabiv1::__pointer_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__si_class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__vmi_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info@CXXABI_1.3
-vtable for std::bad_alloc
-vtable for std::bad_alloc@GLIBCXX_3.4
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+vtable for __gnu_cxx::recursive_init_error
+w+bx
+wchar_t
+wcrtomb
+wcrtomb@GLIBC_2.2.5
+wcscmp
+wcscmp@GLIBC_2.2.5
 wcslen
 wcslen@GLIBC_2.2.5
 wcsncat
 wcsncat@GLIBC_2.2.5
 wcsncpy
 wcsncpy@GLIBC_2.2.5
+wcsnrtombs
+wcsnrtombs@GLIBC_2.2.5
 wcstol
 wcstol@GLIBC_2.2.5
 wcstoll
 wcstoll@GLIBC_2.2.5
 wcstombs
 wcstombs@GLIBC_2.2.5
+wctob
+wctob@GLIBC_2.2.5
+wmemchr
+wmemchr@GLIBC_2.2.5
+wmemcmp
+wmemcmp@GLIBC_2.2.5
+wmemcpy
+wmemcpy@GLIBC_2.2.5
+wmemmove
+wmemmove@GLIBC_2.2.5
+wmemset
+wmemset@GLIBC_2.2.5
+writev
+writev@GLIBC_2.2.5
+xdigit
+zD<br>VEngineCvar004
+{default arg#
+{lambda
+{parm#
+{unnamed type#

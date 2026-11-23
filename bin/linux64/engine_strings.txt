@@ -1,4 +1,3 @@
-                [
            per client out %.1f, in %.1f kB/s\n
            per client out %.1f/s, in %.1f/s\n
         %3d %3d %3d %3d %3d %3d %3d %3d
@@ -243,7 +242,6 @@
 #FileOpenDialog_Save
 #FileOpenDialog_Select
 #FileOpenDialog_ToolTip_NewFolder
-#FileOpenDialog_ToolTip_OpenInDesktopManagerButton
 #FileOpenDialog_ToolTip_Up
 #Frame_Untitled
 #GameUI_Disconnect_TooManyCommands
@@ -371,6 +369,7 @@ $AlphaTestReference
 $DECK
 $LINUX
 $OSX
+$PLATFORM_DIR
 $POSIX
 $WIN32
 $WINDOWS
@@ -395,7 +394,6 @@ $nodebug
 $nofog
 $surfaceprop
 $surfaceprop2
-$tIEnt %3d: %s class %s\n
 $translucent
 $vertexalpha
 $vertexcolor
@@ -436,6 +434,7 @@ $vertexcolor
 %4.0f ms : %s\n
 %4d: Flags:0x%8.8x %s\n
 %4d: Flags:0x%8.8x RefCount:%2d %s\n
+%5.1f ms
 %5.1f,
 %5.2f MB (%zu bytes)\n
 %5.2f MB: %s\n
@@ -633,6 +632,7 @@ $vertexcolor
 %s: No maps found\n
 %s: Out-of-range value (%f/%f) in SendPropFloat '%s', clamping.\n
 %s: SendTableCRC %i
+%s: __pos (which is %zu) > this->size() (which is %zu)
 %s: backup %i, new %i, bytes %i
 %s: bytes %i
 %s: client %i, bytes %i
@@ -875,14 +875,19 @@ $vertexcolor
 **studio**
 *.dem
 *.raw
+*?DefaultSmallDropShadow
 *N12_GLOBAL__N_115ScrollBarButtonE
 *N12_GLOBAL__N_116CaptionGripPanelE
+*N12_GLOBAL__N_121system_error_categoryE
+*N12_GLOBAL__N_122generic_error_categoryE
 *N12_GLOBAL__N_19GripPanelE
 *ZN8CNetChan13ProcessPacketEP11netpacket_sbE51CNetChannelPacketProcessingCallbackFinishProcessing
 *\tThis server will operate in LAN mode only.*\n
 *\tUnable to load Steam support library.*\n
 *this
 + %s %s, %s, index %i, bits %i, value %s\n
+++CCUNG
+++CCUNGstd::exception
 +Key
 +Target
 +connect
@@ -1051,6 +1056,7 @@ $vertexcolor
 -showbudget_texture
 -showbudget_texture_global
 -showvprof
+-small
 -sndcachedebug
 -spewsentences
 -startmap
@@ -1098,7 +1104,6 @@ $vertexcolor
 .bsp.bz2
 .cmd
 .com
-.dx80.vtx
 .dx90.vtx
 .dylib
 .flt
@@ -1117,7 +1122,6 @@ $vertexcolor
 .scr
 .smx
 .spr
-.sw.vtx
 .sys
 .tgz
 .vbs
@@ -1150,6 +1154,8 @@ $vertexcolor
 /data/src/public/tier0/tslist.h
 /data/src/public/tier1/UtlSortVector.h
 /data/src/public/vstdlib/jobthread.h
+/dev/random
+/dev/urandom
 /proc/meminfo
 /proc/self/status
 /proc/version_signature
@@ -1163,12 +1169,14 @@ $vertexcolor
 0.15
 0.25
 0.55
+0123456789
 0123456789ABCDEF
 0123456789abcdef
 0: no radiosity\n1: radiosity with ambient cube (6 samples)\n2: radiosity with 162 samples\n3: 162 samples for static props, 6 samples for everything else
 0: off\n1: draw light cache entries\n2: draw rays\n
 0=Off, 1=Normal, 2=Wireframe
 0=Off, 1=On, 2=Show Errors
+0>Rejecting malformed ADPCM wave '%s'\n
 0Atestscripts\%s
 0x%016llX
 0x%p
@@ -2145,7 +2153,6 @@ $vertexcolor
 16CVEngineServer22
 16CVProfGraphPanel
 16CWorldRenderList
-16IChangeFrameList
 16IClientStatsTime
 16ICommandCallback
 16IDataCacheClient
@@ -2539,6 +2546,7 @@ $vertexcolor
 1997
 1998
 1999
+19:58:06
 19CAreaPortalsUIPanel
 19CAudioSourceMemWave
 19CBudgetHistoryPanel
@@ -2650,7 +2658,6 @@ $vertexcolor
 20IStaticPropMgrEngine
 20IStaticPropMgrServer
 20IUniformRandomStream
-21:45:38
 21CAudioMixerWave16Mono
 21CAudioSourceStreamMP3
 21CBaseActionEditDialog
@@ -2837,6 +2844,7 @@ $vertexcolor
 9CFunctor1IPFvPKcE12CUtlEnvelopeIS1_E12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEEE
 9CFunctor1IPFviEi12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEEE
 9CFunctor2IPFvP11msurface2_t6VectorES1_S2_12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEEE
+9CFunctor2IPFvRK22DebugOverlayMeshDesc_tP9IMaterialES0_S4_12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEEE
 9CFunctor2IPFvbbEbb12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEEE
 9CFunctor6IPFvP8dlight_tP11msurface2_tRK11matrix3x4_tjbbES1_S3_S4_jbb12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEEE
 9CFunctor9IPFvbi6VectoriPP7decal_tiiifEbiS0_iS3_iiif12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEEE
@@ -2849,12 +2857,10 @@ $vertexcolor
 9IRegistry
 9IWaveData
 9SVC_Print
-9gf0B
 ;%s %c %d;
 ;----- dt_ShowPartialChangeEnts -----
 <!-- DMXVersion
 <-- [%s] Split packet %4i/%4i seq %5i size %4zd mtu %4llu from %s\n
-<-small
 </script>
 << NULL >>\n
 <<Unassigned>>
@@ -2865,45 +2871,48 @@ $vertexcolor
 <no file>
 <null>
 <pre>
+<s_OverlayMutex
 <shouldn't see this>
 <slot:userid:"name">\n
 = %i bits (%i bytes)\n
 =Cheat code "%s" activated!
+=DownloadLists
 =[%8.3f] hitch on %s:%s:%d:%d\n
-=checkProps
-=hit prop %d\n
+=fff?
 >/proc/self/maps
 >333?
+>@Unable to connect to remote client (%s)\n
 >CAskConnectPanel
 >hxs?
 ???redo
 ???undo
-?CMapLoadHelper::Init, map %s has wrong identifier\n
+?CFogUIPanel
 ?CPluginUIManager
 ?Called RequestFile_OLD
 ?ComboBox
+?Error in bitbuf [%s]: out of range value. Debug in bitbuf_errorhandler.cpp\n
 ?Failed to read demo header.\n
 ?Flagged audio device for restart (%s changed from '%s' to '%s')\n
-?Luxel Value: %d %d %d\n
-?PlaneList: bad model
+?Need to rebuild map to get bumped lighting on material %s\n
 ?ServerUploadGameStats001
-?Too many players!\n
-?VPhysicsSurfaceProps001
+?UUUUUU
 ?bench_start
 ?cl_soundscape_flush
 ?engine_no_focus_sleep
 ?fff?
-@<a href=
-@CDemoUIPanel
+?gf0Bgf0B
+?materials/
+?sv_shutdown canceled.\n
+@<a href=<br>VProcessUtils001
 @UUUUUU
 @VFileSystem022
-@gl_screen.cpp
 A Source engine game is required to run mods\n
+A333?
 AABBTree_Ray
 AASamples
 ABGR8888
+ACProfileHierarchyPanel
 ADJACENCY
-AGraphPanel.FgColor
 ALIGN_TYPE is wrong, please fix
 ALLPASS
 ARCHIVE
@@ -2950,6 +2959,7 @@ Adjust LOD of the last viewed texture +1 to inc resolution, -1 to dec resolution
 Adobe APP14 marker: version %d, flags 0x%04x 0x%04x, transform %d
 After this many seconds without a message from a client, the client is dropped
 After this many seconds without receiving a packet from the server, the client will disconnect itself
+Agl_lightmap.cpp
 Alias a command.
 Alias name is too long\n
 Alien Swarm
@@ -2970,7 +2980,6 @@ Already recording movie!\n
 Already recording.\n
 An issue with your computer is blocking the VAC system. You cannot play on secure servers.\n\nhttps://support.steampowered.com/kb_article.php?ref=2117-ILZV-2837
 Angular velocity limit before eyes considered snapped for demo playback.
-AnimatingImagePanel
 AnimationController
 Aniso,
 AnisoLevel
@@ -3012,7 +3021,9 @@ At least this many occluders will be used, no matter how big they are.
 At marker 0x%02x, recovery action %d
 AttachToWindow
 Attempt to compress out of band voice payloads (360 only).
+Attempted to load tool "%s" but we couldn't find it.\n
 Attempting to get world model before it was loaded\n
+Attempting to load tool: "%s" ("%s")\n
 Attempting to play MP3 with no vaudio [ %s ]\n
 Attribute "%s" was defined more than once.\n
 Audit the memory usage and files in the save-to-memory system
@@ -3034,7 +3045,10 @@ Available settings:\n
 Average framerate: %.2f\n
 Average the next N frames.
 Avg Calls   + Time + NoChild
+B16IChangeFrameList
 BASE_PATH
+BCDemoUIPanel
+BFound %d matching games\n
 BGR565
 BGR888
 BGR888_BLUESCREEN
@@ -3309,7 +3323,6 @@ CDemoSmootherPanel
 CDemoUIPanel2
 CDispCollTree::Cache
 CDmxElement::UnpackIntoStructure: Mismatched attribute type in attribute "%s"!\n
-CDownloadLists
 CDragDropHelperPanel
 CDrawTreeFrame
 CEngine::Frame
@@ -3324,7 +3337,6 @@ CEngineVGui::Paint
 CEngineVGui::Simulate
 CEntityReportPanel
 CEntityReportPanel::Paint
-CFogUIPanel
 CFrameSnapshot pool
 CFrameSnapshotManager::BuildSnapshotList:  infinite loop building list!!!
 CFullScreenSelectionPanel
@@ -3424,6 +3436,7 @@ CM_TraceToLeafDisps
 CM_Vis:  buffer not big enough (%i but need %i)\n
 CM_Vis: error
 CM_WriteAreaBits with buffer size < 32\n
+CMapLoadHelper::Init, map %s has wrong identifier\n
 CMapLoadHelper::Init, map %s has wrong version (%i when expecting %i)\n
 CMapLoadHelper::Init, unable to open %s\n
 CMessage
@@ -3496,7 +3509,6 @@ CPluginHudMessage
 CPluginMenu
 CPooledVBAllocator_ColorMesh::Init
 CProceduralTexturePanel
-CProfileHierarchyPanel
 CProfileHierarchyPanel::ColumnPanels_t
 CProfileHierarchyPanel::PerformLayout
 CProfileHierarchyPanel::SetItemColors
@@ -3549,7 +3561,6 @@ CStaticPropMgr::PrecacheLighting - end
 CStaticPropMgr::PrecacheLighting - start
 CSteam3Client::RunFrame
 CTSListBase: Misaligned list\n
-CTSQueue: Misaligned queue\n
 CTestScriptMgr: not initialized.
 CTestScriptMgr::LoopCount( %s ): no loop with this name exists.
 CTestScriptMgr::LoopForNumSeconds( %s ): no loop with this name exists.
@@ -3640,8 +3651,6 @@ CVProfile::~CVProfile()
 CVideoMode_Common::Init  CreateGameWindow
 CVideoMode_Common::Init  SetupStartupGraphic
 CVmtTextEntry
-CXXABI_1.3
-CXXABI_1.3.8
 CacheCustomFiles: can't read '%s'.\n
 CacheCustomFiles: can't write '%s'.\n
 CacheSoundsFromResFile:  Unable to find '%s'\n
@@ -4018,6 +4027,7 @@ CreateFragmentsFromFile: '%s' doesn't exist.\n
 CreateFragmentsFromFile: '%s' size exceeds net_maxfilesize limit (%i MB).\n
 CreateFragmentsFromFile: '%s' too big (max %i bytes).\n
 CreateFragmentsFromFile: couldn't open '%s'.\n
+CreateFragmentsFromFile: too many pending file transfers to %s, refusing '%s'.\n
 CreateGameWindow - Finish
 CreateGameWindow - Start
 CreateInterface
@@ -4100,6 +4110,7 @@ DSP: Warning, failed to allocate filter for delay line.\n
 DSP: Warning, failed to allocate filter.\n
 DSP: Warning, failed to allocate flt for reverb.\n
 DSP: Warning, failed to allocate lfo or mdy for chorus.\n
+DSP: Warning, failed to allocate mod delay.\n
 DSP: Warning, failed to allocate pitch shifter.\n
 DSP: Warning, failed to allocate reverb.\n
 DSP_LoadPresetFile: unable to open '%s'\n
@@ -4150,7 +4161,6 @@ Default weight : %0.5f\n
 DefaultFixed
 DefaultFixedDropShadow
 DefaultSmall
-DefaultSmallDropShadow
 DefaultUnderline
 DefaultVerySmall
 Default_Mix
@@ -4439,7 +4449,6 @@ ERROR: couldn't open.\n
 ERROR: demo file protocol %i outdated, engine vnoteersion is %i \n
 ERROR: demo network protocol %i outdated, engine version is %i \n
 EXECUTABLE_PATH
-Eaudio/private/snd_mix.cpp
 Echo log information to the console.
 Echo text to console.
 Edge->
@@ -4501,6 +4510,7 @@ EngineTraceServer003
 EngineVGui()->Init()
 EngineVGui()->Shutdown()
 EngineVGui_Simulate
+Ent %3d: %s class %s\n
 Ent changes: %3d, prop changes: %3d
 Entity %d (class '%s') reported ENTITY_CHANGE_NONE but '%s' changed.\n
 Entity Message to %i, %i bytes written (max is %d)\n
@@ -4514,7 +4524,6 @@ Error buffer for %s written to %s\n
 Error downloading %s%s\n
 Error downloading %s\n
 Error in bitbuf [%s]: buffer overrun. Debug in bitbuf_errorhandler.cpp\n
-Error in bitbuf [%s]: out of range value. Debug in bitbuf_errorhandler.cpp\n
 Error loading cfg/pure_server_full.txt\n
 Error loading cfg/pure_server_minimal.txt\n
 Error loading cfg/trusted_keys_base.txt\n
@@ -4526,7 +4535,6 @@ Error reading attribute "%s"
 Error reading demo message data.\n
 Error reading file
 Error reading in array attribute "%s" element %d
-Error reading string table %s\n
 Error serializing default cubemap %s\n
 Error writing to file
 Error! sentence too long!\n
@@ -4613,11 +4621,13 @@ Failed to find "VTPause()" in "vtuneapi.dll".\n
 Failed to find "VTResume()" in "vtuneapi.dll".\n
 Failed to find file for building soundcache [ %s ]\n
 Failed to find map %s\n
+Failed to find sample rate creating cache data for MP3, cache will be invalid [ %s ]\n
 Failed to find steam.inf or equivalent steam info. May not have proper information to connect to Steam.\n
 Failed to initialize SDL device!\n
 Failed to launch startmovie!\n
 Failed to load %s\n
 Failed to load plugin "%s"\n
+Failed to load registry file %s. Is it corrupt?\n
 Failed to load server binary\n
 Failed to load sound "%s", file probably missing from disk/repository\n
 Failed to open client state file %s\n
@@ -4642,6 +4652,8 @@ Fast Bwd
 Fast Fwd
 Fatal Error:  Unable to create game window!
 Fatal Error: Unable to get window info from SDL.
+Fgl_screen.cpp
+Fhit prop %d\n
 Fieldname is not unique: %s\nRename it and try again.
 File %d: %s Size:%d\n
 File '%s' requested from %s.\n
@@ -4765,7 +4777,6 @@ Forcing client reconnect (%i)\n
 Forward command to server.
 Found %d audio files.\n
 Found %d available audio devices\n
-Found %d matching games\n
 Found -NoQueuedPacketThread, so no queued packet thread will be created.\n
 Found Buffer: %s, offset: %d\n
 Found a displacement edge abutting multiple other edges.\n
@@ -4823,15 +4834,14 @@ GAMEROOT
 GAMESAVED
 GAMESAVING
 GAME_HEADER
-GCC: (SteamRT 10.3.0-3+steamrt3.1+bsrt3.1) 10.3.0
-GLIBCXX_3.4
-GLIBCXX_3.4.21
+GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GLIBC_2.14
 GLIBC_2.2.5
-GLIBC_2.22
+GLIBC_2.25
 GLIBC_2.27
 GLIBC_2.29
 GLIBC_2.3
+GLIBC_2.3.2
 GLIBC_2.7
 Gain
 Game            : %s\n
@@ -4855,6 +4865,7 @@ GameUI011
 Gap in server data, requesting connection perf data\n
 Generate a report to the console based on budget group.
 Generate a report to the console.
+Gerror loading %s\n
 Get voice input from 'voice_input.wav' rather than from the microphone.
 GetAllManifestFiles:  Unable to load %s\n
 GetAllSoundFilesReferencedInReslists:  Unable to load file %s\n
@@ -4888,6 +4899,7 @@ Gold Source
 Got a request to record a movie using AVI, but AVI is deprecated. Using QuickTime/H264 instead.\n
 GotoButton
 GraphPanel.BgColor
+GraphPanel.FgColor
 Gzip compress logfile and rename to logfilename.log.gz on close.
 HALF-LIFE 2
 HALL Detected \n
@@ -5312,6 +5324,7 @@ Kilobytes
 L %02i/%02i/%04i - %02i:%02i:%02i: %s
 L%02i%02i
 L2Miss
+L>AnimatingImagePanel
 L>FATAL ERROR: %s\n
 L?Max bytes/sec the host can receive data
 L?delta entity: %i\n
@@ -5441,6 +5454,7 @@ Lost connection
 Lost connection to server.
 Lowend optimization: if nonzero, spatialize only a fraction of sound channels each frame. 1/2^x of channels will be spatialized per frame.
 Lowered '%s' -> '%s'\n
+Luxel Value: %d %d %d\n
 MATCHMAKING
 MATSYS_VIDCFG_FLAGS_DISABLE_SPECULAR: %s\n
 MATSYS_VIDCFG_FLAGS_ENABLE_PARALLAX_MAPPING: %s\n
@@ -5543,6 +5557,7 @@ Maximum amount of memory to dedicate to engine hunk and datacache, for dedicated
 Maximum client number on SourceTV server.
 Maximum connections per second to respond to from a single IP address.
 Maximum connections per second to respond to from anywhere.
+Maximum net channel transfer size a client may send this server in MB. 0 uses the built-in limit.
 Maximum number of milliseconds the clock is allowed to drift before the client snaps its clock to the server's.
 Maximum queries per second to respond to from a single IP address.
 Maximum queries per second to respond to from anywhere.
@@ -5660,6 +5675,8 @@ Multiply specified convar value.
 Music
 Music volume
 Must have smoothing selection active\n
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv119__foreign_exceptionE
 N17CAudioSourceCache15SearchPathCacheE
 N17CAudioSourceVoice14CWaveDataVoiceE
 N4vgui10CheckImageE
@@ -5778,9 +5795,10 @@ NET_StringCmd::ReadFromBuffer
 NET_Tick
 NET_Tick::ReadFromBuffer
 NEW DSP NODE: size:(%.0f,%.0f) height:(%.0f) dif %.4f : refl %.4f : cobj: %.0f : sky %.0f \n
-NK?H
+NK?UUUUUU
 NOTIFY
 NPCs
+NSt3_V214error_categoryE
 NULL
 NULL ISteamGameServer in ConnectClient. Steam authentication may fail.\n
 NULL m_pSfx
@@ -5793,7 +5811,6 @@ NV_NULL
 NV_RAWZ
 Name %s is already registered as console command\n
 NameEntry
-Need to rebuild map to get bumped lighting on material %s\n
 Net message exceeds max size (%u / %u)\n
 Net message uncompressed size exceeds max size (%u / compressed %u / uncompressed %u)\n
 Net status for host %s:\n
@@ -5873,6 +5890,7 @@ Not using save-in-memory path!\n
 Not writing any more minidumps for this tick.\n
 Note: Waiting for the next changelevel to apply the current value.\n
 Note: should use "addip" instead of "banip".\n
+Nov 21 2026
 Null client pointer in ClientDropped!\n
 Num Lock
 Num Lock Toggle
@@ -5906,7 +5924,6 @@ Obtained XMS handle %u
 Occl %.2f (%d/%d)\n
 Occlusion Tool
 OcclusionSystem.cpp
-Oct 14 2026
 Offloads a bit of decal rendering setup work to the material system queue when enabled.
 OnCancel
 OnChangeChild
@@ -5943,8 +5960,6 @@ OpenButton
 OpenColumnChoiceMenu
 OpenContextMenu
 OpenGL
-OpenInExplorer
-OpenInExplorerButton
 Opened sv_lan port %d\n
 Opened temporary file %s
 Opens initial menu screen and loads the background bsp, but only if no other level is being loaded, and we're not in developer mode.
@@ -6036,6 +6051,7 @@ PgUp
 PinCorner
 PinnedCornerOffsetX
 PinnedCornerOffsetY
+PlaneList: bad model
 Plat_BeginWatchdogTimer
 Plat_DebugString
 Plat_EndWatchdogTimer
@@ -6273,6 +6289,7 @@ Received MM_ClientInfo with MMSTATE_INITIAL\n
 Received a join request\n
 Received connection rejection that didn't match my challenge, ignoring.\n
 Received delta packet entities while spawing!\n
+Received empty fragment transfer from %s\n
 Received fragment chunk out of bounds: %i+%i>%i from %s\n
 Received fragments: start %i, num %i\n
 Received malformed data on RCON connection, disconnecting\n
@@ -6314,6 +6331,8 @@ ReduceFillRate
 Refresh
 Refreshing map list...\n
 Register Response
+Registry
+Rejecting %u byte fragment transfer (uncompressed %u) from %s, max %u (see sv_maxclienttransfer).\n
 Relative name %s doesn't begin with leading 'sound' directory?\n
 Relative pathnames are not allowed.\n
 Relay "%s", connect to %s\n
@@ -6328,6 +6347,7 @@ Reload sentences.txt file
 Reload the most recent saved game (add setpos to jump to current view position on reload).
 ReloadAllMaterials
 ReloadLocalization
+ReloadMaterialsOnMapChange
 Remaining
 Remote VProf finished!\n
 Remote VProf started!\n
@@ -6972,6 +6992,7 @@ Socket connection failed (%s)\n
 Socket ioctl(FIONBIO) failed (%s)\n
 Socket listen failed (%s)\n
 Socket unable to create socket (%s)\n
+Software\Valve\%s
 Software\Valve\%s\%s\Settings
 Software\Valve\%s\Settings
 Software\Valve\Steam
@@ -7052,6 +7073,22 @@ Spline Origin
 Split packet too large! %d bytes from %s\n
 Spot
 Spraypoint logo decal.
+St10bad_typeid
+St11logic_error
+St11range_error
+St12domain_error
+St12length_error
+St12out_of_range
+St12system_error
+St13bad_exception
+St13runtime_error
+St14overflow_error
+St15underflow_error
+St16invalid_argument
+St20bad_array_new_length
+St8bad_cast
+St9bad_alloc
+St9exception
 Start Of Frame 0x%02x: width=%u, height=%u, components=%d
 Start Of Scan: %d components
 Start of Image
@@ -7319,6 +7356,7 @@ Token Table Save/Restore overflow!
 ToleranceSlider
 Too many color components: %d, max %d
 Too many faces with the same material in scene!\n
+Too many players!\n
 Too many proxies for datatable %s.
 Too many vertex format changes in frame, whole world not rendered\n
 Too much menu data (4096 bytes max)\n
@@ -7417,7 +7455,6 @@ Unable to allocate %i bytes for bug description\n
 Unable to allocate %i bytes for image\n
 Unable to bind a key for command "%s" after %i attempt(s).\n
 Unable to change level!\n
-Unable to connect to remote client (%s)\n
 Unable to connect to remote server (%s)\n
 Unable to create socket (%s)\n
 Unable to determine where to set bug parameter '%s', ignoring...\n
@@ -7454,7 +7491,6 @@ Unable to resolve rcon address %s\n
 Unable to see '%s', check permissions and network connectivity\n
 Unable to take PFM screenshots if HDR isn't enabled!\n
 Unable to unload plugin "%s", not found\n
-Unable to upload saved game and screenshot to bug repository!\n
 Unable to verify map %s
 Unaccounted
 Unbind a key on the Mac only.
@@ -7654,7 +7690,7 @@ VPanel
 VPhysics031
 VPhysicsCollision007
 VPhysicsDebugOverlay001
-VProcessUtils001
+VPhysicsSurfaceProps001
 VProf
 VProf (%s) --  %d frames sampled
 VProf cache miss disabled.\n
@@ -7876,7 +7912,7 @@ Wrote '%s':  %s (%dx%d) compresssed (quality %i) to %s\n
 Wrote partial config file "%s" out, to write full file use host_writeconfig "%s" full\n
 XSessionCreate failed with error %d\n
 XboxSystemInterface001
-Y@skybox/%s_dx80%s
+Y@skybox/%s%s
 YellowBlueSlider
 You have been kicked and banned %s by the server.\n
 You have changed your name recently, and must wait %i seconds.\n
@@ -8017,20 +8053,17 @@ _Host_RunFrame_Server_Async
 _Host_RunFrame_Sound
 _Host_RunFrame_Upto_MarkFrame
 _IMaterialProxy003
+_ITM_RU1
+_ITM_RU8
+_ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
+_ITM_memcpyRnWt
+_ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _LPT_%s_%d
 _ST_%s_%d
 _SpewInfo
 _SpewMessage
-_ZGVbN2v_sin
-_ZGVbN2v_sin@GLIBC_2.22
-_ZGVbN2vv_pow
-_ZGVbN2vv_pow@GLIBC_2.22
-_ZGVbN4v_sinf
-_ZGVbN4v_sinf@GLIBC_2.22
-_ZGVbN4vv_powf
-_ZGVbN4vv_powf@GLIBC_2.22
 __ColorDepthWrite00
 __ColorDepthWrite01
 __ColorDepthWrite10
@@ -8061,6 +8094,7 @@ __cxa_allocate_exception
 __cxa_atexit
 __cxa_atexit@GLIBC_2.2.5
 __cxa_begin_catch
+__cxa_call_terminate
 __cxa_call_unexpected
 __cxa_end_catch
 __cxa_finalize
@@ -8070,11 +8104,8 @@ __cxa_guard_abort
 __cxa_guard_acquire
 __cxa_guard_release
 __cxa_pure_virtual
+__cxa_rethrow
 __cxa_throw
-__cxa_throw_bad_array_new_length
-__cxa_throw_bad_array_new_length@CXXABI_1.3.8
-__dynamic_cast
-__dynamic_cast@CXXABI_1.3
 __errno_location
 __errno_location@GLIBC_2.2.5
 __font_page_%d.tga
@@ -8156,7 +8187,13 @@ _setjmp
 _setjmp@GLIBC_2.2.5
 _smooth
 _temp_mapcycle.txt
-`@Failed to find sample rate creating cache data for MP3, cache will be invalid [ %s ]\n
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
+_txnal_cow_string_D1(void*)
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_c_str(void const*)
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
+_txnal_sso_string_c_str(void const*)
 a\v6C
 aaquality: %d\n
 aasamples: %d\n
@@ -8234,6 +8271,7 @@ attributes
 audio/private/audio_stream.cpp
 audio/private/snd_dev_common.cpp
 audio/private/snd_dma.cpp
+audio/private/snd_mix.cpp
 audio/private/snd_mp3_source.h
 audio/private/snd_wave_data.cpp
 audio/private/snd_wave_mixer.cpp
@@ -8264,7 +8302,6 @@ bad pack level
 badpacket%03i.dat
 banid
 banid 0 %s\r\n
-banid:  Couldn't resolve uniqueid "%s".\n
 banid:  couldn't find userid %d\n
 banid:  user filter list is full\n
 banip
@@ -8273,6 +8310,23 @@ base_filename
 baseclient.cpp
 baseclientstate.cpp
 baseserver.cpp
+basic_string: construction from null is not valid
+basic_string::_M_create
+basic_string::_M_replace
+basic_string::_M_replace_aux
+basic_string::_S_construct null not valid
+basic_string::_S_create
+basic_string::append
+basic_string::assign
+basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
+basic_string::basic_string
+basic_string::compare
+basic_string::copy
+basic_string::erase
+basic_string::insert
+basic_string::replace
+basic_string::resize
+basic_string::substr
 bench_end
 bench_start %s: invalid path.\n
 benchframe
@@ -8295,6 +8349,8 @@ bind@GLIBC_2.2.5
 blinkFgColor_override
 blue
 bool
+bool __gnu_cxx::__is_null_pointer<char const>(char const*)
+bool __gnu_cxx::__is_null_pointer<char>(char*)
 bool_array
 bounce: %d/%d sample: %d/%d\n
 box x1 y1 z1 x2 y2 z2\n
@@ -8373,6 +8429,7 @@ chdir
 chdir@GLIBC_2.2.5
 cheat_codes
 check "sv_logfile", "sv_logecho", and "logaddress_list"
+checkProps
 check_crc
 check_hash
 checksum
@@ -8606,6 +8663,7 @@ debugsystemui
 debugsystemui 0
 decallist_t
 decalprecache
+default
 defaultBgColor_override
 defaultFgColor_override
 defaultPanel
@@ -8798,7 +8856,6 @@ entity_rotate_incremental %s %f %f %f %f %f %f
 entity_set_keyvalue %s %f %f %f "%s" "%s"
 envmap
 episodic
-error loading %s\n
 es_419
 es_ES
 examples:\n
@@ -8839,7 +8896,6 @@ fdopen@GLIBC_2.2.5
 ferror
 ferror@GLIBC_2.2.5
 fff?fff?
-fff?fff?fff?fff?fff?fff?
 fffff
 fflush
 fflush@GLIBC_2.2.5
@@ -8869,6 +8925,10 @@ flashlight shadows,
 float( %f )
 float_array
 flush_locked
+fmaxf
+fmaxf@GLIBC_2.2.5
+fminf
+fminf@GLIBC_2.2.5
 fmt 
 fog_color %i %i %i\n
 fog_colorskybox %i %i %i\n
@@ -8961,7 +9021,6 @@ fwrite
 fwrite@GLIBC_2.2.5
 fxtime
 fxtime "%.3f"\n
-g@%5.1f ms
 g_AsyncNotifyTextMutex
 g_ClientDLL->Init
 g_ClockSpeed
@@ -9021,10 +9080,13 @@ gameui_preventescapetoshow
 gameui_xbox
 gc^A
 generates a fake spike
+generic
 genericprecache
 german
 getcwd
 getcwd@GLIBC_2.2.5
+getentropy
+getentropy@GLIBC_2.25
 getenv
 getenv@GLIBC_2.2.5
 gethostbyname
@@ -9039,7 +9101,6 @@ getsockname
 getsockname@GLIBC_2.2.5
 getsockopt
 getsockopt@GLIBC_2.2.5
-gl_lightmap.cpp
 gl_rsurf.cpp
 gl_warp.cpp
 gotoframe
@@ -9054,6 +9115,7 @@ gzopen64@ZLIB_1.2.3.3
 gzwrite
 h264
 h264 is not supported on this platform!  Use "webm".\n
+hardware
 hardware bones: %d\n
 has invalid path or extension!
 has shadow lod: %s\n
@@ -9237,11 +9299,9 @@ libc.so.6
 libcurl-gnutls.so.4
 libdl.so.2
 libm.so.6
-libmvec.so.1
 libopenal.so.1
 libpthread.so.0
 library
-libstdc++.so.6
 libsteam_api.so
 libtier0.so
 libvstdlib.so
@@ -9476,7 +9536,6 @@ matchmaking
 matchmakingport
 materials->CacheUsedMaterials()
 materials->FindTexture( '%s' ) failed.\n
-materials/
 materials/%s
 materials/%s.vmt
 materials/%s.vtf
@@ -9526,6 +9585,8 @@ mem_test_each_frame
 mem_test_every_n_seconds
 mem_vcollide
 memallocfail? = %u\nActive: %s\nSpawnCount %d MapLoad Count %d\nError count %d, end demo %d, abort count %d\n
+memchr
+memchr@GLIBC_2.2.5
 memcmp
 memcmp@GLIBC_2.2.5
 memcpy
@@ -9609,6 +9670,8 @@ mp_disable_autokick
 mp_disable_autokick %d\n
 mp_restartgame
 mp_restartgame_immediate
+mt19937
+multiplayer_only
 multvar
 multvar without a varname\n
 musicsave_t
@@ -9736,7 +9799,6 @@ number of samples to draw in the budget history window.  The lower the better as
 number of world lights to use per vertex
 numframes,
 nvfx
-o@DSP: Warning, failed to allocate mod delay.\n
 okOP
 oldtall
 oldwide
@@ -9846,6 +9908,7 @@ position %s\n
 positionImage
 postdeathrecordtime
 pow@GLIBC_2.29
+powf
 powf@GLIBC_2.27
 preloadDataSize
 prepend
@@ -9877,6 +9940,10 @@ proportional_ypos
 psurface NULL in R_DecalCreate!\n
 pt_BR
 pt_PT
+pthread_cond_broadcast
+pthread_cond_broadcast@GLIBC_2.3.2
+pthread_cond_wait
+pthread_cond_wait@GLIBC_2.3.2
 pthread_mutex_destroy
 pthread_mutex_destroy@GLIBC_2.2.5
 pthread_mutex_init
@@ -10069,12 +10136,21 @@ r_worldlightmin
 r_worldlights
 raise
 raise@GLIBC_2.2.5
+random_device could not be read
+random_device: getentropy failed
+random_device: rdrand failed
+random_device: rdseed failed
+random_device::random_device(const std::string&): device not available
+random_device::random_device(const std::string&): unsupported token
 rangeMax
 rangeMin
 rcon from "%s": %s\n
 rcon from "unknown": %s\n
 rcon_address
 rcon_password
+rdrand
+rdrnd
+rdseed
 readdir64
 readdir64@GLIBC_2.2.5
 reading
@@ -10099,6 +10175,7 @@ reflect entities,
 reflectivity
 refresh_gameui_dialogs_modeset\n
 refresh_options_dialog
+registry.kv
 relative
 reliable
 reload the material under the crosshair
@@ -10151,7 +10228,6 @@ resource/icon_folder
 resource/icon_folder_selected
 resource/icon_folderup
 resource/icon_newfolder
-resource/icon_play_once
 resource/replay_%language%.txt
 resource/serverevents.res
 resource/youtube_%language%.txt
@@ -10201,7 +10277,6 @@ s_CommandBufferMutex
 s_MsgData.entityMsg.m_DataOut
 s_MsgData.userMsg.m_DataOut
 s_NetChannels
-s_OverlayMutex
 s_PendingSockets
 sample_lighting usage: lightprobe <base file name> [cubemap dimension]\n
 sampleposition
@@ -10369,7 +10444,7 @@ skiptotime
 skiptotime "%.3f"\n
 skyName
 sky_urb01
-skybox/%s%s
+skybox/%s_dx80%s
 smallcheckimage
 smooth angles
 smooth edges
@@ -10542,10 +10617,11 @@ stay_armed_on_click
 stayout
 stayout "%i"\n
 stayselectedonclick
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::resize(unsigned long, char)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::resize(unsigned long, char)@GLIBCXX_3.4.21
-std::terminate()
-std::terminate()@GLIBCXX_3.4
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::bad_typeid
 stderr
 stderr@GLIBC_2.2.5
 stdin
@@ -10594,9 +10670,12 @@ strdup
 strdup@GLIBC_2.2.5
 strerror
 strerror@GLIBC_2.2.5
+strerror_r
+strerror_r@GLIBC_2.2.5
 strftime
 strftime@GLIBC_2.2.5
 string fieldName, int xpos, int ypos, int wide, int tall, bool visible, bool enabled, int tabPosition, corner pinCorner, autoresize autoResize, string tooltiptext
+string::string
 string_array
 strlen
 strlen@GLIBC_2.2.5
@@ -10703,6 +10782,7 @@ sv_max_dropped_packets_to_process
 sv_max_queries_sec
 sv_max_queries_sec_global
 sv_max_queries_window
+sv_maxclienttransfer
 sv_maxcmdrate
 sv_maxrate
 sv_maxreplay
@@ -10751,7 +10831,6 @@ sv_restrict_aspect_ratio_fov
 sv_sendtables
 sv_setsteamaccount
 sv_shutdown
-sv_shutdown canceled.\n
 sv_shutdown command received.\n
 sv_shutdown not pending.\n
 sv_shutdown only works on dedicated servers.\n
@@ -10887,7 +10966,6 @@ titlebardisabledfgcolor_override
 titlebarfgcolor_override
 titletextinsetX
 titletextinsetY
-tmessage::TextMessageParse : messageCount>=MAX_MESSAGES
 toggle
 toggle keyframe
 toggle look target
@@ -10916,6 +10994,8 @@ towupper@GLIBC_2.2.5
 tr_TR
 track
 track "%i"\n
+transaction clone for operator delete(void*)
+transaction clone for operator new[](unsigned long)
 transition_time
 tried to DLL_FadeClientVolume a non-client\n
 tried to sprint to a non-client\n
@@ -10956,6 +11036,10 @@ tv_timeout
 tv_transmitall
 tvrelay
 typeinfo for CThread
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
 tzset
 tzset@GLIBC_2.2.5
 u64( %lld = 0x%llX )
@@ -11177,6 +11261,8 @@ vswprintf
 vswprintf@GLIBC_2.2.5
 vsync,
 vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
 vtex failed to compile cubemap!\n
@@ -11223,7 +11309,6 @@ writeip
 writing
 www.
 xV42?
-xdg-open "%s" &
 xdg-open '%s' &
 xload
 xload <savename>\n

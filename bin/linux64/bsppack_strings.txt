@@ -1,19 +1,33 @@
+  what():  
  ( def. "%s" )
  ReadToken overflow
+ [clone 
+ _Complex
+ _Imaginary
+ __vector(
  archive
  bytes
  cheat
+ class
  client
  clientcmd_can_execute
+ const
  failed to dlopen %s error=%s\n
+ for 
  game
  max. %f
  min. %f
+ noexcept
  notconnected
  notify
  replicated
+ requires 
+ restrict
  server_can_execute
  singleplayer
+ throw
+ transaction_safe
+ volatile
 !!! WARNING: Can't swap the physcollide lump!\n
 "%s" = "%s"
 #base
@@ -60,6 +74,7 @@ $include
 %s/%s
 %s/bin/linux64/%s
 %s/linux64
+%s: __pos (which is %zu) > this->size() (which is %zu)
 %s_l_%d.lmp
 %s_tempcontent
 &AElig;
@@ -167,7 +182,14 @@ $include
 &yuml;
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
+(anonymous namespace)
 ** NOTE: The real value is %.3f but the server has temporarily restricted it to %.3f **\n
+*N12_GLOBAL__N_121system_error_categoryE
+*N12_GLOBAL__N_122generic_error_categoryE
+++CCUNG
+++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGN9__gnu_cxx20recursive_init_errorE
+++CCUNGstd::exception
 ,%03d
 ------- entity %p -------\n
 ---------------
@@ -177,6 +199,7 @@ $include
 -gamepadui
 -insert_search_path
 -nogamepadui
+-rubikon
 -tempcontent
 -vproject
 .360
@@ -186,6 +209,9 @@ $include
 .vtf
 /../platform
 /content/
+/dev/random
+/dev/urandom
+0123456789
 0123456789ABCDEF
 0123456789abcdef
 0x%016llX
@@ -218,11 +244,13 @@ $include
 8CBSPPack
 8CFmtStrNILi256ELb0EE
 8IBSPPack
+;LZMA Decompression failed (%i)\n
 </script>
 << NULL >>\n
 <img src="
 <pre>
 ><a href=
+?333333
 Adding directory to pakfile [ %s ]\n
 Adding file to pakfile [ %s ]\n
 Alien Swarm
@@ -260,8 +288,6 @@ CThreadSyncObject::~CThreadSyncObject()
 CUtlLinkedList overflow! (exhausted index range)\n
 CUtlLinkedList overflow! (exhausted memory allocator)\n
 CUtlRBTree overflow!\n
-CXXABI_1.3
-CXXABI_1.3.8
 Calling AddBufferToZip with unknown compression type\n
 Can't find steam app user info.
 Can't load %s.
@@ -321,14 +347,17 @@ FmtStrVSNPrintf truncated to %d without QUIET_TRUNCATION specified!\n
 Fullness
 GAME
 GAMEBIN
-GCC: (SteamRT 10.3.0-3+steamrt3.1+bsrt3.1) 10.3.0
+GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
+GLIBCXX_TUNABLES
 GLIBC_2.11
 GLIBC_2.14
+GLIBC_2.17
 GLIBC_2.2.5
-GLIBC_2.22
+GLIBC_2.25
 GLIBC_2.27
 GLIBC_2.29
 GLIBC_2.3
+GLIBC_2.3.2
 GLIBC_2.7
 GetCPUInformation
 HDR ambient table
@@ -345,6 +374,7 @@ HushAsserts
 IBSPPACK004
 If set, attempt to keep a persistent buffer for the LZMA decoder dictionary. This avoids re-allocating a ~16-64meg buffer for each operation, at the expensive of keeping extra memory around when it is not in-use.
 InputSystemVersion001
+JArray
 KeyValues Error: %s in file %s\n
 KeyValues.cpp
 KeyValues::LoadFromBuffer(%s%s%s): Begin
@@ -421,7 +451,6 @@ LUMP_WATEROVERLAYS
 LUMP_WORLDLIGHTS
 LUMP_WORLDLIGHTS_HDR
 LUMP_XZIPPAKFILE
-LZMA Decompression failed (%i)\n
 LZMA Decompression overflowed (%zu > %zu)\n
 LZMA Decompression overflowed (read: %zu > %zu or write: %zu > %zu)\n
 LZMA encode failed (%i)\n
@@ -439,12 +468,18 @@ Matched '%s' -> '%s'\n
 MaterialSystemHardwareConfig012
 Memory / Maxmem
 MeshHeader_t
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv119__foreign_exceptionE
+N9__gnu_cxx24__concurrence_lock_errorE
+N9__gnu_cxx26__concurrence_unlock_errorE
+NSt3_V214error_categoryE
 NULL
 NetworkSystemVersion001
 No such file
 Object names
 Objects/Maxobjs
 Opening ZIP file with unsupported compression type\n
+P?VMaterialSystem082
 PLATFORM
 ParseEntity: EOF without closing brace
 ParseEntity: { not found
@@ -467,7 +502,6 @@ RecursiveLoadFromBuffer:  recursion overflow
 RepackBSP given invalid input data\n
 Repacking BSP: Created '%s' in lump pak\n
 SDK_EXEC_DIR
-SIZE DANGER!\n
 SIZE OVERFLOW!!!\n
 SearchPaths
 Setup file '%s' doesn't exist in subdirectory '%s'.\nCheck your -game parameter or VCONFIG setting.
@@ -477,6 +511,22 @@ Source SDK Base 2006
 Source SDK Base 2007
 Source SDK Base 2013 Multiplayer
 Source SDK Base 2013 Singleplayer
+St10bad_typeid
+St11logic_error
+St11range_error
+St12domain_error
+St12length_error
+St12out_of_range
+St12system_error
+St13bad_exception
+St13runtime_error
+St14overflow_error
+St15underflow_error
+St16invalid_argument
+St20bad_array_new_length
+St8bad_cast
+St9bad_alloc
+St9exception
 Static Prop '%s' failed to resolve actual model in '%s'.\n
 StaticPropDictLump_t
 StaticPropLeafLump_t
@@ -490,6 +540,8 @@ SteamTenFoot
 SteamUserPassphrase
 Stripping LDR: %s\n
 Swapping %s\n
+TLS init function for 
+TLS wrapper function for 
 Team Fortress 2
 ThreadGetCurrentId
 ThreadInMainThread
@@ -515,13 +567,13 @@ Unsupported compression type in Zip file: %u\n
 VBAllocTracker001
 VBSP
 VERY FULL!\n
-VEngineCvar004
 VFileSystem022
 VMDLLIB001
 VP4002
 VPhysicsCollision007
 VProcessUtils001
 VProject
+VTT for 
 V_AppendSlash: ran out of space on %s.
 V_MakeAbsolutePath: _getcwd failed.
 V_MakeAbsolutePath: tried to ".." past the root.
@@ -543,21 +595,24 @@ Zip: Failed decompressing LZMA data\n
 ZipFile: LZMA compression failed\n
 [/code]
 [/list]
+[abi:
 [code]
+[friend]
 [img]
 [list]
 [url=
 \f@%s%s
 \nLevel flags = %x\n
 \t(%zu) comparing %s with %s\n
+_Float
+_GLOBAL_
+_ITM_RU1
+_ITM_RU8
+_ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
+_ITM_memcpyRnWt
+_ITM_memcpyRtWn
 _ITM_registerTMCloneTable
-_ZGVbN2v_sin
-_ZGVbN2v_sin@GLIBC_2.22
-_ZGVbN2vv_pow
-_ZGVbN2vv_pow@GLIBC_2.22
-_ZGVbN4vv_powf
-_ZGVbN4vv_powf@GLIBC_2.22
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
 __ctype_tolower_loc
@@ -566,33 +621,25 @@ __ctype_toupper_loc
 __ctype_toupper_loc@GLIBC_2.3
 __cxa_atexit
 __cxa_atexit@GLIBC_2.2.5
-__cxa_call_unexpected
-__cxa_call_unexpected@CXXABI_1.3
 __cxa_finalize
 __cxa_finalize@GLIBC_2.2.5
-__cxa_guard_abort
-__cxa_guard_abort@CXXABI_1.3
-__cxa_guard_acquire
-__cxa_guard_acquire@CXXABI_1.3
-__cxa_guard_release
-__cxa_guard_release@CXXABI_1.3
 __cxa_pure_virtual
-__cxa_pure_virtual@CXXABI_1.3
-__cxa_throw_bad_array_new_length
-__cxa_throw_bad_array_new_length@CXXABI_1.3.8
-__dynamic_cast
-__dynamic_cast@CXXABI_1.3
 __errno_location
 __errno_location@GLIBC_2.2.5
+__float128
 __gmon_start__
-__gxx_personality_v0
-__gxx_personality_v0@CXXABI_1.3
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+__int128
 __isoc99_sscanf
 __isoc99_sscanf@GLIBC_2.7
 __lxstat64@GLIBC_2.2.5
 __lxstat@GLIBC_2.2.5
 __pthread_key_create
 __pthread_key_create@GLIBC_2.2.5
+__test_and_acquire(long*)
+__tls_get_addr
+__tls_get_addr@GLIBC_2.3
 __wrap___lxstat
 __wrap___lxstat64
 __wrap___xstat
@@ -630,12 +677,22 @@ _dir.vpk
 _english
 _fstXXXXXX.tmp
 _hdr
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
+_txnal_cow_string_D1(void*)
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_c_str(void const*)
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
+_txnal_sso_string_c_str(void const*)
 aFaces
+abort
 abort@GLIBC_2.2.5
 access
 access@GLIBC_2.2.5
 acosf
 acosf@GLIBC_2.2.5
+alignof 
+allocator
 alphasort64
 alphasort64@GLIBC_2.2.5
 ambientSampleCount
@@ -646,15 +703,48 @@ atan2f
 atan2f@GLIBC_2.2.5
 atanf
 atanf@GLIBC_2.2.5
+auto
+auto:
 axisMapSize
 bOnlyUseDirectoryName=1 and pDirectoryName=NULL.
+basic_iostream
+basic_istream
+basic_ostream
+basic_string
+basic_string: construction from null is not valid
+basic_string::_M_create
+basic_string::_M_replace
+basic_string::_M_replace_aux
+basic_string::_S_construct null not valid
+basic_string::_S_create
+basic_string::append
+basic_string::assign
+basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
+basic_string::basic_string
+basic_string::compare
+basic_string::copy
+basic_string::erase
+basic_string::insert
+basic_string::replace
+basic_string::resize
+basic_string::substr
+basic_string_view::substr
 bevel
 bin/linux64
+bool
+bool __gnu_cxx::__is_null_pointer<char const>(char const*)
+bool __gnu_cxx::__is_null_pointer<char>(char*)
+boolean
 brushsides
+byte
 can't open %s\n
 cbrtf
 cbrtf@GLIBC_2.2.5
 centralDirectorySize
+char
+char16_t
+char32_t
+char8_t
 chdir
 chdir@GLIBC_2.2.5
 children
@@ -662,12 +752,16 @@ chmod@GLIBC_2.2.5
 closedir
 closedir@GLIBC_2.2.5
 cluster
+co_await 
 commentLength
 compressionMethod
 config\SteamAppData.vdf
+const_cast
 constant_attn
+construction vtable for 
 contents
 cos@GLIBC_2.2.5
+covariant return thunk to 
 crc32
 cube
 cubemapsamples
@@ -678,7 +772,16 @@ dbrush_t
 dbrushside_t
 dcubemapsample_t
 ddispinfo_t
+decimal128
+decimal32
+decimal64
+decltype (
+decltype(auto)
+decltype(nullptr)
 dedge_t
+default
+delete 
+delete[] 
 detail props
 developer
 dface_t
@@ -713,6 +816,7 @@ dmodel_t
 dnode_t
 doccluderdata_t
 doccluderpolydata_t
+double
 doverlay_t
 doverlayfade_t
 download
@@ -726,12 +830,14 @@ dtexdata_t
 dvertex_t
 dwateroverlay_t
 dworldlight_t
+dynamic_cast
 entdata
 executable_path
 exp@GLIBC_2.29
 exponent
 externalFileAttribs
 extraFieldLength
+false
 false 
 fclose
 fclose@GLIBC_2.2.5
@@ -759,11 +865,16 @@ firstvertexindex
 flFadeDistMaxSq
 flFadeDistMinSq
 flags
+float
 float( %f )
 fopen64@GLIBC_2.2.5
 fopen@GLIBC_2.2.5
 fprintf
 fprintf@GLIBC_2.2.5
+fputc
+fputc@GLIBC_2.2.5
+fputs
+fputs@GLIBC_2.2.5
 fread
 fread@GLIBC_2.2.5
 free
@@ -787,13 +898,22 @@ game_lv
 game_write
 gamebin
 gameinfo.txt
+generic
 getcwd
 getcwd@GLIBC_2.2.5
-getenv
+getentropy
+getentropy@GLIBC_2.25
 getenv@GLIBC_2.2.5
+glibcxx.eh_pool
+global constructors keyed to 
+global destructors keyed to 
+guard variable for 
+half
 hammerfaceid
+hardware
 hdr faces
 headnode
+hidden alias for 
 iconv
 iconv@GLIBC_2.2.5
 iconv_close
@@ -803,9 +923,12 @@ iconv_open@GLIBC_2.2.5
 ident
 image not found
 indexCount
+initializer for module 
 int( %d = 0x%X )
 intensity
 internalFileAttribs
+ioctl
+ioctl@GLIBC_2.2.5
 isalnum
 isalnum@GLIBC_2.2.5
 isalpha
@@ -814,6 +937,8 @@ isspace
 isspace@GLIBC_2.2.5
 iswspace
 iswspace@GLIBC_2.2.5
+java Class for 
+java resource 
 keydataSize
 lastModifiedDate
 lastModifiedTime
@@ -825,9 +950,7 @@ leaves
 libc.so.6
 libdl.so.2
 libm.so.6
-libmvec.so.1
 libpthread.so.0
-libstdc++.so.6
 libtier0.so
 libvstdlib.so
 lightmapVecsLuxelsPerWorldUnits
@@ -836,6 +959,9 @@ linear_attn
 localtime@GLIBC_2.2.5
 logf
 logf@GLIBC_2.27
+long
+long double
+long long
 lumpCount
 lumps
 lzma_persistent_buffer
@@ -921,6 +1047,8 @@ materials/detail/detailsprites.vmt
 maxs
 mbstowcs
 mbstowcs@GLIBC_2.2.5
+memchr
+memchr@GLIBC_2.2.5
 memcmp
 memcmp@GLIBC_2.2.5
 memcpy
@@ -944,11 +1072,17 @@ modelType
 models
 moppSize
 mount@GLIBC_2.2.5
+mt19937
 nCentralDirectoryEntries_ThisDisk
 nCentralDirectoryEntries_Total
 nTexInfo
 nameStringTableID
+new 
+new[]
 nodes
+noexcept
+non-transaction clone for 
+non-virtual thunk to 
 normal
 numDisplacements
 num_entities == MAX_MAP_ENTITIES
@@ -960,13 +1094,17 @@ numfaces
 numleafbrushes
 numleaffaces
 numsides
-o@VMaterialSystem082
+obj_count
+obj_size
 occluder polygons
 occluder vert ind
 occluders
 odd size for LUMP_LEAFS\n
 onNode
 opendir@GLIBC_2.2.5
+operator
+operator 
+operator"" 
 origFace
 origfaces
 origin
@@ -982,7 +1120,12 @@ point
 polycount
 pow@GLIBC_2.29
 power
+powf
 powf@GLIBC_2.27
+pthread_cond_broadcast
+pthread_cond_broadcast@GLIBC_2.3.2
+pthread_cond_wait
+pthread_cond_wait@GLIBC_2.3.2
 pthread_mutex_destroy
 pthread_mutex_destroy@GLIBC_2.2.5
 pthread_mutex_init
@@ -1004,11 +1147,24 @@ quadratic_attn
 radius
 rand
 rand@GLIBC_2.2.5
+random_device could not be read
+random_device: getentropy failed
+random_device: rdrand failed
+random_device: rdseed failed
+random_device::random_device(const std::string&): device not available
+random_device::random_device(const std::string&): unsupported token
+rdrand
+rdrnd
+rdseed
 readdir64
 readdir64@GLIBC_2.2.5
 readme.txt
+realloc
+realloc@GLIBC_2.2.5
 realpath@GLIBC_2.3
+reference temporary #
 reflectivity
+reinterpret_cast
 relativeOffsetOfLocalHeader
 rename@GLIBC_2.2.5
 resource
@@ -1019,13 +1175,19 @@ scandir@GLIBC_2.2.5
 script
 script file exceeded MAX_INCLUDES
 scripts
+secure_getenv
+secure_getenv@GLIBC_2.17
 setenv
 setenv@GLIBC_2.2.5
+short
 signature
+signed char
 sin@GLIBC_2.2.5
 sincosf
 sincosf@GLIBC_2.2.5
 size
+sizeof 
+sizeof...
 smoothingAngle
 smoothingGroups
 solidCount
@@ -1035,6 +1197,23 @@ sprintf@GLIBC_2.2.5
 startOfCentralDirOffset
 startPosition
 static props
+static_cast
+std::allocator
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::bad_typeid
+std::basic_iostream<char, std::char_traits<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_string
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::bfloat16_t
+std::iostream
+std::istream
+std::ostream
+std::string
 stderr
 stderr@GLIBC_2.2.5
 steam.cfg
@@ -1058,14 +1237,20 @@ strdup
 strdup@GLIBC_2.2.5
 strerror
 strerror@GLIBC_2.2.5
+strerror_r
+strerror_r@GLIBC_2.2.5
 strftime
 strftime@GLIBC_2.2.5
+string literal
+string::string
 strlen
 strlen@GLIBC_2.2.5
 strncasecmp
 strncasecmp@GLIBC_2.2.5
 strncat
 strncat@GLIBC_2.2.5
+strncmp
+strncmp@GLIBC_2.2.5
 strncpy
 strncpy@GLIBC_2.2.5
 strpbrk
@@ -1095,12 +1280,24 @@ swapcollideheader_t
 swapcompactsurfaceheader_t
 swapmoppsurfaceheader_t
 symlink@GLIBC_2.2.5
+syscall
+syscall@GLIBC_2.2.5
+system
 temp
+template
+template parameter object for 
+terminate called after throwing an instance of '
+terminate called recursively\n
+terminate called without an active exception\n
 texdata
 texinfo
 texinfo_t
 texinfos
 textureVecsTexelsPerWorldUnits
+this
+this 
+throw
+throw 
 tolower
 tolower@GLIBC_2.2.5
 toupper
@@ -1109,13 +1306,37 @@ towlower
 towlower@GLIBC_2.2.5
 towupper
 towupper@GLIBC_2.2.5
+transaction clone for 
+transaction clone for operator delete(void*)
+transaction clone for operator new[](unsigned long)
 true
 type
+typeinfo fn for 
+typeinfo for 
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::recursive_init_error
+typeinfo name for 
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __gnu_cxx::recursive_init_error
+typename
 u64( %lld = 0x%llX )
 uncompressedSize
 unknown macro token "%s" in %s\n
 unknown variable token "%s" in %s\n
 unlink@GLIBC_2.2.5
+unsigned
+unsigned __int128
+unsigned char
+unsigned int
+unsigned long
+unsigned long long
+unsigned short
 utime@GLIBC_2.2.5
 utimes@GLIBC_2.2.5
 vecBasisNormal
@@ -1129,23 +1350,30 @@ vertexcount
 vertexes
 view_height
 view_width
+virtual thunk to 
 visdata
-vphysics.dll
+void
+vphysics.so
 vphysicsID
+vphysics_rubikon.so
 vsnprintf
 vsnprintf@GLIBC_2.2.5
 vswprintf
 vswprintf@GLIBC_2.2.5
+vtable for 
 vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__class_type_info@CXXABI_1.3
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
 vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__si_class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__vmi_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info@CXXABI_1.3
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+vtable for __gnu_cxx::recursive_init_error
 warning: Vis decompression overrun\n
 waterindices
 waterstrips
 waterverts
+wchar_t
 wcslen
 wcslen@GLIBC_2.2.5
 wcsncat
@@ -1158,7 +1386,12 @@ wcstoll
 wcstoll@GLIBC_2.2.5
 wcstombs
 wcstombs@GLIBC_2.2.5
+zD<br>VEngineCvar004
 zip file is zero length!\n
+{default arg#
+{lambda
+{parm#
+{unnamed type#
 |all_source_engine_paths|
 |appid_
 |gameinfo_path|

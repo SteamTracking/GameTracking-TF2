@@ -1,4 +1,4 @@
-                Unknown
+        Unknown
  ( def. "%s" )
  ReadToken overflow
  archive
@@ -162,6 +162,8 @@ $X360
 (%zu) readdir failed to find '%s' in '%s'\n
 (Unknown)
 ** NOTE: The real value is %.3f but the server has temporarily restricted it to %.3f **\n
+++CCUNG
+++CCUNGstd::exception
 +map
 +mat_dxlevel
 +mat_hdr_level
@@ -196,9 +198,9 @@ $X360
 -nogamepadui
 -nomousegrab
 -nonqwerty
--nop4
 -norebuildaudio
 -reslistdir
+-rubikon
 -sleepatstartup
 -startmap
 -startstage
@@ -206,7 +208,6 @@ $X360
 -steam
 -tempcontent
 -textmode
--tools
 -vcrplayback
 -vcrplayback: can't open '%s' for reading.\n
 -vcrrecord
@@ -276,11 +277,8 @@ COLORCORRECTION_VERSION_1
 COM_TimestampedLog
 CREATION
 CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
-CUtlLinkedList overflow! (exhausted index range)\n
 CUtlLinkedList overflow! (exhausted memory allocator)\n
 CUtlRBTree overflow!\n
-CXXABI_1.3
-CXXABI_1.3.8
 Caches:  Setting command line:\n'%s'\n
 Can't find steam app user info.
 Can't load %s.
@@ -290,7 +288,6 @@ ConMsg(char const*, ...)
 ConVarRef %s doesn't point to an existing ConVar\n
 Could not find required OpenGL entry point '%s'! Either your video card is unsupported, or your OpenGL driver needs to be updated.\n
 Counter-Strike: Source
-CreateGameWindow failed
 CreateInterface
 DBG_PATHMATCH
 DESTRUCTION
@@ -315,11 +312,13 @@ FmtStrVSNPrintf truncated to %d without QUIET_TRUNCATION specified!\n
 GAME
 GAMEBIN
 GCC: (SteamRT 10.3.0-3+steamrt3.1+bsrt3.1) 10.3.0
+GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GLIBC_2.14
 GLIBC_2.2.5
 GLIBC_2.28
 GLIBC_2.29
 GLIBC_2.3
+GLIBC_2.3.2
 GLIBC_2.7
 GL_ATI_meminfo: %s\n
 GL_ATI_meminfo: Failed retrieving available GPU memory\n
@@ -366,6 +365,8 @@ Maplist file '%s' empty or missing!!!\n
 MatSystemSurface008
 Matched '%s' -> '%s'\n
 MaterialSystemHardwareConfig012
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv119__foreign_exceptionE
 NONE
 NULL
 NetworkSystemVersion001
@@ -455,6 +456,12 @@ Source SDK Base 2013 Multiplayer
 Source SDK Base 2013 Singleplayer
 SourceVirtualReality001
 SpewOutputFunc
+St10bad_typeid
+St13bad_exception
+St20bad_array_new_length
+St8bad_cast
+St9bad_alloc
+St9exception
 SteamAppId
 SteamAppUser
 SteamDeck
@@ -484,7 +491,6 @@ VCvarQuery001
 VDataCache003
 VDmeMakeFileUtils001
 VENGINE_LAUNCHER_API_VERSION004
-VEngineCvar004
 VFileSystem022
 VGUI_Input005
 VGUI_Localize005
@@ -531,6 +537,7 @@ __ctype_tolower_loc
 __ctype_tolower_loc@GLIBC_2.3
 __ctype_toupper_loc
 __ctype_toupper_loc@GLIBC_2.3
+__cxa_allocate_exception
 __cxa_atexit
 __cxa_atexit@GLIBC_2.2.5
 __cxa_call_unexpected
@@ -540,10 +547,7 @@ __cxa_guard_abort
 __cxa_guard_acquire
 __cxa_guard_release
 __cxa_pure_virtual
-__cxa_throw_bad_array_new_length
-__cxa_throw_bad_array_new_length@CXXABI_1.3.8
-__dynamic_cast
-__dynamic_cast@CXXABI_1.3
+__cxa_throw
 __errno_location
 __errno_location@GLIBC_2.2.5
 __gmon_start__
@@ -700,7 +704,6 @@ libc.so.6
 libdl.so.2
 libm.so.6
 libpthread.so.0
-libstdc++.so.6
 libsteam_api.so
 libtier0.so
 libtogl.so
@@ -731,6 +734,10 @@ models
 mount@GLIBC_2.2.5
 open(%s) failed\n
 opendir@GLIBC_2.2.5
+pthread_cond_broadcast
+pthread_cond_broadcast@GLIBC_2.3.2
+pthread_cond_wait
+pthread_cond_wait@GLIBC_2.3.2
 pthread_mutex_destroy
 pthread_mutex_destroy@GLIBC_2.2.5
 pthread_mutex_init
@@ -774,6 +781,11 @@ sleep
 sleep@GLIBC_2.2.5
 sound
 sourcevr.so
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::bad_typeid
 stderr
 stderr@GLIBC_2.2.5
 stdout
@@ -833,6 +845,10 @@ towlower@GLIBC_2.2.5
 towupper
 towupper@GLIBC_2.2.5
 true
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
 u64( %lld = 0x%llX )
 unlink@GLIBC_2.2.5
 utime@GLIBC_2.2.5
@@ -841,13 +857,15 @@ vgui2.so
 vguimatsurface.so
 video_services.so
 vphysics.so
+vphysics_rubikon.so
 vscript.so
 vsnprintf
 vsnprintf@GLIBC_2.2.5
-vstdlib.so
 vswprintf
 vswprintf@GLIBC_2.2.5
 vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
 wcslen
@@ -864,6 +882,7 @@ wcstombs
 wcstombs@GLIBC_2.2.5
 workdir
 xdg-open "%s"
+zD<br>VEngineCvar004
 |all_source_engine_paths|
 |appid_
 |gameinfo_path|

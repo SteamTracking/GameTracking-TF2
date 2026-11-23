@@ -1,18 +1,32 @@
+  what():  
  ( def. "%s" )
+ [clone 
+ _Complex
+ _Imaginary
+ __vector(
  archive
  bytes
  cheat
+ class
  client
  clientcmd_can_execute
+ const
  failed to dlopen %s error=%s\n
+ for 
  game
  max. %f
  min. %f
+ noexcept
  notconnected
  notify
  replicated
+ requires 
+ restrict
  server_can_execute
  singleplayer
+ throw
+ transaction_safe
+ volatile
 !bAlphaClip && IsX360() && !nColorDepth
 !params[info.m_nUnlit]->GetIntValue()
 "%s" = "%s"
@@ -498,6 +512,7 @@ $flashlighttextureframe
 $frame
 $normalmap texcoord transform
 $srgbtint
+$tI<br>VEngineCvar004
 $texture2 texcoord transform
 %%.%if%s
 %02x
@@ -508,6 +523,7 @@ $texture2 texcoord transform
 %s %s %s %s\n
 %s/%s
 %s/bin/linux64/%s
+%s: __pos (which is %zu) > this->size() (which is %zu)
 &AElig;
 &Aacute;
 &Acirc;
@@ -616,6 +632,7 @@ $texture2 texcoord transform
 ( shaderFlags & SHADER_USE_VERTEX_COLOR ) ? true : false
 (! bSRGBWrite ) && bHasVertexColor
 (%s)%s
+(anonymous namespace)
 (bHasTexture2)?(1):(0)
 (fogType == MATERIAL_FOG_LINEAR_BELOW_FOG_Z) && (nBlendType != BT_BLENDADD) && (nBlendType != BT_BLEND) && !bIsAlphaTested
 (int) NORMAL_DECODE_NONE
@@ -624,8 +641,15 @@ $texture2 texcoord transform
 (params[USEALTERNATEVIEWMATRIX]->GetIntValue() != 0)
 ** NOTE: The real value is %.3f but the server has temporarily restricted it to %.3f **\n
 ***need to set $abovewater for material %s\n
+*N12_GLOBAL__N_121system_error_categoryE
+*N12_GLOBAL__N_122generic_error_categoryE
+++CCUNG
+++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGstd::exception
 ,%03d
 -softparticlesdefaultoff
+/dev/random
+/dev/urandom
 0 0 0
 0 = always face camera, 1 = rotate around z, 2= parallel to ground
 0 == Use diffuse bump lighting, 1 = No diffuse bump lighting
@@ -638,6 +662,7 @@ $texture2 texcoord transform
 0.42
 0.59
 0.66
+0123456789
 0123456789abcdef
 1 1 1
 1.0 == mirror, 0.0 == water
@@ -672,7 +697,6 @@ $texture2 texcoord transform
 2D map for warping specular
 2D rate to scroll $flowmap
 31CLightmappedGeneric_DX9_Context
-333?333?333?333?
 400.0
 4fff>fff>fff>fff>
 50.0
@@ -684,20 +708,21 @@ $texture2 texcoord transform
 8floatcombine
 :params[info.m_nIntro]->GetIntValue() ? 1 : 0
 </script>
-<Refract_DX90
 <img src="
 <pre>
 =Core_DX90
+=ShadowBuild_DX9
+=bik_dx81
 >0123456789ABCDEF
 ><a href=
 >bIsModel
+?333333
 ?Cloud_dx9
 ?Engine_Post_dx9
-?Modulate_DX8
 ?MonitorScreen_DX9
 ?WindowImposter_DX90
 ?floatcombine_autoexpose
-@UUU@
+@333?
 @VortWarp_dx9
 @sky_dx6
 AA_ENABLE
@@ -742,7 +767,6 @@ Boost for rim lights
 BufferClearObeyStencil
 BufferClearObeyStencil_DX8
 BufferClearObeyStencil_DX9
-C333?\n
 CBaseShader::DrawElements
 CCommand::Tokenize: Encountered command which overflows the argument buffer.. Clamped!\n
 CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. Skipping!\n
@@ -759,7 +783,6 @@ CUBEMAP_SPHERE_LEGACY
 CVProfNode::EnterScope()
 CVProfNode::ExitScope()
 CVProfNode::GetSubNode(char const*, int, char const*, int)
-CXXABI_1.3
 Cable
 Cable_DX8
 Cable_DX9
@@ -785,7 +808,6 @@ Core_dx80
 Cornea strength
 Cr Bink Texture
 CreateInterface
-Cweapon_sheen_pass_vs20
 DEBUG_LUXELS
 DECAL
 DEPTHBLEND not supported by bump mapped variations of vertexlitgeneric to avoid shader bloat. Either remove the bump map or convince a graphics programmer that it's worth it.\n
@@ -885,13 +907,16 @@ Forces this material to receive flashlights.
 Forces z to be written if set
 Forward direction vector for teeth lighting
 Full framebuffer texture
-GCC: (SteamRT 10.3.0-3+steamrt3.1+bsrt3.1) 10.3.0
+GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
+GLIBCXX_TUNABLES
 GLIBC_2.14
+GLIBC_2.17
 GLIBC_2.2.5
-GLIBC_2.22
+GLIBC_2.25
 GLIBC_2.27
 GLIBC_2.29
 GLIBC_2.3
+GLIBC_2.3.2
 GetCPUInformation
 Glass/glasswindowbreak070b
 Glossiness of eye (1 is default, 0 is not glossy at all)
@@ -922,6 +947,7 @@ Internal motion blur value set by proxy
 IntroScreenSpaceEffect
 IsBoolSet( info.m_nSeparateDetailUVs, params )
 IsHDREnabled()
+JArray
 Kpyro_vision
 LIGHTING_PREVIEW
 LINEAR_INPUT
@@ -947,6 +973,7 @@ MaterialSystemHardwareConfig012
 Max shadow distance
 Maximum amount of light
 Minimum amount of light (0-1 value)
+Modulate_DX8
 MonitorScreen
 MonitorScreen_DX8
 MotionBlur
@@ -963,6 +990,8 @@ N10Spritecard7CShaderE
 N10Water_DX9013Water_DX9_HDR7CShaderE
 N10Water_DX907CShaderE
 N10WriteZ_DX97CShaderE
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv119__foreign_exceptionE
 N11BlurFilterX7CShaderE
 N11BlurFilterY7CShaderE
 N11Engine_Post7CShaderE
@@ -1076,12 +1105,16 @@ N9Occlusion7CShaderE
 N9Sample4x47CShaderE
 N9Teeth_DX97CShaderE
 N9Wireframe7CShaderE
+N9__gnu_cxx20recursive_init_errorE
+N9__gnu_cxx24__concurrence_lock_errorE
+N9__gnu_cxx26__concurrence_unlock_errorE
 NEED_ANOMYLIZE
 NEED_BLINDMK
 NEED_MONOCHROME
 NORMALMAPALPHAENVMAPMASK
 NORMALMASK_DECODE_MODE
 NORMAL_DECODE_MODE
+NSt3_V214error_categoryE
 NUM_LIGHTS
 Name of the pixel shader to use
 Needed for movies in 360 launcher
@@ -1134,6 +1167,7 @@ REFRACTALPHA
 RELIEF_MAPPING
 Raytrace sphere
 Refract_DX80
+Refract_DX90
 SEAMLESS
 SECONDARY_NORMAL
 SELFILLUM
@@ -1164,7 +1198,6 @@ Shadow
 ShadowBuild
 ShadowBuild_DX6
 ShadowBuild_DX8
-ShadowBuild_DX9
 ShadowModel
 ShadowModel_DX8
 ShadowModel_DX9
@@ -1177,11 +1210,29 @@ Sprite
 SpriteCard_DX8
 Sprite_DX8
 Spritecard
+St10bad_typeid
+St11logic_error
+St11range_error
+St12domain_error
+St12length_error
+St12out_of_range
+St12system_error
+St13bad_exception
+St13runtime_error
+St14overflow_error
+St15underflow_error
+St16invalid_argument
+St20bad_array_new_length
+St8bad_cast
+St9bad_alloc
+St9exception
 Stage of portal rendering (0, 1, 2)
 Start value for soft edges for distancealpha.
 Strength of film grain
 Subsurface Color
 TANGENTSPACE
+TLS init function for 
+TLS wrapper function for 
 Take the distance-coded alpha mask from the detail texture.
 Teeth
 Teeth_dx8
@@ -1239,7 +1290,6 @@ V projection vector for the iris
 VBAllocTracker001
 VERTEXALPHATEXBLENDFACTOR
 VERTEXCOLOR
-VEngineCvar004
 VFileSystem022
 VISUALIZE_DOF
 VMDLLIB001
@@ -1247,6 +1297,7 @@ VMaterialSystem082
 VMaterialSystemConfig002
 VP4002
 VProcessUtils001
+VTT for 
 V_AppendSlash: ran out of space on %s.
 V_MakeAbsolutePath: _getcwd failed.
 V_MakeAbsolutePath: tried to ".." past the root.
@@ -1321,7 +1372,9 @@ ZOOM_ANIMATE_SEQ2
 [0  0.5  1]
 [0 0 0 0.001]
 [0.11 0.124]
+[abi:
 [code]
+[friend]
 [img]
 [list]
 [url=
@@ -1330,14 +1383,15 @@ ZOOM_ANIMATE_SEQ2
 \n   VS dyn  var %s = %d (%s)
 \n   VS stat var %s = %d (%s)
 \n7ABlurFilterY
+_Float
+_GLOBAL_
+_ITM_RU1
+_ITM_RU8
+_ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
+_ITM_memcpyRnWt
+_ITM_memcpyRtWn
 _ITM_registerTMCloneTable
-_ZGVbN2v_sin
-_ZGVbN2v_sin@GLIBC_2.22
-_ZGVbN2vv_pow
-_ZGVbN2vv_pow@GLIBC_2.22
-_ZGVbN4vv_powf
-_ZGVbN4vv_powf@GLIBC_2.22
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
 __ctype_tolower_loc
@@ -1346,33 +1400,38 @@ __ctype_toupper_loc
 __ctype_toupper_loc@GLIBC_2.3
 __cxa_atexit
 __cxa_atexit@GLIBC_2.2.5
-__cxa_call_unexpected
-__cxa_call_unexpected@CXXABI_1.3
 __cxa_finalize
 __cxa_finalize@GLIBC_2.2.5
-__cxa_guard_abort
-__cxa_guard_abort@CXXABI_1.3
-__cxa_guard_acquire
-__cxa_guard_acquire@CXXABI_1.3
-__cxa_guard_release
-__cxa_guard_release@CXXABI_1.3
 __cxa_pure_virtual
-__cxa_pure_virtual@CXXABI_1.3
-__dynamic_cast
-__dynamic_cast@CXXABI_1.3
+__errno_location
+__errno_location@GLIBC_2.2.5
+__float128
 __gmon_start__
-__gxx_personality_v0
-__gxx_personality_v0@CXXABI_1.3
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+__int128
 __pthread_key_create
+__test_and_acquire(long*)
+__tls_get_addr
+__tls_get_addr@GLIBC_2.3
+__wrap_open
 _rt_FullFrameFB
 _rt_FullFrameFB1
 _rt_SmallHDR0
 _rt_WaterReflection
 _rt_WaterRefraction
 _rt_gui
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
+_txnal_cow_string_D1(void*)
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_c_str(void const*)
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
+_txnal_sso_string_c_str(void const*)
 aaEnabled
 aaQualityMode
 aaReduceOnePixelLineBlur
+abort
 abort@GLIBC_2.2.5
 accumbuff4sample_ps20
 accumbuff4sample_ps20b
@@ -1388,6 +1447,8 @@ aftershock_ps20
 aftershock_ps20b
 aftershock_vs20
 albedo (Base texture with no baked lighting)
+alignof 
+allocator
 alpha value for outline
 alphadist_ps11
 amount of base texture to additively blend in
@@ -1401,6 +1462,8 @@ atan2f
 atan2f@GLIBC_2.2.5
 atanf
 atanf@GLIBC_2.2.5
+auto
+auto:
 bAddSelf
 bAdditive2ndTexture
 bAlphaClip
@@ -1505,7 +1568,28 @@ bWriteZ && bFullyOpaque && pShaderAPI->ShouldWriteDepthToDestAlpha()
 bZoomSeq2
 base texture (compressed) for hdr compression method A
 base texture when running with HDR enabled
-bik_dx81
+basic_iostream
+basic_istream
+basic_ostream
+basic_string
+basic_string: construction from null is not valid
+basic_string::_M_create
+basic_string::_M_replace
+basic_string::_M_replace_aux
+basic_string::_S_construct null not valid
+basic_string::_S_create
+basic_string::append
+basic_string::assign
+basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
+basic_string::basic_string
+basic_string::compare
+basic_string::copy
+basic_string::erase
+basic_string::insert
+basic_string::replace
+basic_string::resize
+basic_string::substr
+basic_string_view::substr
 bik_ps20
 bik_ps20b
 bik_vs20
@@ -1521,11 +1605,16 @@ blurAmount
 blurfilter_ps20
 blurfilter_ps20b
 blurfilter_vs20
+bool
+bool __gnu_cxx::__is_null_pointer<char const>(char const*)
+bool __gnu_cxx::__is_null_pointer<char>(char*)
+boolean
 bufferclearobeystencil_ps20
 bufferclearobeystencil_ps20b
 bufferclearobeystencil_vs20
 bumpmap texture
 bumpmap_variant
+byte
 cable/cablenormalmap
 cable_ps20
 cable_ps20b
@@ -1534,6 +1623,10 @@ cbrtf
 cbrtf@GLIBC_2.2.5
 center .5 .5 scale 1 1 rotate 0 translate 0 0
 center if the model in world space
+char
+char16_t
+char32_t
+char8_t
 chdir
 chdir@GLIBC_2.2.5
 cloak_blended_pass_ps20
@@ -1551,6 +1644,7 @@ cloud texture
 cloud_ps20
 cloud_vs20
 cloudscale
+co_await 
 colCorrectNumLookups
 color multiplier
 color of outline for distance coded images.
@@ -1567,12 +1661,15 @@ compressed base texture1 for hdr compression method B
 compressed base texture2 for hdr compression method B
 compression bump map
 compression wrinklemap
+const_cast
+construction vtable for 
 contrast 0 == normal 1 == color*color
 core_ps20
 core_ps20b
 core_vs20
 cornea texture
 cos@GLIBC_2.2.5
+covariant return thunk to 
 cvar
 debugmrttexture_ps20
 debugmrttexture_ps20b
@@ -1588,8 +1685,17 @@ decalmodulate_ps20b
 decalmodulate_ps30
 decals/decalporthole001b
 decals/decalporthole001b_mask
+decimal128
+decimal32
+decimal64
+decltype (
+decltype(auto)
+decltype(nullptr)
+default
 defines that self illum value comes from env map mask alpha
 defines the blend mode between the images un dual sequence particles. 0 = avg, 1=alpha from first, rgb from 2nd, 2= first over second
+delete 
+delete[] 
 depthtodestalpha_ps20b
 depthtodestalpha_vs20
 depthwrite_ps20
@@ -1612,11 +1718,13 @@ dlopen@GLIBC_2.2.5
 dlsym
 dlsym@GLIBC_2.2.5
 do not operate in srgb space
+double
 downsample_nohdr_ps20
 downsample_nohdr_ps20b
 downsample_ps20
 downsample_ps20b
 downsample_vs20
+dynamic_cast
 effects/flashlight001
 effects/flashlight_border
 emissive_scroll_blended_pass_ps20
@@ -1674,6 +1782,7 @@ flashlightState.m_bEnableShadows && ( pFlashlightDepthTexture != NULL )
 flesh_interior_blended_pass_ps20
 flesh_interior_blended_pass_ps20b
 flesh_interior_blended_pass_vs20
+float
 floatcombine_autoexpose_ps20
 floatcombine_autoexpose_ps20b
 floatcombine_ps20
@@ -1687,6 +1796,10 @@ fogIndex
 fogType == MATERIAL_FOG_LINEAR_BELOW_FOG_Z
 fogType == MATERIAL_FOG_LINEAR_BELOW_FOG_Z && blendType != BT_BLENDADD && blendType != BT_BLEND && !bIsAlphaTested
 forces a 2x modulate so that you can brighten and darken things
+fputc
+fputc@GLIBC_2.2.5
+fputs
+fputs@GLIBC_2.2.5
 frame for the iris texture
 frame number for $basetexture2
 frame number for $bumpmap
@@ -1696,17 +1809,28 @@ frame number for $normalmap
 frame number for $texture2
 free
 free@GLIBC_2.2.5
+fwrite
+fwrite@GLIBC_2.2.5
 g_Telemetry
 g_VProfCurrentProfile
 g_pHardwareConfig->GetHDRType()
 g_pHardwareConfig->SupportsPixelShaders_2_b()
 g_pMemAlloc
+generic
 getcwd
 getcwd@GLIBC_2.2.5
+getentropy
+getentropy@GLIBC_2.25
 gl_amd_occlusion_workaround
 glass/glasswindowbreak070b_mask
+glibcxx.eh_pool
 glint texture
+global constructors keyed to 
+global destructors keyed to 
 grayscale data sitting in green/alpha channels
+guard variable for 
+half
+hardware
 hasBaseAlphaEnvmapMask
 hasBaseTexture
 hasBaseTexture2
@@ -1731,6 +1855,7 @@ hdrcombineto16bit_ps20b
 hdrcombineto16bit_vs20
 hdrselectrange_ps20
 hdrselectrange_ps20b
+hidden alias for 
 hsl_filmgrain_pass1
 hsl_filmgrain_pass1_ps20
 hsl_filmgrain_pass1_ps20b
@@ -1750,6 +1875,7 @@ if specified, then the red value of the image is used to index this ramp to prod
 ignore vertex colors
 image not found
 indicates that there is no normal map and that the phong mask is in base alpha
+initializer for module 
 inner end value for outline
 inner start value for outline
 instead of blending between animation frames for the 2nd sequence, select pixels based upon max luminance
@@ -1758,19 +1884,22 @@ interval over which to fade out far away particles
 introscreenspaceeffect_ps20
 introscreenspaceeffect_ps20b
 invert the phong mask (0=full phong, 1=no phong)
+ioctl
+ioctl@GLIBC_2.2.5
 is eyes in the ep1 intro
 is teeth in the ep1 intro
 isspace
 isspace@GLIBC_2.2.5
 iswspace
 iswspace@GLIBC_2.2.5
+java Class for 
+java resource 
 ld-linux-x86-64.so.2
 libc.so.6
 libdl.so.2
 libm.so.6
-libmvec.so.1
-libstdc++.so.6
 libtier0.so
+libvstdlib.so
 light munging lookup texture
 lightState.HasDynamicLight()
 lightState.m_bAmbientLight ? 1 : 0
@@ -1792,6 +1921,9 @@ lightmappedreflective_ps20b
 lightmappedreflective_vs20
 logf
 logf@GLIBC_2.27
+long
+long double
+long long
 malloc
 malloc@GLIBC_2.2.5
 mask using dest alpha
@@ -1812,6 +1944,8 @@ maximum distance to draw particles at
 maximum screen fractional size of particle
 mbstowcs
 mbstowcs@GLIBC_2.2.5
+memchr
+memchr@GLIBC_2.2.5
 memcmp
 memcmp@GLIBC_2.2.5
 memcpy
@@ -1831,6 +1965,7 @@ monitorscreen_ps20b
 motion_blur_ps20
 motion_blur_ps20b
 motion_blur_vs20
+mt19937
 nColorDepth
 nCombineMode
 nDetailBlendMode
@@ -1843,8 +1978,18 @@ nQuality
 nShadowFilterMode
 nStage
 nTreeSwayMode
+new 
+new[]
+noexcept
+non-transaction clone for 
+non-virtual thunk to 
 normal map
 numBones > 0
+obj_count
+obj_size
+operator
+operator 
+operator"" 
 origin for the eyes
 outer end value for outline
 outer start value for outline
@@ -1893,7 +2038,12 @@ portalstaticoverlay_ps20
 portalstaticoverlay_ps20b
 portalstaticoverlay_vs20
 pow@GLIBC_2.29
+powf
 powf@GLIBC_2.27
+pthread_cond_broadcast
+pthread_cond_broadcast@GLIBC_2.3.2
+pthread_cond_wait
+pthread_cond_wait@GLIBC_2.3.2
 pthread_mutex_lock
 pthread_mutex_lock@GLIBC_2.2.5
 pthread_mutex_unlock
@@ -1918,9 +2068,24 @@ r_showz_power
 r_waterforceexpensive
 rand
 rand@GLIBC_2.2.5
+random_device could not be read
+random_device: getentropy failed
+random_device: rdrand failed
+random_device: rdseed failed
+random_device::random_device(const std::string&): device not available
+random_device::random_device(const std::string&): unsupported token
+rdrand
+rdrnd
+rdseed
+read
+read@GLIBC_2.2.5
+realloc
+realloc@GLIBC_2.2.5
+reference temporary #
 reflection texture
 reflection tint
 refraction tint
+reinterpret_cast
 s_pShaderAPI->GetSceneFogMode() == MATERIAL_FOG_LINEAR_BELOW_FOG_Z
 sample4x4_ps20
 saturation 0 == greyscale 1 == normal
@@ -1933,6 +2098,8 @@ screenspace_general_dx9
 screenspaceeffect_vs20
 script
 second texture
+secure_getenv
+secure_getenv@GLIBC_2.17
 self-illum texture
 self-illum texture frame
 self-illumination map
@@ -1966,13 +2133,17 @@ shatteredglass_vs20
 sheenmap
 sheenmap mask
 sheenmap tint
+short
 showz
 showz_ps20
 showz_ps20b
 showz_vs20
+signed char
 sin@GLIBC_2.2.5
 sincosf
 sincosf@GLIBC_2.2.5
+sizeof 
+sizeof...
 skin_ps20b
 skin_ps30
 skin_vs20
@@ -1986,6 +2157,8 @@ sky_ps20b
 sky_vs20
 spline type 0 = none,  1=ctamull rom
 splinecard_vs20
+sprintf
+sprintf@GLIBC_2.2.5
 sprite orientation
 sprite origin
 sprite rendermode
@@ -1996,6 +2169,25 @@ spritecard_ps20
 spritecard_ps20b
 spritecard_vs20
 start value for glow/shadow
+static_cast
+std::allocator
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::bad_typeid
+std::basic_iostream<char, std::char_traits<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_string
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::bfloat16_t
+std::iostream
+std::istream
+std::ostream
+std::string
+stderr
+stderr@GLIBC_2.2.5
 steam://openurl/
 steam://openurl_external/
 strcasecmp
@@ -2006,14 +2198,20 @@ strcmp
 strcmp@GLIBC_2.2.5
 strcpy
 strcpy@GLIBC_2.2.5
+strerror_r
+strerror_r@GLIBC_2.2.5
 strftime
 strftime@GLIBC_2.2.5
+string literal
+string::string
 strlen
 strlen@GLIBC_2.2.5
 strncasecmp
 strncasecmp@GLIBC_2.2.5
 strncat
 strncat@GLIBC_2.2.5
+strncmp
+strncmp@GLIBC_2.2.5
 strncpy
 strncpy@GLIBC_2.2.5
 strstr
@@ -2028,6 +2226,9 @@ strtoul
 strtoul@GLIBC_2.2.5
 strtoull
 strtoull@GLIBC_2.2.5
+syscall
+syscall@GLIBC_2.2.5
+system
 tan@GLIBC_2.2.5
 teeth_bump_ps20
 teeth_bump_ps20b
@@ -2044,11 +2245,20 @@ teeth_ps20b
 teeth_ps30
 teeth_vs20
 teeth_vs30
+template
+template parameter object for 
+terminate called after throwing an instance of '
+terminate called recursively\n
+terminate called without an active exception\n
 texkill pixels not on sphere
 texture offset x for glow mask.
 texture offset y for glow mask.
 texture to use r/g channels for blend range for
 the scale for the seamless mapping. # of repetions of texture per inch.
+this
+this 
+throw
+throw 
 tint value to be applied when running on new-style srgb parts
 tolower
 tolower@GLIBC_2.2.5
@@ -2056,15 +2266,39 @@ towlower
 towlower@GLIBC_2.2.5
 towupper
 towupper@GLIBC_2.2.5
+transaction clone for 
+transaction clone for operator delete(void*)
+transaction clone for operator new[](unsigned long)
 treeleaf_ps20
 treeleaf_ps20b
 treeleaf_vs20
 true
+typeinfo fn for 
+typeinfo for 
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::recursive_init_error
+typeinfo name for 
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __gnu_cxx::recursive_init_error
+typename
 unlitgeneric_vs11
 unlitgeneric_vs20
 unlittwotexture_ps20
 unlittwotexture_ps20b
 unlittwotexture_vs20
+unsigned
+unsigned __int128
+unsigned char
+unsigned int
+unsigned long
+unsigned long long
+unsigned short
 unused
 up vector for the eyes
 use ONE:INVSRCALPHA blending
@@ -2080,6 +2314,8 @@ vertexlit_and_unlit_generic_ps30
 vertexlit_and_unlit_generic_vs20
 vertexlit_and_unlit_generic_vs30
 vertexlitgeneric_flashlight_vs11
+virtual thunk to 
+void
 volume_clouds_ps20
 volume_clouds_ps20b
 volume_clouds_vs20
@@ -2109,12 +2345,15 @@ vsnprintf
 vsnprintf@GLIBC_2.2.5
 vswprintf
 vswprintf@GLIBC_2.2.5
+vtable for 
 vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__class_type_info@CXXABI_1.3
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
 vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__si_class_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__vmi_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info@CXXABI_1.3
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+vtable for __gnu_cxx::recursive_init_error
 warp specular term
 warp the specular term
 warpParam > 0.0f && warpParam < 1.0f
@@ -2124,6 +2363,7 @@ water_vs20
 watercheap_ps20
 watercheap_ps20b
 watercheap_vs20
+wchar_t
 wcslen
 wcslen@GLIBC_2.2.5
 wcsncat
@@ -2135,6 +2375,7 @@ wcstombs@GLIBC_2.2.5
 weapon_sheen_pass_ps20
 weapon_sheen_pass_ps20b
 weapon_sheen_pass_ps30
+weapon_sheen_pass_vs20
 weapon_sheen_pass_vs30
 where to apply seamless mapping to the detail texture.
 whether or not to smoothly blend between animated frames
@@ -2153,3 +2394,7 @@ worldvertexalpha_ps20b
 writez_vs20
 zDaccumbuff4sample
 {255 255 255}
+{default arg#
+{lambda
+{parm#
+{unnamed type#

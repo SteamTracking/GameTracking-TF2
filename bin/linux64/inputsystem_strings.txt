@@ -157,6 +157,7 @@
 <pre>
 ><a href=
 >DLOPEN Error:%s\n
+@FBCA>SOQUTPRV
 A_BUTTON
 Analog axis range before a button press is registered.
 Automatically set to 1 if an xcontroller has been detected.
@@ -169,7 +170,6 @@ CCommand::Tokenize: Encountered command which overflows the argument buffer.. Cl
 CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. Skipping!\n
 CInputSystem::AttachToWindow: Cannot attach to two windows at once!\n
 COLORCORRECTION_VERSION_1
-CXXABI_1.3
 CommandLine_Tier0
 ConColorMsg(Color const&, char const*, ...)
 ConMsg(char const*, ...)
@@ -198,11 +198,12 @@ FPSControls
 Failed to open joystick %i: %s\n
 FmtStrVSNPrintf truncated to %d without QUIET_TRUNCATION specified!\n
 Found joystick '%s' (%s), but no recognized controller configuration for it.\n
-GCC: (SteamRT 10.3.0-3+steamrt3.1+bsrt3.1) 10.3.0
+GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GLIBC_2.14
 GLIBC_2.2.5
 GLIBC_2.29
 GLIBC_2.3
+GLIBC_2.3.2
 Game controller mapping (passed to SDL with SDL_HINT_GAMECONTROLLERCONFIG), can also be configured in Steam Big Picture mode.
 Got hotplug remove event for removed joystick #%i, ignoring.\n
 How to map the analog joystick deadzone and extents 0 = Scaled Cross, 1 = Concentric Mapping to Square.
@@ -431,7 +432,6 @@ V AXIS
 V AXIS NEG
 V AXIS POS
 VBAllocTracker001
-VEngineCvar004
 VFileSystem022
 VMDLLIB001
 VMaterialSystem082
@@ -476,8 +476,6 @@ __cxa_finalize@GLIBC_2.2.5
 __cxa_guard_abort
 __cxa_guard_acquire
 __cxa_guard_release
-__dynamic_cast
-__dynamic_cast@CXXABI_1.3
 __gmon_start__
 __gxx_personality_v0
 __pthread_key_create
@@ -530,9 +528,9 @@ libSDL2-2.0.so.0
 libc.so.6
 libdl.so.2
 libm.so.6
-libstdc++.so.6
 libsteam_api.so
 libtier0.so
+libvstdlib.so
 malloc
 malloc@GLIBC_2.2.5
 mbstowcs
@@ -553,6 +551,10 @@ menu_right
 menu_select
 menu_toggle_function
 menu_up
+pthread_cond_broadcast
+pthread_cond_broadcast@GLIBC_2.3.2
+pthread_cond_wait
+pthread_cond_wait@GLIBC_2.3.2
 pthread_mutex_lock
 pthread_mutex_lock@GLIBC_2.2.5
 pthread_mutex_unlock
@@ -616,3 +618,4 @@ wcsncpy
 wcsncpy@GLIBC_2.2.5
 wcstombs
 wcstombs@GLIBC_2.2.5
+zD<br>VEngineCvar004

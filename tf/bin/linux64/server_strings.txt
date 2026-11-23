@@ -1,4 +1,3 @@
-                [
             Out: %.2f -> Final %.2f\n
          -> EQUIPPED: 
        Aborting schedule load.\n
@@ -145,6 +144,7 @@
   input: %s\n
   output: %s\n
   penetration with entity %s (%s)\n
+  what():  
  !"#$%&'()*+,-./0123
  %02X
  %d (%d): %s : %5.3f (%.3f)\n
@@ -170,6 +170,7 @@
  - entity [%i %s %s] in between. tracing again with tolerance.\n
  - entity [%i %s %s] in between.\n
  - is further than the current potential initiator.\n
+ - is further than the current target player.\n
  - is potentially the closest target player.\n
  - spawn room visualizer in between.\n
  - there's too much space underneath where we need to be.\n
@@ -178,7 +179,9 @@
  2008, Valve Corporation, All rights reserved. ========\n//\n// Purpose:\n//\n//=============================================================================\n\nfunction UniqueString( string = "" )\n{\n\treturn DoUniqueString( string.tostring() );\n}\n\nfunction EntFire( target, action, value = null, delay = 0.0, activator = null )\n{\n\tif ( !value )\n\t{\n\t\tvalue = "";\n\t}\n\t\n\tlocal caller = null;\n\tif ( "self" in this )\n\t{\n\t\tcaller = self;\n\t\tif ( !activator )\n\t\t{\n\t\t\tactivator = self;\n\t\t}\n\t}\n\t\n\tDoEntFire( target.tostring(), action.tostring(), value.tostring(), delay, activator, caller ); \n}\n\nfunction __ReplaceClosures( script, scope )\n{\n\tif ( !scope )\n\t{\n\t\tscope = getroottable();\n\t}\n\t\n\tlocal tempParent = { getroottable = function() { return null; } };\n\tlocal temp = { runscript = script };\n\ttemp.setdelegate( tempParent );\n\t\n\ttemp.runscript()\n\tforeach( key,val in temp )\n\t{\n\t\tif ( typeof(val) == "function" && key != "runscript" )\n\t\t{\n\t\t\tprintl( "   Replacing " + key );\n\t\t\tscope[key] <- val;\n\t\t}\n\t}\n}\n\n/*\nUNDONE FOR PORTAL2 BRANCH:\nWe're not suing the auto-connecting of outputs, always calling ConnectOuput explicitly in our scripts.\nThe regexp object doesn't save/load properly and causes a crash when used to match after a save/load.\nInstead of fixing this, we're disabling the feature. If this class of problem comes up more we might\nrevisit, otherwise we'll leave if off and broken.\n\n__OutputsPattern <- regexp("^On.*Output$");\n\nfunction ConnectOutputs( table )\n{\n\tconst nCharsToStrip = 6;\n\tforeach( key, val in table )\n\t{\n\t\tif ( typeof( val ) == "function" && __OutputsPattern.match( key ) )\n\t\t{\n\t\t\t//printl(key.slice( 0, nCharsToStrip ) );\n\t\t\ttable.self.ConnectOutput( key.slice( 0, key.len() - nCharsToStrip ), key );\n\t\t}\n\t}\n}\n*/\n\nfunction IncludeScript( name, scope = null )\n{\n\tif ( scope == null )\n\t{\n\t\tscope = this;\n\t}\n\treturn ::DoIncludeScript( name, scope );\n}\n\n//---------------------------------------------------------\n// Text dump this scope's contents to the console.\n//---------------------------------------------------------\nfunction __DumpScope( depth, table )\n{\n\tlocal indent=function( count )\n\t{\n\t\tlocal i;\n\t\tfor( i = 0 ; i < count ; i++ )\n\t\t{\n\t\t\tprint("   ");\n\t\t}\n\t}\n\t\n    foreach(key, value in table)\n    {\n\t\tindent(depth);\n\t\tprint( key );\n        switch (type(value))\n        {\n            case "table":\n\t\t\t\tprint("(TABLE)\n");\n\t\t\t\tindent(depth);\n                print("{\n");\n                __DumpScope( depth + 1, value);\n\t\t\t\tindent(depth);\n                print("}");\n                break;\n            case "array":\n\t\t\t\tprint("(ARRAY)\n");\n\t\t\t\tindent(depth);\n                print("[\n")\n                __DumpScope( depth + 1, value);\n\t\t\t\tindent(depth);\n                print("]");\n                break;\n            case "string":\n                print(" = \"");\n                print(value);\n                print("\"");\n                break;\n            default:\n                print(" = ");\n                print(value);\n                break;\n        }\n        print("\n");  \n\t}\n}\n\n//---------------------------------------------------------\nfunction ClearGameEventCallbacks()\n{\n\t::GameEventCallbacks <- {};\n\t::ScriptEventCallbacks <- {};\n\t::ScriptHookCallbacks <- {};\n}\n\n//---------------------------------------------------------\n// Collect functions of the form OnGameEventXXX and store them in a table.\n//---------------------------------------------------------\nfunction __CollectEventCallbacks( scope, prefix, globalTableName, regFunc )\n{\n\tif ( !(typeof( scope ) == "table" ) )\n\t{\n\t\tprint( "__CollectEventCallbacks[" + prefix +"]: NOT TABLE! : " + typeof ( scope ) + "\n" );\n\t\treturn;\n\t}\n\n\tif ( !(globalTableName in getroottable())  )\n\t{\n\t\tgetroottable()[globalTableName] <- {};\n\t}\n\tlocal useTable = getroottable()[globalTableName] \n\tforeach( key,value in scope )\n\t{\n\t\tif ( typeof( value ) == "function" )\n\t\t{\n\t\t\tif ( typeof( key ) == "string" && key.find( prefix, 0 ) == 0 )\n\t\t\t{\n\t\t\t\tlocal eventName = key.slice( prefix.len() ); \n\t\t\t\tif ( eventName.len() > 0 )\n\t\t\t\t{\n\t\t\t\t\t// First time we've seen this event: Make an array for callbacks and\n\t\t\t\t\t// tell the game engine's listener we want to be notified.\n\t\t\t\t\tif ( !(eventName in useTable) )\n\t\t\t\t\t{\n\t\t\t\t\t\tuseTable[eventName] <- [];\n\t\t\t\t\t\tif (regFunc)\n\t\t\t\t\t\t\tregFunc( eventName );\n\t\t\t\t\t}\n\t\t\t\t\t// Don't add duplicates. TODO: Perf on this...\n\t\t\t\t\telse if ( useTable[eventName].find( scope ) != null )\n\t\t\t\t\t{\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\t}\n\t\t\t\t\tuseTable[eventName].append( scope.weakref() );\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\t\n}\n\nfunction __CollectGameEventCallbacks( scope )\n{\n\t__CollectEventCallbacks( scope, "OnGameEvent_", "GameEventCallbacks", ::RegisterScriptGameEventListener )\n\t__CollectEventCallbacks( scope, "OnScriptEvent_", "ScriptEventCallbacks", null )\n\t__CollectEventCallbacks( scope, "OnScriptHook_", "ScriptHookCallbacks", ::RegisterScriptHookListener )\n}\n\n//---------------------------------------------------------\n// Call all functions in the callback array for the given game event.\n//---------------------------------------------------------\nfunction __RunEventCallbacks( event, params, prefix, globalTableName, bWarnIfMissing )\n{\n\tlocal useTable = getroottable()[globalTableName] \n\tif ( !(event in useTable) )\n\t{\n\t\tif (bWarnIfMissing)\n\t\t    print( "__RunEventCallbacks[" + prefix + "]: Invalid 'event' name: " + event + ". No listeners registered for that event.\n" );\n\t\treturn;\n\t}\n\n\tfor ( local idx = useTable[event].len()-1; idx >= 0; --idx )\n\t{\n\t\tlocal funcName = prefix + event;\n\t\tif ( useTable[event][idx] == null )\n\t\t{\n\t\t\t//TODO: Not a great way to deal with cleanup...\n\t\t\tuseTable[event].remove(idx);\n\t\t}\n\t\telse\n\t\t{\n\t\t\t//PERF TODO: This is a hash lookup for a function we know exists...\n\t\t\t// should be caching it off in CollectGameEventCallbacks.\n\t\t\tuseTable[event][idx][funcName]( params );\n\t\t}\n\t}\n}\n\nfunction __RunGameEventCallbacks( event, params )\n{\n\t__RunEventCallbacks( event, params, "OnGameEvent_", "GameEventCallbacks", true )\n}\n\nfunction __RunScriptHookCallbacks( event, params )\n{\n\t__RunEventCallbacks( event, params, "OnScriptHook_", "ScriptHookCallbacks", false )\n}\n\n// kinda want to rename this "SendScriptEvent" - since we just send it to script\nfunction FireScriptEvent( event, params )\n{\n\t__RunEventCallbacks( event, params, "OnScriptEvent_", "ScriptEventCallbacks", false )\n}\n\n\n//-----------------------------------------------------------------------------\n// Debug watches & trace\n//-----------------------------------------------------------------------------\n\nconst ScriptDebugFirstLine \t\t\t\t= 6\nconst ScriptDebugTextLines \t\t\t\t= 20\nconst ScriptDebugTextTime \t\t\t\t= 10.0\nconst ScriptDebugWatchFistLine \t\t\t= 26\nconst NDEBUG_PERSIST_TILL_NEXT_SERVER \t= 0.01023\nScriptDebugDefaultWatchColor <- [ 0, 192, 0 ]\n\n//-----------------------------------------------------------------------------\n\n// Text is stored as an array of [ time, string, [ r, g, b ] ]\nScriptDebugText \t\t<- []\nScriptDebugTextIndent \t<- 0\nScriptDebugTextFilters\t<- {}\n\nScriptDebugInDebugDraw <- false\n\nScriptDebugDrawWatchesEnabled <- true\nScriptDebugDrawTextEnabled <- true\n\n// A watch is [ { key, function, color = [ r, g, b ], lastValue, lastChangeText } ]\nScriptDebugWatches \t\t<- []\n\nScriptDebugTraces \t\t<- {}\nScriptDebugTraceAllOn\t<- false\n\n//-----------------------------------------------------------------------------\n\nfunction ScriptDebugDraw()\n{\n\tScriptDebugInDebugDraw = true\n\n\tif ( ScriptDebugDrawTextEnabled || ScriptDebugDrawWatchesEnabled )\n\t{\n\t\tScriptDebugTextDraw( ScriptDebugFirstLine )\n\t}\n\n\tif ( ScriptDebugDrawWatchesEnabled )\n\t{\n\t\tScriptDebugDrawWatches( ScriptDebugWatchFistLine )\n\t}\n\n\tScriptDebugInDebugDraw = false\n}\n\n//-----------------------------------------------------------------------------\n\nfunction ScriptDebugDrawWatches( line )\n{\n\tlocal nWatches = ScriptDebugWatches.len()\n\tlocal curWatchKey\n\tlocal curWatchColor\n\tlocal curWatchValue\n\tlocal curWatchPath\n\tlocal curWatchString\n\tlocal ignored\n\tlocal bRedoExpand\n\tlocal changed\n\t\n\tfor ( local i = 0; i < ScriptDebugWatches.len(); i++ )\n\t{\n\t\tcurWatchKey = ScriptDebugWatches[i].key;\n\t\tcurWatchColor = ScriptDebugWatches[i].color;\n\t\t\n\t\tif ( typeof( curWatchKey ) == "function" )\n\t\t{\n\t\t\tcurWatchString = "" \n\t\t}\n\t\telse\n\t\t{\n\t\t\tcurWatchString = curWatchKey + ": "\n\t\t}\n\t\t\n\t\ttry\n\t\t{\n\t\t\tlocal watchResult = ScriptDebugWatches[i].func.pcall(::getroottable())\n\t\t\tchanged = false;\n\t\t\tif ( watchResult != null )\n\t\t\t{\n\t\t\t\tif ( watchResult != ScriptDebugWatches[i].lastValue )\n\t\t\t\t{\n\t\t\t\t\tif ( ScriptDebugWatches[i].lastValue != null )\n\t\t\t\t\t{\n\t\t\t\t\t\tScriptDebugWatches[i].lastChangeText = " (was " + ScriptDebugWatches[i].lastValue + " @ " + Time() + ")"\n\t\t\t\t\t\tchanged = true\n\t\t\t\t\t}\n\t\t\t\t\tScriptDebugWatches[i].lastValue = watchResult\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\tcurWatchString = curWatchString + watchResult.tostring() + ScriptDebugWatches[i].lastChangeText\n\t\t\t\tif ( changed) \n\t\t\t\t{\n\t\t\t\t\tScriptDebugTextPrint( curWatchString, [ 0, 255, 0 ], true );\n\t\t\t\t}\n\t\t\t}\n\t\t\telse\n\t\t\t{\n\t\t\t\tcurWatchString = curWatchString + "<<null>>"\n\t\t\t}\n\t\t}\n\t\tcatch ( error )\n\t\t{\n\t\t\tcurWatchString = curWatchString + "Watch failed - " + error.tostring()\n\t\t}\n\t\t\n\t\tDebugDrawScreenTextLine( 0.5, 0.0, line++, curWatchString, curWatchColor[0], curWatchColor[1], curWatchColor[2], 255, NDEBUG_PERSIST_TILL_NEXT_SERVER );\n\t}\n\t\n\treturn line\n}\n\n//-----------------------------------------------------------------------------\n\nfunction ScriptDebugAddWatch( watch )\n{\n\tlocal watchType = typeof(watch)\n\tlocal i\n\n\tswitch ( watchType )\n\t{\n\tcase "function":\n\t\t{\n\t\t\twatch = { key = watch, func = watch, color = ScriptDebugDefaultWatchColor, lastValue = null, lastChangeText = "" }\n\t\t\tbreak;\n\t\t}\n\t\t\n\tcase "string":\n\t\t{\n\t\t\tlocal closure\n\t\t\ttry\n\t\t\t{\n\t\t\t\tclosure = compilestring( "return " + watch, "" )\n\t\t\t}\n\t\t\tcatch ( error )\n\t\t\t{\n\t\t\t\tScriptDebugTextPrint( "Failed to add watch \"" + watch + "\": " + error.tostring() )\n\t\t\t\treturn\n\t\t\t}\n\t\t\twatch = { key = watch, func = closure, color = ScriptDebugDefaultWatchColor, lastValue = null, lastChangeText = "" }\n\t\t\tbreak;\n\t\t}\n\tdefault:\n\t\tthrow "Illegal type passed to ScriptDebugAddWatch: " + watchType\n\t}\n\n\tlocal function FindExisting( watch )\n\t{\n\t\tforeach( key, val in ScriptDebugWatches )\n\t\t{\n\t\t\tif ( val.key == watch.key )\n\t\t\t{\n\t\t\t\treturn key\n\t\t\t}\n\t\t}\n\t\treturn -1\n\t}\n\t\n\tlocal iExisting\n\tif ( ( iExisting = FindExisting( watch ) ) == -1 )\n\t{\n\t\tScriptDebugWatches.append( watch )\n\t}\n\telse\n\t{\n\t\t// just update the color\n\t\tScriptDebugWatches[iExisting].color = watch.color\n\t}\n}\n\n//-----------------------------------------------------------------------------\n\nfunction ScriptDebugAddWatches( watchArray )\n{\n\tif ( typeof( watchArray ) == "array" )\n\t{\n\t\tfor ( local i = 0; i < watchArray.len(); i++ )\n\t\t{\n\t\t\tScriptDebugAddWatch( watchArray[i] );\n\t\t}\n\t}\n\telse\n\t{\n\t\tthrow "ScriptDebugAddWatches() expected an array!"\n\t}\n}\n\n//-----------------------------------------------------------------------------\n\nfunction ScriptDebugRemoveWatch( watch )\n{\n\tfor ( local i = ScriptDebugWatches.len() - 1; i >= 0; --i )\n\t{\n\t\tif ( ScriptDebugWatches[i].key == watch )\n\t\t{\n\t\t\tScriptDebugWatches.remove( i );\n\t\t}\n\t}\n}\n\n//-----------------------------------------------------------------------------\n\nfunction ScriptDebugRemoveWatches( watchArray )\n{\n\tif ( typeof( watchArray ) == "array" )\n\t{\n\t\tfor ( local i = 0; i < watchArray.len(); i++ )\n\t\t{\n\t\t\tScriptDebugRemoveWatch( watchArray[i] );\n\t\t}\n\t}\n\telse\n\t{\n\t\tthrow "ScriptDebugAddWatches() expected an array!"\n\t}\n}\n\n//-----------------------------------------------------------------------------\n\nfunction ScriptDebugAddWatchPattern( name )\n{\n\tif ( name == "" )\n\t{\n\t\tMsg( "Cannot find an empty string" )\n\t\treturn;\n\t}\n\t\n\tlocal function OnKey( keyPath, key, value )\n\t{\n\t\tif ( keyPath.find( "Documentation." ) != 0 )\n\t\t{\n\t\t\tScriptDebugAddWatch( keyPath );\n\t\t}\n\t}\n\t\n\tScriptDebugIterateKeys( name, OnKey );\n}\n\n//-----------------------------------------------------------------------------\n\nfunction ScriptDebugRemoveWatchPattern( name )\n{\n\tif ( name == "" )\n\t{\n\t\tMsg( "Cannot find an empty string" )\n\t\treturn;\n\t}\n\t\n\tlocal function OnKey( keyPath, key, value )\n\t{\n\t\tScriptDebugRemoveWatch( keyPath ); \n\t}\n\t\n\tScriptDebugIterateKeys( name, OnKey );\n}\n\n//-----------------------------------------------------------------------------\n\nfunction ScriptDebugClearWatches()\n{\n\tScriptDebugWatches.clear()\n}\n\n//-----------------------------------------------------------------------------\n\nfunction ScriptDebugTraceAll( bValue = true )\n{\n\tScriptDebugTraceAllOn = bValue\n}\n\nfunction ScriptDebugAddTrace( traceTarget )\n{\n\tlocal type = typeof( traceTarget )\n\tif (  type == "string" || type == "table" || type == "instance" )\n\t{\n\t\tScriptDebugTraces[traceTarget] <- true\n\t}\n}\n\nfunction ScriptDebugRemoveTrace( traceTarget )\n{\n\tif ( traceTarget in ScriptDebugTraces )\n\t{\n\t\tdelete ScriptDebugTraces[traceTarget]\n\t}\n}\n\nfunction ScriptDebugClearTraces()\n{\n\tScriptDebugTraceAllOn = false\n\tScriptDebugTraces.clear()\n}\n\nfunction ScriptDebugTextTrace( text, color = [ 255, 255, 255 ] )\n{\n\tlocal bPrint = ScriptDebugTraceAllOn\n\n\tif ( !bPrint && ScriptDebugTraces.len() )\n\t{\n\t\tlocal stackinfo = getstackinfos( 2 )\n\t\tif ( stackinfo != null )\n\t\t{\n\t\t\tif ( ( stackinfo.func in ScriptDebugTraces ) ||\n\t\t\t\t ( stackinfo.src in ScriptDebugTraces ) ||\n\t\t\t\t ( stackinfo.locals["this"] in ScriptDebugTraces ) )\n\t\t\t{\n\t\t\t\tbPrint = true\n\t\t\t}\n\t\t}\n\t}\n\t\n\tif ( bPrint )\n\t{\n\t\tScriptDebugTextPrint( text, color )\n\t}\n}\n\n//-----------------------------------------------------------------------------\n\nfunction ScriptDebugTextPrint( text, color = [ 255, 255, 255 ], isWatch = false )\n{\n\tforeach( key, val in ScriptDebugTextFilters )\n\t{\n\t\tif ( text.find( key ) != null )\n\t\t{\n\t\t\treturn;\n\t\t}\n\t}\n\n\tlocal timeString = format( "(%0.2f) ", Time() ) \n\n\tif ( ScriptDebugDrawTextEnabled || ( isWatch && ScriptDebugDrawWatchesEnabled ) )\n\t{\n\t\tlocal indentString = "";\n\t\tlocal i = ScriptDebugTextIndent\n\t\twhile ( i-- )\n\t\t{\n\t\t\tindentString = indentString + "   "\n\t\t}\n\t\t\n\t\t// Screen overlay\n\t\tlocal debugString = timeString + indentString + text.tostring()\n\t\tScriptDebugText.append( [ Time(), debugString.tostring(), color ] )\n\t\tif ( ScriptDebugText.len() > ScriptDebugTextLines )\n\t\t{\n\t\t\tScriptDebugText.remove( 0 )\n\t\t}\n\t}\n\t\n\t// Console\n\tprintl( text + " " + timeString );\n}\n\n//-----------------------------------------------------------------------------\n\nfunction ScriptDebugTextDraw( line )\n{\n\tlocal i\n\tlocal alpha\n\tlocal curtime = Time()\n\tlocal age\n\tfor ( i = 0; i < ScriptDebugText.len(); i++ )\n\t{\n\t\tage = curtime - ScriptDebugText[i][0]\n\t\tif ( age < -1.0 )\n\t\t{\n\t\t\t// Started a new server\n\t\t\tScriptDebugText.clear()\n\t\t\tbreak;\n\t\t}\n\n\t\tif ( age < ScriptDebugTextTime )\n\t\t{\n\t\t\tif ( age >= ScriptDebugTextTime - 1.0 )\n\t\t\t{\n\t\t\t\talpha = ( 255.0 * ( ScriptDebugTextTime - age ) ).tointeger()\n\t\t\t\tAssert( alpha >= 0 )\n\t\t\t}\n\t\t\telse\n\t\t\t{\n\t\t\t\talpha = 255\n\t\t\t}\n\t\t\t\n\t\t\tDebugDrawScreenTextLine( 0.5, 0.0, line++, ScriptDebugText[i][1], ScriptDebugText[i][2][0], ScriptDebugText[i][2][1], ScriptDebugText[i][2][2], alpha, NDEBUG_PERSIST_TILL_NEXT_SERVER );\n\t\t}\n\t}\n\t\n\treturn line + ScriptDebugTextLines - i;\n}\n\n//-----------------------------------------------------------------------------\n\nfunction ScriptDebugAddTextFilter( filter )\n{\n\tScriptDebugTextFilters[filter] <- true\n}\n\n//-----------------------------------------------------------------------------\n\nfunction ScriptDebugRemoveTextFilter( filter )\n{\n\tif ( filter in ScriptDebugTextFilters )\n\t{\n\t\tdelete ScriptDebugTextFilters[filter]\n\t}\n}\n\n//-----------------------------------------------------------------------------\n\nfunction ScriptDebugHook( type, file, line, funcname )\n{\n\tif ( ScriptDebugInDebugDraw )\n\t{\n\t\treturn\n\t}\n\n\tif ( ( type == 'c' || type == 'r' ) && file != "unnamed" && file != "" && file != "game_debug.nut" && funcname != null )\n\t{\n\t\tlocal functionString = funcname + "() [ " + file + "(" + line + ") ]"\n\n\t\tforeach( key, val in ScriptDebugTextFilters )\n\t\t{\n\t\t\tif ( file.find( key ) != null || functionString.find( key ) != null )\n\t\t\t{\n\t\t\t\treturn;\n\t\t\t}\n\t\t}\n\t\t\n\t\tif ( type == 'c' )\n\t\t{\n\t\t\tlocal indentString = "";\n\t\t\tlocal i = ScriptDebugTextIndent\n\t\t\twhile ( i-- )\n\t\t\t{\n\t\t\t\tindentString = indentString + "   "\n\t\t\t}\n\t\t\t\n\t\t\t// Screen overlay\n\t\t\tlocal timeString = format( "(%0.2f) ", Time() ) \n\t\t\tlocal debugString = timeString + indentString + functionString\n\t\t\tScriptDebugTextPrint( functionString );\n\t\t\tScriptDebugTextIndent++;\n\t\t\t\n\t\t\t// Console\n\t\t\tprintl( "{" ); \n\t\t\tprint_indent++;\n\t\t}\n\t\telse\n\t\t{\n\t\t\tScriptDebugTextIndent--;\n\t\t\tprint_indent--;\n\t\t\tprintl( "}" );\n\t\t\t\n\t\t\tif ( ScriptDebugTextIndent == 0 )\n\t\t\t{\n\t\t\t\tScriptDebugExpandWatches()\n\t\t\t}\n\t\t}\n\t}\n}\n\n//-----------------------------------------------------------------------------\n\nfunction __VScriptServerDebugHook( type, file, line, funcname )\n{\n\tScriptDebugHook( type, file, line, funcname ) // route to support debug script reloading during development \n}\n\nfunction BeginScriptDebug()\n{\n\tsetdebughook( __VScriptServerDebugHook );\n}\n\nfunction EndScriptDebug()\n{\n\tsetdebughook( null );\n}\n\n//-----------------------------------------------------------------------------\n
  = { <proto text format> }". To set fields within it, use syntax like "
  @CAI_Pathfinder
+ ACEntitySpawnManager
  AGameRulesCreation
+ Aenv_zoom
  BackUp() can only be called after Next().
  Botkiller 
  CHANGE_TO 
@@ -265,7 +268,6 @@
 !! Got team change request for player not in match %s\n
 !! Match player %s not present but marked connected\n
 !! Missing playermodel on Player Class
-!! Missing printname on Player Class
 !! Missing selectcmd on Player Class
 !! NewMatchForLobby responded negatively, this match will likely not be acknowledged by the system.\n
 !! NewMatchForLobby responded negatively.  We haven't launched the match yet, so just shutting down.\n
@@ -429,7 +431,7 @@
 "player_object_array"
 "team_object_array"
 #%s_chapter
-#<SprayCan.Paint
+#<light_dynamic at [%d %d %d] has invalid exponent value (%d must be between %d and %d).\n
 #@DT_TEWorldDecal
 #Accept_All_Messages
 #Cannot_Be_Spectator
@@ -707,6 +709,7 @@
 #TF_Competitive_Rank_7
 #TF_Competitive_Rank_8
 #TF_Competitive_Rank_9
+#TF_Gas
 #TF_HALLOWEEN_BOSS_ANNOUNCE_TAG
 #TF_HALLOWEEN_BOSS_LOST_AGGRO
 #TF_HALLOWEEN_BOSS_WARN_VICTIM
@@ -745,7 +748,6 @@
 #TF_Not_Enough_Resources
 #TF_PVE_UsePowerup_BuildinginstaUpgrade
 #TF_PVE_UsePowerup_CritBoost
-#TF_PVE_UsePowerup_RadiusStealth
 #TF_PVE_UsePowerup_Recall
 #TF_PVE_UsePowerup_RefillAmmo
 #TF_PVE_UsePowerup_Ubercharge
@@ -930,6 +932,7 @@ $var3
 %-30s
 %-64.64s
 %-64.64s %03d:%02d
+%.*Lf
 %.*g
 %.10f %.10f %.10f
 %.3f %d %d %.3f %.3f vel %.2f\n
@@ -1026,7 +1029,9 @@ $var3
 %5u %-46s %10u %5.1f%% %14llu %5.1f%% %9.1f %10u %10.2f\n
 %8.3f[%d] %s:  %s
 %A %b %d
+%I:%M:%S %p
 %Y-%m-%dT%H:%M:%SZ
+%a %b %e %T %Y
 %a, %e %b %Y %H:%M:%S
 %a, %e-%b-%y %H:%M:%S
 %c%.4d
@@ -1112,6 +1117,7 @@ $var3
 %s : %8.2f:  finished\n
 %s : %8.2f:  ignored %s\n
 %s : %8.2f:  start %s\n
+%s : %8.2f: MOVETO canceled but actor %s not at goal\n
 %s : %8.2f: waiting for actor %s to complete MOVETO but actor not in SCHED_SCENE_GENERIC\n
 %s : %s : %s -- %s "%s"
 %s : Automatically canceling playback\n
@@ -1258,6 +1264,7 @@ $var3
 %s: Specified entity '%s' must be a path_track!\n
 %s: VPhysics Collision detection getting expensive, check for too many convex pieces!\n
 %s: VPhysics exceeded collision check limit (%d)!!!\nInterpenetration may result!\n
+%s: __pos (which is %zu) > __size (which is %zu)
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: backwards mins/maxs
 %s: can't find %s\n
@@ -1463,6 +1470,7 @@ $var3
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
 (@GAMEOVER_ALLY
+(CFuncOccluder
 (Invalid NextBotComponent)
 (Invalid match group)
 (Invalid pool index)
@@ -1482,8 +1490,6 @@ $var3
 (hInflictor, hAttacker, hWeapon, vecDamageForce, vecDamagePosition, flDamage, nDamageType, nCustomDamageType)
 (id, value) Sets a pose parameter value
 (invalid)
-(knN
-(m_nOccluderIndex
 (merge 
 (no conditions)
 (null)
@@ -1538,22 +1544,41 @@ $var3
 *DEAD*
 *DEAD*(TEAM)
 *DISABLED*
+*N12_GLOBAL__N_117io_error_categoryE
 *N12_GLOBAL__N_121CPlayerInfoManager_V1E
 *N12_GLOBAL__N_121IPlayerInfoManager_V1E
+*N12_GLOBAL__N_121system_error_categoryE
+*N12_GLOBAL__N_122generic_error_categoryE
 *N6google8protobuf12_GLOBAL__N_123AggregateErrorCollectorE
 *N6google8protobuf12_GLOBAL__N_123GeneratedMessageFactoryE
 *N6google8protobuf12_GLOBAL__N_129FieldValuePrinterUtf8EscapingE
+*NSt13__facet_shims12_GLOBAL__N_112collate_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_112collate_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_113messages_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_113messages_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_113numpunct_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_113numpunct_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_113time_get_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_113time_get_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_114money_get_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_114money_get_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_114money_put_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_114money_put_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb0EEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb1EEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb0EEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb1EEE
 *Z21GetClientLootListInfoPK23CEconLootListDefinitionR14LootListInfo_tE22CLootListItemsIterator
 *Z22GetCardUpgradeForIndexPK18IEconItemInterfaceiE37CGetNthUserGeneratedAttributeIterator
-*ZL18Script_EmitSoundExP9HSCRIPT__EUl10CUtlStringE0_
-*ZL18Script_EmitSoundExP9HSCRIPT__EUl6VectorE6_
-*ZL18Script_EmitSoundExP9HSCRIPT__EUlS0_E10_
-*ZL18Script_EmitSoundExP9HSCRIPT__EUlS0_E9_
+*ZL18Script_EmitSoundExP9HSCRIPT__EUl10CUtlStringE_
+*ZL18Script_EmitSoundExP9HSCRIPT__EUl6VectorE_
+*ZL18Script_EmitSoundExP9HSCRIPT__EUlS0_E0_
+*ZL18Script_EmitSoundExP9HSCRIPT__EUlS0_E_
+*ZL18Script_EmitSoundExP9HSCRIPT__EUlfE0_
 *ZL18Script_EmitSoundExP9HSCRIPT__EUlfE1_
-*ZL18Script_EmitSoundExP9HSCRIPT__EUlfE7_
-*ZL18Script_EmitSoundExP9HSCRIPT__EUlfE8_
-*ZL18Script_EmitSoundExP9HSCRIPT__EUliE11_
-*ZL18Script_EmitSoundExP9HSCRIPT__EUliE12_
+*ZL18Script_EmitSoundExP9HSCRIPT__EUlfE_
+*ZL18Script_EmitSoundExP9HSCRIPT__EUliE0_
+*ZL18Script_EmitSoundExP9HSCRIPT__EUliE1_
 *ZL18Script_EmitSoundExP9HSCRIPT__EUliE2_
 *ZL18Script_EmitSoundExP9HSCRIPT__EUliE3_
 *ZL18Script_EmitSoundExP9HSCRIPT__EUliE4_
@@ -1566,6 +1591,8 @@ $var3
 *ZN6CDecal11StaticDecalEvE25CTraceFilterValidForDecal
 *ZNK13CEconItemView17IterateAttributesEP26IEconItemAttributeIteratorE46CEconItemAttributeIterator_EconItemViewWrapper
 *this
+++CCUNG
+++CCUNGstd::exception
 +helpme_server
 +inspect_server
 +use_action_slot_item_server
@@ -1580,6 +1607,8 @@ $var3
 ,mannup:%d
 - %d: %s x:%.4f y:%.4f z:%.4f\n
 -%s %.1f\n
+-+xX0123456789abcdef0123456789ABCDEF
+-+xX0123456789abcdefABCDEF
 -- Error --:  empty soundname, .qc error on AE_CL_PLAYSOUND in model %s, sequence %s, animevent # %i\n
 -- Globals --\n
 --- %i links\n
@@ -1602,6 +1631,7 @@ $var3
 ---Vote commands---\n
 --> %-26s
 --\n%s current org: %f %f\n
+-0123456789
 -1 Default (Holiday-based)\n0 - Force off\n1 - Force on
 -10 -10 -10
 -100.0f
@@ -1702,7 +1732,6 @@ $var3
 ../shared/tf/tf_weapon_flamethrower.cpp
 ../shared/tf/tf_weapon_jar_gas.cpp
 ../shared/tf/tf_weaponbase.cpp
-../vgui/achievements/tf_soldier_kill_spy_killer
 ./google/protobuf/repeated_field.h
 ./google/protobuf/stubs/common.h
 .360
@@ -1722,6 +1751,7 @@ $var3
 // Choreo version 1\n
 //========== Copyright 
 //=========================================================\n// An spawner on the server is getting ready to\n// prespawn an entity. It calls this function, sending us\n// the entity that it's preparing to spawn. \n//=========================================================\n\nfunction __ExecutePreSpawn( entity ) \n{\n\t__EntityMakerResult <- {}\n\tif ( "PreSpawnInstance" in this )\n\t{\n\t\tlocal overrides = PreSpawnInstance( entity.GetClassname(), entity.GetName() );\n\t\tlocal type = typeof( overrides );\n\t\tif ( type == "table" )\n\t\t{\n\t\t\tforeach( key, value in overrides )\n\t\t\t{\n\t\t\t\tswitch ( typeof( value ) )\n\t\t\t\t{\n\t\t\t\tcase "string":\n\t\t\t\t\t{\n\t\t\t\t\t\tentity.__KeyValueFromString( key, value );\n\t\t\t\t\t\tbreak;\n\t\t\t\t\t}\n\t\t\t\tcase "integer":\n\t\t\t\t\t{\n\t\t\t\t\t\tentity.__KeyValueFromInt( key, value );\n\t\t\t\t\t\tbreak;\n\t\t\t\t\t}\n\t\t\t\tcase "float":\n\t\t\t\tcase "bool":\n\t\t\t\t\t{\n\t\t\t\t\t\tentity.__KeyValueFromFloat( key, value.tofloat() );\n\t\t\t\t\t\tbreak;\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\tcase "Vector":\n\t\t\t\t\t{\n\t\t\t\t\t\tentity.__KeyValueFromVector( key, value );\n\t\t\t\t\t\tbreak\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\tdefault:\n\t\t\t\t\t{\n\t\t\t\t\t\tprintl( "Cannot use " + typeof( value ) + " as a key" );\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\t\n\t\tif ( type == "bool" )\n\t\t{\n\t\t\treturn overrides;\n\t\t}\n\t}\n};\n\nfunction __FinishSpawn()\n{\n\t__EntityMakerResult <- null;\n}\n
+/DWeapon_RocketPack.BoostersExtend
 /EMSA1(
 /cfg/%s
 /data/src/game/server/../server/NextBot/Path/NextBotPath.h
@@ -1733,7 +1763,6 @@ $var3
 /data/src/game/server/tf/bot/tf_bot.h
 /data/src/game/shared/SharedFunctorUtils.h
 /data/src/game/shared/econ/attribute_manager.h
-/data/src/game/shared/econ/econ_item_interface.h
 /data/src/game/shared/tf/tf_proto_script_obj_def.h
 /data/src/gcsdk/steamextra/tier1/tsmempool.h
 /data/src/public/gcsdk/msgprotobuf.h
@@ -1741,6 +1770,9 @@ $var3
 /data/src/public/tier1/UtlSortVector.h
 /data/src/public/vstdlib/jobthread.h
 /data/src/thirdparty/protobuf-2.6.1/src/google/protobuf/repeated_field.h
+/dev/random
+/dev/urandom
+/tmp
 0 - players are not allowed to switch weapons while taunting, 1 - players can switch weapons at the start of a taunt (old bug behavior), 2 - players can switch weapons at any time during a taunt.
 0 0 0 30
 0 = None | 1 = No Voice Commands | 2 = Rate Limited
@@ -1807,6 +1839,7 @@ $var3
 0100000000000000000001F4C8F927AED3CA752257
 0100000000000000D9CCEC8A39E56F
 010000000000000108789B2496AF93
+0123456789
 0123456789ABCDEF
 0123456789abcdef
 0163F35A5137C2CE3EA6ED8667190B0BC43ECD69977702709B
@@ -2052,6 +2085,7 @@ $var3
 10CTEBubbles
 10CTETFBlood
 10CTFBonesaw
+10CTFBotBody
 10CTFBotDead
 10CTFBotHint
 10CTFCleaver
@@ -4069,7 +4103,6 @@ $var3
 16IPlayerAnimState
 16IPositionWatcher
 16IProgressionDesc
-16IRecipientFilter
 16IServerBenchmark
 16ITFQuestModifier
 16IVPhysicsWatcher
@@ -4204,7 +4237,6 @@ $var3
 17CEnvScreenOverlay
 17CExtendLevelIssue
 17CEyeballBossEmote
-17CFindVantagePoint
 17CFuncPasstimeGoal
 17CFuncVPhysicsClip
 17CGlobalEntityList
@@ -4651,6 +4683,7 @@ $var3
 1998
 1999
 19CAI_AssaultBehavior
+19CAI_BaseNPCFlyerNew
 19CAI_ChangeHintGroup
 19CAI_DefMovementSink
 19CAI_LeadGoal_Weapon
@@ -5564,6 +5597,7 @@ $var3
 29CTriggerPlayerRespawnOverride
 29ITriggerPlayerRespawnOverride
 29NextBotTraversableTraceFilter
+2@CAI_MoveAndShootOverlay
 2Fort
 2Fort Invasion
 2koth_abbey
@@ -5685,9 +5719,9 @@ $var3
 32ConstRefTFPerPlayerMatchCriteria
 32ReliableMsgVoteKickPlayerRequest
 3300
-333333
 33333?
 333?333?
+333@
 33750
 33CAttribute_DynamicRecipeComponent
 33CBroadcastNonOwnerRecipientFilter
@@ -5888,13 +5922,13 @@ $var3
 49CMsgGC_GameServer_ListResponse_GameServerIdentity
 49CMsgRequestItemPurgatory_FinalizePurchaseResponse
 4@CSoundEmitterSystem
-4Bentryboxes
+4A%d areas chopped into %d\n
+4BPlaying vehicle sound: %s\n
 4CGib
 4CSun
 4D20CTFPlayerClassShared
 4Path
 4fff>fff>fff>fff>
-4player_destroyed_pipebomb
 5000
 500000
 51CCommunity_TerminateGamePersonalDataEntries_Request
@@ -5914,13 +5948,12 @@ $var3
 5CItem
 5CSHA1
 5CSave
+5CTFGrenadeLauncher
 5CTeam
 5CWave
 5EEEFCA380D02919DC2C6558BB6D8A5D
 5IBody
 5ISave
-5m_iCurrentTube
-6#TF_Gas
 60.0
 6000
 60CMsgEconPlayerStrangeCountAdjustment_CStrangeCountAdjustment
@@ -5991,6 +6024,7 @@ $var3
 800.0f
 8000
 8000000000000000000000000000069D5BB915BCD46EFB1AD5F173ABDF
+816IRecipientFilter
 850.0f
 8BehaviorI10CSimpleBotE
 8BehaviorI12CBotNPCDecoyE
@@ -6040,6 +6074,7 @@ $var3
 8INextBot
 8IRestore
 8IVehicle
+8SendProp
 90.0
 900.0f
 999999
@@ -6104,6 +6139,7 @@ $var3
 9CTFWrench
 9CUpgrades
 9ChasePath
+9Damage %.0f, energy %.0f\n
 9DustTrail
 9IEconTool
 9IHasOwner
@@ -6140,8 +6176,9 @@ $var3
 : this object requires an IV
 : unexpected channel name "
 :bot_npc_decoy
-;effects/stun
-;models/brokenglass_piece.mdl
+:taunt06
+;Setting hinge friction to %f\n
+;sprites/flamelet1
 <!-- DMXVersion
 </script>
 << NULL >>\n
@@ -6149,84 +6186,76 @@ $var3
 <<illegal>>
 <<invalid>>
 <<null entity>>
-<BigShot
-<CPasstimeBallSpawn
+<ChangeClass.Touch
 <NULL>
-<UNKNOWN STATE>
 <bot id> <command string...>.  Sends specified command on behalf of specified bot
+<effects/repair_claw_trail_blue.vmt
 <img src="
 <logical entity>
 <m_vecAngles[0]
 <no file>
 <null>
-<physfollower_t
 <pre>
 <self>
+<teleporter_direction
 <unnamed>
 ============================================\n
 ========================================\n
 =CTFPointManager
 =G@V\Jclears debug overlays
+=IEffects001
 =NextBot/NextBotInterface.cpp
 =a\v6C
 =nb_player_stop
-=sequence number %d too high in sheet file!!!\n
+=waterripple
 >%f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f
->8SendProp
+>Barmor_piercing
 >CAI_SentenceBase
->CBaseFire
->CPhysicsHook
->General.StopBurning
+>SprayCan.Paint
+>Stopping scripted schedule
 >handle_test
+>pda_panel
 >pda_panel_spy_invis_pocket
 ?&UjC
 ?333333
 ?33s?
-?<unconnected>
 ???AI_Response bogus index
 ???\f???????\n???\r?\t?\v
-?CAI_MoveAndShootOverlay
+?CAI_GoalEntity
 ?CAnimationLayer
-?CAreaPortal
 ?CTFBotActionPoint
+?CVGuiScreen
 ?Catmull-Rom Spline
 ?Clear memory of server side hints displayed to the player.
 ?DT_BaseObjectUpgrade
 ?DT_TETFBlood
-?DT_TFWeaponBaseMelee
-?DT_TFWeaponBonesaw
 ?Eligible
+?HLTVDirector001
 ?InvertibleRSAFunction: computational error during private key operation
-?LOADOUT_POSITION_INVALID
 ?Ladder.StepRight
 ?Looking forward while jumping a gap
-?Obstructing nav
 ?TASK_INVALID
 ?TargetCDAudio - Track %d out of range\n
 ?UUUUUUU@19CCombatCharVisCache
-?WeaponGrapplingHook.Shoot
 ?Weapon_Slap.OpenHand
-?[%8.3f] hitch on %s:%s:%d:%d\n
+?add_head_on_kill
 ?body_pitch
 ?ff&?ff&?ff&?
 ?fffff
-?ffffff
 ?functionName
-?m_bChargedShot
-?m_iDeflected
-?m_nPanelName
-?models/
-@%d areas chopped into %d\n
+?fuse_mult
+?template_t
 @%s doesn't like %s\n\n
-@@mvm_wave_complete
+@@CAI_BlendedMotor
 @CGameRules
-@Fear
+@CTFWeaponBaseMelee
+@CTesla
+@Changing collision rules within a callback is likely to cause crashes!\n
+@Incorrect parameters. Format: <category id>\n
 @NavEntMoveTo
 @OCBaseEntityList::AddNonNetworkableEntity: no free slots!\n
 @Scorch
-@TacticalMonitor
-@m_SoundName
-@models/buildables/dispenser_lvl2.mdl
+@models/buildables/dispenser.mdl
 @models/buildables/sentry1_blueprint.mdl
 @player_escort_score
 @rd_rules_state_changed
@@ -6243,13 +6272,14 @@ A.I. Disabled...\n
 A5fSXbf7
 A9FB57DBA1EEA9BC3E660A909D838D718C397AA3B561A6F7901E0E82974856A7
 A9FB57DBA1EEA9BC3E660A909D838D726E3BF623D52620282013481D1F6E5377
-A@Place
 A@nav_show_nodes
 AADD9DB8DBE9C48B3FD4E6AE33C9FC07CB308DB3B3C9D20ED6639CCA70330870553E5C414CA92619418661197FAC10471DB1D381085DDADDB58796829CA90069
 AADD9DB8DBE9C48B3FD4E6AE33C9FC07CB308DB3B3C9D20ED6639CCA703308717D4D9B009BC66842AECDA12AE6A380E62881FF2F2D82C68528AA6056583A48F3
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ABCDEFGHIJKMNPQRSTUVWXYZ23456789
+ACBaseFire
 ACHIEVED
+ACSimpleSimTimer
 ACT_180_LEFT
 ACT_180_RIGHT
 ACT_90_LEFT
@@ -8199,6 +8229,7 @@ ACT_WALK_STEALTH
 ACT_WALK_STEALTH_PISTOL
 ACT_WALK_STIMULATED
 ACT_WALK_SUITCASE
+ACZombieSpawner
 ADDED %s (%s) to transition.\n
 ADDED DEPENDANCY: %s (%s)\n
 ADDED.\n
@@ -8296,18 +8327,22 @@ AI_StandoffParams_t
 AI_UNHOLSTER
 AI_Waypoint_t
 AI_Waypoint_t pool
+AKST
 ALERT
 ALL_VISIBLE_CONTENTS
 ALWAYS_CRIT
 ALWAYS_FIRE_WEAPON
 ANIMATION
 AOE Attack!
-AParticleTracer
 APhysBlockHeader_t
 AR2AltFire
 ARROW_REMOVE_THINK
 ARoam
+ASCII
+ASCII//TRANSLIT
+AState: Enabled
 AUTO_JUMP
+AUpdateExtraWearables
 AVOID 
 AVelocity: %.2f %.2f %.2f
 AWARDED
@@ -8447,6 +8482,7 @@ AirChargeOnly
 AirCtrlSupressionTime
 Airblast Aim
 Airblast vertical push multiplier from attributes/vulnerabilities ( %f -> %f )
+Ais commodity
 AlgorithmParametersBase: parameter "
 All achievements reset.\n
 All incoming damage to a blue player is multiplied by this value
@@ -8498,6 +8534,7 @@ Altitude
 AlwaysCrit
 AlwaysFireWeapon
 AmNot
+Am_nStartEntity
 Ambient.Siren
 Ambiguous\n
 Ammo I was going for has been taken
@@ -8680,6 +8717,7 @@ Approach ascending ladder
 Approach descending ladder
 ApproachObject
 ApproachTarget
+April
 Aquarius
 Archimedes!
 Are players allowed to refund their upgrades?
@@ -8752,7 +8790,6 @@ Assertion Failed: cubMaxPlaintext <= ULONG_MAX / cBlocks
 Assertion Failed: false
 Assertion Failed: i >= 0 && i < Obj().members_size()
 Assertion Failed: idxMatchPlayer.value >= 0
-Assertion Failed: rsaEncryptor.FixedCiphertextLength() <= ULONG_MAX / cBlocks
 Assist trainee in capturing the point
 AssisterClass
 AssisterHealth
@@ -8778,6 +8815,7 @@ AttackDefend.TeamStolen
 AttackFlagDefenders
 Attacking an engineer
 Attacking because I'm uber'd!
+Attacking nearby threat
 Attemped to precache unknown particle system "%s"!\n
 Attempted to ConvertToCopiedData for unsupported type (%d)\n
 Attempted to add a debughistory line to category %d. Valid categories are %d to %d.\n
@@ -8807,6 +8845,7 @@ Attribute definition index %d must be greater than or equal to zero
 Attribute definition index %d must be less than %d
 Attribute index %i not found when specifying dynamic recipe
 AuditData
+August
 AuthenticAMD
 AuthenticatedDecryptionFilter
 AuthenticatedDecryptionFilterFlags
@@ -8833,12 +8872,18 @@ Average
 Average interval between boss spawns, in seconds
 Average interval between zombie mob spawns, in seconds
 AwardAchievement
+B!! Missing printname on Player Class
+B(knNcable/cable.vmt
 B-Spline
 B3312FA7E23EE7E4988E056BE3F82D19181D9C6EFE8141120314088F5013875AC656398D8A2ED19D2A85C8EDD3EC2AEF
+B333333
 B4050A850C04B3ABF54132565044B0B7D7BFD8BA270B39432355FFB4
 B4E134D3FB59EB8BAB57274904664D5AF50388BA
 BADFUNCTIONPOINTER
+BBaseCombatCharacter.AmmoPickup
+BCTFProjectile_EnergyBall
 BCan't find soundscape: %s\n
+BDT_TEBeamRing
 BECOME_SPECTATOR_ON_DEATH
 BEHAVIOR
 BER decode error
@@ -8861,6 +8906,7 @@ BORING
 BOTH
 BParseFromBuffer
 BParseFromString
+BPlace
 BPostDataLoaded
 BPostDefinitionsLoaded
 BRouteWorkItemCompleted called for a job that could not be found!\n
@@ -8927,7 +8973,6 @@ Base Control Point for Team %d
 Base PropData: %s
 Base combat characters.
 Base item name not found %s.
-BaseCombatCharacter.AmmoPickup
 BaseCombatCharacter.CorpseGib
 BaseCombatCharacter.StopWeaponSounds
 BaseCombatWeapon.WeaponMaterialize
@@ -8965,6 +9010,7 @@ BestEnemy() {\n
 Big Head
 Big Mean Muther Hubbard
 BigNet
+BigShot
 BitLength
 Black Mesa
 BlastImmune
@@ -9026,7 +9072,6 @@ Bodygroup!\n
 Bogus constraint %s (attaches %s to ENTITY NOT FOUND:%s)\n
 Bogus constraint %s (attaches ENTITY NOT FOUND:%s to %s)\n
 Bogus constraint on ragdoll %s\n
-Bogus object in Ragdoll Prop's ragdoll list!\n
 Bogus pmove player movetype %i on (%i) 0=cl 1=sv\n
 Bogus route move type!
 Bogus teleport notification!!\n
@@ -9177,7 +9222,6 @@ ByteQueue: size specified for UndoLazyPut is too large
 C14CAI_Pathfinder
 C302F41D932A36CDA7A3462F9E9E916B5BE8F1029AC4ACC1
 C302F41D932A36CDA7A3463093D18DB78FCE476DE1A86297
-C333@
 CAISound
 CAI_AccelDecay
 CAI_AllySpeechManager
@@ -9195,7 +9239,6 @@ CAI_BaseNPC_RunAnimation
 CAI_BattleLine
 CAI_Behavior
 CAI_BehaviorBase
-CAI_BlendedMotor
 CAI_ChangeHintGroup
 CAI_ChangeTarget
 CAI_DynamicLink
@@ -9213,13 +9256,11 @@ CAI_LeadGoal
 CAI_LeadGoal_Weapon
 CAI_LocalNavigator
 CAI_LookTarget
-CAI_Motor
 CAI_MoveMonitor
 CAI_MoveProbe
 CAI_Navigator
 CAI_Navigator::ClearGoal()\n
 CAI_Navigator::StopMoving( %d )\n
-CAI_NetworkManager
 CAI_Path
 CAI_PlayerAlly
 CAI_ProxTester
@@ -9248,6 +9289,7 @@ CAchievementMgr::Steam_OnUserStatsStored: result = %i\n
 CAchievementZone
 CAmbientGeneric
 CAnchorList
+CAreaPortal
 CArenaLogic
 CAssaultPoint
 CAttributeContainer
@@ -9387,6 +9429,7 @@ CBaseVPhysicsTrigger
 CBaseViewModel
 CBeam
 CBlood
+CBogus object in Ragdoll Prop's ragdoll list!\n
 CBoneFollower
 CBoneFollowerManager
 CBonusDuckPreRemoveThink
@@ -9484,7 +9527,6 @@ CEntityListSystem
 CEntityMapData::GetNextKey: EOF without closing brace\n
 CEntityMapData::GetNextKey: closing brace without data\n
 CEntityParticleTrail
-CEntitySpawnManager
 CEntitySpawnPoint
 CEntityTouchManager::FrameUpdatePostEntityThink
 CEnvBeam
@@ -9569,7 +9611,6 @@ CFuncNavCost
 CFuncNavObstruction
 CFuncNavPrerequisite
 CFuncNoBuild
-CFuncOccluder
 CFuncPasstimeGoal
 CFuncPasstimeGoalieZone
 CFuncPasstimeNoBallZone
@@ -9744,6 +9785,7 @@ CKothLogic
 CLIFF 
 CLagCompensationManager
 CLaserDot
+CLcx
 CLight
 CLightGlow
 CLogicActiveAutosave
@@ -10003,6 +10045,7 @@ CParticleSystemMgr compiled using an old IMaterialSystem\n
 CParticleSystemMgr::DrawRenderCache
 CPassengerInfo
 CPasstimeBall
+CPasstimeBallSpawn
 CPasstimeGun
 CPathCorner
 CPathKeyFrame
@@ -10026,6 +10069,7 @@ CPhysThruster
 CPhysTorque
 CPhysicsCannister
 CPhysicsEntitySolver
+CPhysicsHook
 CPhysicsHook::FrameUpdatePostEntityThink
 CPhysicsNPCSolver
 CPhysicsProp
@@ -10057,6 +10101,7 @@ CPlayerResource
 CPlayerState
 CPlayerVoiceListener
 CPointAngleSensor
+CPointAngularVelocitySensor
 CPointBonusMapsAccessor
 CPointCamera
 CPointClientCommand
@@ -10157,7 +10202,6 @@ CServerGameDLL::LevelInit
 CServerNetworkProperty
 CShadowControl
 CSimTimer
-CSimpleSimTimer
 CSkyCamera
 CSkyboxSwapper
 CSlideshowDisplay
@@ -10249,7 +10293,6 @@ CTFAmmoPack
 CTFBall_Ornament
 CTFBaseBoss
 CTFBaseProjectile
-CTFBaseRocket
 CTFBat
 CTFBat_Fish
 CTFBat_Giftwrap
@@ -10336,7 +10379,6 @@ CTFGasManager
 CTFGenericBomb
 CTFGlow
 CTFGrapplingHook
-CTFGrenadeLauncher
 CTFGrenadePipebombProjectile
 CTFHalloweenFortuneTeller
 CTFHalloweenMinigame
@@ -10403,7 +10445,6 @@ CTFPowerupBottle
 CTFProjectile_Arrow
 CTFProjectile_BallOfFire
 CTFProjectile_Cleaver
-CTFProjectile_EnergyBall
 CTFProjectile_EnergyRing
 CTFProjectile_Flare
 CTFProjectile_FlareThink
@@ -10479,7 +10520,6 @@ CTFViewModel
 CTFWeaponBase
 CTFWeaponBaseGrenadeProj
 CTFWeaponBaseGun
-CTFWeaponBaseMelee
 CTFWeaponBaseMerasmusGrenade
 CTFWeaponBuilder
 CTFWeaponFlameBall
@@ -10506,7 +10546,6 @@ CTankTargetChange
 CTankTrainAI
 CTargetCDAudioRep
 CTargetChangeGravity
-CTeam
 CTeamControlPoint
 CTeamControlPointMaster
 CTeamControlPointMasterCPMThink
@@ -10523,7 +10562,6 @@ CTeamplayRules
 CTeleportVortex
 CTemplateNPCMaker
 CTemplatesHook
-CTesla
 CTestAreaAgainstThreats::Inspect
 CTestTraceline
 CTest_ProxyToggle_Networkable
@@ -10619,7 +10657,6 @@ CUtlLinkedList overflow! (exhausted memory allocator)\n
 CUtlMultiList overflow! (exhausted index range)\n
 CUtlMultiList overflow! (exhausted memory allocator)\n
 CUtlRBTree overflow!\n
-CVGuiScreen
 CVProfNode::EnterScope()
 CVProfNode::ExitScope()
 CVProfNode::GetSubNode(char const*, int, char const*, int)
@@ -10629,6 +10666,7 @@ CVProfNode::Reset()
 CVProfNode::Resume()
 CVProfile::FindOrCreateCounter(char const*, CounterGroup_t)
 CVProfile::OutputReport(int, char const*, int)
+CVU5?<unconnected>
 CVoiceGameMgr::ClientCommand: VModEnable (%d)\n
 CVoiceGameMgr::ClientCommand: cmd %s from invalid client (%d)\n
 CVoiceGameMgr::ClientCommand: invalid index (%d)\n
@@ -10638,7 +10676,6 @@ CVoteControllerSystem
 CWC_UpdateIgnoreList
 CWarData
 CWaterBullet
-CWaterLODControl
 CWave::ActiveWaveUpdate
 CWave::Update
 CWaveSpawnPopulator::Update
@@ -10662,10 +10699,7 @@ CWorkerThread::Reply(unsigned int)
 CWorkerThread::WaitForCall(unsigned int*)
 CWorld
 CWorldItem
-CXXABI_1.3
-CXXABI_1.3.8
 CZombie
-CZombieSpawner
 Cache the group spawn tables
 Cachoeira
 Cactus Canyon
@@ -10768,6 +10802,7 @@ Cancels all ent_fire created outputs that are currently waiting for their delay 
 Cannon Fodder
 Cannot allocate buffer larger than kint32max for 
 Cannot call BuildFile on a DescriptorPool that uses a DescriptorDatabase.  You must instead find a way to get your file into the underlying database.
+Cannot convert character sequence
 Cannot execute "%s", no player\n
 Cannot execute script because scripting is disabled (-scripting)\n
 Cannot load file '%s'
@@ -10815,11 +10850,9 @@ Catmull-Rom (Norm)
 Catmull-Rom (Tangent)
 Cauldron
 Centers the nav mesh in the world
-Cgesture_melee_cheer
 Change players FOV
 Change to a target popfile for MvM
 ChangeBotAttributes: Failed to find event [%s] in the pop file\n
-ChangeClass.Touch
 ChangeCount
 ChangeDefaultEventAttributes
 ChangeMatchPlayerTeams
@@ -10831,7 +10864,6 @@ Changed sentry target
 Changelevel to a random map in the mapcycle file
 Changes the density of air for drag computations.
 Changes's player's model
-Changing collision rules within a callback is likely to cause crashes!\n
 Chapter title: %s\n
 CharacterAttributes
 ChargeLevelDegradeThink
@@ -10929,6 +10961,7 @@ CloseAreaportalThink
 CloseCaption
 Closer than
 ClosestPoint
+Cmodels/items/car_battery01.mdl
 Coal Pit
 Code forced %s(%s), to be the target of scripted sequence %s, but it can't play it.\n
 Cofactor
@@ -11145,11 +11178,14 @@ D7C134AA264366862A18302575D1D787B09F075797DA89F57EC8C0FF
 D@Weapon_Sapper.Timer
 DAMAGE FILTER:%s
 DAMAGING 
-DAttacking nearby threat
 DB7C2ABF62E35E668076BEAD2088
 DB7C2ABF62E35E668076BEAD208B
 DB7C2ABF62E35E7628DFAC6561C5
 DBG_PATHMATCH
+DCAI_NetworkManager
+DCWaterLODControl
+DDT_TFWeaponFireAxe
+DDemoCharge.HitWorld
 DEFAULT_WRITE_PATH
 DEF_TYPE_HEADER_ONLY
 DEF_TYPE_PAINTKIT_DEFINITION
@@ -11388,7 +11424,6 @@ DT_TEBeamEnts
 DT_TEBeamFollow
 DT_TEBeamLaser
 DT_TEBeamPoints
-DT_TEBeamRing
 DT_TEBeamRingPoint
 DT_TEBeamSpline
 DT_TEBloodSprite
@@ -11428,6 +11463,7 @@ DT_TETFExplosion
 DT_TETFParticleEffect
 DT_TFBaseBoss
 DT_TFBaseProjectile
+DT_TFBaseRocket
 DT_TFBotHintEngineerNest
 DT_TFCannon
 DT_TFDroppedWeapon
@@ -11472,6 +11508,7 @@ DT_TFProjectile_Arrow
 DT_TFProjectile_BallOfFire
 DT_TFProjectile_Cleaver
 DT_TFProjectile_EnergyBall
+DT_TFProjectile_EnergyRing
 DT_TFProjectile_Flare
 DT_TFProjectile_GrapplingHook
 DT_TFProjectile_HealingBolt
@@ -11525,11 +11562,13 @@ DT_TFViewModel
 DT_TFWeaponBase
 DT_TFWeaponBaseGrenadeProj
 DT_TFWeaponBaseGun
+DT_TFWeaponBaseMelee
 DT_TFWeaponBaseMerasmusGrenade
 DT_TFWeaponBat
 DT_TFWeaponBat_Fish
 DT_TFWeaponBat_Giftwrap
 DT_TFWeaponBat_Wood
+DT_TFWeaponBonesaw
 DT_TFWeaponBottle
 DT_TFWeaponBreakableMelee
 DT_TFWeaponBreakableSign
@@ -11538,7 +11577,6 @@ DT_TFWeaponBuilder
 DT_TFWeaponCleaver
 DT_TFWeaponClub
 DT_TFWeaponDataNonLocal
-DT_TFWeaponFireAxe
 DT_TFWeaponFists
 DT_TFWeaponInvis
 DT_TFWeaponJar
@@ -11619,7 +11657,6 @@ D_FR
 D_HT
 D_LI
 D_NU
-Damage %.0f, energy %.0f\n
 Damage multiplier for close-in flamethrower damage.
 DamageDelay
 DamageDodged
@@ -11667,6 +11704,7 @@ Debugging %s (0x%p)\n
 Debugging stopped\n
 Debugs particles attached to the player under your crosshair.
 Decay/second toward zero
+December
 DecodingLookupArray
 Decoy spawned without an owner\n
 Default Power Up Canteen (MvM)
@@ -11678,6 +11716,7 @@ Default.StepRight
 DefendPoint
 DefendPoint%d
 Defending the point
+Deffects/stun
 Defines a corner of a new Area or Ladder. To complete the Area or Ladder, drag the opposite corner to the desired location and issue a 'nav_end_area' command.
 Defines the second corner of a new Area or Ladder and creates it.
 Defines the skill of bots joining the game.  Values are: 0=easy, 1=normal, 2=hard, 3=expert.
@@ -11708,11 +11747,9 @@ DemoCharge.ChargeCritOn
 DemoCharge.Charging
 DemoCharge.HitFlesh
 DemoCharge.HitFleshRange
-DemoCharge.HitWorld
 Demolition
 Demoman.CritDeath
 Demoman.Incoming0%i
-Dep2
 Descend
 Description
 Desired Origin for %s: %f %f\n
@@ -11743,6 +11780,7 @@ Devastation
 Devilcross
 Devshots: Loading point_devshot_camera positions from %s. \n
 Devshots: No point_devshot_camera in %s. Moving to next map.\n
+Dgesture_melee_cheer
 Did not create any objective trackers for quest %d on item %llu for user %s with %ds0 %ds1 %ds2\n
 Didn't find particle function %s\n
 Didn't find version header.  Expected lump type TFSTATS_LUMP_VERSION, got lump type %d.  Skipping file.\n
@@ -11824,6 +11862,7 @@ DistanceLimitThink
 DistanceTotal
 Distillery
 Divide by Zero
+Dm_fHeight
 DmeParticleChild
 DmeParticleOperator
 DmeParticleSystemDefinition
@@ -12032,14 +12071,12 @@ EF_PARENT_ANIMATES
 EHitGroup
 EHoliday
 EHudNotify
-EIEffects001
 EMPTY - ok for slot zero only!
 EMSA-PKCS1-v1_5
 EMoveCollide
 EMoveType
 EMsg  MessageName                                         Count      %             KB      %    Avg/Msg       KBPS  Msg Saved      %       KB Saved      %\n
 EMsg  MessageName                                         Count      %          Bytes      %     MsgPS    Avg/Msg       KBPS\n
-EMvMEngineerBuildSentryGun
 ENABLED
 ENABLE_PATHMATCH
 ENERGY_BALL_REMOVE_THINK
@@ -12127,6 +12164,7 @@ ERROR: Weapon (%s) using undefined primary ammo type (%s)\n
 ERROR: Weapon (%s) using undefined secondary ammo type (%s)\n
 ERROR: file contains a schedule (%s) that has already been defined!\n
 ERROR: path_track (%s) refers to itself as a target!\n
+ERROR: too many nodes in map, deleting last node.\n
 ERRORS
 ERenderFx
 ERenderMode
@@ -12145,6 +12183,7 @@ ETFTeam
 EVENTS
 EVENT_CREDITS with negative elapsed time (rt %f starttime %f)\n
 EVENT_LEVELSHUTDOWN:  with negative elapsed time (rt %f starttime %f)\n
+EXECUTABLE_PATH
 EXPERT
 Early escape the lost footing condition if the player is moving slower than this across the ground
 Ease In
@@ -12157,6 +12196,7 @@ Editing:\n%s\n%s
 Eff: %s, Move: %s\n
 Eiffel tower
 ElectroThinkContext
+Em_vecStart
 Embargo
 Emerge
 EmitAmbientSound:  '%s' emitted as '%s' (ent %i)\n
@@ -12283,6 +12323,7 @@ EscortSquadLeader
 EstimateLength
 Eternaween
 Etf/bot/behavior/medic/tf_bot_medic_heal.cpp
+Etf_bot_escort_range
 Event %s was missing tag %s for wav %s\n
 EventChangeAttributes
 EventID
@@ -12496,6 +12537,7 @@ Failed to initialize templated entity with mapdata: %s\n
 Failed to initialize templated entity with spawn table\n
 Failed to initiate download of file from cloud\n
 Failed to load %s!
+Failed to load registry file %s. Is it corrupt?\n
 Failed to load response system data from %s
 Failed to parse 'templates' blog from '%s'. '%s' attribute template doesn't exist
 Failed to parse nested components block in dynamic recipe
@@ -12518,7 +12560,9 @@ Failed!
 Falling back to item schema from local file.\n
 Farmageddon
 FastHexToBuffer() wants non-negative integers, not 
+Fear
 Fear: Couldn't find hint node\n
+February
 FeedbackSize
 Feel free to add support for more if you need it.
 Fell off path
@@ -12575,8 +12619,6 @@ Find entities by name. Pass 'null' to start an iteration, or reference to a prev
 Find entities by targetname. Pass 'null' to start an iteration, or reference to a previously found entity to continue a search
 Find entities within a radius. Pass 'null' to start an iteration, or reference to a previously found entity to continue a search
 Find sound names which reference the specified wave files.
-FindAttribute
-FindAttributeUnsafe
 FindBackAwayNode() - %s has no nearest node!\n
 FindBodygroupByName
 FindByClassname
@@ -12657,6 +12699,7 @@ Flushes entity bone cache on lag compensation
 Flushes the server & client side soundscapes
 Flushes the sounds.txt system (server only)
 FlyToSpecificTrackViaPath
+Fmove_keyframed
 FmtStrVSNPrintf truncated to %d without QUIET_TRUNCATION specified!\n
 FogSystem
 Follow target gone
@@ -12747,6 +12790,7 @@ Freaky Fair
 Free Sound List is full!\n
 FreezeCamTaunt
 Friction multiplier when sliding against surfaces while trapped in an air current
+Friday
 Frostcliff
 Frostwatch
 Frosty
@@ -12758,6 +12802,7 @@ FuncTrackChange.Blocking
 FuncTrackTrain '%s' has no target.\n
 FuncTrain '%s' has no target.\n
 Further than
+G<UNKNOWN STATE>
 G@T\tJ
 GAMEEVENTSMANAGER002
 GAMEROOT
@@ -12766,20 +12811,19 @@ GC refreshed lobby for match ID [ %llu ]\n
 GC sent malformed CGCUpdateItemSchema message: No schema data, no URL\n
 GC told us to expect %08X, we got %08X\n
 GCC: (SteamRT 10.3.0-3+steamrt3.1+bsrt3.1) 10.3.0
+GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GCHost
 GENTLE MANNE of LEISURE
-GLIBCXX_3.4
-GLIBCXX_3.4.14
-GLIBCXX_3.4.18
-GLIBCXX_3.4.20
-GLIBCXX_3.4.21
-GLIBCXX_3.4.9
 GLIBC_2.14
+GLIBC_2.17
 GLIBC_2.2.5
-GLIBC_2.22
+GLIBC_2.25
 GLIBC_2.27
 GLIBC_2.29
 GLIBC_2.3
+GLIBC_2.3.2
+GLIBC_2.4
+GLIBC_2.6
 GLIBC_2.7
 GLOBALNAME: %s
 GLaDOS
@@ -12800,6 +12844,7 @@ GO_LADDER_UP
 GO_NORTH
 GO_SOUTH
 GO_WEST
+GObstructing nav
 GR_NUM_ROUND_STATES
 GR_STATE_BETWEEN_RNDS
 GR_STATE_BONUS
@@ -12812,7 +12857,6 @@ GR_STATE_RND_RUNNING
 GR_STATE_STALEMATE
 GR_STATE_STARTGAME
 GR_STATE_TEAM_WIN
-GState: %s
 Galleria
 Game paused time showing up negative (rt %f pausestart %f)\n
 Game server authentication: FAILURE!\n
@@ -12841,6 +12885,7 @@ Gear: %d, RPM %4d
 Geiger
 General.BurningFlesh
 General.BurningObject
+General.StopBurning
 General.banana_slip
 GeneratableCryptoMaterial: this object does not support key/parameter generation
 Generate a Navigation Mesh for the current map and save it to disk.
@@ -13231,9 +13276,7 @@ HALLOWEEN: eyeball_spawn (max_health %d) (player_count %d) (level %d)\n
 HALLOWEEN: merasmus_escaped (max_dps %3.2f) (health %d) (level %d)\n
 HAS FL_FLY
 HB%3.2f: NextBotGroundLocomotion::GetBot()->OnLandOnGround\n
-HB19CAI_BaseNPCFlyerNew
 HB@T\tJ
-HCAI_GoalEntity
 HEARING
 HEV_DEAD
 HI THERE
@@ -13270,7 +13313,6 @@ HL1: World: Alien Blood
 HL1: World: Blinking Light
 HL1: World: Human Blood
 HL1: World: Machinery
-HLTVDirector001
 HMAC(
 HMAC: can only be used with a block-based hash function
 HOLD_FIRE_UNTIL_FULL_RELOAD
@@ -13620,8 +13662,7 @@ I've finished my leave panic sequence
 I've finished my spawn sequence
 I've fully materialized
 I've picked up the flag! Running it in...
-IEconItemInterface::FindAttribute
-IEconItemInterface::FindAttribute_UnsafeBitwiseCast
+I333
 IEngineSoundServer003
 IEngineerBuildTeleportEntrance
 IGNORED due to being marked "Don't save".\n
@@ -13813,7 +13854,6 @@ InTeleport
 IncludeScript stack overflow\n
 Incorrect magic # in version header.  Expected %x, got %x.  Skipping file.\n
 Incorrect parameters. Format: <category id> <line>\n
-Incorrect parameters. Format: <category id>\n
 Incorrect parameters. Format: command_toggle_SO_TRACKER_SPEW_type <type>\n
 Increment for quest: %llu Objective: "%s" Type: %d, %d->%d (+%d)\n
 IncrementTextureIndex
@@ -14759,6 +14799,7 @@ ItemsGameFile
 IteratedHashBase: input data exceeds maximum allowed by hash function 
 IvanTheSpaceBiker
 JDduelinitiatorclass:%s,dueltargetclass:%s
+January
 Jar.Explode
 JarCollisionThink
 Job %s attempted to pause even though pauses were disabled\n
@@ -14770,6 +14811,7 @@ Job of type %s held lock for %.2f seconds while job of type %s was waiting\n
 Job of type %s held lock for %.2f seconds\n
 Job passed lock it wasn't waiting for. Job: %s, Lock: %s %s(%d), Paused for %s, Waiting on %s\n
 Jobs/Coroutines
+July
 Jump Override
 Jump landed\n
 Jump start\n
@@ -14777,7 +14819,8 @@ Jump stop\n
 Jump stuck\n
 JumpAcrossGap
 Jumps directly to the given Mann Vs Machine wave number
-K@<a href=
+June
+K@<a href=<br>VEngineCvar004
 KABOOM!
 Kaboom!
 Kaching! Give the player some cash for game modes with upgrades, ie. MvM
@@ -14828,7 +14871,7 @@ Kochanek-Bartels Late
 Kong King
 Krampus
 L<15CTFTankBossBody
-L=10CTFBotBody
+L=merasmus_dazed_explosion
 L?1001
 LARGE_CENTERED_HULL
 LARGE_HULL
@@ -14836,12 +14879,25 @@ LAST_SHARED_COLLISION_GROUP
 LAST_VISIBLE_CONTENTS
 LAUNCH_BALL_THINK
 LBm_nCurrent
+LC_ADDRESS
+LC_COLLATE
+LC_CTYPE
+LC_IDENTIFICATION
+LC_MEASUREMENT
+LC_MESSAGES
+LC_MONETARY
+LC_NAME
+LC_NUMERIC
+LC_PAPER
+LC_TELEPHONE
+LC_TIME
 LEVEL DESIGN ERROR: Divide by zero in math_value\n
 LEVEL DESIGN ERROR: Entity %s is parented to itself!\n
 LEVEL DESIGN ERROR: Sprite %s with bad scale %f [0..%f]\n
 LOADOUT_POSITION_ACTION
 LOADOUT_POSITION_BUILDING
 LOADOUT_POSITION_HEAD
+LOADOUT_POSITION_INVALID
 LOADOUT_POSITION_MELEE
 LOADOUT_POSITION_MISC
 LOADOUT_POSITION_MISC2
@@ -14861,7 +14917,6 @@ LOADOUT_POSITION_UTILITY
 LOCKED.
 LOCKED_HINT
 LOCOMOTION
-LOGDIR
 LOOK_AT
 LOS LOS LOS
 Ladder #%d (Team %s)\n
@@ -15144,6 +15199,7 @@ MapIndex
 MapStatsUpdate
 MapVersion
 Maple Ridge Event
+March
 Mark an Area with no Place name. Useful for finding stray areas missed when Place Painting.
 Mark cliff areas, post-processing approximation
 Mark the current location as a walkable position. These positions are used as seed locations when sampling the map to generate a Navigation Mesh.
@@ -15268,7 +15324,6 @@ MaximumState
 May a flag be captured?
 May not have cleaned up on NPC death\n
 MbP?COND_NONE
-Mb`?particle/sparkles
 MeasureThink
 Medi-Evil
 Medic.AutoCallerAnnounce
@@ -15389,6 +15444,7 @@ Modulus
 ModulusSize
 Mojave
 Moldergrove
+Monday
 Monster Bash
 MontgomeryRepresentation: Montgomery representation requires an odd modulus
 Moonshine Event
@@ -15474,6 +15530,7 @@ MvM tour "%s" specified invalid difficulty '%s'
 MvM tour "%s" unable to locate mission "%s"
 MvM.SentryBusterSpin
 MvMDeployBomb
+MvMEngineerBuildSentryGun
 MvMEngineerBuildTeleportExit
 MvMEngineerIdle
 MvMEngineerTeleportSpawn
@@ -15485,6 +15542,11 @@ My cover is exposed, and there is no other cover available!
 My job is to heal/uber the others in the mission
 My path became invalid
 N10CSimpleBot19CSimpleBotIntentionE
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv116__enum_type_infoE
+N10__cxxabiv117__class_type_infoE
+N10__cxxabiv119__foreign_exceptionE
+N10__cxxabiv120__si_class_type_infoE
 N11CBaseEntity22NetworkVar_m_CollisionE
 N11CBasePlayer13NetworkVar_plE
 N11CBasePlayer18NetworkVar_m_LocalE
@@ -16233,6 +16295,12 @@ N8CryptoPP9PublicKeyE
 N8CryptoPP9TimerBaseE
 N9CTFPlayer19NetworkVar_m_SharedE
 N9CTFPlayer29NetworkVar_m_AttributeManagerE
+N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE
+N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE
+N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
+N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
+N9__gnu_cxx24__concurrence_lock_errorE
+N9__gnu_cxx26__concurrence_unlock_errorE
 NAV IGNORE
 NAV failed to save, saved backup copy to '%s'\n
 NAV_MESH_AVOID
@@ -16259,6 +16327,7 @@ NAV_MESH_TRANSIENT
 NAV_MESH_WALK
 NCHEM
 NCON
+NCTeam
 NDebugOverlay::Box
 NDebugOverlay::Line
 NDebugOverlay::ScreenTextLine
@@ -16292,7 +16361,52 @@ NPC_STATE IS NONE!\n
 NPC_human_grunt
 NPCs over this distance from the player won't attempt to speak.
 NRAD
+NSt10filesystem16filesystem_errorE
+NSt10filesystem4path8_CodecvtIwEE
+NSt10filesystem7__cxx1116filesystem_errorE
+NSt10filesystem7__cxx114path8_CodecvtIwEE
+NSt3_V214error_categoryE
+NSt6locale5facet6__shimE
+NSt6locale5facetE
+NSt7__cxx1110moneypunctIcLb0EEE
+NSt7__cxx1110moneypunctIcLb1EEE
+NSt7__cxx1110moneypunctIwLb0EEE
+NSt7__cxx1110moneypunctIwLb1EEE
 NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+NSt7__cxx1114collate_bynameIcEE
+NSt7__cxx1114collate_bynameIwEE
+NSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEEE
+NSt7__cxx1115basic_stringbufIwSt11char_traitsIwESaIwEEE
+NSt7__cxx1115messages_bynameIcEE
+NSt7__cxx1115messages_bynameIwEE
+NSt7__cxx1115numpunct_bynameIcEE
+NSt7__cxx1115numpunct_bynameIwEE
+NSt7__cxx1115time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx1115time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt7__cxx1117moneypunct_bynameIcLb0EEE
+NSt7__cxx1117moneypunct_bynameIcLb1EEE
+NSt7__cxx1117moneypunct_bynameIwLb0EEE
+NSt7__cxx1117moneypunct_bynameIwLb1EEE
+NSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE
+NSt7__cxx1118basic_stringstreamIwSt11char_traitsIwESaIwEEE
+NSt7__cxx1119basic_istringstreamIcSt11char_traitsIcESaIcEEE
+NSt7__cxx1119basic_istringstreamIwSt11char_traitsIwESaIwEEE
+NSt7__cxx1119basic_ostringstreamIcSt11char_traitsIcESaIcEEE
+NSt7__cxx1119basic_ostringstreamIwSt11char_traitsIwESaIwEEE
+NSt7__cxx117collateIcEE
+NSt7__cxx117collateIwEE
+NSt7__cxx118messagesIcEE
+NSt7__cxx118messagesIwEE
+NSt7__cxx118numpunctIcEE
+NSt7__cxx118numpunctIwEE
+NSt7__cxx118time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx118time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt7__cxx119money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx119money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt7__cxx119money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx119money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt8ios_base7failureB5cxx11E
+NSt8ios_base7failureE
 NULL Ent in CreateWindowPane!\n
 NULL Ent in GiveNamedItem!\n
 NULL Ent in NPCMaker!\n
@@ -16340,6 +16454,7 @@ Nested complex spawner types... need a method for counting these.
 NetMsg: %s
 NetMsg: Unknown %d
 NetProps
+NetProps.SetPropString: can't determine the buffer size of '%s' on %s, not setting it\n
 NetworkSystemVersion001
 Networking
 New Goal\n
@@ -16366,7 +16481,6 @@ NextBot/NextBotVisionInterface.cpp
 NextBot/Path/NextBotChasePath.h
 NextBot/Path/NextBotPath.cpp
 NextBot/Path/NextBotPath.h
-NextBot/Path/NextBotPathFollow.cpp
 NextBot/Player/NextBotPlayerLocomotion.cpp
 NextBotCombatCharacter
 NextBotCombatCharacter::DoThink
@@ -16382,7 +16496,6 @@ NextLevel
 NextLevel CVAR
 Nextbot combat character
 Nil time value
-Nm_iRoundsWon
 No %s file found. May be unable to create items.\n
 No %s found.\n
 No AI Network to Use
@@ -16541,6 +16654,7 @@ Note: NPC class %s lacks ACT_COVER_LOW, therefore cannot participate in standoff
 Note: Strange link found between nodes in AI node graph\n
 NoteSpeaking( %f, %f ) (stop at %f)\n
 Noticed better victim
+November
 Nucleus VSH
 NullRNG: NullRNG should only be passed to functions that don't need to generate random bytes
 Num ticks simulated : %d\n
@@ -16584,6 +16698,7 @@ Object is NODRAW
 Object is NULL
 Obsolete / Unused
 Obstruction %f\n
+October
 Octopus.StepCommon
 Odyssey
 Offsets the bot yaw.
@@ -16842,6 +16957,7 @@ PN8CryptoPP22DL_GroupParameters_GFPE
 PN8CryptoPP31DL_GroupParameters_IntegerBasedE
 PN8CryptoPP35DL_GroupParameters_IntegerBasedImplINS_20ModExpPrecomputationENS_30DL_FixedBasePrecomputationImplINS_7IntegerEEEEE
 PNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+POSIX
 PRECISE 
 PREFER_VACCINATOR_BLAST
 PREFER_VACCINATOR_BULLETS
@@ -16899,6 +17015,7 @@ Particle system index %d greater than zero
 Particle/Effect_Rendering
 ParticleEffectNames
 ParticleEffectStop
+ParticleTracer
 ParticleTrailEndSize
 ParticleTrailLifetime
 ParticleTrailMaterial
@@ -17133,7 +17250,6 @@ Playing king of the hill mode?
 Playing medieval mode?
 Playing non-looping vehicle sound: %s\n
 Playing powerup mode? Not compatible with MvM
-Playing vehicle sound: %s\n
 Plays a sound from this entity.
 Please wait for broadcast to start ...
 PluginHelpersCheck001
@@ -17290,7 +17406,7 @@ Q&A: '%s' answered the Hello from '%s'\n
 Q&A: '%s' answered the Question from '%s'\n
 Q&A: '%s' couldn't answer '%s'\n
 Q8>BaseCombatWeapon.WeaponDrop
-Q9waterripple
+Q8>energy_weapon_penetration
 QAngle: %.2f %.2f %.2f
 QUOTA_MANANGED
 Quality definition %d: Duplicate quality name %s
@@ -17507,6 +17623,7 @@ RegisterAvoidanceObstacle
 RegisterScriptGameEventListener
 RegisterScriptHookListener
 RegisterTemplateEntity: template entity with no name, class %s\n
+Registry
 Rejecting func_breakablesurf.  Drawn face isn't a quad.\n
 Rejecting func_breakablesurf.  Has multiple faces that aren't NODRAW.\n
 Relationship_t
@@ -18049,6 +18166,7 @@ Sap target gone
 SapperThink
 Sapping a Sentry
 Sapping an enemy object
+Saturday
 Save a checkpoint snapshot
 Save/Restore overflow!\n
 SaveRestoreBlockHeader_t
@@ -18518,12 +18636,12 @@ Sending team assignment request to GC:\n
 Sends a command string to all bots
 Sends a real game event to everything. Parameters are passed in a squirrel table.
 Sentry Spot
-Sentry build orientation
 Sentry destroyed
 Sentry hint has NULL nav area!\n
 Sentry is safe - building a teleport exit
 SentrygunContext
 Separator
+September
 Sequence Number
 Sequence Number 1
 Sequence Random
@@ -18533,7 +18651,6 @@ Sequence: (%3d) %s
 SerializeDMX: Unable to open file "%s"\n
 Server Animation
 Server benchmark: Can't create bot.
-Server game time: %f\n
 Server has been empty for %d seconds on this map, cycling map as per mp_mapcycle_empty_timeout_seconds\n
 Server identity account id, used to authenticate with the TF2 Game Coordinator.
 Server identity token, used to authenticate with the TF2 Game Coordinator.
@@ -18774,7 +18891,6 @@ Setting CBaseAnimating to non-studio model %s  (type:%i)\n
 Setting CBaseEntity to non-brush model %s\n
 Setting CBeam to non-sprite model %s\n
 Setting CSprite to non-sprite model %s\n
-Setting hinge friction to %f\n
 Setting ignore on object %s
 Setting m_flSuddenDeathTime to %f\n
 Setting sv_visiblemaxplayers to %d for MvM\n
@@ -18890,6 +19006,7 @@ Snowfall
 Snowplow
 Snowtower
 Snowycoast
+Software\Valve\%s
 Soldier.Incoming01
 Soldier.Statue
 SolidToPlayerMovement
@@ -18987,6 +19104,132 @@ Squad:
 SquadSlot:%s
 Squads
 Square Dance Taunt
+St10bad_typeid
+St10ctype_base
+St10money_base
+St10moneypunctIcLb0EE
+St10moneypunctIcLb1EE
+St10moneypunctIwLb0EE
+St10moneypunctIwLb1EE
+St11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE
+St11__timepunctIcE
+St11__timepunctIwE
+St11logic_error
+St11range_error
+St12codecvt_base
+St12codecvt_utf8IwLm1114111ELSt12codecvt_mode0EE
+St12ctype_bynameIcE
+St12ctype_bynameIwE
+St12domain_error
+St12length_error
+St12out_of_range
+St12system_error
+St13__ios_failure
+St13bad_exception
+St13basic_filebufIcSt11char_traitsIcEE
+St13basic_filebufIwSt11char_traitsIwEE
+St13basic_fstreamIcSt11char_traitsIcEE
+St13basic_fstreamIwSt11char_traitsIwEE
+St13basic_istreamIwSt11char_traitsIwEE
+St13basic_ostreamIwSt11char_traitsIwEE
+St13messages_base
+St13runtime_error
+St14basic_ifstreamIcSt11char_traitsIcEE
+St14basic_ifstreamIwSt11char_traitsIwEE
+St14basic_iostreamIwSt11char_traitsIwEE
+St14basic_ofstreamIcSt11char_traitsIcEE
+St14basic_ofstreamIwSt11char_traitsIwEE
+St14codecvt_bynameIcc11__mbstate_tE
+St14codecvt_bynameIwc11__mbstate_tE
+St14collate_bynameIcE
+St14collate_bynameIwE
+St14overflow_error
+St15basic_streambufIcSt11char_traitsIcEE
+St15basic_streambufIwSt11char_traitsIwEE
+St15messages_bynameIcE
+St15messages_bynameIwE
+St15numpunct_bynameIcE
+St15numpunct_bynameIwE
+St15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St15underflow_error
+St16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE
+St16__numpunct_cacheIcE
+St16__numpunct_cacheIwE
+St16invalid_argument
+St17__timepunct_cacheIcE
+St17__timepunct_cacheIwE
+St17bad_function_call
+St17moneypunct_bynameIcLb0EE
+St17moneypunct_bynameIcLb1EE
+St17moneypunct_bynameIwLb0EE
+St17moneypunct_bynameIwLb1EE
+St18__moneypunct_cacheIcLb0EE
+St18__moneypunct_cacheIcLb1EE
+St18__moneypunct_cacheIwLb0EE
+St18__moneypunct_cacheIwLb1EE
+St19_Sp_make_shared_tag
+St19__codecvt_utf8_baseIDiE
+St19__codecvt_utf8_baseIDsE
+St19__codecvt_utf8_baseIwE
+St19__iosfail_type_info
+St20__codecvt_utf16_baseIDiE
+St20__codecvt_utf16_baseIDsE
+St20__codecvt_utf16_baseIwE
+St20bad_array_new_length
+St21__ctype_abstract_baseIcE
+St21__ctype_abstract_baseIwE
+St23_Sp_counted_ptr_inplaceINSt10filesystem16filesystem_error5_ImplESaIS2_ELN9__gnu_cxx12_Lock_policyE2EE
+St23_Sp_counted_ptr_inplaceINSt10filesystem28recursive_directory_iterator10_Dir_stackESaIS2_ELN9__gnu_cxx12_Lock_policyE2EE
+St23_Sp_counted_ptr_inplaceINSt10filesystem4_DirESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE
+St23_Sp_counted_ptr_inplaceINSt10filesystem7__cxx1116filesystem_error5_ImplESaIS3_ELN9__gnu_cxx12_Lock_policyE2EE
+St23_Sp_counted_ptr_inplaceINSt10filesystem7__cxx1128recursive_directory_iterator10_Dir_stackESaIS3_ELN9__gnu_cxx12_Lock_policyE2EE
+St23_Sp_counted_ptr_inplaceINSt10filesystem7__cxx114_DirESaIS2_ELN9__gnu_cxx12_Lock_policyE2EE
+St23__codecvt_abstract_baseIDiDu11__mbstate_tE
+St23__codecvt_abstract_baseIDic11__mbstate_tE
+St23__codecvt_abstract_baseIDsDu11__mbstate_tE
+St23__codecvt_abstract_baseIDsc11__mbstate_tE
+St23__codecvt_abstract_baseIcc11__mbstate_tE
+St23__codecvt_abstract_baseIwc11__mbstate_tE
+St25__codecvt_utf8_utf16_baseIDiE
+St25__codecvt_utf8_utf16_baseIDsE
+St25__codecvt_utf8_utf16_baseIwE
+St5ctypeIcE
+St5ctypeIwE
+St7codecvtIDiDu11__mbstate_tE
+St7codecvtIDic11__mbstate_tE
+St7codecvtIDsDu11__mbstate_tE
+St7codecvtIDsc11__mbstate_tE
+St7codecvtIcc11__mbstate_tE
+St7codecvtIwc11__mbstate_tE
+St7collateIcE
+St7collateIwE
+St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St8bad_cast
+St8ios_base
+St8messagesIcE
+St8messagesIwE
+St8numpunctIcE
+St8numpunctIwE
+St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St9bad_alloc
+St9basic_iosIcSt11char_traitsIcEE
+St9basic_iosIwSt11char_traitsIwEE
+St9exception
+St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St9time_base
+St9type_info
 Staff Attack
 StalemateMeleeOnly
 Stalemates
@@ -19032,9 +19275,9 @@ StartingCurrency
 StartingPathTrackNode
 Stat: %s, 
 State: %d
+State: %s
 State: %s, 
 State: Disabled
-State: Enabled
 State: Off
 State: On
 StaticPropMgrServer002
@@ -19112,7 +19355,6 @@ StopSound:  Raw wave stopped '%s' (ent %i)\n
 StopTalkingAnim
 StopTaunt
 Stopped requesting late join for active match after %.02fs\n
-Stopping scripted schedule
 Stops a sound on this entity.
 Stops all particle systems on the selected entities.\n\tArguments:   \t{entity_name} / {class_name} / no argument picks what player is looking at 
 Store a string to a file for later reading
@@ -19156,6 +19398,7 @@ Successfully loaded particle effects manifest '%s' for map '%s'\n
 SuddenDeathTimeStart
 Suijin
 Sulfur
+Sunday
 Super Jump
 Super Speed
 Suppress listing of disabled issues in the vote setup screen.
@@ -19409,6 +19652,8 @@ TEAM_IS_OWNERS
 TEAM_SPECTATOR
 TEAM_UNASSIGNED
 TELEPORT_TO_HINT
+TEMP
+TEMPDIR
 TF2PowerUpModeKillsv2
 TF2PowerUpModeRuneDuration
 TF2ServerClassChanges
@@ -20202,6 +20447,7 @@ TLK_USE
 TLK_WATCHOUT
 TLK_WINDMINIGUN
 TLK_WOUND
+TMPDIR
 TOSS_JAR_THINK
 TOURGUIDE
 TRAIN(%s), speed to %.2f\n
@@ -20431,6 +20677,7 @@ ThreadingMain
 Threat is too far away for a melee attack
 Throttle: %s, Reverse: %s\n
 Thunder Mountain
+Thursday
 Ticks per second    : %.2f\n
 Tight
 Time Reward %s: loot_list (%s) does not exist
@@ -20613,6 +20860,7 @@ Trying to place my dispenser
 Trying to place my teleport exit
 Trying to precache breakable prop, but has no model name\n
 Trying to start a new lag compensation session while one is already active!\n
+Tuesday
 Turbine Event
 Turn an entity index integer to an HScript representing that entity's script instance.
 Turn off a particular trace output by file or function name
@@ -20720,6 +20968,7 @@ Unknown attribute '%s' in Wave definition.\n
 Unknown attribute '%s' in WaveSpawn definition.\n
 Unknown command: %s\n
 Unknown enumeration value of "
+Unknown error
 Unknown field '%s' in WaveSpawn event definition.\n
 Unknown interpolation type %d\n
 Unknown mission '%s'\n
@@ -20754,7 +21003,6 @@ UpdateAllClientData
 UpdateCollisionBoundsThink
 UpdateConnectedPlayers ======================================\n
 UpdateDelayedThreatNotices
-UpdateExtraWearables
 UpdateModelScaleThink
 UpdateRadar
 UpdateSkin
@@ -20841,12 +21089,11 @@ Using legacy SetVelocity.\nDo not use me! Move to SetAbsVelocity please!\n
 Using map cycle file '%s'.  ('%s' was not found.)\n
 Using map cycle file '%s'.\n
 Using nearby teleporter
-V@CPointAngularVelocitySensor
+V@LOGDIR
 VBAllocTracker001
 VDataCache003
 VDebugOverlay003
 VDmeMakeFileUtils001
-VEngineCvar004
 VEngineRandom001
 VEngineServer023
 VEngineServerStringTable001
@@ -20889,7 +21136,6 @@ VServerDllSharedAppSystems001
 VSoundEmitter002
 VStudioRender025
 VTEX_003
-VU5?
 V_AppendSlash: ran out of space on %s.
 V_MakeAbsolutePath: _getcwd failed.
 V_MakeAbsolutePath: tried to ".." past the root.
@@ -21026,10 +21272,7 @@ Walkable position marked.\n
 WarTrackerManager
 Warning : Particle system (%s) using unassigned ControlPoint %d!\n
 Warning parsing text-format 
-Warning reading Mob spawner definition\n
-Warning reading RandomChoice spawner definition\n
 Warning reading SentryGun spawner definition\n
-Warning reading Squad spawner definition\n
 Warning reading TFBot spawner definition\n
 Warning reading Tank spawner definition\n
 Warning time (in second) before fortune teller tells a fortune.
@@ -21156,7 +21399,6 @@ Weapon_Quick_Fix.Healing
 Weapon_RPG.Reload
 Weapon_RPG.SingleCrit
 Weapon_RocketPack.BoostersCharge
-Weapon_RocketPack.BoostersExtend
 Weapon_RocketPack.BoostersFire
 Weapon_RocketPack.BoostersNotReady
 Weapon_RocketPack.BoostersReady
@@ -21181,6 +21423,7 @@ Weapon_bm_throwable.throw
 Weapon_p2rec.Timer
 Weapon_sd_sapper.Timer
 WearableEvaluateState
+Wednesday
 WeightToActivate
 Well
 Whack!
@@ -21321,6 +21564,7 @@ ZoomContext
 Zrange
 [%03d] Found: %s, firing (%s)\n
 [%03d] Found: %s, firing\n
+[%8.3f] hitch on %s:%s:%d:%d\n
 [%8.3f] stall blend %.2f on %s:%s:%d:%d\n
 [%8.3f] stall on %s:%s:%d:%d\n
 [%d] (%d) Link %d (%s) -> %d (%s)\n
@@ -21412,6 +21656,8 @@ Zrange
 \%03o
 \U%08x
 \f@start %f %f %f
+\fBWeaponGrapplingHook.Shoot
+\fFTacticalMonitor
 \fI@CPostFrameNavigationHook
 \n    Actual    : 
 \n    Field type: 
@@ -21566,7 +21812,7 @@ Zrange
 \n\tSchedule\n\t\tSCHED_WAIT_FOR_SCRIPT\tTasks\t\tTASK_STOP_MOVING\t\t0\t\tTASK_WAIT_INDEFINITE\t0\tInterrupts\t\tCOND_LIGHT_DAMAGE\t\tCOND_HEAVY_DAMAGE\n
 \n\tSchedule\n\t\tSCHED_WAIT_FOR_SPEAK_FINISH\tTasks\t\tTASK_WAIT_FOR_SPEAK_FINISH\t\t0\tInterrupts\t\tCOND_NEW_ENEMY\t\tCOND_SEE_FEAR\t\tCOND_LIGHT_DAMAGE\t\tCOND_HEAVY_DAMAGE\t\tCOND_SMELL\t\tCOND_PROVOKED\t\tCOND_GIVE_WAY\t\tCOND_HEAR_DANGER\t\tCOND_HEAR_COMBAT\t\tCOND_HEAR_BULLET_IMPACT\n
 \n\tSchedule\n\t\tSCHED_WAKE_ANGRY\tTasks\t\tTASK_STOP_MOVING\t\t0\t\tTASK_SET_ACTIVITY\t\tACTIVITY:ACT_IDLE \t\tTASK_SOUND_WAKE\t\t\t0\t\tTASK_FACE_IDEAL\t\t\t0\t\tTASK_SET_ACTIVITY\t\tACTIVITY:ACT_IDLE \tInterrupts\n
-\rEm_bReadyToBackstab
+\rENextBot/Path/NextBotPathFollow.cpp
 \t(%zu) comparing %s with %s\n
 \tHolding lock %s:\n
 \tPassenger Role:\t%s (%d seats)\n
@@ -21584,24 +21830,31 @@ Zrange
 \t\t\tAnimation:\t%s\t(Priority %d)\n
 \t\t\tResponse %d: %s\n
 \x%02x
+]Gmodels/
 _CGCReplicateConVars
 _DisableUpdateTarget
 _EnableUpdateTarget
 _ExitOnFatalAssert
+_ITM_RU1
+_ITM_RU8
+_ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
+_ITM_memcpyRnWt
+_ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _LPT_%s_%d
 _ST_%s_%d
 _SpewInfo
 _SpewMessage
-_ZGVbN2v_sin
-_ZGVbN2v_sin@GLIBC_2.22
-_ZGVbN2vv_pow
-_ZGVbN2vv_pow@GLIBC_2.22
-_ZGVbN4v_cosf
-_ZGVbN4v_cosf@GLIBC_2.22
-_ZGVbN4vv_powf
-_ZGVbN4vv_powf@GLIBC_2.22
+_ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IcEEv
+_ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IwEEv
+_ZSt10__exchangeIP11__dirstreamDnET_RS3_OT0_
+_ZSt10__exchangeIP8_IO_FILEDnET_RS3_OT0_
+_ZSt10__exchangeIPKcDnET_RS3_OT0_
+_ZSt10__exchangeIPNSt8ios_base14_Callback_listEDnET_RS4_OT0_
+_ZSt10__exchangeIPcDnET_RS2_OT0_
+_ZSt10__exchangeIPwDnET_RS2_OT0_
+_ZSt8exchangeIP11__dirstreamDnET_RS3_OT0_
 __AppendToScriptGroup
 __CollectGameEventCallbacks
 __DumpScope
@@ -21618,6 +21871,8 @@ __RunScriptHookCallbacks
 __bss_start
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
+__ctype_get_mb_cur_max
+__ctype_get_mb_cur_max@GLIBC_2.2.5
 __ctype_tolower_loc
 __ctype_tolower_loc@GLIBC_2.3
 __ctype_toupper_loc
@@ -21625,39 +21880,76 @@ __ctype_toupper_loc@GLIBC_2.3
 __cxa_allocate_exception
 __cxa_atexit
 __cxa_atexit@GLIBC_2.2.5
-__cxa_begin_catch
+__cxa_call_terminate
 __cxa_call_unexpected
-__cxa_end_catch
+__cxa_current_exception_type
+__cxa_demangle
 __cxa_finalize
 __cxa_finalize@GLIBC_2.2.5
 __cxa_free_exception
+__cxa_get_globals
+__cxa_get_globals_fast
 __cxa_guard_abort
 __cxa_guard_acquire
 __cxa_guard_release
 __cxa_pure_virtual
 __cxa_rethrow
 __cxa_throw
-__cxa_throw_bad_array_new_length
-__cxa_throw_bad_array_new_length@CXXABI_1.3.8
 __daylight
 __daylight@GLIBC_2.2.5
-__dynamic_cast
-__dynamic_cast@CXXABI_1.3
+__duplocale
+__duplocale@GLIBC_2.2.5
 __errno_location
 __errno_location@GLIBC_2.2.5
+__freelocale
+__freelocale@GLIBC_2.2.5
+__fxstat
+__fxstat@GLIBC_2.2.5
 __gmon_start__
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
 __gxx_personality_v0
 __isoc99_sscanf
 __isoc99_sscanf@GLIBC_2.7
+__iswctype_l
+__iswctype_l@GLIBC_2.2.5
 __lxstat64@GLIBC_2.2.5
 __lxstat@GLIBC_2.2.5
+__newlocale
+__newlocale@GLIBC_2.2.5
+__nl_langinfo_l
+__nl_langinfo_l@GLIBC_2.2.5
 __notfound
 __novar
 __particlesDepthWrite
 __pthread_key_create
 __pthread_key_create@GLIBC_2.2.5
+__strcoll_l
+__strcoll_l@GLIBC_2.2.5
+__strftime_l
+__strftime_l@GLIBC_2.3
+__strtod_l
+__strtod_l@GLIBC_2.2.5
+__strtof_l
+__strtof_l@GLIBC_2.2.5
+__strxfrm_l
+__strxfrm_l@GLIBC_2.2.5
 __timezone
 __timezone@GLIBC_2.2.5
+__towlower_l
+__towlower_l@GLIBC_2.2.5
+__towupper_l
+__towupper_l@GLIBC_2.2.5
+__uselocale
+__uselocale@GLIBC_2.3
+__wcscoll_l
+__wcscoll_l@GLIBC_2.2.5
+__wcsftime_l
+__wcsftime_l@GLIBC_2.3
+__wcsxfrm_l
+__wcsxfrm_l@GLIBC_2.2.5
+__wctype_l
+__wctype_l@GLIBC_2.2.5
 __wrap___lxstat
 __wrap___lxstat64
 __wrap___xstat
@@ -21708,8 +22000,15 @@ _setjmp
 _setjmp@GLIBC_2.2.5
 _title
 _to_curve_
-`>%s : %8.2f: MOVETO canceled but actor %s not at goal\n
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
+_txnal_cow_string_D1(void*)
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_c_str(void const*)
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
+_txnal_sso_string_c_str(void const*)
 a trigger_changelevel doesn't have a map
+aDServer game time: %f\n
 aaaaaaaazzzzzzzz
 abcdefghijklmnopqrrqponmlkjihgfedcba
 abcdefghijklmnopqrstuvwxyzyxwvutsrqponmlkjihgfedcba
@@ -21756,7 +22055,6 @@ add_cloak_on_hit
 add_cloak_on_kill
 add_give_health_to_teammate_on_hit
 add_head_on_hit
-add_head_on_kill
 add_health_on_radius_damage
 add_health_regen
 add_jingle_to_footsteps
@@ -21967,6 +22265,8 @@ allownewgibs
 allowstatic
 allseecrit
 allsolid
+alnum
+alpha
 alpha_fade
 alpha_fade_in_random
 alpha_fade_out_random
@@ -22041,7 +22341,6 @@ arena_round_start
 arena_win_panel
 arenateampanel
 armor_max
-armor_piercing
 armory_attributes
 armory_data
 armory_desc
@@ -22143,6 +22442,7 @@ back_upper
 background
 backpack_expander
 backpack_slots
+bad_function_call
 badge_item_def
 bag of sugar
 ball_spawn_countdown
@@ -22161,12 +22461,33 @@ baseflex.cpp
 baseitem
 basename
 basevelocity
+basic_filebuf::_M_convert_to_external conversion error
+basic_filebuf::underflow codecvt::max_length() is not valid
+basic_filebuf::underflow error reading the file
+basic_filebuf::underflow incomplete character in file
+basic_filebuf::underflow invalid byte sequence in file
+basic_filebuf::xsgetn error reading the file
+basic_ios::clear
 basic_movement
+basic_string: construction from null is not valid
 basic_string::_M_construct null not valid
+basic_string::_M_create
+basic_string::_M_replace
+basic_string::_M_replace_aux
+basic_string::_S_construct null not valid
+basic_string::_S_create
 basic_string::append
+basic_string::assign
+basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
 basic_string::basic_string
+basic_string::compare
+basic_string::copy
 basic_string::erase
+basic_string::insert
+basic_string::replace
+basic_string::resize
 basic_string::substr
+basic_string_view::substr
 batch particle systems
 bbox.maxs
 bbox.mins
@@ -22187,6 +22508,10 @@ binary
 binary_array
 binary_v1
 binary_v2
+bind_textdomain_codeset
+bind_textdomain_codeset@GLIBC_2.2.5
+bindtextdomain
+bindtextdomain@GLIBC_2.2.5
 bip_hand_r
 bip_head
 bip_spine_2
@@ -22194,6 +22519,7 @@ birds
 birthday_player_circling
 bl_killtaunt
 blah
+blank
 blast_dmg_to_self
 bleeding_duration
 blink_think
@@ -22231,6 +22557,11 @@ bone_followers
 bonus_lootlist
 bonuseffect
 bool
+bool __gnu_cxx::__is_null_pointer<char const>(char const*)
+bool __gnu_cxx::__is_null_pointer<char>(char*)
+bool __gnu_cxx::__is_null_pointer<wchar_t const>(wchar_t const*)
+bool __gnu_cxx::__is_null_pointer<wchar_t>(wchar_t*)
+bool __gnu_cxx::__ops::_Iter_less_val::operator()<unsigned long const*, unsigned long const>(unsigned long const*, unsigned long const&) const
 bool const& google::protobuf::internal::GeneratedMessageReflection::GetRaw<bool>(google::protobuf::Message const&, google::protobuf::FieldDescriptor const*) const
 bool google::protobuf::internal::AllAreInitialized<google::protobuf::RepeatedPtrField<google::protobuf::EnumDescriptorProto>>(google::protobuf::RepeatedPtrField<google::protobuf::EnumDescriptorProto> const&)
 bool google::protobuf::internal::AllAreInitialized<google::protobuf::RepeatedPtrField<google::protobuf::FieldDescriptorProto>>(google::protobuf::RepeatedPtrField<google::protobuf::FieldDescriptorProto> const&)
@@ -22329,6 +22660,8 @@ breaksound
 brightness
 broadcast
 bspline
+btowc
+btowc@GLIBC_2.2.5
 bucket_position
 bucketed
 buddha
@@ -22358,7 +22691,6 @@ c_p2rec.mdl
 c_sapper.mdl
 c_sapper_xmas.mdl
 c_sd_sapper.mdl
-cable/cable.vmt
 cable/cable_lit.vmt
 cable/chain.vmt
 cable/rope.vmt
@@ -22398,11 +22730,38 @@ can_unusualify
 cancel falling damage
 cancel_falling_damage
 cancelselect
+cannot advance non-dereferenceable directory iterator
+cannot check file equivalence
+cannot check if file is empty
+cannot copy
+cannot copy file
+cannot copy symlink
+cannot create directories
+cannot create directory
+cannot create directory symlink
+cannot create hard link
+cannot create shim for unknown locale::facet
 cannot create std::deque larger than max_size()
 cannot create std::vector larger than max_size()
+cannot create symlink
 cannot delete
+cannot get current path
+cannot get file size
+cannot get file time
+cannot get free space
+cannot get link count
 cannot giftwrap
+cannot increment recursive directory iterator
+cannot make absolute path
+cannot make canonical path
+cannot remove
+cannot remove all
+cannot rename
+cannot resize file
 cannot restore
+cannot set current path
+cannot set file time
+cannot set permissions
 cannot trade
 cannot_be_backstabbed
 cannot_pick_up_buildings
@@ -22483,7 +22842,6 @@ chest_rightleft
 child
 children
 chin_raiser
-chmod@GLIBC_2.2.5
 christmas
 christmas1
 christmas2
@@ -22546,6 +22904,7 @@ closedir
 closedir@GLIBC_2.2.5
 closedwelcomemenu
 closerange_backattack_minicrits
+cntrl
 coach/coach_attack_here.wav
 coach/coach_defend_here.wav
 coach/coach_go_here.wav
@@ -22970,6 +23329,7 @@ decalname
 decapitate_type
 decodable
 decoder_ring
+default
 default_clip
 default_clip2
 default_drop_quantity
@@ -23039,11 +23399,18 @@ developer 0
 developeronly
 devshots_nextmap
 devshots_screenshot "%s"
+dgettext
+dgettext@GLIBC_2.2.5
 di_A
 di_B
 di_C
+digit
 directionentityname
 directory
+directory iterator cannot advance
+directory iterator cannot open directory
+dirfd
+dirfd@GLIBC_2.2.5
 disable weapon switch
 disableDodge
 disable_weapon_switch
@@ -23234,7 +23601,6 @@ effects/fleck_ash3
 effects/healingtrail_blu.vmt
 effects/healingtrail_red.vmt
 effects/introblur
-effects/repair_claw_trail_blue.vmt
 effects/repair_claw_trail_red.vmt
 effects/sniperdot_blue.vmt
 effects/sniperdot_red.vmt
@@ -23275,7 +23641,6 @@ energy drink regen per second, up to 100 max
 energy drink to use per second while boosted, from 100 max
 energy_buff_dmg_taken_multiplier
 energy_weapon_no_drain
-energy_weapon_penetration
 engine2_start
 engine2_stop
 enginesound
@@ -23293,12 +23658,14 @@ ent_call
 ent_call <funcname> <option:entname> calls function on current look target or filtername, checks on ent, then root, then mode, then map scope
 ent_cancelpendingentfires
 ent_create
+ent_create: keyvalues are restricted to the server host/admin.\n
 ent_debugkeys
 ent_dump
 ent_dump: no such entity
 ent_fire
 ent_info
 ent_keyvalue
+ent_keyvalue: restricted to the server host/admin.\n
 ent_messages
 ent_messages_draw
 ent_orient
@@ -23347,6 +23714,7 @@ entitylist.cpp
 entitytable_t
 entry_activity
 entry_sequence
+entryboxes
 enum
 enumeration
 env_beam
@@ -23443,7 +23811,6 @@ env_tracer
 env_tracer: unknown entity "%s"\n
 env_viewpunch
 env_wind
-env_zoom
 environmental_death
 eotl_launch
 ep1_c17_00
@@ -23605,23 +23972,35 @@ fadetime
 failed (+exclude rule)
 falling_impact_radius_pushback
 falling_impact_radius_stun
+false
 false 
 fanfriction
 fast_reload
 faulty context k:v pair in entity io %s\n
+fchmod
+fchmod@GLIBC_2.2.5
+fchmodat
+fchmodat@GLIBC_2.4
 fclose
 fclose@GLIBC_2.2.5
+fdopen
+fdopen@GLIBC_2.2.5
+fdopendir
+fdopendir@GLIBC_2.4
 featured
 feign_death
 ffF@Sentry built
 fff?
-fff@DT_TFBaseRocket
+fff@CTFBaseRocket
 ffffff
 fflush
 fflush@GLIBC_2.2.5
 fi_FI
 fieldName
 filename
+fileno
+fileno@GLIBC_2.2.5
+filesystem error: 
 filter_activator_class
 filter_activator_mass_greater
 filter_activator_name
@@ -23811,6 +24190,10 @@ fov_desired
 fprintf
 fprintf@GLIBC_2.2.5
 fps %i\n
+fputc
+fputc@GLIBC_2.2.5
+fputs
+fputs@GLIBC_2.2.5
 fr_FR
 fraction
 fragility
@@ -23836,8 +24219,12 @@ french
 freopen@GLIBC_2.2.5
 fseek
 fseek@GLIBC_2.2.5
+fseeko64
+fseeko64@GLIBC_2.2.5
 ftell
 ftell@GLIBC_2.2.5
+ftello64
+ftello64@GLIBC_2.2.5
 fuel
 full_reset
 full_round
@@ -23923,7 +24310,8 @@ func_wall_toggle
 func_water
 func_water_analog
 func_weight_button
-fuse_mult
+fwrite
+fwrite@GLIBC_2.2.5
 fxtime
 g_CCNameMap:  Event type at %i has wrong value (%i)!
 g_ClockSpeed
@@ -24022,6 +24410,7 @@ generated_proto_tf/gcsystemmsgs.pb.cc
 generated_proto_tf/steammessages.pb.cc
 generated_proto_tf/tf_gcmessages.pb.cc
 generated_proto_tf/tf_proto_def_messages.pb.cc
+generic
 generic_actor
 german
 gesture_height
@@ -24032,7 +24421,8 @@ gesture_width
 get_player
 getcwd
 getcwd@GLIBC_2.2.5
-getenv
+getentropy
+getentropy@GLIBC_2.25
 getenv@GLIBC_2.2.5
 gethostbyname
 gethostbyname@GLIBC_2.2.5
@@ -25528,6 +25918,7 @@ gordon_precriminal
 goto action point
 graball
 grant_operation_pass
+graph
 greek
 grenade1
 grenade2
@@ -25606,7 +25997,6 @@ head_shell
 head_tilt
 head_updown
 head_yaw
-header
 headless_hatman
 headshot_damage_modify
 headtaker
@@ -25835,9 +26225,14 @@ inventoryPos
 inventory_updated
 invert_exclusion
 invulnerable
+ioctl
+ioctl@GLIBC_2.2.5
+ios_base::_M_grow_words allocation failed
+ios_base::_M_grow_words is not valid
+iostream
+iostream error
 irlenous
 is australium item
-is commodity
 is marketable
 isCrit
 is_a_sword
@@ -25986,7 +26381,6 @@ joinclass
 jointeam
 jointeam_nomenus
 jumping_state
-k>DT_TFProjectile_EnergyRing
 kHolidayCount
 kHoliday_AprilFools
 kHoliday_Christmas
@@ -26194,9 +26588,7 @@ lfotype
 libc.so.6
 libdl.so.2
 libm.so.6
-libmvec.so.1
 libpthread.so.0
-libstdc++.so.6
 libsteam_api.so
 libtier0.so
 libvstdlib.so
@@ -26206,7 +26598,6 @@ lifetime_max
 lifetime_min
 lifetime_random
 light_dynamic
-light_dynamic at [%d %d %d] has invalid exponent value (%d must be between %d and %d).\n
 light_environment
 light_glspot
 light_spot
@@ -26266,6 +26657,11 @@ locHeader
 loc_key
 loc_key_weapon
 localSound
+locale::_Impl::_M_replace_facet
+locale::_S_normalize_category category not found
+locale::facet::_S_create_c_locale name not valid
+locale::facet::_S_lc_ctype_c_locale duplocale error
+locale::facet::_S_lc_ctype_c_locale newlocale error
 localhost
 localize_name
 localized_desc
@@ -26349,6 +26745,7 @@ loser_rps
 losing_team_num_caps
 lostcoast
 lowV_debrischunks
+lower
 lowerThreshold
 lowerleft
 lowerright
@@ -26947,6 +27344,7 @@ m_SolidToPlayers
 m_SoundClose
 m_SoundLevel
 m_SoundMoving
+m_SoundName
 m_SoundOpen
 m_SoundPool
 m_SoundscapeName
@@ -27164,6 +27562,7 @@ m_bCarried
 m_bCarryDeploy
 m_bCarryingObject
 m_bChargeRelease
+m_bChargedShot
 m_bCharging
 m_bCheatsEnabledDuringLevel
 m_bCheckContacts
@@ -27474,6 +27873,7 @@ m_bRainbow
 m_bRandomAnimator
 m_bRandomOwnerOnRestart
 m_bRandomRotation
+m_bReadyToBackstab
 m_bReciprocal
 m_bRegenerating
 m_bReloadHudHintDisplayed
@@ -27725,7 +28125,6 @@ m_fHalloweenEffectDuration
 m_fHalloweenEffectStartTime
 m_fHaloScale
 m_fHeadYaw
-m_fHeight
 m_fIgnoreFronts
 m_fInitHUD
 m_fInitalized
@@ -28759,6 +29158,7 @@ m_iCurrentFade
 m_iCurrentGameMaterial
 m_iCurrentMaxRagdollCount
 m_iCurrentSection
+m_iCurrentTube
 m_iCurrentWaveIdx
 m_iCustomDamageType
 m_iCustomParticleIndex
@@ -28782,6 +29182,7 @@ m_iDefaultFOV
 m_iDefaultOwner
 m_iDefaultStyle
 m_iDefenses
+m_iDeflected
 m_iDelay
 m_iDesiredBuildRotations
 m_iDesiredOverlay
@@ -28953,6 +29354,7 @@ m_iRole
 m_iRopeMaterialModelIndex
 m_iRotationInterpolator
 m_iRoundState
+m_iRoundsWon
 m_iScore
 m_iScreenHeight
 m_iScreenWidth
@@ -29663,6 +30065,7 @@ m_nNumHigh
 m_nNumKills
 m_nNumNodeHillData
 m_nNumWide
+m_nOccluderIndex
 m_nOldButtons
 m_nOldTakeDamage
 m_nOrder
@@ -29671,6 +30074,7 @@ m_nOuterMaxDist
 m_nOverlayMaterial
 m_nOverlaySequence
 m_nOverlaySize
+m_nPanelName
 m_nPauseState
 m_nPendingSequence
 m_nPhysgunState
@@ -29746,7 +30150,6 @@ m_nSquadSoundPriority
 m_nSrcEditID
 m_nStartBrightness
 m_nStartDisabled
-m_nStartEntity
 m_nStartFrame
 m_nState
 m_nStepside
@@ -30486,7 +30889,6 @@ m_vecSpecifiedSurroundingMinsPreScaled
 m_vecSprayDir
 m_vecSpread
 m_vecStandoffGoalPosition
-m_vecStart
 m_vecStartCurvePos
 m_vecStartPoint
 m_vecStart[0]
@@ -30661,6 +31063,12 @@ maxpropscreenwidth
 maxslidetime
 maxweight
 maxwind
+mbrtowc
+mbrtowc@GLIBC_2.2.5
+mbsnrtowcs
+mbsnrtowcs@GLIBC_2.2.5
+mbsrtowcs
+mbsrtowcs@GLIBC_2.2.5
 mbstowcs
 mbstowcs@GLIBC_2.2.5
 measuretarget
@@ -30701,17 +31109,10 @@ melts_in_fire
 memagold
 memalign
 memalign@GLIBC_2.2.5
-memcmp
-memcmp@GLIBC_2.2.5
-memcpy
 memcpy@GLIBC_2.14
 memcpy_s: buffer overflow
-memmove
-memmove@GLIBC_2.2.5
 memmove_s: buffer overflow
 mempool.cpp
-memset
-memset@GLIBC_2.2.5
 menuclosed
 menuopen
 menuselect
@@ -30722,7 +31123,6 @@ merasmus_blood_bits
 merasmus_book_attack
 merasmus_dancer
 merasmus_dazed
-merasmus_dazed_explosion
 merasmus_decap
 merasmus_escape_warning
 merasmus_escaped
@@ -30911,6 +31311,7 @@ models/brokenglass/glassbroken_03b
 models/brokenglass/glassbroken_03c
 models/brokenglass/glassbroken_03d
 models/brokenglass/glassbroken_solid
+models/brokenglass_piece.mdl
 models/brokentile/tilebroken_01a
 models/brokentile/tilebroken_01b
 models/brokentile/tilebroken_01c
@@ -30925,9 +31326,9 @@ models/brokentile/tilebroken_03c
 models/brokentile/tilebroken_03d
 models/buggy.mdl
 models/buildables/%s%s
-models/buildables/dispenser.mdl
 models/buildables/dispenser_blueprint.mdl
 models/buildables/dispenser_light.mdl
+models/buildables/dispenser_lvl2.mdl
 models/buildables/dispenser_lvl2_light.mdl
 models/buildables/dispenser_lvl3.mdl
 models/buildables/dispenser_lvl3_light.mdl
@@ -30972,7 +31373,6 @@ models/items/ammopack_medium_bday.mdl
 models/items/ammopack_small.mdl
 models/items/ammopack_small_bday.mdl
 models/items/banana/plate_banana.mdl
-models/items/car_battery01.mdl
 models/items/crystal_ball_pickup.mdl
 models/items/crystal_ball_pickup_major.mdl
 models/items/currencypack_large.mdl
@@ -31204,7 +31604,6 @@ mount@GLIBC_2.2.5
 moveHelper->ProcessImpacts
 moveToSpectatorTeam
 moveTolerance
-move_keyframed
 move_rope
 move_scale
 move_speed_reduction
@@ -31314,6 +31713,7 @@ mp_winlimit
 mp_winlimit %d;
 msg_fallback
 msgprotobuf.cpp
+mt19937
 mul_nonrocketjump_attackrate
 mult_aiming_knockback_resistance
 mult_airblast_cone_scale
@@ -31468,6 +31868,7 @@ mvm_soldier_shockwave
 mvm_squad_surplus_reward
 mvm_tank_destroyed_by_players
 mvm_tours
+mvm_wave_complete
 mvm_wave_failed
 my_team:0
 my_team:1
@@ -31744,6 +32145,7 @@ noise2
 noise_maker
 nolistrepeats
 non economy
+non-dereferenceable recursive directory iterator cannot pop
 non-entity blocked area %d\n
 noquickplay
 noquota
@@ -31854,6 +32256,8 @@ onworldimpact
 opacity
 open /dev/random
 open /dev/urandom
+openat
+openat@GLIBC_2.4
 opendir
 opendir@GLIBC_2.2.5
 operation
@@ -31867,6 +32271,7 @@ optional
 or_crit_vs_not_playercond
 or_crit_vs_playercond
 or_minicrit_vs_playercond_burning
+orientation
 orientationtype
 origin_max_delta
 origin_relative
@@ -31895,6 +32300,7 @@ overview
 owner_entindex
 ownerid
 owninginstance
+pBCAI_Motor
 pEntity->PhysicsSimulate
 pGears
 pVehicle->ProcessMovement()
@@ -31930,6 +32336,7 @@ partial_cap_points_rate
 particle/SmokeStack.vmt
 particle/particle_noisesphere
 particle/particle_smokegrenade
+particle/sparkles
 particleSystemDefinitions
 particle_attachment
 particle_nemesis_blue
@@ -31980,7 +32387,6 @@ pd_snowville_event
 pd_watergate
 pda_click
 pda_engineer
-pda_panel
 pda_panel_spy_invis
 pda_panel_spy_invis_pocket_hm
 pda_panel_spy_invis_pocket_ttg
@@ -32137,6 +32543,7 @@ player_command.cpp
 player_condition
 player_connect
 player_debug_print_damage
+player_destroyed_pipebomb
 player_directhit_stun
 player_disconnect
 player_disguise
@@ -32218,6 +32625,7 @@ point_anglesensor
 point_angularvelocitysensor
 point_blocked
 point_bonusmaps_accessor
+point_broadcastclientcommand
 point_camera
 point_capture_end_sound
 point_capture_interrupted_sound
@@ -32258,6 +32666,8 @@ point_worldtext
 points_%d
 points_per_player
 polish
+poll
+poll@GLIBC_2.2.5
 popularity_seed
 populator_internal_spawn_point
 portalnumber
@@ -32324,6 +32734,7 @@ powerup_supernova_explode_red
 powerup_supernova_ready
 powerup_supernova_strike_blue
 powerup_supernova_strike_red
+powf
 powf@GLIBC_2.27
 preciptype
 precommands
@@ -32341,6 +32752,7 @@ primary_ammo
 primary_death_backstab
 primary_death_headshot
 primary_deploybomb
+print
 print soundscapes
 projectfile_breadmonster_jarate
 projectfile_breadmonster_madmilk
@@ -32406,6 +32818,10 @@ pszCurrentValue
 pszOrgValue
 pt_BR
 pt_PT
+pthread_cond_broadcast
+pthread_cond_broadcast@GLIBC_2.3.2
+pthread_cond_wait
+pthread_cond_wait@GLIBC_2.3.2
 pthread_mutex_destroy
 pthread_mutex_destroy@GLIBC_2.2.5
 pthread_mutex_init
@@ -32427,11 +32843,14 @@ pumpkin_explode
 pumpkin_lord_killed
 pumpkin_lord_summoned
 punchangle
+punct
 puntsound
 purgatory_escaped
 pushdir
 pusher
 pushing entity (%s) that has parent (%s)!\n
+putwc
+putwc@GLIBC_2.2.5
 pve_win_panel
 pvsplayer
 pyro_blast
@@ -32447,6 +32866,7 @@ pyrovision_scorchshot_trail_crit_blue
 pyrovision_scorchshot_trail_crit_red
 pyrovision_scorchshot_trail_red
 python
+p}?fff?
 qangle
 qangle_array
 qsort
@@ -32503,6 +32923,12 @@ random position on model
 random yaw
 random_attribute_templates
 random_attributes
+random_device could not be read
+random_device: getentropy failed
+random_device: rdrand failed
+random_device: rdseed failed
+random_device::random_device(const std::string&): device not available
+random_device::random_device(const std::string&): unsupported token
 random_owner_on_restart
 random_rotation
 randommap
@@ -32526,11 +32952,19 @@ rd_robot_dispenser
 rd_robot_explosion
 rd_robot_impact
 rd_robot_killed
+rdrand
+rdrnd
+rdseed
 read /dev/random
 read /dev/urandom
+read_symlink
+readdir
 readdir64
 readdir64@GLIBC_2.2.5
+readdir@GLIBC_2.2.5
 reading file '%s' of legacy format '%s' - dmxconvert this file to a newer format!\n
+readlink
+readlink@GLIBC_2.2.5
 realloc
 realloc@GLIBC_2.2.5
 really freaking heavy
@@ -32542,6 +32976,8 @@ recipe_output
 recipes
 reciprocal
 recorder
+recursive directory iterator cannot open directory
+recursive directory iterator cannot pop
 red_capture
 red_score
 red_score_prev
@@ -32558,6 +32994,7 @@ reflected_flame_dmg_reduction
 refreshing
 refrigerator
 refunded
+registry.kv
 relativedamping
 relativetag
 relativetag "%s" "%s"\n
@@ -32568,7 +33005,9 @@ remap_scalar
 remapactivity
 remapped_item_def_index
 rematch_failed_to_create
+remove
 remove 0x%p: %s-%s (%d-%d) [%d in play, %d max]\n
+remove@GLIBC_2.2.5
 remove_nemesis_relationships
 removecond
 removing %d (%d): %s : %5.3f (%.3f)\n
@@ -32913,6 +33352,8 @@ sd_doomsday_event
 second_sequence_random
 secondary_ammo
 seconds_added
+secure_getenv
+secure_getenv@GLIBC_2.17
 seenbyplayer
 seeplayer
 selectable
@@ -32920,6 +33361,8 @@ selectcmd
 self_destruct_think
 self_mark_for_death
 selfcollisions
+sendfile
+sendfile@GLIBC_2.2.5
 sentry_build_rate_multiplier
 sentry_killed_revenge
 sentry_on_go_active
@@ -32927,6 +33370,7 @@ sentrydamage_1
 sentrydamage_2
 sentrydamage_3
 sentrydamage_4
+sequence number %d too high in sheet file!!!\n
 sequence_number
 sequence_number 1
 sequenceduration
@@ -32989,11 +33433,15 @@ set_weapon_mode
 setang
 setang_exact
 sethealth
+setlocale
+setlocale@GLIBC_2.2.5
 setmodel
 setpos
 setpos into world, use noclip to unstick yourself!\n
 setpos_exact
 setup_length
+setvbuf
+setvbuf@GLIBC_2.2.5
 sf14.Merasmus.DuckHunt.BonusDucks
 sf14.Merasmus.Soccer.GoalBlue
 sf14.Merasmus.Soccer.GoalRed
@@ -33145,6 +33593,7 @@ soundscape_debug
 soundscape_flush
 soundtype
 soundunlockedoverride
+space
 space shuttle
 spanish
 spark_shower
@@ -33264,7 +33713,6 @@ sprintf@GLIBC_2.2.5
 spritename
 sprites/blueglow1.vmt
 sprites/fire_floor.vmt
-sprites/flamelet1
 sprites/flamelet2
 sprites/flamelet3
 sprites/flamelet4
@@ -33290,7 +33738,6 @@ spunup_push_force_immunity
 spy_start_disguise_blue
 spy_start_disguise_red
 squadname
-squadslot
 squirrel
 srcid
 start drop date
@@ -33331,105 +33778,23 @@ staticsolid
 stats.txt
 stats_resetround
 statsidentifier
+status
+statvfs
+statvfs@GLIBC_2.2.5
 stay_time
-std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
-std::_Rb_tree_decrement(std::_Rb_tree_node_base*)@GLIBCXX_3.4
-std::_Rb_tree_increment(std::_Rb_tree_node_base const*)
-std::_Rb_tree_increment(std::_Rb_tree_node_base const*)@GLIBCXX_3.4
-std::_Rb_tree_increment(std::_Rb_tree_node_base*)
-std::_Rb_tree_increment(std::_Rb_tree_node_base*)@GLIBCXX_3.4
-std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
-std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)@GLIBCXX_3.4
-std::_Rb_tree_rebalance_for_erase(std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
-std::_Rb_tree_rebalance_for_erase(std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)@GLIBCXX_3.4
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_append(char const*, unsigned long)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_append(char const*, unsigned long)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_construct(unsigned long, char)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_construct(unsigned long, char)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_create(unsigned long&, unsigned long)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_create(unsigned long&, unsigned long)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_dispose()
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_dispose()@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace(unsigned long, unsigned long, char const*, unsigned long)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace(unsigned long, unsigned long, char const*, unsigned long)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace_aux(unsigned long, unsigned long, unsigned long, char)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace_aux(unsigned long, unsigned long, unsigned long, char)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, char const*, char const*)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, char const*, char const*)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::append(char const*)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::append(char const*)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(char const*, std::allocator<char> const&)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(char const*, std::allocator<char> const&)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::compare(char const*) const
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::compare(char const*) const@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::compare(unsigned long, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&) const
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::compare(unsigned long, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&) const@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::find(char const*, unsigned long, unsigned long) const
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::find(char const*, unsigned long, unsigned long) const@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::find(char, unsigned long) const
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::find(char, unsigned long) const@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::find_first_not_of(char const*, unsigned long, unsigned long) const
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::find_first_not_of(char const*, unsigned long, unsigned long) const@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::find_first_of(char const*, unsigned long, unsigned long) const
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::find_first_of(char const*, unsigned long, unsigned long) const@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::push_back(char)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::push_back(char)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::reserve(unsigned long)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::reserve(unsigned long)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::resize(unsigned long, char)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::resize(unsigned long, char)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::rfind(char, unsigned long) const
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::rfind(char, unsigned long) const@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::swap(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&)
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::swap(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&)@GLIBCXX_3.4.21
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string()
-std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string()@GLIBCXX_3.4.21
-std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const
-std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const@GLIBCXX_3.4.18
-std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const
-std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const@GLIBCXX_3.4.18
-std::__throw_bad_alloc()
-std::__throw_bad_alloc()@GLIBCXX_3.4
-std::__throw_bad_function_call()
-std::__throw_bad_function_call()@GLIBCXX_3.4.14
-std::__throw_length_error(char const*)
-std::__throw_length_error(char const*)@GLIBCXX_3.4
-std::__throw_logic_error(char const*)
-std::__throw_logic_error(char const*)@GLIBCXX_3.4
-std::__throw_out_of_range_fmt(char const*, ...)
-std::__throw_out_of_range_fmt(char const*, ...)@GLIBCXX_3.4.20
-std::bad_alloc::~bad_alloc()
-std::bad_alloc::~bad_alloc()@GLIBCXX_3.4
-std::basic_istream<char, std::char_traits<char>>& std::ws<char, std::char_traits<char>>(std::basic_istream<char, std::char_traits<char>>&)
-std::basic_istream<char, std::char_traits<char>>& std::ws<char, std::char_traits<char>>(std::basic_istream<char, std::char_traits<char>>&)@GLIBCXX_3.4
-std::basic_ostream<char, std::char_traits<char>>& std::__ostream_insert<char, std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>>&, char const*, long)
-std::basic_ostream<char, std::char_traits<char>>& std::__ostream_insert<char, std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>>&, char const*, long)@GLIBCXX_3.4.9
-std::exception::~exception()
-std::exception::~exception()@GLIBCXX_3.4
-std::ios_base::Init::Init()
-std::ios_base::Init::Init()@GLIBCXX_3.4
-std::ios_base::Init::~Init()
-std::ios_base::Init::~Init()@GLIBCXX_3.4
-std::istream::putback(char)
-std::istream::putback(char)@GLIBCXX_3.4
-std::istream::read(char*, long)
-std::istream::read(char*, long)@GLIBCXX_3.4
-std::ostream::write(char const*, long)
-std::ostream::write(char const*, long)@GLIBCXX_3.4
-std::set_new_handler(void (*)())
-std::set_new_handler(void (*)())@GLIBCXX_3.4
-std::terminate()
-std::terminate()@GLIBCXX_3.4
-std::uncaught_exception()
-std::uncaught_exception()@GLIBCXX_3.4
+std::__facet_shims::__any_string::operator std::basic_string<char, std::char_traits<char>, std::allocator<char>><char>() const
+std::__facet_shims::__any_string::operator std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>><wchar_t>() const
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::bad_typeid
 stderr
 stderr@GLIBC_2.2.5
+stdin
+stdin@GLIBC_2.2.5
+stdout
+stdout@GLIBC_2.2.5
 steam://openurl/
 steam://openurl_external/
 steamextra/tier1/tsmultimempool.cpp
@@ -33497,8 +33862,11 @@ strdup
 strdup@GLIBC_2.2.5
 strerror
 strerror@GLIBC_2.2.5
+strerror_r
+strerror_r@GLIBC_2.2.5
 strftime
 strftime@GLIBC_2.2.5
+string::string
 string_array
 string_lookups
 strings::Substitute format string invalid: asked for "$
@@ -33529,6 +33897,8 @@ strtok
 strtok@GLIBC_2.2.5
 strtol
 strtol@GLIBC_2.2.5
+strtold_l
+strtold_l@GLIBC_2.3
 strtoll
 strtoll@GLIBC_2.2.5
 strtoul
@@ -33724,10 +34094,12 @@ swedish
 swimming_mastery
 switch_teams
 symlink@GLIBC_2.2.5
+symlink_status
 synctofollowinggesture
 synctofollowinggesture\n
 sysconf
 sysconf@GLIBC_2.2.5
+system
 systemloadscale
 szFailSchedule
 szIdealSchedule
@@ -33772,7 +34144,6 @@ taunt success sound offset
 taunt turn acceleration time
 taunt turn speed
 taunt01
-taunt06
 tauntInHell
 taunt_concept
 taunt_flip_land_blue
@@ -33862,14 +34233,16 @@ teleporter_blue_entrance
 teleporter_blue_exit
 teleporter_blur
 teleporter_build_rate_multiplier
-teleporter_direction
 teleporter_red_charged
 teleporter_red_entrance
 teleporter_red_exit
 teleportfollowdistance
 teleportoffset
+temp_directory_path
 template_debug
-template_t
+terminate called after throwing an instance of '
+terminate called recursively\n
+terminate called without an active exception\n
 test_dispatcheffect
 test_effect
 test_entity_blocker
@@ -33993,7 +34366,6 @@ tf_bot_engineer_mvm_hint_min_distance_from_bomb
 tf_bot_engineer_mvm_sentry_hint_bomb_backward_range
 tf_bot_engineer_mvm_sentry_hint_bomb_forward_range
 tf_bot_engineer_retaliate_range
-tf_bot_escort_range
 tf_bot_fetch_lost_flag_time
 tf_bot_fire_weapon_allowed
 tf_bot_fire_weapon_min_time
@@ -34975,6 +35347,8 @@ training_class
 training_complete
 training_continue
 training_prop_dynamic
+transaction clone for operator delete(void*)
+transaction clone for operator new[](unsigned long)
 trigger_add_or_remove_tf_player_attributes
 trigger_add_tf_player_condition
 trigger_apply_impulse
@@ -35020,6 +35394,9 @@ trigger_togglesave
 trigger_transition
 trigger_vphysics_motion
 trigger_wind
+true
+truncate
+truncate@GLIBC_2.2.5
 ttg_watch_spy
 turkish
 tv_allow_camera_man
@@ -35050,10 +35427,15 @@ tw_spybot_hood
 typeinfo for CThread
 typeinfo for CryptoPP::BlockPaddingSchemeDef::BlockPaddingScheme
 typeinfo for CryptoPP::Integer::RandomNumberType
+typeinfo for __cxxabiv1::__class_type_info
+typeinfo for __cxxabiv1::__enum_type_info
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__si_class_type_info
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for bool
-typeinfo for bool@CXXABI_1.3
 typeinfo for float
-typeinfo for float@CXXABI_1.3
 typeinfo for google::protobuf::Closure
 typeinfo for google::protobuf::DescriptorBuilder::OptionInterpreter::AggregateOptionFinder
 typeinfo for google::protobuf::DescriptorDatabase
@@ -35124,24 +35506,20 @@ typeinfo for google::protobuf::io::ZeroCopyInputStream
 typeinfo for google::protobuf::io::ZeroCopyOutputStream
 typeinfo for int
 typeinfo for int const*
-typeinfo for int const*@CXXABI_1.3
-typeinfo for int@CXXABI_1.3
-typeinfo for std::bad_alloc
-typeinfo for std::bad_alloc@GLIBCXX_3.4
-typeinfo for std::exception
-typeinfo for std::exception@GLIBCXX_3.4
 typeinfo for unsigned char
 typeinfo for unsigned char const*
-typeinfo for unsigned char const*@CXXABI_1.3
 typeinfo for unsigned char*
-typeinfo for unsigned char*@CXXABI_1.3
-typeinfo for unsigned char@CXXABI_1.3
 typeinfo for unsigned int
-typeinfo for unsigned int@CXXABI_1.3
 typeinfo for unsigned long long
-typeinfo for unsigned long long@CXXABI_1.3
 typeinfo name for CryptoPP::BlockPaddingSchemeDef::BlockPaddingScheme
 typeinfo name for CryptoPP::Integer::RandomNumberType
+typeinfo name for __cxxabiv1::__class_type_info
+typeinfo name for __cxxabiv1::__enum_type_info
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo name for __cxxabiv1::__si_class_type_info
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for google::protobuf::Closure
 typeinfo name for google::protobuf::DescriptorBuilder::OptionInterpreter::AggregateOptionFinder
 typeinfo name for google::protobuf::DescriptorDatabase
@@ -35225,8 +35603,13 @@ ultra_rare
 unable to create world_item %d\n
 uncloak
 undefined
+ungetc
+ungetc@GLIBC_2.2.5
+ungetwc
+ungetwc@GLIBC_2.2.5
 unhandled input: (%s) -> (%s), from (%s,%s); target entity not found\n
 unhandled input: (%s) -> (%s,%s)\n
+uninitialized __any_string
 uninterpreted_option
 unissubs
 unknown
@@ -35235,6 +35618,8 @@ unknown_variant_type
 unlimited quantity
 unlimited_quantity
 unlink@GLIBC_2.2.5
+unlinkat
+unlinkat@GLIBC_2.4
 unlisted_items_default_to
 unload
 unlock_point
@@ -35256,6 +35641,7 @@ unusual_index
 unusualifier
 upgrade_rate_mod
 upgrades_file_changed
+upper
 upperThreshold
 upperleft
 upperright
@@ -35286,6 +35672,8 @@ uses_credits
 uses_method
 util.cpp
 utime@GLIBC_2.2.5
+utimensat
+utimensat@GLIBC_2.6
 utimes@GLIBC_2.2.5
 utlstringtoken
 v@Lead
@@ -35350,6 +35738,7 @@ vector4
 vector4_array
 vector::_M_default_append
 vector::_M_fill_insert
+vector::_M_realloc_append
 vector::_M_realloc_insert
 vector::reserve
 vector<bool>::_M_fill_insert
@@ -35479,11 +35868,13 @@ vswprintf
 vswprintf@GLIBC_2.2.5
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__enum_type_info
-vtable for __cxxabiv1::__enum_type_info@CXXABI_1.3
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
 vtable for __cxxabiv1::__pointer_type_info
-vtable for __cxxabiv1::__pointer_type_info@CXXABI_1.3
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
 vtable for google::protobuf::Closure
 vtable for google::protobuf::DescriptorBuilder::OptionInterpreter::AggregateOptionFinder
 vtable for google::protobuf::DescriptorDatabase
@@ -35552,9 +35943,8 @@ vtable for google::protobuf::io::OstreamOutputStream::CopyingOstreamOutputStream
 vtable for google::protobuf::io::StringOutputStream
 vtable for google::protobuf::io::ZeroCopyInputStream
 vtable for google::protobuf::io::ZeroCopyOutputStream
-vtable for std::bad_alloc
-vtable for std::bad_alloc@GLIBCXX_3.4
 vtune
+w+bx
 wade
 wait
 waiting for lock
@@ -35590,8 +35980,12 @@ wc_create
 wc_destroy
 wc_destroy_undo
 wc_link_edit
+wcrtomb
+wcrtomb@GLIBC_2.2.5
 wcschr
 wcschr@GLIBC_2.2.5
+wcscmp
+wcscmp@GLIBC_2.2.5
 wcscpy
 wcscpy@GLIBC_2.2.5
 wcslen
@@ -35600,12 +35994,16 @@ wcsncat
 wcsncat@GLIBC_2.2.5
 wcsncpy
 wcsncpy@GLIBC_2.2.5
+wcsnrtombs
+wcsnrtombs@GLIBC_2.2.5
 wcstol
 wcstol@GLIBC_2.2.5
 wcstoll
 wcstoll@GLIBC_2.2.5
 wcstombs
 wcstombs@GLIBC_2.2.5
+wctob
+wctob@GLIBC_2.2.5
 weapon%d
 weaponSlot
 weapon_*
@@ -35672,6 +36070,16 @@ winreason
 wipe_nav_attributes
 wm_bodygroup_override
 wm_bodygroup_state_override
+wmemchr
+wmemchr@GLIBC_2.2.5
+wmemcmp
+wmemcmp@GLIBC_2.2.5
+wmemcpy
+wmemcpy@GLIBC_2.2.5
+wmemmove
+wmemmove@GLIBC_2.2.5
+wmemset
+wmemset@GLIBC_2.2.5
 work item
 workshop/%llu
 workshop/%s.ugc%llu
@@ -35692,8 +36100,8 @@ wrapped_gift
 wrapped_gift_item_def
 wrench_builds_minisentry
 wrinkler
-write
-write@GLIBC_2.2.5
+writev
+writev@GLIBC_2.2.5
 wrong submessage type
 www.
 xbox_autothrottle
@@ -35701,6 +36109,7 @@ xbox_steering_deadzone
 xbox_throttlebias
 xbox_throttlespoof
 xc_crouch_debounce
+xdigit
 xen_plant*
 xifier_class_remap
 xmas.jingle
@@ -35717,6 +36126,7 @@ y?Weapon_Hands.Push
 yCBlockCapture
 yDCAI_SpeechFilter
 yDThis should not happen!
+yDphysfollower_t
 yaw "%i"\n
 yaw: %f
 yielding
@@ -35734,7 +36144,6 @@ zombie_lifetime
 zombie_type
 zombiezombiezombiezombie
 zone_id
-zt?ERROR: too many nodes in map, deleting last node.\n
 zz_blue_koth_timer
 zz_red_koth_timer
 zz_stopwatch_timer
