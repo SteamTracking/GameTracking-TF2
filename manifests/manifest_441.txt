@@ -1,10 +1,10 @@
 Content Manifest for Depot 441 
 
-Manifest ID / date     : 1985564658479596121 / 11/23/2026 20:13:47 
+Manifest ID / date     : 3249542990067351105 / 11/26/2026 01:35:03 
 Total number of files  : 1198 
 Total number of chunks : 31784 
-Total bytes on disk    : 31747414274 
-Total bytes compressed : 16877619008 
+Total bytes on disk    : 31747414270 
+Total bytes compressed : 16877618992 
 
 
           Size Chunks File SHA                                 Flags Name
@@ -953,7 +953,7 @@ Total bytes compressed : 16877619008
        3407392      5 918cddc132800710e5a7768070769188a8687e40     0 tf/resource/tf_latam.txt
        3186508      5 93e75b0bef3803fa2986c81d2d9f7eb1527d7a11     0 tf/resource/tf_norwegian.txt
        2097132      2 a63e1d0dd1c4985d845859dcf19e4c598277a868     0 tf/resource/tf_pirate.txt
-       3284462      5 d1870cf07fcb7855737003de9a44e1e049e51361     0 tf/resource/tf_polish.txt
+       3284458      5 33a7d635b662ebc7ce42dc197d233930752dad3e     0 tf/resource/tf_polish.txt
        3454384      5 0572f84583342f13ea4d9ac7ade598fec4f5725d     0 tf/resource/tf_portuguese.txt
         149414      1 ff91c281c9e11a9367e63f74bff7f807caa3bb62     0 tf/resource/tf_proto_obj_defs_brazilian.txt
         151336      1 ba878772f26a5bc1b610363c02a3579641bb560e     0 tf/resource/tf_proto_obj_defs_bulgarian.txt
@@ -1026,7 +1026,7 @@ Total bytes compressed : 16877619008
              0      0 0000000000000000000000000000000000000000    40 tf/scripts/protodefs
        9830030     12 c1e6da656014c8f812bbaeed03d23390ba617388     0 tf/scripts/protodefs/proto_defs.vpd
            128      1 b2d13012fa04f38a1e1b98cdb1a9be81a9c59ccd     0 tf/scripts/protodefs/proto_defs.vpd.sig
-           118      1 2ee8839cad109e3c81117413e93a19a6c987e4f6     0 tf/steam.inf
+           118      1 c44916844d0f981a8edd3d1aebcbe67833d3b073     0 tf/steam.inf
      106800068    121 3f23a3aa21657addd8867d11e29e0092997e01ee     0 tf/tf2_misc_000.vpk
      107163006    113 aa3117ea852c067aa51f8df93c344cac8eb33c3f     0 tf/tf2_misc_001.vpk
      107148876    103 e4599d865a7da07b625a0b0245bc1e8e320e7bcd     0 tf/tf2_misc_002.vpk

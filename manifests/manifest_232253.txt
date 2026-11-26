@@ -1,10 +1,10 @@
 Content Manifest for Depot 232253 
 
-Manifest ID / date     : 6016570021038958983 / 11/23/2026 20:14:42 
+Manifest ID / date     : 7354194045383717387 / 11/26/2026 01:36:23 
 Total number of files  : 105 
 Total number of chunks : 486 
-Total bytes on disk    : 469820207 
-Total bytes compressed : 338615328 
+Total bytes on disk    : 469828591 
+Total bytes compressed : 338620976 
 
 
           Size Chunks File SHA                                 Flags Name
@@ -71,7 +71,7 @@ Total bytes compressed : 338615328
         387648      1 fbcf12c8d21f8e68e7c1670d16f4e1d1459e83cf     0 bin/linux64/video_services.so
        1823968      2 93e8a0ed124519634e561a918df0232b473865e6     0 bin/linux64/video_source2wrapper.so
        1936152      2 723e58c66faac09971bd5dd4f63b255d56febfc2     0 bin/linux64/vphysics.so
-       3028080      3 361817e2e9893998061c10a0ff92928628fa39b3     0 bin/linux64/vphysics_rubikon.so
+       3036272      3 d83eaccb697868b10e4837802855e2e90a4e69b4     0 bin/linux64/vphysics_rubikon.so
         896264      1 85854474637f7dec5cf27be8e576b759bee90857     0 bin/linux64/vscript.so
         791032      1 58cd937d0c82e66106d8ca2772db1564b80e7e61     0 bin/linux64/vtex_dll.so
            110      1 d80a8cec4676fdc0f5467b2d67adcdefe83979eb     0 bin/sdkenginetools.txt
@@ -83,8 +83,8 @@ Total bytes compressed : 338615328
        1323798      2 dcb306efc9faf450af6604a844b3d7460daf9ae5     0 hl2/media/valve.webm
              0      0 0000000000000000000000000000000000000000    40 tf
           3056      1 21e06ca61ba7babef6a4b6bc37826626043fe713    20 tf.sh
-      49322664     48 14dade847c7dea2ca97e53d75fda788367ba952a     0 tf/bin/linux64/client.so
-      30534832     30 b463bb3f7ab050bf53e358c9a3720a2586153b0e     0 tf/bin/linux64/server.so
+      49322760     48 46cf2ef973f30dc2b91137c06ff57e3ff21b7a11     0 tf/bin/linux64/client.so
+      30534928     30 2266ad6ceab1bf9192da21dbeb4f0b3e68772449     0 tf/bin/linux64/server.so
              0      0 0000000000000000000000000000000000000000    40 tf/media
        6085011      6 05fbc73e04bf74a4f426da4a16058ff3da406c9b     0 tf/media/arena_intro.webm
        5687549      6 ba3df06b936cc8d3eabea3a385c3c7990975c106     0 tf/media/cp_badlands.webm

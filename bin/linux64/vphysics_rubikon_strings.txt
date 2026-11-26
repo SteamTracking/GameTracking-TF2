@@ -273,7 +273,6 @@ $tI<br>VEngineCvar004
 12RnWheelJoint
 13RnMeshContact
 13RnPulleyJoint
-13RnSphereShape
 14CBaseAppSystemI8IPhysicsE
 14ConCommandBase
 14IPhysicsObject
@@ -359,6 +358,7 @@ $tI<br>VEngineCvar004
 6ConVar
 6RnBody
 7IConVar
+7Invalid motion event\n
 7RnJoint
 7RnShape
 80.0
@@ -376,11 +376,11 @@ $tI<br>VEngineCvar004
 =11RnMeshShape
 =16RnSphericalJoint
 ==Observer 
-=Invalid motion event\n
 >fff?
 >fff?fff?
 ?24IPhysicsFrictionSnapshot
 @<a href=
+A13RnSphereShape
 AKST
 ASCII
 ASCII//TRANSLIT
@@ -470,11 +470,13 @@ Failed to load COLLIDE_POLY solid %d. Skipping...\n
 Failed to load COLLIDE_RUBIKON solid %d. Skipping...\n
 Failed to load legacy solid %d. Skipping...\n
 Failed to read COLLIDE_RUBIKON DMX.\n
+Failed to resolve saved physics pointer 0x%llx.\n
 Failed to restore spring enpoints\n
 February
 Friday
-Fudge factor of joint friction for ragdoll constraints inside a constraint group
-Fudge factor of speed + force for constraints inside a constraint group
+Fudge factor of joint friction for ragdoll constraints
+Fudge factor of joint friction for ragdoll constraints with a single degree of freedom...
+Fudge factor of speed + force for sliding constraint motors
 Future already retrieved
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GLIBCXX_TUNABLES
@@ -607,7 +609,6 @@ NodeData
 NodeTriangleOffsets
 November
 Number of position steps to perform.
-Number of substeps divide a single step into.
 Number of velocity steps to perform.
 October
 One of auto, shape_type, body_type, sleep, island_index, island_stamp, active_index, material.
@@ -769,6 +770,7 @@ TFPX
 TLS init function for 
 TLS wrapper function for 
 Tasks
+The mass ratio of which if an object pair exceeds, a 'soft' contact will be used instead. -1 to disable soft contacts. 10 is a good starting value if you want this behaviour.
 ThreadGetCurrentId
 Thursday
 Tire friction coefficient scale at peak slip. Applies to newly created vehicles.
@@ -831,9 +833,12 @@ W%d manifolds:%d culled:%d sep:%.2f%s
 Warning
 Wednesday
 Whether or not continuous collision detection will be enabled.
+Whether or not to disable restitution on bodies with dynamic<->dynamic joints.
 Whether or not to disable the player controller
 Whether or not to disable the player controller's touching check.
+Whether or not to enable CCD for ragdolls... TOI + ragdolls can be a bit funky as it doesn't consider joints and restitutions of those systems...
 Whether or not to enable automatic sleeping of objects.
+Which hit normal box traces report: 0 = the trace solver's rounded normal, 1 = the face that was hit.
 Worker
 You define specify the base material %s before it can be used in %s.\n
 You're using this in a branch of Source without the sv_wallbugs convar either existing or enabled. This MUST to be enabled for player movement to work correctly with VPhysics Rubikon!\n
@@ -1696,8 +1701,10 @@ vphysics_save_cshadowcontroller_t
 vphysics_save_cvehiclecontroller_t
 vphysics_save_motioncontroller_t
 vphysics_save_shadowcontrolparams_t
-vrn_constraint_group_motor_fudge
-vrn_constraint_group_ragdoll_friction_fudge
+vrn_ccd
+vrn_constraint_motor_fudge
+vrn_constraint_ragdoll_friction_fudge
+vrn_constraint_ragdoll_hinge_friction_fudge
 vrn_constraint_strength_scale
 vrn_constraint_use_block_solver
 vrn_constraint_use_block_solver_ragdoll
@@ -1709,6 +1716,7 @@ vrn_debugrender_color_mode
 vrn_debugrender_picture_in_picture
 vrn_debugrender_shaded
 vrn_debugrender_wireframe
+vrn_disable_restitution_with_joints
 vrn_dump_constants
 vrn_environment.cpp
 vrn_friction_energy_scale
@@ -1716,7 +1724,6 @@ vrn_gravity_scale
 vrn_is_rubikon
 vrn_iterations_position
 vrn_iterations_velocity
-vrn_linearcast
 vrn_max_threads
 vrn_perf
 vrn_player_debug
@@ -1726,11 +1733,13 @@ vrn_player_depenetration_max_correction
 vrn_player_disable
 vrn_player_disable_touching_check
 vrn_player_skin
+vrn_ragdoll_ccd
 vrn_saverestore.cpp
 vrn_singlestep
 vrn_sleep_auto
+vrn_soft_contact_mass_ratio
 vrn_step
-vrn_substeps
+vrn_trace_box_normal_mode
 vrn_vehicle_airboat_debug
 vrn_vehicle_airboat_fixed_gravity
 vrn_vehicle_airborne_suspension_scale

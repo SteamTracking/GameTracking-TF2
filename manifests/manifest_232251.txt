@@ -1,10 +1,10 @@
 Content Manifest for Depot 232251 
 
-Manifest ID / date     : 3128696242745256676 / 11/23/2026 20:14:27 
+Manifest ID / date     : 6192654012155431519 / 11/26/2026 01:35:47 
 Total number of files  : 303 
 Total number of chunks : 764 
-Total bytes on disk    : 614046805 
-Total bytes compressed : 419105472 
+Total bytes on disk    : 614056533 
+Total bytes compressed : 419110928 
 
 
           Size Chunks File SHA                                 Flags Name
@@ -259,7 +259,7 @@ Total bytes compressed : 419105472
         219800      1 8d677c7fcede25f831dd4511a631e56739f2a43c     0 bin/x64/video_services.dll
         243352      1 a10f7daa2822e91c535eb10bd7743980c2598314     0 bin/x64/video_source2wrapper.dll
        1412760      2 51c7c82a2ea1cf596cc32d1be4ec0a4350af1932     0 bin/x64/vphysics.dll
-       1705624      2 2b8cb6743053ed18cb820d0bd659a261d916ce07     0 bin/x64/vphysics_rubikon.dll
+       1714328      2 b57156818fd8ca2a419a9de1ceb92aaa18f65e09     0 bin/x64/vphysics_rubikon.dll
         993432      1 daeb61b492c423f76c51bc954d7b160045dd3c5a     0 bin/x64/vpk.exe
         206488      1 aeb4704b1226307971aac961bc63507e1d1c3815     0 bin/x64/vrad.exe
        1202840      2 becadb48c16ef008e83d836e1c5f16887d59f582     0 bin/x64/vrad_dll.dll
@@ -278,11 +278,11 @@ Total bytes compressed : 419105472
              0      0 0000000000000000000000000000000000000000    40 tf
         165016      1 a65ec1e74b6d10f59d6f91ccb1d372e584ac8c47     0 tf.exe
              0      0 0000000000000000000000000000000000000000    40 tf/bin
-      14388888     14 bf6efb11c93bef5a0cf3684b8ef97d71f5c9f08a     0 tf/bin/client.dll
-      11493016     11 49c91b52938646538f92d12ce9dbf4cddc7d5dc7     0 tf/bin/server.dll
+      14388888     14 ae332822819bdb3e4f96b9bc792f412ccc443f3a     0 tf/bin/client.dll
+      11493528     11 8892c27e063c3501dbd826f9a338e6f8388dd5da     0 tf/bin/server.dll
              0      0 0000000000000000000000000000000000000000    40 tf/bin/x64
-      18797208     18 ffb37652ba627dfea245eff24e772a52c573e322     0 tf/bin/x64/client.dll
-      15378584     15 28ff4b59b1e9769c3e9c83625b2d1fd75bb81078     0 tf/bin/x64/server.dll
+      18797208     18 db209f23ad8605c3b22e69c06c0dfd3414c5b64b     0 tf/bin/x64/client.dll
+      15379096     15 dbbc1e9e1a2c82ceb24853a0e13431b37538c8d0     0 tf/bin/x64/server.dll
              0      0 0000000000000000000000000000000000000000    40 tf/media
        6085011      6 05fbc73e04bf74a4f426da4a16058ff3da406c9b     0 tf/media/arena_intro.webm
        5687549      6 ba3df06b936cc8d3eabea3a385c3c7990975c106     0 tf/media/cp_badlands.webm

@@ -5723,6 +5723,7 @@ $var3
 333?333?
 333@
 33750
+33CAI_TaskFailureCodeSaveRestoreOps
 33CAttribute_DynamicRecipeComponent
 33CBroadcastNonOwnerRecipientFilter
 33CCollectPayloadGuardVantagePoints
@@ -31882,6 +31883,7 @@ nObjects
 nPlayerDeaths
 nTargetWCNodeID
 nWCNodeID
+nWorldObjectHigh
 nailtrails_medic_blue
 nailtrails_medic_blue_crit
 nailtrails_medic_red
