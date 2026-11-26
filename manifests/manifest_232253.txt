@@ -1,6 +1,6 @@
 Content Manifest for Depot 232253 
 
-Manifest ID / date     : 7354194045383717387 / 11/26/2026 01:36:23 
+Manifest ID / date     : 3801501784924926305 / 11/26/2026 02:50:10 
 Total number of files  : 105 
 Total number of chunks : 486 
 Total bytes on disk    : 469828591 
@@ -84,7 +84,7 @@ Total bytes compressed : 338620976
              0      0 0000000000000000000000000000000000000000    40 tf
           3056      1 21e06ca61ba7babef6a4b6bc37826626043fe713    20 tf.sh
       49322760     48 46cf2ef973f30dc2b91137c06ff57e3ff21b7a11     0 tf/bin/linux64/client.so
-      30534928     30 2266ad6ceab1bf9192da21dbeb4f0b3e68772449     0 tf/bin/linux64/server.so
+      30534928     30 7b9b56448312dc0c7529714f7aafb7d7551e90e5     0 tf/bin/linux64/server.so
              0      0 0000000000000000000000000000000000000000    40 tf/media
        6085011      6 05fbc73e04bf74a4f426da4a16058ff3da406c9b     0 tf/media/arena_intro.webm
        5687549      6 ba3df06b936cc8d3eabea3a385c3c7990975c106     0 tf/media/cp_badlands.webm

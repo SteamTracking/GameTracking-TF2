@@ -1,6 +1,6 @@
 Content Manifest for Depot 441 
 
-Manifest ID / date     : 3249542990067351105 / 11/26/2026 01:35:03 
+Manifest ID / date     : 3768543557605727197 / 11/26/2026 02:49:44 
 Total number of files  : 1198 
 Total number of chunks : 31784 
 Total bytes on disk    : 31747414270 
@@ -1026,7 +1026,7 @@ Total bytes compressed : 16877618992
              0      0 0000000000000000000000000000000000000000    40 tf/scripts/protodefs
        9830030     12 c1e6da656014c8f812bbaeed03d23390ba617388     0 tf/scripts/protodefs/proto_defs.vpd
            128      1 b2d13012fa04f38a1e1b98cdb1a9be81a9c59ccd     0 tf/scripts/protodefs/proto_defs.vpd.sig
-           118      1 c44916844d0f981a8edd3d1aebcbe67833d3b073     0 tf/steam.inf
+           118      1 32e49b683907957f30d99532b1ad0107a3ecd3d0     0 tf/steam.inf
      106800068    121 3f23a3aa21657addd8867d11e29e0092997e01ee     0 tf/tf2_misc_000.vpk
      107163006    113 aa3117ea852c067aa51f8df93c344cac8eb33c3f     0 tf/tf2_misc_001.vpk
      107148876    103 e4599d865a7da07b625a0b0245bc1e8e320e7bcd     0 tf/tf2_misc_002.vpk

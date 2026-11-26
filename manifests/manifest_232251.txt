@@ -1,10 +1,10 @@
 Content Manifest for Depot 232251 
 
-Manifest ID / date     : 6192654012155431519 / 11/26/2026 01:35:47 
+Manifest ID / date     : 405062544455734512 / 11/26/2026 02:50:06 
 Total number of files  : 303 
 Total number of chunks : 764 
 Total bytes on disk    : 614056533 
-Total bytes compressed : 419110928 
+Total bytes compressed : 419110944 
 
 
           Size Chunks File SHA                                 Flags Name
@@ -279,10 +279,10 @@ Total bytes compressed : 419110928
         165016      1 a65ec1e74b6d10f59d6f91ccb1d372e584ac8c47     0 tf.exe
              0      0 0000000000000000000000000000000000000000    40 tf/bin
       14388888     14 ae332822819bdb3e4f96b9bc792f412ccc443f3a     0 tf/bin/client.dll
-      11493528     11 8892c27e063c3501dbd826f9a338e6f8388dd5da     0 tf/bin/server.dll
+      11493528     11 ea410a168b55b39e9a95ec6540d656a729b4d749     0 tf/bin/server.dll
              0      0 0000000000000000000000000000000000000000    40 tf/bin/x64
       18797208     18 db209f23ad8605c3b22e69c06c0dfd3414c5b64b     0 tf/bin/x64/client.dll
-      15379096     15 dbbc1e9e1a2c82ceb24853a0e13431b37538c8d0     0 tf/bin/x64/server.dll
+      15379096     15 b0fa28e32077e9dda225442f00859ce8fc21aad2     0 tf/bin/x64/server.dll
              0      0 0000000000000000000000000000000000000000    40 tf/media
        6085011      6 05fbc73e04bf74a4f426da4a16058ff3da406c9b     0 tf/media/arena_intro.webm
        5687549      6 ba3df06b936cc8d3eabea3a385c3c7990975c106     0 tf/media/cp_badlands.webm
